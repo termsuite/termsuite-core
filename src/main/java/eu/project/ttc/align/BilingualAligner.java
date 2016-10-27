@@ -32,7 +32,6 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.apache.uima.collection.CollectionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -690,9 +689,9 @@ public class BilingualAligner {
 			Collection<TranslationCandidate> candidates2, Object sourceTerm) {
 		Collection<TranslationCandidate> combinations = Sets.newHashSet();
 		for(TranslationCandidate candidate1:candidates1) {
-			Set<Term> extensions1 = candidate1.getTerm().getExtensions();
+			Collection<Term> extensions1 = TermUtils.getExtensions(targetTermino, candidate1.getTerm());
 			for(TranslationCandidate candidate2:candidates2) {
-				Set<Term> commonExtensions = candidate2.getTerm().getExtensions().stream()
+				Set<Term> commonExtensions = TermUtils.getExtensions(targetTermino, candidate2.getTerm()).stream()
 						.filter(ext-> extensions1.contains(ext)).collect(Collectors.toSet());
 				Optional<Integer> minSize = commonExtensions.stream().map(t->t.getWords().size()).sorted().findFirst();
 				if(minSize.isPresent()) {

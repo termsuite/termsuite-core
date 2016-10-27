@@ -67,8 +67,8 @@ import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
@@ -255,16 +255,16 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
-		TermVariation tv = termIndexResource.getTermIndex().addTermVariation(
+		TermRelation tv = termIndexResource.getTermIndex().addRelation(
 				source,
 				target, 
-				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
+				matchingRule.getName().startsWith(M_PREFIX) ? RelationType.MORPHOLOGICAL : RelationType.SYNTACTICAL,
 				matchingRule.getName());
 		
 		watch(source, target, tv);
 	}
 
-	private void watch(Term source, Term target, TermVariation tv) {
+	private void watch(Term source, Term target, TermRelation tv) {
 		if(historyResource.getHistory().isWatched(source.getGroupingKey()))
 			historyResource.getHistory().saveEvent(
 					source.getGroupingKey(),

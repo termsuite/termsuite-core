@@ -35,8 +35,8 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.resources.ManualSegmentationResource;
 import eu.project.ttc.resources.TermIndexResource;
@@ -69,8 +69,8 @@ public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					for(TermVariation tv:Lists.newArrayList(termIndexResource.getTermIndex().getOutboundTermVariations(swt, VariationType.IS_PREFIX_OF))) {
-						termIndexResource.getTermIndex().removeTermVariation(tv);
+					for(TermRelation tv:Lists.newArrayList(termIndexResource.getTermIndex().getOutboundRelations(swt, RelationType.IS_PREFIX_OF))) {
+						termIndexResource.getTermIndex().removeRelation(tv);
 						watch(swt, tv);
 					}
 				} else {
@@ -81,16 +81,16 @@ public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
 		}
 	}
 
-	private void watch(Term swt, TermVariation tv) {
+	private void watch(Term swt, TermRelation tv) {
 		TermHistory history = historyResource.getHistory();
 		if(history.isWatched(swt.getGroupingKey()))
 			history.saveEvent(
 				swt.getGroupingKey(), 
 				this.getClass(), 
-				"Prefix variation of term " + tv.getVariant().getGroupingKey() + " removed");
-		if(history.isWatched(tv.getVariant().getGroupingKey()))
+				"Prefix variation of term " + tv.getTo().getGroupingKey() + " removed");
+		if(history.isWatched(tv.getTo().getGroupingKey()))
 			history.saveEvent(
-				tv.getVariant().getGroupingKey(), 
+				tv.getTo().getGroupingKey(), 
 				this.getClass(), 
 				"Prefix variation of term " + swt + " removed");
 

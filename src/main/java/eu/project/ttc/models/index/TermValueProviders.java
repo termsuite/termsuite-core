@@ -42,7 +42,7 @@ import eu.project.ttc.models.Component;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.selectors.HasSingleWordVariationSelector;
 import eu.project.ttc.models.index.selectors.TermSelector;
@@ -218,13 +218,13 @@ public class TermValueProviders {
 		case TermIndexes.TERM_HAS_PREFIX_LEMMA:
 			return new SelectorTermValueProvider(
 						TermIndexes.WORD_LEMMA,
-						new HasSingleWordVariationSelector(VariationType.IS_PREFIX_OF), 
+						new HasSingleWordVariationSelector(RelationType.IS_PREFIX_OF), 
 						termIndex
 					);
 		case TermIndexes.TERM_HAS_DERIVATES_LEMMA:
 			return new SelectorTermValueProvider(
 						TermIndexes.WORD_LEMMA,
-						new HasSingleWordVariationSelector(VariationType.DERIVES_INTO), 
+						new HasSingleWordVariationSelector(RelationType.DERIVES_INTO), 
 						termIndex
 					);
 		default:

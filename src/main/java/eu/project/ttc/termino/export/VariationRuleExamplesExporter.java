@@ -17,8 +17,8 @@ import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
@@ -60,8 +60,8 @@ public class VariationRuleExamplesExporter {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
 		for (Term t : termIndex.getTerms()) {
-			for (TermVariation v : termIndex.getOutboundTermVariations(t, VariationType.MORPHOLOGICAL, VariationType.SYNTACTICAL))
-				pairs.put(v.getInfo().toString(), new TermPair(t, v.getVariant()));
+			for (TermRelation v : termIndex.getOutboundRelations(t, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL))
+				pairs.put(v.getInfo().toString(), new TermPair(t, v.getTo()));
 		}
 
 		// gets all variant rules (event size-0) and sorts them

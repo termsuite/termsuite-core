@@ -48,8 +48,8 @@ public class Term implements Comparable<Term> {
 	
 	private Set<Document> documents = Sets.newHashSet();
 	
-	private Set<Term> extensions = Sets.newHashSet();
-	private Set<Term> extensionBases = Sets.newHashSet();
+//	private Set<Term> extensions = Sets.newHashSet();
+//	private Set<Term> extensionBases = Sets.newHashSet();
 
 	/*
 	 * The identifier and display string of this term
@@ -540,18 +540,18 @@ public class Term implements Comparable<Term> {
 		return normalizedTermFrequency;
 	}
 	
-	public void addExtension(Term t) {
-		this.extensions.add(t);
-		t.extensionBases.add(this);
-	}
-
-	public Set<Term> getExtensions() {
-		return Collections.unmodifiableSet(this.extensions);
-	}
-
-	public Set<Term> getExtensionBases() {
-		return Collections.unmodifiableSet(this.extensionBases);
-	}
+//	public void addExtension(Term t) {
+//		this.extensions.add(t);
+//		t.extensionBases.add(this);
+//	}
+//
+//	public Set<Term> getExtensions() {
+//		return Collections.unmodifiableSet(this.extensions);
+//	}
+//
+//	public Set<Term> getExtensionBases() {
+//		return Collections.unmodifiableSet(this.extensionBases);
+//	}
 	
 	public int getRank() {
 		return rank;

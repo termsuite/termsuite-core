@@ -21,7 +21,7 @@ import com.google.common.base.Splitter;
 import eu.project.ttc.api.TermIndexIO;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.func.FunctionalTests;
 import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
@@ -109,8 +109,8 @@ public class TermSuiteTerminoCLISpec {
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.containsVariation("nn: wind energy", VariationType.SYNTACTICAL, "ann: offshore wind energy")
-			.hasSize(140);
+			.containsVariation("nn: wind energy", RelationType.SYNTACTICAL, "ann: offshore wind energy")
+			.hasSize(181);
 	}
 	
 

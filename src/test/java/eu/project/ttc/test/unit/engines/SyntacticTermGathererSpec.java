@@ -41,7 +41,7 @@ import eu.project.ttc.engines.SyntacticTermGatherer;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
@@ -141,34 +141,34 @@ public class SyntacticTermGathererSpec {
 	
 	@Test
 	public void testProcessDefault() throws AnalysisEngineProcessException{
-		assertThat(termIndex.getOutboundTermVariations(this.geothermie_hydraulique))
+		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique))
 			.hasSize(1)
 			.extracting("variationType", "variant")
-			.contains(tuple(VariationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
+			.contains(tuple(RelationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
 		
-		assertThat(termIndex.getOutboundTermVariations(this.geothermie_hydraulique_solaire))
+		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique_solaire))
 			.hasSize(0);
 	}
 
 	
 	@Test
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
-		assertThat(termIndex.getOutboundTermVariations(this.machine_synchrone))
+		assertThat(termIndex.getOutboundRelations(this.machine_synchrone))
 			.hasSize(1)
 			.extracting("variationType", "info", "variant")
-			.contains(tuple(VariationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
+			.contains(tuple(RelationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
 		
-		assertThat(termIndex.getOutboundTermVariations(this.machine_asynchrone))
+		assertThat(termIndex.getOutboundRelations(this.machine_asynchrone))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
-		assertThat(termIndex.getOutboundTermVariations(this.phase_du_stator))
+		assertThat(termIndex.getOutboundRelations(this.phase_du_stator))
 			.hasSize(1)
 			.extracting("variationType", "info", "variant")
-			.contains(tuple(VariationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
-		assertThat(termIndex.getOutboundTermVariations(this.phase_statorique))
+			.contains(tuple(RelationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
+		assertThat(termIndex.getOutboundRelations(this.phase_statorique))
 			.hasSize(0);
 		
 	}

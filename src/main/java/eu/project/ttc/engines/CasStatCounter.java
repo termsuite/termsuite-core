@@ -55,7 +55,7 @@ import com.google.common.collect.Ordering;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.WordAnnotation;
@@ -178,9 +178,9 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		TermIndex termIndex = termIndexResource.getTermIndex();
 		TermIndex tIndex = termIndex;
 		for(Term t:tIndex.getTerms()) {
-			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.MORPHOLOGICAL));
-			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.SYNTACTICAL));
-			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.GRAPHICAL));
+			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
+			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNTACTICAL));
+			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.GRAPHICAL));
 			nbOccurrences+=t.getOccurrences().size();
 			for(TermOccurrence o:t.getOccurrences()) {
 				if(o.isPrimaryOccurrence())

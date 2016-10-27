@@ -35,8 +35,8 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
@@ -62,16 +62,16 @@ public class SuffixDerivationExceptionSetter extends JCasAnnotator_ImplBase {
 		for(Term derivateForm:termIndexResource.getTermIndex().getTerms()) {
 			if(!derivateForm.isSingleWord())
 				continue;
-			List<TermVariation> toRem = Lists.newArrayList();
+			List<TermRelation> toRem = Lists.newArrayList();
 			for(String regularFormException:exceptionsByDerivateExceptionForms.getValues(derivateForm.getWords().get(0).getWord().getLemma())) {
-				for(TermVariation tv:termIndexResource.getTermIndex().getInboundTermVariations(derivateForm, VariationType.DERIVES_INTO)) {
-					regularForm = tv.getBase();
+				for(TermRelation tv:termIndexResource.getTermIndex().getInboundTerRelat(derivateForm, RelationType.DERIVES_INTO)) {
+					regularForm = tv.getFrom();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 
 						toRem.add(tv);
 				}
 			}
-			for(TermVariation rem:toRem) {
-				termIndexResource.getTermIndex().removeTermVariation(rem);
+			for(TermRelation rem:toRem) {
+				termIndexResource.getTermIndex().removeRelation(rem);
 				TermHistory history = historyResource.getHistory();
 				watch(rem, history);
 
@@ -79,18 +79,18 @@ public class SuffixDerivationExceptionSetter extends JCasAnnotator_ImplBase {
 		}
 	}
 
-	private void watch(TermVariation rem, TermHistory history) {
-		if(history.isWatched(rem.getBase().getGroupingKey())) {
+	private void watch(TermRelation rem, TermHistory history) {
+		if(history.isWatched(rem.getFrom().getGroupingKey())) {
 			history.saveEvent(
-				rem.getBase().getGroupingKey(), 
+				rem.getFrom().getGroupingKey(), 
 				this.getClass(), 
-				"Removing derivation into " + rem.getVariant());
+				"Removing derivation into " + rem.getTo());
 		}
-		if(history.isWatched(rem.getVariant().getGroupingKey())) {
+		if(history.isWatched(rem.getTo().getGroupingKey())) {
 			history.saveEvent(
-				rem.getVariant().getGroupingKey(), 
+				rem.getTo().getGroupingKey(), 
 				this.getClass(), 
-				"Removed as derivate of " + rem.getBase());
+				"Removed as derivate of " + rem.getFrom());
 		}
 
 	}

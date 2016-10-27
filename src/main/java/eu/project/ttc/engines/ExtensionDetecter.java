@@ -34,10 +34,12 @@ import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermUtils;
 
 public class ExtensionDetecter extends JCasAnnotator_ImplBase {
@@ -83,11 +85,11 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
-						t1.addExtension(t2);
+						termIndexResource.getTermIndex().addRelation(t1, t2, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
 						watch(t1, t2);
 
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
-						t2.addExtension(t1);
+						termIndexResource.getTermIndex().addRelation(t2, t1, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
 						watch(t2, t1);
 					}
 				}

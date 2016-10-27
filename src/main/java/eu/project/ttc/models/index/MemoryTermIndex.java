@@ -53,9 +53,9 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.SourceDocumentInformation;
@@ -93,8 +93,8 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
 	private Map<String, Document> documents = Maps.newHashMap();
-	private Multimap<Term, TermVariation> outboundVariations = HashMultimap.create();
-	private Multimap<Term, TermVariation> inboundVariations = HashMultimap.create();
+	private Multimap<Term, TermRelation> outboundVariations = HashMultimap.create();
+	private Multimap<Term, TermRelation> inboundVariations = HashMultimap.create();
 
 	private String name;
 	private Lang lang;
@@ -336,10 +336,10 @@ public class MemoryTermIndex implements TermIndex {
 			customIndex.removeTerm(this, t);
 		
 		// remove from variants
-		List<TermVariation> toRem = Lists.newLinkedList();
+		List<TermRelation> toRem = Lists.newLinkedList();
 		toRem.addAll(this.outboundVariations.removeAll(t));
 		toRem.addAll(this.inboundVariations.removeAll(t));
-		toRem.forEach(this::removeTermVariation);
+		toRem.forEach(this::removeRelation);
 		
 		/*
 		 * Removes from context vectors.
@@ -481,36 +481,36 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public Stream<TermVariation> getTermVariations(VariationType... types) {
+	public Stream<TermRelation> getRelations(RelationType... types) {
 		if(types.length == 0)
-			return this.inboundVariations.entries().stream().map(e -> (TermVariation)e.getValue());
+			return this.inboundVariations.entries().stream().map(e -> (TermRelation)e.getValue());
 		else {
-			Set<VariationType> typeSet = Sets.newHashSet(types);
-			return this.inboundVariations.entries().stream().map(e -> (TermVariation)e.getValue())
-					.filter(tv -> typeSet.contains(tv.getVariationType()));
+			Set<RelationType> typeSet = Sets.newHashSet(types);
+			return this.inboundVariations.entries().stream().map(e -> (TermRelation)e.getValue())
+					.filter(tv -> typeSet.contains(tv.getType()));
 		}
 	}
 
 	@Override
-	public Collection<TermVariation> getOutboundTermVariations(Term base, VariationType... types) {
+	public Collection<TermRelation> getOutboundRelations(Term base, RelationType... types) {
 		if(types.length == 0)
 			return this.outboundVariations.get(base);
 		else {
-			Set<VariationType> typeSet = Sets.newHashSet(types);
+			Set<RelationType> typeSet = Sets.newHashSet(types);
 			return this.outboundVariations.get(base).stream()
-					.filter(tv -> typeSet.contains(tv.getVariationType()))
+					.filter(tv -> typeSet.contains(tv.getType()))
 					.collect(Collectors.toSet());
 		}
 	}
 
 	@Override
-	public Collection<TermVariation> getInboundTermVariations(Term variant, VariationType... types) {
+	public Collection<TermRelation> getInboundTerRelat(Term variant, RelationType... types) {
 		if(types.length == 0)
 			return this.inboundVariations.get(variant);
 		else {
-			Set<VariationType> typeSet = Sets.newHashSet(types);
-			List<TermVariation> list = this.inboundVariations.get(variant).stream()
-					.filter(tv -> typeSet.contains(tv.getVariationType()))
+			Set<RelationType> typeSet = Sets.newHashSet(types);
+			List<TermRelation> list = this.inboundVariations.get(variant).stream()
+					.filter(tv -> typeSet.contains(tv.getType()))
 					.collect(Collectors.toList());
 			Collections.sort(list);
 			return list;
@@ -518,22 +518,22 @@ public class MemoryTermIndex implements TermIndex {
 	}
 	
 	@Override
-	public TermVariation addTermVariation(Term base, Term variant, VariationType type, Object info) {
-		TermVariation tv = new TermVariation(type, base, variant, info);
-		this.addTermVariation(tv);
+	public TermRelation addRelation(Term base, Term variant, RelationType type, Object info) {
+		TermRelation tv = new TermRelation(type, base, variant, info);
+		this.addRelation(tv);
 		return tv;
 	}
 	
 	@Override
-	public void addTermVariation(TermVariation termVariation) {
-		this.outboundVariations.put(termVariation.getBase(), termVariation);
-		this.inboundVariations.put(termVariation.getVariant(), termVariation);
+	public void addRelation(TermRelation termVariation) {
+		this.outboundVariations.put(termVariation.getFrom(), termVariation);
+		this.inboundVariations.put(termVariation.getTo(), termVariation);
 		
 	}
 
 	@Override
-	public void removeTermVariation(TermVariation variation) {
-		this.outboundVariations.remove(variation.getBase(), variation);
-		this.inboundVariations.remove(variation.getVariant(), variation);
+	public void removeRelation(TermRelation variation) {
+		this.outboundVariations.remove(variation.getFrom(), variation);
+		this.inboundVariations.remove(variation.getTo(), variation);
 	}
 }

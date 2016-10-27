@@ -47,7 +47,7 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.TermSuiteResource;
 import eu.project.ttc.tools.TermSuiteResourceManager;
@@ -167,8 +167,8 @@ public abstract class WindEnergySpec {
 	@Test
 	public void weControlPrefixes() {
 		assertThat(termIndex)
-			.asTermVariations(VariationType.IS_PREFIX_OF)
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.asTermVariations(RelationType.IS_PREFIX_OF)
+			.extracting("from.groupingKey", "to.groupingKey")
 			.containsOnly(
 					ControlFiles.prefixVariationTuples(lang, "we")
 			);
@@ -177,8 +177,8 @@ public abstract class WindEnergySpec {
 	@Test
 	public void weControlDerivates() {
 		assertThat(termIndex)
-		.asTermVariations(VariationType.DERIVES_INTO)
-		.extracting("info", "base.groupingKey", "variant.groupingKey")
+		.asTermVariations(RelationType.DERIVES_INTO)
+		.extracting("info", "from.groupingKey", "to.groupingKey")
 		.containsOnly(
 				ControlFiles.derivateVariationTuples(lang, "we")
 		);

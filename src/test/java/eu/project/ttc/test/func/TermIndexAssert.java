@@ -44,8 +44,8 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
 import eu.project.ttc.utils.TermIndexUtils;
 
@@ -87,13 +87,13 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey) {
+	public TermIndexAssert containsVariation(String baseGroupingKey, RelationType type, String variantGroupingKey) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
 		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
-		for(TermVariation tv:actual.getOutboundTermVariations(baseTerm, type)) {
-			if(tv.getVariant().getGroupingKey().equals(variantGroupingKey))
+		for(TermRelation tv:actual.getOutboundRelations(baseTerm, type)) {
+			if(tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
 		
@@ -116,14 +116,14 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return failed;
 	}
 	
-	public TermIndexAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey, Object info) {
+	public TermIndexAssert containsVariation(String baseGroupingKey, RelationType type, String variantGroupingKey, Object info) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
 		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
-		for(TermVariation tv:actual.getOutboundTermVariations(baseTerm, type)) {
+		for(TermRelation tv:actual.getOutboundRelations(baseTerm, type)) {
 			if(java.util.Objects.equals(tv.getInfo(), info) 
-					&& tv.getVariant().getGroupingKey().equals(variantGroupingKey))
+					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
 		
@@ -136,14 +136,14 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 
-	private Collection<TermVariation> getVariations() {
-		return actual.getTermVariations().collect(Collectors.toSet());
+	private Collection<TermRelation> getVariations() {
+		return actual.getRelations().collect(Collectors.toSet());
 	}
 
-	public TermIndexAssert hasNVariationsOfType(int expected, VariationType type) {
+	public TermIndexAssert hasNVariationsOfType(int expected, RelationType type) {
 		int cnt = 0;
-		for(TermVariation tv:getVariations()) {
-			if(tv.getVariationType() == type)
+		for(TermRelation tv:getVariations()) {
+			if(tv.getType() == type)
 				cnt++;
 		}
 	
@@ -153,15 +153,15 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> asTermVariationsHavingObject(Object object) {
-		Set<TermVariation> variations = Sets.newHashSet();
-		for(TermVariation v:getVariations())
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariationsHavingObject(Object object) {
+		Set<TermRelation> variations = Sets.newHashSet();
+		for(TermRelation v:getVariations())
 			if(Objects.equal(v.getInfo(), object))
 				variations.add(v);
 		return assertThat(variations);
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> asTermVariations(VariationType... variations) {
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariations(RelationType... variations) {
 		return assertThat(
 				TermIndexUtils.selectTermVariations(actual, variations));
 	}
@@ -173,15 +173,15 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
-		for(TermVariation tv:TermIndexUtils.selectTermVariations(actual, VariationType.SYNTACTICAL, VariationType.MORPHOLOGICAL)) 
+		for(TermRelation tv:TermIndexUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL)) 
 			matchingRuleNames.add((String)tv.getInfo());
 		return assertThat(matchingRuleNames);
 	}
 
 	
-	public TermIndexAssert hasAtLeastNVariationsOfType(Term base, int atLeastN, VariationType... vType) {
+	public TermIndexAssert hasAtLeastNVariationsOfType(Term base, int atLeastN, RelationType... vType) {
 		isNotNull();
-		int actualSize = actual.getOutboundTermVariations(base, vType).size();
+		int actualSize = actual.getOutboundRelations(base, vType).size();
 		if (actualSize < atLeastN)
 			failWithMessage(
 					"Expected to find at least <%s> variations of type <%s> for term <%s>, but actually found <%s>",
@@ -189,18 +189,18 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public TermIndexAssert hasNVariationsOfType(Term base, int n, VariationType... vType) {
+	public TermIndexAssert hasNVariationsOfType(Term base, int n, RelationType... vType) {
 		isNotNull();
-		int actualSize = actual.getOutboundTermVariations(base, vType).size();
+		int actualSize = actual.getOutboundRelations(base, vType).size();
 		if (actualSize != n)
 			failWithMessage("Expected to find <%s> variations of type <%s> for term <%s>, but actually found <%s>", n,
 					vType, base, actualSize);
 		return this;
 	}
 
-	public TermIndexAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, VariationType... vTypes) {
+	public TermIndexAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, RelationType... vTypes) {
 		isNotNull();
-		int actualSize = actual.getInboundTermVariations(variant, vTypes).size();
+		int actualSize = actual.getInboundTerRelat(variant, vTypes).size();
 		if (actualSize < atLeastN)
 			failWithMessage("Expected to find at least <%s> bases <%s> for term <%s>, but actually found <%s>",
 					atLeastN,
@@ -209,24 +209,24 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getVariations(Term base) {
-		return assertThat(actual.getOutboundTermVariations(base));
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getVariations(Term base) {
+		return assertThat(actual.getOutboundRelations(base));
 	}
 	
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getVariationsOfType(Term base, VariationType... types) {
-		return assertThat(actual.getOutboundTermVariations(base, types));
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getVariationsOfType(Term base, RelationType... types) {
+		return assertThat(actual.getOutboundRelations(base, types));
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getBases(Term variant) {
-		return assertThat(actual.getInboundTermVariations(variant));
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBases(Term variant) {
+		return assertThat(actual.getInboundTerRelat(variant));
 	}
 	
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermVariation>, TermVariation> getBasesOfType(Term variant, VariationType... types) {
-		return assertThat(actual.getInboundTermVariations(variant, types));
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBasesOfType(Term variant, RelationType... types) {
+		return assertThat(actual.getInboundTerRelat(variant, types));
 	}
 
 	public TermIndexAssert hasNBases(Term variant, int expectedNumberOfBases) {
-		Collection<TermVariation> bases = actual.getInboundTermVariations(variant);
+		Collection<TermRelation> bases = actual.getInboundTerRelat(variant);
 		if(bases.size() != expectedNumberOfBases)
 			failWithMessage("Expected <%s> bases but got <%s> (<%s>)", 
 					expectedNumberOfBases,
@@ -236,7 +236,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 	
 	public TermIndexAssert hasNVariations(Term base, int expectedNumberOfVariations) {
-		Collection<TermVariation> variants = actual.getOutboundTermVariations(base);
+		Collection<TermRelation> variants = actual.getOutboundRelations(base);
 		if(variants.size() != expectedNumberOfVariations)
 			failWithMessage("Expected <%s> variations but got <%s> (<%s>)", 
 					expectedNumberOfVariations,

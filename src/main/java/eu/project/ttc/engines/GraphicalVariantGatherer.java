@@ -47,7 +47,7 @@ import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.AbstractTermValueProvider;
 import eu.project.ttc.models.index.CustomTermIndex;
@@ -210,8 +210,8 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
 					if(dist >= this.threshold) {
 						gatheredCnt++;
-						termIndex.addTermVariation(t1, t2, VariationType.GRAPHICAL, dist);
-						termIndex.addTermVariation(t2, t1, VariationType.GRAPHICAL, dist);
+						termIndex.addRelation(t1, t2, RelationType.GRAPHICAL, dist);
+						termIndex.addRelation(t2, t1, RelationType.GRAPHICAL, dist);
 						watch(t1, t2, dist);
 						watch(t2, t1, dist);
 

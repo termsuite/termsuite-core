@@ -29,6 +29,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ComparisonChain;
@@ -43,8 +44,9 @@ import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
@@ -86,8 +88,8 @@ public class TermUtils {
 				stream.println(term);
 //				for(Term t:term.getGraphicalVariants()) 
 //					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
-				for(TermVariation variation:index.getOutboundTermVariations(term)) 
-					stream.format("\tsyntactic: %s\n" , variation.getVariant().getGroupingKey());
+				for(TermRelation variation:index.getOutboundRelations(term)) 
+					stream.format("\tsyntactic: %s\n" , variation.getTo().getGroupingKey());
 			}
 		}
 	}
@@ -424,5 +426,29 @@ public class TermUtils {
 		lemmas.add(term2.getWords().get(0).getWord().getLemma());
 		Collections.sort(lemmas);
 		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
+	}
+
+	public static Collection<Term> getExtensions(TermIndex termIndex, Term term) {
+		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
+				.stream()
+				.map(TermRelation::getTo)
+				.collect(Collectors.toSet());
+	}
+		
+	public static boolean isExtension(TermIndex termIndex, Term term, Term extension) {
+		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
+			.stream()
+			.filter(tv -> tv.getTo().equals(extension))
+			.findAny().isPresent();
+	}
+	
+	
+	public static Collection<TermRelation> getVariations(TermIndex termIndex, Term t) {
+		return termIndex.getRelations(
+				RelationType.SYNTACTICAL, 
+				RelationType.MORPHOLOGICAL,
+				RelationType.GRAPHICAL,
+				RelationType.DERIVES_INTO,
+				RelationType.IS_PREFIX_OF).collect(Collectors.toSet());
 	}
 }

@@ -15,8 +15,8 @@ import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 
 public class VariationExporter {
 	
@@ -27,30 +27,30 @@ public class VariationExporter {
 
 	private TermIndex termIndex;
 	private Writer writer;
-	private List<VariationType> variationTypes;
+	private List<RelationType> variationTypes;
 	
-	private VariationExporter(TermIndex termIndex, Writer writer, List<VariationType> variationTypes) {
+	private VariationExporter(TermIndex termIndex, Writer writer, List<RelationType> variationTypes) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
 		this.variationTypes = Lists.newArrayList(variationTypes);
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, VariationType... variationTypes) {
+	public static void export(TermIndex termIndex, Writer writer, RelationType... variationTypes) {
 		new VariationExporter(termIndex, writer, Lists.newArrayList(variationTypes)).doExport();
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, List<VariationType> variationTypes) {
+	public static void export(TermIndex termIndex, Writer writer, List<RelationType> variationTypes) {
 		new VariationExporter(termIndex, writer, variationTypes).doExport();
 	}
 
 	public void doExport() {
 		try {
-			Multimap<Term,TermVariation> acceptedVariations = HashMultimap.create();
+			Multimap<Term,TermRelation> acceptedVariations = HashMultimap.create();
 			for(Term t:termIndex.getTerms()) {
-				for(TermVariation v:termIndex.getOutboundTermVariations(t)) {
+				for(TermRelation v:termIndex.getOutboundRelations(t)) {
 					if(this.variationTypes.isEmpty()
-							|| this.variationTypes.contains(v.getVariationType()))
+							|| this.variationTypes.contains(v.getType()))
 						acceptedVariations.put(t, v);
 				}
 			}
@@ -60,9 +60,9 @@ public class VariationExporter {
 			sortedTerms.addAll(acceptedVariations.keySet());
 			
 			for(Term t:sortedTerms) {
-				Set<TermVariation> variations = Sets.newHashSet(acceptedVariations.get(t));
+				Set<TermRelation> variations = Sets.newHashSet(acceptedVariations.get(t));
 				boolean first = true;
-				for(TermVariation tv:variations) {
+				for(TermRelation tv:variations) {
 					if(first)
 						writer.write(String.format(SOURCE_LINE_FORMAT, 
 							t.getGroupingKey(),
@@ -70,9 +70,9 @@ public class VariationExporter {
 					else
 						writer.write(String.format(EMPTY_LINE_FORMAT, ""));
 					writer.write(String.format(TARGET_LINE_FORMAT,
-							tv.getVariationType() + " ["+tv.getInfo()+"]",
-							tv.getVariant().getGroupingKey(),
-							tv.getVariant().getFrequency()
+							tv.getType() + " ["+tv.getInfo()+"]",
+							tv.getTo().getGroupingKey(),
+							tv.getTo().getFrequency()
 							));
 					first = false;
 				}

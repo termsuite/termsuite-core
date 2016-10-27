@@ -11,8 +11,8 @@ import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 
 public class VariantEvalExporter {
 	
@@ -46,17 +46,17 @@ public class VariantEvalExporter {
 			int rank = 0;
 			int variantCnt = 0;
 			for(Term t:termIndex.getTerms()) {
-				if(!termIndex.getOutboundTermVariations(t).isEmpty())
+				if(!termIndex.getOutboundRelations(t).isEmpty())
 					continue;
 				printBase(++rank, t);
 				int variantRank = 0;
-				for(TermVariation variation:termIndex.getOutboundTermVariations(t, VariationType.MORPHOLOGICAL, VariationType.SYNTACTICAL)) {
+				for(TermRelation variation:termIndex.getOutboundRelations(t, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
 					if(variantRank >= nbVariantsPerTerm)
 						break;
 					variantCnt++;
 					variantRank++;
 					printVariation(rank, variantRank, variation);
-					printTermOccurrences(variation.getVariant());
+					printTermOccurrences(variation.getTo());
 				}
 				
 				if(variantCnt>this.topN)
@@ -68,8 +68,8 @@ public class VariantEvalExporter {
 		}
 	}
 	
-	private void printVariation(int termRank, int variantRank, TermVariation variation) throws IOException {
-		Term variant = variation.getVariant();
+	private void printVariation(int termRank, int variantRank, TermRelation variation) throws IOException {
+		Term variant = variation.getTo();
 		String pilot = variant.getForms().iterator().next();
 		writer.write(Integer.toString(termRank));
 		writer.write("\t");

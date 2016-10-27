@@ -42,7 +42,7 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.scored.ScoredModel;
 import eu.project.ttc.models.scored.ScoredTerm;
 import eu.project.ttc.models.scored.ScoredVariation;
@@ -127,18 +127,18 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 		logger.debug("Resetting scored variations and unique bases");
 		for(ScoredTerm st:scoredModel.getTerms()) {
 			for(ScoredVariation sv:st.getVariations()) {
-				TermVariation termVariation = sv.getTermVariation();
+				TermRelation termVariation = sv.getTermVariation();
 				
 				/*
 				 * Add this term variation to the variants
 				 */
 				termVariation.setScore(sv.getVariationScore());
 
-				List<TermVariation> toRem = Lists.newArrayList(termIndex.getInboundTermVariations(termVariation.getVariant()));
-				for(TermVariation tv:toRem)
-					termIndex.removeTermVariation(tv);
+				List<TermRelation> toRem = Lists.newArrayList(termIndex.getInboundTerRelat(termVariation.getTo()));
+				for(TermRelation tv:toRem)
+					termIndex.removeRelation(tv);
 
-				termIndex.addTermVariation(termVariation);
+				termIndex.addRelation(termVariation);
 			}
 		}
 	}

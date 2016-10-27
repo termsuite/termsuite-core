@@ -21,19 +21,20 @@
  *******************************************************************************/
 package eu.project.ttc.models;
 
-public enum VariationType {
+public enum RelationType {
 	MORPHOLOGICAL(1, "morph", true),
 	SYNTACTICAL(3, "syn", true),
 	GRAPHICAL(2, "graph", false),
 	DERIVES_INTO(4, "deriv", true),
 	IS_PREFIX_OF(5, "pref", true),
+	HAS_EXTENSION(6, "hasext", true),
 	;
 	
 	private int order;
 	private String shortName;
 	private boolean directional;
 	
-	private VariationType(int order, String shortName, boolean directional) {
+	private RelationType(int order, String shortName, boolean directional) {
 		this.order = order;
 		this.directional = directional;
 		this.shortName = shortName;
@@ -55,8 +56,8 @@ public enum VariationType {
 		return !directional;
 	}
 	
-	public static VariationType fromShortName(String shortName) {
-		for(VariationType vt:values())
+	public static RelationType fromShortName(String shortName) {
+		for(RelationType vt:values())
 			if(vt.getShortName().equals(shortName))
 				return vt;
 		throw new IllegalArgumentException("No such variation type with name: " + shortName);

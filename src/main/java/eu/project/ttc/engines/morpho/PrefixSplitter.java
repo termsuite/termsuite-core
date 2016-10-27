@@ -38,7 +38,7 @@ import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.resources.PrefixTree;
 import eu.project.ttc.resources.TermIndexResource;
@@ -100,7 +100,7 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
 							watch(swt, target);
-							termIndex.addTermVariation(swt, target, VariationType.IS_PREFIX_OF, TermSuiteConstants.EMPTY_STRING);
+							termIndex.addRelation(swt, target, RelationType.IS_PREFIX_OF, TermSuiteConstants.EMPTY_STRING);
 						}
 					}
 				}

@@ -107,7 +107,7 @@ import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
@@ -891,7 +891,7 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline haeVariationExporter(String toFilePath, VariationType... vTypes) {
+	public TermSuitePipeline haeVariationExporter(String toFilePath, RelationType... vTypes) {
 		try {
 			String typeStrings = Joiner.on(",").join(vTypes);
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(

@@ -33,7 +33,7 @@ import com.google.common.collect.ImmutableList;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.models.index.TermValueProviders;
@@ -138,37 +138,37 @@ public class TermSpec {
 
 	@Test
 	public void testAddTermVariation() {
-		assertThat(termIndex.getOutboundTermVariations(this.term5)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundTermVariations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term3)).hasSize(0);
-		assertThat(termIndex.getOutboundTermVariations(this.term4)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term4)).hasSize(0);
+		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term5)).hasSize(0);
+		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term3)).hasSize(0);
+		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term4)).hasSize(0);
 		
-		termIndex.addTermVariation(term5, term3, VariationType.SYNTACTICAL, "Tata");
-		assertThat(termIndex.getOutboundTermVariations(this.term5)).hasSize(1);
-		assertThat(termIndex.getInboundTermVariations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundTermVariations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term3)).hasSize(1);
-		assertThat(termIndex.getInboundTermVariations(this.term3)).extracting("info").containsExactly("Tata");
+		termIndex.addRelation(term5, term3, RelationType.SYNTACTICAL, "Tata");
+		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(1);
+		assertThat(termIndex.getInboundTerRelat(this.term5)).hasSize(0);
+		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term3)).hasSize(1);
+		assertThat(termIndex.getInboundTerRelat(this.term3)).extracting("info").containsExactly("Tata");
 		
-		termIndex.addTermVariation(term5, term4, VariationType.SYNTACTICAL, "Tata");
-		assertThat(termIndex.getOutboundTermVariations(this.term5)).hasSize(2);
-		assertThat(termIndex.getInboundTermVariations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundTermVariations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term3)).hasSize(1);
-		assertThat(termIndex.getOutboundTermVariations(this.term4)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term4)).hasSize(1);
-		assertThat(termIndex.getOutboundTermVariations(this.term5)).extracting("info").containsExactly("Tata","Tata");
+		termIndex.addRelation(term5, term4, RelationType.SYNTACTICAL, "Tata");
+		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(2);
+		assertThat(termIndex.getInboundTerRelat(this.term5)).hasSize(0);
+		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term3)).hasSize(1);
+		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term4)).hasSize(1);
+		assertThat(termIndex.getOutboundRelations(this.term5)).extracting("info").containsExactly("Tata","Tata");
 		
-		termIndex.addTermVariation(term5, term3, VariationType.SYNTACTICAL, "Tata");
-		assertThat(termIndex.getOutboundTermVariations(this.term5)).hasSize(2);
-		assertThat(termIndex.getInboundTermVariations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundTermVariations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term3)).hasSize(1);
-		assertThat(termIndex.getOutboundTermVariations(this.term4)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(this.term4)).hasSize(1);
-		assertThat(termIndex.getOutboundTermVariations(this.term5)).extracting("info").containsExactly("Tata","Tata");
+		termIndex.addRelation(term5, term3, RelationType.SYNTACTICAL, "Tata");
+		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(2);
+		assertThat(termIndex.getInboundTerRelat(this.term5)).hasSize(0);
+		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term3)).hasSize(1);
+		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(this.term4)).hasSize(1);
+		assertThat(termIndex.getOutboundRelations(this.term5)).extracting("info").containsExactly("Tata","Tata");
 	}
 		
 	@Test

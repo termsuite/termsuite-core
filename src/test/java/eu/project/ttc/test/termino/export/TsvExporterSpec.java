@@ -15,7 +15,7 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.termino.export.TsvExporter;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.unit.TermFactory;
@@ -36,9 +36,9 @@ public class TsvExporterSpec {
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
 
 		
-		TermVariation tv = Mockito.mock(TermVariation.class);
-		Mockito.when(tv.getVariant()).thenReturn(term1);
-		Mockito.when(termIndex.getOutboundTermVariations(term3)).thenReturn(Sets.newHashSet(tv));
+		TermRelation tv = Mockito.mock(TermRelation.class);
+		Mockito.when(tv.getTo()).thenReturn(term1);
+		Mockito.when(termIndex.getOutboundRelations(term3)).thenReturn(Sets.newHashSet(tv));
 		
 		terms = Lists.newArrayList(
 				term1,

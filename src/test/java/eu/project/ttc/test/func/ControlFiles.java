@@ -41,7 +41,7 @@ import com.google.common.base.Splitter;
 
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
 
 public class ControlFiles {
@@ -168,7 +168,7 @@ public class ControlFiles {
 		List<Tuple> tuples = Lists.newArrayList();
 		for(String[] row:getRows(file, 4, "\t")) {
 			Preconditions.checkState(row[3].equals(ruleName));
-			tuples.add(tuple(row[0], row[1], VariationType.valueOf(row[2])));
+			tuples.add(tuple(row[0], row[1], RelationType.valueOf(row[2])));
 		}
 		return tuples;
 	}
@@ -176,7 +176,7 @@ public class ControlFiles {
 	private static List<Tuple> getPrefixVariationTuples(File file) {
 		List<Tuple> tuples = Lists.newArrayList();
 		for(String[] row:getRows(file, 3, "\t")) {
-			Preconditions.checkState(row[2].equals(VariationType.IS_PREFIX_OF.toString()));
+			Preconditions.checkState(row[2].equals(RelationType.IS_PREFIX_OF.toString()));
 			tuples.add(tuple(row[0], row[1]));
 		}
 		return tuples;
@@ -190,7 +190,7 @@ public class ControlFiles {
 	private static List<Tuple> getDerivateVariationTuples(File file) {
 		List<Tuple> tuples = Lists.newArrayList();
 		for(String[] row:getRows(file, 4, "\t")) {
-			Preconditions.checkState(row[2].equals(VariationType.DERIVES_INTO.toString()));
+			Preconditions.checkState(row[2].equals(RelationType.DERIVES_INTO.toString()));
 			tuples.add(tuple(row[3], row[0], row[1]));
 		}
 		return tuples;

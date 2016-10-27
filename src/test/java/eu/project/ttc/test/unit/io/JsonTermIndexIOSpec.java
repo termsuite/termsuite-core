@@ -54,7 +54,7 @@ import eu.project.ttc.models.Document;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JsonTermIndexIO;
@@ -115,8 +115,8 @@ public class JsonTermIndexIOSpec {
 				.addOccurrence(14, 20, doc2, "coveredText 2")
 				.setSpecificity(2.2)
 				.createAndAddToIndex();
-		termIndex.addTermVariation(term1, term2, VariationType.SYNTACTICAL, "variationRule1");
-		termIndex.addTermVariation(term1, term2, VariationType.GRAPHICAL, 0.956d);
+		termIndex.addRelation(term1, term2, RelationType.SYNTACTICAL, "variationRule1");
+		termIndex.addRelation(term1, term2, RelationType.GRAPHICAL, 0.956d);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -131,7 +131,7 @@ public class JsonTermIndexIOSpec {
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
-		termIndex.removeTermVariation(termIndex.getOutboundTermVariations(term1, VariationType.SYNTACTICAL).iterator().next());
+		termIndex.removeRelation(termIndex.getOutboundRelations(term1, RelationType.SYNTACTICAL).iterator().next());
 		StringWriter writer = new StringWriter();
 		JsonTermIndexIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
@@ -154,8 +154,8 @@ public class JsonTermIndexIOSpec {
 		for(Term t:termIndex.getTerms()) {
 			Term t2 = termIndex2.getTermByGroupingKey(t.getGroupingKey());
 			assertThat(t2.getOccurrences()).hasSameElementsAs(t.getOccurrences());
-			assertThat(termIndex2.getOutboundTermVariations(t2)).hasSameElementsAs(termIndex.getOutboundTermVariations(t));
-			assertThat(termIndex2.getInboundTermVariations(t2)).hasSameElementsAs(termIndex.getInboundTermVariations(t));
+			assertThat(termIndex2.getOutboundRelations(t2)).hasSameElementsAs(termIndex.getOutboundRelations(t));
+			assertThat(termIndex2.getInboundTerRelat(t2)).hasSameElementsAs(termIndex.getInboundTerRelat(t));
 			assertThat(t2.getForms()).hasSameElementsAs(t.getForms());
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
@@ -230,9 +230,9 @@ public class JsonTermIndexIOSpec {
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(termIndex.getOutboundTermVariations(t1, VariationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
-		assertThat(termIndex.getOutboundTermVariations(t1, VariationType.SYNTACTICAL)).hasSize(0);
-		assertThat(termIndex.getInboundTermVariations(t1))
+		assertThat(termIndex.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
+		assertThat(termIndex.getOutboundRelations(t1, RelationType.SYNTACTICAL)).hasSize(0);
+		assertThat(termIndex.getInboundTerRelat(t1))
 			.hasSize(2)
 			.extracting("base")
 			.containsOnly(t2, t3);	

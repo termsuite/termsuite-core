@@ -38,7 +38,7 @@ import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
@@ -180,11 +180,11 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		
 		assertThat(termIndex)
 			.hasNBases(term, 1) // a: highspeed
-			.hasAtLeastNBasesOfType(term, 1, VariationType.GRAPHICAL)
-			.hasNVariationsOfType(term, 4, VariationType.MORPHOLOGICAL)
-			.hasNVariationsOfType(term, 0, VariationType.SYNTACTICAL)
+			.hasAtLeastNBasesOfType(term, 1, RelationType.GRAPHICAL)
+			.hasNVariationsOfType(term, 4, RelationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(term, 0, RelationType.SYNTACTICAL)
 			.getVariations(term)
-			.extracting("variant.groupingKey", "info", "variant.frequency")
+			.extracting("to.groupingKey", "info", "to.frequency")
 			.contains(
 					tuple("aan: high revolving speed", "M-I-AN-N|A|R", 1),
 					tuple("aan: high rotational speed", "M-I-AN-N|A|R", 3),
@@ -218,7 +218,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")
 			.hasSize(128)
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: baseline", "nn: base line"), 
 				   tuple("n: groundwater", "nn: ground water"), 
@@ -233,9 +233,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("nn: wind turbine", VariationType.SYNTACTICAL, "nnn: wind regime turbine", "S-I-NN-(N|A)")
-			.containsVariation("an: low frequency", VariationType.SYNTACTICAL, "aan: low audible frequency", "S-I-AN-A")
-			.containsVariation("nn: wind generator", VariationType.SYNTACTICAL, "nnn: wind turbine generator", "S-I-NN-(N|A)")
+			.containsVariation("nn: wind turbine", RelationType.SYNTACTICAL, "nnn: wind regime turbine", "S-I-NN-(N|A)")
+			.containsVariation("an: low frequency", RelationType.SYNTACTICAL, "aan: low audible frequency", "S-I-AN-A")
+			.containsVariation("nn: wind generator", RelationType.SYNTACTICAL, "nnn: wind turbine generator", "S-I-NN-(N|A)")
 			;
 	}
 
@@ -243,7 +243,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithPrefixes() {
 		assertThat(termIndex)
 		.asTermVariationsHavingObject("AN-prefAN")
-		.extracting("base.groupingKey", "variant.groupingKey")
+		.extracting("from.groupingKey", "to.groupingKey")
 		.contains(
 				tuple("an: national regulation", "an: international regulation"),
 				tuple("an: finite number", "an: infinite number"),
@@ -288,7 +288,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivates() {
 		assertThat(termIndex)
 			.asTermVariationsHavingObject("S-R2D-NN1")
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				tuple("nn: rotation speed", "an: rotational speed"),
 				tuple("nn: azimuth position", "an: azimuthal position"),
@@ -317,21 +317,21 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testPrefixes() {
 		assertThat(termIndex)
-			.containsVariation("n: postconstruction", VariationType.IS_PREFIX_OF, "n: construction")
-			.containsVariation("n: microgeneration", VariationType.IS_PREFIX_OF, "n: generation")
-			.containsVariation("a: subtransient", VariationType.IS_PREFIX_OF, "a: transient")
-			.containsVariation("n: incompetence", VariationType.IS_PREFIX_OF, "n: competence")
-			.containsVariation("a: subacoustic", VariationType.IS_PREFIX_OF, "a: acoustic")
+			.containsVariation("n: postconstruction", RelationType.IS_PREFIX_OF, "n: construction")
+			.containsVariation("n: microgeneration", RelationType.IS_PREFIX_OF, "n: generation")
+			.containsVariation("a: subtransient", RelationType.IS_PREFIX_OF, "a: transient")
+			.containsVariation("n: incompetence", RelationType.IS_PREFIX_OF, "n: competence")
+			.containsVariation("a: subacoustic", RelationType.IS_PREFIX_OF, "a: acoustic")
 			;
 	}
 	
 	@Test
 	public void testDerivations() {
 		assertThat(termIndex)
-			.containsVariation("n: photograph", VariationType.DERIVES_INTO, "a: photographic")
-			.containsVariation("n: ethic", VariationType.DERIVES_INTO, "a: ethical")
-			.containsVariation("n: institution", VariationType.DERIVES_INTO, "a: institutional")
-			.containsVariation("n: industry", VariationType.DERIVES_INTO, "a: industrial")
+			.containsVariation("n: photograph", RelationType.DERIVES_INTO, "a: photographic")
+			.containsVariation("n: ethic", RelationType.DERIVES_INTO, "a: ethical")
+			.containsVariation("n: institution", RelationType.DERIVES_INTO, "a: institutional")
+			.containsVariation("n: industry", RelationType.DERIVES_INTO, "a: industrial")
 			;
 	}
 

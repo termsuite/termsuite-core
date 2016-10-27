@@ -36,7 +36,7 @@ import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 
 public class ScoredModel {
 	
@@ -47,9 +47,9 @@ public class ScoredModel {
 	public void importTermIndex(TermIndex termIndex) {
 		this.terms = Lists.newLinkedList();
 		for(Term t:termIndex.getTerms()) {
-			List<ScoredVariation> scoredVariations  = Lists.newArrayListWithExpectedSize(termIndex.getOutboundTermVariations(t).size());
+			List<ScoredVariation> scoredVariations  = Lists.newArrayListWithExpectedSize(termIndex.getOutboundRelations(t).size());
 			ScoredTerm st = getAdapter(t);
-			for(TermVariation tv:termIndex.getOutboundTermVariations(t)) {
+			for(TermRelation tv:termIndex.getOutboundRelations(t)) {
 				ScoredVariation stv = new ScoredVariation(this, tv);
 				scoredVariations.add(stv);
 			}

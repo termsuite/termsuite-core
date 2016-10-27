@@ -52,9 +52,9 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
@@ -98,11 +98,20 @@ public class JsonTermIndexIO {
 	private static final String SYN = "syn";
 	private static final String FREQUENCY = "freq";
 	private static final String SPOTTING_RULE = "rule";
+	@Deprecated
 	private static final String TERM_VARIATIONS = "variations";
-	private static final String VARIANT_TYPE = "type";
+	private static final String TERM_RELATIONS = "relations";
+	private static final String RELATION_TYPE = "type";
 	private static final String INFO = "info";
+	
+	@Deprecated
 	private static final String BASE = "base";
+	private static final String FROM = "from";
+	
+	@Deprecated
 	private static final String VARIANT = "variant";
+	private static final String TO = "to";
+
 	private static final String VARIANT_SCORE = "vscore";
 	private static final String RANK = "rank";
 	private static final String SPECIFICITY = "spec";
@@ -396,7 +405,7 @@ public class JsonTermIndexIO {
 						throw new IllegalArgumentException("Bad format for input source key: " + id);
 					} 
 				}
-			} else if (TERM_VARIATIONS.equals(fieldname)) {
+			} else if (TERM_VARIATIONS.equals(fieldname) || TERM_RELATIONS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					base = null;
@@ -406,11 +415,11 @@ public class JsonTermIndexIO {
 					variantScore = 0;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
-						if (BASE.equals(fieldname)) 
+						if (BASE.equals(fieldname) || FROM.equals(fieldname)) 
 							base = jp.nextTextValue();
-						else if (VARIANT.equals(fieldname)) 
+						else if (VARIANT.equals(fieldname) || TO.equals(fieldname)) 
 							variant = jp.nextTextValue();
-						else if (VARIANT_TYPE.equals(fieldname)) 
+						else if (RELATION_TYPE.equals(fieldname)) 
 							variantType = jp.nextTextValue();
 						else if (VARIANT_SCORE.equals(fieldname)) {
 							jp.nextToken();
@@ -425,15 +434,15 @@ public class JsonTermIndexIO {
 					v = termIndex.getTermByGroupingKey(variant);
 					if(b != null && v != null) {
 						
-						VariationType vType = VariationType.fromShortName(variantType);
+						RelationType vType = RelationType.fromShortName(variantType);
 						
-						TermVariation tv = new TermVariation(
+						TermRelation tv = new TermRelation(
 								vType, 
 								b, 
 								v, 
-								vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
+								vType == RelationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
 						tv.setScore(variantScore);
-						termIndex.addTermVariation(tv);
+						termIndex.addRelation(tv);
 					} else {
 						if(b==null)
 							LOGGER.warn("Could not build variant because term \"{}\" was not found.", base);
@@ -636,20 +645,20 @@ public class JsonTermIndexIO {
 		jg.writeEndArray();
 		
 		/* Variants */
-		jg.writeFieldName(TERM_VARIATIONS);
+		jg.writeFieldName(TERM_RELATIONS);
 		jg.writeStartArray();
-		for(TermVariation v:termIndex.getTermVariations().collect(Collectors.toList())) {
+		for(TermRelation relation:termIndex.getRelations().collect(Collectors.toList())) {
 			jg.writeStartObject();
-			jg.writeFieldName(BASE);
-			jg.writeString(v.getBase().getGroupingKey());
-			jg.writeFieldName(VARIANT);
-			jg.writeString(v.getVariant().getGroupingKey());
-			jg.writeFieldName(VARIANT_TYPE);
-			jg.writeString(v.getVariationType().getShortName());
+			jg.writeFieldName(FROM);
+			jg.writeString(relation.getFrom().getGroupingKey());
+			jg.writeFieldName(TO);
+			jg.writeString(relation.getTo().getGroupingKey());
+			jg.writeFieldName(RELATION_TYPE);
+			jg.writeString(relation.getType().getShortName());
 			jg.writeFieldName(INFO);
-			jg.writeString(v.getInfo().toString());
+			jg.writeString(relation.getInfo().toString());
 			jg.writeFieldName(VARIANT_SCORE);
-			jg.writeNumber(v.getScore());
+			jg.writeNumber(relation.getScore());
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();

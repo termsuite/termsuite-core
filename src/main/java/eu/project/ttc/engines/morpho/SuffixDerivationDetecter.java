@@ -37,7 +37,7 @@ import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.SuffixDerivation;
@@ -90,7 +90,7 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 							nbDerivations++;
 							if(LOGGER.isTraceEnabled())
 								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
-							termIndex.addTermVariation(baseTerm, swt, VariationType.DERIVES_INTO, suffixDerivation.getType());
+							termIndex.addRelation(baseTerm, swt, RelationType.DERIVES_INTO, suffixDerivation.getType());
 							
 							watch(swt, baseTerm);
 

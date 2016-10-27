@@ -31,8 +31,10 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.utils.TermOccurrenceUtils;
+import eu.project.ttc.utils.TermUtils;
 
 public class ScoredTerm extends ScoredTermOrVariant {
 
@@ -73,11 +75,11 @@ public class ScoredTerm extends ScoredTermOrVariant {
 	public double getTermIndependanceScore() {
 		if(independance == -1) {
 			Collection<TermOccurrence> occs = Lists.newLinkedList(getTerm().getOccurrences());
-			for(TermVariation tv:scoredModel.getTermIndex().getOutboundTermVariations(getTerm())) {
-				TermOccurrenceUtils.removeOverlaps(tv.getVariant().getOccurrences(), occs);
+			for(TermRelation tv:scoredModel.getTermIndex().getOutboundRelations(getTerm())) {
+				TermOccurrenceUtils.removeOverlaps(tv.getTo().getOccurrences(), occs);
 			}
-			for(Term ext:getTerm().getExtensions()) {
-				TermOccurrenceUtils.removeOverlaps(ext.getOccurrences(), occs);
+			for(Term extension:TermUtils.getExtensions(scoredModel.getTermIndex(), getTerm())) {
+				TermOccurrenceUtils.removeOverlaps(extension.getOccurrences(), occs);
 			}
 
 			independance = ((double)occs.size())/this.getTerm().getFrequency();

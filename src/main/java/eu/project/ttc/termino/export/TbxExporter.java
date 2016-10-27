@@ -36,7 +36,7 @@ import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.utils.TermSuiteUtils;
 
 public class TbxExporter {
@@ -84,8 +84,8 @@ public class TbxExporter {
 			try {
 				for(Term t: traverser.toList(termIndex)) {
 					addTermEntry(t, false);
-					for(TermVariation v:termIndex.getOutboundTermVariations(t))
-						addTermEntry(v.getVariant(), true);
+					for(TermRelation v:termIndex.getOutboundRelations(t))
+						addTermEntry(v.getTo(), true);
 				}
 				exportTBXDocument();
 			} catch (TransformerException | IOException e) {
@@ -221,12 +221,12 @@ public class TbxExporter {
 		langSet.setAttribute("xml:lang", this.termIndex.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (TermVariation variation : termIndex.getInboundTermVariations(term)) 
-			this.addTermBase(langSet, variation.getBase().getGroupingKey(), null);
+		for (TermRelation variation : termIndex.getInboundTerRelat(term)) 
+			this.addTermBase(langSet, variation.getFrom().getGroupingKey(), null);
 
-		for (TermVariation variation : termIndex.getOutboundTermVariations(term)) {
-			this.addTermVariant(langSet, String.format("langset-%d", variation.getVariant().getId()),
-					variation.getVariant().getGroupingKey());
+		for (TermRelation variation : termIndex.getOutboundRelations(term)) {
+			this.addTermVariant(langSet, String.format("langset-%d", variation.getTo().getId()),
+					variation.getTo().getGroupingKey());
 		}
 		Collection<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());

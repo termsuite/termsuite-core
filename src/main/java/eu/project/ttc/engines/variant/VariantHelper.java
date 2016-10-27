@@ -30,8 +30,8 @@ import com.google.common.base.Objects;
 import eu.project.ttc.models.GroovyWord;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.utils.TermUtils;
 
 public class VariantHelper {
@@ -55,12 +55,12 @@ public class VariantHelper {
 		if(targetTerm == null)
 			return false;
 		
-		TermVariation tv;
-		for(Iterator<TermVariation> it = termIndex.getOutboundTermVariations(sourceTerm, VariationType.DERIVES_INTO).iterator()
+		TermRelation tv;
+		for(Iterator<TermRelation> it = termIndex.getOutboundRelations(sourceTerm, RelationType.DERIVES_INTO).iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
-			if(tv.getVariant().equals(targetTerm)) {
+			if(tv.getTo().equals(targetTerm)) {
 				if(Objects.equal(tv.getInfo(), derivationPattern))
 					return true;
 			}
@@ -77,12 +77,12 @@ public class VariantHelper {
 		if(targetTerm == null)
 			return false;
 		
-		TermVariation tv;
-		for(Iterator<TermVariation> it = termIndex.getOutboundTermVariations(sourceTerm, VariationType.IS_PREFIX_OF).iterator()
+		TermRelation tv;
+		for(Iterator<TermRelation> it = termIndex.getOutboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
-			if(tv.getVariant().equals(targetTerm)) {
+			if(tv.getTo().equals(targetTerm)) {
 				return true;
 			}
 		}
