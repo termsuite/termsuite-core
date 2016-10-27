@@ -56,7 +56,6 @@ public class VariationExporter {
 			}
 			
 			Set<Term> sortedTerms = new TreeSet<Term>(TermProperty.SPECIFICITY.getComparator(
-					this.termIndex, 
 					true));
 			sortedTerms.addAll(acceptedVariations.keySet());
 			

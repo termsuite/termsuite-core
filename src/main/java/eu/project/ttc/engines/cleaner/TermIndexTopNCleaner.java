@@ -48,7 +48,7 @@ public class TermIndexTopNCleaner extends AbstractTermIndexCleaner {
 	protected void doCleaningPartition(Set<Term> keptTerms,
 			Set<Term> removedTerms) {
 		List<Term> terms = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
-		Collections.sort(terms, property.getComparator(termIndexResource.getTermIndex(), true));
+		Collections.sort(terms, property.getComparator(true));
 		for(int index = 0; index < terms.size(); index++) {
 			if(index < topN)
 				keptTerms.add(terms.get(index));

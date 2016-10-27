@@ -249,7 +249,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 				rtlV);
 		rtlTermsNotFound = Sets.newHashSet(rtl.asList());
 		List<Term> lc = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
-		Collections.sort(lc, TermProperty.SPECIFICITY.getComparator(termIndexResource.getTermIndex(), true));
+		Collections.sort(lc, TermProperty.SPECIFICITY.getComparator(true));
 		generateRecPointIndexes(lc.size());
 		
 		List<RTLTerm> rtlTermsFound = Lists.newArrayList();
