@@ -23,11 +23,11 @@ package eu.project.ttc.tools;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.align.BilingualAligner;
@@ -41,12 +41,12 @@ import eu.project.ttc.resources.BilingualDictionary;
 public class TermSuiteAlignerBuilder {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteAlignerBuilder.class);
 	
-	private Optional<TermIndex> sourceTerminology = Optional.absent();
-	private Optional<TermIndex> targetTerminology = Optional.absent();
-	private Optional<String> dicoPath = Optional.absent();
+	private Optional<TermIndex> sourceTerminology = Optional.empty();
+	private Optional<TermIndex> targetTerminology = Optional.empty();
+	private Optional<String> dicoPath = Optional.empty();
 	private Optional<? extends SimilarityDistance> distance = Optional.of(new Cosine());
-//	private Optional<String> sourceTerminologyLanguage = Optional.absent();
-//	private Optional<String> targetTerminologyLanguage = Optional.absent();
+//	private Optional<String> sourceTerminologyLanguage = Optional.empty();
+//	private Optional<String> targetTerminologyLanguage = Optional.empty();
 	
 	private TermSuiteAlignerBuilder() {}
 	public static TermSuiteAlignerBuilder start() {

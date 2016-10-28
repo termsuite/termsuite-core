@@ -52,7 +52,6 @@ import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.Document;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;

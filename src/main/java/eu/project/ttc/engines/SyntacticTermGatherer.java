@@ -44,6 +44,7 @@ package eu.project.ttc.engines;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -58,7 +59,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
@@ -101,7 +101,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 
 	private BigInteger totalComparisons = BigInteger.valueOf(0);
 	private int nbComparisons = 0;
-	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
 	static class RunConfig {
 		String indexName;
@@ -112,7 +112,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 			this.variantRuleIndex = variantRuleIndex;
 		}
 	}
-	
 	
 	/*
 	 *  Do not deactivate gathering on key_lemma_lemma, otherwise we loose

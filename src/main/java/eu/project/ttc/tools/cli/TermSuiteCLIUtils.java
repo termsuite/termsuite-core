@@ -50,6 +50,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Properties;
 
 import org.apache.commons.cli.CommandLine;
@@ -60,7 +61,6 @@ import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
@@ -258,7 +258,7 @@ public final class TermSuiteCLIUtils {
 			else 
 				return Optional.of("file:" + new File(line.getOptionValue(optionName)).getAbsolutePath());
 		}
-		return Optional.absent();
+		return Optional.empty();
 	}
 	
 	

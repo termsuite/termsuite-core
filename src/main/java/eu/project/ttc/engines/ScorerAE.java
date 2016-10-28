@@ -24,6 +24,7 @@
 package eu.project.ttc.engines;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.apache.uima.UimaContext;
@@ -35,7 +36,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
@@ -66,7 +66,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	private TermHistoryResource historyResource;
 
 	
-	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {

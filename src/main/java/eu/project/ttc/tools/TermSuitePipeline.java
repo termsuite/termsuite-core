@@ -31,6 +31,7 @@ import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
@@ -49,14 +50,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.engines.ContextualizerAE;
-import eu.project.ttc.engines.DocumentFrequencySetter;
 import eu.project.ttc.engines.DocumentFrequencySetterAE;
 import eu.project.ttc.engines.DocumentLogger;
 import eu.project.ttc.engines.EvalEngine;
@@ -194,7 +193,7 @@ public class TermSuitePipeline {
 	 * MAIN PIPELINE PARAMETERS
 	 */
 	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
-	private Optional<? extends TermIndex> termIndex = Optional.absent();
+	private Optional<? extends TermIndex> termIndex = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
@@ -205,8 +204,8 @@ public class TermSuitePipeline {
 	/*
 	 * POS Tagger parameters
 	 */
-	private Optional<String> mateModelsPath = Optional.absent();
-	private Optional<String> treeTaggerPath = Optional.absent();
+	private Optional<String> mateModelsPath = Optional.empty();
+	private Optional<String> treeTaggerPath = Optional.empty();
 	
 
 	/*
@@ -214,8 +213,8 @@ public class TermSuitePipeline {
 	 */
 	private boolean addSpottedAnnoToTermIndex = true;
 	private boolean spotWithOccurrences = true;
-	private Optional<Boolean> logOverlappingRules = Optional.absent();
-	private Optional<String> postProcessingStrategy = Optional.absent();
+	private Optional<Boolean> logOverlappingRules = Optional.empty();
+	private Optional<String> postProcessingStrategy = Optional.empty();
 	private boolean enableSyntacticLabels = false;
 
 	/*
@@ -233,19 +232,19 @@ public class TermSuitePipeline {
 	/*
 	 * Compost Params
 	 */
-	private Optional<Float> alpha = Optional.absent();
-	private Optional<Float> beta = Optional.absent();
-	private Optional<Float> gamma = Optional.absent();
-	private Optional<Float> delta = Optional.absent();
-	private Optional<Float> compostScoreThreshold = Optional.absent();
-	private Optional<Integer> compostMinComponentSize = Optional.absent();
-	private Optional<Integer> compostMaxComponentNum = Optional.absent();
+	private Optional<Float> alpha = Optional.empty();
+	private Optional<Float> beta = Optional.empty();
+	private Optional<Float> gamma = Optional.empty();
+	private Optional<Float> delta = Optional.empty();
+	private Optional<Float> compostScoreThreshold = Optional.empty();
+	private Optional<Integer> compostMinComponentSize = Optional.empty();
+	private Optional<Integer> compostMaxComponentNum = Optional.empty();
 	private Optional<Float> compostSegmentSimilarityThreshold = Optional.of(1f);
 
 	/*
 	 * Graphical Variant Gatherer parameters
 	 */
-	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
+	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.empty();
 	
 	/* JSON */
 	private boolean exportJsonWithOccurrences = true;
@@ -606,7 +605,7 @@ public class TermSuitePipeline {
 
 	
 	
-	private Optional<URL> resourceUrlPrefix = Optional.absent();
+	private Optional<URL> resourceUrlPrefix = Optional.empty();
 	
 	
 	public TermSuitePipeline setResourceUrlPrefix(String urlPrefix) {

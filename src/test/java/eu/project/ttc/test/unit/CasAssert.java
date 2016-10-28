@@ -27,6 +27,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
@@ -36,7 +37,6 @@ import org.assertj.core.api.AbstractListAssert;
 import org.assertj.core.util.Lists;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.utils.JCasUtils;

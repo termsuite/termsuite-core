@@ -27,11 +27,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
@@ -73,7 +73,7 @@ public class TermUtils {
 	};
 	
 	public static void showIndex(TermIndex index, PrintStream stream) {
-		Optional<Pattern> watchExpression = Optional.absent();
+		Optional<Pattern> watchExpression = Optional.empty();
 		showIndex(index, stream, watchExpression);
 	}
 		

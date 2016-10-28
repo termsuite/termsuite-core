@@ -22,11 +22,11 @@
 package eu.project.ttc.models;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
@@ -42,15 +42,15 @@ public class TermBuilder {
 	private java.util.Optional<String> pilot = java.util.Optional.empty();
 	private java.util.Optional<Integer> documentFrequency = java.util.Optional.empty();
 	private String spottingRule;
-	private Optional<Integer> rank = Optional.absent();
-	private Optional<Integer> id = Optional.absent();
+	private Optional<Integer> rank = Optional.empty();
+	private Optional<Integer> id = Optional.empty();
 	private List<TermWord> termWords = Lists.newArrayList();
-	private Optional<Integer> frequency = Optional.absent();
-	private Optional<Double> generalFrequencyNorm = Optional.absent();
-	private Optional<Double> frequencyNorm = Optional.absent();
-	private Optional<Double> specificity = Optional.absent();
+	private Optional<Integer> frequency = Optional.empty();
+	private Optional<Double> generalFrequencyNorm = Optional.empty();
+	private Optional<Double> frequencyNorm = Optional.empty();
+	private Optional<Double> specificity = Optional.empty();
 
-	private Optional<ContextVector> contextVector = Optional.absent();
+	private Optional<ContextVector> contextVector = Optional.empty();
 
 	
 	private TermBuilder() {

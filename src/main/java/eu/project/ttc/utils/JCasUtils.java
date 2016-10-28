@@ -23,6 +23,7 @@ package eu.project.ttc.utils;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Optional;
 import java.util.TreeMap;
 
 import org.apache.commons.lang.mutable.MutableInt;
@@ -34,7 +35,6 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.metadata.NameValuePair;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 
 import eu.project.ttc.types.SourceDocumentInformation;
@@ -190,12 +190,11 @@ public class JCasUtils {
 	}
 
 	public static Optional<SourceDocumentInformation> getSourceDocumentAnnotation(JCas jCas) {
-//		zgere
 		FSIterator<Annotation> iterator = jCas.getAnnotationIndex(SourceDocumentInformation.type).iterator();
 		if(iterator.hasNext())
 			return Optional.of((SourceDocumentInformation)iterator.next());
 		else
-			return Optional.absent();
+			return Optional.empty();
 	}
 
 	public static boolean containsStrictly(Annotation container, Annotation subAnnotation) {

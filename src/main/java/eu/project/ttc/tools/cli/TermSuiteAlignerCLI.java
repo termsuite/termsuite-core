@@ -50,6 +50,7 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Options;
@@ -59,7 +60,6 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
@@ -104,8 +104,8 @@ public class TermSuiteAlignerCLI {
 	
 	// values
 	
-	private Optional<TermIndex> sourceTermino = Optional.absent();
-	private Optional<TermIndex> targetTermino = Optional.absent();
+	private Optional<TermIndex> sourceTermino = Optional.empty();
+	private Optional<TermIndex> targetTermino = Optional.empty();
 	private String dicoPath;
 	private int n = 10;
 	private List<String> terms = Lists.newArrayList();
