@@ -21,7 +21,6 @@
  *******************************************************************************/
 package eu.project.ttc.models;
 
-import java.io.File;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.stream.Stream;
@@ -67,7 +66,6 @@ public interface TermIndex {
 	 */
 	public Term getTermByGroupingKey(String groupingKey);
 	public Term getTermById(int termId);
-//	public TermBuilder newTerm(String termId);
 	public void removeTerm(Term t);
 	public void addTerm(Term term);
 	public Collection<Term> getTerms();
@@ -80,20 +78,6 @@ public interface TermIndex {
 	public void cleanOrphanWords();
 	public Word getWord(String lemma);
 
-	/*
-	 * Documents
-	 */
-	/**
-	 * Returns the document identified by this url or 
-	 * creates a new one.
-	 * 
-	 * @param url
-	 * 			A url accessible by {@link File}'s constructor.
-	 * @return
-	 * 			The created document
-	 */
-	public Document getDocument(String url);
-	public Collection<Document> getDocuments();
 	
 	
 	/**
@@ -147,8 +131,6 @@ public interface TermIndex {
 	//TODO remove these
 	@Deprecated // Should use import JCas (important for the inner nbWordAnnotation)
 	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermIndex);
-	public void createOccurrenceIndex();
-	public void clearOccurrenceIndex();
 
 	public void importCas(JCas cas, boolean keepOccurrenceInTermIndex);
 

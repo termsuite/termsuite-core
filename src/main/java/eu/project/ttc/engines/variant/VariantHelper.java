@@ -28,10 +28,10 @@ import java.util.Iterator;
 import com.google.common.base.Objects;
 
 import eu.project.ttc.models.GroovyWord;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.utils.TermUtils;
 
 public class VariantHelper {

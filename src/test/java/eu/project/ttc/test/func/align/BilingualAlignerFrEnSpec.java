@@ -3,11 +3,7 @@ package eu.project.ttc.test.func.align;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -16,16 +12,13 @@ import org.junit.rules.ExpectedException;
 
 import eu.project.ttc.align.AlignmentMethod;
 import eu.project.ttc.align.BilingualAligner;
-import eu.project.ttc.align.RequiresSize2Exception;
 import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.FunctionalTests;
 import eu.project.ttc.tools.TermSuiteAlignerBuilder;
-import eu.project.ttc.utils.TermUtils;
 
 public class BilingualAlignerFrEnSpec {
 

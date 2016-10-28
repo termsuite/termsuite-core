@@ -26,6 +26,7 @@ import org.junit.runners.Suite;
 
 import eu.project.ttc.test.termino.export.TsvExporterSpec;
 import eu.project.ttc.test.unit.api.TraverserSpec;
+import eu.project.ttc.test.unit.engines.ContextualizerSpec;
 import eu.project.ttc.test.unit.engines.FixedExpressionSpotterSpec;
 import eu.project.ttc.test.unit.engines.GraphicalVariantGathererSpec;
 import eu.project.ttc.test.unit.engines.SuffixDerivationExceptionSetterSpec;
@@ -37,7 +38,7 @@ import eu.project.ttc.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
 import eu.project.ttc.test.unit.metrics.SimilarityDistanceSpec;
 import eu.project.ttc.test.unit.models.ContextVectorSpec;
 import eu.project.ttc.test.unit.models.CrossTableSpec;
-import eu.project.ttc.test.unit.models.DocumentSpec;
+import eu.project.ttc.test.unit.models.DocumentViewSpec;
 import eu.project.ttc.test.unit.models.TermSpec;
 import eu.project.ttc.test.unit.readers.TermsuiteJsonCasSerializerDeserializerSpec;
 import eu.project.ttc.test.unit.resources.PrefixTreeSpec;
@@ -62,7 +63,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	SyntacticTermGathererSpec.class,
 	TermSpec.class, 
 	SegmentationSpec.class, 
-	DocumentSpec.class, 
+	DocumentViewSpec.class, 
 	TermUtilsSpec.class,
 	FixedExpressionSpotterSpec.class,
 	OccurrenceBufferSpec.class,
@@ -86,6 +87,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	TermsuiteJsonCasSerializerDeserializerSpec.class,
 	TsvExporterSpec.class,
 	TraverserSpec.class,
+	ContextualizerSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,
 	})

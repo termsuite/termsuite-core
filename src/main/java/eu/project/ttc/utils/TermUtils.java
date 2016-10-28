@@ -41,12 +41,13 @@ import eu.project.ttc.engines.desc.TermSuiteResourceException;
 import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.ContextVector;
+import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
@@ -70,10 +71,6 @@ public class TermUtils {
 					.result();
 		}
 	};
-	
-	public static TermFormGetter formGetter(TermIndex termIndex, boolean downcaseForms) {
-		return new TermFormGetter(termIndex, downcaseForms);
-	}
 	
 	public static void showIndex(TermIndex index, PrintStream stream) {
 		Optional<Pattern> watchExpression = Optional.absent();
@@ -199,9 +196,9 @@ public class TermUtils {
 	 * @return
 	 * 			fstrict(t1) / f(t1)
 	 */
-	public static double getStrictness(Term t1, Term t2) {
-		Collection<TermOccurrence> occ1 = Lists.newArrayList(t1.getOccurrences());
-		TermOccurrenceUtils.removeOverlaps(t2.getOccurrences(), occ1);
+	public static double getStrictness(OccurrenceStore store, Term t1, Term t2) {
+		Collection<TermOccurrence> occ1 = Lists.newArrayList(store.getOccurrences(t1));
+		TermOccurrenceUtils.removeOverlaps(store.getOccurrences(t2), occ1);
 		double t1Strict = occ1.size();
 		double t1F = t1.getFrequency();
 		return t1Strict / t1F;
@@ -444,11 +441,11 @@ public class TermUtils {
 	
 	
 	public static Collection<TermRelation> getVariations(TermIndex termIndex, Term t) {
-		return termIndex.getRelations(
+		return termIndex.getOutboundRelations(t,
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,
 				RelationType.DERIVES_INTO,
-				RelationType.IS_PREFIX_OF).collect(Collectors.toSet());
+				RelationType.IS_PREFIX_OF);
 	}
 }

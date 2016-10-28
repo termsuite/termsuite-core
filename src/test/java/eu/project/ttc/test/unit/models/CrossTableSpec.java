@@ -26,10 +26,10 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import eu.project.ttc.engines.Contextualizer;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.metrics.MutualInformation;
 import eu.project.ttc.models.CrossTable;
-import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.unit.Fixtures;
@@ -47,16 +47,15 @@ public class CrossTableSpec {
 	public void init() {
 
 		this.termIndex = Fixtures.termIndexWithOccurrences();
-		this.termIndex.createOccurrenceIndex();
 		
 		t1 = this.termIndex.getTermByGroupingKey("n: énergie");
 		t2 = this.termIndex.getTermByGroupingKey("a: éolien");
 		t3 = this.termIndex.getTermByGroupingKey("n: accès");
 		
 		// T1 T2 T3 T1 T3 T3 T1
-		t1.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1);
-		t2.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1);
-		t3.computeContextVector(OccurrenceType.SINGLE_WORD, 1, 1);
+		new Contextualizer(termIndex)
+				.setScope(1)
+				.contextualize();
 		
 		this.crossTable = new CrossTable(this.termIndex);
 	}

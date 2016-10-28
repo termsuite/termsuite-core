@@ -137,7 +137,7 @@ public class BilingualAligner {
 	 */
 	public List<TranslationCandidate> alignDicoThenDistributional(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		checkNotNull(sourceTerm);
-		Preconditions.checkArgument(sourceTerm.isContextVectorComputed(), ERR_VECTOR_NOT_SET, sourceTerm.getGroupingKey());
+		Preconditions.checkArgument(sourceTerm.getContext() != null, ERR_VECTOR_NOT_SET, sourceTerm.getGroupingKey());
 
 		List<TranslationCandidate> dicoCandidates = Lists.newArrayList();
 		/*
@@ -325,7 +325,7 @@ public class BilingualAligner {
 	public List<TranslationCandidate> alignDistributional(Term sourceTerm, int nbCandidates,
 			int minCandidateFrequency) {
 		Queue<TranslationCandidate> alignedCandidateQueue = MinMaxPriorityQueue.maximumSize(nbCandidates).create();
-		ContextVector sourceVector = sourceTerm.getContextVector();
+		ContextVector sourceVector = sourceTerm.getContext();
 		ContextVector translatedSourceVector = AlignerUtils.translateVector(
 				sourceVector,
 				dico,
@@ -337,9 +337,9 @@ public class BilingualAligner {
 		for(Term targetTerm:IteratorUtils.toIterable(targetTermino.singleWordTermIterator())) {
 			if(targetTerm.getFrequency() < minCandidateFrequency)
 				continue;
-			if(targetTerm.isContextVectorComputed()) {
+			if(targetTerm.getContext() != null) {
 				nbVectorsComputed++;
-				v = distance.getExplainedValue(translatedSourceVector, targetTerm.getContextVector());
+				v = distance.getExplainedValue(translatedSourceVector, targetTerm.getContext());
 				TranslationCandidate candidate = new TranslationCandidate(
 						AlignmentMethod.DISTRIBUTIONAL,
 						targetTerm, 
@@ -529,7 +529,7 @@ public class BilingualAligner {
 		Collection<String> translations = dico.getTranslations(sourceTerm.getLemma());
 		
 		ContextVector translatedSourceVector = AlignerUtils.translateVector(
-				sourceTerm.getContextVector(),
+				sourceTerm.getContext(),
 				dico,
 				AlignerUtils.TRANSLATION_STRATEGY_MOST_SPECIFIC,
 				targetTermino);
@@ -538,11 +538,11 @@ public class BilingualAligner {
 		for(String candidateLemma:translations) {
 			List<Term> terms = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(candidateLemma);
 			for (Term candidateTerm : terms) {
-				if (candidateTerm.isContextVectorComputed()) {
+				if (candidateTerm.getContext() != null) {
 					TranslationCandidate candidate = new TranslationCandidate(
 							AlignmentMethod.DICTIONARY,
 							candidateTerm,
-							distance.getValue(translatedSourceVector, candidateTerm.getContextVector()),
+							distance.getValue(translatedSourceVector, candidateTerm.getContext()),
 							sourceTerm);
 					dicoCandidates.add(candidate);
 				}

@@ -12,7 +12,6 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
-import eu.project.ttc.utils.TermIndexUtils;
 import eu.project.ttc.utils.TermUtils;
 
 public class TsvExporter {

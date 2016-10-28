@@ -13,10 +13,10 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
 
 public class VariationExporter {
 	

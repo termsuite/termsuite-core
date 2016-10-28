@@ -169,7 +169,7 @@ public class TermSuiteAlignerCLI {
 							out.println(sourceTerm);
 							out.println("-");
 						}
-						for(TranslationCandidate candidate:aligner.alignSize2(sourceTerm, n, 1)) {
+						for(TranslationCandidate candidate:aligner.align(sourceTerm, n, 1)) {
 							if(showExplanation)
 								out.format("%s\t%.3f\t%s\t%s\n",
 										candidate.getTerm(),

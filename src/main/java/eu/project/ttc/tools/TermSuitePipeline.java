@@ -55,6 +55,9 @@ import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.Contextualizer;
+import eu.project.ttc.engines.ContextualizerAE;
+import eu.project.ttc.engines.DocumentFrequencySetter;
+import eu.project.ttc.engines.DocumentFrequencySetterAE;
 import eu.project.ttc.engines.DocumentLogger;
 import eu.project.ttc.engines.EvalEngine;
 import eu.project.ttc.engines.ExtensionDetecter;
@@ -64,6 +67,7 @@ import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
+import eu.project.ttc.engines.PilotSetterAE;
 import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
@@ -105,9 +109,9 @@ import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
@@ -1297,13 +1301,41 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
-			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0);
+			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0)
+						.aePilotSetter()
+						.aeDocumentFrequencySetter()
+						;
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 	}
 
+	private TermSuitePipeline aePilotSetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					PilotSetterAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, PilotSetterAE.TASK_NAME, 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}		
+	}
 	
+	private TermSuitePipeline aeDocumentFrequencySetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					DocumentFrequencySetterAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, DocumentFrequencySetterAE.TASK_NAME, 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}		
+	}
+
 	
 	/**
 	 * Naive morphological analysis of prefix compounds based on a 
@@ -1746,13 +1778,12 @@ public class TermSuitePipeline {
 		AnalysisEngineDescription ae;
 		try {
 			ae = AnalysisEngineFactory.createEngineDescription(
-					Contextualizer.class,
-					Contextualizer.NORMALIZE_ASSOC_RATE, true,
-					Contextualizer.SCOPE, scope,
-					Contextualizer.CO_TERMS_TYPE, contextualizeCoTermsType,
-					Contextualizer.COMPUTE_CONTEXTS_FOR_ALL_TERMS, allTerms,
-					Contextualizer.ASSOCIATION_RATE, contextAssocRateMeasure,
-					Contextualizer.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
+					ContextualizerAE.class,
+					ContextualizerAE.SCOPE, scope,
+					ContextualizerAE.CO_TERMS_TYPE, contextualizeCoTermsType,
+					ContextualizerAE.COMPUTE_CONTEXTS_FOR_ALL_TERMS, allTerms,
+					ContextualizerAE.ASSOCIATION_RATE, contextAssocRateMeasure,
+					ContextualizerAE.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 

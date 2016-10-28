@@ -39,9 +39,9 @@ import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
@@ -121,13 +121,13 @@ public class GraphicalVariantGathererSpec {
 	public void testCaseInsensitive() throws  Exception {
 		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
 		assertThat(termIndex.getInboundTerRelat(this.abcdefghijkl)).hasSize(1)
-		.extracting("base")
+		.extracting("from")
 		.contains(this.abcdefghijklCapped);
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijkl)).hasSize(1);
 		
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(1)
-			.extracting("variant")
+			.extracting("to")
 			.contains(this.abcdefghijkl);
 		assertThat(termIndex.getInboundTerRelat(this.abcdefghijklCapped)).hasSize(1);
 	}
@@ -138,7 +138,7 @@ public class GraphicalVariantGathererSpec {
 		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
 		assertThat(termIndex.getOutboundRelations(this.tetetete))
 			.hasSize(1)
-			.extracting("variationType", "variant")
+			.extracting("type", "to")
 			.contains(tuple(RelationType.GRAPHICAL, this.teteteteAccent));
 	}
 
@@ -147,12 +147,12 @@ public class GraphicalVariantGathererSpec {
 		makeAE(Lang.FR, 0.9f).collectionProcessComplete();
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
-			.extracting("variant")
+			.extracting("to")
 			.contains(this.abcdefghijkl, this.abcdefghijkx);
 		
 		assertThat(termIndex.getOutboundRelations(this.tetetete))
 			.hasSize(1)
-			.extracting("variationType", "variant")
+			.extracting("type", "to")
 			.contains(
 					tuple(RelationType.GRAPHICAL, this.teteteteAccent)
 					);
@@ -164,12 +164,12 @@ public class GraphicalVariantGathererSpec {
 		makeAE(Lang.FR, 0.8f).collectionProcessComplete();
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
-			.extracting("variant")
+			.extracting("to")
 			.contains(this.abcdefghijkl, this.abcdefghijkx);
 		
 		assertThat(termIndex.getOutboundRelations(this.tetetete))
 			.hasSize(2)
-			.extracting("variationType", "variant")
+			.extracting("type", "to")
 			.contains(
 					tuple(RelationType.GRAPHICAL, this.teteteteAccent),
 					tuple(RelationType.GRAPHICAL, this.tetetetx)

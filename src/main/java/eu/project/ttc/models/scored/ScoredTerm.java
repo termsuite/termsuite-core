@@ -29,10 +29,10 @@ import java.util.List;
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 import eu.project.ttc.utils.TermUtils;
 
@@ -74,12 +74,13 @@ public class ScoredTerm extends ScoredTermOrVariant {
 	 */
 	public double getTermIndependanceScore() {
 		if(independance == -1) {
-			Collection<TermOccurrence> occs = Lists.newLinkedList(getTerm().getOccurrences());
+			OccurrenceStore occStore = scoredModel.getTermIndex().getOccurrenceStore();
+			Collection<TermOccurrence> occs = Lists.newLinkedList(occStore.getOccurrences(getTerm()));
 			for(TermRelation tv:scoredModel.getTermIndex().getOutboundRelations(getTerm())) {
-				TermOccurrenceUtils.removeOverlaps(tv.getTo().getOccurrences(), occs);
+				TermOccurrenceUtils.removeOverlaps(occStore.getOccurrences(tv.getTo()), occs);
 			}
 			for(Term extension:TermUtils.getExtensions(scoredModel.getTermIndex(), getTerm())) {
-				TermOccurrenceUtils.removeOverlaps(extension.getOccurrences(), occs);
+				TermOccurrenceUtils.removeOverlaps(occStore.getOccurrences(extension), occs);
 			}
 
 			independance = ((double)occs.size())/this.getTerm().getFrequency();

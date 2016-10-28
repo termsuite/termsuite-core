@@ -36,9 +36,9 @@ import com.google.common.collect.Multimap;
 
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.resources.PrefixTree;
 import eu.project.ttc.resources.TermIndexResource;

@@ -23,19 +23,19 @@
 
 package eu.project.ttc.models;
 
+import java.io.Closeable;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 import eu.project.ttc.models.index.selectors.TermSelector;
 
-public interface OccurrenceStore {
+public interface OccurrenceStore extends Closeable {
 	public static enum Type {MEMORY, MONGODB}
 	public static enum State{COLLECTING,INDEXING,INDEXED}
 
 	public Iterator<TermOccurrence> occurrenceIterator(Term term);
 	public Collection<TermOccurrence> getOccurrences(Term term);
-	public void addOccurrence(Term term, TermOccurrence e);
-	public void addAllOccurrences(Term term, Collection<TermOccurrence> c);
 	public Type getStoreType();
 	public void flush();
 	public State getCurrentState();
@@ -61,4 +61,9 @@ public interface OccurrenceStore {
 	
 	public void deleteMany(TermSelector selector);
 	void close();
+	public List<Form> getForms(Term term);
+	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText);
+	
+	public Document getDocument(String url);
+	public Collection<Document> getDocuments();
 }

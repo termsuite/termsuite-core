@@ -39,11 +39,12 @@ public class TermBuilder {
 	private TermIndex termIndex;
 	
 	private String groupingKey;
+	private java.util.Optional<String> pilot = java.util.Optional.empty();
+	private java.util.Optional<Integer> documentFrequency = java.util.Optional.empty();
 	private String spottingRule;
 	private Optional<Integer> rank = Optional.absent();
 	private Optional<Integer> id = Optional.absent();
 	private List<TermWord> termWords = Lists.newArrayList();
-	private List<TermOccurrence> termOccurrences = Lists.newArrayList();
 	private Optional<Integer> frequency = Optional.absent();
 	private Optional<Double> generalFrequencyNorm = Optional.absent();
 	private Optional<Double> frequencyNorm = Optional.absent();
@@ -66,6 +67,16 @@ public class TermBuilder {
 			id = Optional.of(this.termIndex.newId());
 		Term term = create();
 		this.termIndex.addTerm(term);
+
+		for(Object[] occ:occurrences) {
+			termIndex.getOccurrenceStore().addOccurrence(
+					term, 
+					(String)occ[0], 
+					(Integer)occ[1], 
+					(Integer)occ[2], 
+					(String)occ[3]);
+		}
+
 		return term;
 	}
 	
@@ -80,11 +91,18 @@ public class TermBuilder {
 		if(!id.isPresent())
 			id = Optional.of(CURRENT_TERM_ID++);
 		
-		Term term = new Term(termIndex.getOccurrenceStore(), id.get(), gKey, termWords, spottingRule);
+		Term term = new Term(id.get(), gKey, termWords, spottingRule);
 		if(generalFrequencyNorm.isPresent())
 			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
 		if(frequencyNorm.isPresent())
 			term.setFrequencyNorm(frequencyNorm.get());
+
+
+		if(pilot.isPresent())
+			term.setPilot(pilot.get());
+
+		if(documentFrequency.isPresent())
+			term.setDocumentFrequency(documentFrequency.get());
 
 		if(specificity.isPresent())
 			term.setSpecificity(specificity.get());
@@ -93,23 +111,15 @@ public class TermBuilder {
 			term.setRank(rank.get());
 		
 		if(contextVector.isPresent())
-			term.setContextVector(contextVector.get());
+			term.setContext(contextVector.get());
 
-		/*
-		 *  1 - set occurrences
-		 */
-		for(TermOccurrence occ:termOccurrences) {
-			occ.setTerm(term);
-			term.addOccurrence(occ);
-		}
-		
 		/*
 		 * 2 - frequency must be set after occurrences because it overwrites 
 		 * the exiting term frequency incremented by occurrences adding.
 		 */
 		if(frequency.isPresent())
 			term.setFrequency(frequency.get());
-			
+		
 		return term;
 	}
 	
@@ -149,11 +159,6 @@ public class TermBuilder {
 		return this;
 	}
 
-	public TermBuilder addOccurrence(int begin, int end, Document sourceDocument, String coveredText) {
-		this.termOccurrences.add(new TermOccurrence(null, coveredText, sourceDocument, begin, end));
-		return this;
-	}
-
 	public void setContextVector(ContextVector vector) {
 		this.contextVector  = Optional.of(vector);
 	}
@@ -185,4 +190,22 @@ public class TermBuilder {
 			word = WordBuilder.start().setLemma(lemma).setStem(stem).create();
 		this.termWords.add(new TermWord(word, label));
 	}
+	
+	private List<Object[]> occurrences=Lists.newArrayList();
+
+	public TermBuilder addOccurrence(int begin, int end, String docUrl, String text) {
+		occurrences.add(new Object[]{docUrl, begin, end, text});
+		return this;
+	}
+
+	public TermBuilder setPilot(String pilot) {
+		this.pilot = java.util.Optional.of(pilot);
+		return this;
+	}
+	
+	public TermBuilder setDocumentFrequency(int documentFrequency) {
+		this.documentFrequency = java.util.Optional.of(documentFrequency);
+		return this;
+	}
+
 }

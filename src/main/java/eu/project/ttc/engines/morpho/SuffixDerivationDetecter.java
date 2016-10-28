@@ -34,10 +34,10 @@ import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.SuffixDerivation;

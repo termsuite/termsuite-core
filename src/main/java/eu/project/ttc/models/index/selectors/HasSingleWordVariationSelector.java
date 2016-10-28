@@ -23,10 +23,10 @@
 
 package eu.project.ttc.models.index.selectors;
 
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.utils.TermUtils;
 
 /**

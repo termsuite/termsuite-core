@@ -47,15 +47,13 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.Document;
 import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.SourceDocumentInformation;
@@ -74,10 +72,6 @@ public class MemoryTermIndex implements TermIndex {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTermIndex.class);
 	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
 
-	private static final String MEASURE_WR = "wr";
-	private static final String MEASURE_WRLOG = "wrLog";
-	private static final String MEASURE_FREQUENCY = "frequency";
-
 	/**
 	 * The occurrence store 
 	 */
@@ -92,15 +86,13 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
-	private Map<String, Document> documents = Maps.newHashMap();
 	private Multimap<Term, TermRelation> outboundVariations = HashMultimap.create();
 	private Multimap<Term, TermRelation> inboundVariations = HashMultimap.create();
-
+	
 	private String name;
 	private Lang lang;
 	private String corpusId;
 	
-	private int currentDocumentId = 0;
 	private int currentId = 0;
 	private int nbWordAnnotations = 0;
 	private int nbSpottedTerms = 0;
@@ -178,18 +170,17 @@ public class MemoryTermIndex implements TermIndex {
 			builder.setSpottingRule(annotation.getSpottingRuleName());
 			term = builder.createAndAddToIndex();
 		}
-		term.addOccurrence(
-			new TermOccurrence(
-				term, 
-				annotation.getCoveredText(), 
-				this.getDocument(fileUrl), 
-				annotation.getBegin(), 
-				annotation.getEnd()),
-			keepOccurrence
-		);
+		if(keepOccurrence)
+			occurrenceStore.addOccurrence(
+					term, 
+					fileUrl, 
+					annotation.getBegin(), 
+					annotation.getEnd(), 
+					annotation.getCoveredText());
+		term.setFrequency(term.getFrequency()+1);
 		return term;
 	}
-
+	
 	@Override
 	public Iterator<Term> singleWordTermIterator() {
 		return new SingleMultiWordIterator(true); 
@@ -349,10 +340,10 @@ public class MemoryTermIndex implements TermIndex {
 		 * thus they must be checked from removal.
 		 * 
 		 */
-		if(t.isContextVectorComputed()) {
+		if(t.getContext() != null) {
 			for(Term o:termsById.values()) {
-				if(o.isContextVectorComputed())
-					o.getContextVector().removeCoTerm(t);
+				if(o.getContext() != null)
+					o.getContext().removeCoTerm(t);
 			}
 		}
 		
@@ -369,42 +360,20 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	
-	@Override
-	public Document getDocument(String url) {
-		Document document = documents.get(url);
-		if(document == null) {
-			document = new Document(currentDocumentId++, url);
-			documents.put(url, document);
-		}
-		return document;
-	}
-	
-	@Override
-	public Collection<Document> getDocuments() {
-		return this.documents.values();
-	}
-
-	@Override
-	public void createOccurrenceIndex() {
-		for(Term t:this.getTerms()) {
-			for(TermOccurrence o:t.getOccurrences()) {
-				/*
-				 * Explicitely index all occurrences within each source document. The context 
-				 * generation would not work without that step.
-				 * 
-				 * FIXME Move these occurrence indexes inside the present AE (because the 
-				 * indexes are never used anywhere else).
-				 */
-				o.getSourceDocument().indexTermOccurrence(o);
-			}
-		}
-	}
-	
-	@Override
-	public void clearOccurrenceIndex() {
-		for(Document d:this.getDocuments())
-			d.clearOccurrenceIndex();
-	}
+//	@Override
+//	public Document getDocument(String url) {
+//		Document document = documents.get(url);
+//		if(document == null) {
+//			document = new Document(currentDocumentId++, url);
+//			documents.put(url, document);
+//		}
+//		return document;
+//	}
+//	
+//	@Override
+//	public Collection<Document> getDocuments() {
+//		return this.documents.values();
+//	}
 
 	@Override
 	public String toString() {

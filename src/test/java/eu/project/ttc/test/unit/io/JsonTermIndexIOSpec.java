@@ -26,6 +26,8 @@ import static org.assertj.core.api.Assertions.offset;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -51,10 +53,10 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Document;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JsonTermIndexIO;
@@ -71,9 +73,6 @@ public class JsonTermIndexIOSpec {
 	private Word word1;
 	private Word word2;
 	private Word word3;
-	private Document doc1;
-	private Document doc2;
-	private Document doc3;
 	
 	private String json1;
 	
@@ -83,9 +82,6 @@ public class JsonTermIndexIOSpec {
 		termIndex.setCorpusId("ccid");
 		termIndex.setWordAnnotationsNum(222);
 		termIndex.setSpottedTermsNum(111);
-		doc1 = termIndex.getDocument("source1");
-		doc2 = termIndex.getDocument("source2");
-		doc3 = termIndex.getDocument("source3");
 		word1 = new Word("word1", "stem1");
 		word2 = new Word("word2", "stem2");
 		word3 = WordBuilder.start()
@@ -99,20 +95,21 @@ public class JsonTermIndexIOSpec {
 			.setRank(1)
 			.addWord(word1, "L1")
 			.addWord(word2, "L2")
-			.addOccurrence(10, 12, doc2, "coveredText 3")
-			.addOccurrence(20, 30, doc3, "coveredText 4")
+			.addOccurrence(10, 12, "source2", "coveredText 3")
+			.addOccurrence(20, 30, "source3", "coveredText 4")
 			.setSpottingRule("spotRule1")
 			.setSpecificity(1.1)
 			.createAndAddToIndex();
+		String form2 = "coveredText 2";
 		term2 = TermBuilder.start(termIndex)
 				.setRank(2)
 				.addWord(word1, "L1")
 				.addWord(word2, "L2")
 				.addWord(word3, "L3")
 				.setSpottingRule("spotRule1")
-				.addOccurrence(0, 2, doc2, "coveredText 1")
-				.addOccurrence(10, 12, doc1, "coveredText 2")
-				.addOccurrence(14, 20, doc2, "coveredText 2")
+				.addOccurrence(0, 2, "source2", "coveredText 1")
+				.addOccurrence(10, 12, "source1", form2)
+				.addOccurrence(14, 20, "source2", form2)
 				.setSpecificity(2.2)
 				.createAndAddToIndex();
 		termIndex.addRelation(term1, term2, RelationType.SYNTACTICAL, "variationRule1");
@@ -121,7 +118,7 @@ public class JsonTermIndexIOSpec {
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
 		v.addEntry(term2, 21, 2.0);
-		term1.setContextVector(v);
+		term1.setContext(v);
 	}
 	
 	@Before
@@ -153,10 +150,9 @@ public class JsonTermIndexIOSpec {
 		assertThat(termIndex2.getWords()).hasSameElementsAs(termIndex.getWords());
 		for(Term t:termIndex.getTerms()) {
 			Term t2 = termIndex2.getTermByGroupingKey(t.getGroupingKey());
-			assertThat(t2.getOccurrences()).hasSameElementsAs(t.getOccurrences());
+			assertThat(termIndex2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(termIndex.getOccurrenceStore().getOccurrences(t));
 			assertThat(termIndex2.getOutboundRelations(t2)).hasSameElementsAs(termIndex.getOutboundRelations(t));
 			assertThat(termIndex2.getInboundTerRelat(t2)).hasSameElementsAs(termIndex.getInboundTerRelat(t));
-			assertThat(t2.getForms()).hasSameElementsAs(t.getForms());
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
 			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
@@ -166,12 +162,12 @@ public class JsonTermIndexIOSpec {
 			assertThat(t2.getWords()).isEqualTo(t.getWords());
 			assertThat(t2.getRank()).isEqualTo(t.getRank());
 			if(t2.getId() == term1.getId()) {
-				assertTrue(t.isContextVectorComputed());
-				assertTrue(t2.isContextVectorComputed());
-				assertThat(t2.getContextVector()).isEqualTo(t.getContextVector());
+				assertNotNull(t.getContext());
+				assertNotNull(t2.getContext());
+				assertThat(t2.getContext()).isEqualTo(t.getContext());
 			} else if(t2.getId() == term2.getId()) {
-				assertFalse(t.isContextVectorComputed());
-				assertFalse(t2.isContextVectorComputed());
+				assertNull(t.getContext());
+				assertNull(t2.getContext());
 			} else {
 				fail("should never happen");
 			}
@@ -230,11 +226,11 @@ public class JsonTermIndexIOSpec {
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(termIndex.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("variant").containsOnly(t2);
+		assertThat(termIndex.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("to").containsOnly(t2);
 		assertThat(termIndex.getOutboundRelations(t1, RelationType.SYNTACTICAL)).hasSize(0);
 		assertThat(termIndex.getInboundTerRelat(t1))
 			.hasSize(2)
-			.extracting("base")
+			.extracting("from")
 			.containsOnly(t2, t3);	
 		
 		
@@ -262,7 +258,7 @@ public class JsonTermIndexIOSpec {
 			);
 
 		
-		assertThat(t1.getContextVector().getEntries())
+		assertThat(t1.getContext().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.id", "nbCooccs", "assocRate")
 			.contains(
@@ -280,7 +276,7 @@ public class JsonTermIndexIOSpec {
 //		System.out.println(writer.toString());
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
-		assertThat(map.keySet()).hasSize(5).containsOnly("metadata", "words", "terms", "variations", "input_sources");
+		assertThat(map.keySet()).hasSize(5).containsOnly("metadata", "words", "terms", "relations", "input_sources");
 		
 
 		// test metadata
@@ -340,9 +336,9 @@ public class JsonTermIndexIOSpec {
 
 		
 		// test syntactic variants
-		List<?> variantList = (List<?>)map.get("variations");
+		List<?> variantList = (List<?>)map.get("relations");
 		assertThat(variantList).hasSize(2)
-			.extracting("base", "variant", "info", "type")
+			.extracting("from", "to", "info", "type")
 			.contains(
 					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "variationRule1", "syn"),
 					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "0.956", "graph")

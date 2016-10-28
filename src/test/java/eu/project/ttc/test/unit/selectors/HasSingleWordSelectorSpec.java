@@ -30,9 +30,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.index.selectors.HasSingleWordVariationSelector;
 import eu.project.ttc.models.index.selectors.TermSelector;

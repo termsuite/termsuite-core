@@ -5,7 +5,6 @@ import java.io.Writer;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.Collection;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -25,19 +24,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import com.google.common.collect.Lists;
-
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.api.Traverser;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.Form;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.utils.TermSuiteUtils;
 
 public class TbxExporter {
 
@@ -174,30 +168,6 @@ public class TbxExporter {
 		transformer.transform(source, result);
 	}
     
-    private LoadingCache<Term, Collection<TermOccurrence>> allOccurrencesCaches = CacheBuilder.newBuilder()
-			.maximumSize(100)
-			.build(
-	           new CacheLoader<Term, Collection<TermOccurrence>>() {
-	        	   @Override
-	        	public Collection<TermOccurrence> load(Term term) throws Exception {
-	        		return term.getOccurrences();
-	        	}
-           });
-
-    private LoadingCache<Term, LinkedHashMap<String, Integer>> termForms = CacheBuilder.newBuilder()
-			.maximumSize(100)
-			.build(
-	           new CacheLoader<Term, LinkedHashMap<String, Integer>>() {
-	        	   @Override
-	        	public LinkedHashMap<String, Integer> load(Term term) throws Exception {
-	        		   Collection<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
-	        		   List<String> forms = Lists.newArrayListWithCapacity(allOccurrences.size());
-	        		   for(TermOccurrence o:allOccurrences)
-	        			   forms.add(TermSuiteUtils.trimInside(o.getCoveredText()));
-	        		   return TermSuiteUtils.getCounters(forms);
-	        	}
-           });
-
     /**
      * Add a term to the TBX document.
      *
@@ -228,7 +198,7 @@ public class TbxExporter {
 			this.addTermVariant(langSet, String.format("langset-%d", variation.getTo().getId()),
 					variation.getTo().getGroupingKey());
 		}
-		Collection<TermOccurrence> allOccurrences = allOccurrencesCaches.getUnchecked(term);
+		Collection<TermOccurrence> allOccurrences = termIndex.getOccurrenceStore().getOccurrences(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());
 
 		Element tig = document.createElement("tig");
@@ -238,8 +208,8 @@ public class TbxExporter {
 		termElmt.setTextContent(term.getGroupingKey());
 		tig.appendChild(termElmt);
 
-		LinkedHashMap<String, Integer> formCounters = termForms.getUnchecked(term);
-		addNote(langSet, tig, "termPilot", formCounters.entrySet().iterator().next().getKey());
+		List<Form> forms = termIndex.getOccurrenceStore().getForms(term);
+		addNote(langSet, tig, "termPilot", term.getPilot());
 
 		this.addNote(langSet, tig, "termType", isVariant ? "variant" : "termEntry");
 		this.addNote(
@@ -257,7 +227,7 @@ public class TbxExporter {
 		this.addDescrip(langSet, tig, "relativeFrequency",
 				NUMBER_FORMATTER.format(term.getFrequency()));
 		addDescrip(langSet, tig, "formList",
-					buildFormListJSON(term, formCounters.size()));
+					buildFormListJSON(term, forms.size()));
 		 this.addDescrip(langSet, tig, "domainSpecificity",
 				 term.getSpecificity());
 	}
@@ -301,14 +271,13 @@ public class TbxExporter {
 
 	private String buildFormListJSON(Term term, int size) {
 		StringBuilder sb = new StringBuilder("[");
-		LinkedHashMap<String, Integer> formCounts = termForms.getUnchecked(term);
 
 		int i = 0;
-		for (String form:formCounts.keySet()) {
+		for (Form form:termIndex.getOccurrenceStore().getForms(term)) {
 			if (i > 0)
 				sb.append(", ");
 			sb.append("{term=\"").append(form);
-			sb.append("\", count=").append(formCounts.get(form)).append("}");
+			sb.append("\", count=").append(form.getCount()).append("}");
 			i++;
 		}
 		sb.append("]");

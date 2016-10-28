@@ -21,6 +21,8 @@
  *******************************************************************************/
 package eu.project.ttc.utils;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -30,6 +32,7 @@ import java.util.List;
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
+import com.google.common.io.CharStreams;
 
 import eu.project.ttc.models.TermOccurrence;
 
@@ -164,5 +167,41 @@ public class TermOccurrenceUtils {
 		return a.getSourceDocument().equals(b.getSourceDocument()) && areOffsetsOverlapping(a, b); 
 	}
 
+	/**
+	 * True if both source documents are the same and if the 
+	 * offsets in the document overlaps.
+	 * 
+	 * The overlap is interpreted in the sense of opening intervals. I.e
+	 * if the begin of the second interval is the end of the first interval, this
+	 * is not an overlap.
+	 * 
+	 * @param o1
+	 * @param o2
+	 * @return
+	 */
+	public static boolean overlaps(TermOccurrence o1, TermOccurrence o2) {
+		return o1.getSourceDocument().equals(o2.getSourceDocument()) 
+				  && o1.getBegin() < o2.getEnd()
+				  && o2.getBegin()< o1.getEnd();
+	}
 
+	
+	
+	/**
+	 * 
+	 * @param o
+	 * @param contextSize
+	 * 			The number of characters before and after the occurrence.
+	 * @return
+	 * @throws IOException 
+	 */
+	public static String getTextualContext(TermOccurrence o, int contextSize) throws IOException {
+		FileReader r = new FileReader(o.getSourceDocument().getUrl().replaceFirst("file:", ""));
+		String text = CharStreams.toString(r);
+		r.close();
+		int begin = Math.max(o.getBegin() - contextSize, 0);
+		int end = Math.min(o.getEnd() + contextSize, text.length());
+		return TermUtils.collapseText(text.substring(begin, end));
+	}
+	
 }

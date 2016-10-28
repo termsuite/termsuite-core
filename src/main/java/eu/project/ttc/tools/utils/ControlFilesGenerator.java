@@ -37,10 +37,10 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Component;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.utils.TermIndexUtils;
 

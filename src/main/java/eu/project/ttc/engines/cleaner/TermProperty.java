@@ -130,7 +130,7 @@ public enum TermProperty {
 	public Comparable<?> getValue(Term t) {
 		switch(this) {
 		case PILOT:
-			t.getPilot();
+			return t.getPilot();
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
 		case RANK:

@@ -38,6 +38,7 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
@@ -101,14 +102,15 @@ public class Merger extends JCasAnnotator_ImplBase {
 					if(isGraphicalVariant(t1,t2)) {
 						nbMerged++;
 						logger.debug("Merging variant {} into variant {}", t2, t1);
-						t1.addAll(t2.getOccurrences());
-						for(TermOccurrence occ:t2.getOccurrences())
+						OccurrenceStore occStore = termIndex.getOccurrenceStore();
+						for(TermOccurrence occ:occStore.getOccurrences(t2))
 							occ.setTerm(t1);
+						for(TermOccurrence o2:occStore.getOccurrences(t2))
+							occStore.addOccurrence(t1, o2.getSourceDocument().getUrl(), o2.getBegin(), o2.getEnd(), o2.getForm().getText());
 						t1.setFrequency(t1.getFrequency() + t2.getFrequency());
 						t1.setFrequencyNorm(t1.getFrequencyNorm() + t2.getFrequencyNorm());
 						t1.setGeneralFrequencyNorm(t1.getGeneralFrequencyNorm() + t2.getGeneralFrequencyNorm());
 						termIndex.removeRelation(v2);
-						
 						rem.add(t2);
 						
 						// TODO Also merge context vectors

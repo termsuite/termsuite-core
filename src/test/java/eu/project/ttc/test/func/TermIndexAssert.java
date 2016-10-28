@@ -42,10 +42,10 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.tools.utils.ControlFilesGenerator;
 import eu.project.ttc.utils.TermIndexUtils;
 

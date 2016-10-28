@@ -103,9 +103,9 @@ public class CrossTable {
         for (Iterator<Term> it1 = this.termIndex.getTerms().iterator(); it1.hasNext() ;) {
             term = it1.next();
 //            this.totalFrequency++;
-            if(!term.isContextVectorComputed())
+            if(term.getContext() == null)
             	continue;
-        	ContextVector context = term.getContextVector();
+        	ContextVector context = term.getContext();
             for (ContextVector.Entry entry : context.getEntries()) {
             	this.totalCoOccurrences += entry.getNbCooccs();
                 getScoreFromMap(this.aPlusB, term).add(entry.getNbCooccs());
@@ -145,7 +145,7 @@ public class CrossTable {
     public double computeRate(AssociationRate rate, Term x, Term y) {
 
     	// A = (x & y)
-    	int a = (int)x.getContextVector().getNbCooccs(y);
+    	int a = (int)x.getContext().getNbCooccs(y);
 
     	// B = (x & not(y))
     	MutableDouble a_plus_b = this.aPlusB.get(x);

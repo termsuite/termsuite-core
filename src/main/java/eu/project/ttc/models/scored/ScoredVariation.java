@@ -115,7 +115,10 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	}
 
 	public double getStrictnessScore() {
-		return TermUtils.getStrictness(variation.getTo(), getBase().getTerm());
+		return TermUtils.getStrictness(
+				scoredModel.getTermIndex().getOccurrenceStore(), 
+				variation.getTo(), 
+				getBase().getTerm());
 	}
 
 	

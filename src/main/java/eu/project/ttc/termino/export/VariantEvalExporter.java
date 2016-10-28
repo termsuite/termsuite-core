@@ -8,11 +8,12 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.api.TermSuiteException;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
+import eu.project.ttc.utils.TermOccurrenceUtils;
 
 public class VariantEvalExporter {
 	
@@ -70,7 +71,7 @@ public class VariantEvalExporter {
 	
 	private void printVariation(int termRank, int variantRank, TermRelation variation) throws IOException {
 		Term variant = variation.getTo();
-		String pilot = variant.getForms().iterator().next();
+		String pilot = variant.getPilot();
 		writer.write(Integer.toString(termRank));
 		writer.write("\t");
 		writer.write("V_" + Integer.toString(variantRank));
@@ -90,14 +91,14 @@ public class VariantEvalExporter {
 		writer.write("\t");
 		writer.write("T");
 		writer.write("\t");
-		writer.write(t.getForms().iterator().next());
+		writer.write(t.getPilot());
 		writer.write("\t");
 		writer.write(String.format("[%s]", t.getGroupingKey()));
 		writer.write("\n");
 	}
 
 	private void printTermOccurrences(Term term) throws IOException {
-		List<TermOccurrence> occurrences = Lists.newArrayList(term.getOccurrences());
+		List<TermOccurrence> occurrences = Lists.newArrayList(termIndex.getOccurrenceStore().getOccurrences(term));
 		Collections.shuffle(occurrences);
 		int occCnt = 0;
 		for(TermOccurrence occurrence:occurrences) {
@@ -110,7 +111,7 @@ public class VariantEvalExporter {
 
 	private void printOccurrence(TermOccurrence occurrence) throws IOException {
 		writer.write("#\t\t  ...");
-		String textualContext = occurrence.getTextualContext(contextSize);
+		String textualContext = TermOccurrenceUtils.getTextualContext(occurrence, contextSize);
 		writer.write(textualContext);
 		writer.write("\n");
 	}

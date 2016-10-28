@@ -40,8 +40,8 @@ import org.junit.Test;
 import eu.project.ttc.engines.SyntacticTermGatherer;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.RelationType;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
@@ -143,7 +143,7 @@ public class SyntacticTermGathererSpec {
 	public void testProcessDefault() throws AnalysisEngineProcessException{
 		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique))
 			.hasSize(1)
-			.extracting("variationType", "variant")
+			.extracting("type", "to")
 			.contains(tuple(RelationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
 		
 		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique_solaire))
@@ -155,7 +155,7 @@ public class SyntacticTermGathererSpec {
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
 		assertThat(termIndex.getOutboundRelations(this.machine_synchrone))
 			.hasSize(1)
-			.extracting("variationType", "info", "variant")
+			.extracting("type", "info", "to")
 			.contains(tuple(RelationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
 		
 		assertThat(termIndex.getOutboundRelations(this.machine_asynchrone))
@@ -166,7 +166,7 @@ public class SyntacticTermGathererSpec {
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
 		assertThat(termIndex.getOutboundRelations(this.phase_du_stator))
 			.hasSize(1)
-			.extracting("variationType", "info", "variant")
+			.extracting("type", "info", "to")
 			.contains(tuple(RelationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
 		assertThat(termIndex.getOutboundRelations(this.phase_statorique))
 			.hasSize(0);

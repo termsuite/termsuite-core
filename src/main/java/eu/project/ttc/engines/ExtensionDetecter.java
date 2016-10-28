@@ -33,8 +33,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.history.TermHistoryResource;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.RelationType;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;

@@ -24,19 +24,38 @@
 package eu.project.ttc.models.occstore;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.assertj.core.util.Lists;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
-import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.Form;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.index.selectors.TermSelector;
 
-public class MemoryOccurrenceStore implements OccurrenceStore {
+public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 
 	private Multimap<Term, TermOccurrence> map = HashMultimap.create();
+	
+	private Map<Term, Map<String, Form>> forms = new HashMap<>();
+
+	private Form getForm(Term term, String coveredText) {
+		if(!forms.containsKey(term))
+			forms.put(term, new HashMap<>());
+		Map<String, Form> map = forms.get(term);
+		if(!map.containsKey(coveredText))
+			map.put(coveredText, new Form(coveredText));
+		Form form = map.get(coveredText);
+		form.setCount(form.getCount()+1);
+		return form;
+	}
 	
 	@Override
 	public Iterator<TermOccurrence> occurrenceIterator(Term term) {
@@ -46,17 +65,6 @@ public class MemoryOccurrenceStore implements OccurrenceStore {
 	@Override
 	public Collection<TermOccurrence> getOccurrences(Term term) {
 		return map.get(term);
-	}
-
-	@Override
-	public void addOccurrence(Term term, TermOccurrence e) {
-		map.put(term, e);
-		
-	}
-
-	@Override
-	public void addAllOccurrences(Term term, Collection<TermOccurrence> c) {
-		map.putAll(term, c);
 	}
 
 	@Override
@@ -105,4 +113,22 @@ public class MemoryOccurrenceStore implements OccurrenceStore {
 	public void close() {
 		// do nothing
 	}
+
+	@Override
+	public List<Form> getForms(Term term) {
+		if(!forms.containsKey(term))
+			return Lists.newArrayList();
+		else {
+			List<Form> list = Lists.newArrayList(forms.get(term).values());
+			Collections.sort(list);
+			return list;
+		}
+	}
+
+	@Override
+	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText) {
+		map.put(term, 
+				new TermOccurrence(term, getForm(term, coveredText), protectedGetDocument(documentUrl), begin, end));
+	}
+
 }

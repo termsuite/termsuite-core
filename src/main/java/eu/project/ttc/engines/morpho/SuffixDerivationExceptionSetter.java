@@ -34,9 +34,9 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.resources.TermIndexResource;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 

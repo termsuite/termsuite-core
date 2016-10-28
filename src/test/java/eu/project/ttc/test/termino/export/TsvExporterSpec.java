@@ -13,6 +13,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.api.TsvOptions;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
@@ -38,7 +39,11 @@ public class TsvExporterSpec {
 		
 		TermRelation tv = Mockito.mock(TermRelation.class);
 		Mockito.when(tv.getTo()).thenReturn(term1);
-		Mockito.when(termIndex.getOutboundRelations(term3)).thenReturn(Sets.newHashSet(tv));
+		Mockito.when(termIndex.getOutboundRelations(term3, RelationType.SYNTACTICAL, 
+				RelationType.MORPHOLOGICAL,
+				RelationType.GRAPHICAL,
+				RelationType.DERIVES_INTO,
+				RelationType.IS_PREFIX_OF)).thenReturn(Sets.newHashSet(tv));
 		
 		terms = Lists.newArrayList(
 				term1,

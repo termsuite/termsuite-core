@@ -34,10 +34,10 @@ import com.google.common.base.Preconditions;
 
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Word;
 
 public class TermFactory {
