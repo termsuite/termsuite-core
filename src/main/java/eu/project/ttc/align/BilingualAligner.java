@@ -24,6 +24,7 @@ package eu.project.ttc.align;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -45,6 +46,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
+import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.metrics.ExplainedValue;
@@ -98,6 +100,8 @@ public class BilingualAligner {
 
 	private SimilarityDistance distance;
 	
+	private Map<Term, Term> manualDico = new HashMap<>();
+	
 	public BilingualAligner(BilingualDictionary dico, TermIndex sourceTermino, TermIndex targetTermino, SimilarityDistance distance) {
 		super();
 		this.dico = dico;
@@ -114,6 +118,33 @@ public class BilingualAligner {
 	 */
 	public void setDistance(SimilarityDistance distance) {
 		this.distance = distance;
+	}
+	
+	public BilingualAligner addTranslation(Term sourceTerm, Term targetTerm) {
+		manualDico.put(sourceTerm, targetTerm);
+		return this;
+	}
+
+	
+	/**
+	 * 
+	 * @param sourceLemma
+	 * @param targetLemmas
+	 * @return
+	 */
+	public BilingualAligner addTranslation(String sourceLemma, String targetLemma) {
+		CustomTermIndex sourceLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.WORD_LEMMA);
+		CustomTermIndex targetLemmaIndex = targetTermino.getCustomIndex(TermIndexes.WORD_LEMMA);
+		if(sourceLemmaIndex.getTerms(sourceLemma).isEmpty()) 
+			throw new TermSuiteException("No term found in source termino with lemma: " + sourceLemma);
+		else if(targetLemmaIndex.getTerms(targetLemma).isEmpty()) 
+			throw new TermSuiteException("No term found in target termino with lemma: " + targetLemma);
+		else {
+			for(Term sourceTerm:sourceLemmaIndex.getTerms(sourceLemma))
+				for(Term targetTerm:targetLemmaIndex.getTerms(targetLemma))
+					manualDico.put(sourceTerm, targetTerm);
+		}
+		return this;
 	}
 
 	
@@ -529,31 +560,38 @@ public class BilingualAligner {
 
 	public List<TranslationCandidate> alignDico(Term sourceTerm, int nbCandidates) {
 		List<TranslationCandidate> dicoCandidates = Lists.newArrayList();
-		Collection<String> translations = dico.getTranslations(sourceTerm.getLemma());
 		
-		ContextVector translatedSourceVector = AlignerUtils.translateVector(
-				sourceTerm.getContext(),
-				dico,
-				AlignerUtils.TRANSLATION_STRATEGY_MOST_SPECIFIC,
-				targetTermino);
-
-		
-		for(String candidateLemma:translations) {
-			List<Term> terms = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(candidateLemma);
-			for (Term candidateTerm : terms) {
-				if (candidateTerm.getContext() != null) {
-					TranslationCandidate candidate = new TranslationCandidate(
+		if(manualDico.containsKey(sourceTerm)) {
+			return Lists.newArrayList((
+						new TranslationCandidate(
 							AlignmentMethod.DICTIONARY,
-							candidateTerm,
-							distance.getValue(translatedSourceVector, candidateTerm.getContext()),
-							sourceTerm);
-					dicoCandidates.add(candidate);
+							manualDico.get(sourceTerm),
+							1,
+							sourceTerm)
+						));
+		} else {
+			ContextVector translatedSourceVector = AlignerUtils.translateVector(
+					sourceTerm.getContext(),
+					dico,
+					AlignerUtils.TRANSLATION_STRATEGY_MOST_SPECIFIC,
+					targetTermino);
+	
+			for(String candidateLemma:dico.getTranslations(sourceTerm.getLemma())) {
+				List<Term> terms = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(candidateLemma);
+				for (Term candidateTerm : terms) {
+					if (candidateTerm.getContext() != null) {
+						TranslationCandidate candidate = new TranslationCandidate(
+								AlignmentMethod.DICTIONARY,
+								candidateTerm,
+								distance.getValue(translatedSourceVector, candidateTerm.getContext()),
+								sourceTerm);
+						dicoCandidates.add(candidate);
+					}
 				}
 			}
+			
+			return dicoCandidates;
 		}
-		
-
-		return dicoCandidates;
 	}
 
 	

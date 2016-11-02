@@ -14,6 +14,7 @@ import eu.project.ttc.align.AlignmentMethod;
 import eu.project.ttc.align.BilingualAligner;
 import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.api.TermIndexIO;
+import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -43,27 +44,49 @@ public class BilingualAlignerFrEnSpec {
 	public ExpectedException thrown = ExpectedException.none();
 	
 	
-//	private static void showMWTGT2Terms(TermIndex termino, PrintStream out) {
-//		termino.getTerms().stream()
-//								.filter(t-> TermUtils.getSingleWordTerms(termino, t).size() == 3)
-//								.sorted(TermProperty.FREQUENCY.getComparator(true))
-//								.map(t-> String.format("%-25s %d", t, t.getFrequency()))
-//								.forEach(out::println);
-//	}
-	
+	@Test
+	public void failWhenSourceTermNotExisting() {
+		thrown.expect(NullPointerException.class);
+		Term t1 = frTermino.getTermByGroupingKey("npna: production de ssénergie électrique");
+		aligner.alignSize2(t1, 3, 2);
+	}
+
+
+	@Test
+	public void testAddTranslationFailWhenSourceLemmaDoesNotExist() {
+		thrown.expect(TermSuiteException.class);
+		thrown.expectMessage("No term found in source termino with lemma: tatayoyo");
+		aligner.addTranslation("tatayoyo", "titi");
+	}
+
+	@Test
+	public void testAddTranslationFailWhenTargetLemmaDoesNotExist() {
+		thrown.expect(TermSuiteException.class);
+		thrown.expectMessage("No term found in target termino with lemma: titi");
+		aligner.addTranslation("éolienne", "titi");
+	}
+
+	@Test
+	public void testAlignMWTWithManualDico() {
+		Term t1 = frTermino.getTermByGroupingKey("npna: production de énergie électrique");
+		aligner.addTranslation(
+				frTermino.getTermByGroupingKey("npn: production de énergie"), 
+				enTermino.getTermByGroupingKey("nn: energy production"));
+		aligner.addTranslation(
+				frTermino.getTermByGroupingKey("a: électrique"), 
+				enTermino.getTermByGroupingKey("a: electrical"));
+		List<TranslationCandidate> results = aligner.align(t1, 3, 1);
+		assertThat(results)
+			.hasSize(1)
+			.extracting("term.groupingKey", "method")
+			.contains(
+				tuple("ann: electrical energy production", AlignmentMethod.COMPOSITIONAL)
+			);
+	}
+
 	@Test
 	public void testTermSizeGreaterThan2() {
 		Term t1 = frTermino.getTermByGroupingKey("npna: production de énergie électrique");
-//		
-//		try(PrintStream out=new PrintStream(new FileOutputStream("tests/short-we-terms-size-3.txt"))) {
-//			out.println("-------------------------------");
-//			showMWTGT2Terms(frTermino, out);
-//			out.println("---------------------------");
-//			showMWTGT2Terms(enTermino, out);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		}
-		
 		List<TranslationCandidate> results = aligner.align(t1, 3, 2);
 		assertThat(results)
 			.hasSize(1)
@@ -73,13 +96,29 @@ public class BilingualAlignerFrEnSpec {
 			);
 	}
 
+
 	@Test
-	public void failWhenSourceTermNotExisting() {
-		thrown.expect(NullPointerException.class);
-		Term t1 = frTermino.getTermByGroupingKey("npna: production de ssénergie électrique");
-		aligner.alignSize2(t1, 3, 2);
+	public void testAlignSWTWithManualDico() {
+		Term eolienne = frTermino.getTermByGroupingKey("n: éolienne");
+		TranslationCandidate noDicoCandidate = aligner.align(
+				eolienne, 
+				1, 
+				1).get(0);
+		
+		assertThat(noDicoCandidate.getTerm().getGroupingKey()).isEqualTo("n: wind");
+		assertThat(noDicoCandidate.getMethod()).isEqualTo(AlignmentMethod.DICTIONARY);
+		
+		aligner.addTranslation(eolienne, enTermino.getTermByGroupingKey("nn: wind turbine"));
+		TranslationCandidate dicoCandidate = aligner.align(
+				eolienne, 
+				1, 
+				1).get(0);
+		
+		assertThat(dicoCandidate.getTerm().getGroupingKey()).isEqualTo("nn: wind turbine");
+		assertThat(dicoCandidate.getMethod()).isEqualTo(AlignmentMethod.DICTIONARY);
 	}
 
+	
 	@Test
 	public void testAlignerMWTComp() {
 		Term t1 = frTermino.getTermByGroupingKey("na: turbine éolien");
