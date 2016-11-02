@@ -1,68 +1,65 @@
-
-/*******************************************************************************
- * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
- *
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- *
- *******************************************************************************/
-
 package eu.project.ttc.engines;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ExternalResource;
-import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
-import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermUtils;
 
-public class ExtensionDetecter extends JCasAnnotator_ImplBase {
+public class ExtensionDetecter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionDetecter.class);
 	private static final int WARNING_CRITICAL_SIZE = 10000;
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
-
-	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
-	private TermHistoryResource historyResource;
-
-	@Override
-	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		
+	private Optional<TermHistory> history = Optional.empty();
+	
+	public ExtensionDetecter setHistory(TermHistory history) {
+		this.history = Optional.of(history);
+		return this;
 	}
 	
-	@Override
-	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Detecting term extensions for TermIndex {}", this.termIndexResource.getTermIndex().getName());
-		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+	
+	public void detectExtensions(TermIndex termIndex) {
+		LOGGER.info("Detecting extensions on term index {}", termIndex.getName());
+		if(termIndex.getTerms().isEmpty())
 			return;
 
+		setSize1Extensions(termIndex);
+		setSize2Extensions(termIndex);
+	}
+
+	public void setSize1Extensions(TermIndex termIndex) {
+		CustomTermIndex swtIndex = termIndex.createCustomIndex(
+				TermIndexes.SWT_GROUPING_KEYS,
+				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
+		
+		for (String swtGroupingKey : swtIndex.keySet()) {
+			Term swt = termIndex.getTermByGroupingKey(swtGroupingKey);
+			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
+				if(swt.equals(term))
+					continue;
+				else
+					termIndex.addRelation(swt, term, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
+			}
+		}
+		
+		
+		termIndex.dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
+		
+	}
+
+	public void setSize2Extensions(TermIndex termIndex) {
 		String gatheringKey = TermIndexes.WORD_COUPLE_LEMMA_LEMMA;
-		CustomTermIndex customIndex = this.termIndexResource.getTermIndex().createCustomIndex(
+		CustomTermIndex customIndex = termIndex.createCustomIndex(
 				gatheringKey,
 				TermValueProviders.get(gatheringKey));
 		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
@@ -83,33 +80,34 @@ public class ExtensionDetecter extends JCasAnnotator_ImplBase {
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
-						t1.addExtension(t2);
+						termIndex.addRelation(t1, t2, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
 						watch(t1, t2);
 
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
-						t2.addExtension(t1);
+						termIndex.addRelation(t2, t1, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
 						watch(t2, t1);
 					}
 				}
 			}
 		}
-		
 		//finalize
-		this.termIndexResource.getTermIndex().dropCustomIndex(gatheringKey);
+		termIndex.dropCustomIndex(gatheringKey);
 	}
 
 	private void watch(Term t1, Term t2) {
-		if(historyResource.getHistory().isWatched(t1.getGroupingKey()))
-			historyResource.getHistory().saveEvent(
-					t1.getGroupingKey(),
-					this.getClass(), 
-					"Term has a new extension: " + t2);
-
-		if(historyResource.getHistory().isWatched(t2.getGroupingKey()))
-			historyResource.getHistory().saveEvent(
-					t2.getGroupingKey(),
-					this.getClass(), 
-					"Term is the extension of " + t1);
+		if(history.isPresent()) {
+			if(this.history.get().isWatched(t1.getGroupingKey()))
+				this.history.get().saveEvent(
+						t1.getGroupingKey(),
+						this.getClass(), 
+						"Term has a new extension: " + t2);
+	
+			if(this.history.get().isWatched(t2.getGroupingKey()))
+				this.history.get().saveEvent(
+						t2.getGroupingKey(),
+						this.getClass(), 
+						"Term is the extension of " + t1);
+		}
 	}
 
 }

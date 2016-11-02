@@ -115,7 +115,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
 		for(TermProperty p:properties) {
-			Comparable<?> value = p.getValue(termIndex, t);
+			Comparable<?> value = p.getValue(t);
 			if (value instanceof Integer || value instanceof Long)
 				line.add(value.toString());
 			else if(value instanceof Double || value instanceof Float) {

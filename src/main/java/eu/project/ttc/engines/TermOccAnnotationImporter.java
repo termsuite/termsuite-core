@@ -21,6 +21,8 @@
  *******************************************************************************/
 package eu.project.ttc.engines;
 
+import java.util.Optional;
+
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
@@ -30,8 +32,6 @@ import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
-
-import com.google.common.base.Optional;
 
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;

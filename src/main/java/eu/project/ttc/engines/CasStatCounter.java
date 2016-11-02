@@ -25,9 +25,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang.mutable.MutableInt;
@@ -44,7 +46,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Functions;
-import com.google.common.base.Optional;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Iterables;
@@ -52,10 +53,10 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.types.SourceDocumentInformation;
 import eu.project.ttc.types.WordAnnotation;
@@ -174,18 +175,14 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		int nbMorphologicalVariants = 0;
 		int nbGraphicalVariants = 0;
 		int nbOccurrences = 0;
-		int nbPrimaryOccOccurrences = 0;
 		TermIndex termIndex = termIndexResource.getTermIndex();
 		TermIndex tIndex = termIndex;
 		for(Term t:tIndex.getTerms()) {
-			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.MORPHOLOGICAL));
-			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.SYNTACTICAL));
-			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundTermVariations(t,VariationType.GRAPHICAL));
-			nbOccurrences+=t.getOccurrences().size();
-			for(TermOccurrence o:t.getOccurrences()) {
-				if(o.isPrimaryOccurrence())
-					nbPrimaryOccOccurrences++;
-			}
+			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
+			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNTACTICAL));
+			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.GRAPHICAL));
+			Collection<TermOccurrence> occurrences = termIndex.getOccurrenceStore().getOccurrences(t);
+			nbOccurrences+=occurrences.size();
 		}
 		// graphical variants are bidirectional
 		nbGraphicalVariants/=2;
@@ -197,9 +194,8 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, 
 				tIndex.getWords().size(), 
 				Iterators.size(tIndex.compoundWordTermIterator()));
-		LOGGER.info("[{}] Nb occurrences: {} [primary: {}]", statName, 
-				nbOccurrences, 
-				nbPrimaryOccOccurrences);
+		LOGGER.info("[{}] Nb occurrences: {}", statName, 
+				nbOccurrences);
 		LOGGER.info("[{}] Nb variants: {} [morph: {}, syn: {}, graph: {}]", statName, 
 				nbMorphologicalVariants + nbSyntacticVariants + nbGraphicalVariants, 
 				nbMorphologicalVariants, 

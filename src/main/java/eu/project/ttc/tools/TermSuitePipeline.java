@@ -31,6 +31,7 @@ import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
@@ -49,21 +50,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.engines.CasStatCounter;
 import eu.project.ttc.engines.Contextualizer;
+import eu.project.ttc.engines.ContextualizerAE;
+import eu.project.ttc.engines.DocumentFrequencySetterAE;
 import eu.project.ttc.engines.DocumentLogger;
 import eu.project.ttc.engines.EvalEngine;
-import eu.project.ttc.engines.ExtensionDetecter;
+import eu.project.ttc.engines.ExtensionDetecterAE;
 import eu.project.ttc.engines.FixedExpressionSpotter;
 import eu.project.ttc.engines.FixedExpressionTermMarker;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
 import eu.project.ttc.engines.MateLemmaFixer;
 import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
+import eu.project.ttc.engines.PilotSetterAE;
 import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
@@ -105,9 +108,9 @@ import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.LogLikelihood;
 import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.OccurrenceType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
@@ -190,7 +193,7 @@ public class TermSuitePipeline {
 	 * MAIN PIPELINE PARAMETERS
 	 */
 	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
-	private Optional<? extends TermIndex> termIndex = Optional.absent();
+	private Optional<? extends TermIndex> termIndex = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
@@ -201,8 +204,8 @@ public class TermSuitePipeline {
 	/*
 	 * POS Tagger parameters
 	 */
-	private Optional<String> mateModelsPath = Optional.absent();
-	private Optional<String> treeTaggerPath = Optional.absent();
+	private Optional<String> mateModelsPath = Optional.empty();
+	private Optional<String> treeTaggerPath = Optional.empty();
 	
 
 	/*
@@ -210,8 +213,8 @@ public class TermSuitePipeline {
 	 */
 	private boolean addSpottedAnnoToTermIndex = true;
 	private boolean spotWithOccurrences = true;
-	private Optional<Boolean> logOverlappingRules = Optional.absent();
-	private Optional<String> postProcessingStrategy = Optional.absent();
+	private Optional<Boolean> logOverlappingRules = Optional.empty();
+	private Optional<String> postProcessingStrategy = Optional.empty();
 	private boolean enableSyntacticLabels = false;
 
 	/*
@@ -229,19 +232,19 @@ public class TermSuitePipeline {
 	/*
 	 * Compost Params
 	 */
-	private Optional<Float> alpha = Optional.absent();
-	private Optional<Float> beta = Optional.absent();
-	private Optional<Float> gamma = Optional.absent();
-	private Optional<Float> delta = Optional.absent();
-	private Optional<Float> compostScoreThreshold = Optional.absent();
-	private Optional<Integer> compostMinComponentSize = Optional.absent();
-	private Optional<Integer> compostMaxComponentNum = Optional.absent();
+	private Optional<Float> alpha = Optional.empty();
+	private Optional<Float> beta = Optional.empty();
+	private Optional<Float> gamma = Optional.empty();
+	private Optional<Float> delta = Optional.empty();
+	private Optional<Float> compostScoreThreshold = Optional.empty();
+	private Optional<Integer> compostMinComponentSize = Optional.empty();
+	private Optional<Integer> compostMaxComponentNum = Optional.empty();
 	private Optional<Float> compostSegmentSimilarityThreshold = Optional.of(1f);
 
 	/*
 	 * Graphical Variant Gatherer parameters
 	 */
-	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.absent();
+	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.empty();
 	
 	/* JSON */
 	private boolean exportJsonWithOccurrences = true;
@@ -602,7 +605,7 @@ public class TermSuitePipeline {
 
 	
 	
-	private Optional<URL> resourceUrlPrefix = Optional.absent();
+	private Optional<URL> resourceUrlPrefix = Optional.empty();
 	
 	
 	public TermSuitePipeline setResourceUrlPrefix(String urlPrefix) {
@@ -891,7 +894,7 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline haeVariationExporter(String toFilePath, VariationType... vTypes) {
+	public TermSuitePipeline haeVariationExporter(String toFilePath, RelationType... vTypes) {
 		try {
 			String typeStrings = Joiner.on(",").join(vTypes);
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -1297,13 +1300,41 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
-			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0);
+			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0)
+						.aePilotSetter()
+						.aeDocumentFrequencySetter()
+						;
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
 	}
 
+	private TermSuitePipeline aePilotSetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					PilotSetterAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, PilotSetterAE.TASK_NAME, 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}		
+	}
 	
+	private TermSuitePipeline aeDocumentFrequencySetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					DocumentFrequencySetterAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, DocumentFrequencySetterAE.TASK_NAME, 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}		
+	}
+
 	
 	/**
 	 * Naive morphological analysis of prefix compounds based on a 
@@ -1746,13 +1777,12 @@ public class TermSuitePipeline {
 		AnalysisEngineDescription ae;
 		try {
 			ae = AnalysisEngineFactory.createEngineDescription(
-					Contextualizer.class,
-					Contextualizer.NORMALIZE_ASSOC_RATE, true,
-					Contextualizer.SCOPE, scope,
-					Contextualizer.CO_TERMS_TYPE, contextualizeCoTermsType,
-					Contextualizer.COMPUTE_CONTEXTS_FOR_ALL_TERMS, allTerms,
-					Contextualizer.ASSOCIATION_RATE, contextAssocRateMeasure,
-					Contextualizer.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
+					ContextualizerAE.class,
+					ContextualizerAE.SCOPE, scope,
+					ContextualizerAE.CO_TERMS_TYPE, contextualizeCoTermsType,
+					ContextualizerAE.COMPUTE_CONTEXTS_FOR_ALL_TERMS, allTerms,
+					ContextualizerAE.ASSOCIATION_RATE, contextAssocRateMeasure,
+					ContextualizerAE.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
@@ -1939,7 +1969,7 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aeExtensionDetector()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ExtensionDetecter.class
+					ExtensionDetecterAE.class
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());

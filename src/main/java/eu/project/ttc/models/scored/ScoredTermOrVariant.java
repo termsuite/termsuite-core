@@ -45,7 +45,7 @@ public abstract class ScoredTermOrVariant {
 
 	public ScoredTermOrVariant(ScoredModel scoredModel, Term t) {
 		this.scoredModel = scoredModel;
-		this.occurrences = Lists.newLinkedList(t.getOccurrences());
+		this.occurrences = Lists.newLinkedList(scoredModel.getTermIndex().getOccurrenceStore().getOccurrences(t));
 		this.term = t;
 		reset();
 	}

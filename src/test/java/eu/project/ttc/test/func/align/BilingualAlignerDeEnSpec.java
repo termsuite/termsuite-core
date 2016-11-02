@@ -41,7 +41,7 @@ public class BilingualAlignerDeEnSpec {
 	public void testAlignerMWTComp() {
 		Term t1 = deTermino.getTermByGroupingKey("n: windenergie");
 
-		List<TranslationCandidate> results = aligner.align(t1, 3, 2);
+		List<TranslationCandidate> results = aligner.alignSize2(t1, 3, 2);
 		assertThat(results)
 			.extracting("term.groupingKey", "method")
 			.contains(

@@ -23,6 +23,7 @@ package eu.project.ttc.engines;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -36,7 +37,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.math.IntMath;
 
@@ -44,10 +44,10 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.AbstractTermValueProvider;
 import eu.project.ttc.models.index.CustomTermIndex;
@@ -142,7 +142,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {}
 	
-	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 	
 	@Override
 	public void collectionProcessComplete()
@@ -210,8 +210,8 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
 					if(dist >= this.threshold) {
 						gatheredCnt++;
-						termIndex.addTermVariation(t1, t2, VariationType.GRAPHICAL, dist);
-						termIndex.addTermVariation(t2, t1, VariationType.GRAPHICAL, dist);
+						termIndex.addRelation(t1, t2, RelationType.GRAPHICAL, dist);
+						termIndex.addRelation(t2, t1, RelationType.GRAPHICAL, dist);
 						watch(t1, t2, dist);
 						watch(t2, t1, dist);
 

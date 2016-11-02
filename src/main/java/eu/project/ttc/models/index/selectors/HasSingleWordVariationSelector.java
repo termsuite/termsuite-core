@@ -23,10 +23,10 @@
 
 package eu.project.ttc.models.index.selectors;
 
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.utils.TermUtils;
 
 /**
@@ -39,14 +39,14 @@ import eu.project.ttc.utils.TermUtils;
  */
 public class HasSingleWordVariationSelector extends AbstractTermSelector {
 
-	private VariationType variationType;
+	private RelationType variationType;
 	
-	public HasSingleWordVariationSelector(VariationType variationType) {
+	public HasSingleWordVariationSelector(RelationType variationType) {
 		super(true);
 		this.variationType = variationType;
 	}
 
-	public VariationType getVariationType() {
+	public RelationType getVariationType() {
 		return variationType;
 	}
 	
@@ -56,8 +56,8 @@ public class HasSingleWordVariationSelector extends AbstractTermSelector {
 		for (TermWord termWord : term.getWords()) {
 			swt = termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(termWord));
 			if (swt != null) {
-				if(termIndex.getInboundTermVariations(swt,this.variationType).iterator().hasNext()
-					|| termIndex.getOutboundTermVariations(swt,this.variationType).iterator().hasNext())
+				if(termIndex.getInboundTermRelations(swt,this.variationType).iterator().hasNext()
+					|| termIndex.getOutboundRelations(swt,this.variationType).iterator().hasNext())
 					return true;
 			}
 		}

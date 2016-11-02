@@ -37,10 +37,10 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Component;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.utils.TermIndexUtils;
 
@@ -73,8 +73,8 @@ public class ControlFilesGenerator {
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
-		termIndex.getTermVariations().forEach( tv -> {
-			if(tv.getVariationType() == VariationType.SYNTACTICAL || tv.getVariationType() == VariationType.MORPHOLOGICAL)
+		termIndex.getRelations().forEach( tv -> {
+			if(tv.getType() == RelationType.SYNTACTICAL || tv.getType() == RelationType.MORPHOLOGICAL)
 				distinctRuleNames.add((String)tv.getInfo());
 		});
 
@@ -90,14 +90,14 @@ public class ControlFilesGenerator {
 		 * Write prefix variations
 		 */
 		String prefixPath = directory.getAbsolutePath() + "/" + getPrefixFileName();
-		writeVariations(prefixPath, TermIndexUtils.selectTermVariations(termIndex, VariationType.IS_PREFIX_OF));
+		writeVariations(prefixPath, TermIndexUtils.selectTermVariations(termIndex, RelationType.IS_PREFIX_OF));
 		
 
 		/*
 		 * Write derivative variations
 		 */
 		String derivativePath = directory.getAbsolutePath() + "/" + getDerivatesFileName();
-		writeVariations(derivativePath, TermIndexUtils.selectTermVariations(termIndex, VariationType.DERIVES_INTO));
+		writeVariations(derivativePath, TermIndexUtils.selectTermVariations(termIndex, RelationType.DERIVES_INTO));
 
 		/*
 		 * Write compounds
@@ -161,13 +161,13 @@ public class ControlFilesGenerator {
 		return Joiner.on("|").join(componentStrings);
 	}
 	
-	private void writeVariations(String path, Collection<TermVariation> variations) throws IOException {
+	private void writeVariations(String path, Collection<TermRelation> variations) throws IOException {
 		Writer writer = new FileWriter(path);
-		for(TermVariation tv:variations) {
+		for(TermRelation tv:variations) {
 			writer.append(String.format("%s\t%s\t%s\t%s%n", 
-					tv.getBase().getGroupingKey(),
-					tv.getVariant().getGroupingKey(),
-					tv.getVariationType(),
+					tv.getFrom().getGroupingKey(),
+					tv.getTo().getGroupingKey(),
+					tv.getType(),
 					tv.getInfo()
 				));
 		}

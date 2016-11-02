@@ -44,6 +44,7 @@ package eu.project.ttc.engines;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -58,17 +59,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
@@ -101,7 +101,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 
 	private BigInteger totalComparisons = BigInteger.valueOf(0);
 	private int nbComparisons = 0;
-	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
 	static class RunConfig {
 		String indexName;
@@ -112,7 +112,6 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 			this.variantRuleIndex = variantRuleIndex;
 		}
 	}
-	
 	
 	/*
 	 *  Do not deactivate gathering on key_lemma_lemma, otherwise we loose
@@ -255,16 +254,16 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
-		TermVariation tv = termIndexResource.getTermIndex().addTermVariation(
+		TermRelation tv = termIndexResource.getTermIndex().addRelation(
 				source,
 				target, 
-				matchingRule.getName().startsWith(M_PREFIX) ? VariationType.MORPHOLOGICAL : VariationType.SYNTACTICAL,
+				matchingRule.getName().startsWith(M_PREFIX) ? RelationType.MORPHOLOGICAL : RelationType.SYNTACTICAL,
 				matchingRule.getName());
 		
 		watch(source, target, tv);
 	}
 
-	private void watch(Term source, Term target, TermVariation tv) {
+	private void watch(Term source, Term target, TermRelation tv) {
 		if(historyResource.getHistory().isWatched(source.getGroupingKey()))
 			historyResource.getHistory().saveEvent(
 					source.getGroupingKey(),

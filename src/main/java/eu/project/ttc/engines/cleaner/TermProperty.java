@@ -29,8 +29,6 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Maps;
 
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.utils.TermUtils;
 
 /**
  * 
@@ -105,28 +103,6 @@ public enum TermProperty {
 		};
 	}
 	
-	public Comparator<Term> getComparator(final TermIndex termIndex, final boolean reverse) {
-		return new Comparator<Term>() {
-			@Override
-			public int compare(Term o1, Term o2) {
-				return reverse ? TermProperty.this.compare(termIndex, o2, o1) : TermProperty.this.compare(termIndex, o1, o2) ;
-			}
-		};
-	}
-
-	/**
-	 * The "compare" method that can apply on property measures.
-	 * 
-	 * @param termIndex
-	 * @param o1
-	 * @param o2
-	 * @return
-	 */
-	public int compare(TermIndex termIndex, Term o1, Term o2) {
-		return ComparisonChain.start().compare(getValue(termIndex, o1), getValue(termIndex, o2)).result();
-	}
-
-
 	public int compare(Term o1, Term o2) {
 		return ComparisonChain.start().compare(getValue(o1), getValue(o2)).result();
 	}
@@ -150,23 +126,11 @@ public enum TermProperty {
 			throw new UnsupportedOperationException("No double value for property: " + this);
 		}
 	}
-	
-	public Comparable<?> getValue(TermIndex termIndex, Term t) {
-		switch(this) {
-		case PILOT:
-			/*
-			 * Not optimal at all. Use TermFormGetter
-			 */
-			return TermUtils.formGetter(termIndex, true).getPilot(t);
-		default:
-			return getValue(t);
-		}
-	}
 
 	public Comparable<?> getValue(Term t) {
 		switch(this) {
 		case PILOT:
-			throw new IllegalStateException("Should use #getValue(TermIndex termIndex, Term t) instead.");
+			return t.getPilot();
 		case DOCUMENT_FREQUENCY:
 			return t.getDocumentFrequency();
 		case RANK:

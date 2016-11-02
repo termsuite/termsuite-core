@@ -26,6 +26,7 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Scanner;
 
 import org.apache.commons.io.IOUtils;
@@ -36,7 +37,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Objects;
-import com.google.common.base.Optional;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -57,7 +57,7 @@ public class ReferenceTermList implements SharedResourceObject {
 		private String string;
 		private boolean variant;
 
-		private Optional<RTLTerm> baseTerm = Optional.absent();
+		private Optional<RTLTerm> baseTerm = Optional.empty();
 		private List<RTLTerm> variants = Lists.newArrayList();
 
 		public RTLTerm(int line, int id, String string, boolean variant) {

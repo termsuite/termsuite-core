@@ -1,6 +1,7 @@
 package eu.project.ttc.api;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
+
 import com.google.common.base.Preconditions;
 
 public class JsonOptions {
@@ -48,7 +49,7 @@ public class JsonOptions {
 		return withContexts;
 	}
 
-	private Optional<String> mongoDBOccStore = Optional.absent();
+	private Optional<String> mongoDBOccStore = Optional.empty();
 	
 	public JsonOptions mongoDBOccStoreURI(String mongoDBOccStoreURI) {
 		Preconditions.checkNotNull(mongoDBOccStoreURI, "MongoDBUri must not be null");

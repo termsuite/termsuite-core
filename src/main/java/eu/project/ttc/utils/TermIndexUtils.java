@@ -35,28 +35,28 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Component;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 
 public class TermIndexUtils {
 
-	public static  Set<TermVariation> selectTermVariations(TermIndex termIndex, VariationType type, String ruleName) {
-		Set<TermVariation> selected = Sets.newHashSet();
-		for(TermVariation tv:selectTermVariations(termIndex, type))
+	public static  Set<TermRelation> selectTermVariations(TermIndex termIndex, RelationType type, String ruleName) {
+		Set<TermRelation> selected = Sets.newHashSet();
+		for(TermRelation tv:selectTermVariations(termIndex, type))
 			if(Objects.equal(ruleName, tv.getInfo()))
 				selected.add(tv);
 		return selected;
 	}
 	
-	public static  Set<TermVariation> selectTermVariations(TermIndex termIndex, VariationType... types) {
-		Set<VariationType> typeSet = Sets.newHashSet(types);
-		return termIndex.getTermVariations().filter(tv -> 
-				typeSet.contains(tv.getVariationType())
+	public static  Set<TermRelation> selectTermVariations(TermIndex termIndex, RelationType... types) {
+		Set<RelationType> typeSet = Sets.newHashSet(types);
+		return termIndex.getRelations().filter(tv -> 
+				typeSet.contains(tv.getType())
 			).collect(Collectors.toSet());
 	}
 
@@ -70,8 +70,8 @@ public class TermIndexUtils {
 	}
 
 
-	public static Collection<TermVariation> selectTermVariationsByInfo(TermIndex termIndex, String ruleName) {
-		return termIndex.getTermVariations().filter(tv -> 
+	public static Collection<TermRelation> selectTermVariationsByInfo(TermIndex termIndex, String ruleName) {
+		return termIndex.getRelations().filter(tv -> 
 				Objects.equal(ruleName, tv.getInfo())
 			).collect(Collectors.toSet());
 	}

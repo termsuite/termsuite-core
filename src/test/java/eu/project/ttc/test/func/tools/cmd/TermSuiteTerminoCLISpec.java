@@ -2,7 +2,8 @@ package eu.project.ttc.test.func.tools.cmd;
 
 import static eu.project.ttc.test.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.nio.charset.Charset;
@@ -20,8 +21,8 @@ import com.google.common.base.Splitter;
 
 import eu.project.ttc.api.TermIndexIO;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.func.FunctionalTests;
 import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
@@ -61,8 +62,8 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(tbxPath.toFile()).exists();
 		
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
-		assertThat(termindex).containsTerm("nn: wind energy").hasSize(955);
-		assertFalse(termindex.getTermByGroupingKey("nn: wind energy").isContextVectorComputed());
+		assertThat(termindex).containsTerm("nn: wind energy").hasSize(843);
+		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
 	}
 
 
@@ -109,8 +110,8 @@ public class TermSuiteTerminoCLISpec {
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.containsVariation("nn: wind energy", VariationType.SYNTACTICAL, "ann: offshore wind energy")
-			.hasSize(140);
+			.containsVariation("nn: wind energy", RelationType.SYNTACTICAL, "ann: offshore wind energy")
+			.hasSize(91);
 	}
 	
 
@@ -133,7 +134,6 @@ public class TermSuiteTerminoCLISpec {
 	}
 
 	
-
 	@Test
 	public void testTerminoEnContextualizeSWTOnly() throws Exception {
 		
@@ -154,8 +154,8 @@ public class TermSuiteTerminoCLISpec {
 		
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
 		assertThat(termindex).containsTerm("nn: wind energy");
-		assertTrue(termindex.getTermByGroupingKey("n: wind").isContextVectorComputed());
-		assertFalse(termindex.getTermByGroupingKey("nn: wind energy").isContextVectorComputed());
+//		assertNotNull(termindex.getTermByGroupingKey("n: wind").getContext());
+		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
 	}
 
 	@Test
@@ -176,8 +176,8 @@ public class TermSuiteTerminoCLISpec {
 		
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
 		assertThat(termindex).containsTerm("nn: wind energy");
-		assertTrue(termindex.getTermByGroupingKey("n: wind").isContextVectorComputed());
-		assertTrue(termindex.getTermByGroupingKey("nn: wind energy").isContextVectorComputed());
+//		assertNotNull(termindex.getTermByGroupingKey("n: wind").getContext());
+		assertNotNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
 	}
 
 	

@@ -30,9 +30,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.index.selectors.HasSingleWordVariationSelector;
 import eu.project.ttc.models.index.selectors.TermSelector;
@@ -75,7 +75,7 @@ public class HasSingleWordSelectorSpec {
 	
 	@Test
 	public void testPrefix() {
-		TermSelector selector = new HasSingleWordVariationSelector(VariationType.IS_PREFIX_OF);
+		TermSelector selector = new HasSingleWordVariationSelector(RelationType.IS_PREFIX_OF);
 		assertTrue(selector.select(termIndex, term1));
 		assertTrue(selector.select(termIndex, term2));
 		assertTrue(selector.select(termIndex, term3));
@@ -87,7 +87,7 @@ public class HasSingleWordSelectorSpec {
 
 	@Test
 	public void testDerivation() {
-		TermSelector selector = new HasSingleWordVariationSelector(VariationType.DERIVES_INTO);
+		TermSelector selector = new HasSingleWordVariationSelector(RelationType.DERIVES_INTO);
 		assertFalse(selector.select(termIndex, term1));
 		assertFalse(selector.select(termIndex, term2));
 		assertFalse(selector.select(termIndex, term3));

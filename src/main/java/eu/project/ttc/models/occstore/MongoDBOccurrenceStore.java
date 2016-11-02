@@ -23,13 +23,17 @@
 
 package eu.project.ttc.models.occstore;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
@@ -46,6 +50,7 @@ import com.google.common.collect.Sets;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.WriteConcern;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.BulkWriteOptions;
@@ -56,13 +61,13 @@ import com.mongodb.client.model.Updates;
 import com.mongodb.client.model.WriteModel;
 
 import eu.project.ttc.models.Document;
-import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.Form;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.models.index.selectors.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.models.index.selectors.TermSelector;
 
-public class MongoDBOccurrenceStore implements OccurrenceStore {
+public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MongoDBOccurrenceStore.class);
 
 	
@@ -123,12 +128,11 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 	
 	private static final String _ID = "_id";
-	private static final String DOC_ID = "did";
 
 	private static final String BEGIN = "ob";
 	private static final String END = "oe";
+	private static final String URL = "doc";
 
-	private static final String DOC_URL = "url";
 
 	protected static final String COVERED_TEXT = "t";
 
@@ -141,11 +145,8 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 	
 	private MongoCollection<org.bson.Document> termCollection;
 	private MongoCollection<org.bson.Document> occurrenceCollection;
-	private MongoCollection<org.bson.Document> documentUrlCollection;
 	
-	
-	private Map<Integer, String> documentsUrls;
-	private List<TermOccurrence> occurrencesBuffer;
+	private List<Object[]> occurrencesBuffer;
 	private Map<Term, MutableInt> termsBuffer;
 
 	private BlockingThreadPoolExecutor executor;
@@ -181,8 +182,6 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 		
 		this.termCollection = db.getCollection("terms");
 		this.occurrenceCollection = db.getCollection("occurrences");
-		this.documentUrlCollection = db.getCollection("documents");
-
 		resetBuffers();
 	}
 
@@ -211,7 +210,6 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 	private void resetBuffers() {
 		this.termsBuffer = Maps.newHashMap();
-		this.documentsUrls = Maps.newHashMap();
 		this.occurrencesBuffer = Lists.newArrayList();
 	}
 	
@@ -226,64 +224,64 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 		return getOccurrences(term).iterator();
 	}
 
-	private LoadingCache<Integer, Document> documentCache = CacheBuilder.newBuilder()
-			.concurrencyLevel(1)
-			.maximumSize(10000)
-			.build(new CacheLoader<Integer, Document>() {
+	private MongoClient mongoClient;
+
+
+	private LoadingCache<Term, List<Form>> formCache = CacheBuilder.newBuilder()
+			.maximumSize(1000)
+			.build(new CacheLoader<Term, List<Form>>() {
 				@Override
-				public Document load(Integer documentId) throws Exception {
-					org.bson.Document bsonDoc = documentUrlCollection.find(Filters.eq(_ID,documentId)).first();
-					return new Document(documentId, bsonDoc.getString(DOC_URL));
+				public List<Form> load(Term key) throws Exception {
+					Set<Form> forms = occurrenceCache.get(key).stream().map(TermOccurrence::getForm).collect(Collectors.toSet());
+					List<Form> sortedForms = new ArrayList<>(forms);
+					Collections.sort(sortedForms);
+					return sortedForms;
 				}
 			});
 			
+
 	private LoadingCache<Term, List<TermOccurrence>> occurrenceCache = CacheBuilder.newBuilder()
 			.maximumSize(1000)
 			.build(new CacheLoader<Term, List<TermOccurrence>>() {
 				@Override
 				public List<TermOccurrence> load(Term term) throws Exception {
-					List<TermOccurrence> occurrences = Lists.newArrayList();
-					for(org.bson.Document occDoc:occurrenceCollection.find(Filters.eq(TERM_ID,term.getId()))) {
-						occurrences.add(new TermOccurrence(
-								term, 
-								occDoc.getString(COVERED_TEXT), 
-								documentCache.getUnchecked(occDoc.getInteger(DOC_ID)), 
-								occDoc.getInteger(BEGIN),
-								occDoc.getInteger(END)
-								));
-						
+					List<Object[]> occurrences = Lists.newArrayList();
+					FindIterable<org.bson.Document> find = occurrenceCollection.find(Filters.eq(TERM_ID,term.getId()));
+					
+					Map<String, Form> forms = new HashMap<>();
+					for(org.bson.Document occDoc:find) {
+						occurrences.add(new Object[]{
+							occDoc.getString(COVERED_TEXT), 
+							MongoDBOccurrenceStore.this.protectedGetDocument(occDoc.getString(URL)), 
+							occDoc.getInteger(BEGIN),
+							occDoc.getInteger(END)
+						});
 					}
-					return occurrences;
+					
+					List<TermOccurrence> list = occurrences.stream().map( occ -> {
+						String text = (String)occ[0];
+						int begin = (Integer)occ[1];
+						int end = (Integer)occ[2];
+						Document doc = (Document)occ[3];
+						
+						if(!forms.containsKey(text))
+							forms.put(text, new Form(text));
+						Form form = forms.get(text);
+						form.setCount(1 + form.getCount());
+						return new TermOccurrence(term, form, doc, begin, end);
+					}).collect(Collectors.toList());
+
+					return list;
 				}
+
 			});
 
-	private MongoClient mongoClient;
-	
 	@Override
 	public Collection<TermOccurrence> getOccurrences(Term term) {
 		checkState(State.INDEXED);
 		return occurrenceCache.getUnchecked(term);
 	}
 	
-	@Override
-	public void addOccurrence(Term term, TermOccurrence e) {
-		checkState(State.COLLECTING);
-
-		documentsUrls.put(e.getSourceDocument().getId(), e.getSourceDocument().getUrl());
-		MutableInt mutableInt = termsBuffer.get(term);
-		if(mutableInt == null)
-			termsBuffer.put(term, new MutableInt(1));
-		else
-			mutableInt.increment();
-		occurrencesBuffer.add(e);
-	}
-
-	@Override
-	public void addAllOccurrences(Term term, Collection<TermOccurrence> c) {
-		for(TermOccurrence occ:c)
-			addOccurrence(term, occ);
-	}
-
 	@Override
 	public Type getStoreType() {
 		return Type.MONGODB;
@@ -300,14 +298,14 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 
 		// bulk write occurrences
 		final List<org.bson.Document> occDocuments = Lists.newArrayListWithCapacity(occurrencesBuffer.size());
-		for(TermOccurrence o:this.occurrencesBuffer) {
+		for(Object[] o:this.occurrencesBuffer) {
 			
 			occDocuments.add(new org.bson.Document()
-					.append(TERM_ID, o.getTerm().getId())
-					.append(DOC_ID, o.getSourceDocument().getId())
-					.append(BEGIN, o.getBegin())
-					.append(END, o.getEnd())
-					.append(COVERED_TEXT, o.getCoveredText())
+					.append(TERM_ID, o[0])
+					.append(URL, o[1])
+					.append(BEGIN, o[2])
+					.append(END, o[3])
+					.append(COVERED_TEXT, o[4])
 				);
 		}
 		if(!occurrencesBuffer.isEmpty())
@@ -317,24 +315,6 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 				}
 			});
 
-		
-		// bulk write documents
-		final List<WriteModel<org.bson.Document>> documentUrlsOps = Lists.newArrayListWithCapacity(documentsUrls.size());
-		for(Map.Entry<Integer, String> e:this.documentsUrls.entrySet()) {
-			UpdateOneModel<org.bson.Document> w = new UpdateOneModel<org.bson.Document>(
-					Filters.eq(_ID, e.getKey()),
-					Updates.set(DOC_URL, e.getValue()),
-					new UpdateOptions().upsert(true));
-			documentUrlsOps.add(w);
-		}
-
-		if(!documentUrlsOps.isEmpty())
-			executor.execute(new Runnable(){
-					public void run() {
-						documentUrlCollection.bulkWrite(documentUrlsOps, new BulkWriteOptions().ordered(false));
-				}
-			});
-		
 		
 		// bulk write terms
 		final List<WriteModel<org.bson.Document>> termsOps = Lists.newArrayList();		
@@ -422,5 +402,31 @@ public class MongoDBOccurrenceStore implements OccurrenceStore {
 		LOGGER.debug("Synchronizing with MongoDB server");
 		mongoClient.fsync(false);
 		LOGGER.debug("MongoDB synchronized in {}ms", sw.elapsed(TimeUnit.MILLISECONDS));
+	}
+
+
+	@Override
+	public List<Form> getForms(Term term) {
+		return formCache.getUnchecked(term);
+	}
+
+	@Override
+	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText) {
+		checkState(State.COLLECTING);
+
+		MutableInt mutableInt = termsBuffer.get(term);
+		if(mutableInt == null)
+			termsBuffer.put(term, new MutableInt(1));
+		else
+			mutableInt.increment();
+		
+		occurrencesBuffer.add(new Object[]{
+				documentUrl,
+				term.getId(),
+				begin,
+				end,
+				coveredText
+		});
+
 	}
 }

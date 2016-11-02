@@ -24,13 +24,13 @@
 package eu.project.ttc.resources;
 
 import java.util.Map;
+import java.util.Optional;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.DataResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.SharedResourceObject;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
 

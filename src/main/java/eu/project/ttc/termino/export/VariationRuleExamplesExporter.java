@@ -14,11 +14,12 @@ import com.google.common.collect.Multimap;
 
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.variant.VariantRule;
+import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.utils.TermOccurrenceUtils;
 
@@ -60,8 +61,8 @@ public class VariationRuleExamplesExporter {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
 		for (Term t : termIndex.getTerms()) {
-			for (TermVariation v : termIndex.getOutboundTermVariations(t, VariationType.MORPHOLOGICAL, VariationType.SYNTACTICAL))
-				pairs.put(v.getInfo().toString(), new TermPair(t, v.getVariant()));
+			for (TermRelation v : termIndex.getOutboundRelations(t, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL))
+				pairs.put(v.getInfo().toString(), new TermPair(t, v.getTo()));
 		}
 
 		// gets all variant rules (event size-0) and sorts them
@@ -105,8 +106,9 @@ public class VariationRuleExamplesExporter {
 				int nbStrictOccs = 0;
 				List<String> lines = Lists.newArrayList();
 				for (TermPair pair : sortedPairs) {
-					List<TermOccurrence> targetStrictOccurrences = Lists.newLinkedList(pair.target.getOccurrences());
-					TermOccurrenceUtils.removeOverlaps(pair.source.getOccurrences(), targetStrictOccurrences);
+					OccurrenceStore occStore = termIndex.getOccurrenceStore();
+					List<TermOccurrence> targetStrictOccurrences = Lists.newLinkedList(occStore.getOccurrences(pair.target));
+					TermOccurrenceUtils.removeOverlaps(occStore.getOccurrences(pair.source), targetStrictOccurrences);
 					nbOverlappingOccs += pair.target.getFrequency();
 					nbStrictOccs += targetStrictOccurrences.size();
 					lines.add(String.format("%14d%14d%35s || %-35s\n", pair.target.getFrequency(),

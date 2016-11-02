@@ -274,14 +274,14 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Document document1() {
-		return new Document(101, "url1");
+		return new Document("url1");
 	}
 	
 	/**
 	 * @return
 	 */
 	public static Document document2() {
-		return new Document(102, "url2");
+		return new Document("url2");
 	}
 	
 	public static MemoryTermIndex emptyTermIndex() {
@@ -304,18 +304,19 @@ public class Fixtures {
 		final Document doc = document1();
 		
 		
+		String form = "blabla";
 		TermBuilder.start(memoryTermIndex)
 			.setGroupingKey("n: énergie")
 			.addWord(Fixtures.word1(), "N")
-			.addOccurrence(0, 10, doc, "blabla")
-			.addOccurrence(31, 40, doc, "blabla")
-			.addOccurrence(61, 70, doc, "blabla")
+			.addOccurrence(0, 10, doc.getUrl(), form)
+			.addOccurrence(31, 40, doc.getUrl(), form)
+			.addOccurrence(61, 70, doc.getUrl(), form)
 			.createAndAddToIndex();
 		
 		TermBuilder.start(memoryTermIndex)
 			.setGroupingKey("a: éolien")
 			.addWord(Fixtures.word2(), "A")
-			.addOccurrence(11, 20, doc, "blabla")
+			.addOccurrence(11, 20, doc.getUrl(), form)
 			.createAndAddToIndex();
 		
 		
@@ -323,9 +324,9 @@ public class Fixtures {
 		TermBuilder.start(memoryTermIndex)
 			.setGroupingKey("n: accès")
 			.addWord(Fixtures.word3(), "N")
-			.addOccurrence(21, 30, doc, "blabla")
-			.addOccurrence(41, 50, doc, "blabla")
-			.addOccurrence(51, 60, doc, "blabla")
+			.addOccurrence(21, 30, doc.getUrl(), form)
+			.addOccurrence(41, 50, doc.getUrl(), form)
+			.addOccurrence(51, 60, doc.getUrl(), form)
 			.createAndAddToIndex();
 
 		return memoryTermIndex;

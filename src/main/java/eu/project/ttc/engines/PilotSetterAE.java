@@ -1,3 +1,4 @@
+
 /*******************************************************************************
  * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
  *
@@ -19,46 +20,40 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.models;
 
-public enum VariationType {
-	MORPHOLOGICAL(1, "morph", true),
-	SYNTACTICAL(3, "syn", true),
-	GRAPHICAL(2, "graph", false),
-	DERIVES_INTO(4, "deriv", true),
-	IS_PREFIX_OF(5, "pref", true),
-	;
-	
-	private int order;
-	private String shortName;
-	private boolean directional;
-	
-	private VariationType(int order, String shortName, boolean directional) {
-		this.order = order;
-		this.directional = directional;
-		this.shortName = shortName;
-	}
-	
-	public int getOrder() {
-		return order;
-	}
-	
-	public boolean isDirectional() {
-		return directional;
-	}
+package eu.project.ttc.engines;
 
-	public String getShortName() {
-		return shortName;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.jcas.JCas;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import eu.project.ttc.resources.TermIndexResource;
+
+/**
+ * 
+ * @
+ *
+ */
+public class PilotSetterAE extends JCasAnnotator_ImplBase {
+	private static final Logger logger = LoggerFactory.getLogger(PilotSetterAE.class);
+	public static final String TASK_NAME = "Setting term pilots";
+
+	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
+	private TermIndexResource termIndexResource;
+	
+	@Override
+	public void process(JCas aJCas) throws AnalysisEngineProcessException {
+		/*
+		 * Do nothing
+		 */
 	}
 	
-	public boolean isSymetric() {
-		return !directional;
-	}
-	
-	public static VariationType fromShortName(String shortName) {
-		for(VariationType vt:values())
-			if(vt.getShortName().equals(shortName))
-				return vt;
-		throw new IllegalArgumentException("No such variation type with name: " + shortName);
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		logger.info("Starting " + TASK_NAME);
+		new PilotSetter().set(termIndexResource.getTermIndex());
 	}
 }

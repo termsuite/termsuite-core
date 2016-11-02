@@ -52,7 +52,7 @@ public enum EvaluatedMethod {
 		case COMPOSITIONAL: return aligner.alignCompositional(sourceTerm, nbCandidates, minCandidateFrequency);
 		case SEMI_DISTRIBUTIONAL: return aligner.alignSemiDistributional(sourceTerm, nbCandidates, minCandidateFrequency);
 		case DICO: return aligner.alignDico(sourceTerm, nbCandidates);
-		case HYBRID: return aligner.align(sourceTerm, nbCandidates, minCandidateFrequency);
+		case HYBRID: return aligner.alignSize2(sourceTerm, nbCandidates, minCandidateFrequency);
 		default:
 			throw new UnsupportedOperationException("Method not supported for " + this);
 		}

@@ -24,6 +24,7 @@
 package eu.project.ttc.engines;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.apache.uima.UimaContext;
@@ -35,14 +36,13 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.scored.ScoredModel;
 import eu.project.ttc.models.scored.ScoredTerm;
 import eu.project.ttc.models.scored.ScoredVariation;
@@ -66,7 +66,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	private TermHistoryResource historyResource;
 
 	
-	private Optional<SubTaskObserver> taskObserver = Optional.absent();
+	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
@@ -127,18 +127,18 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 		logger.debug("Resetting scored variations and unique bases");
 		for(ScoredTerm st:scoredModel.getTerms()) {
 			for(ScoredVariation sv:st.getVariations()) {
-				TermVariation termVariation = sv.getTermVariation();
+				TermRelation termVariation = sv.getTermVariation();
 				
 				/*
 				 * Add this term variation to the variants
 				 */
 				termVariation.setScore(sv.getVariationScore());
 
-				List<TermVariation> toRem = Lists.newArrayList(termIndex.getInboundTermVariations(termVariation.getVariant()));
-				for(TermVariation tv:toRem)
-					termIndex.removeTermVariation(tv);
+				List<TermRelation> toRem = Lists.newArrayList(termIndex.getInboundTermRelations(termVariation.getTo()));
+				for(TermRelation tv:toRem)
+					termIndex.removeRelation(tv);
 
-				termIndex.addTermVariation(termVariation);
+				termIndex.addRelation(termVariation);
 			}
 		}
 	}

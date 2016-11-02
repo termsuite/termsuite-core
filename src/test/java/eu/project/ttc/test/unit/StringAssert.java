@@ -55,11 +55,12 @@ public class StringAssert extends AbstractAssert<StringAssert, String> {
 		
 		for(int i = 0; i< actualValues.length; i++) {
 			if(!Objects.equal(actualValues[i], expectedValues[i].toString())) {
-				failWithMessage("Expected value at line %s and column %s was <%s>, but actual value is <%s>", 
+				failWithMessage("Expected value at line %s and column %s was <%s>, but actual value is <%s>. Line: %s", 
 						lineNum, 
 						i+1,
 						expectedValues[i], 
-						actualValues[i]);
+						actualValues[i],
+						getLine(lineNum));
 				return this;
 			}
 		}

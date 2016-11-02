@@ -39,10 +39,10 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.Component;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.selectors.HasSingleWordVariationSelector;
 import eu.project.ttc.models.index.selectors.TermSelector;
@@ -77,6 +77,18 @@ public class TermValueProviders {
 		public java.util.Collection<String> getClasses(TermIndex termIndex, Term term) {
 			return ImmutableList.of(value);
 		};
+	};
+
+	public static final TermValueProvider WORD_SWT_GROUPING_KEYS_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
+		@Override
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			List<String> swtGroupingKeys = Lists.newArrayListWithCapacity(term.getWords().size());
+			for(TermWord tw:term.getWords()) {
+				if(termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(tw)) != null) 
+					swtGroupingKeys.add(tw.toGroupingKey());
+			}
+			return swtGroupingKeys;
+		}
 	};
 
 	public static final TermValueProvider WORD_LEMMA_IF_SWT_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
@@ -199,6 +211,7 @@ public class TermValueProviders {
 	static {
 		valueProviders.put(TermIndexes.SINGLE_WORD_LEMMA, TERM_SINGLE_WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
+		valueProviders.put(TermIndexes.SWT_GROUPING_KEYS, WORD_SWT_GROUPING_KEYS_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_LEMMA, WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
@@ -218,13 +231,13 @@ public class TermValueProviders {
 		case TermIndexes.TERM_HAS_PREFIX_LEMMA:
 			return new SelectorTermValueProvider(
 						TermIndexes.WORD_LEMMA,
-						new HasSingleWordVariationSelector(VariationType.IS_PREFIX_OF), 
+						new HasSingleWordVariationSelector(RelationType.IS_PREFIX_OF), 
 						termIndex
 					);
 		case TermIndexes.TERM_HAS_DERIVATES_LEMMA:
 			return new SelectorTermValueProvider(
 						TermIndexes.WORD_LEMMA,
-						new HasSingleWordVariationSelector(VariationType.DERIVES_INTO), 
+						new HasSingleWordVariationSelector(RelationType.DERIVES_INTO), 
 						termIndex
 					);
 		default:

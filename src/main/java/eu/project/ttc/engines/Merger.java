@@ -38,12 +38,14 @@ import com.google.common.collect.Lists;
 
 import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
+import eu.project.ttc.models.OccurrenceStore;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.TermUtils;
 
 /**
  * 
@@ -82,32 +84,33 @@ public class Merger extends JCasAnnotator_ImplBase {
 		
 		List<Term> rem = Lists.newArrayList();
 		for(Term t:termIndex.getTerms()) {
-			List<TermVariation> variations = Lists.newArrayList(termIndex.getOutboundTermVariations(t));
-			TermVariation v1, v2;
+			List<TermRelation> variations = Lists.newArrayList(termIndex.getOutboundRelations(t));
+			TermRelation v1, v2;
 			Term t1, t2;
 			for(int i=0; i<variations.size(); i++) {
 				v1 = variations.get(i);
-				t1 = v1.getVariant();
-				if(!t.getExtensions().contains(t1))
+				t1 = v1.getTo();
+				if(!TermUtils.isExtension(termIndex, t,t1))
 					// should only merge extensions.
 					continue;
 				for(int j=i+1; j<variations.size(); j++) {
 					v2 = variations.get(j);
-					t2 = v2.getVariant();
-					if(!t.getExtensions().contains(t2))
+					t2 = v2.getTo();
+					if(!TermUtils.isExtension(termIndex, t,t2))
 						// should only merge extensions.
 						continue;
 					if(isGraphicalVariant(t1,t2)) {
 						nbMerged++;
 						logger.debug("Merging variant {} into variant {}", t2, t1);
-						t1.addAll(t2.getOccurrences());
-						for(TermOccurrence occ:t2.getOccurrences())
+						OccurrenceStore occStore = termIndex.getOccurrenceStore();
+						for(TermOccurrence occ:occStore.getOccurrences(t2))
 							occ.setTerm(t1);
+						for(TermOccurrence o2:occStore.getOccurrences(t2))
+							occStore.addOccurrence(t1, o2.getSourceDocument().getUrl(), o2.getBegin(), o2.getEnd(), o2.getForm().getText());
 						t1.setFrequency(t1.getFrequency() + t2.getFrequency());
 						t1.setFrequencyNorm(t1.getFrequencyNorm() + t2.getFrequencyNorm());
 						t1.setGeneralFrequencyNorm(t1.getGeneralFrequencyNorm() + t2.getGeneralFrequencyNorm());
-						termIndex.removeTermVariation(v2);
-						
+						termIndex.removeRelation(v2);
 						rem.add(t2);
 						
 						// TODO Also merge context vectors

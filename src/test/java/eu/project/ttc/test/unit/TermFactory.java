@@ -34,10 +34,10 @@ import com.google.common.base.Preconditions;
 
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 
 public class TermFactory {
@@ -67,12 +67,12 @@ public class TermFactory {
 
 	public void addPrefix(Term term1, Term term2) {
 		termsExist(term1, term2);
-		termIndex.addTermVariation(term1, term2, VariationType.IS_PREFIX_OF, "");
+		termIndex.addRelation(term1, term2, RelationType.IS_PREFIX_OF, "");
 	}
 
 	public void addDerivesInto(String type, Term term1, Term term2) {
 		termsExist(term1, term2);
-		termIndex.addTermVariation(term1, term2, VariationType.DERIVES_INTO, type);
+		termIndex.addRelation(term1, term2, RelationType.DERIVES_INTO, type);
 	}
 
 	private void termsExist(Term... terms) {

@@ -33,6 +33,7 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.models.Document;
+import eu.project.ttc.models.Form;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.test.unit.Fixtures;
@@ -56,11 +57,16 @@ public class TermOccurrenceUtilsSpec {
 		term1.setFrequencyNorm(0.1);
 		term2.setFrequencyNorm(0.2);
 		term3.setFrequencyNorm(0.3);
-		o1 = new TermOccurrence(term1, "blabla1", document1, 10, 20);
-		o2 = new TermOccurrence(term2, "blabla2", document1, 20, 30);
-		o3 = new TermOccurrence(term1, "blabla3", document1, 10, 40);
-		o4 = new TermOccurrence(term3, "blabla4", document1, 30, 50);
-		o5 = new TermOccurrence(term2, "blabla5", document1, 40, 60);
+		Form form1 = new Form("blabla1");
+		o1 = new TermOccurrence(term1, form1, document1, 10, 20);
+		Form form2 = new Form("blabla2");
+		o2 = new TermOccurrence(term2, form2, document1, 20, 30);
+		Form form3 = new Form("blabla3");
+		o3 = new TermOccurrence(term1, form3, document1, 10, 40);
+		Form form4 = new Form("blabla4");
+		o4 = new TermOccurrence(term3, form4, document1, 30, 50);
+		Form form5 = new Form("blabla5");
+		o5 = new TermOccurrence(term2, form5, document1, 40, 60);
 	}
 	
 	@Test
@@ -127,8 +133,8 @@ public class TermOccurrenceUtilsSpec {
 	
 	@Test
 	public void testOccurrenceChunkIterator2() {
-		TermOccurrence o6 = new TermOccurrence(Fixtures.term1(), "blabla6", Fixtures.document1(), 100, 200);
-		TermOccurrence o7 = new TermOccurrence(Fixtures.term2(), "blabla7", Fixtures.document1(), 150, 220);
+		TermOccurrence o6 = new TermOccurrence(Fixtures.term1(), new Form("blabla6"), Fixtures.document1(), 100, 200);
+		TermOccurrence o7 = new TermOccurrence(Fixtures.term2(), new Form("blabla7"), Fixtures.document1(), 150, 220);
 		
 		List<TermOccurrence> occurrences = Lists.newArrayList(o1, o2, o3, o4, o5, o6, o7);
 		List<List<TermOccurrence>> chunks = Lists.newArrayList(TermOccurrenceUtils.occurrenceChunkIterator(occurrences));

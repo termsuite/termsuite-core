@@ -22,14 +22,16 @@
 package eu.project.ttc.utils;
 
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
@@ -39,13 +41,16 @@ import eu.project.ttc.engines.desc.TermSuiteResourceException;
 import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.ContextVector;
+import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.resources.GeneralLanguageResource;
 import eu.project.ttc.tools.TermSuiteResource;
 
@@ -67,12 +72,8 @@ public class TermUtils {
 		}
 	};
 	
-	public static TermFormGetter formGetter(TermIndex termIndex, boolean downcaseForms) {
-		return new TermFormGetter(termIndex, downcaseForms);
-	}
-	
 	public static void showIndex(TermIndex index, PrintStream stream) {
-		Optional<Pattern> watchExpression = Optional.absent();
+		Optional<Pattern> watchExpression = Optional.empty();
 		showIndex(index, stream, watchExpression);
 	}
 		
@@ -84,8 +85,8 @@ public class TermUtils {
 				stream.println(term);
 //				for(Term t:term.getGraphicalVariants()) 
 //					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
-				for(TermVariation variation:index.getOutboundTermVariations(term)) 
-					stream.format("\tsyntactic: %s\n" , variation.getVariant().getGroupingKey());
+				for(TermRelation variation:index.getOutboundRelations(term)) 
+					stream.format("\tsyntactic: %s\n" , variation.getTo().getGroupingKey());
 			}
 		}
 	}
@@ -195,9 +196,9 @@ public class TermUtils {
 	 * @return
 	 * 			fstrict(t1) / f(t1)
 	 */
-	public static double getStrictness(Term t1, Term t2) {
-		Collection<TermOccurrence> occ1 = Lists.newArrayList(t1.getOccurrences());
-		TermOccurrenceUtils.removeOverlaps(t2.getOccurrences(), occ1);
+	public static double getStrictness(OccurrenceStore store, Term t1, Term t2) {
+		Collection<TermOccurrence> occ1 = Lists.newArrayList(store.getOccurrences(t1));
+		TermOccurrenceUtils.removeOverlaps(store.getOccurrences(t2), occ1);
 		double t1Strict = occ1.size();
 		double t1F = t1.getFrequency();
 		return t1Strict / t1F;
@@ -401,5 +402,59 @@ public class TermUtils {
 			}
 		}
 		return sets;
+	}
+	
+	
+	
+	/**
+	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER}.
+	 * 
+	 * @see TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER
+	 * @param term1
+	 * 				First term of the pair
+	 * @param term2
+	 * 				Second term of the pair
+	 * @return
+	 * 			The indexing key for the given pair
+	 */
+	public static String getLemmaLemmaKey(Term term1, Term term2) {
+		List<String> lemmas = new ArrayList<>(2);
+		lemmas.add(term1.getWords().get(0).getWord().getLemma());
+		lemmas.add(term2.getWords().get(0).getWord().getLemma());
+		Collections.sort(lemmas);
+		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
+	}
+
+	public static Collection<Term> getExtensions(TermIndex termIndex, Term term) {
+		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
+				.stream()
+				.map(TermRelation::getTo)
+				.collect(Collectors.toSet());
+	}
+		
+	public static boolean isExtension(TermIndex termIndex, Term term, Term extension) {
+		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
+			.stream()
+			.filter(tv -> tv.getTo().equals(extension))
+			.findAny().isPresent();
+	}
+	
+	
+	public static Collection<TermRelation> getVariations(TermIndex termIndex, Term t) {
+		return termIndex.getOutboundRelations(t,
+				RelationType.SYNTACTICAL, 
+				RelationType.MORPHOLOGICAL,
+				RelationType.GRAPHICAL,
+				RelationType.DERIVES_INTO,
+				RelationType.IS_PREFIX_OF);
+	}
+
+	public static Collection<TermRelation> getBases(TermIndex termIndex, Term current) {
+		return termIndex.getInboundTermRelations(current,
+				RelationType.SYNTACTICAL, 
+				RelationType.MORPHOLOGICAL,
+				RelationType.GRAPHICAL,
+				RelationType.DERIVES_INTO,
+				RelationType.IS_PREFIX_OF);
 	}
 }

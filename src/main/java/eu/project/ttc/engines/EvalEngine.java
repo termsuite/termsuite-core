@@ -51,7 +51,7 @@ import com.google.common.collect.Sets;
 
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.EvalTrace.RecPoint;
 import eu.project.ttc.resources.ReferenceTermList;
@@ -155,7 +155,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 			try {
 				int numVariationPaths = 0;
 				for(Term lcTerm:termIndexResource.getTermIndex().getTerms())
-					numVariationPaths += termIndexResource.getTermIndex().getOutboundTermVariations(lcTerm).size();
+					numVariationPaths += termIndexResource.getTermIndex().getOutboundRelations(lcTerm).size();
 				PrintStream stream = new PrintStream(outputLogFile);
 				stream.println(HORIZONTAL_RULE);
 				if(!customLogHeaderString.isEmpty())
@@ -249,7 +249,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 				rtlV);
 		rtlTermsNotFound = Sets.newHashSet(rtl.asList());
 		List<Term> lc = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
-		Collections.sort(lc, TermProperty.SPECIFICITY.getComparator(termIndexResource.getTermIndex(), true));
+		Collections.sort(lc, TermProperty.SPECIFICITY.getComparator(true));
 		generateRecPointIndexes(lc.size());
 		
 		List<RTLTerm> rtlTermsFound = Lists.newArrayList();
@@ -331,8 +331,8 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 			
 		Set<Term> lc = Sets.newHashSet();
 		lc.add(lcTerm);
-		for(TermVariation tv:termIndexResource.getTermIndex().getOutboundTermVariations(lcTerm))
-				lc.add(tv.getVariant());
+		for(TermRelation tv:termIndexResource.getTermIndex().getOutboundRelations(lcTerm))
+				lc.add(tv.getTo());
 		
 		
 		if(LOGGER.isTraceEnabled()) {

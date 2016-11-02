@@ -172,8 +172,8 @@ public class TermVariationScorer {
 		ScoredVariation v;
 		while(it.hasNext()) {
 			v = it.next();
-			Term variant = v.getTermVariation().getVariant();
-			Term base = v.getTermVariation().getBase();
+			Term variant = v.getTermVariation().getTo();
+			Term base = v.getTermVariation().getFrom();
 			
 			if(v.getVariantIndependanceScore() < config.getVariantIndependanceTh()) {
 				watchVariationRemoval(variant, base, 

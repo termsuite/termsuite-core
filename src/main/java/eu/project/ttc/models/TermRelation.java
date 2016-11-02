@@ -26,10 +26,10 @@ import com.google.common.collect.ComparisonChain;
 
 import eu.project.ttc.utils.TermUtils;
 
-public class TermVariation implements Comparable<TermVariation> {
-	private VariationType variationType;
-	private Term base;
-	private Term variant;
+public class TermRelation implements Comparable<TermRelation> {
+	private RelationType relationType;
+	private Term from;
+	private Term to;
 	private Object info;
 	private String _label;
 	private double score;
@@ -38,56 +38,56 @@ public class TermVariation implements Comparable<TermVariation> {
 	private boolean prefixOf;
 	private boolean suffixOf;
 	
-	public TermVariation(VariationType variationType, Term base, Term variant, Object info) {
+	public TermRelation(RelationType variationType, Term from, Term to, Object info) {
 		super();
-		this.variationType = variationType;
-		this.base = base;
-		this.variant = variant;
+		this.relationType = variationType;
+		this.from = from;
+		this.to = to;
 		this.info = info;
-		this.includedIn = TermUtils.isIncludedIn(base, variant);
-		this.prefixOf = TermUtils.isPrefixOf(base, variant);
-		this.suffixOf = TermUtils.isSuffixOf(base, variant);
+		this.includedIn = TermUtils.isIncludedIn(from, to);
+		this.prefixOf = TermUtils.isPrefixOf(from, to);
+		this.suffixOf = TermUtils.isSuffixOf(from, to);
 	}
 	
-	public VariationType getVariationType() {
-		return variationType;
+	public RelationType getType() {
+		return relationType;
 	}
 	
 	public Object getInfo() {
 		return info;
 	}
 	
-	public Term getVariant() {
-		return variant;
+	public Term getTo() {
+		return to;
 	}
 	
-	public Term getBase() {
-		return base;
+	public Term getFrom() {
+		return from;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("%s --- %s --> %s", base.getGroupingKey(), this.info, variant.getGroupingKey());
+		return String.format("%s --- %s --> %s", from.getGroupingKey(), this.info, to.getGroupingKey());
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.base, this.variant, this.variationType, this.info);
+		return Objects.hashCode(this.from, this.to, this.relationType, this.info);
 	}
 	
 	public String getLabel() {
 		if(this._label == null) 
-			this._label = this.variationType.getShortName() + ":" + this.info; 
+			this._label = this.relationType.getShortName() + ":" + this.info; 
 		return this._label;
 	}
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof TermVariation) {
-			TermVariation v = (TermVariation) obj;
+		if (obj instanceof TermRelation) {
+			TermRelation v = (TermRelation) obj;
 			return Objects.equal(this.score, v.score)
-					&& Objects.equal(this.base, v.base)
-					&& Objects.equal(this.variant, v.variant)
-					&& Objects.equal(this.variationType, v.variationType)
+					&& Objects.equal(this.from, v.from)
+					&& Objects.equal(this.to, v.to)
+					&& Objects.equal(this.relationType, v.relationType)
 					&& Objects.equal(this.info, v.info);
 		} else 
 			return false;
@@ -114,19 +114,19 @@ public class TermVariation implements Comparable<TermVariation> {
 	}
 	
 	@Override
-	public int compareTo(TermVariation tv) {
+	public int compareTo(TermRelation tv) {
 		return ComparisonChain.start()
 				// sort by score desc
 				.compare(tv.score, this.score)
 				// then by non inclusion first
 				.compare(this.includedIn ? 1 : 0, tv.includedIn ? 1 : 0)
 				// then by length asc
-				.compare(this.variant.getWords().size(), tv.variant.getWords().size())
+				.compare(this.to.getWords().size(), tv.to.getWords().size())
 				// then by term id
-				.compare(this.variant.getGroupingKey(), tv.variant.getGroupingKey())
+				.compare(this.to.getGroupingKey(), tv.to.getGroupingKey())
 				// makes it consistent with equals
-				.compare(this.base.getGroupingKey(), tv.base.getGroupingKey())
-				.compare(this.variationType, tv.variationType)
+				.compare(this.from.getGroupingKey(), tv.from.getGroupingKey())
+				.compare(this.relationType, tv.relationType)
 				.result();
 				
 	}

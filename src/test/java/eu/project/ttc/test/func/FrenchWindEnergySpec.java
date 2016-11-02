@@ -37,8 +37,8 @@ import org.junit.Test;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
@@ -185,10 +185,10 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasFrequency(308);
 		
 		assertThat(termIndex)
-			.hasNBases(term, 0)
-			.hasNVariationsOfType(term, 24, VariationType.SYNTACTICAL)
+			.hasNBases(term, 2)
+			.hasNVariationsOfType(term, 24, RelationType.SYNTACTICAL)
 			.getVariations(term)
-			.extracting("variant.groupingKey", "info", "variant.frequency")
+			.extracting("to.groupingKey", "info", "to.frequency")
 			.contains(
 					tuple("napn: vitesse angulaire de rotation", "S-I1-NPN-A", 2),
 					tuple("napn: vitesse nominal de rotation", "S-I1-NPN-A", 2),
@@ -222,7 +222,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testMINACEVariations() {
 		assertThat(termIndex)
 			.asTermVariationsHavingObject("M-I-NA-CE")
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("na: fonctionnement hypersynchrone", "naca: fonctionnement hyper et hyposynchrone")
 			)
@@ -234,10 +234,10 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMSNNVariations() {
 		assertThat(termIndex)
-			.hasNVariationsOfType(43, VariationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(43, RelationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-NN")
 			.hasSize(9)
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: microsystème", "nn: micro système"), 
 				   tuple("n: transistor-diode", "nn: transistor diode"), 
@@ -252,12 +252,12 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("npn: phase du stator", VariationType.SYNTACTICAL, "na: phase statorique", "S-R2D-NPN")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", "S-Ed-NA-A")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "napn: machine asynchrone à cage", "S-Ed-NA-PN")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", "S-Ed-NA-PNA")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation", "S-Ed-NA-PAN")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", "S-I-NA-AC")
+			.containsVariation("npn: phase du stator", RelationType.SYNTACTICAL, "na: phase statorique", "S-R2D-NPN")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", "S-Ed-NA-A")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napn: machine asynchrone à cage", "S-Ed-NA-PN")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", "S-Ed-NA-PNA")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation", "S-Ed-NA-PAN")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", "S-I-NA-AC")
 			;
 	}
 
@@ -265,7 +265,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithPrefixes() {
 		assertThat(termIndex)
 		.asTermVariationsHavingObject("NA-NprefA")
-		.extracting("base.groupingKey", "variant.groupingKey")
+		.extracting("from.groupingKey", "to.groupingKey")
 		.contains(
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
 			tuple("na: machine synchrone", "na: machine asynchrone"),
@@ -287,7 +287,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 			.asTermVariationsHavingObject("S-R2D-NPN")
 			.hasSize(77)
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 					tuple("npn: production de électricité", "na: production électrique"),
 					tuple("npn: étude de environnement", "na: étude environnemental"),
@@ -300,7 +300,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 			.asTermVariationsHavingObject("S-PID-NA-P")
 			.hasSize(0)
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 //					tuple("npn: givrage de pale", "na: pale givrer"),
 //					tuple("npn: profondeur de eau", "na: eau profond")
@@ -312,23 +312,23 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testPrefixes() {
 		assertThat(termIndex)
-			.containsVariation("a: multipolaire", VariationType.IS_PREFIX_OF, "a: polaire")
-			.containsVariation("n: cofinancement", VariationType.IS_PREFIX_OF, "n: financement")
-			.containsVariation("a: tripale", VariationType.IS_PREFIX_OF, "n: pale")
-			.containsVariation("a: bipale", VariationType.IS_PREFIX_OF, "n: pale")
-			.containsVariation("a: asynchrone", VariationType.IS_PREFIX_OF, "a: synchrone")
-			.containsVariation("n: déréglementation", VariationType.IS_PREFIX_OF, "n: réglementation")
+			.containsVariation("a: multipolaire", RelationType.IS_PREFIX_OF, "a: polaire")
+			.containsVariation("n: cofinancement", RelationType.IS_PREFIX_OF, "n: financement")
+			.containsVariation("a: tripale", RelationType.IS_PREFIX_OF, "n: pale")
+			.containsVariation("a: bipale", RelationType.IS_PREFIX_OF, "n: pale")
+			.containsVariation("a: asynchrone", RelationType.IS_PREFIX_OF, "a: synchrone")
+			.containsVariation("n: déréglementation", RelationType.IS_PREFIX_OF, "n: réglementation")
 			;
 	}
 	
 	@Test
 	public void testDerivations() {
 		assertThat(termIndex)
-			.containsVariation("n: hydroélectricité", VariationType.DERIVES_INTO, "a: hydroélectrique")
-			.containsVariation("n: stator", VariationType.DERIVES_INTO, "a: statorique")
-			.containsVariation("n: usage", VariationType.DERIVES_INTO, "n: usager")
-			.containsVariation("n: support", VariationType.DERIVES_INTO, "n: supportage")
-			.containsVariation("n: commerce", VariationType.DERIVES_INTO, "a: commercial")
+			.containsVariation("n: hydroélectricité", RelationType.DERIVES_INTO, "a: hydroélectrique")
+			.containsVariation("n: stator", RelationType.DERIVES_INTO, "a: statorique")
+			.containsVariation("n: usage", RelationType.DERIVES_INTO, "n: usager")
+			.containsVariation("n: support", RelationType.DERIVES_INTO, "n: supportage")
+			.containsVariation("n: commerce", RelationType.DERIVES_INTO, "a: commercial")
 			;
 	}
 

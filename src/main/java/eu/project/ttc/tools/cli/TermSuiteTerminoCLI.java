@@ -50,6 +50,7 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Pattern;
 
 import org.apache.commons.cli.CommandLine;
@@ -63,7 +64,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
@@ -151,7 +151,7 @@ public class TermSuiteTerminoCLI {
 	/*
 	 * The mongo db options
 	 */
-	private Optional<String> mongoStoreDBURL = Optional.absent();
+	private Optional<String> mongoStoreDBURL = Optional.empty();
 	private boolean mongoStoreSoftLinked = false;
 
 	
@@ -215,7 +215,7 @@ public class TermSuiteTerminoCLI {
 	// tagger argument
 	private Tagger tagger = Tagger.TreeTagger;
 
-    private Optional<String> resourcePack = Optional.absent();
+    private Optional<String> resourcePack = Optional.empty();
     private String corpusPath = null;
     private Lang language = null;
     private String encoding = "UTF-8";
@@ -228,8 +228,8 @@ public class TermSuiteTerminoCLI {
 	/*
 	 * Istex parameters
 	 */
-	private Optional<String> istexAPIUrl = Optional.absent();
-	private Optional<List<String>> istexIds = Optional.absent();
+	private Optional<String> istexAPIUrl = Optional.empty();
+	private Optional<List<String>> istexIds = Optional.empty();
 	
 	/*
 	 * contetxualizer
@@ -244,14 +244,14 @@ public class TermSuiteTerminoCLI {
 	 * Cleaning parameters
 	 */
 	private Optional<Float> cleaningThreshold = Optional.of(2f);
-	private Optional<Integer> cleaningTopN = Optional.absent();
+	private Optional<Integer> cleaningTopN = Optional.empty();
 	private Optional<TermProperty> cleaningProperty = Optional.of(TermProperty.SPECIFICITY);
 	private boolean keepVariantsWhileCleaning = true;
 	
 	/*
 	 * Max size periodic filtering
 	 */
-	private Optional<TermProperty> periodicFilteringProperty = Optional.absent();
+	private Optional<TermProperty> periodicFilteringProperty = Optional.empty();
 	private int maxSizeFilteringMaxSize = 20000;
 	
 	
@@ -265,32 +265,32 @@ public class TermSuiteTerminoCLI {
 	/*
 	 * Export params
 	 */
-	private Optional<String> tsvFile = Optional.absent();
-	private Optional<TermProperty[]> tsvProperties = Optional.absent();
+	private Optional<String> tsvFile = Optional.empty();
+	private Optional<TermProperty[]> tsvProperties = Optional.empty();
 	private boolean tsvShowVariantScores = false;
 	
-	private Optional<String> jsonFile = Optional.absent();
-	private Optional<String> tbxFile = Optional.absent();
+	private Optional<String> jsonFile = Optional.empty();
+	private Optional<String> tbxFile = Optional.empty();
 
-	private Optional<String> jsonCasFile = Optional.absent();
+	private Optional<String> jsonCasFile = Optional.empty();
 	
 
 	/*
 	 *  compost params
 	 */
-	private Optional<Float> compostAlpha = Optional.absent();
-	private Optional<Float> compostBeta = Optional.absent();
-	private Optional<Float> compostGamma = Optional.absent();
-	private Optional<Float> compostDelta = Optional.absent();
-	private Optional<Integer> compostMinComponentSize = Optional.absent();
-	private Optional<Integer> compostMaxComponentNum = Optional.absent();
+	private Optional<Float> compostAlpha = Optional.empty();
+	private Optional<Float> compostBeta = Optional.empty();
+	private Optional<Float> compostGamma = Optional.empty();
+	private Optional<Float> compostDelta = Optional.empty();
+	private Optional<Integer> compostMinComponentSize = Optional.empty();
+	private Optional<Integer> compostMaxComponentNum = Optional.empty();
 	private Optional<Float> compostSimilarityThreshold = Optional.of(1f);
-	private Optional<Float> compostScoreThreshold = Optional.absent();
+	private Optional<Float> compostScoreThreshold = Optional.empty();
 
 	/*
 	 * Ouput and display params
 	 */
-	private static Optional<Pattern> watch = Optional.absent();
+	private static Optional<Pattern> watch = Optional.empty();
 
 	/**
 	 * Application entry point
@@ -874,12 +874,12 @@ public class TermSuiteTerminoCLI {
 
 		if(line.hasOption(CLEAN_THRESHOLD)) {
 			cleaningThreshold = Optional.of(Float.parseFloat(line.getOptionValue(CLEAN_THRESHOLD)));
-			cleaningTopN = Optional.absent();
+			cleaningTopN = Optional.empty();
 		}
 
 		if(line.hasOption(CLEAN_TOP_N)) {
 			cleaningTopN = Optional.of(Integer.parseInt(line.getOptionValue(CLEAN_TOP_N)));
-			cleaningThreshold = Optional.absent();
+			cleaningThreshold = Optional.empty();
 		}
 
 		if(line.hasOption(CLEAN_PROPERTY)) {

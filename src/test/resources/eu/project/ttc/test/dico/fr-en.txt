@@ -24,3 +24,5 @@ hydroélectrique	hydro
 énergie	vim
 rotor			rotor	arm
 rotor			rotor
+production	production
+électrique	electric

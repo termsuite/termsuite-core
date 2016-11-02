@@ -125,16 +125,16 @@ public class Traverser {
 
 	public List<Term> toList(TermIndex termIndex) {
 		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
-		Collections.sort(terms, toComparator(termIndex));
+		Collections.sort(terms, toComparator());
 		return terms;
 	}
 	
-	public Comparator<Term> toComparator(final TermIndex termIndex) {
+	public Comparator<Term> toComparator() {
 		return new Comparator<Term>() {
 			@Override
 			public int compare(Term o1, Term o2) {
 				for(Ordering ordering:orderings) {
-					int compare = ordering.property.compare(termIndex, o1, o2);
+					int compare = ordering.property.compare(o1, o2);
 					if(compare < 0) 
 						return ordering.direction == Direction.ASC ? -1 : 1;
 					else if(compare > 0)

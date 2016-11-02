@@ -48,13 +48,13 @@ import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
@@ -95,14 +95,25 @@ public class JsonTermIndexIO {
 	private static final String TERMS = "terms";
 	private static final String ID = "id";
 	private static final String GROUPING_KEY = "key";
+	private static final String PILOT = "pilot";
+	private static final String DOCUMENT_FREQUENCY = "dfreq";
 	private static final String SYN = "syn";
 	private static final String FREQUENCY = "freq";
 	private static final String SPOTTING_RULE = "rule";
+	@Deprecated
 	private static final String TERM_VARIATIONS = "variations";
-	private static final String VARIANT_TYPE = "type";
+	private static final String TERM_RELATIONS = "relations";
+	private static final String RELATION_TYPE = "type";
 	private static final String INFO = "info";
+	
+	@Deprecated
 	private static final String BASE = "base";
+	private static final String FROM = "from";
+	
+	@Deprecated
 	private static final String VARIANT = "variant";
+	private static final String TO = "to";
+
 	private static final String VARIANT_SCORE = "vscore";
 	private static final String RANK = "rank";
 	private static final String SPECIFICITY = "spec";
@@ -269,6 +280,10 @@ public class JsonTermIndexIO {
 						fieldname = jp.getCurrentName();
 						if (GROUPING_KEY.equals(fieldname)) 
 							builder.setGroupingKey(jp.nextTextValue());
+						else if (PILOT.equals(fieldname)) 
+							builder.setPilot(jp.nextTextValue());
+						else if (DOCUMENT_FREQUENCY.equals(fieldname)) 
+							builder.setDocumentFrequency(jp.nextIntValue(-1));
 						else if (SPOTTING_RULE.equals(fieldname)) 
 							builder.setSpottingRule(jp.nextTextValue());
 						else if (ID.equals(fieldname))  {
@@ -332,7 +347,7 @@ public class JsonTermIndexIO {
 										Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
 										Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
 										if(occurrenceStore.getStoreType() == OccurrenceStore.Type.MEMORY)
-											builder.addOccurrence(begin, end, termIndex.getDocument(inputSources.get(fileSource)), text);
+											builder.addOccurrence(begin, end, inputSources.get(fileSource), text);
 									} 
 								}
 							// end occurrences
@@ -396,7 +411,7 @@ public class JsonTermIndexIO {
 						throw new IllegalArgumentException("Bad format for input source key: " + id);
 					} 
 				}
-			} else if (TERM_VARIATIONS.equals(fieldname)) {
+			} else if (TERM_VARIATIONS.equals(fieldname) || TERM_RELATIONS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					base = null;
@@ -406,11 +421,11 @@ public class JsonTermIndexIO {
 					variantScore = 0;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
-						if (BASE.equals(fieldname)) 
+						if (BASE.equals(fieldname) || FROM.equals(fieldname)) 
 							base = jp.nextTextValue();
-						else if (VARIANT.equals(fieldname)) 
+						else if (VARIANT.equals(fieldname) || TO.equals(fieldname)) 
 							variant = jp.nextTextValue();
-						else if (VARIANT_TYPE.equals(fieldname)) 
+						else if (RELATION_TYPE.equals(fieldname)) 
 							variantType = jp.nextTextValue();
 						else if (VARIANT_SCORE.equals(fieldname)) {
 							jp.nextToken();
@@ -425,15 +440,15 @@ public class JsonTermIndexIO {
 					v = termIndex.getTermByGroupingKey(variant);
 					if(b != null && v != null) {
 						
-						VariationType vType = VariationType.fromShortName(variantType);
+						RelationType vType = RelationType.fromShortName(variantType);
 						
-						TermVariation tv = new TermVariation(
+						TermRelation tv = new TermRelation(
 								vType, 
 								b, 
 								v, 
-								vType == VariationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
+								vType == RelationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
 						tv.setScore(variantScore);
-						termIndex.addTermVariation(tv);
+						termIndex.addRelation(tv);
 					} else {
 						if(b==null)
 							LOGGER.warn("Could not build variant because term \"{}\" was not found.", base);
@@ -467,7 +482,7 @@ public class JsonTermIndexIO {
 					contextVector.addEntry(coTerm, tempVecEntry.getNbCooccs(), tempVecEntry.getAssocRate());
 				}
 				if(!contextVector.getEntries().isEmpty())
-					term.setContextVector(contextVector);
+					term.setContext(contextVector);
 			}
 		}
 
@@ -513,7 +528,7 @@ public class JsonTermIndexIO {
 		jg.writeFieldName(INPUT_SOURCES);
 		int idCnt = 0;
 		Map<String, Integer> inputSources = Maps.newTreeMap();
-		for(Document d:termIndex.getDocuments())
+		for(Document d:termIndex.getOccurrenceStore().getDocuments())
 			if(!inputSources.containsKey(d.getUrl()))
 				inputSources.put(d.getUrl(), ++idCnt);
 		jg.writeStartObject();
@@ -566,6 +581,10 @@ public class JsonTermIndexIO {
 			jg.writeNumber(t.getRank());
 			jg.writeFieldName(GROUPING_KEY);
 			jg.writeString(t.getGroupingKey());
+			if(t.getPilot() != null) {
+				jg.writeFieldName(PILOT);
+				jg.writeString(t.getPilot());
+			}
 			jg.writeFieldName(WORDS);
 			jg.writeStartArray();
 			for(TermWord tw:t.getWords()) {
@@ -580,6 +599,9 @@ public class JsonTermIndexIO {
 			
 			jg.writeFieldName(FREQUENCY);
 			jg.writeNumber(t.getFrequency());
+			jg.writeFieldName(DOCUMENT_FREQUENCY);
+			jg.writeNumber(t.getDocumentFrequency());
+
 			jg.writeFieldName(FREQ_NORM);
 			jg.writeNumber(t.getFrequencyNorm());
 			jg.writeFieldName(GENERAL_FREQ_NORM);
@@ -592,14 +614,14 @@ public class JsonTermIndexIO {
 			if(options.withOccurrences() && options.isEmbeddedOccurrences()) {
 				jg.writeFieldName(OCCURRENCES);
 				jg.writeStartArray();
-				for(TermOccurrence termOcc:t.getOccurrences()) {
+				for(TermOccurrence termOcc:termIndex.getOccurrenceStore().getOccurrences(t)) {
 					jg.writeStartObject();
 					jg.writeFieldName(BEGIN);
 					jg.writeNumber(termOcc.getBegin());
 					jg.writeFieldName(END);
 					jg.writeNumber(termOcc.getEnd());
 					jg.writeFieldName(TEXT);
-					jg.writeString(termOcc.getCoveredText());
+					jg.writeString(termOcc.getForm().getText());
 					jg.writeFieldName(FILE);
 					jg.writeNumber(inputSources.get(termOcc.getSourceDocument().getUrl()));
 					jg.writeEndObject();
@@ -607,16 +629,16 @@ public class JsonTermIndexIO {
 				jg.writeEndArray();
 			}
 			
-			if(options.isWithContexts() && t.isContextVectorComputed()) {
+			if(options.isWithContexts() && t.getContext() != null) {
 				jg.writeFieldName(CONTEXT);
 				jg.writeStartObject();
 				
 				jg.writeFieldName(TOTAL_COOCCURRENCES);
-				jg.writeNumber(t.getContextVector().getTotalCoccurrences());
+				jg.writeNumber(t.getContext().getTotalCoccurrences());
 				jg.writeFieldName(CO_OCCURRENCES);
 				jg.writeStartArray();
-				if(t.isContextVectorComputed()) {
-					for(ContextVector.Entry contextEntry:t.getContextVector().getEntries()) {
+				if(t.getContext() != null) {
+					for(ContextVector.Entry contextEntry:t.getContext().getEntries()) {
 						jg.writeStartObject();
 						jg.writeFieldName(CO_TERM);
 						jg.writeString(contextEntry.getCoTerm().getGroupingKey());
@@ -636,20 +658,20 @@ public class JsonTermIndexIO {
 		jg.writeEndArray();
 		
 		/* Variants */
-		jg.writeFieldName(TERM_VARIATIONS);
+		jg.writeFieldName(TERM_RELATIONS);
 		jg.writeStartArray();
-		for(TermVariation v:termIndex.getTermVariations().collect(Collectors.toList())) {
+		for(TermRelation relation:termIndex.getRelations().collect(Collectors.toList())) {
 			jg.writeStartObject();
-			jg.writeFieldName(BASE);
-			jg.writeString(v.getBase().getGroupingKey());
-			jg.writeFieldName(VARIANT);
-			jg.writeString(v.getVariant().getGroupingKey());
-			jg.writeFieldName(VARIANT_TYPE);
-			jg.writeString(v.getVariationType().getShortName());
+			jg.writeFieldName(FROM);
+			jg.writeString(relation.getFrom().getGroupingKey());
+			jg.writeFieldName(TO);
+			jg.writeString(relation.getTo().getGroupingKey());
+			jg.writeFieldName(RELATION_TYPE);
+			jg.writeString(relation.getType().getShortName());
 			jg.writeFieldName(INFO);
-			jg.writeString(v.getInfo().toString());
+			jg.writeString(relation.getInfo().toString());
 			jg.writeFieldName(VARIANT_SCORE);
-			jg.writeNumber(v.getScore());
+			jg.writeNumber(relation.getScore());
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();

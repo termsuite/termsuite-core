@@ -10,8 +10,9 @@ import eu.project.ttc.api.Traverser;
 import eu.project.ttc.api.TsvOptions;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
+import eu.project.ttc.utils.TermUtils;
 
 public class TsvExporter {
 	
@@ -57,10 +58,10 @@ public class TsvExporter {
 				tsv.startTerm(termIndex, t, "");
 				
 				if(options.isShowVariants())
-					for(TermVariation tv:termIndex.getOutboundTermVariations(t)) {
+					for(TermRelation tv:TermUtils.getVariations(termIndex, t)) {
 						tsv.addVariant(
 								termIndex, 
-								tv.getVariant(), 
+								tv.getTo(), 
 								String.format("%.2f", tv.getScore()));
 					}
 			}

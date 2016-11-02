@@ -27,7 +27,7 @@ import com.google.common.base.Objects;
 import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.utils.StringUtils;
 import eu.project.ttc.utils.TermUtils;
@@ -36,17 +36,17 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	
 	private static final double THRESHOLD_EXTENSION_GAIN = 0.333333d;
 
-	private TermVariation variation;
+	private TermRelation variation;
 	
 	private ScoredTerm extensionAffix;
 	private boolean extensionAffixSet = false;
 
-	public ScoredVariation(ScoredModel scoredModel, TermVariation tv) {
-		super(scoredModel, tv.getVariant());
+	public ScoredVariation(ScoredModel scoredModel, TermRelation tv) {
+		super(scoredModel, tv.getTo());
 		this.variation = tv;
 	}
 	
-	public TermVariation getTermVariation() {
+	public TermRelation getTermVariation() {
 		return variation;
 	}
 
@@ -74,11 +74,11 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	}
 	
 	public ScoredTerm getVariant() {
-		return this.scoredModel.getAdapter(this.variation.getVariant());
+		return this.scoredModel.getAdapter(this.variation.getTo());
 	}
 
 	public ScoredTerm getBase() {
-		return this.scoredModel.getAdapter(this.variation.getBase());
+		return this.scoredModel.getAdapter(this.variation.getFrom());
 	}
 
 	private static final String LABEL_FORMAT = "S:%2.0f,E:%2.0f(G:%2.0f/WR:%2.0f/O:%2.0f),F:%2.0f,I:%2.0f,V:%2.0f";
@@ -115,7 +115,10 @@ public class ScoredVariation extends ScoredTermOrVariant {
 	}
 
 	public double getStrictnessScore() {
-		return TermUtils.getStrictness(variation.getVariant(), getBase().getTerm());
+		return TermUtils.getStrictness(
+				scoredModel.getTermIndex().getOccurrenceStore(), 
+				variation.getTo(), 
+				getBase().getTerm());
 	}
 
 	

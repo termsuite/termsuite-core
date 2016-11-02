@@ -32,7 +32,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.engines.AbstractTermIndexExporter;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.termino.export.VariationExporter;
 import eu.project.ttc.utils.TermSuiteConstants;
 
@@ -41,7 +41,7 @@ public class VariationExporterAE extends AbstractTermIndexExporter {
 	public static final String VARIATION_TYPES = "VariationTypes";
 	@ConfigurationParameter(name = VARIATION_TYPES, mandatory=true)
 	private String variationTypeStrings;
-	protected List<VariationType> variationTypes;
+	protected List<RelationType> variationTypes;
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
@@ -49,7 +49,7 @@ public class VariationExporterAE extends AbstractTermIndexExporter {
 		List<String> strings = Splitter.on(TermSuiteConstants.COMMA).splitToList(variationTypeStrings);
 		variationTypes = Lists.newArrayList();
 		for(String vType:strings) 
-			variationTypes.add(VariationType.valueOf(vType));
+			variationTypes.add(RelationType.valueOf(vType));
 	}
 	
 	@Override

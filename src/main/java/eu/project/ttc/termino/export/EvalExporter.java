@@ -5,7 +5,7 @@ import java.io.Writer;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermVariation;
+import eu.project.ttc.models.TermRelation;
 
 public class EvalExporter {
 	
@@ -28,8 +28,8 @@ public class EvalExporter {
 		try {
 			for(Term t: termIndex.getTerms()) {
 				if(this.withVariants) {
-					for (TermVariation v : termIndex.getOutboundTermVariations(t))
-							writer.write(v.getVariant().getGroupingKey() + "#");
+					for (TermRelation v : termIndex.getOutboundRelations(t))
+							writer.write(v.getTo().getGroupingKey() + "#");
 				}
 				writer.write(t.getGroupingKey());
 				writer.write("\t");

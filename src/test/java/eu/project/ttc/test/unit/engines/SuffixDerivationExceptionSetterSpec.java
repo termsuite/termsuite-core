@@ -39,8 +39,8 @@ import org.junit.Test;
 import eu.project.ttc.engines.morpho.SuffixDerivationExceptionSetter;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.VariationType;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
@@ -132,10 +132,10 @@ public class SuffixDerivationExceptionSetterSpec {
 
 	@Test
 	public void testProcessCollectionComplete() {
-		assertThat(termIndex.getOutboundTermVariations(this.pays))
+		assertThat(termIndex.getOutboundRelations(this.pays))
 			.hasSize(1)
-			.extracting("variationType", "variant")
-			.contains(tuple(VariationType.DERIVES_INTO, paysVraiDerive));
-		assertThat(termIndex.getOutboundTermVariations(ferme_a)).hasSize(0);
+			.extracting("type", "to")
+			.contains(tuple(RelationType.DERIVES_INTO, paysVraiDerive));
+		assertThat(termIndex.getOutboundRelations(ferme_a)).hasSize(0);
 	}
 }

@@ -38,9 +38,9 @@ import org.junit.Test;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermVariation;
-import eu.project.ttc.models.VariationType;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.Word;
 
 public class GermanWindEnergySpec extends WindEnergySpec {
@@ -255,7 +255,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingObject("M-S-(N|A)N")
-			.extracting("base.groupingKey", "variant.groupingKey")
+			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: windatlas", "an: wind atlas"),
 				   tuple("n: gesamtstrom", "an: gesamt strom"),
@@ -264,7 +264,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
-		List<TermVariation> msnanVars = termIndex.getTermVariations().filter(tv -> tv.getInfo().equals("M-S-(N|A)N")).collect(Collectors.toList());
+		List<TermRelation> msnanVars = termIndex.getRelations().filter(tv -> tv.getInfo().equals("M-S-(N|A)N")).collect(Collectors.toList());
 		// TODO investigate why the size varies
 		assertTrue("Expected size between 80 and 83, but got: " + msnanVars.size(), msnanVars.size() <= 83 && msnanVars.size() >= 80
 				);
@@ -275,8 +275,8 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("an: staatlich umweltamt", VariationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", "S-Eg-AN-A")
-			.containsVariation("acan: topographisch und meteorologisch verhältnis", VariationType.SYNTACTICAL, "an: topographisch verhältnis", "S-I-AN-CA")
+			.containsVariation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", "S-Eg-AN-A")
+			.containsVariation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", "S-I-AN-CA")
 			;
 	}
 
@@ -294,7 +294,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testPrefixes() {
 		assertThat(termIndex)
-			.asTermVariations(VariationType.IS_PREFIX_OF)
+			.asTermVariations(RelationType.IS_PREFIX_OF)
 			.hasSize(962)
 			;
 	}
@@ -302,7 +302,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testDerivations() {
 		assertThat(termIndex)
-			.asTermVariations(VariationType.DERIVES_INTO)
+			.asTermVariations(RelationType.DERIVES_INTO)
 			.hasSize(0);
 	}
 
