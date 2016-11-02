@@ -59,7 +59,7 @@ import eu.project.ttc.engines.ContextualizerAE;
 import eu.project.ttc.engines.DocumentFrequencySetterAE;
 import eu.project.ttc.engines.DocumentLogger;
 import eu.project.ttc.engines.EvalEngine;
-import eu.project.ttc.engines.ExtensionDetecter;
+import eu.project.ttc.engines.ExtensionDetecterAE;
 import eu.project.ttc.engines.FixedExpressionSpotter;
 import eu.project.ttc.engines.FixedExpressionTermMarker;
 import eu.project.ttc.engines.GraphicalVariantGatherer;
@@ -1969,7 +1969,7 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aeExtensionDetector()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ExtensionDetecter.class
+					ExtensionDetecterAE.class
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
