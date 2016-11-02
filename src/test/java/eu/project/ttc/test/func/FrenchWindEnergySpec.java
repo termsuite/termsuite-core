@@ -185,7 +185,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasFrequency(308);
 		
 		assertThat(termIndex)
-			.hasNBases(term, 0)
+			.hasNBases(term, 2)
 			.hasNVariationsOfType(term, 24, RelationType.SYNTACTICAL)
 			.getVariations(term)
 			.extracting("to.groupingKey", "info", "to.frequency")

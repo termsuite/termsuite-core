@@ -76,7 +76,7 @@ public class ScoredTerm extends ScoredTermOrVariant {
 		if(independance == -1) {
 			OccurrenceStore occStore = scoredModel.getTermIndex().getOccurrenceStore();
 			Collection<TermOccurrence> occs = Lists.newLinkedList(occStore.getOccurrences(getTerm()));
-			for(TermRelation tv:scoredModel.getTermIndex().getOutboundRelations(getTerm())) {
+			for(TermRelation tv:TermUtils.getVariations(scoredModel.getTermIndex(),getTerm())) {
 				TermOccurrenceUtils.removeOverlaps(occStore.getOccurrences(tv.getTo()), occs);
 			}
 			for(Term extension:TermUtils.getExtensions(scoredModel.getTermIndex(), getTerm())) {

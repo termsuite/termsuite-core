@@ -105,7 +105,7 @@ public interface TermIndex {
 	 * @param types
 	 * @return
 	 */
-	public Collection<TermRelation> getInboundTerRelat(Term fromTerm, RelationType... types);
+	public Collection<TermRelation> getInboundTermRelations(Term fromTerm, RelationType... types);
 	public TermRelation addRelation(Term from, Term to, RelationType type, Object info);
 	public void addRelation(TermRelation relation);
 	public void removeRelation(TermRelation relation);

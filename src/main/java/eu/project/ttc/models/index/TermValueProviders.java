@@ -79,6 +79,18 @@ public class TermValueProviders {
 		};
 	};
 
+	public static final TermValueProvider WORD_SWT_GROUPING_KEYS_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
+		@Override
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			List<String> swtGroupingKeys = Lists.newArrayListWithCapacity(term.getWords().size());
+			for(TermWord tw:term.getWords()) {
+				if(termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(tw)) != null) 
+					swtGroupingKeys.add(tw.toGroupingKey());
+			}
+			return swtGroupingKeys;
+		}
+	};
+
 	public static final TermValueProvider WORD_LEMMA_IF_SWT_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
 		@Override
 		public Collection<String> getClasses(TermIndex termIndex, Term term) {
@@ -199,6 +211,7 @@ public class TermValueProviders {
 	static {
 		valueProviders.put(TermIndexes.SINGLE_WORD_LEMMA, TERM_SINGLE_WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
+		valueProviders.put(TermIndexes.SWT_GROUPING_KEYS, WORD_SWT_GROUPING_KEYS_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_LEMMA, WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);

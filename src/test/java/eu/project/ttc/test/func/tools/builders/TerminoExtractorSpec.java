@@ -14,6 +14,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.api.Document;
 import eu.project.ttc.api.TerminoExtractor;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.FunctionalTests;
 
@@ -31,7 +32,7 @@ public class TerminoExtractorSpec {
 		documents = Lists.newArrayList();
 		document1 = new Document(lang, "url1", "L'énergie éolienne est l'énergie de demain.");
 		documents.add(document1);
-		document2 = new Document(lang, "url2", "Une éolienne produit de l'énergie.");
+		document2 = new Document(lang, "url2", "Une éolienne donne de l'énergie.");
 		documents.add(document2);
 	}
 
@@ -70,9 +71,13 @@ public class TerminoExtractorSpec {
 
 
 	private void assertTermIndex(TermIndex termIndex) {
+		
 		assertThat(termIndex)
-			.hasSize(7)
-			.containsTerm("n: énergie", 4);
+			.hasSize(3)
+			.containsTerm("na: énergie éolien", 2)
+			.containsTerm("npn: énergie du futur", 1)
+			.containsTerm("npn: énergie de demain", 1)
+			;
 	}
 
 	@Test
@@ -82,8 +87,12 @@ public class TerminoExtractorSpec {
 			.execute();
 		
 		assertThat(termIndex)
-			.hasSize(7)
-			.containsTerm("n: énergie", 3);
+			.hasSize(4)
+			.containsTerm("n: éolienne", 1)
+			.containsTerm("n: énergie", 3)
+			.containsTerm("na: énergie éolien", 1)
+			.containsTerm("npn: énergie de demain", 1)
+			;
 	}
 
 }

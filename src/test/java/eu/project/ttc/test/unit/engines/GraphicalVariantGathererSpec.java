@@ -120,7 +120,7 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testCaseInsensitive() throws  Exception {
 		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
-		assertThat(termIndex.getInboundTerRelat(this.abcdefghijkl)).hasSize(1)
+		assertThat(termIndex.getInboundTermRelations(this.abcdefghijkl)).hasSize(1)
 		.extracting("from")
 		.contains(this.abcdefghijklCapped);
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijkl)).hasSize(1);
@@ -129,7 +129,7 @@ public class GraphicalVariantGathererSpec {
 			.hasSize(1)
 			.extracting("to")
 			.contains(this.abcdefghijkl);
-		assertThat(termIndex.getInboundTerRelat(this.abcdefghijklCapped)).hasSize(1);
+		assertThat(termIndex.getInboundTermRelations(this.abcdefghijklCapped)).hasSize(1);
 	}
 
 

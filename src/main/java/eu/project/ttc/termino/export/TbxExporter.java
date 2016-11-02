@@ -191,7 +191,7 @@ public class TbxExporter {
 		langSet.setAttribute("xml:lang", this.termIndex.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (TermRelation variation : termIndex.getInboundTerRelat(term)) 
+		for (TermRelation variation : termIndex.getInboundTermRelations(term)) 
 			this.addTermBase(langSet, variation.getFrom().getGroupingKey(), null);
 
 		for (TermRelation variation : termIndex.getOutboundRelations(term)) {

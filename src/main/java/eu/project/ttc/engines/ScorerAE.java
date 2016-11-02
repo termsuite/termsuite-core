@@ -134,7 +134,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 				 */
 				termVariation.setScore(sv.getVariationScore());
 
-				List<TermRelation> toRem = Lists.newArrayList(termIndex.getInboundTerRelat(termVariation.getTo()));
+				List<TermRelation> toRem = Lists.newArrayList(termIndex.getInboundTermRelations(termVariation.getTo()));
 				for(TermRelation tv:toRem)
 					termIndex.removeRelation(tv);
 

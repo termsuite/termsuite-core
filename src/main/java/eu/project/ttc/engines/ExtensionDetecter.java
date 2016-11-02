@@ -29,10 +29,35 @@ public class ExtensionDetecter {
 	
 	
 	public void detectExtensions(TermIndex termIndex) {
-		
+		LOGGER.info("Detecting extensions on term index {}", termIndex.getName());
 		if(termIndex.getTerms().isEmpty())
 			return;
 
+		setSize1Extensions(termIndex);
+		setSize2Extensions(termIndex);
+	}
+
+	public void setSize1Extensions(TermIndex termIndex) {
+		CustomTermIndex swtIndex = termIndex.createCustomIndex(
+				TermIndexes.SWT_GROUPING_KEYS,
+				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
+		
+		for (String swtGroupingKey : swtIndex.keySet()) {
+			Term swt = termIndex.getTermByGroupingKey(swtGroupingKey);
+			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
+				if(swt.equals(term))
+					continue;
+				else
+					termIndex.addRelation(swt, term, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
+			}
+		}
+		
+		
+		termIndex.dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
+		
+	}
+
+	public void setSize2Extensions(TermIndex termIndex) {
 		String gatheringKey = TermIndexes.WORD_COUPLE_LEMMA_LEMMA;
 		CustomTermIndex customIndex = termIndex.createCustomIndex(
 				gatheringKey,
@@ -65,10 +90,8 @@ public class ExtensionDetecter {
 				}
 			}
 		}
-		
 		//finalize
 		termIndex.dropCustomIndex(gatheringKey);
-
 	}
 
 	private void watch(Term t1, Term t2) {

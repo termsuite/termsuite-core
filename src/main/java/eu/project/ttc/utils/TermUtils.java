@@ -448,4 +448,13 @@ public class TermUtils {
 				RelationType.DERIVES_INTO,
 				RelationType.IS_PREFIX_OF);
 	}
+
+	public static Collection<TermRelation> getBases(TermIndex termIndex, Term current) {
+		return termIndex.getInboundTermRelations(current,
+				RelationType.SYNTACTICAL, 
+				RelationType.MORPHOLOGICAL,
+				RelationType.GRAPHICAL,
+				RelationType.DERIVES_INTO,
+				RelationType.IS_PREFIX_OF);
+	}
 }

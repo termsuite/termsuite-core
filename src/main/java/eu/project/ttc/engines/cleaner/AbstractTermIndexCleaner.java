@@ -42,6 +42,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.utils.TermUtils;
 
 /**
  * 
@@ -133,7 +134,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 				current = it.next();
 				// checks that this is no variant of a kept term
 				currentBases = Sets.newHashSet();
-				for(TermRelation v:termIndexResource.getTermIndex().getInboundTerRelat(current)) 
+				for(TermRelation v:TermUtils.getBases(termIndexResource.getTermIndex(), current)) 
 					currentBases.add(v.getFrom());
 
 				for(Term v:currentBases) {	

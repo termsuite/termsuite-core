@@ -473,7 +473,7 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public Collection<TermRelation> getInboundTerRelat(Term variant, RelationType... types) {
+	public Collection<TermRelation> getInboundTermRelations(Term variant, RelationType... types) {
 		if(types.length == 0)
 			return this.inboundVariations.get(variant);
 		else {

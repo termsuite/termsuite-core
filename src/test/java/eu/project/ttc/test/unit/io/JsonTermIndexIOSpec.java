@@ -151,7 +151,7 @@ public class JsonTermIndexIOSpec {
 			Term t2 = termIndex2.getTermByGroupingKey(t.getGroupingKey());
 			assertThat(termIndex2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(termIndex.getOccurrenceStore().getOccurrences(t));
 			assertThat(termIndex2.getOutboundRelations(t2)).hasSameElementsAs(termIndex.getOutboundRelations(t));
-			assertThat(termIndex2.getInboundTerRelat(t2)).hasSameElementsAs(termIndex.getInboundTerRelat(t));
+			assertThat(termIndex2.getInboundTermRelations(t2)).hasSameElementsAs(termIndex.getInboundTermRelations(t));
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
 			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
@@ -227,7 +227,7 @@ public class JsonTermIndexIOSpec {
 		assertThat(t1.getFrequency()).isEqualTo(6);
 		assertThat(termIndex.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("to").containsOnly(t2);
 		assertThat(termIndex.getOutboundRelations(t1, RelationType.SYNTACTICAL)).hasSize(0);
-		assertThat(termIndex.getInboundTerRelat(t1))
+		assertThat(termIndex.getInboundTermRelations(t1))
 			.hasSize(2)
 			.extracting("from")
 			.containsOnly(t2, t3);	

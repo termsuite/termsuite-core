@@ -200,7 +200,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 
 	public TermIndexAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, RelationType... vTypes) {
 		isNotNull();
-		int actualSize = actual.getInboundTerRelat(variant, vTypes).size();
+		int actualSize = actual.getInboundTermRelations(variant, vTypes).size();
 		if (actualSize < atLeastN)
 			failWithMessage("Expected to find at least <%s> bases <%s> for term <%s>, but actually found <%s>",
 					atLeastN,
@@ -218,15 +218,15 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBases(Term variant) {
-		return assertThat(actual.getInboundTerRelat(variant));
+		return assertThat(actual.getInboundTermRelations(variant));
 	}
 	
 	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBasesOfType(Term variant, RelationType... types) {
-		return assertThat(actual.getInboundTerRelat(variant, types));
+		return assertThat(actual.getInboundTermRelations(variant, types));
 	}
 
 	public TermIndexAssert hasNBases(Term variant, int expectedNumberOfBases) {
-		Collection<TermRelation> bases = actual.getInboundTerRelat(variant);
+		Collection<TermRelation> bases = actual.getInboundTermRelations(variant);
 		if(bases.size() != expectedNumberOfBases)
 			failWithMessage("Expected <%s> bases but got <%s> (<%s>)", 
 					expectedNumberOfBases,
