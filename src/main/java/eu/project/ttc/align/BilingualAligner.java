@@ -36,6 +36,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
+import com.google.common.base.Stopwatch;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -44,6 +45,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
+import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.metrics.ExplainedValue;
 import eu.project.ttc.metrics.Levenshtein;
@@ -52,6 +54,7 @@ import eu.project.ttc.metrics.TextExplanation;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.Word;
@@ -687,6 +690,8 @@ public class BilingualAligner {
 	
 	private Collection<TranslationCandidate> combineMWTCandidates(Collection<TranslationCandidate> candidates1,
 			Collection<TranslationCandidate> candidates2, Object sourceTerm) {
+		ensureHasExtensionRelationsComputred(targetTermino);
+		
 		Collection<TranslationCandidate> combinations = Sets.newHashSet();
 		for(TranslationCandidate candidate1:candidates1) {
 			Collection<Term> extensions1 = TermUtils.getExtensions(targetTermino, candidate1.getTerm());
@@ -711,6 +716,22 @@ public class BilingualAligner {
 		return combinations;
 	}
 
+
+	private boolean ensuredExtensionsAreComputed = false;
+	private void ensureHasExtensionRelationsComputred(TermIndex termIndex) {
+		if(!ensuredExtensionsAreComputed) {
+			if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
+				Stopwatch sw = Stopwatch.createStarted();
+				new ExtensionDetecter().detectExtensions(termIndex);
+				sw.stop();
+				LOGGER.info("Term extensions detected in {} [{} terms, {} HAS_EXTENSION relations found]", 
+						sw, 
+						termIndex.getTerms().size(),
+						termIndex.getRelations(RelationType.HAS_EXTENSION).count());
+			}
+			ensuredExtensionsAreComputed = true;
+		}
+	}
 
 	private AlignmentMethod getCombinedMethod(TranslationCandidate candidate1, TranslationCandidate candidate2) {
 		if(candidate1.getMethod() == AlignmentMethod.DISTRIBUTIONAL || candidate1.getMethod() == AlignmentMethod.SEMI_DISTRIBUTIONAL)

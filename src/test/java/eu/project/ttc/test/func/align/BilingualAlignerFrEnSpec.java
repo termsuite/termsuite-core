@@ -66,11 +66,10 @@ public class BilingualAlignerFrEnSpec {
 		
 		List<TranslationCandidate> results = aligner.align(t1, 3, 2);
 		assertThat(results)
-			.hasSize(3)
+			.hasSize(1)
 			.extracting("term.groupingKey", "method")
 			.contains(
-				tuple("npnn: production of electric power", AlignmentMethod.COMPOSITIONAL),
-				tuple("nnn: electrical energy production", AlignmentMethod.COMPOSITIONAL)
+				tuple("npan: production of electric power", AlignmentMethod.COMPOSITIONAL)
 			);
 	}
 
