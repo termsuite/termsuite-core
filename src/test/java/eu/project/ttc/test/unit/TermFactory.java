@@ -38,6 +38,7 @@ import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.Word;
 
 public class TermFactory {
@@ -105,11 +106,16 @@ public class TermFactory {
 	}
 	
 	public static Term termMock(String groupingKey, int freq, int rank, double specificity) {
-		Term term = Mockito.mock(Term.class);
-		Mockito.when(term.getGroupingKey()).thenReturn(groupingKey);
-		Mockito.when(term.getFrequency()).thenReturn(freq);
-		Mockito.when(term.getRank()).thenReturn(rank);
-		Mockito.when(term.getSpecificity()).thenReturn(specificity);
+		Term term = TermBuilder.start()
+						.setGroupingKey(groupingKey, true)
+						.setFrequency(freq)
+						.setRank(rank)
+						.setSpecificity(specificity)
+						.create();
 		return term;
+	}
+
+	public void setProperty(TermProperty p, Comparable<?> value) {
+		this.termIndex.getTerms().stream().forEach(t-> t.setProperty(p, value));
 	}
 }

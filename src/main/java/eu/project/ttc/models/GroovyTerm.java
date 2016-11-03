@@ -44,10 +44,10 @@ public class GroovyTerm {
 		
 		this.compound = term.isCompound();
 		this.isSingleWord = term.isSingleWord();
-		this.neoclassical = term.isCompound() && term.firstWord().getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
+		this.neoclassical = term.isCompound() && term.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
 		this.pattern = term.getPattern();
 		this.lemma = term.getGroupingKey();
-		this.stem = term.firstWord().getWord().getStem();
+		this.stem = term.getWords().get(0).getWord().getStem();
 		List<GroovyWord> aux = Lists.newArrayListWithCapacity(term.getWords().size());
 		
 		for(TermWord w:term.getWords()) 

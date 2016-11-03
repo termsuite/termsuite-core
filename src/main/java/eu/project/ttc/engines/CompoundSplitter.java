@@ -75,7 +75,7 @@ public class CompoundSplitter extends JCasAnnotator_ImplBase {
 
 		Iterator<Term> it = this.termIndexResource.getTermIndex().singleWordTermIterator();
 		while (it.hasNext()) {
-			Word word = it.next().firstWord().getWord();
+			Word word = it.next().getWords().get(0).getWord();
 			if(word.isCompound())
 				continue;
 			int index = word.getLemma().indexOf(TermSuiteConstants.COMPOUND_CHAR);

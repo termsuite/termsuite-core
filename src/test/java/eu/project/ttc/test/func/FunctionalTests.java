@@ -37,10 +37,10 @@ import org.junit.runners.Suite;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.test.func.align.BilingualAlignerDeEnSpec;
 import eu.project.ttc.test.func.align.BilingualAlignerFrEnSpec;
 import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;

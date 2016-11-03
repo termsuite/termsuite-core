@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package eu.project.ttc.engines.cleaner;
+package eu.project.ttc.models;
 
 import java.util.Comparator;
 import java.util.Map;
@@ -27,8 +27,6 @@ import java.util.Map;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Maps;
-
-import eu.project.ttc.models.Term;
 
 /**
  * 
@@ -38,19 +36,20 @@ import eu.project.ttc.models.Term;
  * @author Damien Cram
  *
  */
-public enum TermProperty {
-	RANK("rank", "#", Integer.class),
-	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", Integer.class),
-	FREQUENCY_NORM("frequencyNorm", "fnorm", Double.class),
-	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", Double.class),
-	SPECIFICITY("specificity", "sp", Double.class),
-	FREQUENCY("frequency", "f", Integer.class),
-	PILOT("pilot", "pilot", String.class),
-	LEMMA("lemma", "lm", String.class),
-	TF_IDF("tf-idf", "tfidf", Double.class),
-	GROUPING_KEY("groupingKey", "gkey", String.class),
-	PATTERN("pattern", "p", String.class),
-	SPOTTING_RULE("spottingRule", "rule", String.class),
+public enum TermProperty implements Property<Term> {
+	RANK("rank", "#", "rank", Integer.class),
+	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", "dfreq", Integer.class),
+	FREQUENCY_NORM("frequencyNorm", "fnorm", "f_norm", Double.class),
+	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class),
+	SPECIFICITY("specificity", "sp", "spec", Double.class),
+	FREQUENCY("frequency", "f", "freq", Integer.class),
+	PILOT("pilot", "pilot", "pilot", String.class),
+	LEMMA("lemma", "lm", "lemma", String.class),
+	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class),
+	GROUPING_KEY("groupingKey", "gkey", "key", String.class),
+	PATTERN("pattern", "p", "pattern", String.class),
+	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 
+	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class),
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -70,26 +69,27 @@ public enum TermProperty {
 	
 	private String propertyName;
 	private String propertyShortName;
+	private String jsonField;
 	private Class<?> range;
 
-	private TermProperty(String propertyName, String propertyShortName, Class<?> range) {
+	private TermProperty(String propertyName, String propertyShortName, String propertyJsonName, Class<?> range) {
 		this.propertyName = propertyName;
 		this.propertyShortName = propertyShortName;
+		this.jsonField = propertyJsonName;
 		this.range = range;
 	}
 	
+	@Override
 	public Class<?> getRange() {
 		return range;
 	}
 	
+	@Override
 	public boolean isDecimalNumber() {
 		return getRange().equals(Double.class) || getRange().equals(Float.class);
 	}
 	
-	public boolean isNumber() {
-		return Number.class.isAssignableFrom(getRange());
-	}
-
+	@Override
 	public String getPropertyName() {
 		return propertyName;
 	}
@@ -103,59 +103,15 @@ public enum TermProperty {
 		};
 	}
 	
+	@Override
 	public int compare(Term o1, Term o2) {
-		return ComparisonChain.start().compare(getValue(o1), getValue(o2)).result();
+		return ComparisonChain.start()
+				.compare(
+						o1.getPropertyValueUnchecked(this), 
+						o2.getPropertyValueUnchecked(this))
+				.result();
 	}
 		
-
-	public double getDoubleValue(Term t) {
-		switch(this) {
-		case DOCUMENT_FREQUENCY:
-			return t.getDocumentFrequency();
-		case FREQUENCY:
-			return t.getFrequency();
-		case TF_IDF:
-			return t.getTfIdf();
-		case SPECIFICITY:
-			return t.getSpecificity();
-		case GENERAL_FREQUENCY_NORM:
-			return t.getGeneralFrequencyNorm();
-		case FREQUENCY_NORM:
-			return t.getFrequencyNorm();
-		default:
-			throw new UnsupportedOperationException("No double value for property: " + this);
-		}
-	}
-
-	public Comparable<?> getValue(Term t) {
-		switch(this) {
-		case PILOT:
-			return t.getPilot();
-		case DOCUMENT_FREQUENCY:
-			return t.getDocumentFrequency();
-		case RANK:
-			return t.getRank();
-		case SPECIFICITY:
-			return t.getSpecificity();
-		case FREQUENCY:
-			return t.getFrequency();
-		case TF_IDF:
-			return t.getTfIdf();
-		case LEMMA:
-			return t.getLemma();
-		case GENERAL_FREQUENCY_NORM:
-			return t.getGeneralFrequencyNorm();
-		case FREQUENCY_NORM:
-			return t.getFrequencyNorm();
-		case GROUPING_KEY:
-			return t.getGroupingKey();
-		case PATTERN:
-			return t.getPattern();
-		case SPOTTING_RULE:
-			return t.getSpottingRule();
-		}
-		throw new IllegalStateException("Unexpected property: " + this);
-	}
 
 	public static TermProperty forName(String name) {
 		TermProperty termProperty = byNames.get(name);
@@ -171,7 +127,20 @@ public enum TermProperty {
 		);
 	}
 
+	@Override
 	public String getShortName() {
 		return propertyShortName;
+	}
+
+	@Override
+	public boolean isNumeric() {
+		return range.equals(Integer.class)
+				|| range.equals(Double.class)
+				|| range.equals(Float.class)
+				;
+	}
+
+	public String getJsonField() {
+		return jsonField;
 	}
 }

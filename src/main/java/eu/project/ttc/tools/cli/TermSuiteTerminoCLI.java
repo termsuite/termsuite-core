@@ -69,11 +69,11 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.utils.FileUtils;

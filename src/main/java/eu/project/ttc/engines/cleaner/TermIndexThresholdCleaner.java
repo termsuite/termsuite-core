@@ -40,7 +40,14 @@ public class TermIndexThresholdCleaner extends AbstractTermIndexCleaner {
 	private float threshold;
 	
 	protected boolean acceptTerm(Term term) {
-		return property.getDoubleValue(term) >= this.threshold;
+		if(property.getRange().equals(Double.class))
+			return term.getPropertyDoubleValue(property) >= threshold;
+		else if(property.getRange().equals(Integer.class))
+			return term.getPropertyIntegerValue(property) >= threshold;
+		else if(property.getRange().equals(Float.class))
+			return term.getPropertyFloatValue(property) >= threshold;
+		else 
+			throw new IllegalStateException("Should never happen since this has been checked at AE init");
 	}
 
 	@Override

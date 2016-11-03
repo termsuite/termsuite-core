@@ -25,11 +25,11 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.api.internal.FileSystemUtils;

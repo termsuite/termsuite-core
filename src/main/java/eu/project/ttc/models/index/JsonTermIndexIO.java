@@ -53,6 +53,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermOccurrence;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
@@ -80,7 +81,31 @@ public class JsonTermIndexIO {
 	/*
 	 * Json properties
 	 */
-	private static final String WORDS = "words";
+	
+	/*
+	 * Term data model
+	 */
+	private static final String TERM_WORDS = "words";
+	private static final String TERM_OCCURRENCES = "occurrences";
+	private static final String TERM_CONTEXT = "context";
+	
+	/*
+	 * Term properties
+	 */
+	private static final String TERM_GROUPING_KEY = "key";
+	private static final String TERM_PILOT = "pilot";
+	private static final String TERM_DOCUMENT_FREQUENCY = "dfreq";
+	private static final String TERM_FREQUENCY = "freq";
+	private static final String TERM_SPOTTING_RULE = "rule";
+	private static final String TERM_RANK = "rank";
+	private static final String TERM_SPECIFICITY = "spec";
+	private static final String TERM_FREQ_NORM = "f_norm";
+	private static final String TERM_GENERAL_FREQ_NORM = "gf_norm";
+
+	
+	@Deprecated
+	private static final String TERM_VARIATIONS = "variations";
+	private static final String TERM_RELATIONS = "relations";
 	private static final String METADATA = "metadata";
 	private static final String LANG = "lang";
 	private static final String NAME = "name";
@@ -94,15 +119,7 @@ public class JsonTermIndexIO {
 	private static final String END = "end";
 	private static final String TERMS = "terms";
 	private static final String ID = "id";
-	private static final String GROUPING_KEY = "key";
-	private static final String PILOT = "pilot";
-	private static final String DOCUMENT_FREQUENCY = "dfreq";
 	private static final String SYN = "syn";
-	private static final String FREQUENCY = "freq";
-	private static final String SPOTTING_RULE = "rule";
-	@Deprecated
-	private static final String TERM_VARIATIONS = "variations";
-	private static final String TERM_RELATIONS = "relations";
 	private static final String RELATION_TYPE = "type";
 	private static final String INFO = "info";
 	
@@ -115,15 +132,10 @@ public class JsonTermIndexIO {
 	private static final String TO = "to";
 
 	private static final String VARIANT_SCORE = "vscore";
-	private static final String RANK = "rank";
-	private static final String SPECIFICITY = "spec";
 
-//	private static final String RULE = "rule";
-	private static final String FILE = "file";
-	private static final String OCCURRENCES = "occurrences";
 	private static final String TEXT = "text";
 	private static final String INPUT_SOURCES = "input_sources";
-	private static final String CONTEXT = "context";
+	private static final String FILE = "file";
 	private static final String CO_OCCURRENCES = "cooccs";
 	private static final String NB_COCCS = "cnt";
 	private static final String ASSOC_RATE = "assoc_rate";
@@ -132,8 +144,6 @@ public class JsonTermIndexIO {
 	private static final String OCCURRENCE_STORAGE = "occurrence_storage";
 	private static final String OCCURRENCE_MONGODB_STORE_URI = "occurrence_store_mongodb_uri";
 
-	private static final String FREQ_NORM = "f_norm";
-	private static final String GENERAL_FREQ_NORM = "gf_norm";
 	private static final String NB_WORD_ANNOTATIONS = "wordsNum";
 	private static final String NB_SPOTTED_TERMS = "spottedTermsNum";
 	
@@ -177,7 +187,7 @@ public class JsonTermIndexIO {
 		Map<Integer, String> inputSources = Maps.newTreeMap();
 		
 		
-		Map<Integer, List<TempVecEntry>> contextVectors = Maps.newHashMap();
+		Map<String, List<TempVecEntry>> contextVectors = Maps.newHashMap();
 		
 		
 		OccurrenceStore occurrenceStore = null;
@@ -234,7 +244,7 @@ public class JsonTermIndexIO {
 				if(options.isMetadataOnly())
 					return termIndex;
 
-			} else if (WORDS.equals(fieldname)) {
+			} else if (TERM_WORDS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					WordBuilder wordBuilder = WordBuilder.start();
@@ -275,35 +285,35 @@ public class JsonTermIndexIO {
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) { 
 					TermBuilder builder = TermBuilder.start(termIndex);
 					List<TempVecEntry> currentContextVector = Lists.newArrayList();
-					int currentTermId = -1;
+					String currentGroupingKey = null;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
-						if (GROUPING_KEY.equals(fieldname)) 
-							builder.setGroupingKey(jp.nextTextValue());
-						else if (PILOT.equals(fieldname)) 
+						if (TERM_GROUPING_KEY.equals(fieldname)) {
+							currentGroupingKey = jp.nextTextValue();
+							builder.setGroupingKey(currentGroupingKey);
+						} else if (TERM_PILOT.equals(fieldname)) 
 							builder.setPilot(jp.nextTextValue());
-						else if (DOCUMENT_FREQUENCY.equals(fieldname)) 
+						else if (TERM_DOCUMENT_FREQUENCY.equals(fieldname)) 
 							builder.setDocumentFrequency(jp.nextIntValue(-1));
-						else if (SPOTTING_RULE.equals(fieldname)) 
+						else if (TERM_SPOTTING_RULE.equals(fieldname)) 
 							builder.setSpottingRule(jp.nextTextValue());
 						else if (ID.equals(fieldname))  {
-							currentTermId = jp.nextIntValue(-2);
-							builder.setId(currentTermId);
-						} else if (RANK.equals(fieldname)) {
+							// term ids are deprecated
+						} else if (TERM_RANK.equals(fieldname)) {
 							builder.setRank(jp.nextIntValue(-1));
-						} else if (FREQUENCY.equals(fieldname)) {
+						} else if (TERM_FREQUENCY.equals(fieldname)) {
 							builder.setFrequency(jp.nextIntValue(-1));
 						} else {
-							if (FREQ_NORM.equals(fieldname)) {
+							if (TERM_FREQ_NORM.equals(fieldname)) {
 								jp.nextToken();
 								builder.setFrequencyNorm((double)jp.getFloatValue());
-							} else if (SPECIFICITY.equals(fieldname))  {
+							} else if (TERM_SPECIFICITY.equals(fieldname))  {
 								jp.nextToken();
 								builder.setSpecificity((double)jp.getDoubleValue());
-							} else if (GENERAL_FREQ_NORM.equals(fieldname))  {
+							} else if (TERM_GENERAL_FREQ_NORM.equals(fieldname))  {
 								jp.nextToken();
 								builder.setGeneralFrequencyNorm((double)jp.getFloatValue());
-							} else if (WORDS.equals(fieldname)) {
+							} else if (TERM_WORDS.equals(fieldname)) {
 								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 									wordLemma = null;
 									syntacticLabel = null;
@@ -319,7 +329,7 @@ public class JsonTermIndexIO {
 									builder.addWord(termIndex.getWord(wordLemma), syntacticLabel);
 								}// end words
 								
-							} else if (OCCURRENCES.equals(fieldname)) {
+							} else if (TERM_OCCURRENCES.equals(fieldname)) {
 								tok = jp.nextToken();
 								if(tok == JsonToken.START_ARRAY) {
 									
@@ -351,7 +361,7 @@ public class JsonTermIndexIO {
 									} 
 								}
 							// end occurrences
-							} else if (CONTEXT.equals(fieldname)) {
+							} else if (TERM_CONTEXT.equals(fieldname)) {
 								@SuppressWarnings("unused")
 								int totalCooccs = 0;
 								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
@@ -391,12 +401,12 @@ public class JsonTermIndexIO {
 					try {
 						builder.createAndAddToIndex();
 					} catch(Exception e) {
-						LOGGER.error("Could not add term "+builder.getGroupingKey()+" to term index",e);
+						LOGGER.error("Could not add term "+currentGroupingKey+" to term index",e);
 						LOGGER.warn("Error ignored, trying ton continue the loading of TermIndex");
 					}
 
 					if(options.isWithContexts())
-						contextVectors.put(currentTermId, currentContextVector);
+						contextVectors.put(currentGroupingKey, currentContextVector);
 
 				}// end array of terms
 				
@@ -473,9 +483,9 @@ public class JsonTermIndexIO {
 			Term term = null;
 			Term coTerm = null;
 			ContextVector contextVector;
-			for(int termId:contextVectors.keySet()) {
-				currentTempVecList = contextVectors.get(termId);
-				term = termIndex.getTermById(termId);
+			for(String groupingKey:contextVectors.keySet()) {
+				currentTempVecList = contextVectors.get(groupingKey);
+				term = termIndex.getTermByGroupingKey(groupingKey);
 				contextVector = new ContextVector(term);
 				for(TempVecEntry tempVecEntry:currentTempVecList) {
 					coTerm = termIndex.getTermByGroupingKey(tempVecEntry.getTermGroupingKey());
@@ -538,7 +548,7 @@ public class JsonTermIndexIO {
 		}
 		jg.writeEndObject();
 		
-		jg.writeFieldName(WORDS);
+		jg.writeFieldName(TERM_WORDS);
 		jg.writeStartArray();
 		for(Word w:termIndex.getWords()) {
 			jg.writeStartObject();
@@ -575,17 +585,18 @@ public class JsonTermIndexIO {
 		jg.writeStartArray();
 		for(Term t:termIndex.getTerms()) {
 			jg.writeStartObject();
-			jg.writeFieldName(ID);
-			jg.writeNumber(t.getId());
-			jg.writeFieldName(RANK);
-			jg.writeNumber(t.getRank());
-			jg.writeFieldName(GROUPING_KEY);
+			
+			Preconditions.checkState(t.isPropertySet(TermProperty.GROUPING_KEY));
+			jg.writeFieldName(TERM_GROUPING_KEY);
 			jg.writeString(t.getGroupingKey());
-			if(t.getPilot() != null) {
-				jg.writeFieldName(PILOT);
-				jg.writeString(t.getPilot());
+			
+			for(TermProperty p:t.getProperties()) {
+				if(p == TermProperty.GROUPING_KEY)
+					continue;
+				jg.writeFieldName(p.getJsonField());
+				jg.writeObject(t.getPropertyValue(p));
 			}
-			jg.writeFieldName(WORDS);
+			jg.writeFieldName(TERM_WORDS);
 			jg.writeStartArray();
 			for(TermWord tw:t.getWords()) {
 				jg.writeStartObject();
@@ -597,22 +608,8 @@ public class JsonTermIndexIO {
 			}
 			jg.writeEndArray();
 			
-			jg.writeFieldName(FREQUENCY);
-			jg.writeNumber(t.getFrequency());
-			jg.writeFieldName(DOCUMENT_FREQUENCY);
-			jg.writeNumber(t.getDocumentFrequency());
-
-			jg.writeFieldName(FREQ_NORM);
-			jg.writeNumber(t.getFrequencyNorm());
-			jg.writeFieldName(GENERAL_FREQ_NORM);
-			jg.writeNumber(t.getGeneralFrequencyNorm());
-			jg.writeFieldName(SPECIFICITY);
-			jg.writeNumber(t.getSpecificity());
-			jg.writeFieldName(SPOTTING_RULE);
-			jg.writeString(t.getSpottingRule());
-			
 			if(options.withOccurrences() && options.isEmbeddedOccurrences()) {
-				jg.writeFieldName(OCCURRENCES);
+				jg.writeFieldName(TERM_OCCURRENCES);
 				jg.writeStartArray();
 				for(TermOccurrence termOcc:termIndex.getOccurrenceStore().getOccurrences(t)) {
 					jg.writeStartObject();
@@ -630,7 +627,7 @@ public class JsonTermIndexIO {
 			}
 			
 			if(options.isWithContexts() && t.getContext() != null) {
-				jg.writeFieldName(CONTEXT);
+				jg.writeFieldName(TERM_CONTEXT);
 				jg.writeStartObject();
 				
 				jg.writeFieldName(TOTAL_COOCCURRENCES);

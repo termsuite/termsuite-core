@@ -23,184 +23,75 @@ package eu.project.ttc.models;
 
 import java.util.List;
 
-import com.google.common.base.Joiner;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.utils.TermSuiteConstants;
 
 
-public class Term implements Comparable<Term> {
+public class Term extends PropertyHolder<TermProperty> implements Comparable<Term> {
 	
 	private ContextVector context;
-	
-	/*
-	 * The identifier and display string of this term
-	 */
-	private String groupingKey;
-
-	/*
-	 * The numerical id in the term index
-	 */
-	private int id;
-	
-	/*
-	 * The most frequent form
-	 */
-	private String pilot;
-	
-	/*
-	 * The term rank
-	 */
-	private int rank;
-
-	
-	private int documentFrequency;
-
-	
-	private double normalizedTermFrequency;
-	
-	private double normalizedGeneralTermFrequency;
-	
-	/*
-	 * The weirdness ratio of this term
-	 */
-	private double specificity;
-	
-	/*
-	 * 
-	 */
-	private double tfIdf;
-
-	/*
-	 * The frequency of this term
-	 */
-	private int frequency = 0;
-	
-	/*
-	 * The syntactic pattern of this term
-	 */
-	private String pattern;
-	
-	/*
-	 * The spotting rule
-	 */
-	private String spottingRule;
-
-	/*
-	 * A flag that is true if this term is a fixed expression
-	 */
-	private boolean fixedExpression = false;
 	
 	/*
 	 * The morphological components of this term
 	 */
 	private List<TermWord> termWords = Lists.newArrayList();
 	
-	Term(int id) {
-		this.id = id;
-	}
-	
-	Term(int id, String termId, List<TermWord> termWords, String spottingRule) {
-		this(id);
-		this.groupingKey = termId;
-		this.spottingRule = spottingRule;
+	Term(String groupingKey, List<TermWord> termWords) {
 		this.termWords = termWords;
+		setProperty(TermProperty.GROUPING_KEY, groupingKey);
 	}
 
-	public void setFrequency(int frequency) {
-		this.frequency = frequency;
+	public ContextVector getContext() {
+		return context;
 	}
 	
-	
-	public void setPattern(String pattern) {
-		this.pattern = pattern;
-	}
-	
-	public void setPilot(String pilot) {
-		this.pilot = pilot;
-	}
-	
-	@Override
-	public int compareTo(Term o) {
-		return ComparisonChain.start()
-				.compare(o.groupingKey.length(), this.groupingKey.length())
-				.compare(o.groupingKey, this.groupingKey)
-				.result();
-	}
-	
-	@Override
-	public int hashCode() {
-		return groupingKey.hashCode();
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof Term) 
-			return this.groupingKey.equals(((Term) obj).groupingKey);
-		else
-			return false;
-	}
-	
-	public void setDocumentFrequency(int documentFrequency) {
-		this.documentFrequency = documentFrequency;
-	}
-	
-	public String getGroupingKey() {
-		return groupingKey;
-	}
-	
-	@Override
-	public String toString() {
-		return this.groupingKey;
-	}
-	
-	public boolean isSingleWord() {
-		return termWords.size() == 1;
-	}
-
-	public boolean isMultiWord() {
-		return termWords.size() > 1;
-	}
-
-	public String getPattern() {
-		if(pattern == null) {
-			List<String> labels = Lists.newArrayListWithCapacity(termWords.size());
-			for(TermWord w:termWords) 
-				labels.add(w.getSyntacticLabel());
-			pattern = Joiner.on(' ').join(labels);
-		}
-		return pattern;
+	public void setContext(ContextVector context) {
+		this.context = context;
 	}
 	
 	public List<TermWord> getWords() {
 		return this.termWords;
 	}
-	
-	public int getFrequency() {
-		return frequency;
+		
+	@Override
+	public int compareTo(Term o) {
+		return ComparisonChain.start()
+				.compare(o.getGroupingKey().length(), this.getGroupingKey().length())
+				.compare(o.getGroupingKey(), this.getGroupingKey())
+				.result();
 	}
 	
-	public TermWord firstWord() {
-		return this.termWords.get(0);
+	@Override
+	public int hashCode() {
+		return getGroupingKey().hashCode();
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Term) 
+			return this.getGroupingKey().equals(((Term) obj).getGroupingKey());
+		else
+			return false;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getGroupingKey();
+	}
+	
+	public boolean isSingleWord() {
+		return termWords.size() == 1;
+	}
+	
+	public boolean isMultiWord() {
+		return termWords.size() > 1;
+	}
+	
 	public boolean isCompound() {
-		return isSingleWord() && firstWord().getWord().isCompound();
+		return isSingleWord() && this.termWords.get(0).getWord().isCompound();
 	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	
-	public String getSpottingRule() {
-		return spottingRule;
-	}
-	
-	public String getPilot() {
-		return this.pilot;
-	}
-	
 	
 	/**
 	 * Returns the concatenation of inner words' lemmas.
@@ -216,86 +107,139 @@ public class Term implements Comparable<Term> {
 		}
 		return builder.toString();
 	}
+
+
+	/* 
+	 * *******************************************************************************
+	 * PROPERTY GETTERS/SETTERS
+	 * *******************************************************************************
+	 */
 	
 
-	public int getDocumentFrequency() {
-		return this.documentFrequency;
+	/*
+	 * GROUPING_KEY
+	 */
+	public String getGroupingKey() {
+		return getPropertyStringValue(TermProperty.GROUPING_KEY);		
 	}
 	
-	public void normalize(CrossTable crossTable) {
-		
+	/*
+	 * DOCUMENT_FREQUENCY
+	 */
+	public Integer getDocumentFrequency() {
+		return getPropertyIntegerValue(TermProperty.DOCUMENT_FREQUENCY);
+	}
+
+	public void setDocumentFrequency(int documentFrequency) {
+		setProperty(TermProperty.DOCUMENT_FREQUENCY, documentFrequency);
 	}
 	
-	public Number getValue() {
-		return 0;
+	/*
+	 * FREQUENCY
+	 */
+	public Integer getFrequency() {
+		return getPropertyIntegerValue(TermProperty.FREQUENCY);		
+	}
+
+	public void setFrequency(int frequency) {
+		setProperty(TermProperty.FREQUENCY, frequency);
 	}
 	
-	public void setFrequencyNorm(double normalizedTermFrequency) {
-		this.normalizedTermFrequency = normalizedTermFrequency;
+	/*
+	 * PATTERN
+	 */
+	public String getPattern() {
+		return getPropertyStringValue(TermProperty.PATTERN);		
+	}
+	
+	public void setPattern(String pattern) {
+		setProperty(TermProperty.PATTERN, pattern);
+	}
+	
+	/*
+	 * PILOT
+	 */
+	public String getPilot() {
+		return getPropertyStringValue(TermProperty.PILOT);
+	}
+	public void setPilot(String pilot) {
+		setProperty(TermProperty.PILOT, pilot);
+	}
+
+	/*
+	 * SPOTTING_RULE
+	 */
+	public String getSpottingRule() {
+		return getPropertyStringValue(TermProperty.SPOTTING_RULE);		
+	}
+
+	public void setSpottingRule(String spottingRule) {
+		setProperty(TermProperty.SPOTTING_RULE, spottingRule);
+	}
+	
+	/*
+	 * GENERAL_FREQUENCY_NORM
+	 */
+	public Double getGeneralFrequencyNorm() {
+		return getPropertyDoubleValue(TermProperty.GENERAL_FREQUENCY_NORM);
 	}
 	
 	public void setGeneralFrequencyNorm(double normalizedGeneralTermFrequency) {
-		this.normalizedGeneralTermFrequency = normalizedGeneralTermFrequency;
+		setProperty(TermProperty.GENERAL_FREQUENCY_NORM, normalizedGeneralTermFrequency);
 	}
 	
-	/**
-	 * The average number of occurrences of this term in the 
-	 * general language corpus for each slice of 1000 words.
-	 * 
-	 * @return
+	/*
+	 * FREQUENCY_NORM
 	 */
-	public double getGeneralFrequencyNorm() {
-		return normalizedGeneralTermFrequency;
+	public Double getFrequencyNorm() {
+		return getPropertyDoubleValue(TermProperty.FREQUENCY_NORM);
 	}
 	
-	/**
-	 * The average number of occurrences of this term in the 
-	 * corpus for each slice of 1000 words.
-	 * 
-	 * @return
+	public void setFrequencyNorm(double normalizedTermFrequency) {
+		setProperty(TermProperty.FREQUENCY_NORM, normalizedTermFrequency);
+	}
+	
+	/*
+	 * RANK
 	 */
-	public double getFrequencyNorm() {
-		return normalizedTermFrequency;
-	}
-	
-	
-	public int getRank() {
-		return rank;
+	public Integer getRank() {
+		return getPropertyIntegerValue(TermProperty.RANK);
 	}
 	
 	public void setRank(int rank) {
-		this.rank = rank;
+		setProperty(TermProperty.RANK, rank);
 	}
 	
-	public double getSpecificity() {
-		return specificity;
+	/*
+	 * SPECIFICITY
+	 */
+	public Double getSpecificity() {
+		return getPropertyDoubleValue(TermProperty.SPECIFICITY);
 	}
 	
 	public void setSpecificity(double specificity) {
-		this.specificity = specificity;
+		setProperty(TermProperty.SPECIFICITY, specificity);
+	}
+	
+	/*
+	 * IS_FIXED_EXPRESSION
+	 */
+	public Boolean isFixedExpression() {
+		return getPropertyBooleanValue(TermProperty.IS_FIXED_EXPRESSION);
 	}
 	
 	public void setFixedExpression(boolean fixedExpression) {
-		this.fixedExpression = fixedExpression;
+		setProperty(TermProperty.IS_FIXED_EXPRESSION, fixedExpression);
 	}
 
-	public boolean isFixedExpression() {
-		return this.fixedExpression;
-	}
-
-	public double getTfIdf() {
-		return tfIdf;
+	/*
+	 * TF_IDF
+	 */
+	public Double getTfIdf() {
+		return getPropertyDoubleValue(TermProperty.TF_IDF);
 	}
 
 	public void setTfIdf(double tfIdf) {
-		this.tfIdf = tfIdf;
-	}
-	
-	public ContextVector getContext() {
-		return context;
-	}
-	
-	public void setContext(ContextVector context) {
-		this.context = context;
+		setProperty(TermProperty.TF_IDF, tfIdf);
 	}
 }

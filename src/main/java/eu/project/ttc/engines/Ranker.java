@@ -37,9 +37,9 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.TermIndexResource;
 

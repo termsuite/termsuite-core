@@ -28,15 +28,16 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.align.RequiresSize2Exception;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.morpho.CompoundUtils;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.resources.BilingualDictionary;
@@ -227,11 +228,13 @@ public class AlignerUtils {
 			ContextVector translatedVector,
 			ContextVector.Entry sourceTermEntry,
 			Set<Term> candidateTranslations, final TermProperty termProperty) {
+		Preconditions.checkArgument(termProperty.isNumeric());
+		
 		Term mostFrequent = null;
 		double maxValue = -1d;
 		
 		for(Term t:candidateTranslations) {
-			if(((Double)termProperty.getValue(t))>maxValue) {
+			if(t.isNumericValueGT(termProperty, maxValue)) {
 				maxValue = t.getFrequency();
 				mostFrequent = t;
 			}

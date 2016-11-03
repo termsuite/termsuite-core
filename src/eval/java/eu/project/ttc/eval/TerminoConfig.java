@@ -7,8 +7,8 @@ import com.google.common.base.Charsets;
 import eu.project.ttc.api.TerminoExtractor;
 import eu.project.ttc.api.TerminoExtractor.ContextualizerMode;
 import eu.project.ttc.api.TerminoFilterConfig;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.models.TermProperty;
 
 public class TerminoConfig {
 	

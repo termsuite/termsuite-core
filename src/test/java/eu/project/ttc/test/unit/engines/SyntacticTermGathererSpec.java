@@ -42,6 +42,7 @@ import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
@@ -92,6 +93,7 @@ public class SyntacticTermGathererSpec {
 		
 		termFactory.addPrefix(this.asynchrone, this.synchrone);
 		termFactory.addDerivesInto("N A", this.stator, this.statorique);
+		termFactory.setProperty(TermProperty.FREQUENCY, 1);
 	}
 
 	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {

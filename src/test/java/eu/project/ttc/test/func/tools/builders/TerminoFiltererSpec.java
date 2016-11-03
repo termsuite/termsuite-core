@@ -10,8 +10,8 @@ import org.junit.Test;
 import eu.project.ttc.api.TermIndexIO;
 import eu.project.ttc.api.TerminoFilterConfig;
 import eu.project.ttc.api.TerminoFilterer;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.test.func.FunctionalTests;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 

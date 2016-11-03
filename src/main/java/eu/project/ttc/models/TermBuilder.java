@@ -27,6 +27,7 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
@@ -34,22 +35,22 @@ import eu.project.ttc.utils.TermSuiteUtils;
 
 public class TermBuilder {
 	private static final Logger LOGGER  = LoggerFactory.getLogger(TermBuilder.class);
-	private static int CURRENT_TERM_ID = 0;
-	
+	private static final String ERR_NO_TERM_INDEX_GIVEN = "No TermIndex given.";
+	private static final String ERR_FREQ_AND_NUM_OCC_MUST_MATCH = "Cannot build a term with frequency %d and %d occurrences";
+
 	private TermIndex termIndex;
 	
-	private String groupingKey;
+	private Optional<String> groupingKey = Optional.empty();
 	private java.util.Optional<String> pilot = java.util.Optional.empty();
 	private java.util.Optional<Integer> documentFrequency = java.util.Optional.empty();
-	private String spottingRule;
+	private Optional<String> spottingRule = Optional.empty();
 	private Optional<Integer> rank = Optional.empty();
-	private Optional<Integer> id = Optional.empty();
 	private List<TermWord> termWords = Lists.newArrayList();
 	private Optional<Integer> frequency = Optional.empty();
 	private Optional<Double> generalFrequencyNorm = Optional.empty();
 	private Optional<Double> frequencyNorm = Optional.empty();
 	private Optional<Double> specificity = Optional.empty();
-
+	private boolean forceManualGroupingKey = false;
 	private Optional<ContextVector> contextVector = Optional.empty();
 
 	
@@ -62,9 +63,8 @@ public class TermBuilder {
 	}
 
 	public Term createAndAddToIndex() {
-		Preconditions.checkNotNull(this.termIndex, "No TermIndex given.");
-		if(!id.isPresent())
-			id = Optional.of(this.termIndex.newId());
+		Preconditions.checkNotNull(this.termIndex, ERR_NO_TERM_INDEX_GIVEN);
+
 		Term term = create();
 		this.termIndex.addTerm(term);
 
@@ -81,19 +81,23 @@ public class TermBuilder {
 	}
 	
 	public Term create() {
-		String gKey = TermSuiteUtils.getGroupingKey(this.termWords);
-		if(this.groupingKey != null && !groupingKey.equals(gKey)) {
-			LOGGER.warn("Given grouping key ({}) does not match expected grouping key: {}",
-					this.groupingKey,
-					gKey);
-		}
+		String expectedGroupingKey = TermSuiteUtils.getGroupingKey(this.termWords);
+		if(this.groupingKey.isPresent()) {
+			if(!forceManualGroupingKey && !groupingKey.get().equals(expectedGroupingKey)) 
+				LOGGER.warn("Given grouping key ({}) does not match expected grouping key: {}",
+						this.groupingKey.get(),
+						expectedGroupingKey);
+		} else
+			this.groupingKey = Optional.of(expectedGroupingKey);
 		
-		if(!id.isPresent())
-			id = Optional.of(CURRENT_TERM_ID++);
+		Term term = new Term(groupingKey.get(), termWords);
+
+		if(spottingRule.isPresent())
+			term.setSpottingRule(spottingRule.get());
 		
-		Term term = new Term(id.get(), gKey, termWords, spottingRule);
 		if(generalFrequencyNorm.isPresent())
 			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
+		
 		if(frequencyNorm.isPresent())
 			term.setFrequencyNorm(frequencyNorm.get());
 
@@ -113,28 +117,41 @@ public class TermBuilder {
 		if(contextVector.isPresent())
 			term.setContext(contextVector.get());
 
+		
+		/*
+		 * Sets the pattern
+		 */
+		List<String> labels = Lists.newArrayListWithCapacity(termWords.size());
+		for(TermWord w:termWords) 
+			labels.add(w.getSyntacticLabel());
+		String pattern = Joiner.on(' ').join(labels);
+		term.setPattern(pattern);
+		
+		
 		/*
 		 * 2 - frequency must be set after occurrences because it overwrites 
 		 * the exiting term frequency incremented by occurrences adding.
 		 */
-		if(frequency.isPresent())
+		if(frequency.isPresent()) {
 			term.setFrequency(frequency.get());
-		
+		} else
+			term.setFrequency(occurrences.size());
+
 		return term;
 	}
 	
-	public TermBuilder setId(int id) {
-		this.id = Optional.of(id);
-		return this;
+	public TermBuilder setGroupingKey(String groupingKey) {
+		return setGroupingKey(groupingKey, false);
 	}
 
-	public TermBuilder setGroupingKey(String groupingKey) {
-		this.groupingKey = groupingKey;
+	public TermBuilder setGroupingKey(String groupingKey, boolean forceManualGroupingKey) {
+		this.groupingKey = Optional.of(groupingKey);
+		this.forceManualGroupingKey = forceManualGroupingKey;
 		return this;
 	}
 
 	public TermBuilder setSpottingRule(String spottingRule) {
-		this.spottingRule = spottingRule;
+		this.spottingRule = Optional.of(spottingRule);
 		return this;
 	}
 	
@@ -180,10 +197,6 @@ public class TermBuilder {
 		return this;
 	}
 
-	public String getGroupingKey() {
-		return this.groupingKey;
-	}
-
 	public void addWord(String lemma, String stem, String label) {
 		Word word;
 		if((word = this.termIndex.getWord(lemma)) == null) 
@@ -207,5 +220,6 @@ public class TermBuilder {
 		this.documentFrequency = java.util.Optional.of(documentFrequency);
 		return this;
 	}
+
 
 }

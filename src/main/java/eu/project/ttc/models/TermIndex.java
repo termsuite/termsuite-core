@@ -65,7 +65,6 @@ public interface TermIndex {
 	 * Terms
 	 */
 	public Term getTermByGroupingKey(String groupingKey);
-	public Term getTermById(int termId);
 	public void removeTerm(Term t);
 	public void addTerm(Term term);
 	public Collection<Term> getTerms();
@@ -133,12 +132,6 @@ public interface TermIndex {
 	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermIndex);
 
 	public void importCas(JCas cas, boolean keepOccurrenceInTermIndex);
-
-	
-	/*
-	 * Id generator
-	 */
-	public int newId();
 
 	public void setWordAnnotationsNum(int nbWordAnnotations);
 	public int getWordAnnotationsNum();

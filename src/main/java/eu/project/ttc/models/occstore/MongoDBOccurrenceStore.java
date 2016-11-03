@@ -246,7 +246,7 @@ public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 				@Override
 				public List<TermOccurrence> load(Term term) throws Exception {
 					List<Object[]> occurrences = Lists.newArrayList();
-					FindIterable<org.bson.Document> find = occurrenceCollection.find(Filters.eq(TERM_ID,term.getId()));
+					FindIterable<org.bson.Document> find = occurrenceCollection.find(Filters.eq(TERM_ID,term.getGroupingKey()));
 					
 					Map<String, Form> forms = new HashMap<>();
 					for(org.bson.Document occDoc:find) {
@@ -320,7 +320,7 @@ public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 		final List<WriteModel<org.bson.Document>> termsOps = Lists.newArrayList();		
 		for(Term t:termsBuffer.keySet()) {
 			UpdateOneModel<org.bson.Document> w = new UpdateOneModel<org.bson.Document>(
-					Filters.eq(_ID, t.getId()), 
+					Filters.eq(_ID, t.getGroupingKey()), 
 					Updates.inc(FREQUENCY, termsBuffer.get(t).intValue()),
 					new UpdateOptions().upsert(true));
 			termsOps.add(w);
@@ -364,8 +364,8 @@ public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 	public void removeTerm(final Term t) {
 		executor.execute(new Runnable(){
 			public void run() {
-				termCollection.deleteOne(new org.bson.Document(_ID, t.getId()));
-				occurrenceCollection.deleteMany(Filters.eq(_ID, t.getId()));
+				termCollection.deleteOne(new org.bson.Document(_ID, t.getGroupingKey()));
+				occurrenceCollection.deleteMany(Filters.eq(_ID, t.getGroupingKey()));
 			}
 		});
 	}
@@ -422,7 +422,7 @@ public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 		
 		occurrencesBuffer.add(new Object[]{
 				documentUrl,
-				term.getId(),
+				term.getGroupingKey(),
 				begin,
 				end,
 				coveredText

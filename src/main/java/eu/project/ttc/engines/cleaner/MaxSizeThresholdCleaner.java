@@ -21,16 +21,21 @@
  *******************************************************************************/
 package eu.project.ttc.engines.cleaner;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
+
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.index.selectors.FrequencyUnderThreshholdSelector;
 import eu.project.ttc.resources.TermIndexResource;
 
@@ -53,10 +58,25 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	protected TermProperty property;
 
 	private static final Float REMOVAL_RATIO_THRESHHOLD = 0.6f;
-	private int currentFrequencyThreshhold = 2;
+	private int currentThreshhold = 2;
+	
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+		Preconditions.checkArgument(property.isNumeric(),
+				"Can only initialize this AE with Integer, Double or Float"
+				);
+	}
 	
 	protected boolean acceptTerm(Term term) {
-		return property.getDoubleValue(term) >= this.currentFrequencyThreshhold;
+		if(property.getRange().equals(Double.class))
+			return term.getPropertyDoubleValue(property) >= currentThreshhold;
+		else if(property.getRange().equals(Integer.class))
+			return term.getPropertyIntegerValue(property) >= currentThreshhold;
+		else if(property.getRange().equals(Float.class))
+			return term.getPropertyFloatValue(property) >= currentThreshhold;
+		else 
+			throw new IllegalStateException("Should never happen since this has been checked at AE init");
 	}
 
 	@Override
@@ -68,9 +88,9 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 					"Current term index size = {} (> {}). Start cleaning with th={}", 
 					sizeBefore,
 					maxSize, 
-					currentFrequencyThreshhold);
+					currentThreshhold);
 			
-			termIndexResource.getTermIndex().deleteMany(new FrequencyUnderThreshholdSelector(currentFrequencyThreshhold));
+			termIndexResource.getTermIndex().deleteMany(new FrequencyUnderThreshholdSelector(currentThreshhold));
 
 			int sizeAfter = termIndexResource.getTermIndex().getTerms().size();
 			float removalRatio = ((float)(sizeBefore - sizeAfter))/sizeBefore;
@@ -81,7 +101,7 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 					sizeAfter,
 					String.format("%.3f",removalRatio),
 					maxSize, 
-					currentFrequencyThreshhold);
+					currentThreshhold);
 			logger.debug(
 					"Removal ratio is: {}. (needs < {} to increase currentTh)", 
 					String.format("%.3f",removalRatio),
@@ -89,10 +109,10 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 					);
 			if(removalRatio < REMOVAL_RATIO_THRESHHOLD) {
 				logger.info("Increasing frequency threshhold from {} to {}.",
-						this.currentFrequencyThreshhold,
-						this.currentFrequencyThreshhold+1
+						this.currentThreshhold,
+						this.currentThreshhold+1
 						);
-				this.currentFrequencyThreshhold++;
+				this.currentThreshhold++;
 			}
 		}
 	}
