@@ -28,17 +28,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.assertj.core.util.Lists;
-import org.mockito.Mockito;
 
 import com.google.common.base.Preconditions;
 
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermProperty;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.Word;
 
 public class TermFactory {
@@ -68,12 +69,14 @@ public class TermFactory {
 
 	public void addPrefix(Term term1, Term term2) {
 		termsExist(term1, term2);
-		termIndex.addRelation(term1, term2, RelationType.IS_PREFIX_OF, "");
+		termIndex.addRelation(new TermRelation(RelationType.IS_PREFIX_OF, term1, term2));
 	}
 
 	public void addDerivesInto(String type, Term term1, Term term2) {
 		termsExist(term1, term2);
-		termIndex.addRelation(term1, term2, RelationType.DERIVES_INTO, type);
+		TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, term1, term2);
+		relation.setProperty(RelationProperty.DERIVATION_TYPE, type);
+		termIndex.addRelation(relation);
 	}
 
 	private void termsExist(Term... terms) {

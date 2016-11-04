@@ -48,6 +48,7 @@ import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.Document;
 import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
@@ -121,7 +122,6 @@ public class JsonTermIndexIO {
 	private static final String ID = "id";
 	private static final String SYN = "syn";
 	private static final String RELATION_TYPE = "type";
-	private static final String INFO = "info";
 	
 	@Deprecated
 	private static final String BASE = "base";
@@ -180,9 +180,9 @@ public class JsonTermIndexIO {
 		String base;
 		String variant;
 //		String rule;
-		String infoToken;
+		Object infoToken;
 		String variantType;
-		double variantScore;
+		Double variantScore;
 
 		Map<Integer, String> inputSources = Maps.newTreeMap();
 		
@@ -426,9 +426,9 @@ public class JsonTermIndexIO {
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					base = null;
 					variant = null;
-					infoToken = null;
 					variantType = null;
-					variantScore = 0;
+					variantScore = null;
+					Map<RelationProperty, Comparable<?>> properties = Maps.newHashMap();
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
 						if (BASE.equals(fieldname) || FROM.equals(fieldname)) 
@@ -440,12 +440,31 @@ public class JsonTermIndexIO {
 						else if (VARIANT_SCORE.equals(fieldname)) {
 							jp.nextToken();
 							variantScore = jp.getDoubleValue();
-						} else if (INFO.equals(fieldname)) 
-							infoToken = jp.nextTextValue();
+						} else if(RelationProperty.fromJsonField(fieldname) != null){
+							RelationProperty p = RelationProperty.fromJsonField(fieldname);
+							JsonToken token = jp.nextToken();
+							switch(token) {
+							case VALUE_NUMBER_FLOAT:
+								properties.put(p, jp.getDoubleValue());
+								break;
+							case VALUE_NUMBER_INT:
+								properties.put(p, jp.getIntValue());
+								break;
+							case VALUE_STRING:
+								properties.put(p, jp.getValueAsString());
+								break;
+							case VALUE_TRUE:
+							case VALUE_FALSE:
+								properties.put(p, jp.getValueAsBoolean());
+								break;
+							default:
+								LOGGER.info("Unsupported property range for json token " + token);
+							}
+							
+						}
 					} // end syntactic variant object
-					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_VAR, BASE);
-					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_VAR, VARIANT);
-					Preconditions.checkNotNull(infoToken, MSG_EXPECT_PROP_FOR_VAR, INFO);
+					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_VAR, FROM);
+					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_VAR, TO);
 					b = termIndex.getTermByGroupingKey(base);
 					v = termIndex.getTermByGroupingKey(variant);
 					if(b != null && v != null) {
@@ -455,9 +474,13 @@ public class JsonTermIndexIO {
 						TermRelation tv = new TermRelation(
 								vType, 
 								b, 
-								v, 
-								vType == RelationType.GRAPHICAL ? Double.parseDouble(infoToken) : infoToken);
-						tv.setScore(variantScore);
+								v);
+						
+						for(Map.Entry<RelationProperty, Comparable<?>> e:properties.entrySet())
+							tv.setProperty(e.getKey(), e.getValue());
+						
+						if(variantScore != null)
+							tv.setProperty(RelationProperty.VARIANT_SCORE, variantScore);
 						termIndex.addRelation(tv);
 					} else {
 						if(b==null)
@@ -590,7 +613,7 @@ public class JsonTermIndexIO {
 			jg.writeFieldName(TERM_GROUPING_KEY);
 			jg.writeString(t.getGroupingKey());
 			
-			for(TermProperty p:t.getProperties()) {
+			for(TermProperty p:t.getProperties().keySet()) {
 				if(p == TermProperty.GROUPING_KEY)
 					continue;
 				jg.writeFieldName(p.getJsonField());
@@ -665,10 +688,10 @@ public class JsonTermIndexIO {
 			jg.writeString(relation.getTo().getGroupingKey());
 			jg.writeFieldName(RELATION_TYPE);
 			jg.writeString(relation.getType().getShortName());
-			jg.writeFieldName(INFO);
-			jg.writeString(relation.getInfo().toString());
-			jg.writeFieldName(VARIANT_SCORE);
-			jg.writeNumber(relation.getScore());
+			for(RelationProperty p:relation.getProperties().keySet()) {
+				jg.writeFieldName(p.getJsonField());
+				jg.writeObject(relation.getPropertyValue(p));
+			}
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();

@@ -34,8 +34,6 @@ import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.TermOccAnnotation;
 
 public interface TermIndex {
-
-	
 	
 	/*
 	 * Attributes
@@ -105,7 +103,6 @@ public interface TermIndex {
 	 * @return
 	 */
 	public Collection<TermRelation> getInboundTermRelations(Term fromTerm, RelationType... types);
-	public TermRelation addRelation(Term from, Term to, RelationType type, Object info);
 	public void addRelation(TermRelation relation);
 	public void removeRelation(TermRelation relation);
 

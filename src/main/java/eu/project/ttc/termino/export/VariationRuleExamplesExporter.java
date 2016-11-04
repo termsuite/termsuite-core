@@ -15,6 +15,7 @@ import com.google.common.collect.Multimap;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.models.OccurrenceStore;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -62,7 +63,7 @@ public class VariationRuleExamplesExporter {
 
 		for (Term t : termIndex.getTerms()) {
 			for (TermRelation v : termIndex.getOutboundRelations(t, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL))
-				pairs.put(v.getInfo().toString(), new TermPair(t, v.getTo()));
+				pairs.put(v.getPropertyStringValue(RelationProperty.VARIATION_RULE), new TermPair(t, v.getTo()));
 		}
 
 		// gets all variant rules (event size-0) and sorts them

@@ -61,6 +61,7 @@ import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 
 public class TestUtil {
 
+	
 	public static RegexOccurrence createOccurrence(int begin, int end, String lemma) {
 		RegexOccurrence o = Mockito.mock(RegexOccurrence.class);
 		Mockito.when(o.toString()).thenReturn(String.format("%s[%d,%d]", lemma, begin, end));

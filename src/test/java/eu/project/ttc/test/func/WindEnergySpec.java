@@ -48,6 +48,7 @@ import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermProperty;
+import eu.project.ttc.test.unit.TermSuiteExtractors;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.TermSuiteResource;
 import eu.project.ttc.tools.TermSuiteResourceManager;
@@ -178,7 +179,7 @@ public abstract class WindEnergySpec {
 	public void weControlDerivates() {
 		assertThat(termIndex)
 		.asTermVariations(RelationType.DERIVES_INTO)
-		.extracting("info", "from.groupingKey", "to.groupingKey")
+		.extracting(TermSuiteExtractors.RELATION_DERIVTYPE_FROMGKEY_TOGKEY)
 		.containsOnly(
 				ControlFiles.derivateVariationTuples(lang, "we")
 		);

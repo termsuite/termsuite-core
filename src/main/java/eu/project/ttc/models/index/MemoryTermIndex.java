@@ -444,16 +444,8 @@ public class MemoryTermIndex implements TermIndex {
 			List<TermRelation> list = this.inboundVariations.get(variant).stream()
 					.filter(tv -> typeSet.contains(tv.getType()))
 					.collect(Collectors.toList());
-			Collections.sort(list);
 			return list;
 		}
-	}
-	
-	@Override
-	public TermRelation addRelation(Term base, Term variant, RelationType type, Object info) {
-		TermRelation tv = new TermRelation(type, base, variant, info);
-		this.addRelation(tv);
-		return tv;
 	}
 	
 	@Override

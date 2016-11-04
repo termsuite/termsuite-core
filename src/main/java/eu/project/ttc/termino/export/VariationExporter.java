@@ -70,7 +70,7 @@ public class VariationExporter {
 					else
 						writer.write(String.format(EMPTY_LINE_FORMAT, ""));
 					writer.write(String.format(TARGET_LINE_FORMAT,
-							tv.getType() + " ["+tv.getInfo()+"]",
+							tv.getType() + " ["+tv.getProperties()+"]",
 							tv.getTo().getGroupingKey(),
 							tv.getTo().getFrequency()
 							));

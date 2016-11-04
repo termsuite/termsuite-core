@@ -29,13 +29,16 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProvider;
 import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.test.unit.Fixtures;
+import eu.project.ttc.test.unit.TermSuiteExtractors;
 
 public class TermSpec {
 
@@ -87,30 +90,43 @@ public class TermSpec {
 		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
 		assertThat(termIndex.getInboundTermRelations(this.term4)).hasSize(0);
 		
-		termIndex.addRelation(term5, term3, RelationType.SYNTACTICAL, "Tata");
+		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term5, term3);
+		rel1.setProperty(RelationProperty.VARIATION_RULE, "Tata");
+		termIndex.addRelation(rel1);
+		
 		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(1);
 		assertThat(termIndex.getInboundTermRelations(this.term5)).hasSize(0);
 		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
 		assertThat(termIndex.getInboundTermRelations(this.term3)).hasSize(1);
-		assertThat(termIndex.getInboundTermRelations(this.term3)).extracting("info").containsExactly("Tata");
+		assertThat(termIndex.getInboundTermRelations(this.term3))
+			.extracting(TermSuiteExtractors.RELATION_RULESTR)
+			.containsExactly("Tata");
 		
-		termIndex.addRelation(term5, term4, RelationType.SYNTACTICAL, "Tata");
+		TermRelation rel2 = new TermRelation(RelationType.SYNTACTICAL, term5, term4);
+		rel2.setProperty(RelationProperty.VARIATION_RULE, "Tata");
+		termIndex.addRelation(rel2);
 		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(2);
 		assertThat(termIndex.getInboundTermRelations(this.term5)).hasSize(0);
 		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
 		assertThat(termIndex.getInboundTermRelations(this.term3)).hasSize(1);
 		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
 		assertThat(termIndex.getInboundTermRelations(this.term4)).hasSize(1);
-		assertThat(termIndex.getOutboundRelations(this.term5)).extracting("info").containsExactly("Tata","Tata");
+		assertThat(termIndex.getOutboundRelations(this.term5))
+			.extracting(TermSuiteExtractors.RELATION_RULESTR)
+			.containsExactly("Tata","Tata");
 		
-		termIndex.addRelation(term5, term3, RelationType.SYNTACTICAL, "Tata");
+		TermRelation rel3 = new TermRelation(RelationType.SYNTACTICAL, term5, term3);
+		rel3.setProperty(RelationProperty.VARIATION_RULE, "Tata");
+		termIndex.addRelation(rel3);
 		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(2);
 		assertThat(termIndex.getInboundTermRelations(this.term5)).hasSize(0);
 		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
 		assertThat(termIndex.getInboundTermRelations(this.term3)).hasSize(1);
 		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
 		assertThat(termIndex.getInboundTermRelations(this.term4)).hasSize(1);
-		assertThat(termIndex.getOutboundRelations(this.term5)).extracting("info").containsExactly("Tata","Tata");
+		assertThat(termIndex.getOutboundRelations(this.term5))
+			.extracting(TermSuiteExtractors.RELATION_RULESTR)
+			.containsExactly("Tata","Tata");
 	}
 		
 	@Test

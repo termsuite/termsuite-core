@@ -52,10 +52,12 @@ import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JsonTermIndexIO;
@@ -111,8 +113,12 @@ public class JsonTermIndexIOSpec {
 				.addOccurrence(14, 20, "source2", form2)
 				.setSpecificity(2.2)
 				.createAndAddToIndex();
-		termIndex.addRelation(term1, term2, RelationType.SYNTACTICAL, "variationRule1");
-		termIndex.addRelation(term1, term2, RelationType.GRAPHICAL, 0.956d);
+		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term1, term2);
+		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
+		termIndex.addRelation(rel1);
+		TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, term1, term2);
+		rel2.setProperty(RelationProperty.SIMILARITY, 0.956d);
+		termIndex.addRelation(rel2);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -335,10 +341,10 @@ public class JsonTermIndexIOSpec {
 		// test syntactic variants
 		List<?> variantList = (List<?>)map.get("relations");
 		assertThat(variantList).hasSize(2)
-			.extracting("from", "to", "info", "type")
+			.extracting("from", "to", "vrule", "sim", "type")
 			.contains(
-					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "variationRule1", "syn"),
-					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "0.956", "graph")
+					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "variationRule1", null, "syn"),
+					tuple(term1.getGroupingKey(), term2.getGroupingKey(), null, 0.956, "graph")
 				);
 	}
 }

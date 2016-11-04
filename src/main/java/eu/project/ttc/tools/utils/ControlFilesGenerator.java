@@ -30,6 +30,7 @@ import java.io.Writer;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
@@ -37,6 +38,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.models.Component;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -75,7 +77,7 @@ public class ControlFilesGenerator {
 		Set<String> distinctRuleNames = Sets.newHashSet();
 		termIndex.getRelations().forEach( tv -> {
 			if(tv.getType() == RelationType.SYNTACTICAL || tv.getType() == RelationType.MORPHOLOGICAL)
-				distinctRuleNames.add((String)tv.getInfo());
+				distinctRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		});
 
 		/*
@@ -83,7 +85,11 @@ public class ControlFilesGenerator {
 		 */
 		for(String ruleName:distinctRuleNames) {
 			String pathname = directory.getAbsolutePath() + "/" + getSyntacticRuleFileName(ruleName);
-			writeVariations(pathname, TermIndexUtils.selectTermVariationsByInfo(termIndex, ruleName));
+			writeVariations(pathname, termIndex.getRelations()
+					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULE))
+					.filter(r-> r.getPropertyStringValue(RelationProperty.VARIATION_RULE).equals(ruleName))
+					.collect(Collectors.toList())
+				);
 		}
 		
 		/*
@@ -168,7 +174,7 @@ public class ControlFilesGenerator {
 					tv.getFrom().getGroupingKey(),
 					tv.getTo().getGroupingKey(),
 					tv.getType(),
-					tv.getInfo()
+					tv.getPropertyStringValue(RelationProperty.VARIATION_RULE)
 				));
 		}
 		writer.flush();

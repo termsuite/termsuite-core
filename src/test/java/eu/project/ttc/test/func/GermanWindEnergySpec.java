@@ -35,8 +35,11 @@ import java.util.stream.Collectors;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
+import com.google.common.base.Objects;
+
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermProperty;
@@ -254,7 +257,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	public void testMSNorANVariations() {
 		assertThat(termIndex)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
-			.asTermVariationsHavingObject("M-S-(N|A)N")
+			.asTermVariationsHavingRule("M-S-(N|A)N")
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: windatlas", "an: wind atlas"),
@@ -264,7 +267,9 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
-		List<TermRelation> msnanVars = termIndex.getRelations().filter(tv -> tv.getInfo().equals("M-S-(N|A)N")).collect(Collectors.toList());
+		List<TermRelation> msnanVars = termIndex.getRelations()
+				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
+				.collect(Collectors.toList());
 		// TODO investigate why the size varies
 		assertTrue("Expected size between 80 and 83, but got: " + msnanVars.size(), msnanVars.size() <= 83 && msnanVars.size() >= 80
 				);
@@ -275,8 +280,8 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", "S-Eg-AN-A")
-			.containsVariation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", "S-I-AN-CA")
+			.containsVariation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
+			.containsVariation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
 			;
 	}
 

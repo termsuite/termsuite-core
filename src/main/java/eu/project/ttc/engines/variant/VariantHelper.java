@@ -28,6 +28,7 @@ import java.util.Iterator;
 import com.google.common.base.Objects;
 
 import eu.project.ttc.models.GroovyWord;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -61,7 +62,7 @@ public class VariantHelper {
 				; ) {
 			tv = it.next();
 			if(tv.getTo().equals(targetTerm)) {
-				if(Objects.equal(tv.getInfo(), derivationPattern))
+				if(Objects.equal(tv.getPropertyStringValue(RelationProperty.DERIVATION_TYPE), derivationPattern))
 					return true;
 			}
 		}

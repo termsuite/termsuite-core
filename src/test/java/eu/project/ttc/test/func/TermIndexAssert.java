@@ -42,6 +42,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
 
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -116,20 +117,21 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return failed;
 	}
 	
-	public TermIndexAssert containsVariation(String baseGroupingKey, RelationType type, String variantGroupingKey, Object info) {
+	public TermIndexAssert containsVariation(String baseGroupingKey, RelationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
 		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
 		for(TermRelation tv:actual.getOutboundRelations(baseTerm, type)) {
-			if(java.util.Objects.equals(tv.getInfo(), info) 
+			if(java.util.Objects.equals(tv.getPropertyStringValue(p), expectedValue) 
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
 		
-		failWithMessage("No such variation <%s--%s[%s]--%s> found in term index", 
+		failWithMessage("No such variation <%s--%s[%s=%s]--%s> found in term index", 
 				baseGroupingKey, type, 
-				info,
+				p,
+				expectedValue,
 				variantGroupingKey
 				);
 		return this;
@@ -153,11 +155,13 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariationsHavingObject(Object object) {
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariationsHavingRule(String ruleName) {
 		Set<TermRelation> variations = Sets.newHashSet();
-		for(TermRelation v:getVariations())
-			if(Objects.equal(v.getInfo(), object))
+		for(TermRelation v:getVariations()) {
+			if(Objects.equal(v.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), ruleName))
 				variations.add(v);
+			
+		}
 		return assertThat(variations);
 	}
 
@@ -174,7 +178,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
 		for(TermRelation tv:TermIndexUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL)) 
-			matchingRuleNames.add((String)tv.getInfo());
+			matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		return assertThat(matchingRuleNames);
 	}
 

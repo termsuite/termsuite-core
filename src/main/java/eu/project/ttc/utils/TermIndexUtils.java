@@ -29,7 +29,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
@@ -45,14 +44,6 @@ import eu.project.ttc.models.index.TermIndexes;
 
 public class TermIndexUtils {
 
-	public static  Set<TermRelation> selectTermVariations(TermIndex termIndex, RelationType type, String ruleName) {
-		Set<TermRelation> selected = Sets.newHashSet();
-		for(TermRelation tv:selectTermVariations(termIndex, type))
-			if(Objects.equal(ruleName, tv.getInfo()))
-				selected.add(tv);
-		return selected;
-	}
-	
 	public static  Set<TermRelation> selectTermVariations(TermIndex termIndex, RelationType... types) {
 		Set<RelationType> typeSet = Sets.newHashSet(types);
 		return termIndex.getRelations().filter(tv -> 
@@ -69,13 +60,6 @@ public class TermIndexUtils {
 		return compounds;
 	}
 
-
-	public static Collection<TermRelation> selectTermVariationsByInfo(TermIndex termIndex, String ruleName) {
-		return termIndex.getRelations().filter(tv -> 
-				Objects.equal(ruleName, tv.getInfo())
-			).collect(Collectors.toSet());
-	}
-	
 
 	/**
 	 * E.g. Given the compound [hydro|électricité] and the component [hydro], the method should return the 

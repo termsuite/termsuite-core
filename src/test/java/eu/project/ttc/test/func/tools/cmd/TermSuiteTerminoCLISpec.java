@@ -111,7 +111,7 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
 			.containsVariation("nn: wind energy", RelationType.SYNTACTICAL, "ann: offshore wind energy")
-			.hasSize(91);
+			.hasSize(92);
 	}
 	
 

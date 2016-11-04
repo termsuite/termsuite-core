@@ -44,9 +44,11 @@ import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
 import eu.project.ttc.metrics.EditDistance;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.AbstractTermValueProvider;
@@ -210,8 +212,12 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
 					if(dist >= this.threshold) {
 						gatheredCnt++;
-						termIndex.addRelation(t1, t2, RelationType.GRAPHICAL, dist);
-						termIndex.addRelation(t2, t1, RelationType.GRAPHICAL, dist);
+						TermRelation rel1 = new TermRelation(RelationType.GRAPHICAL, t1, t2);
+						rel1.setProperty(RelationProperty.SIMILARITY, dist);
+						termIndex.addRelation(rel1);
+						TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, t2, t1);
+						rel2.setProperty(RelationProperty.SIMILARITY, dist);
+						termIndex.addRelation(rel2);
 						watch(t1, t2, dist);
 						watch(t2, t1, dist);
 

@@ -34,9 +34,11 @@ import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.TermWord;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermValueProviders;
@@ -90,10 +92,10 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 							nbDerivations++;
 							if(LOGGER.isTraceEnabled())
 								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
-							termIndex.addRelation(baseTerm, swt, RelationType.DERIVES_INTO, suffixDerivation.getType());
-							
+							TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, baseTerm, swt);
+							relation.setProperty(RelationProperty.DERIVATION_TYPE, suffixDerivation.getType());
+							termIndex.addRelation(relation);
 							watch(swt, baseTerm);
-
 						}
 					}
 				}

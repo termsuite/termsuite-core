@@ -86,7 +86,7 @@ public enum TermProperty implements Property<Term> {
 	
 	@Override
 	public boolean isDecimalNumber() {
-		return getRange().equals(Double.class) || getRange().equals(Float.class);
+		return Property.isDecimalNumber(range);
 	}
 	
 	@Override
@@ -103,6 +103,7 @@ public enum TermProperty implements Property<Term> {
 		};
 	}
 	
+
 	@Override
 	public int compare(Term o1, Term o2) {
 		return ComparisonChain.start()
@@ -134,12 +135,10 @@ public enum TermProperty implements Property<Term> {
 
 	@Override
 	public boolean isNumeric() {
-		return range.equals(Integer.class)
-				|| range.equals(Double.class)
-				|| range.equals(Float.class)
-				;
+		return Property.isNumeric(range);
 	}
 
+	@Override
 	public String getJsonField() {
 		return jsonField;
 	}

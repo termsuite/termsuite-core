@@ -65,6 +65,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -254,13 +255,14 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
-		TermRelation tv = termIndexResource.getTermIndex().addRelation(
-				source,
-				target, 
+		TermRelation rel = new TermRelation(
 				matchingRule.getName().startsWith(M_PREFIX) ? RelationType.MORPHOLOGICAL : RelationType.SYNTACTICAL,
-				matchingRule.getName());
+				source,
+				target);
+		rel.setProperty(RelationProperty.VARIATION_RULE, matchingRule.getName());
+		termIndexResource.getTermIndex().addRelation(rel);
 		
-		watch(source, target, tv);
+		watch(source, target, rel);
 	}
 
 	private void watch(Term source, Term target, TermRelation tv) {

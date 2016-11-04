@@ -1,9 +1,10 @@
 package eu.project.ttc.models;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
+import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
 public class PropertyHolder<T extends Property<?>> {
@@ -11,12 +12,14 @@ public class PropertyHolder<T extends Property<?>> {
 	private static final String ERR_PROPERTY_CANNOT_BE_NULL = "Property cannot be null";
 	private static final String ERR_VALUE_CANNOT_BE_NULL = "Value cannot be null for property %s";
 	private static final String ERR_PROPERTY_NOT_SET = "Property %s not set";
+	private static final String ERR_NOT_AN_INSTANCE = "Value <%s> is not an instance of range %s";
 	
-	private Map<T, Comparable<?>> properties = new HashMap<>();
+	protected Map<T, Comparable<?>> properties = new HashMap<>();
 	
 	public void setProperty(T property, Comparable<?> value) {
 		Preconditions.checkNotNull(property, ERR_PROPERTY_CANNOT_BE_NULL);
 		Preconditions.checkNotNull(value, ERR_VALUE_CANNOT_BE_NULL, property);
+		Preconditions.checkArgument(property.getRange().isInstance(value), ERR_NOT_AN_INSTANCE, value, property.getRange());
 		properties.put(property, value);
 	}
 
@@ -34,6 +37,12 @@ public class PropertyHolder<T extends Property<?>> {
 		return properties.get(property);		
 	}
 	
+	public String getPropertyStringValue(T property, String defaultValue) {
+		return properties.containsKey(property) ?
+				(String)properties.get(property)
+					: defaultValue;
+	}
+
 	public String getPropertyStringValue(T property) {
 		return (String)getPropertyValue(property);
 	}
@@ -110,7 +119,16 @@ public class PropertyHolder<T extends Property<?>> {
 		return compareNumericValue(property, value) <= 0;
 	}
 	
-	public Set<T> getProperties() {
-		return properties.keySet();
+	public Map<T, Comparable<?>> getProperties() {
+		return Collections.unmodifiableMap(this.properties);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof PropertyHolder<?>) {
+			PropertyHolder<?> ph = (PropertyHolder<?>) obj;
+			return Objects.equal(properties, ph.properties);
+		} else
+			return false;
 	}
 }
