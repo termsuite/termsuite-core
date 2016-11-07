@@ -44,6 +44,7 @@ import eu.project.ttc.engines.variant.VariantRuleYamlIO;
 import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
 public class YamlVariantRules implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(YamlVariantRules.class);
@@ -113,8 +114,8 @@ public class YamlVariantRules implements SharedResourceObject {
 		this.groovyAdapter.clear();
 	}
 
-	public void initialize(TermIndex termIndex) {
+	public void initialize(TermIndex termIndex, MultimapFlatResource dico) {
 		for(VariantRule variantRule:this.variantRules)
-			variantRule.initialize(termIndex);
+			variantRule.initialize(termIndex, dico);
 	}
 }

@@ -72,7 +72,7 @@ import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.ScorerAE;
 import eu.project.ttc.engines.StringRegexFilter;
-import eu.project.ttc.engines.SyntacticTermGatherer;
+import eu.project.ttc.engines.TermGathererAE;
 import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
 import eu.project.ttc.engines.TermOccAnnotationImporter;
 import eu.project.ttc.engines.TermSpecificityComputer;
@@ -128,6 +128,7 @@ import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.readers.XmiCollectionReader;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
+import eu.project.ttc.resources.DictionaryResource;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.FixedExpressionResource;
 import eu.project.ttc.resources.GeneralLanguageResource;
@@ -767,10 +768,13 @@ public class TermSuitePipeline {
 	 * Builds the resource url for this pipeline	 * 
 	 */
 	private URL getResUrl(TermSuiteResource tsResource) {
-		if(!resourceUrlPrefix.isPresent())
-			return tsResource.fromClasspath(lang);
-		else
-			return tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang);		
+		if(!resourceUrlPrefix.isPresent()) {
+			URL fromClasspath = tsResource.fromClasspath(lang);
+			return fromClasspath;
+		} else {
+			URL fromUrlPrefix = tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang);
+			return fromUrlPrefix;
+		}		
 	}
 
 	public TermSuitePipeline setMateModelPath(String path) {
@@ -1624,6 +1628,16 @@ public class TermSuitePipeline {
 		}
 	}
 
+	private ExternalResourceDescription termSynonymDesc;
+	public ExternalResourceDescription resSynonyms() {
+		if(termSynonymDesc == null) {
+			termSynonymDesc = ExternalResourceFactory.createExternalResourceDescription(
+					MultimapFlatResource.class, 
+					getResUrl(TermSuiteResource.SYNONYMS));
+		}
+		return termSynonymDesc;
+	}
+
 	private ExternalResourceDescription termIndexResourceDesc;
 	public ExternalResourceDescription resTermIndex() {
 		if(termIndexResourceDesc == null) {
@@ -1942,18 +1956,19 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeSyntacticVariantGatherer()   {
+	public TermSuitePipeline aeTermVariantGatherer()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					SyntacticTermGatherer.class
+					TermGathererAE.class
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, TermGathererAE.SYNONYMS, resSynonyms());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
-			return aggregateAndReturn(ae, SyntacticTermGatherer.TASK_NAME, 1);
+			return aggregateAndReturn(ae, TermGathererAE.TASK_NAME, 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

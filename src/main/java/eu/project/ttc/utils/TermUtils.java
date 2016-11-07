@@ -445,6 +445,7 @@ public class TermUtils {
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,
+				RelationType.SYNONYMIC,
 				RelationType.DERIVES_INTO,
 				RelationType.IS_PREFIX_OF);
 	}
@@ -454,6 +455,7 @@ public class TermUtils {
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,
+				RelationType.SYNONYMIC,
 				RelationType.DERIVES_INTO,
 				RelationType.IS_PREFIX_OF);
 	}

@@ -358,7 +358,7 @@ public class TerminoExtractor {
 		if(variationDetectionEnabled)
 			pipeline
 				.aeSuffixDerivationDetector()
-				.aeSyntacticVariantGatherer()
+				.aeTermVariantGatherer()
 				.aeGraphicalVariantGatherer();
 		
 		

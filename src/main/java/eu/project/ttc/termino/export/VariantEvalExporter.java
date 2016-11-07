@@ -52,7 +52,7 @@ public class VariantEvalExporter {
 					continue;
 				printBase(++rank, t);
 				int variantRank = 0;
-				for(TermRelation variation:termIndex.getOutboundRelations(t, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
+				for(TermRelation variation:termIndex.getOutboundRelations(t,  RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
 					if(variantRank >= nbVariantsPerTerm)
 						break;
 					variantCnt++;

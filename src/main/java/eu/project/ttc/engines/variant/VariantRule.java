@@ -36,6 +36,7 @@ import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.GroovyTerm;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
@@ -50,6 +51,7 @@ public class VariantRule {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VariantRule.class);
 	private static final Pattern USE_DERIV = Pattern.compile("deriv\\s*\\(");
 	private static final Pattern USE_PREFIX = Pattern.compile("prefix\\s*\\(");
+	private static final Pattern USE_SYNONYM = Pattern.compile("synonym\\s*\\(");
 	private static final String GROOVY_MATCH_METHOD_NAME = "match";
 	private static final String GROOVY_SET_HELPER_METHOD_NAME = "setHelper";
 	private static int CLASS_NUM = 0;
@@ -77,8 +79,9 @@ public class VariantRule {
 		this.groovyAdapter = groovyAdapter;
 	}
 	
-	public void initialize(TermIndex termIndex) {
+	public void initialize(TermIndex termIndex, MultimapFlatResource dico) {
 		this.helper.setTermIndex(termIndex);
+		this.helper.setSynonyms(dico);
 	}
 	
 	void setGroovyRule(String groovyExpression) {
@@ -92,6 +95,7 @@ public class VariantRule {
 					+ "def helper;\n"
 					+ "def setHelper(h) {this.helper = h;}\n"
 					+ "def prefix(s,t){return this.helper.isPrefixOf(s,t);}\n"
+					+ "def synonym(s,t){return this.helper.areSynonym(s,t);}\n"
 					+ "def deriv(p,s,t){return this.helper.derivesInto(p,s,t);}\n"
 					+ "def Boolean match(s, t) { %s }\n"
 					+ "}", 
@@ -116,6 +120,10 @@ public class VariantRule {
 			this.index = VariantRuleIndex.DERIVATION;
 		if(USE_PREFIX.matcher(this.expression).find())
 			this.index = VariantRuleIndex.PREFIX;
+	}
+	
+	public boolean isSynonimicRule() {
+		return USE_SYNONYM.matcher(this.expression).find();
 	}
 
 	private static String newRuleClassName(String ruleName) {

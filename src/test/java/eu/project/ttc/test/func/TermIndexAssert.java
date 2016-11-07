@@ -177,7 +177,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
-		for(TermRelation tv:TermIndexUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL)) 
+		for(TermRelation tv:TermIndexUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL, RelationType.SYNONYMIC)) 
 			matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		return assertThat(matchingRuleNames);
 	}

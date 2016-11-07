@@ -185,6 +185,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.hasAtLeastNBasesOfType(term, 1, RelationType.GRAPHICAL)
 			.hasNVariationsOfType(term, 4, RelationType.MORPHOLOGICAL)
 			.hasNVariationsOfType(term, 0, RelationType.SYNTACTICAL)
+			.hasNVariationsOfType(term, 0, RelationType.SYNONYMIC)
 			.getVariations(term)
 			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
 			.contains(

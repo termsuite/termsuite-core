@@ -76,7 +76,9 @@ public class ControlFilesGenerator {
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
 		termIndex.getRelations().forEach( tv -> {
-			if(tv.getType() == RelationType.SYNTACTICAL || tv.getType() == RelationType.MORPHOLOGICAL)
+			if(tv.getType() == RelationType.SYNTACTICAL
+					|| tv.getType() == RelationType.MORPHOLOGICAL
+					|| tv.getType() == RelationType.SYNONYMIC)
 				distinctRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		});
 

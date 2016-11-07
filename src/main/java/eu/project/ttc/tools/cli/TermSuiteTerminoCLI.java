@@ -404,7 +404,7 @@ public class TermSuiteTerminoCLI {
 			pipeline.aeCompostSplitter();
 			
 			// syntactic variant gathering
-			pipeline.aeSyntacticVariantGatherer();
+			pipeline.aeTermVariantGatherer();
 
 			// graphical variant gathering
 			pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);

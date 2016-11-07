@@ -37,7 +37,7 @@ import org.apache.uima.util.InvalidXMLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.SyntacticTermGatherer;
+import eu.project.ttc.engines.TermGathererAE;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.RelationType;
@@ -104,7 +104,7 @@ public class SyntacticTermGathererSpec {
 		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
 		manager.register(termIndex.getName(), termIndex);
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
-				SyntacticTermGatherer.class
+				TermGathererAE.class
 			);
 		
 
@@ -133,7 +133,7 @@ public class SyntacticTermGathererSpec {
 		 * The rule list resources
 		 */
 		ExternalResourceDescription rulesDesc = ExternalResourceFactory.createExternalResourceDescription(
-				SyntacticTermGatherer.YAML_VARIANT_RULES,
+				TermGathererAE.YAML_VARIANT_RULES,
 				YamlVariantRules.class, 
 				"file:org/project/ttc/test/resources/variant-rules.yaml"
 		);

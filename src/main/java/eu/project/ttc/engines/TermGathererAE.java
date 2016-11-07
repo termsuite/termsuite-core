@@ -77,9 +77,10 @@ import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
-public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(SyntacticTermGatherer.class);
+public class TermGathererAE extends JCasAnnotator_ImplBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermGathererAE.class);
 	public static final String TASK_NAME = "Syntactic variant gathering";
 	private static final int OBSERVING_STEP = 1000;
 	private static final int WARNING_CRITICAL_SIZE = 2500;
@@ -95,6 +96,10 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
 	private YamlVariantRules yamlVariantRules;
+
+	public static final String SYNONYMS = "Synonyms";
+	@ExternalResource(key = SYNONYMS, mandatory = true)
+	private MultimapFlatResource synonymResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -129,7 +134,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex());
+		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex(), this.synonymResource);
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
 	}
@@ -199,7 +204,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		progressLoggerTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				SyntacticTermGatherer.LOGGER.info("progress for key {}: ({}%)",
+				TermGathererAE.LOGGER.info("progress for key {}: ({}%)",
 						gatheringKey,
 						String.format("%.2f", ((float)nbComparisons*100)/totalComparisons.longValue())
 						);
@@ -255,8 +260,13 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
+		RelationType relationType = matchingRule.isSynonimicRule() ? 
+				RelationType.SYNONYMIC : (
+				matchingRule.getName().startsWith(M_PREFIX) ? 
+					RelationType.MORPHOLOGICAL : 
+					RelationType.SYNTACTICAL);
 		TermRelation rel = new TermRelation(
-				matchingRule.getName().startsWith(M_PREFIX) ? RelationType.MORPHOLOGICAL : RelationType.SYNTACTICAL,
+				relationType,
 				source,
 				target);
 		rel.setProperty(RelationProperty.VARIATION_RULE, matchingRule.getName());

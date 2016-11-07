@@ -49,6 +49,7 @@ import eu.project.ttc.utils.URLUtils;
  */
 public enum TermSuiteResource {
 	GENERAL_LANGUAGE("[LANG_SHORT]/[LANG]-general-language.txt", "", ""),
+	SYNONYMS("[LANG_SHORT]/[LANG]-synonyms.txt", "", ""),
 	PREFIX_BANK("[LANG_SHORT]/morphology/[LANG]-prefix-bank.txt", "", ""),
 	PREFIX_EXCEPTIONS("[LANG_SHORT]/morphology/[LANG]-prefix-exceptions.txt", "", ""),
 	MANUAL_COMPOSITIONS("[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),

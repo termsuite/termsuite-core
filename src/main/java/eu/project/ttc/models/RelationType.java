@@ -27,7 +27,8 @@ public enum RelationType {
 	GRAPHICAL(2, "graph", false),
 	DERIVES_INTO(4, "deriv", true),
 	IS_PREFIX_OF(5, "pref", true),
-	HAS_EXTENSION(6, "hasext", true),
+	HAS_EXTENSION(6, "hasext", true), 
+	SYNONYMIC(7, "syno", false),
 	;
 	
 	private int order;

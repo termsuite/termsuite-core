@@ -120,7 +120,7 @@ public abstract class WindEnergySpec {
 			.aeCompostSplitter()
 			.aePrefixSplitter()
 			.aeSuffixDerivationDetector()
-			.aeSyntacticVariantGatherer()
+			.aeTermVariantGatherer()
 			.aeGraphicalVariantGatherer()
 			.aeExtensionDetector()
 			.aeRanker(TermProperty.SPECIFICITY, true)
