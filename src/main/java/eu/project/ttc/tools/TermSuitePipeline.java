@@ -1964,7 +1964,8 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, TermGathererAE.SYNONYMS, resSynonyms());
+			if(TermSuiteResource.SYNONYMS.exists(lang))
+				ExternalResourceFactory.bindResource(ae, TermGathererAE.SYNONYMS, resSynonyms());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 

@@ -98,7 +98,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	private YamlVariantRules yamlVariantRules;
 
 	public static final String SYNONYMS = "Synonyms";
-	@ExternalResource(key = SYNONYMS, mandatory = true)
+	@ExternalResource(key = SYNONYMS, mandatory = false)
 	private MultimapFlatResource synonymResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
@@ -134,7 +134,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex(), this.synonymResource);
+		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex(), this.synonymResource );
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
 	}
@@ -260,7 +260,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
-		RelationType relationType = matchingRule.isSynonimicRule() ? 
+		RelationType relationType = matchingRule.isSynonymicRule() ? 
 				RelationType.SYNONYMIC : (
 				matchingRule.getName().startsWith(M_PREFIX) ? 
 					RelationType.MORPHOLOGICAL : 

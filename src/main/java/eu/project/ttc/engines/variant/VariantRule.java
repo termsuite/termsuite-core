@@ -122,7 +122,7 @@ public class VariantRule {
 			this.index = VariantRuleIndex.PREFIX;
 	}
 	
-	public boolean isSynonimicRule() {
+	public boolean isSynonymicRule() {
 		return USE_SYNONYM.matcher(this.expression).find();
 	}
 

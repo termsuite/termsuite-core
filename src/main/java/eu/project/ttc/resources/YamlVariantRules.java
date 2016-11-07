@@ -115,7 +115,12 @@ public class YamlVariantRules implements SharedResourceObject {
 	}
 
 	public void initialize(TermIndex termIndex, MultimapFlatResource dico) {
-		for(VariantRule variantRule:this.variantRules)
+		for(VariantRule variantRule:this.variantRules) {
+			if(variantRule.isSynonymicRule() && dico == null) {
+				LOGGER.warn("Term gathering rule {} is synonymic, but not synonymic dictionary is set.", variantRule.getName());
+				dico = new MultimapFlatResource();
+			}
 			variantRule.initialize(termIndex, dico);
+		}
 	}
 }
