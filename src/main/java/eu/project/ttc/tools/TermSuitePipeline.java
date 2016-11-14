@@ -71,6 +71,7 @@ import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.ScorerAE;
+import eu.project.ttc.engines.SemanticAlignerAE;
 import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.TermGathererAE;
 import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
@@ -128,7 +129,6 @@ import eu.project.ttc.readers.TxtCollectionReader;
 import eu.project.ttc.readers.XmiCollectionReader;
 import eu.project.ttc.resources.CharacterFootprintTermFilter;
 import eu.project.ttc.resources.CompostInflectionRules;
-import eu.project.ttc.resources.DictionaryResource;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.FixedExpressionResource;
 import eu.project.ttc.resources.GeneralLanguageResource;
@@ -1765,6 +1765,24 @@ public class TermSuitePipeline {
 	}
 
 	
+	public TermSuitePipeline aeSemanticAligner()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					SemanticAlignerAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			if(TermSuiteResource.SYNONYMS.exists(lang))
+				ExternalResourceFactory.bindResource(ae, SemanticAlignerAE.SYNONYMS, resSynonyms());
+			ExternalResourceFactory.bindResource(ae, resHistory());
+			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
+
+			return aggregateAndReturn(ae, "Computing semantic gathering (alignment)", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+	
 	public TermSuitePipeline setContextualizeCoTermsType(
 			OccurrenceType contextualizeCoTermsType) {
 		this.contextualizeCoTermsType = contextualizeCoTermsType;
@@ -1964,8 +1982,6 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			if(TermSuiteResource.SYNONYMS.exists(lang))
-				ExternalResourceFactory.bindResource(ae, TermGathererAE.SYNONYMS, resSynonyms());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 

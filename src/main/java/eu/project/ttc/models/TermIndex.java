@@ -98,11 +98,11 @@ public interface TermIndex {
 	/**
 	 * Retrieves all relations going to given term.
 	 * 
-	 * @param fromTerm
+	 * @param toTerm
 	 * @param types
 	 * @return
 	 */
-	public Collection<TermRelation> getInboundTermRelations(Term fromTerm, RelationType... types);
+	public Collection<TermRelation> getInboundTermRelations(Term toTerm, RelationType... types);
 	public void addRelation(TermRelation relation);
 	public void removeRelation(TermRelation relation);
 

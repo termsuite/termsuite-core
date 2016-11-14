@@ -34,12 +34,10 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.utils.TermUtils;
-import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
 public class VariantHelper {
 
 	private TermIndex termIndex;
-	private MultimapFlatResource synonyms;
 	
 	public VariantHelper() {
 		super();
@@ -49,14 +47,8 @@ public class VariantHelper {
 		this.termIndex = termIndex;
 	}
 	
-	void setSynonyms(MultimapFlatResource dico) {
-		this.synonyms = dico;
-	}
-
 	public boolean areSynonym(GroovyWord s, GroovyWord t) {
-		boolean b1 = this.synonyms.getValues(s.lemma).contains(t.lemma);
-		boolean b2 = this.synonyms.getValues(t.lemma).contains(s.lemma);
-		return b1 || b2;
+		throw new UnsupportedOperationException("Should be invoked on SynonymVariantHelper only");
 	}
 
 	public boolean derivesInto(String derivationPattern, GroovyWord s, GroovyWord t) {

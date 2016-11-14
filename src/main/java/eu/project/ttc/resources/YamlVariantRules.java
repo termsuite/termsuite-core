@@ -44,7 +44,6 @@ import eu.project.ttc.engines.variant.VariantRuleYamlIO;
 import eu.project.ttc.models.GroovyAdapter;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
 public class YamlVariantRules implements SharedResourceObject {
 	private static final Logger LOGGER = LoggerFactory.getLogger(YamlVariantRules.class);
@@ -114,13 +113,9 @@ public class YamlVariantRules implements SharedResourceObject {
 		this.groovyAdapter.clear();
 	}
 
-	public void initialize(TermIndex termIndex, MultimapFlatResource dico) {
+	public void initialize(TermIndex termIndex) {
 		for(VariantRule variantRule:this.variantRules) {
-			if(variantRule.isSynonymicRule() && dico == null) {
-				LOGGER.warn("Term gathering rule {} is synonymic, but not synonymic dictionary is set.", variantRule.getName());
-				dico = new MultimapFlatResource();
-			}
-			variantRule.initialize(termIndex, dico);
+			variantRule.initialize(termIndex);
 		}
 	}
 }

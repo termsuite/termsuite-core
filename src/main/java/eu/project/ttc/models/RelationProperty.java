@@ -7,7 +7,8 @@ public enum RelationProperty implements Property<TermRelation> {
 	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
 	DERIVATION_TYPE("DerivationType", "dtype", "dtype", String.class),
 	SIMILARITY("Similarity", "sim", "sim", Double.class),
-	VARIANT_SCORE("Score", "vscore", "vscore", Double.class);
+	VARIANT_SCORE("Score", "vscore", "vscore", Double.class), 
+	IS_DISTRIBUTIONAL("Distributional", "distrib", "distrib", Boolean.class);
 
 	private String propertyName;
 	private String propertyShortName;

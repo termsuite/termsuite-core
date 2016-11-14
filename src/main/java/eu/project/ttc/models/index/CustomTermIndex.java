@@ -54,4 +54,5 @@ public interface CustomTermIndex {
 	
 	public void dropBiggerEntries(int threshholdSize, boolean logWarning);
 	public boolean containsKey(String key);
+	public void dropEntry(String key);
 }

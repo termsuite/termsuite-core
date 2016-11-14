@@ -77,7 +77,6 @@ import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
-import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
 public class TermGathererAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermGathererAE.class);
@@ -96,10 +95,6 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
 	private YamlVariantRules yamlVariantRules;
-
-	public static final String SYNONYMS = "Synonyms";
-	@ExternalResource(key = SYNONYMS, mandatory = false)
-	private MultimapFlatResource synonymResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -134,7 +129,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex(), this.synonymResource );
+		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex());
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
 	}
