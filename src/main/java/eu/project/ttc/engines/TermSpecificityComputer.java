@@ -30,10 +30,10 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.resources.GeneralLanguage;
 import eu.project.ttc.resources.TermIndexResource;
 

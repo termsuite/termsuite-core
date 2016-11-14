@@ -5,8 +5,10 @@ import java.io.Writer;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -168,6 +170,16 @@ public class TbxExporter {
 		transformer.transform(source, result);
 	}
     
+    
+    private int currentId=0;
+    private Map<Term, Integer> ids = new HashMap<>();
+    
+    private int getId(Term t) {
+    	if(!ids.containsKey(t))
+    		ids.put(t, ++currentId);
+    	return ids.get(t);
+    }
+    
     /**
      * Add a term to the TBX document.
      *
@@ -179,12 +191,12 @@ public class TbxExporter {
      */
 	private void addTermEntry(Term term, boolean isVariant)
 			throws IOException {
-		String langsetId = LANGSET_ID_PREFIX + term.getId();
+		String langsetId = LANGSET_ID_PREFIX + getId(term);
         Node body = document.getElementsByTagName("body").item(0);
 
 		Element termEntry = document.createElement("termEntry");
 		termEntry.setAttribute("xml:id",
-				TERMENTRY_ID_PREFIX + term.getId());
+				TERMENTRY_ID_PREFIX + getId(term));
 		body.appendChild(termEntry);
 		Element langSet = document.createElement("langSet");
 		langSet.setAttribute("xml:id", langsetId);
@@ -195,14 +207,14 @@ public class TbxExporter {
 			this.addTermBase(langSet, variation.getFrom().getGroupingKey(), null);
 
 		for (TermRelation variation : termIndex.getOutboundRelations(term)) {
-			this.addTermVariant(langSet, String.format("langset-%d", variation.getTo().getId()),
+			this.addTermVariant(langSet, String.format("langset-%d", getId(variation.getTo())),
 					variation.getTo().getGroupingKey());
 		}
 		Collection<TermOccurrence> allOccurrences = termIndex.getOccurrenceStore().getOccurrences(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());
 
 		Element tig = document.createElement("tig");
-		tig.setAttribute("xml:id", TIG_ID_PREFIX + term.getId());
+		tig.setAttribute("xml:id", TIG_ID_PREFIX + getId(term));
 		langSet.appendChild(tig);
 		Element termElmt = document.createElement("term");
 		termElmt.setTextContent(term.getGroupingKey());
@@ -216,8 +228,8 @@ public class TbxExporter {
 				langSet,
 				tig,
 				"partOfSpeech",
-				term.isMultiWord() ? "noun" : term.firstWord().getSyntacticLabel());
-		this.addNote(langSet, tig, "termPattern", term.firstWord().getSyntacticLabel());
+				term.isMultiWord() ? "noun" : term.getWords().get(0).getSyntacticLabel());
+		this.addNote(langSet, tig, "termPattern", term.getWords().get(0).getSyntacticLabel());
 		this.addNote(langSet, tig, "termComplexity",
 				this.getComplexity(term));
 		this.addDescrip(langSet, tig, "termSpecificity",
@@ -287,7 +299,7 @@ public class TbxExporter {
 	private String getComplexity(Term term) {
 		if (term.isSingleWord()) {
 			if(term.isCompound()) {
-				if(term.firstWord().getWord().getCompoundType() == CompoundType.NEOCLASSICAL)
+				if(term.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL)
 					return "neoclassical-compound";
 				else
 					return "compound";

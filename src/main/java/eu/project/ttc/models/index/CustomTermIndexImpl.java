@@ -143,4 +143,10 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 		return !index.get(key).isEmpty();
 	}
 
+	@Override
+	public void dropEntry(String key) {
+		index.removeAll(key);
+		
+	}
+
 }

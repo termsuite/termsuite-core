@@ -34,12 +34,14 @@ import java.util.stream.Collectors;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.Word;
+import eu.project.ttc.test.unit.TermSuiteExtractors;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
 	
@@ -188,7 +190,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasNBases(term, 2)
 			.hasNVariationsOfType(term, 24, RelationType.SYNTACTICAL)
 			.getVariations(term)
-			.extracting("to.groupingKey", "info", "to.frequency")
+			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
 			.contains(
 					tuple("napn: vitesse angulaire de rotation", "S-I1-NPN-A", 2),
 					tuple("napn: vitesse nominal de rotation", "S-I1-NPN-A", 2),
@@ -221,7 +223,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMINACEVariations() {
 		assertThat(termIndex)
-			.asTermVariationsHavingObject("M-I-NA-CE")
+			.asTermVariationsHavingRule("M-I-NA-CE")
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("na: fonctionnement hypersynchrone", "naca: fonctionnement hyper et hyposynchrone")
@@ -235,7 +237,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testMSNNVariations() {
 		assertThat(termIndex)
 			.hasNVariationsOfType(43, RelationType.MORPHOLOGICAL)
-			.asTermVariationsHavingObject("M-S-NN")
+			.asTermVariationsHavingRule("M-S-NN")
 			.hasSize(9)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
@@ -252,19 +254,19 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("npn: phase du stator", RelationType.SYNTACTICAL, "na: phase statorique", "S-R2D-NPN")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", "S-Ed-NA-A")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napn: machine asynchrone à cage", "S-Ed-NA-PN")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", "S-Ed-NA-PNA")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation", "S-Ed-NA-PAN")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", "S-I-NA-AC")
+			.containsVariation("npn: phase du stator", RelationType.SYNTACTICAL, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation",RelationProperty.VARIATION_RULE,  "S-Ed-NA-PAN")
+			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", RelationProperty.VARIATION_RULE, "S-I-NA-AC")
 			;
 	}
 
 	@Test
 	public void testSyntacticalVariationsWithPrefixes() {
 		assertThat(termIndex)
-		.asTermVariationsHavingObject("NA-NprefA")
+		.asTermVariationsHavingRule("NA-NprefA")
 		.extracting("from.groupingKey", "to.groupingKey")
 		.contains(
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
@@ -285,7 +287,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termIndex)
-			.asTermVariationsHavingObject("S-R2D-NPN")
+			.asTermVariationsHavingRule("S-R2D-NPN")
 			.hasSize(77)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
@@ -298,7 +300,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariationsWithDerivatesSPIDNAP() {
 		assertThat(termIndex)
-			.asTermVariationsHavingObject("S-PID-NA-P")
+			.asTermVariationsHavingRule("S-PID-NA-P")
 			.hasSize(0)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(

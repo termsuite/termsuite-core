@@ -40,8 +40,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.api.TsvOptions;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.termino.export.TsvExporter;
 

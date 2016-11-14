@@ -40,6 +40,7 @@ import com.google.common.collect.Sets;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.utils.TermUtils;

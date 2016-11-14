@@ -65,6 +65,7 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.engines.variant.VariantRule;
 import eu.project.ttc.engines.variant.VariantRuleIndex;
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -77,8 +78,8 @@ import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
 
-public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(SyntacticTermGatherer.class);
+public class TermGathererAE extends JCasAnnotator_ImplBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermGathererAE.class);
 	public static final String TASK_NAME = "Syntactic variant gathering";
 	private static final int OBSERVING_STEP = 1000;
 	private static final int WARNING_CRITICAL_SIZE = 2500;
@@ -198,7 +199,7 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		progressLoggerTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				SyntacticTermGatherer.LOGGER.info("progress for key {}: ({}%)",
+				TermGathererAE.LOGGER.info("progress for key {}: ({}%)",
 						gatheringKey,
 						String.format("%.2f", ((float)nbComparisons*100)/totalComparisons.longValue())
 						);
@@ -254,13 +255,19 @@ public class SyntacticTermGatherer extends JCasAnnotator_ImplBase {
 		checkFrequency(source);
 		checkFrequency(target);
 		
-		TermRelation tv = termIndexResource.getTermIndex().addRelation(
+		RelationType relationType = matchingRule.isSynonymicRule() ? 
+				RelationType.SYNONYMIC : (
+				matchingRule.getName().startsWith(M_PREFIX) ? 
+					RelationType.MORPHOLOGICAL : 
+					RelationType.SYNTACTICAL);
+		TermRelation rel = new TermRelation(
+				relationType,
 				source,
-				target, 
-				matchingRule.getName().startsWith(M_PREFIX) ? RelationType.MORPHOLOGICAL : RelationType.SYNTACTICAL,
-				matchingRule.getName());
+				target);
+		rel.setProperty(RelationProperty.VARIATION_RULE, matchingRule.getName());
+		termIndexResource.getTermIndex().addRelation(rel);
 		
-		watch(source, target, tv);
+		watch(source, target, rel);
 	}
 
 	private void watch(Term source, Term target, TermRelation tv) {

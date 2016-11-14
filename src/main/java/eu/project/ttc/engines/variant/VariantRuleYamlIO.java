@@ -57,6 +57,7 @@ public class VariantRuleYamlIO {
 	private VariantRuleYamlIO(String yamlString){
 		this.yaml = yamlString;
 	}
+	
 	public static VariantRuleYamlIO fromYaml(String yamlString) {
 		return new VariantRuleYamlIO(yamlString);
 	}

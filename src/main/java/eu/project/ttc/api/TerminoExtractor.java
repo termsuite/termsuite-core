@@ -25,11 +25,11 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.api.internal.FileSystemUtils;
@@ -68,7 +68,7 @@ public class TerminoExtractor {
 	/*
 	 * Contextualizer properties
 	 */
-	private boolean useContextualizer = false;
+	private boolean contextualizerEnabled = false;
 	private int contextualizerScope = 3;
 	private ContextualizerMode contextualizerMode = ContextualizerMode.ON_SWT_TERMS;
 
@@ -116,6 +116,8 @@ public class TerminoExtractor {
 	 */
 	private Optional<TerminoFilterConfig> postFilterConfig = Optional.empty();
 	private Optional<TerminoFilterConfig> preFilterConfig  = Optional.empty();
+
+	private boolean semanticAlignerEnabled = false;
 	
 	public static TerminoExtractor fromTextString(Lang lang, String text) {
 		return fromSingleDocument(lang, new Document(lang, "file://inline.text", text));
@@ -223,6 +225,12 @@ public class TerminoExtractor {
 		return this;
 	}
 
+	public TerminoExtractor enableSemanticAlignment() {
+		this.contextualizerEnabled = true;
+		this.semanticAlignerEnabled  = true;
+		return this;
+	}
+
 	public TerminoExtractor disableScoring() {
 		this.scoringEnabled = false;
 		return this;
@@ -241,7 +249,7 @@ public class TerminoExtractor {
 	}
 	
 	public TerminoExtractor useContextualizer(int scope, ContextualizerMode contextualizerMode) {
-		this.useContextualizer = true;
+		this.contextualizerEnabled = true;
 		this.contextualizerScope = 3;
 		this.contextualizerMode = contextualizerMode;
 		return this;
@@ -339,7 +347,7 @@ public class TerminoExtractor {
 		if(preFilterConfig.isPresent()) 
 			PipelineUtils.filter(pipeline, preFilterConfig.get());
 			
-		if(useContextualizer)
+		if(contextualizerEnabled)
 			pipeline.aeContextualizer(
 					contextualizerScope, 
 					contextualizerMode == ContextualizerMode.ON_ALL_TERMS ? true : false);
@@ -358,13 +366,17 @@ public class TerminoExtractor {
 		if(variationDetectionEnabled)
 			pipeline
 				.aeSuffixDerivationDetector()
-				.aeSyntacticVariantGatherer()
+				.aeTermVariantGatherer()
 				.aeGraphicalVariantGatherer();
+
+		if(scoringEnabled && semanticAlignerEnabled)
+			pipeline.aeExtensionDetector();
 		
+		if(semanticAlignerEnabled)
+			pipeline.aeSemanticAligner();
 		
 		if(scoringEnabled)
-			pipeline.aeExtensionDetector()
-				.aeScorer()
+				pipeline.aeScorer()
 				.aeRanker(TermProperty.SPECIFICITY, true);
 
 		if(postFilterConfig.isPresent()) 

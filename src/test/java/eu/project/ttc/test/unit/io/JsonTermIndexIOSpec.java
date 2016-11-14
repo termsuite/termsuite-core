@@ -52,10 +52,12 @@ import eu.project.ttc.api.JsonOptions;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.ContextVector;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermBuilder;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.JsonTermIndexIO;
@@ -111,8 +113,12 @@ public class JsonTermIndexIOSpec {
 				.addOccurrence(14, 20, "source2", form2)
 				.setSpecificity(2.2)
 				.createAndAddToIndex();
-		termIndex.addRelation(term1, term2, RelationType.SYNTACTICAL, "variationRule1");
-		termIndex.addRelation(term1, term2, RelationType.GRAPHICAL, 0.956d);
+		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term1, term2);
+		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
+		termIndex.addRelation(rel1);
+		TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, term1, term2);
+		rel2.setProperty(RelationProperty.SIMILARITY, 0.956d);
+		termIndex.addRelation(rel2);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -160,11 +166,11 @@ public class JsonTermIndexIOSpec {
 			assertThat(t2.getPattern()).isEqualTo(t.getPattern());
 			assertThat(t2.getWords()).isEqualTo(t.getWords());
 			assertThat(t2.getRank()).isEqualTo(t.getRank());
-			if(t2.getId() == term1.getId()) {
+			if(t2.getGroupingKey().equals(term1.getGroupingKey())) {
 				assertNotNull(t.getContext());
 				assertNotNull(t2.getContext());
 				assertThat(t2.getContext()).isEqualTo(t.getContext());
-			} else if(t2.getId() == term2.getId()) {
+			} else if(t2.getGroupingKey().equals(term2.getGroupingKey())) {
 				assertNull(t.getContext());
 				assertNull(t2.getContext());
 			} else {
@@ -190,7 +196,7 @@ public class JsonTermIndexIOSpec {
 			    new TypeReference<HashMap<String,Object>>(){});
 		@SuppressWarnings("unchecked")
 		Map<String,Object> t1 = (Map<String,Object>)((List<?>)map.get("terms")).iterator().next();
-		assertThat(t1.keySet()).contains("id", "key").doesNotContain("occurrences");
+		assertThat(t1.keySet()).contains("key").doesNotContain("occurrences");
 	}
 
 	@Test
@@ -220,7 +226,6 @@ public class JsonTermIndexIOSpec {
 		Term t1 = termIndex.getTermByGroupingKey("na: word1 word2");
 		Term t2 = termIndex.getTermByGroupingKey("n: word1");
 		Term t3 = termIndex.getTermByGroupingKey("a: word2");
-		assertThat(t1.getId()).isEqualTo(1);
 		assertThat(t1.getSpecificity()).isCloseTo(0.321d, offset(0.000001d));
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
@@ -259,10 +264,10 @@ public class JsonTermIndexIOSpec {
 		
 		assertThat(t1.getContext().getEntries())
 			.hasSize(2)
-			.extracting("coTerm.id", "nbCooccs", "assocRate")
+			.extracting("coTerm.groupingKey", "nbCooccs", "assocRate")
 			.contains(
-				tuple(2, 18, 1.2000000476837158d),
-				tuple(3, 12, 6.5d)
+				tuple("n: word1", 18, 1.2000000476837158d),
+				tuple("a: word2", 12, 6.5d)
 				);	
 
 	}
@@ -308,7 +313,6 @@ public class JsonTermIndexIOSpec {
 		// test terms
 		BiMap<String, String> sources = HashBiMap.create(inputSources);
 		List<?> termList = (List<?>)map.get("terms");
-		assertThat(termList).hasSize(2).extracting("id").containsOnly(term1.getId(), term2.getId());
 		LinkedHashMap<?,?> t1 = (LinkedHashMap<?,?>)termList.get(0);
 		assertThat(t1.get("rank")).isEqualTo(1);
 		assertThat(t1.get("spec")).isEqualTo(1.1);
@@ -337,10 +341,10 @@ public class JsonTermIndexIOSpec {
 		// test syntactic variants
 		List<?> variantList = (List<?>)map.get("relations");
 		assertThat(variantList).hasSize(2)
-			.extracting("from", "to", "info", "type")
+			.extracting("from", "to", "vrule", "sim", "type")
 			.contains(
-					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "variationRule1", "syn"),
-					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "0.956", "graph")
+					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "variationRule1", null, "syn"),
+					tuple(term1.getGroupingKey(), term2.getGroupingKey(), null, 0.956, "graph")
 				);
 	}
 }

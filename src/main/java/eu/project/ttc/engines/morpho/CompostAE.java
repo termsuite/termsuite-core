@@ -49,7 +49,6 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.metrics.EditDistance;
 import eu.project.ttc.metrics.Levenshtein;
@@ -57,6 +56,7 @@ import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.WordBuilder;
 import eu.project.ttc.models.index.CustomTermIndex;

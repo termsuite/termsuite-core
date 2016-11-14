@@ -30,6 +30,7 @@ import eu.project.ttc.test.unit.engines.ContextualizerSpec;
 import eu.project.ttc.test.unit.engines.FixedExpressionSpotterSpec;
 import eu.project.ttc.test.unit.engines.GraphicalVariantGathererSpec;
 import eu.project.ttc.test.unit.engines.SuffixDerivationExceptionSetterSpec;
+import eu.project.ttc.test.unit.engines.SynonymicRuleSpec;
 import eu.project.ttc.test.unit.engines.SyntacticTermGathererSpec;
 import eu.project.ttc.test.unit.engines.morpho.SegmentationSpec;
 import eu.project.ttc.test.unit.io.JsonTermIndexIOSpec;
@@ -87,6 +88,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	TermsuiteJsonCasSerializerDeserializerSpec.class,
 	TsvExporterSpec.class,
 	TraverserSpec.class,
+	SynonymicRuleSpec.class,
 	ContextualizerSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,

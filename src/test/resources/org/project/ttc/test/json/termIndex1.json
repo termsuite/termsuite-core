@@ -27,7 +27,6 @@
 	terms: [
 		{
 			key: "na: word1 word2",
-			id: 1,
 			rank: 1,
 			freq: 6,
 			f_norm: 0.123,
@@ -53,7 +52,6 @@
 		},
 		{
 			key: "n: word1",
-			id: 2,
 			rank: 2,
 			spec: 0.111,			
 			words: [
@@ -69,7 +67,6 @@
 		},
 		{
 			key: "a: word2",
-			id: 3,
 			rank: 3,
 			spec: 0.222,						
 			words: [
@@ -85,9 +82,9 @@
 			}
 		}
 	],
-	variations: [
-		{base: "n: word1", variant: "na: word1 word2", info: "n-na", type: "syn"},
-		{base: "a: word2", variant: "na: word1 word2", info: "a-na", type: "syn"},
-		{base: "na: word1 word2", variant: "n: word1", info: "0.914", type: "graph"}
+	relations: [
+		{from: "n: word1", to: "na: word1 word2", vrule: "n-na", type: "syn"},
+		{from: "a: word2", to: "na: word1 word2", vrule: "a-na", type: "syn"},
+		{from: "na: word1 word2", to: "n: word1", sim: 0.914, type: "graph"}
 	]
 }

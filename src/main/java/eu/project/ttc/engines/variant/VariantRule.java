@@ -50,21 +50,22 @@ public class VariantRule {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VariantRule.class);
 	private static final Pattern USE_DERIV = Pattern.compile("deriv\\s*\\(");
 	private static final Pattern USE_PREFIX = Pattern.compile("prefix\\s*\\(");
+	private static final Pattern USE_SYNONYM = Pattern.compile("synonym\\s*\\(");
 	private static final String GROOVY_MATCH_METHOD_NAME = "match";
 	private static final String GROOVY_SET_HELPER_METHOD_NAME = "setHelper";
 	private static int CLASS_NUM = 0;
 
-	private String name;
-	private String expression;
-	private VariantRuleIndex index = VariantRuleIndex.DEFAULT;
+	protected String name;
+	protected String expression;
+	protected VariantRuleIndex index = VariantRuleIndex.DEFAULT;
 
-	private boolean sourceCompound = false;
-	private boolean targetCompound = false;
-	private List<String> sourcePatterns = Lists.newArrayList();
-	private List<String> targetPatterns = Lists.newArrayList();
-	private GroovyObject groovyRule;
-	private GroovyAdapter groovyAdapter;
-	private VariantHelper helper;
+	protected boolean sourceCompound = false;
+	protected boolean targetCompound = false;
+	protected List<String> sourcePatterns = Lists.newArrayList();
+	protected List<String> targetPatterns = Lists.newArrayList();
+	protected GroovyObject groovyRule;
+	protected GroovyAdapter groovyAdapter;
+	protected VariantHelper helper;
 
 	public VariantRule(String name) {
 		super();
@@ -81,7 +82,7 @@ public class VariantRule {
 		this.helper.setTermIndex(termIndex);
 	}
 	
-	void setGroovyRule(String groovyExpression) {
+	public void setGroovyRule(String groovyExpression) {
 		this.expression = groovyExpression;
 		initIndex();
 		
@@ -92,6 +93,7 @@ public class VariantRule {
 					+ "def helper;\n"
 					+ "def setHelper(h) {this.helper = h;}\n"
 					+ "def prefix(s,t){return this.helper.isPrefixOf(s,t);}\n"
+					+ "def synonym(s,t){return this.helper.areSynonym(s,t);}\n"
 					+ "def deriv(p,s,t){return this.helper.derivesInto(p,s,t);}\n"
 					+ "def Boolean match(s, t) { %s }\n"
 					+ "}", 
@@ -112,10 +114,29 @@ public class VariantRule {
 	}
 	
 	private void initIndex() {
-		if(USE_DERIV.matcher(this.expression).find())
+		List<VariantRuleIndex> matchingIndexes = Lists.newArrayList();
+		if(USE_SYNONYM.matcher(this.expression).find()) {
+			matchingIndexes.add(VariantRuleIndex.SYNONYM);
+			this.index = VariantRuleIndex.SYNONYM;
+		}
+		if(USE_DERIV.matcher(this.expression).find()) {
 			this.index = VariantRuleIndex.DERIVATION;
-		if(USE_PREFIX.matcher(this.expression).find())
+			matchingIndexes.add(VariantRuleIndex.DERIVATION);
+		}
+		if(USE_PREFIX.matcher(this.expression).find()) {
 			this.index = VariantRuleIndex.PREFIX;
+			matchingIndexes.add(VariantRuleIndex.PREFIX);
+		}
+		if(matchingIndexes.isEmpty())
+			this.index = VariantRuleIndex.DEFAULT;
+		if(matchingIndexes.size() > 1)
+			throw new VariantRuleFormatException(
+					String.format("A variation rule cannot have more than one matching indexes [Rule: %s, Indexes: %s]", this, matchingIndexes),
+					this);
+	}
+	
+	public boolean isSynonymicRule() {
+		return USE_SYNONYM.matcher(this.expression).find();
 	}
 
 	private static String newRuleClassName(String ruleName) {
@@ -212,5 +233,9 @@ public class VariantRule {
 			return Objects.equal(name,  o.name);
 		} else
 			return false;
+	}
+	
+	public void setHelper(VariantHelper helper) {
+		this.helper = helper;
 	}
 }

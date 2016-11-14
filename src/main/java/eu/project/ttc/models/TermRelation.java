@@ -22,39 +22,28 @@
 package eu.project.ttc.models;
 
 import com.google.common.base.Objects;
-import com.google.common.collect.ComparisonChain;
 
-import eu.project.ttc.utils.TermUtils;
-
-public class TermRelation implements Comparable<TermRelation> {
+public class TermRelation extends PropertyHolder<RelationProperty> {
 	private RelationType relationType;
 	private Term from;
 	private Term to;
-	private Object info;
-	private String _label;
-	private double score;
 	
-	private boolean includedIn;
-	private boolean prefixOf;
-	private boolean suffixOf;
+//	private boolean includedIn;
+//	private boolean prefixOf;
+//	private boolean suffixOf;
 	
-	public TermRelation(RelationType variationType, Term from, Term to, Object info) {
+	public TermRelation(RelationType variationType, Term from, Term to) {
 		super();
 		this.relationType = variationType;
 		this.from = from;
 		this.to = to;
-		this.info = info;
-		this.includedIn = TermUtils.isIncludedIn(from, to);
-		this.prefixOf = TermUtils.isPrefixOf(from, to);
-		this.suffixOf = TermUtils.isSuffixOf(from, to);
+//		this.includedIn = TermUtils.isIncludedIn(from, to);
+//		this.prefixOf = TermUtils.isPrefixOf(from, to);
+//		this.suffixOf = TermUtils.isSuffixOf(from, to);
 	}
 	
 	public RelationType getType() {
 		return relationType;
-	}
-	
-	public Object getInfo() {
-		return info;
 	}
 	
 	public Term getTo() {
@@ -67,67 +56,58 @@ public class TermRelation implements Comparable<TermRelation> {
 	
 	@Override
 	public String toString() {
-		return String.format("%s --- %s --> %s", from.getGroupingKey(), this.info, to.getGroupingKey());
+		return String.format("%s --- %s --> %s", from.getGroupingKey(), this.relationType.getShortName(), to.getGroupingKey());
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.from, this.to, this.relationType, this.info);
+		return Objects.hashCode(this.from, this.to, this.relationType, this.properties);
 	}
 	
-	public String getLabel() {
-		if(this._label == null) 
-			this._label = this.relationType.getShortName() + ":" + this.info; 
-		return this._label;
-	}
+//	public String getLabel() {
+//		if(this._label == null) 
+//			this._label = this.relationType.getShortName() + ":" + this.info; 
+//		return this._label;
+//	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof TermRelation) {
 			TermRelation v = (TermRelation) obj;
-			return Objects.equal(this.score, v.score)
-					&& Objects.equal(this.from, v.from)
+			return Objects.equal(this.from, v.from)
 					&& Objects.equal(this.to, v.to)
 					&& Objects.equal(this.relationType, v.relationType)
-					&& Objects.equal(this.info, v.info);
+					&& super.equals(obj);
 		} else 
 			return false;
 	}
 	
-	public boolean isIncludedIn() {
-		return includedIn;
-	}
+//	public boolean isIncludedIn() {
+//		return includedIn;
+//	}
+//	
+//	public boolean isSuffixOf() {
+//		return suffixOf;
+//	}
+//	
+//	public boolean isPrefixOf() {
+//		return prefixOf;
+//	}
 	
-	public boolean isSuffixOf() {
-		return suffixOf;
-	}
-	
-	public boolean isPrefixOf() {
-		return prefixOf;
-	}
-	
-	public void setScore(double score) {
-		this.score = score;
-	}
-	
-	public double getScore() {
-		return score;
-	}
-	
-	@Override
-	public int compareTo(TermRelation tv) {
-		return ComparisonChain.start()
-				// sort by score desc
-				.compare(tv.score, this.score)
-				// then by non inclusion first
-				.compare(this.includedIn ? 1 : 0, tv.includedIn ? 1 : 0)
-				// then by length asc
-				.compare(this.to.getWords().size(), tv.to.getWords().size())
-				// then by term id
-				.compare(this.to.getGroupingKey(), tv.to.getGroupingKey())
-				// makes it consistent with equals
-				.compare(this.from.getGroupingKey(), tv.from.getGroupingKey())
-				.compare(this.relationType, tv.relationType)
-				.result();
-				
-	}
+//	public int compareTo(TermRelation tv) {
+//		return ComparisonChain.start()
+//				// sort by score desc
+//				.compare(tv.score, this.score)
+//				// then by non inclusion first
+//				.compare(this.includedIn ? 1 : 0, tv.includedIn ? 1 : 0)
+//				// then by length asc
+//				.compare(this.to.getWords().size(), tv.to.getWords().size())
+//				// then by term id
+//				.compare(this.to.getGroupingKey(), tv.to.getGroupingKey())
+//				// makes it consistent with equals
+//				.compare(this.from.getGroupingKey(), tv.from.getGroupingKey())
+//				.compare(this.relationType, tv.relationType)
+//				.result();
+//				
+//	}
 }

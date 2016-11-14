@@ -1,6 +1,6 @@
 package eu.project.ttc.api;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.models.TermProperty;
 
 public class TerminoFilterConfig {
 

@@ -435,3 +435,29 @@
   rule: s[0]==t[0] && prefix(t[1],s[1])
 
 # prefixes: hyper, a, ir, non, dé
+
+
+# synonymes
+"NA-NsynA":
+  source: N A
+  target: N A
+  rule: s[0]==t[0] && synonym(t[1],s[1])
+
+# synonymes
+"NA-synNA":
+  source: N A
+  target: N A
+  rule: s[1]==t[1] && synonym(t[0],s[0])
+
+# synonymes
+"NPN-NPsynN":
+  source: N P N
+  target: N P N
+  rule: s[0]==t[0] && s[1]==t[1] && synonym(t[2],s[2])
+  
+# synonymes
+"NPN-synNPN":
+  source: N P N
+  target: N P N
+  rule: s[2]==t[2] && s[1]==t[1] && synonym(t[0],s[0])
+  

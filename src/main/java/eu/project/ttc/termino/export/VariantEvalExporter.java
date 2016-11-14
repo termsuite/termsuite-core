@@ -8,6 +8,7 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.api.TermSuiteException;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -51,7 +52,7 @@ public class VariantEvalExporter {
 					continue;
 				printBase(++rank, t);
 				int variantRank = 0;
-				for(TermRelation variation:termIndex.getOutboundRelations(t, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
+				for(TermRelation variation:termIndex.getOutboundRelations(t,  RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
 					if(variantRank >= nbVariantsPerTerm)
 						break;
 					variantCnt++;
@@ -76,7 +77,7 @@ public class VariantEvalExporter {
 		writer.write("\t");
 		writer.write("V_" + Integer.toString(variantRank));
 		writer.write("\t");
-		writer.write(String.format("<%s>", variation.getInfo().toString()));
+		writer.write(String.format("<%s>", variation.getPropertyStringValue(RelationProperty.VARIATION_RULE, "[]")));
 		writer.write("\t");
 		writer.write(String.format("%s (%d)", pilot, variant.getFrequency()));
 		writer.write("\t");

@@ -30,10 +30,10 @@ import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.util.Lists;
 import org.assertj.core.util.Objects;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Component;
 import eu.project.ttc.models.CompoundType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.utils.WordUtils;
 
@@ -52,8 +52,8 @@ public class TermAssert extends AbstractAssert<TermAssert, Term> {
 
 	public TermAssert hasPropertyValue(TermProperty p, Object value) {
 		isNotNull();
-		if (!Objects.areEqual(p.getValue(actual), value))
-			failWithMessage("Expected term's <%s> value to be <%s> but was <%s>", p, value, p.getValue(actual));
+		if (!Objects.areEqual(actual.getPropertyValue(p), value))
+			failWithMessage("Expected term's <%s> value to be <%s> but was <%s>", p, value, actual.getPropertyValue(p));
 		return this;
 
 	}

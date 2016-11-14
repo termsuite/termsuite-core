@@ -37,16 +37,18 @@ import org.apache.uima.util.InvalidXMLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.SyntacticTermGatherer;
+import eu.project.ttc.engines.TermGathererAE;
 import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.history.TermHistoryResource;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
+import eu.project.ttc.test.unit.TermSuiteExtractors;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 
 public class SyntacticTermGathererSpec {
@@ -92,6 +94,7 @@ public class SyntacticTermGathererSpec {
 		
 		termFactory.addPrefix(this.asynchrone, this.synchrone);
 		termFactory.addDerivesInto("N A", this.stator, this.statorique);
+		termFactory.setProperty(TermProperty.FREQUENCY, 1);
 	}
 
 	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {
@@ -101,7 +104,7 @@ public class SyntacticTermGathererSpec {
 		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
 		manager.register(termIndex.getName(), termIndex);
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
-				SyntacticTermGatherer.class
+				TermGathererAE.class
 			);
 		
 
@@ -130,7 +133,7 @@ public class SyntacticTermGathererSpec {
 		 * The rule list resources
 		 */
 		ExternalResourceDescription rulesDesc = ExternalResourceFactory.createExternalResourceDescription(
-				SyntacticTermGatherer.YAML_VARIANT_RULES,
+				TermGathererAE.YAML_VARIANT_RULES,
 				YamlVariantRules.class, 
 				"file:org/project/ttc/test/resources/variant-rules.yaml"
 		);
@@ -143,8 +146,8 @@ public class SyntacticTermGathererSpec {
 	public void testProcessDefault() throws AnalysisEngineProcessException{
 		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique))
 			.hasSize(1)
-			.extracting("type", "to")
-			.contains(tuple(RelationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
+			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
+			.contains(tuple(this.geothermie_hydraulique, RelationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
 		
 		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique_solaire))
 			.hasSize(0);
@@ -155,7 +158,7 @@ public class SyntacticTermGathererSpec {
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
 		assertThat(termIndex.getOutboundRelations(this.machine_synchrone))
 			.hasSize(1)
-			.extracting("type", "info", "to")
+			.extracting(TermSuiteExtractors.RELATION_TYPE_RULE_TO)
 			.contains(tuple(RelationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
 		
 		assertThat(termIndex.getOutboundRelations(this.machine_asynchrone))
@@ -166,7 +169,7 @@ public class SyntacticTermGathererSpec {
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
 		assertThat(termIndex.getOutboundRelations(this.phase_du_stator))
 			.hasSize(1)
-			.extracting("type", "info", "to")
+			.extracting(TermSuiteExtractors.RELATION_TYPE_RULE_TO)
 			.contains(tuple(RelationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
 		assertThat(termIndex.getOutboundRelations(this.phase_statorique))
 			.hasSize(0);

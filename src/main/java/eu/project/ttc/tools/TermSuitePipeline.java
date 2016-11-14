@@ -71,8 +71,9 @@ import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
 import eu.project.ttc.engines.ScorerAE;
+import eu.project.ttc.engines.SemanticAlignerAE;
 import eu.project.ttc.engines.StringRegexFilter;
-import eu.project.ttc.engines.SyntacticTermGatherer;
+import eu.project.ttc.engines.TermGathererAE;
 import eu.project.ttc.engines.TermIndexBlacklistWordFilterAE;
 import eu.project.ttc.engines.TermOccAnnotationImporter;
 import eu.project.ttc.engines.TermSpecificityComputer;
@@ -81,7 +82,6 @@ import eu.project.ttc.engines.cleaner.AbstractTermIndexCleaner;
 import eu.project.ttc.engines.cleaner.MaxSizeThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexThresholdCleaner;
 import eu.project.ttc.engines.cleaner.TermIndexTopNCleaner;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.engines.desc.TermSuitePipelineException;
@@ -111,6 +111,7 @@ import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.models.occstore.MongoDBOccurrenceStore;
@@ -767,10 +768,13 @@ public class TermSuitePipeline {
 	 * Builds the resource url for this pipeline	 * 
 	 */
 	private URL getResUrl(TermSuiteResource tsResource) {
-		if(!resourceUrlPrefix.isPresent())
-			return tsResource.fromClasspath(lang);
-		else
-			return tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang);		
+		if(!resourceUrlPrefix.isPresent()) {
+			URL fromClasspath = tsResource.fromClasspath(lang);
+			return fromClasspath;
+		} else {
+			URL fromUrlPrefix = tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang);
+			return fromUrlPrefix;
+		}		
 	}
 
 	public TermSuitePipeline setMateModelPath(String path) {
@@ -1624,6 +1628,16 @@ public class TermSuitePipeline {
 		}
 	}
 
+	private ExternalResourceDescription termSynonymDesc;
+	public ExternalResourceDescription resSynonyms() {
+		if(termSynonymDesc == null) {
+			termSynonymDesc = ExternalResourceFactory.createExternalResourceDescription(
+					MultimapFlatResource.class, 
+					getResUrl(TermSuiteResource.SYNONYMS));
+		}
+		return termSynonymDesc;
+	}
+
 	private ExternalResourceDescription termIndexResourceDesc;
 	public ExternalResourceDescription resTermIndex() {
 		if(termIndexResourceDesc == null) {
@@ -1745,6 +1759,24 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "Computing term specificities", 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+	}
+
+	
+	public TermSuitePipeline aeSemanticAligner()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					SemanticAlignerAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			if(TermSuiteResource.SYNONYMS.exists(lang))
+				ExternalResourceFactory.bindResource(ae, SemanticAlignerAE.SYNONYMS, resSynonyms());
+			ExternalResourceFactory.bindResource(ae, resHistory());
+			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
+
+			return aggregateAndReturn(ae, "Computing semantic gathering (alignment)", 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
@@ -1942,10 +1974,10 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeSyntacticVariantGatherer()   {
+	public TermSuitePipeline aeTermVariantGatherer()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					SyntacticTermGatherer.class
+					TermGathererAE.class
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
@@ -1953,7 +1985,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
-			return aggregateAndReturn(ae, SyntacticTermGatherer.TASK_NAME, 1);
+			return aggregateAndReturn(ae, TermGathererAE.TASK_NAME, 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

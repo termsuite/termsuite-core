@@ -3,8 +3,10 @@ package eu.project.ttc.termino.export;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
@@ -12,10 +14,11 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.api.TermSuiteException;
-import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.TermRelation;
 
 public class VariationExporter {
@@ -23,7 +26,7 @@ public class VariationExporter {
 	private static final String SOURCE_LINE_FORMAT = "%-30s f=%-3d";
 	private static final String EMPTY_LINE_FORMAT = "%-36s";
 
-	private static final String TARGET_LINE_FORMAT = " %-25s %-30s f=%d %n";
+	private static final String TARGET_LINE_FORMAT = " [%s] %-30s {f=%d,%s}%n";
 
 	private TermIndex termIndex;
 	private Writer writer;
@@ -64,15 +67,16 @@ public class VariationExporter {
 				boolean first = true;
 				for(TermRelation tv:variations) {
 					if(first)
-						writer.write(String.format(SOURCE_LINE_FORMAT, 
+						writer.write(String.format(SOURCE_LINE_FORMAT,
 							t.getGroupingKey(),
 							t.getFrequency()));
 					else
 						writer.write(String.format(EMPTY_LINE_FORMAT, ""));
 					writer.write(String.format(TARGET_LINE_FORMAT,
-							tv.getType() + " ["+tv.getInfo()+"]",
+							tv.getType(),
 							tv.getTo().getGroupingKey(),
-							tv.getTo().getFrequency()
+							tv.getTo().getFrequency(),
+							propertiesToString(tv)
 							));
 					first = false;
 				}
@@ -81,6 +85,12 @@ public class VariationExporter {
 			throw new TermSuiteException(e);
 		}		
 
+	}
+
+	public String propertiesToString(TermRelation tv) {
+		return tv.getProperties().entrySet().stream()
+				.map(e -> String.format("%s=%s", e.getKey().getShortName(), e.getValue()))
+				.collect(Collectors.joining(", "));
 	}
 
 }

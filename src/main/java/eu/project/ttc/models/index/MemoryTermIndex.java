@@ -82,7 +82,6 @@ public class MemoryTermIndex implements TermIndex {
 	 * this level of index. They me be indexed from their base-term
 	 * instead. 
 	 */
-	private Map<Integer, Term> termsById = Maps.newHashMap();
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
@@ -93,7 +92,6 @@ public class MemoryTermIndex implements TermIndex {
 	private Lang lang;
 	private String corpusId;
 	
-	private int currentId = 0;
 	private int nbWordAnnotations = 0;
 	private int nbSpottedTerms = 0;
 	
@@ -107,11 +105,8 @@ public class MemoryTermIndex implements TermIndex {
 	public void addTerm(Term term) {
 		Preconditions.checkArgument(
 				!this.termsByGroupingKey.containsKey(term.getGroupingKey()));
-		Preconditions.checkNotNull(term.getId());
-		Preconditions.checkArgument(!this.termsById.containsKey(term.getId()));
 
 		this.termsByGroupingKey.put(term.getGroupingKey(), term);
-		this.termsById.put(term.getId(), term);
 		for(CustomTermIndex termIndex:this.customIndexes.values())
 			termIndex.indexTerm(this, term);
 		for(TermWord tw:term.getWords())
@@ -242,14 +237,6 @@ public class MemoryTermIndex implements TermIndex {
 	}
 
 	@Override
-	public int newId() {
-		while(this.termsById.containsKey(currentId))
-			this.currentId++;
-		return this.currentId;
-	}
-	
-
-	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
 		if(this.customIndexes.get(indexName) == null) {
 			TermValueProvider valueProvider = TermValueProviders.get(indexName, this);
@@ -289,11 +276,6 @@ public class MemoryTermIndex implements TermIndex {
 	}
 	
 	@Override
-	public Term getTermById(int id) {
-		return this.termsById.get(id);
-	}
-
-	@Override
 	public void cleanOrphanWords() {
 		Set<String> usedWordLemmas = Sets.newHashSet();
 		for(Term t:getTerms()) {
@@ -318,9 +300,6 @@ public class MemoryTermIndex implements TermIndex {
 
 	private void removeTermOnly(Term t) {
 		termsByGroupingKey.remove(t.getGroupingKey());
-		termsById.remove(t.getId());
-		
-		
 		
 		// remove from custom indexes
 		for(CustomTermIndex customIndex:customIndexes.values())
@@ -341,7 +320,7 @@ public class MemoryTermIndex implements TermIndex {
 		 * 
 		 */
 		if(t.getContext() != null) {
-			for(Term o:termsById.values()) {
+			for(Term o:termsByGroupingKey.values()) {
 				if(o.getContext() != null)
 					o.getContext().removeCoTerm(t);
 			}
@@ -359,26 +338,10 @@ public class MemoryTermIndex implements TermIndex {
 		return this.name.hashCode();
 	}
 
-	
-//	@Override
-//	public Document getDocument(String url) {
-//		Document document = documents.get(url);
-//		if(document == null) {
-//			document = new Document(currentDocumentId++, url);
-//			documents.put(url, document);
-//		}
-//		return document;
-//	}
-//	
-//	@Override
-//	public Collection<Document> getDocuments() {
-//		return this.documents.values();
-//	}
-
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this).addValue(name)
-				.add("terms", this.termsById.size())
+				.add("terms", this.termsByGroupingKey.size())
 				.toString();
 	}
 	
@@ -424,7 +387,7 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public void deleteMany(TermSelector selector) {
 		List<Term> rem = Lists.newArrayList();
-		for(Term t:termsById.values()) {
+		for(Term t:termsByGroupingKey.values()) {
 			if(selector.select(t))
 				rem.add(t);
 		}
@@ -481,16 +444,8 @@ public class MemoryTermIndex implements TermIndex {
 			List<TermRelation> list = this.inboundVariations.get(variant).stream()
 					.filter(tv -> typeSet.contains(tv.getType()))
 					.collect(Collectors.toList());
-			Collections.sort(list);
 			return list;
 		}
-	}
-	
-	@Override
-	public TermRelation addRelation(Term base, Term variant, RelationType type, Object info) {
-		TermRelation tv = new TermRelation(type, base, variant, info);
-		this.addRelation(tv);
-		return tv;
 	}
 	
 	@Override

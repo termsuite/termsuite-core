@@ -108,7 +108,7 @@ public class SuffixDerivation {
 		return Objects.hashCode(this.derivateFormSuffix, this.regularFormSuffix, this.derivateFormPattern, this.regularFormPattern);
 	}
 
-	public Object getType() {
+	public String getType() {
 		return type;
 	}
 }

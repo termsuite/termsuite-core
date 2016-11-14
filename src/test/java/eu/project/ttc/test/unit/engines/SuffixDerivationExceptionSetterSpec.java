@@ -45,6 +45,7 @@ import eu.project.ttc.models.index.MemoryTermIndex;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
+import eu.project.ttc.test.unit.TermSuiteExtractors;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
@@ -134,8 +135,8 @@ public class SuffixDerivationExceptionSetterSpec {
 	public void testProcessCollectionComplete() {
 		assertThat(termIndex.getOutboundRelations(this.pays))
 			.hasSize(1)
-			.extracting("type", "to")
-			.contains(tuple(RelationType.DERIVES_INTO, paysVraiDerive));
+			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
+			.contains(tuple(this.pays, RelationType.DERIVES_INTO, paysVraiDerive));
 		assertThat(termIndex.getOutboundRelations(ferme_a)).hasSize(0);
 	}
 }

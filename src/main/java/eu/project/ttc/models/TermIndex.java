@@ -34,8 +34,6 @@ import eu.project.ttc.models.index.selectors.TermSelector;
 import eu.project.ttc.types.TermOccAnnotation;
 
 public interface TermIndex {
-
-	
 	
 	/*
 	 * Attributes
@@ -65,7 +63,6 @@ public interface TermIndex {
 	 * Terms
 	 */
 	public Term getTermByGroupingKey(String groupingKey);
-	public Term getTermById(int termId);
 	public void removeTerm(Term t);
 	public void addTerm(Term term);
 	public Collection<Term> getTerms();
@@ -101,12 +98,11 @@ public interface TermIndex {
 	/**
 	 * Retrieves all relations going to given term.
 	 * 
-	 * @param fromTerm
+	 * @param toTerm
 	 * @param types
 	 * @return
 	 */
-	public Collection<TermRelation> getInboundTermRelations(Term fromTerm, RelationType... types);
-	public TermRelation addRelation(Term from, Term to, RelationType type, Object info);
+	public Collection<TermRelation> getInboundTermRelations(Term toTerm, RelationType... types);
 	public void addRelation(TermRelation relation);
 	public void removeRelation(TermRelation relation);
 
@@ -133,12 +129,6 @@ public interface TermIndex {
 	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermIndex);
 
 	public void importCas(JCas cas, boolean keepOccurrenceInTermIndex);
-
-	
-	/*
-	 * Id generator
-	 */
-	public int newId();
 
 	public void setWordAnnotationsNum(int nbWordAnnotations);
 	public int getWordAnnotationsNum();

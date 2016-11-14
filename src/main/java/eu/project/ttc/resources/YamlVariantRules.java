@@ -114,7 +114,8 @@ public class YamlVariantRules implements SharedResourceObject {
 	}
 
 	public void initialize(TermIndex termIndex) {
-		for(VariantRule variantRule:this.variantRules)
+		for(VariantRule variantRule:this.variantRules) {
 			variantRule.initialize(termIndex);
+		}
 	}
 }

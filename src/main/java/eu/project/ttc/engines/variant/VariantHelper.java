@@ -28,6 +28,7 @@ import java.util.Iterator;
 import com.google.common.base.Objects;
 
 import eu.project.ttc.models.GroovyWord;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -45,8 +46,11 @@ public class VariantHelper {
 	void setTermIndex(TermIndex termIndex) {
 		this.termIndex = termIndex;
 	}
-
 	
+	public boolean areSynonym(GroovyWord s, GroovyWord t) {
+		throw new UnsupportedOperationException("Should be invoked on SynonymVariantHelper only");
+	}
+
 	public boolean derivesInto(String derivationPattern, GroovyWord s, GroovyWord t) {
 		Term sourceTerm = toTerm(s);
 		if(sourceTerm == null)
@@ -61,7 +65,7 @@ public class VariantHelper {
 				; ) {
 			tv = it.next();
 			if(tv.getTo().equals(targetTerm)) {
-				if(Objects.equal(tv.getInfo(), derivationPattern))
+				if(Objects.equal(tv.getPropertyStringValue(RelationProperty.DERIVATION_TYPE), derivationPattern))
 					return true;
 			}
 		}
@@ -95,4 +99,6 @@ public class VariantHelper {
 		Term sourceTerm = this.termIndex.getTermByGroupingKey(sourceGroupingKey);
 		return sourceTerm;
 	}
+
+
 }

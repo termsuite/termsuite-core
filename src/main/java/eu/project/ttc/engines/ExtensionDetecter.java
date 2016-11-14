@@ -10,10 +10,10 @@ import eu.project.ttc.history.TermHistory;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
 import eu.project.ttc.models.index.TermValueProviders;
-import eu.project.ttc.utils.TermSuiteConstants;
 import eu.project.ttc.utils.TermUtils;
 
 public class ExtensionDetecter {
@@ -47,8 +47,13 @@ public class ExtensionDetecter {
 			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
 				if(swt.equals(term))
 					continue;
-				else
-					termIndex.addRelation(swt, term, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
+				else {
+					termIndex.addRelation(new TermRelation(
+								RelationType.HAS_EXTENSION,
+								swt, 
+								term
+							));
+				}
 			}
 		}
 		
@@ -80,11 +85,11 @@ public class ExtensionDetecter {
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
-						termIndex.addRelation(t1, t2, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
+						termIndex.addRelation(new TermRelation(RelationType.HAS_EXTENSION, t1, t2));
 						watch(t1, t2);
 
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
-						termIndex.addRelation(t2, t1, RelationType.HAS_EXTENSION, TermSuiteConstants.EMPTY_STRING);
+						termIndex.addRelation(new TermRelation(RelationType.HAS_EXTENSION, t2, t1));
 						watch(t2, t1);
 					}
 				}

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
+import eu.project.ttc.models.TermProperty;
 
 public class TsvOptions {
 	

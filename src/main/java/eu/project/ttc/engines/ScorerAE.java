@@ -40,6 +40,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.history.TermHistoryResource;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
@@ -132,7 +133,7 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 				/*
 				 * Add this term variation to the variants
 				 */
-				termVariation.setScore(sv.getVariationScore());
+				termVariation.setProperty(RelationProperty.VARIANT_SCORE,sv.getVariationScore());
 
 				List<TermRelation> toRem = Lists.newArrayList(termIndex.getInboundTermRelations(termVariation.getTo()));
 				for(TermRelation tv:toRem)

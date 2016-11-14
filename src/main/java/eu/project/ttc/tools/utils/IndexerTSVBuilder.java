@@ -48,9 +48,9 @@ import java.util.List;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -115,7 +115,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
 		for(TermProperty p:properties) {
-			Comparable<?> value = p.getValue(t);
+			Comparable<?> value = t.getPropertyValueUnchecked(p);
 			if (value instanceof Integer || value instanceof Long)
 				line.add(value.toString());
 			else if(value instanceof Double || value instanceof Float) {

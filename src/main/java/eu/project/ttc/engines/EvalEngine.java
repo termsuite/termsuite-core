@@ -49,8 +49,8 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.models.Term;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.resources.EvalTrace;
 import eu.project.ttc.resources.EvalTrace.RecPoint;

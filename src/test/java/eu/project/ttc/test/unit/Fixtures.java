@@ -120,7 +120,6 @@ public class Fixtures {
 	 */
 	public static Term term1(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-					.setId(1)
 					.setGroupingKey("na: énergie éolien")
 					.addWord(word1(), "N")
 					.addWord(word2(), "A")
@@ -133,7 +132,6 @@ public class Fixtures {
 	 */
 	public static Term term2(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-					.setId(2)
 					.setGroupingKey("a: radioélectrique")
 					.addWord(word4(), "A")
 					.createAndAddToIndex();
@@ -145,7 +143,6 @@ public class Fixtures {
 	 */
 	public static Term term3(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(3)
 				.setGroupingKey("napn: accès radioélectrique de recouvrement")
 				.addWord(word3(), "N")
 				.addWord(word4(), "A")
@@ -160,7 +157,6 @@ public class Fixtures {
 	 */
 	public static Term term4(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(4)
 				.setGroupingKey("napna: accès radioélectrique de recouvrement total")
 				.addWord(word3(), "N")
 				.addWord(word4(), "A")
@@ -177,7 +173,6 @@ public class Fixtures {
 	 */
 	public static Term term5(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(5)
 				.setGroupingKey("na: accès radioélectrique")
 				.addWord(word3(), "N")
 				.addWord(word4(), "A")
@@ -191,7 +186,6 @@ public class Fixtures {
 	 */
 	public static Term term7(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(7)
 				.setGroupingKey("a: total")
 				.addWord(word7(), "A")
 				.createAndAddToIndex();
@@ -203,7 +197,6 @@ public class Fixtures {
 	 */
 	public static Term term8(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(8)
 				.setGroupingKey("n: accès")
 				.addWord(word3(), "N")
 				.createAndAddToIndex();
@@ -215,7 +208,6 @@ public class Fixtures {
 	 */
 	public static Term term9(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(9)
 				.setGroupingKey("n: recouvrement")
 				.addWord(word6(), "N")
 				.createAndAddToIndex();
@@ -227,7 +219,6 @@ public class Fixtures {
 	 */
 	public static Term term10(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(10)
 				.setGroupingKey("n: énergie")
 				.addWord(word1(), "N")
 				.createAndAddToIndex();
@@ -239,7 +230,6 @@ public class Fixtures {
 	 */
 	public static Term term11(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(11)
 				.setGroupingKey("a: éolien")
 				.addWord(word2(), "A")
 				.createAndAddToIndex();
@@ -251,7 +241,6 @@ public class Fixtures {
 	 */
 	public static Term term12(TermIndex termIndex) {
 		return TermBuilder.start(termIndex)
-				.setId(12)
 				.setGroupingKey("na: recouvrement total")
 				.addWord(word6(), "N")
 				.addWord(word7(), "A")

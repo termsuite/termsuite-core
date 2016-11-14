@@ -93,7 +93,7 @@ public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 
 	@Override
 	public void removeTerm(Term t) {
-		map.removeAll(t.getId());
+		map.removeAll(t);
 	}
 
 	@Override

@@ -48,7 +48,6 @@ import com.google.common.primitives.Ints;
 
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.engines.ExtensionDetecter;
-import eu.project.ttc.engines.cleaner.TermProperty;
 import eu.project.ttc.metrics.ExplainedValue;
 import eu.project.ttc.metrics.Levenshtein;
 import eu.project.ttc.metrics.SimilarityDistance;
@@ -59,6 +58,7 @@ import eu.project.ttc.models.ContextVector;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
+import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.models.Word;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;

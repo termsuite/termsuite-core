@@ -174,6 +174,7 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		int nbSyntacticVariants = 0;
 		int nbMorphologicalVariants = 0;
 		int nbGraphicalVariants = 0;
+		int nbSynonymicVariants = 0;
 		int nbOccurrences = 0;
 		TermIndex termIndex = termIndexResource.getTermIndex();
 		TermIndex tIndex = termIndex;
@@ -181,6 +182,7 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
 			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNTACTICAL));
 			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.GRAPHICAL));
+			nbSynonymicVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNONYMIC));
 			Collection<TermOccurrence> occurrences = termIndex.getOccurrenceStore().getOccurrences(t);
 			nbOccurrences+=occurrences.size();
 		}
@@ -196,10 +198,11 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 				Iterators.size(tIndex.compoundWordTermIterator()));
 		LOGGER.info("[{}] Nb occurrences: {}", statName, 
 				nbOccurrences);
-		LOGGER.info("[{}] Nb variants: {} [morph: {}, syn: {}, graph: {}]", statName, 
+		LOGGER.info("[{}] Nb variants: {} [morph: {}, syntactic: {}, graph: {}, synonyms: {}]", statName, 
 				nbMorphologicalVariants + nbSyntacticVariants + nbGraphicalVariants, 
 				nbMorphologicalVariants, 
 				nbSyntacticVariants, 
-				nbGraphicalVariants);
+				nbGraphicalVariants,
+				nbSynonymicVariants);
 	}
 }

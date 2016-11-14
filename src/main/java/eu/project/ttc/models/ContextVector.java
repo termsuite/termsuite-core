@@ -46,7 +46,6 @@ import eu.project.ttc.metrics.AssociationRate;
  *
  */
 public class ContextVector {
-	private static final String MSG_TERM_CLASS_NULL = "Flag useTermClasses is set to true but term classes are not built.";
 	private Map<Term, Entry> entries = Maps.newHashMap();
 	private List<Entry> _sortedEntries = null;
 	private int totalCooccurrences = 0;
@@ -182,7 +181,7 @@ public class ContextVector {
 		
 		@Override
 		public int hashCode() {
-			return this.coTerm.getId();
+			return this.coTerm.getGroupingKey().hashCode();
 		}
 		
 		@Override

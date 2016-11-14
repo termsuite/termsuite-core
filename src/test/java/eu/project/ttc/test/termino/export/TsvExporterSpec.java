@@ -39,11 +39,14 @@ public class TsvExporterSpec {
 		
 		TermRelation tv = Mockito.mock(TermRelation.class);
 		Mockito.when(tv.getTo()).thenReturn(term1);
-		Mockito.when(termIndex.getOutboundRelations(term3, RelationType.SYNTACTICAL, 
+		Mockito.when(termIndex.getOutboundRelations(term3, 
+				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,
+				RelationType.SYNONYMIC,
 				RelationType.DERIVES_INTO,
-				RelationType.IS_PREFIX_OF)).thenReturn(Sets.newHashSet(tv));
+				RelationType.IS_PREFIX_OF
+				)).thenReturn(Sets.newHashSet(tv));
 		
 		terms = Lists.newArrayList(
 				term1,
