@@ -94,6 +94,7 @@ public enum TermProperty implements Property<Term> {
 		return propertyName;
 	}
 
+	@Override
 	public Comparator<Term> getComparator(final boolean reverse) {
 		return new Comparator<Term>() {
 			@Override
@@ -141,5 +142,10 @@ public enum TermProperty implements Property<Term> {
 	@Override
 	public String getJsonField() {
 		return jsonField;
+	}
+
+	@Override
+	public Comparator<Term> getComparator() {
+		return getComparator(false);
 	}
 }

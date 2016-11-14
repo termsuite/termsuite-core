@@ -28,7 +28,7 @@ public enum RelationType {
 	DERIVES_INTO(4, "deriv", true),
 	IS_PREFIX_OF(5, "pref", true),
 	HAS_EXTENSION(6, "hasext", true), 
-	SYNONYMIC(7, "syno", false),
+	SYNONYMIC(7, "syno", true),
 	;
 	
 	private int order;

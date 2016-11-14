@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang.mutable.MutableInt;
+import org.assertj.core.util.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,9 +31,10 @@ public class SemanticAligner {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SemanticAligner.class);
 	private Optional<TermHistory> history = Optional.empty();
 	private SimilarityDistance distance = new Cosine();
-	private double similarityThreshold = 0.85;
+	private double similarityThreshold = 0.40;
+	private int nbDistributionalCandidates = 5;
 	private SynonymicRule rule;
-	private MultimapFlatResource dico;
+	private MultimapFlatResource dico = new MultimapFlatResource();
 
 	public SemanticAligner setDistance(SimilarityDistance distance) {
 		this.distance = distance;
@@ -58,8 +61,10 @@ public class SemanticAligner {
 		Preconditions.checkState(rule.getSynonymSourceWordIndex() != -1);
 		
 		Term t1, t2, a1, a2;
+		List<TermRelation> t1Relations;
 		int nbAlignments = 0;
-		int nbDistrbRelationFound = 0;
+		final MutableInt nbDistribRelationsFound = new MutableInt(0);
+		final MutableInt nbDicoRelationFound = new MutableInt(0);
 		
 		Stopwatch sw = Stopwatch.createUnstarted();
 		
@@ -69,55 +74,93 @@ public class SemanticAligner {
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
 		CustomTermIndex index = termIndex.createCustomIndex("SubSequence"+rule.getName(), rule.getTermProvider());
-			
+		
 		for(String key:index.keySet()) {
 			List<Term> terms = index.getTerms(key).stream()
 										.filter(t->rule.getSourcePatterns().contains(t.getPattern()))
 										.collect(Collectors.toList());
+			
 			for(int i=0; i<terms.size();i++) {
 				t1 = terms.get(i);
 				String akey1 = TermUtils.toGroupingKey(t1.getWords().get(rule.getSynonymSourceWordIndex()));
 				a1 = termIndex.getTermByGroupingKey(akey1);
 				if(a1 == null) {
-//					LOGGER.warn("Could not find term {}", akey1);
 					continue;
 				} else if(a1.getContext() == null) {
 					LOGGER.warn("No context vector set for term {}", a1);
 					continue;
 				}
-
-				for(int j=i+1; j<terms.size();j++) {
+				t1Relations = Lists.newArrayList();
+				
+				for(int j=0; j<terms.size();j++) {
+					if(i==j)
+						continue;
 					t2 = terms.get(j);
 					String akey2 = TermUtils.toGroupingKey(t2.getWords().get(rule.getSynonymSourceWordIndex()));
 					a2 = termIndex.getTermByGroupingKey(akey2);
 					if(a2 == null) {
-//						LOGGER.warn("Could not find term {}", akey2);
 						continue;
-					} else if(a2.getContext() == null) {
+					} 
+					
+					if(!dico.getValues(a1.getLemma()).isEmpty()) {
+						// test all synonyms from dico
+						if(dico.getValues(a1.getLemma()).contains(a2.getLemma())) {
+							nbDicoRelationFound.increment();
+							createDicoRelation(termIndex, t1, t2);
+						}
+					}
+					
+					if(a2.getContext() == null) {
 						LOGGER.warn("No context vector set for term {}", a1);
 						continue;
+					} else {
+						nbAlignments++;
+						sw.start();
+						ExplainedValue explainedValue = distance
+								.getExplainedValue(a1.getContext(), a2.getContext());
+						sw.stop();
+						if(explainedValue.getValue() > similarityThreshold) {
+							TermRelation rel = new TermRelation(
+									RelationType.SYNONYMIC,
+									t1,
+									t2);
+							rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
+							rel.setProperty(RelationProperty.SIMILARITY, explainedValue.getValue());
+							t1Relations.add(rel);
+						}
 					}
+				} // end for j
 
-					nbAlignments++;
-					sw.start();
-					ExplainedValue explainedValue = distance
-							.getExplainedValue(a1.getContext(), a2.getContext());
-					sw.stop();
-					if(explainedValue.getValue() >= similarityThreshold) {
-						nbDistrbRelationFound++;
-						TermRelation rel = new TermRelation(
-								RelationType.SYNONYMIC,
-								t1,
-								t2);
-						rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
+				
+				// Add top distrib candidates to termindex
+				t1Relations
+					.stream()
+					.sorted(RelationProperty.SIMILARITY.getComparator(true))
+					.limit(this.nbDistributionalCandidates)
+					.forEach(rel -> {
+						nbDistribRelationsFound.increment();
 						termIndex.addRelation(rel);
-						watch(t1, t2);
-					}
-				}
+						watch(rel.getFrom(), rel.getTo());
+					});
 			}
 		}
 		
-		LOGGER.debug("Number of context vectors compared: {}, nb distributional synonymic relations found: {}. Total alignment time: {}", nbAlignments, nbDistrbRelationFound, sw);
+		LOGGER.debug("Number of context vectors compared: {}, nb distributional synonymic relations found: {}. Total alignment time: {}. Total dico synonyms: {}", 
+				nbAlignments, 
+				nbDistribRelationsFound, 
+				sw,
+				nbDicoRelationFound
+				);
+	}
+
+	public void createDicoRelation(TermIndex termIndex, Term t1, Term t2) {
+		TermRelation rel = new TermRelation(
+				RelationType.SYNONYMIC,
+				t1,
+				t2);
+		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
+		termIndex.addRelation(rel);
+		watch(t1, t2);
 	}
 
 	private void watch(Term t1, Term t2) {
@@ -144,7 +187,7 @@ public class SemanticAligner {
 
 
 	public SemanticAligner setDictionary(MultimapFlatResource dico) {
-		this.dico = dico;
+		this.dico = dico == null ? new MultimapFlatResource() : dico ;
 		return this;
 	}
 

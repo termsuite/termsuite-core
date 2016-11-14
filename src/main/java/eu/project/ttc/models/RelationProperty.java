@@ -1,5 +1,7 @@
 package eu.project.ttc.models;
 
+import java.util.Comparator;
+
 import com.google.common.collect.ComparisonChain;
 
 public enum RelationProperty implements Property<TermRelation> {
@@ -47,6 +49,8 @@ public enum RelationProperty implements Property<TermRelation> {
 		return Property.isNumeric(range);
 	}
 
+	
+
 	@Override
 	public int compare(TermRelation o1, TermRelation o2) {
 		return ComparisonChain.start()
@@ -67,5 +71,23 @@ public enum RelationProperty implements Property<TermRelation> {
 			if(p.jsonField.equals(field))
 				return p;
 		return null;
+	}
+
+	@Override
+	public Comparator<TermRelation> getComparator() {
+		return getComparator(false);
+	}
+
+	@Override
+	public Comparator<TermRelation> getComparator(boolean reverse) {
+		return new Comparator<TermRelation>() {
+			@Override
+			public int compare(TermRelation o1, TermRelation o2) {
+				return reverse ? 
+						RelationProperty.this.compare(o2, o1) :
+							RelationProperty.this.compare(o1, o2)
+									;
+			}
+		};
 	}
 }
