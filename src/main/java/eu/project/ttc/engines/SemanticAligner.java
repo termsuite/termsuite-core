@@ -1,11 +1,11 @@
 package eu.project.ttc.engines;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang.mutable.MutableInt;
-import org.assertj.core.util.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -90,7 +90,7 @@ public class SemanticAligner {
 					LOGGER.warn("No context vector set for term {}", a1);
 					continue;
 				}
-				t1Relations = Lists.newArrayList();
+				t1Relations = new ArrayList<>();
 				
 				for(int j=0; j<terms.size();j++) {
 					if(i==j)
