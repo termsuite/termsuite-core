@@ -1,4 +1,4 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.model;
 
 import eu.project.ttc.models.Term;
 

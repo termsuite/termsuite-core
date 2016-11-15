@@ -1,13 +1,13 @@
-package eu.project.ttc.eval.aligner;
+package eu.project.ttc.eval.exceptions;
 
-public class DictionaryNotFound extends Exception {
+public class DictionaryNotFoundException extends Exception {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private String path;
 
-	public DictionaryNotFound(String path) {
+	public DictionaryNotFoundException(String path) {
 		super("Could not find dictionary: " + path);
 		this.path = path;
 	}

@@ -107,7 +107,14 @@ public enum TermProperty implements Property<Term> {
 
 	@Override
 	public int compare(Term o1, Term o2) {
-		return ComparisonChain.start()
+		if(o1.getPropertyValueUnchecked(this) == o2.getPropertyValueUnchecked(this))
+			return 0;
+		else if(o1.getPropertyValueUnchecked(this)==null)
+			return -1;
+		else if(o2.getPropertyValueUnchecked(this)==null)
+			return 1;
+		else
+			return ComparisonChain.start()
 				.compare(
 						o1.getPropertyValueUnchecked(this), 
 						o2.getPropertyValueUnchecked(this))

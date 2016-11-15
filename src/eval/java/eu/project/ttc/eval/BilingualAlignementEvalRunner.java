@@ -1,4 +1,4 @@
-package eu.project.ttc.eval.aligner;
+package eu.project.ttc.eval;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -15,15 +15,15 @@ import com.google.common.base.Stopwatch;
 import eu.project.ttc.align.BilingualAligner;
 import eu.project.ttc.align.RequiresSize2Exception;
 import eu.project.ttc.align.TranslationCandidate;
-import eu.project.ttc.eval.AlignmentEvalRun;
-import eu.project.ttc.eval.AlignmentEvalService;
-import eu.project.ttc.eval.AlignmentRecord;
-import eu.project.ttc.eval.ConfigListBuilder;
-import eu.project.ttc.eval.Corpus;
-import eu.project.ttc.eval.EvaluatedMethod;
-import eu.project.ttc.eval.RunTrace;
-import eu.project.ttc.eval.TermSuiteEvals;
-import eu.project.ttc.eval.TerminoConfig;
+import eu.project.ttc.eval.bilangaligner.AlignmentEvalRun;
+import eu.project.ttc.eval.bilangaligner.AlignmentEvalService;
+import eu.project.ttc.eval.bilangaligner.AlignmentRecord;
+import eu.project.ttc.eval.bilangaligner.ConfigListBuilder;
+import eu.project.ttc.eval.bilangaligner.EvaluatedMethod;
+import eu.project.ttc.eval.bilangaligner.RunTrace;
+import eu.project.ttc.eval.bilangaligner.TerminoConfig;
+import eu.project.ttc.eval.exceptions.DictionaryNotFoundException;
+import eu.project.ttc.eval.model.Corpus;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.tools.TermSuiteAlignerBuilder;
@@ -62,7 +62,7 @@ public class BilingualAlignementEvalRunner {
 									service.saveRunTrace(run);
 									service.writeResultLine(resultWriter, run);
 								}
-							} catch (DictionaryNotFound e) {
+							} catch (DictionaryNotFoundException e) {
 								LOGGER.warn("Skipping evaluation because dictionary not found: %s", e.getPath());
 							}
 						}
@@ -77,7 +77,7 @@ public class BilingualAlignementEvalRunner {
 		LOGGER.info("Finished evaluation of bilingual aligner in {}", sw.toString());
 	}
 	
-	public RunTrace runEval(AlignmentEvalRun run) throws IOException, DictionaryNotFound {
+	public RunTrace runEval(AlignmentEvalRun run) throws IOException, DictionaryNotFoundException {
 		RunTrace trace = run.getTrace();
 		
 		LOGGER.info(String.format("Running evaluation %s", run));
@@ -85,7 +85,7 @@ public class BilingualAlignementEvalRunner {
 
 		Path dicoPath = TermSuiteEvals.getDictionaryPath(run.getLangPair());
 		if(!dicoPath.toFile().isFile()) 
-			throw new DictionaryNotFound(dicoPath.toString());
+			throw new DictionaryNotFoundException(dicoPath.toString());
 		
 		TermIndex sourceTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getSource(), run.getTerminoConfig());
 		TermIndex targetTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getTarget(), run.getTerminoConfig());

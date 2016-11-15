@@ -1,8 +1,9 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.bilangaligner;
 
 import java.util.Optional;
 
 import eu.project.ttc.align.AlignmentMethod;
+import eu.project.ttc.eval.model.TermType;
 import eu.project.ttc.models.Term;
 
 public class AlignmentRecord {

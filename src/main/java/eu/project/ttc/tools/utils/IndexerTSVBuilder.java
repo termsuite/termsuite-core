@@ -123,7 +123,9 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 			} else
 				line.add(value.toString());
 		}
-		append(Integer.toString(currentTerm.getRank()), line.toArray(new String[line.size()]));
+		append(
+				currentTerm.getRank() == null ? "-" : Integer.toString(currentTerm.getRank()), 
+				line.toArray(new String[line.size()]));
 	}
 
 
