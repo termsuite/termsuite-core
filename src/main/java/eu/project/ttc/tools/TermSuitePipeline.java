@@ -70,7 +70,7 @@ import eu.project.ttc.engines.PilotSetterAE;
 import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
-import eu.project.ttc.engines.ScorerAE;
+import eu.project.ttc.engines.PostProcessorAE;
 import eu.project.ttc.engines.SemanticAlignerAE;
 import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.TermGathererAE;
@@ -2023,14 +2023,14 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aeScorer()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ScorerAE.class					
+					PostProcessorAE.class					
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
-			return aggregateAndReturn(ae, ScorerAE.TASK_NAME, 1);
+			return aggregateAndReturn(ae, PostProcessorAE.TASK_NAME, 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

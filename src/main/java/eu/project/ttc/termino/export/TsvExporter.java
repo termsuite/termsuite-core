@@ -8,12 +8,11 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.api.Traverser;
 import eu.project.ttc.api.TsvOptions;
-import eu.project.ttc.models.RelationProperty;
+import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
-import eu.project.ttc.utils.TermUtils;
 
 public class TsvExporter {
 	
@@ -47,8 +46,7 @@ public class TsvExporter {
 		
 		IndexerTSVBuilder tsv = new IndexerTSVBuilder(
 				writer,
-				Lists.newArrayList(options.properties()),
-				options.isShowScores()
+				Lists.newArrayList(options.properties())
 			);
 		
 		try {
@@ -56,14 +54,13 @@ public class TsvExporter {
 				tsv.writeHeaders();
 				
 			for(Term t:traverser.toList(termIndex)) {
-				tsv.startTerm(termIndex, t, "");
+				tsv.startTerm(termIndex, t);
 				
 				if(options.isShowVariants())
-					for(TermRelation tv:TermUtils.getVariations(termIndex, t)) {
+					for(TermRelation tv:termIndex.getOutboundRelations(t, RelationType.VARIATIONS)) {
 						tsv.addVariant(
 								termIndex, 
-								tv.getTo(), 
-								String.format("%.2f", tv.getPropertyDoubleValue(RelationProperty.VARIANT_SCORE)));
+								tv);
 					}
 			}
 			tsv.close();

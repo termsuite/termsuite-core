@@ -43,6 +43,9 @@ public enum TermProperty implements Property<Term> {
 	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class),
 	SPECIFICITY("specificity", "sp", "spec", Double.class),
 	FREQUENCY("frequency", "f", "freq", Integer.class),
+	ORTHOGRAPHIC_SCORE("OrthographicScore", "ortho", "ortho", Double.class),
+	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", "ifreq", Integer.class),
+	INDEPENDANCE("Independance", "ind", "ind", Double.class),
 	PILOT("pilot", "pilot", "pilot", String.class),
 	LEMMA("lemma", "lm", "lemma", String.class),
 	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class),
@@ -50,6 +53,7 @@ public enum TermProperty implements Property<Term> {
 	PATTERN("pattern", "p", "pattern", String.class),
 	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 
 	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class),
+	
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();

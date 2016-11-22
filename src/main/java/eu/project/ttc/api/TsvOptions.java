@@ -4,22 +4,22 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.models.Property;
 import eu.project.ttc.models.TermProperty;
 
 public class TsvOptions {
 	
-	private TermProperty[] properties = new TermProperty[] {TermProperty.GROUPING_KEY, TermProperty.FREQUENCY};
+	private Property<?>[] properties = new Property<?>[] {TermProperty.GROUPING_KEY, TermProperty.FREQUENCY};
 	private boolean showHeaders = true;
 	private boolean showVariants = true;
-	private boolean showScores = false;
 	private boolean showRank = true;
 	
-	public TsvOptions properties(Iterable<TermProperty> properties) {
-		List<TermProperty> list = Lists.newArrayList(properties);
-		return properties(list.toArray(new TermProperty[list.size()])); 
+	public TsvOptions properties(Iterable<Property<?>> properties) {
+		List<Property<?>> list = Lists.newArrayList(properties);
+		return properties(list.toArray(new Property<?>[list.size()])); 
 	}
 	
-	public TsvOptions properties(TermProperty... properties) {
+	public TsvOptions properties(Property<?>... properties) {
 		this.properties = properties;
 		return this;
 	}
@@ -28,15 +28,6 @@ public class TsvOptions {
 		return showHeaders;
 	}
 
-	public TsvOptions showScores(boolean showScores) {
-		this.showScores = showScores;
-		return this;
-	}
-	
-	public boolean isShowScores() {
-		return showScores;
-	}
-	
 	public TsvOptions showHeaders(boolean showHeaders) {
 		this.showHeaders = showHeaders;
 		return this;
@@ -60,7 +51,7 @@ public class TsvOptions {
 		return this;
 	}
 
-	public TermProperty[] properties() {
+	public Property<?>[] properties() {
 		return properties;
 	}
 }

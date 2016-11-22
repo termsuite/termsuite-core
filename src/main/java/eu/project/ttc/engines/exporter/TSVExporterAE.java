@@ -102,8 +102,7 @@ public class TSVExporterAE extends JCasAnnotator_ImplBase {
 				Charset.forName("UTF-8").newEncoder())) {
 			
 			TsvExporter.export(termIndexResource.getTermIndex(), writer, new TsvOptions()
-					.showHeaders(showHeaders)
-					.properties(properties));
+					.showHeaders(showHeaders));
 		} catch (Exception e) {
 			throw new AnalysisEngineProcessException(e);
 		}
