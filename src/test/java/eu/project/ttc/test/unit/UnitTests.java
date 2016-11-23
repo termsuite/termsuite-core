@@ -40,6 +40,7 @@ import eu.project.ttc.test.unit.metrics.SimilarityDistanceSpec;
 import eu.project.ttc.test.unit.models.ContextVectorSpec;
 import eu.project.ttc.test.unit.models.CrossTableSpec;
 import eu.project.ttc.test.unit.models.DocumentViewSpec;
+import eu.project.ttc.test.unit.models.MemoryTermIndexSpec;
 import eu.project.ttc.test.unit.models.TermSpec;
 import eu.project.ttc.test.unit.readers.TermsuiteJsonCasSerializerDeserializerSpec;
 import eu.project.ttc.test.unit.resources.PrefixTreeSpec;
@@ -90,6 +91,7 @@ import eu.project.ttc.utils.test.CompoundUtilsSpec;
 	TraverserSpec.class,
 	SynonymicRuleSpec.class,
 	ContextualizerSpec.class,
+	MemoryTermIndexSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,
 	})

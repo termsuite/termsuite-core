@@ -280,8 +280,8 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
-			.containsVariation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
+			.containsRelation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
+			.containsRelation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
 			;
 	}
 

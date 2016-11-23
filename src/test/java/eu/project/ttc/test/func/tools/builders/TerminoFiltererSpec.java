@@ -28,7 +28,7 @@ public class TerminoFiltererSpec {
 	public void test1() {
 		
 		assertThat(termIndex1)
-			.hasSize(3)
+			.hasNTerms(3)
 			.containsTerm("a: word2")
 			.containsTerm("n: word1")
 			.containsTerm("na: word1 word2")
@@ -39,7 +39,7 @@ public class TerminoFiltererSpec {
 			.execute();
 
 		assertThat(termIndex1)
-			.hasSize(1)
+			.hasNTerms(1)
 			.containsTerm("na: word1 word2")
 			;
 	}
@@ -48,7 +48,7 @@ public class TerminoFiltererSpec {
 	public void test2() {
 		
 		assertThat(termIndex1)
-		.hasSize(3)
+		.hasNTerms(3)
 		.containsTerm("a: word2")
 		.containsTerm("n: word1")
 		.containsTerm("na: word1 word2")
@@ -59,7 +59,7 @@ public class TerminoFiltererSpec {
 		.execute();
 		
 		assertThat(termIndex1)
-		.hasSize(0)
+		.hasNTerms(0)
 		;
 	}
 

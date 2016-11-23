@@ -254,12 +254,12 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("npn: phase du stator", RelationType.SYNTACTICAL, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation",RelationProperty.VARIATION_RULE,  "S-Ed-NA-PAN")
-			.containsVariation("na: machine asynchrone", RelationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", RelationProperty.VARIATION_RULE, "S-I-NA-AC")
+			.containsRelation("npn: phase du stator", RelationType.SYNTACTICAL, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
+			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
+			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
+			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
+			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation",RelationProperty.VARIATION_RULE,  "S-Ed-NA-PAN")
+			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", RelationProperty.VARIATION_RULE, "S-I-NA-AC")
 			;
 	}
 
@@ -314,23 +314,23 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testPrefixes() {
 		assertThat(termIndex)
-			.containsVariation("a: multipolaire", RelationType.IS_PREFIX_OF, "a: polaire")
-			.containsVariation("n: cofinancement", RelationType.IS_PREFIX_OF, "n: financement")
-			.containsVariation("a: tripale", RelationType.IS_PREFIX_OF, "n: pale")
-			.containsVariation("a: bipale", RelationType.IS_PREFIX_OF, "n: pale")
-			.containsVariation("a: asynchrone", RelationType.IS_PREFIX_OF, "a: synchrone")
-			.containsVariation("n: déréglementation", RelationType.IS_PREFIX_OF, "n: réglementation")
+			.containsRelation("a: multipolaire", RelationType.IS_PREFIX_OF, "a: polaire")
+			.containsRelation("n: cofinancement", RelationType.IS_PREFIX_OF, "n: financement")
+			.containsRelation("a: tripale", RelationType.IS_PREFIX_OF, "n: pale")
+			.containsRelation("a: bipale", RelationType.IS_PREFIX_OF, "n: pale")
+			.containsRelation("a: asynchrone", RelationType.IS_PREFIX_OF, "a: synchrone")
+			.containsRelation("n: déréglementation", RelationType.IS_PREFIX_OF, "n: réglementation")
 			;
 	}
 	
 	@Test
 	public void testDerivations() {
 		assertThat(termIndex)
-			.containsVariation("n: hydroélectricité", RelationType.DERIVES_INTO, "a: hydroélectrique")
-			.containsVariation("n: stator", RelationType.DERIVES_INTO, "a: statorique")
-			.containsVariation("n: usage", RelationType.DERIVES_INTO, "n: usager")
-			.containsVariation("n: support", RelationType.DERIVES_INTO, "n: supportage")
-			.containsVariation("n: commerce", RelationType.DERIVES_INTO, "a: commercial")
+			.containsRelation("n: hydroélectricité", RelationType.DERIVES_INTO, "a: hydroélectrique")
+			.containsRelation("n: stator", RelationType.DERIVES_INTO, "a: statorique")
+			.containsRelation("n: usage", RelationType.DERIVES_INTO, "n: usager")
+			.containsRelation("n: support", RelationType.DERIVES_INTO, "n: supportage")
+			.containsRelation("n: commerce", RelationType.DERIVES_INTO, "a: commercial")
 			;
 	}
 
