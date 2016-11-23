@@ -238,4 +238,9 @@ public class VariantRule {
 	public void setHelper(VariantHelper helper) {
 		this.helper = helper;
 	}
+	
+	@Override
+	public String toString() {
+		return getName();
+	}
 }
