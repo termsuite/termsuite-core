@@ -293,8 +293,6 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public void removeTerm(Term t) {
-		if(t.getGroupingKey().equals("npn: projet de démonstration"))
-			System.out.println("stop");
 		removeTermOnly(t);
 		occurrenceStore.removeTerm(t);
 	}
@@ -432,7 +430,7 @@ public class MemoryTermIndex implements TermIndex {
 			Set<RelationType> typeSet = Sets.newHashSet(types);
 			return this.outboundVariations.get(base).stream()
 					.filter(tv -> typeSet.contains(tv.getType()))
-					.collect(Collectors.toSet());
+					.collect(Collectors.toList());
 		}
 	}
 
