@@ -42,9 +42,11 @@
 package eu.project.ttc.engines;
 
 import java.math.BigInteger;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Optional;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -73,6 +75,7 @@ import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.models.index.CustomIndexStats;
 import eu.project.ttc.models.index.CustomTermIndex;
 import eu.project.ttc.models.index.TermIndexes;
+import eu.project.ttc.models.index.TermPair;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
@@ -103,6 +106,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	private BigInteger totalComparisons = BigInteger.valueOf(0);
 	private int nbComparisons = 0;
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
+	private Set<TermPair> foundPairs = new HashSet<>();
 
 	static class RunConfig {
 		String indexName;
@@ -183,6 +187,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 			gather(runConfig.indexName, runConfig.variantRuleIndex);
 			termIndex.dropCustomIndex(runConfig.indexName);
 		}
+		foundPairs = null;
 		
 	}
 	
@@ -229,6 +234,11 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 				for(ListIterator<Term> targetIt=list.listIterator(sourceIt.nextIndex()); targetIt.hasNext();) {
 					nbComparisons+=2;
 					target=targetIt.next();
+					
+					TermPair pair = new TermPair(source, target);
+					if(foundPairs.contains(pair))
+						continue;
+					
 					applyGatheringRules(variantRuleIndex, source, target);
 					applyGatheringRules(variantRuleIndex, target, source);
 					if(nbComparisons % OBSERVING_STEP == 0) 
@@ -266,7 +276,8 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 				target);
 		rel.setProperty(RelationProperty.VARIATION_RULE, matchingRule.getName());
 		termIndexResource.getTermIndex().addRelation(rel);
-		
+		foundPairs.add(new TermPair(source, target));
+
 		watch(source, target, rel);
 	}
 
