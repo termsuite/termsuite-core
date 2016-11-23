@@ -23,7 +23,6 @@
 
 package eu.project.ttc.termino.engines;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -32,8 +31,6 @@ import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.common.primitives.Doubles;
 
 import eu.project.ttc.engines.ExtensionDetecter;
 import eu.project.ttc.models.RelationProperty;
@@ -61,40 +58,23 @@ public class VariationScorer {
 		doExtensionScores(termIndex);
 		doFrequencyScores(termIndex);
 		doStrictnessScores(termIndex);
-		doVariantIndependanceScore(termIndex);
 		doVariantScores(termIndex);
 	}
 
 	public void doVariantScores(TermIndex termIndex) {
 		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
-			double extensionScore = relation.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE) != null ?
-					0.75*relation.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE) + 0.25*relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_RATIO) :
-						1;
+			double extensionScore = relation.getPropertyBooleanValue(RelationProperty.IS_EXTENSION) 
+					&& relation.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX) ?
+							0.75*relation.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE) + 0.25*relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_SCORE) 
+							: relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_SCORE);
+							
 			double score = relation.getPropertyDoubleValue(RelationProperty.STRICTNESS) == 1d ?
-					0.9 + 0.1*relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_RATIO) :
+					0.9 + 0.1*relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_SCORE) :
 						extensionScore;
 			relation.setProperty(
 					RelationProperty.VARIANT_SCORE, 
 					score);
 		});
-	}
-
-	public void doVariantIndependanceScore(TermIndex termIndex) {
-		for(Term term:termIndex.getTerms()) {
-			Collection<TermRelation> variations = termIndex.getOutboundRelations(term, RelationType.VARIATIONS);
-			
-			for(TermRelation variation:variations) {
-				int inclCount = 0;
-				for(TermRelation otherVariation:variations) {
-					if(otherVariation == variation)
-						continue;
-					if(TermUtils.isIncludedIn(variation.getTo(), otherVariation.getTo()))
-						inclCount += otherVariation.getTo().getFrequency();
-				}
-				double variantIndependance = 1 - Doubles.min(1d,((double)inclCount)/variation.getTo().getFrequency());
-				variation.setProperty(RelationProperty.VARIANT_INDEPENDANCE, variantIndependance);
-			}
-		}
 	}
 
 	public void doStrictnessScores(TermIndex termIndex) {
@@ -123,9 +103,11 @@ public class VariationScorer {
 		}
 		
 		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
-			double frequencyRatio = (double)relation.getTo().getFrequency()/maxVariantFrequencies.get(relation.getFrom());
+			Integer maxFreq = maxVariantFrequencies.get(relation.getFrom());
+			double frequency = (double)relation.getTo().getFrequency();
+			double frequencyRatio = frequency/maxFreq;
 
-			relation.setProperty(RelationProperty.FREQUENCY_RATIO, frequencyRatio);
+			relation.setProperty(RelationProperty.FREQUENCY_SCORE, frequencyRatio);
 		});
 	}
 

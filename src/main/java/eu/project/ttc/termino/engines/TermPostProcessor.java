@@ -131,13 +131,14 @@ public class TermPostProcessor {
 	private boolean filterVariation(TermRelation relation) {
 		Term variant = relation.getTo();
 		Term base = relation.getFrom();
-		if(relation.getPropertyDoubleValue(RelationProperty.VARIANT_INDEPENDANCE) < config.getVariantIndependanceTh()) {
+		Double variantIndependance = relation.getTo().getPropertyDoubleValue(TermProperty.INDEPENDANCE);
+		if(variantIndependance < config.getVariantIndependanceTh()) {
 			watchVariationRemoval(variant, base, 
 					"Removing variant <%s> because the variant independence score <%.2f> is under threshhold <%.2f>.",
-					relation.getPropertyDoubleValue(RelationProperty.VARIANT_INDEPENDANCE), this.config.getVariantIndependanceTh());
+					variantIndependance, this.config.getVariantIndependanceTh());
 			watchVariationRemoval(base, variant, 
 					"Removed as variant of term <%s> because the variant independence score <%.2f> is under threshhold <%.2f>.",
-					relation.getPropertyDoubleValue(RelationProperty.VARIANT_INDEPENDANCE), this.config.getVariantIndependanceTh());
+					variantIndependance, this.config.getVariantIndependanceTh());
 			return true;
 		} else if(relation.getPropertyDoubleValue(RelationProperty.VARIANT_SCORE) < config.getVariationScoreTh()) {
 			watchVariationRemoval(variant, base, 
@@ -147,26 +148,29 @@ public class TermPostProcessor {
 					"Removed as variant of term <%s> because the variation score <%.2f> is under threshhold <%.2f>.",
 					relation.getPropertyDoubleValue(RelationProperty.VARIANT_SCORE), this.config.getVariationScoreTh());
 			return true;
-		} else if(relation.isPropertySet(RelationProperty.AFFIX_GAIN)) {
-			if(relation.getPropertyDoubleValue(RelationProperty.AFFIX_GAIN) < config.getExtensionGainTh()) {
-				watchVariationRemoval(variant, base, 
-						"Removing variant <%s> because the extension gain score <%.2f> is under threshhold <%.2f>.",
-						relation.getPropertyDoubleValue(RelationProperty.AFFIX_GAIN), this.config.getExtensionGainTh());
-				watchVariationRemoval(base, variant, 
-						"Removing as variant of term <%s> because the extension gain score <%.2f> is under threshhold <%.2f>.",
-						relation.getPropertyDoubleValue(RelationProperty.AFFIX_GAIN), this.config.getExtensionGainTh());
-				
-				return true;
-			} else if(relation.getPropertyDoubleValue(RelationProperty.AFFIX_SPEC) < config.getExtensionSpecTh()) {
-				watchVariationRemoval(variant, base, 
-						"Removing variant <%s> because the extension specificity score <%.2f> is under threshhold <%.2f>.",
-						relation.getPropertyDoubleValue(RelationProperty.AFFIX_SPEC), this.config.getExtensionSpecTh());
-				watchVariationRemoval(base, variant, 
-						"Removing as variant of term <%s> because the extension specificity score <%.2f> is under threshhold <%.2f>.",
-						relation.getPropertyDoubleValue(RelationProperty.AFFIX_SPEC), this.config.getExtensionSpecTh());
-				
-				return true;
+		} else if(relation.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)) {
+			if(relation.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX)) {
+				if(relation.getPropertyDoubleValue(RelationProperty.AFFIX_GAIN) < config.getExtensionGainTh()) {
+					watchVariationRemoval(variant, base, 
+							"Removing variant <%s> because the extension gain score <%.2f> is under threshhold <%.2f>.",
+							relation.getPropertyDoubleValue(RelationProperty.AFFIX_GAIN), this.config.getExtensionGainTh());
+					watchVariationRemoval(base, variant, 
+							"Removing as variant of term <%s> because the extension gain score <%.2f> is under threshhold <%.2f>.",
+							relation.getPropertyDoubleValue(RelationProperty.AFFIX_GAIN), this.config.getExtensionGainTh());
+					
+					return true;
+				} else if(relation.getPropertyDoubleValue(RelationProperty.AFFIX_SPEC) < config.getExtensionSpecTh()) {
+					watchVariationRemoval(variant, base, 
+							"Removing variant <%s> because the extension specificity score <%.2f> is under threshhold <%.2f>.",
+							relation.getPropertyDoubleValue(RelationProperty.AFFIX_SPEC), this.config.getExtensionSpecTh());
+					watchVariationRemoval(base, variant, 
+							"Removing as variant of term <%s> because the extension specificity score <%.2f> is under threshhold <%.2f>.",
+							relation.getPropertyDoubleValue(RelationProperty.AFFIX_SPEC), this.config.getExtensionSpecTh());
+					
+					return true;
+				}
 			}
+			
 		}
 		return  false;
 	}
