@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.history.TermHistory;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
@@ -35,7 +36,27 @@ public class ExtensionDetecter {
 
 		setSize1Extensions(termIndex);
 		setSize2Extensions(termIndex);
+		setIsExtensionProperty(termIndex);
 	}
+
+	private void setIsExtensionProperty(TermIndex termIndex) {
+		termIndex
+			.getRelations()
+			.forEach(relation -> {
+				if(relation.getType() == RelationType.HAS_EXTENSION)
+					relation.setProperty(RelationProperty.IS_EXTENSION, true);
+				else {
+					boolean isExtension = termIndex
+						.getRelations(relation.getFrom(), relation.getTo(), RelationType.HAS_EXTENSION)
+						.findAny().isPresent();
+					relation.setProperty(
+							RelationProperty.IS_EXTENSION,
+							isExtension);
+				}
+			});
+		
+	}
+
 
 	public void setSize1Extensions(TermIndex termIndex) {
 		CustomTermIndex swtIndex = termIndex.createCustomIndex(

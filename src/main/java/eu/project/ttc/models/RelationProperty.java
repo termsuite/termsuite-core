@@ -10,14 +10,14 @@ public enum RelationProperty implements Property<TermRelation> {
 	SIMILARITY("Similarity", "sim", "sim", Double.class),
 	VARIANT_SCORE("Score", "vscore", "vscore", Double.class), 
 	IS_DISTRIBUTIONAL("Distributional", "distrib", "distrib", Boolean.class),
-	VARIANT_INDEPENDANCE("VariantIndependance", "vind", "vind", Double.class),
 	AFFIX_GAIN("AffixGain", "affgain", "affgain", Double.class),
 	AFFIX_ORTHOGRAPHIC_SCORE("AffixOrthographicScore", "affortho", "affortho", Double.class),
 	EXTENSION_SCORE("ExtensionScore", "extscore", "extscore", Double.class),
 	AFFIX_SPEC("AffixSpec", "affspec", "affspec", Double.class),
 	STRICTNESS("Strictness", "strictness", "strictness", Double.class),
-	FREQUENCY_RATIO("FrequencyRatio", "fratio", "fratio", Double.class),
+	FREQUENCY_SCORE("FrequencyScore", "freqScore", "freqScore", Double.class),
 	HAS_EXTENSION_AFFIX("HasExtensionAffix", "hasExtAffix", "hasExtAffix", Boolean.class),
+	IS_EXTENSION("IsExtension", "isExt", "isExt", Boolean.class),
 
 	;
 
