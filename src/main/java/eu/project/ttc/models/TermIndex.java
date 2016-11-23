@@ -102,7 +102,7 @@ public interface TermIndex {
 	 * @param types
 	 * @return
 	 */
-	public Collection<TermRelation> getInboundTermRelations(Term toTerm, RelationType... types);
+	public Collection<TermRelation> getInboundRelations(Term toTerm, RelationType... types);
 	public void addRelation(TermRelation relation);
 	public void removeRelation(TermRelation relation);
 
@@ -144,5 +144,7 @@ public interface TermIndex {
 	 */
 	public int getSpottedTermsNum();
 	public void setSpottedTermsNum(int nbSpottedTerms);
+
+	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types);
 
 }

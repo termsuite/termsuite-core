@@ -451,7 +451,7 @@ public class TermUtils {
 	}
 
 	public static Collection<TermRelation> getBases(TermIndex termIndex, Term current) {
-		return termIndex.getInboundTermRelations(current,
+		return termIndex.getInboundRelations(current,
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,
