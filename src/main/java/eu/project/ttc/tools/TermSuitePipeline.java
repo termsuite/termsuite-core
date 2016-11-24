@@ -68,9 +68,9 @@ import eu.project.ttc.engines.MateLemmatizerTagger;
 import eu.project.ttc.engines.Merger;
 import eu.project.ttc.engines.PilotSetterAE;
 import eu.project.ttc.engines.PipelineObserver;
+import eu.project.ttc.engines.PostProcessorAE;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
-import eu.project.ttc.engines.PostProcessorAE;
 import eu.project.ttc.engines.SemanticAlignerAE;
 import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.TermGathererAE;
@@ -141,6 +141,7 @@ import eu.project.ttc.resources.ReferenceTermList;
 import eu.project.ttc.resources.SimpleWordSet;
 import eu.project.ttc.resources.SuffixDerivationList;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.resources.TermSuiteMemoryUIMAResource;
 import eu.project.ttc.resources.TermSuitePipelineObserver;
 import eu.project.ttc.resources.YamlVariantRules;
 import eu.project.ttc.stream.CasConsumer;
@@ -148,6 +149,7 @@ import eu.project.ttc.stream.ConsumerRegistry;
 import eu.project.ttc.stream.DocumentProvider;
 import eu.project.ttc.stream.DocumentStream;
 import eu.project.ttc.stream.StreamingCasConsumer;
+import eu.project.ttc.termino.engines.ScorerConfig;
 import eu.project.ttc.types.FixedExpression;
 import eu.project.ttc.types.TermOccAnnotation;
 import eu.project.ttc.types.WordAnnotation;
@@ -2020,7 +2022,7 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeScorer()   {
+	public TermSuitePipeline aeScorer(ScorerConfig scorerConfig)   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					PostProcessorAE.class					
@@ -2029,6 +2031,18 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
+			
+			TermSuiteResourceManager.getInstance().register("ScorerConfigResourceURI", scorerConfig);
+			ExternalResourceDescription scorerConfigDescription = ExternalResourceFactory.createExternalResourceDescription(
+					TermSuiteMemoryUIMAResource.class,
+					"ScorerConfigResourceURI"
+				);
+			ExternalResourceFactory.bindResource(
+					ae,
+					PostProcessorAE.SCORER_CONFIG, 
+					scorerConfigDescription 
+				);
+
 
 			return aggregateAndReturn(ae, PostProcessorAE.TASK_NAME, 1);
 		} catch(Exception e) {

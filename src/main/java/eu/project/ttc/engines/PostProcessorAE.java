@@ -39,8 +39,9 @@ import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
+import eu.project.ttc.resources.TermSuiteMemoryUIMAResource;
 import eu.project.ttc.termino.engines.TermPostProcessor;
-import eu.project.ttc.termino.engines.VariantScorerConfig;
+import eu.project.ttc.termino.engines.ScorerConfig;
 
 public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(PostProcessorAE.class);
@@ -55,14 +56,23 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
 
+	public static final String SCORER_CONFIG = "ScorerConfig";
+	@ExternalResource(key=SCORER_CONFIG, mandatory=false)
+	protected TermSuiteMemoryUIMAResource<ScorerConfig> scorerConfigResource;
+
 	
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
+
+	
+	private Optional<ScorerConfig> scorerConfig = Optional.empty();
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
+		if(scorerConfigResource != null)
+			scorerConfig = Optional.of(scorerConfigResource.getResourceObject());
 	}
 	
 	@Override
@@ -78,8 +88,9 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 				"Post-processing terms and variants for TermIndex {}", 
 				this.termIndexResource.getTermIndex().getName());
 		TermIndex termIndex = termIndexResource.getTermIndex();
-		VariantScorerConfig config = termIndex.getLang().getScorerConfig();
-		new TermPostProcessor(config)
+		if(!scorerConfig.isPresent())
+			scorerConfig = Optional.of(termIndex.getLang().getScorerConfig());
+		new TermPostProcessor(scorerConfig.get())
 			.setHistory(historyResource.getHistory())
 			.postprocess(termIndex);
 	}

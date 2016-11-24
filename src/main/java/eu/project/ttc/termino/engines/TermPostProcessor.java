@@ -47,11 +47,11 @@ import eu.project.ttc.utils.StringUtils;
 public class TermPostProcessor {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermPostProcessor.class);
 
-	private VariantScorerConfig config;
+	private ScorerConfig config;
 	
 	private TermHistory history;
 	
-	public TermPostProcessor(VariantScorerConfig config) {
+	public TermPostProcessor(ScorerConfig config) {
 		super();
 		this.config = config;
 	}

@@ -57,7 +57,6 @@ import eu.project.ttc.tools.TermSuiteResource;
 public class TermUtils {
 
 	private static final String MSG_NOT_AN_EXTENSION = "Term '%s' is no extension of term '%s'";
-	private static final String MSG_NOT_AN_AFFIX = "Term '%s' is contained into term '%s', but not an affix.";
 
 
 	/**
@@ -242,10 +241,14 @@ public class TermUtils {
 		else if(index + base.getWords().size() == extension.getWords().size())
 			isPrefix = false; // suffix
 		else {
-			throw new IllegalStateException(String.format(MSG_NOT_AN_AFFIX, 
-					extension,
-					base)
-				);
+			/*
+			 * Happens sometimes. 
+			 * 
+			 * base = 		'nnnn: hd spring spring spring' 
+			 * extension = 	'nn: spring spring'
+			 * 
+			 * Do nothing.
+			 */
 		}
 		
 		if(isPrefix) 

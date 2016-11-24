@@ -23,7 +23,7 @@
 
 package eu.project.ttc.termino.engines;
 
-public class VariantScorerConfig {
+public class ScorerConfig {
 	private double extensionSpecTh = 0.1;
 	private double extensionGainTh = 0.1;
 	private double variantIndependanceTh = 0.5;
@@ -31,7 +31,7 @@ public class VariantScorerConfig {
 	private double orthographicScoreTh = 0.55;
 	private double termIndependanceTh = 0.10;
 
-	private VariantScorerConfig() {
+	private ScorerConfig() {
 	}
 
 	public double getExtensionSpecTh() {
@@ -40,6 +40,16 @@ public class VariantScorerConfig {
 
 	public void setExtensionSpecTh(double extensionSpecTh) {
 		this.extensionSpecTh = extensionSpecTh;
+	}
+	
+	public ScorerConfig noFiltering() {
+		extensionSpecTh = 0;
+		extensionGainTh = 0;
+		variantIndependanceTh = 0;
+		variationScoreTh = 0;
+		orthographicScoreTh = 0;
+		termIndependanceTh = 0;
+		return this;
 	}
 
 	public double getExtensionGainTh() {
@@ -82,19 +92,19 @@ public class VariantScorerConfig {
 		this.termIndependanceTh = termIndependanceTh;
 	}
 
-	public static VariantScorerConfig create(double variantIndependenceScoreThreshold, 
+	public static ScorerConfig create(double variantIndependenceScoreThreshold, 
 			double variantExtGainThreshold, 
 			double variantExtSpecThreshold, 
 			double variantScoreThreshold) {
-		VariantScorerConfig scorerConfig = create();
+		ScorerConfig scorerConfig = create();
 		scorerConfig.setExtensionGainTh(variantExtGainThreshold);
 		scorerConfig.setExtensionSpecTh(variantExtSpecThreshold);
 		scorerConfig.setVariantIndependanceTh(variantIndependenceScoreThreshold);
 		scorerConfig.setVariationScoreTh(variantScoreThreshold);
 		return scorerConfig;
 	}
-	public static VariantScorerConfig create() {
-		return new VariantScorerConfig();
+	public static ScorerConfig create() {
+		return new ScorerConfig();
 	}
 
 }
