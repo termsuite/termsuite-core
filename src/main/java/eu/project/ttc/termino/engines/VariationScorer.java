@@ -23,9 +23,6 @@
 
 package eu.project.ttc.termino.engines;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -56,8 +53,7 @@ public class VariationScorer {
 		LOGGER.debug("Scorying variations in term index {}", termIndex.getName());
 
 		doExtensionScores(termIndex);
-		doFrequencyScores(termIndex);
-		doStrictnessScores(termIndex);
+		doRelationScores(termIndex);
 		doVariantScores(termIndex);
 	}
 
@@ -65,11 +61,12 @@ public class VariationScorer {
 		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
 			double extensionScore = relation.getPropertyBooleanValue(RelationProperty.IS_EXTENSION) 
 					&& relation.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX) ?
-							0.75*relation.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE) + 0.25*relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_SCORE) 
-							: relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_SCORE);
+							0.75*relation.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE) 
+								+ 0.25*relation.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN) 
+							: relation.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN);
 							
 			double score = relation.getPropertyDoubleValue(RelationProperty.STRICTNESS) == 1d ?
-					0.9 + 0.1*relation.getPropertyDoubleValue(RelationProperty.FREQUENCY_SCORE) :
+					0.9 + 0.1*relation.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN) :
 						extensionScore;
 			relation.setProperty(
 					RelationProperty.VARIANT_SCORE, 
@@ -77,37 +74,17 @@ public class VariationScorer {
 		});
 	}
 
-	public void doStrictnessScores(TermIndex termIndex) {
+	public void doRelationScores(TermIndex termIndex) {
 		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
+			double sourceGain = Math.log10((double)relation.getTo().getFrequency()/relation.getFrom().getFrequency());
+			relation.setProperty(RelationProperty.SOURCE_GAIN, 
+					sourceGain);
+
 			relation.setProperty(RelationProperty.STRICTNESS, 
 					TermUtils.getStrictness(
 					termIndex.getOccurrenceStore(), 
 					relation.getTo(), 
 					relation.getFrom()));
-		});
-	}
-
-	public void doFrequencyScores(TermIndex termIndex) {
-		Map<Term, Integer> maxVariantFrequencies = new HashMap<>();
-		for(Term t:termIndex.getTerms()) {
-			Optional<Integer> max = termIndex.getOutboundRelations(t, RelationType.VARIATIONS)
-				.stream()
-				.map(r -> r.getTo().getFrequency())
-				.reduce(Integer::max);
-			
-			if(max.isPresent())
-				maxVariantFrequencies.put(
-					t, 
-					max.get()
-				);
-		}
-		
-		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
-			Integer maxFreq = maxVariantFrequencies.get(relation.getFrom());
-			double frequency = (double)relation.getTo().getFrequency();
-			double frequencyRatio = frequency/maxFreq;
-
-			relation.setProperty(RelationProperty.FREQUENCY_SCORE, frequencyRatio);
 		});
 	}
 
@@ -142,9 +119,13 @@ public class VariationScorer {
 								RelationProperty.HAS_EXTENSION_AFFIX, 
 								true);
 					
-					double affixGain = (double)from.getFrequency()/affix.getFrequency();
+					double affixGain = Math.log10((double)variation.getTo().getFrequency()/affix.getFrequency());
 					variation.setProperty(RelationProperty.AFFIX_GAIN, 
 							affixGain);
+
+					double affixRatio = Math.log10((double)affix.getFrequency()/from.getFrequency());
+					variation.setProperty(RelationProperty.AFFIX_RATIO, 
+							affixRatio);
 
 					
 					double affixSpec = (double)affix.getPropertyValue(TermProperty.SPECIFICITY);

@@ -43,12 +43,12 @@ public class ScorerConfig {
 	}
 	
 	public ScorerConfig noFiltering() {
-		extensionSpecTh = 0;
-		extensionGainTh = 0;
-		variantIndependanceTh = 0;
-		variationScoreTh = 0;
-		orthographicScoreTh = 0;
-		termIndependanceTh = 0;
+		extensionSpecTh = -Double.MAX_VALUE;
+		extensionGainTh = -Double.MAX_VALUE;
+		variantIndependanceTh = -Double.MAX_VALUE;
+		variationScoreTh = -Double.MAX_VALUE;
+		orthographicScoreTh = -Double.MAX_VALUE;
+		termIndependanceTh = -Double.MAX_VALUE;
 		return this;
 	}
 

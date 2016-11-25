@@ -1,8 +1,5 @@
 package eu.project.ttc.test.unit.models;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 

@@ -3,7 +3,6 @@ package eu.project.ttc.termino.export;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -14,7 +13,6 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import eu.project.ttc.api.TermSuiteException;
-import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;

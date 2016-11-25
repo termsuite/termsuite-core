@@ -40,8 +40,8 @@ import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.resources.TermSuiteMemoryUIMAResource;
-import eu.project.ttc.termino.engines.TermPostProcessor;
 import eu.project.ttc.termino.engines.ScorerConfig;
+import eu.project.ttc.termino.engines.TermPostProcessor;
 
 public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(PostProcessorAE.class);
@@ -59,11 +59,9 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	public static final String SCORER_CONFIG = "ScorerConfig";
 	@ExternalResource(key=SCORER_CONFIG, mandatory=false)
 	protected TermSuiteMemoryUIMAResource<ScorerConfig> scorerConfigResource;
-
 	
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
-	
 	private Optional<ScorerConfig> scorerConfig = Optional.empty();
 
 	@Override

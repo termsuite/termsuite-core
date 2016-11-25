@@ -8,18 +8,18 @@ public enum RelationProperty implements Property<TermRelation> {
 	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
 	DERIVATION_TYPE("DerivationType", "dtype", "dtype", String.class),
 	SIMILARITY("Similarity", "sim", "sim", Double.class),
-	VARIANT_SCORE("Score", "vscore", "vscore", Double.class), 
+	VARIANT_SCORE("Score", "vScore", "vScore", Double.class), 
 	IS_DISTRIBUTIONAL("Distributional", "distrib", "distrib", Boolean.class),
-	AFFIX_GAIN("AffixGain", "affgain", "affgain", Double.class),
-	AFFIX_ORTHOGRAPHIC_SCORE("AffixOrthographicScore", "affortho", "affortho", Double.class),
-	EXTENSION_SCORE("ExtensionScore", "extscore", "extscore", Double.class),
-	AFFIX_SPEC("AffixSpec", "affspec", "affspec", Double.class),
+	AFFIX_ORTHOGRAPHIC_SCORE("AffixOrthographicScore", "affOrtho", "affOrtho", Double.class),
+	EXTENSION_SCORE("ExtensionScore", "extScore", "extScore", Double.class),
+	AFFIX_SPEC("AffixSpec", "affSpec", "affSpec", Double.class),
 	STRICTNESS("Strictness", "strictness", "strictness", Double.class),
-	FREQUENCY_SCORE("FrequencyScore", "freqScore", "freqScore", Double.class),
 	HAS_EXTENSION_AFFIX("HasExtensionAffix", "hasExtAffix", "hasExtAffix", Boolean.class),
-	IS_EXTENSION("IsExtension", "isExt", "isExt", Boolean.class),
-
-	;
+	IS_EXTENSION("IsExtension", "isExt", "isExt", Boolean.class), 
+	SOURCE_GAIN("SourceGain", "srcGain", "srcGain", Double.class),
+	AFFIX_GAIN("AffixGain", "affGain", "affGain", Double.class),
+	AFFIX_RATIO("AffixRatio", "affRatio", "affRatio", Double.class),
+;
 
 	private String propertyName;
 	private String propertyShortName;
