@@ -2075,8 +2075,7 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aeMerger()   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					Merger.class,
-					Merger.SIMILARITY_THRESHOLD, 0.9f
+					Merger.class
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resTermIndex());

@@ -424,7 +424,9 @@ public class TermSuiteTerminoCLI {
 			
 			pipeline.aeExtensionDetector()
 				.aeScorer(ScorerConfig.create())
-				.aeRanker(TermProperty.SPECIFICITY, true);
+				.aeRanker(TermProperty.SPECIFICITY, true)
+				.aeMerger()
+				;
 			
 			
 			// filtering

@@ -78,6 +78,11 @@ public class TerminoExtractor {
 	 */
 	private boolean preprocessed = false;
 	
+	
+	private boolean mergeGraphicalVariants = true;
+
+	
+	
 	/*
 	 * The maximum number of terms allowed in memory. empty 
 	 * if maxSizeFiltering is deactivated.
@@ -249,6 +254,11 @@ public class TerminoExtractor {
 		return this;
 	}
 
+	public TerminoExtractor disableGraphVariantMerging() {
+		this.mergeGraphicalVariants = false;
+		return this;
+	}
+
 	public TerminoExtractor setTreeTaggerHome(String treeTaggerHome) {
 		this.treeTaggerHome = treeTaggerHome;
 		return this;
@@ -391,6 +401,9 @@ public class TerminoExtractor {
 		if(scoringEnabled)
 			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig())
 					.aeRanker(TermProperty.SPECIFICITY, true);
+
+		if(mergeGraphicalVariants)
+			pipeline.aeMerger();
 
 		if(postFilterConfig.isPresent()) 
 			PipelineUtils.filter(pipeline, postFilterConfig.get());
