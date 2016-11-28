@@ -30,6 +30,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.project.ttc.engines.ExtensionDetecter;
+import eu.project.ttc.metrics.LinearNormalizer;
+import eu.project.ttc.metrics.MinMaxNormalizer;
+import eu.project.ttc.metrics.Normalizer;
 import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
@@ -52,22 +55,42 @@ public class VariationScorer {
 	public void score(TermIndex termIndex) {
 		LOGGER.debug("Scorying variations in term index {}", termIndex.getName());
 
-		doExtensionScores(termIndex);
 		doRelationScores(termIndex);
+		normalizeSourceGain(termIndex);
+		doExtensionScores(termIndex);
+		normalizeExtensionScores(termIndex);
 		doVariantScores(termIndex);
+	}
+
+	private void normalizeSourceGain(TermIndex termIndex) {
+		final Normalizer normalizer = new LinearNormalizer(0.33, 1);
+		
+		termIndex.getRelations()
+			.filter(r -> r.isPropertySet(RelationProperty.SOURCE_GAIN))
+			.forEach(r -> 
+				r.setProperty(RelationProperty.NORMALIZED_SOURCE_GAIN, 
+						normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN))));
+	}
+
+	private void normalizeExtensionScores(TermIndex termIndex) {
+		final Normalizer normalizer = new MinMaxNormalizer(termIndex
+				.getRelations()
+				.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
+				.map(r -> r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))
+				.collect(Collectors.toList()));
+		
+		termIndex.getRelations()
+			.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
+			.forEach(r -> 
+					r.setProperty(RelationProperty.NORMALIZED_EXTENSION_SCORE, 
+							normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))));
 	}
 
 	public void doVariantScores(TermIndex termIndex) {
 		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
-			double extensionScore = relation.getPropertyBooleanValue(RelationProperty.IS_EXTENSION) 
-					&& relation.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX) ?
-							0.75*relation.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE) 
-								+ 0.25*relation.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN) 
-							: relation.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN);
-							
-			double score = relation.getPropertyDoubleValue(RelationProperty.STRICTNESS) == 1d ?
-					0.9 + 0.1*relation.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN) :
-						extensionScore;
+			double score = relation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
+							0.91*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
+							0.89 + 0.1*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
 			relation.setProperty(
 					RelationProperty.VARIANT_SCORE, 
 					score);
@@ -131,8 +154,11 @@ public class VariationScorer {
 					double affixSpec = (double)affix.getPropertyValue(TermProperty.SPECIFICITY);
 					variation.setProperty(RelationProperty.AFFIX_SPEC, 
 							affixSpec);
-					
-					
+
+					double affixScore = (3*affixSpec + 2*affixGain) / 5;
+					variation.setProperty(RelationProperty.AFFIX_SCORE, 
+							affixScore);
+
 					double orthographicScore = 1d;
 					for(TermWord tw:affix.getWords())
 						orthographicScore = orthographicScore * StringUtils.getOrthographicScore(tw.getWord().getLemma());
@@ -140,17 +166,38 @@ public class VariationScorer {
 							orthographicScore);
 					
 					
-					double root = 2d;
-					double w = 3d; // gain weight
-					double extensionScore = orthographicScore * Math.pow((w*Math.pow(affixGain, root) + Math.pow(affixSpec, root))/(1+w),1d/root);
-
-					variation.setProperty(RelationProperty.EXTENSION_SCORE, 
-							extensionScore);
 				} 
 			}
-		}
+		} // end for terms
 		
+
+		// normalize affix score
+		final Normalizer affixScoreNormalizer = new MinMaxNormalizer(termIndex
+				.getRelations()
+				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
+				.map(r -> r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE))
+				.collect(Collectors.toList()));
 		
+		termIndex
+			.getRelations()
+			.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
+			.forEach(r -> {
+					r.setProperty(
+								RelationProperty.NORMALIZED_AFFIX_SCORE, 
+								affixScoreNormalizer.normalize(r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE)));
+				}
+			);
 		
+
+		// compute global extension score
+		termIndex.getRelations()
+			.filter(rel -> rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX) && rel.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX))
+			.forEach(rel -> {
+				double extensionScore = (rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN)
+								+ 0.3 * rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_AFFIX_SCORE));
+					
+				rel.setProperty(RelationProperty.EXTENSION_SCORE, 
+						extensionScore);
+		});
 	}
 }

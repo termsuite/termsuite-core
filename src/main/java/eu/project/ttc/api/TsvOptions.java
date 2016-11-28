@@ -13,6 +13,7 @@ public class TsvOptions {
 	private boolean showHeaders = true;
 	private boolean showVariants = true;
 	private boolean showRank = true;
+	private int maxVariantsPerTerm = Integer.MAX_VALUE;
 	
 	public TsvOptions properties(Iterable<Property<?>> properties) {
 		List<Property<?>> list = Lists.newArrayList(properties);
@@ -53,5 +54,14 @@ public class TsvOptions {
 
 	public Property<?>[] properties() {
 		return properties;
+	}
+
+	public TsvOptions maxVariantsPerTerm(int maxVariantsPerTerm) {
+		this.maxVariantsPerTerm = maxVariantsPerTerm;
+		return this;
+	}
+	
+	public int getMaxVariantsPerTerm() {
+		return maxVariantsPerTerm;
 	}
 }

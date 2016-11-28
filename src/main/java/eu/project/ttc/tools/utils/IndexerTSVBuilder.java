@@ -137,6 +137,8 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	private String getPropertyValue(Comparable<?> value) {
 		if (value instanceof Integer || value instanceof Long)
 			return value.toString();
+		else if(value instanceof Boolean) 
+			return (boolean)value ? "1" : "0";
 		else if(value instanceof Double || value instanceof Float) {
 			return String.format(SPEC_FORMAT, value);
 		} else if(value == null)

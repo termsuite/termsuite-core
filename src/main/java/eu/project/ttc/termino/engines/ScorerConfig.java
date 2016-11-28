@@ -38,8 +38,9 @@ public class ScorerConfig {
 		return extensionSpecTh;
 	}
 
-	public void setExtensionSpecTh(double extensionSpecTh) {
+	public ScorerConfig setExtensionSpecTh(double extensionSpecTh) {
 		this.extensionSpecTh = extensionSpecTh;
+		return this;
 	}
 	
 	public ScorerConfig noFiltering() {
@@ -56,40 +57,45 @@ public class ScorerConfig {
 		return extensionGainTh;
 	}
 
-	public void setExtensionGainTh(double extensionGainTh) {
+	public ScorerConfig setExtensionGainTh(double extensionGainTh) {
 		this.extensionGainTh = extensionGainTh;
+		return this;
 	}
 
 	public double getVariantIndependanceTh() {
 		return variantIndependanceTh;
 	}
 
-	public void setVariantIndependanceTh(double variantIndependanceTh) {
+	public ScorerConfig setVariantIndependanceTh(double variantIndependanceTh) {
 		this.variantIndependanceTh = variantIndependanceTh;
+		return this;
 	}
 
 	public double getVariationScoreTh() {
 		return variationScoreTh;
 	}
 
-	public void setVariationScoreTh(double variationScoreTh) {
+	public ScorerConfig setVariationScoreTh(double variationScoreTh) {
 		this.variationScoreTh = variationScoreTh;
+		return this;
 	}
 
 	public double getOrthographicScoreTh() {
 		return orthographicScoreTh;
 	}
 
-	public void setOrthographicScoreTh(double orthographicScoreTh) {
+	public ScorerConfig setOrthographicScoreTh(double orthographicScoreTh) {
 		this.orthographicScoreTh = orthographicScoreTh;
+		return this;
 	}
 
 	public double getTermIndependanceTh() {
 		return termIndependanceTh;
 	}
 
-	public void setTermIndependanceTh(double termIndependanceTh) {
+	public ScorerConfig setTermIndependanceTh(double termIndependanceTh) {
 		this.termIndependanceTh = termIndependanceTh;
+		return this;
 	}
 
 	public static ScorerConfig create(double variantIndependenceScoreThreshold, 

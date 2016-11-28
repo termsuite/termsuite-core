@@ -38,6 +38,7 @@ import com.google.common.collect.Maps;
  */
 public enum TermProperty implements Property<Term> {
 	RANK("rank", "#", "rank", Integer.class),
+	IS_SINGLE_WORD("isSingleWord", "swt", "swt", Boolean.class),
 	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", "dfreq", Integer.class),
 	FREQUENCY_NORM("frequencyNorm", "fnorm", "f_norm", Double.class),
 	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class),
@@ -52,7 +53,8 @@ public enum TermProperty implements Property<Term> {
 	GROUPING_KEY("groupingKey", "gkey", "key", String.class),
 	PATTERN("pattern", "p", "pattern", String.class),
 	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 
-	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class),
+	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class), 
+	SWT_SIZE("SwtSize", "swtSize", "swtSize", Integer.class),
 	
 	;
 	

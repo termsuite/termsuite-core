@@ -8,10 +8,10 @@ import com.google.common.collect.Lists;
 import eu.project.ttc.api.TermSuiteException;
 import eu.project.ttc.api.Traverser;
 import eu.project.ttc.api.TsvOptions;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.RelationType;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermRelation;
 import eu.project.ttc.tools.utils.IndexerTSVBuilder;
 
 public class TsvExporter {
@@ -36,7 +36,6 @@ public class TsvExporter {
 	public static void export(TermIndex termIndex, Writer writer,  TsvOptions options) {
 		new TsvExporter(termIndex, writer, Traverser.create(), options).doExport();
 	}
-
 	
 	public static void export(TermIndex termIndex, Writer writer, Traverser traverser, TsvOptions options) {
 		new TsvExporter(termIndex, writer, traverser, options).doExport();
@@ -44,7 +43,7 @@ public class TsvExporter {
 
 	private void doExport() {
 		
-		IndexerTSVBuilder tsv = new IndexerTSVBuilder(
+		final IndexerTSVBuilder tsv = new IndexerTSVBuilder(
 				writer,
 				Lists.newArrayList(options.properties())
 			);
@@ -57,11 +56,19 @@ public class TsvExporter {
 				tsv.startTerm(termIndex, t);
 				
 				if(options.isShowVariants())
-					for(TermRelation tv:termIndex.getOutboundRelations(t, RelationType.VARIATIONS)) {
-						tsv.addVariant(
-								termIndex, 
-								tv);
-					}
+					termIndex.getOutboundRelations(t, RelationType.VARIATIONS)
+						.stream()
+						.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
+						.limit(options.getMaxVariantsPerTerm())
+						.forEach(tv -> {
+							try {
+								tsv.addVariant(
+										termIndex, 
+										tv);
+							} catch (IOException e) {
+								throw new TermSuiteException(e);
+							}
+					});
 			}
 			tsv.close();
 		} catch (IOException e) {

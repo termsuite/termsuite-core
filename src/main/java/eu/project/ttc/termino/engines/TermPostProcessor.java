@@ -24,8 +24,11 @@
 package eu.project.ttc.termino.engines;
 
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang.mutable.MutableInt;
+import org.assertj.core.util.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,6 +70,39 @@ public class TermPostProcessor {
 		// Score terms 
 		new TermScorer().score(termIndex);
 		
+		// Score variations
+		new VariationScorer().score(termIndex);
+		
+		// Extract variants that are base terms
+		extractBaseTerms(termIndex);
+		
+		// Filter extensions
+		filterExtensions(termIndex);
+		
+		// Filter relations
+		Set<TermRelation> remRelations = termIndex.getRelations(RelationType.VARIATIONS)
+			.filter(this::filterVariation)
+			.collect(Collectors.toSet());
+		LOGGER.debug("Filtered {} variants out of {} variants", remRelations.size(), termIndex.getRelations(RelationType.VARIATIONS).count());
+		
+
+		// Rank variations extensions
+		termIndex.getTerms().forEach(t-> {
+			final MutableInt vrank = new MutableInt(0);
+			termIndex.getOutboundRelations(t, RelationType.VARIATIONS)
+				.stream()
+				.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
+				.forEach(rel -> {
+					vrank.increment();
+					rel.setProperty(RelationProperty.VARIATION_RANK, vrank.intValue());
+				});
+		});
+
+		remRelations
+			.stream()
+			.forEach(termIndex::removeRelation);
+
+		
 		// Filter terms with bad orthograph and no independance
 		Set<Term> remTerms = termIndex.getTerms().stream()
 			.filter(this::filterTerm)
@@ -76,30 +112,52 @@ public class TermPostProcessor {
 			.stream()
 			.forEach(termIndex::removeTerm);
 
-		// Score variations
-		new VariationScorer().score(termIndex);
+	}
+
+	private void extractBaseTerms(TermIndex termIndex) {
 		
-		// Filter variations
-		Set<TermRelation> remRelations = termIndex.getRelations(RelationType.VARIATIONS)
-			.filter(this::filterVariation)
-			.collect(Collectors.toSet());
-		LOGGER.debug("Filtered {} variants out of {} variants", remRelations.size(), termIndex.getRelations(RelationType.VARIATIONS).count());
+	}
+
+	private void filterExtensions(TermIndex termIndex) {
+		Predicate<? super TermRelation> isExtension = rel -> 
+				rel.isPropertySet(RelationProperty.IS_EXTENSION) 
+				&& rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION);
 		
-		remRelations
-			.stream()
-			.forEach(termIndex::removeRelation);
+		Set<TermRelation> remTargets = Sets.newHashSet();
 
 		
-		// rank score model
-//		for(ScoredTerm t:scoredModel.getTerms()) {
-//			rank ++;
-//			t.setRank(rank);
-//			if(history != null && history.isWatched(t.getTerm()))
-//				history.saveEvent(
-//						t.getTerm().getGroupingKey(), 
-//						this.getClass(), 
-//						"Set term rank: " + rank);
-//		}
+		/*
+		 *	Remove target term if it has no affix
+		 */
+		termIndex
+			.getRelations()
+			.filter(isExtension)
+			.filter(rel -> 
+						rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX)
+							&&	!rel.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX))
+			.forEach(remTargets::add);
+
+		
+		/*
+		 *	Remove target term if its frequency is 1 
+		 */
+		termIndex
+			.getRelations()
+			.filter(isExtension)
+			.filter(rel -> rel.getTo().getFrequency() == 1 && rel.getFrom().getFrequency() > 1)
+			.forEach(remTargets::add);
+		
+		
+		
+		/*
+		 * Actually remove terms
+		 */
+		remTargets.stream().forEach(rel -> {
+			watchTermRemoval(rel.getTo(), String.format("Removing term because it is the poor extension of term %s ", rel.getFrom()));
+		});
+		
+		LOGGER.debug("Removing {} extension targets from term index", remTargets.size());
+		remTargets.stream().map(TermRelation::getTo).forEach(termIndex::removeTerm);
 	}
 
 	private boolean filterTerm(Term term) {
@@ -187,4 +245,13 @@ public class TermPostProcessor {
 							th)
 					);
 	}
+
+	private void watchTermRemoval(Term term, String msg) {
+		if(history != null && history.isWatched(term))
+			history.saveEvent(
+					term.getGroupingKey(), 
+					this.getClass(), 
+					msg);
+	}
+
 }

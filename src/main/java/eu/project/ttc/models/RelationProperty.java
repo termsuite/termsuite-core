@@ -5,6 +5,7 @@ import java.util.Comparator;
 import com.google.common.collect.ComparisonChain;
 
 public enum RelationProperty implements Property<TermRelation> {
+	VARIATION_RANK("VariationRank", "vrank", "vrank", Integer.class),
 	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
 	DERIVATION_TYPE("DerivationType", "dtype", "dtype", String.class),
 	SIMILARITY("Similarity", "sim", "sim", Double.class),
@@ -19,7 +20,11 @@ public enum RelationProperty implements Property<TermRelation> {
 	SOURCE_GAIN("SourceGain", "srcGain", "srcGain", Double.class),
 	AFFIX_GAIN("AffixGain", "affGain", "affGain", Double.class),
 	AFFIX_RATIO("AffixRatio", "affRatio", "affRatio", Double.class),
-;
+	AFFIX_SCORE("AffixScore", "affScore", "affScore", Double.class), 
+	NORMALIZED_EXTENSION_SCORE("NormalizedExtensionScore", "normExtScore", "normExtScore", Double.class), 
+	NORMALIZED_SOURCE_GAIN("NormalizedSourceGain", "normSrcGain", "normSrcGain", Double.class), 
+	NORMALIZED_AFFIX_SCORE("NormalizedAffixScore", "normAffScore", "normAffScore", Double.class), 
+	;
 
 	private String propertyName;
 	private String propertyShortName;
