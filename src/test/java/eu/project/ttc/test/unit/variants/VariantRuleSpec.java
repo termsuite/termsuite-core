@@ -28,12 +28,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.variant.VariantRule;
-import eu.project.ttc.engines.variant.VariantRuleBuilder;
-import eu.project.ttc.engines.variant.VariantRuleIndex;
-import eu.project.ttc.models.GroovyAdapter;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.test.unit.Fixtures;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.GroovyAdapter;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRule;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRuleBuilder;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRuleIndex;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;
 

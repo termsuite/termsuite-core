@@ -35,13 +35,13 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.FixedExpressionSpotter;
-import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
-import eu.project.ttc.resources.FixedExpressionResource;
 import eu.project.ttc.test.TermSuiteAssertions;
-import eu.project.ttc.types.FixedExpression;
-import eu.project.ttc.types.TermOccAnnotation;
-import eu.project.ttc.types.WordAnnotation;
+import fr.univnantes.termsuite.types.FixedExpression;
+import fr.univnantes.termsuite.types.TermOccAnnotation;
+import fr.univnantes.termsuite.types.WordAnnotation;
+import fr.univnantes.termsuite.uima.engines.preproc.FixedExpressionSpotter;
+import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
+import fr.univnantes.termsuite.uima.resources.preproc.FixedExpressionResource;
 
 public class FixedExpressionSpotterSpec {
 

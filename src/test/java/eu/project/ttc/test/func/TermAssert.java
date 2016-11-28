@@ -30,12 +30,12 @@ import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.util.Lists;
 import org.assertj.core.util.Objects;
 
-import eu.project.ttc.models.Component;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermProperty;
-import eu.project.ttc.models.Word;
-import eu.project.ttc.utils.WordUtils;
+import fr.univnantes.termsuite.model.Component;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.utils.WordUtils;
 
 public class TermAssert extends AbstractAssert<TermAssert, Term> {
 

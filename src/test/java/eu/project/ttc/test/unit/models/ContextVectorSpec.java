@@ -27,11 +27,11 @@ import static org.assertj.core.api.Assertions.tuple;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.Document;
-import eu.project.ttc.models.Form;
-import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.test.unit.Fixtures;
+import fr.univnantes.termsuite.model.ContextVector;
+import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.TermOccurrence;
 
 public class ContextVectorSpec {
 

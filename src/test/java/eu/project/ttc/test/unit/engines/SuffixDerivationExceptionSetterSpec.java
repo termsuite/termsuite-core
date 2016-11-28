@@ -36,18 +36,18 @@ import org.apache.uima.util.InvalidXMLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.morpho.SuffixDerivationExceptionSetter;
-import eu.project.ttc.history.TermHistory;
-import eu.project.ttc.history.TermHistoryResource;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
 import eu.project.ttc.test.unit.TermSuiteExtractors;
-import eu.project.ttc.tools.TermSuiteResourceManager;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.uima.engines.termino.morpho.SuffixDerivationExceptionSetter;
+import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
+import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.utils.TermHistory;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class SuffixDerivationExceptionSetterSpec {
 	

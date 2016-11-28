@@ -6,10 +6,10 @@ import static org.assertj.core.api.Assertions.tuple;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.Contextualizer;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.unit.Fixtures;
+import fr.univnantes.termsuite.engines.Contextualizer;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 
 public class ContextualizerSpec {
 

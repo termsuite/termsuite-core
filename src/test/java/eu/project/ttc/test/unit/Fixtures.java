@@ -21,15 +21,15 @@
  *******************************************************************************/
 package eu.project.ttc.test.unit;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.Document;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermBuilder;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.Word;
-import eu.project.ttc.models.WordBuilder;
-import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
+import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.WordBuilder;
+import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
+import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
 
 public class Fixtures {
 

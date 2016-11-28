@@ -52,12 +52,12 @@ import org.xml.sax.XMLReader;
 
 import com.google.common.collect.ObjectArrays;
 
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.readers.TeiToTxtSaxHandler;
-import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.tools.TermSuiteResourceManager;
-import eu.project.ttc.types.TermOccAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.types.TermOccAnnotation;
+import fr.univnantes.termsuite.uima.readers.TeiToTxtSaxHandler;
+import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TestUtil {
 

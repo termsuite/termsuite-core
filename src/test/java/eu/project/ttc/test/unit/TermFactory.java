@@ -31,16 +31,16 @@ import org.assertj.core.util.Lists;
 
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.models.Component;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermBuilder;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermProperty;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.Word;
+import fr.univnantes.termsuite.model.Component;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Word;
 
 public class TermFactory {
 	private TermIndex termIndex;

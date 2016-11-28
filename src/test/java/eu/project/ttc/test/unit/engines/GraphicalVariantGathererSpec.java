@@ -35,17 +35,17 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.GraphicalVariantGatherer;
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.history.TermHistory;
-import eu.project.ttc.history.TermHistoryResource;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.resources.TermIndexResource;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermFactory;
-import eu.project.ttc.tools.TermSuiteResourceManager;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.uima.engines.termino.GraphicalVariantGatherer;
+import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
+import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.utils.TermHistory;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class GraphicalVariantGathererSpec {
 	

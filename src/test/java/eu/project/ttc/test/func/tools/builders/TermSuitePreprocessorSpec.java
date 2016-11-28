@@ -18,12 +18,12 @@ import org.junit.rules.TemporaryFolder;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.api.Document;
-import eu.project.ttc.api.TermSuitePreprocessor;
-import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.types.TermOccAnnotation;
-import eu.project.ttc.types.WordAnnotation;
+import fr.univnantes.termsuite.api.Document;
+import fr.univnantes.termsuite.api.TermSuitePreprocessor;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.types.TermOccAnnotation;
+import fr.univnantes.termsuite.types.WordAnnotation;
 
 public class TermSuitePreprocessorSpec {
 

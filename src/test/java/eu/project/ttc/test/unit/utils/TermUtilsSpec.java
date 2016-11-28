@@ -35,12 +35,12 @@ import org.mockito.Mockito;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermWord;
-import eu.project.ttc.models.Word;
 import eu.project.ttc.test.unit.Fixtures;
-import eu.project.ttc.utils.TermUtils;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermUtilsSpec {
 	

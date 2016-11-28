@@ -3,14 +3,14 @@ package eu.project.ttc.test.unit.models;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermBuilder;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
+import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
 
 public class MemoryTermIndexSpec {
 

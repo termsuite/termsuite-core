@@ -27,8 +27,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.utils.StringUtils;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.utils.StringUtils;
 
 public class StringUtilsSpec {
 	

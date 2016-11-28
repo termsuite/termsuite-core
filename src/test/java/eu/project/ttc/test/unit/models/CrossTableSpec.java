@@ -26,13 +26,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.engines.Contextualizer;
-import eu.project.ttc.metrics.LogLikelihood;
-import eu.project.ttc.metrics.MutualInformation;
-import eu.project.ttc.models.CrossTable;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.unit.Fixtures;
+import fr.univnantes.termsuite.engines.Contextualizer;
+import fr.univnantes.termsuite.metrics.LogLikelihood;
+import fr.univnantes.termsuite.metrics.MutualInformation;
+import fr.univnantes.termsuite.model.CrossTable;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 
 public class CrossTableSpec {
 

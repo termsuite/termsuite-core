@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <name>TermSuiteTypeSystem</name>
-  <description>This Type System gathers Type Systems required by every UIMA CAS processors used within the ttc.types.project.</description>
+  <description>This Type System gathers Type Systems required by every UIMA CAS processors used within the fr.univnantes.termsuite.</description>
   <version>1.0</version>
   <vendor>University of Nantes (LINA, UMR CNRS 6241)</vendor>
   <imports />
   <types>
     <typeDescription>
-      <name>eu.project.ttc.types.WordAnnotation</name>
+      <name>fr.univnantes.termsuite.types.WordAnnotation</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -94,14 +94,14 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>eu.project.ttc.types.FixedExpression</name>
+      <name>fr.univnantes.termsuite.types.FixedExpression</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
       </features>
     </typeDescription>
     <typeDescription>
-      <name>eu.project.ttc.types.TermOccAnnotation</name>
+      <name>fr.univnantes.termsuite.types.TermOccAnnotation</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -109,7 +109,7 @@
           <name>words</name>
           <description/>
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-          <elementType>eu.project.ttc.types.WordAnnotation</elementType>
+          <elementType>fr.univnantes.termsuite.types.WordAnnotation</elementType>
         </featureDescription>
          <featureDescription>
           <name>pattern</name>
@@ -130,7 +130,7 @@
       </features>
     </typeDescription>
 	<typeDescription>
-	<name>eu.project.ttc.types.SourceDocumentInformation</name>
+	<name>fr.univnantes.termsuite.types.SourceDocumentInformation</name>
 			<description>Stores detailed information about the original source document from which the current CAS was initialized. All information (like size) refers to the source document and not to the document in the CAS which may be converted and filtered by a CAS Initializer. For example this information will be written to the Semantic Search index so that the original document contents can be retrieved by queries.</description>
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 			<features>

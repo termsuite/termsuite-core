@@ -34,14 +34,14 @@ import java.util.stream.Collectors;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermProperty;
-import eu.project.ttc.models.Word;
 import eu.project.ttc.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Word;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
 	

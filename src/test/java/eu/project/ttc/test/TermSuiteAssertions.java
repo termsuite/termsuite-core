@@ -25,12 +25,12 @@ package eu.project.ttc.test;
 
 import org.apache.uima.jcas.JCas;
 
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.TermAssert;
 import eu.project.ttc.test.func.TermIndexAssert;
 import eu.project.ttc.test.unit.CasAssert;
 import eu.project.ttc.test.unit.StringAssert;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 
 public class TermSuiteAssertions {
 

@@ -35,9 +35,9 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
-import eu.project.ttc.engines.variant.VariantRule;
-import eu.project.ttc.engines.variant.VariantRuleYamlIO;
 import eu.project.ttc.test.unit.TestUtil;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRule;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRuleYamlIO;
 
 
 public class VariantRuleYamlIOSpec {

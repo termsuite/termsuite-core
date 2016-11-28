@@ -37,14 +37,14 @@ import org.junit.Test;
 
 import com.google.common.base.Objects;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermProperty;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.Word;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Word;
 
 public class GermanWindEnergySpec extends WindEnergySpec {
 

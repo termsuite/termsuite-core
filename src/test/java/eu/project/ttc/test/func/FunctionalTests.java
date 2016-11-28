@@ -37,10 +37,6 @@ import org.junit.runners.Suite;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.test.func.align.BilingualAlignerDeEnSpec;
 import eu.project.ttc.test.func.align.BilingualAlignerFrEnSpec;
 import eu.project.ttc.test.func.tools.builders.TermSuitePreprocessorSpec;
@@ -48,6 +44,10 @@ import eu.project.ttc.test.func.tools.builders.TerminoExtractorSpec;
 import eu.project.ttc.test.func.tools.builders.TerminoFiltererSpec;
 import eu.project.ttc.test.func.tools.cmd.TermSuiteAlignerCLISpec;
 import eu.project.ttc.test.func.tools.cmd.TermSuiteTerminoCLISpec;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermProperty;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({

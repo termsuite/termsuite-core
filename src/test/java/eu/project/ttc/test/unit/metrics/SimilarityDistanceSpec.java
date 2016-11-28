@@ -26,11 +26,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.metrics.Cosine;
-import eu.project.ttc.metrics.Jaccard;
-import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.test.unit.Fixtures;
+import fr.univnantes.termsuite.metrics.Cosine;
+import fr.univnantes.termsuite.metrics.Jaccard;
+import fr.univnantes.termsuite.model.ContextVector;
+import fr.univnantes.termsuite.model.Term;
 
 public class SimilarityDistanceSpec {
 

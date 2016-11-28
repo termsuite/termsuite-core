@@ -30,15 +30,15 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.models.index.TermValueProvider;
-import eu.project.ttc.models.index.TermValueProviders;
-import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.test.unit.TermFactory;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
+import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.TermValueProvider;
+import fr.univnantes.termsuite.model.termino.TermValueProviders;
 
 public class TermClassProvidersSpec {
 	

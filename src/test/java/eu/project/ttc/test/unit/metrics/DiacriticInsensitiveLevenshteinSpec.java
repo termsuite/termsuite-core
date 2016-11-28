@@ -30,8 +30,8 @@ import java.util.Locale;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.metrics.DiacriticInsensitiveLevenshtein;
-import eu.project.ttc.metrics.EditDistance;
+import fr.univnantes.termsuite.metrics.DiacriticInsensitiveLevenshtein;
+import fr.univnantes.termsuite.metrics.EditDistance;
 
 public class DiacriticInsensitiveLevenshteinSpec {
 

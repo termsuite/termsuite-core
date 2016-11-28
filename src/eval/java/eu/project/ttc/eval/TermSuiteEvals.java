@@ -12,15 +12,15 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.api.JsonOptions;
-import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.eval.bilangaligner.TerminoConfig;
 import eu.project.ttc.eval.model.Corpus;
 import eu.project.ttc.eval.model.LangPair;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.TermSuiteResourceManager;
+import fr.univnantes.termsuite.api.JsonOptions;
+import fr.univnantes.termsuite.api.TermIndexIO;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TermSuiteEvals {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);

@@ -42,13 +42,13 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.tools.utils.ControlFilesGenerator;
-import eu.project.ttc.utils.TermIndexUtils;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.tools.ControlFilesGenerator;
+import fr.univnantes.termsuite.utils.TermIndexUtils;
 
 public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> {
 

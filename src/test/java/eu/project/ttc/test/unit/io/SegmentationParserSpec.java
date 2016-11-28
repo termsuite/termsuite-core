@@ -34,9 +34,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import eu.project.ttc.engines.morpho.Segmentation;
-import eu.project.ttc.io.SegmentationParser;
 import fr.univnantes.julestar.uima.resources.ResourceFormatException;
+import fr.univnantes.termsuite.uima.engines.termino.morpho.Segmentation;
+import fr.univnantes.termsuite.uima.resources.io.SegmentationParser;
 
 public class SegmentationParserSpec {
 

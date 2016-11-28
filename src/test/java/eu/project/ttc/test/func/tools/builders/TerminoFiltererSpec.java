@@ -7,13 +7,13 @@ import java.net.MalformedURLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.api.TerminoFilterConfig;
-import eu.project.ttc.api.TerminoFilterer;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.TermSuiteResourceManager;
+import fr.univnantes.termsuite.api.TermIndexIO;
+import fr.univnantes.termsuite.api.TerminoFilterConfig;
+import fr.univnantes.termsuite.api.TerminoFilterer;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TerminoFiltererSpec {
 

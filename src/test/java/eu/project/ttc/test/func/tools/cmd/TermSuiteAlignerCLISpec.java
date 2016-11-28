@@ -16,10 +16,10 @@ import org.junit.Test;
 
 import com.google.common.base.Splitter;
 
-import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.cli.TermSuiteAlignerCLI;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.tools.Aligner;
 
 public class TermSuiteAlignerCLISpec {
 	
@@ -113,7 +113,7 @@ public class TermSuiteAlignerCLISpec {
 	
 	private void launch(String args) throws Exception {
 		List<String> argList = Splitter.on(" ").splitToList(args);
-		new TermSuiteAlignerCLI().run(argList.toArray(new String[argList.size()]), out);
+		new Aligner().run(argList.toArray(new String[argList.size()]), out);
 	}
 
 }

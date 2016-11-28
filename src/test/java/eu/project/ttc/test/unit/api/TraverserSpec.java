@@ -14,10 +14,10 @@ import org.mockito.Mockito;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.api.Traverser;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.unit.TermFactory;
+import fr.univnantes.termsuite.api.Traverser;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 
 public class TraverserSpec {
 	TermIndex termIndex;

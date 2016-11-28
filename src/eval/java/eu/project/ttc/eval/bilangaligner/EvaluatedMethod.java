@@ -5,11 +5,11 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.project.ttc.align.BilingualAligner;
-import eu.project.ttc.align.RequiresSize2Exception;
-import eu.project.ttc.align.TranslationCandidate;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.Term;
+import fr.univnantes.termsuite.alignment.BilingualAligner;
+import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
+import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.Term;
 
 public enum EvaluatedMethod {
 	DISTRIBUTIONAL("distrib"),

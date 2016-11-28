@@ -19,14 +19,14 @@ import org.junit.runners.MethodSorters;
 
 import com.google.common.base.Splitter;
 
-import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.cli.TermSuiteTerminoCLI;
-import eu.project.ttc.utils.FileUtils;
+import fr.univnantes.termsuite.api.TermIndexIO;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.tools.TerminogyExtractor;
+import fr.univnantes.termsuite.utils.FileUtils;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TermSuiteTerminoCLISpec {
@@ -183,6 +183,6 @@ public class TermSuiteTerminoCLISpec {
 	
 	private void launch(String args) throws Exception {
 		List<String> argList = Splitter.on(" ").splitToList(args);
-		TermSuiteTerminoCLI.main(argList.toArray(new String[argList.size()]));
+		TerminogyExtractor.main(argList.toArray(new String[argList.size()]));
 	}
 }

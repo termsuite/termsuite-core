@@ -32,12 +32,12 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
-import eu.project.ttc.models.Document;
-import eu.project.ttc.models.Form;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.test.unit.Fixtures;
-import eu.project.ttc.utils.TermOccurrenceUtils;
+import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class TermOccurrenceUtilsSpec {
 

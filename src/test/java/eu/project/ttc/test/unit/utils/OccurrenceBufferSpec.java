@@ -32,8 +32,8 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 import eu.project.ttc.test.unit.TestUtil;
-import eu.project.ttc.utils.OccurrenceBuffer;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
+import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 
 public class OccurrenceBufferSpec {
 

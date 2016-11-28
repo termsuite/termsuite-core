@@ -8,15 +8,15 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.align.AlignmentMethod;
-import eu.project.ttc.align.BilingualAligner;
-import eu.project.ttc.align.TranslationCandidate;
-import eu.project.ttc.api.TermIndexIO;
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.test.func.FunctionalTests;
-import eu.project.ttc.tools.TermSuiteAlignerBuilder;
+import fr.univnantes.termsuite.alignment.AlignmentMethod;
+import fr.univnantes.termsuite.alignment.BilingualAligner;
+import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
+import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.api.TermIndexIO;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 
 public class BilingualAlignerDeEnSpec {
 

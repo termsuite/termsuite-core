@@ -1,6 +1,6 @@
 package eu.project.ttc.eval.model;
 
-import eu.project.ttc.models.Term;
+import fr.univnantes.termsuite.model.Term;
 
 public enum TermType {
 	SWT("swt"),

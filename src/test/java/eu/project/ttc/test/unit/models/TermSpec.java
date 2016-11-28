@@ -29,16 +29,16 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.index.TermIndexes;
-import eu.project.ttc.models.index.TermValueProvider;
-import eu.project.ttc.models.index.TermValueProviders;
 import eu.project.ttc.test.unit.Fixtures;
 import eu.project.ttc.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.termino.TermIndexes;
+import fr.univnantes.termsuite.model.termino.TermValueProvider;
+import fr.univnantes.termsuite.model.termino.TermValueProviders;
 
 public class TermSpec {
 

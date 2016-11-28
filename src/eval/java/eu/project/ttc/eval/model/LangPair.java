@@ -1,6 +1,6 @@
 package eu.project.ttc.eval.model;
 
-import eu.project.ttc.engines.desc.Lang;
+import fr.univnantes.termsuite.model.Lang;
 
 public class LangPair {
 	

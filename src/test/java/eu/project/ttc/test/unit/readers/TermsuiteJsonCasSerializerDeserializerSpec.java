@@ -40,13 +40,13 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
-import eu.project.ttc.readers.TermSuiteJsonCasSerializer;
 import eu.project.ttc.test.unit.TestUtil;
-import eu.project.ttc.types.FixedExpression;
-import eu.project.ttc.types.SourceDocumentInformation;
-import eu.project.ttc.types.TermOccAnnotation;
-import eu.project.ttc.types.WordAnnotation;
+import fr.univnantes.termsuite.types.FixedExpression;
+import fr.univnantes.termsuite.types.SourceDocumentInformation;
+import fr.univnantes.termsuite.types.TermOccAnnotation;
+import fr.univnantes.termsuite.types.WordAnnotation;
+import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
+import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
 
 /**
  * Created by Simon Meoni on 24/06/16.

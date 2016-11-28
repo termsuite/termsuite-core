@@ -10,11 +10,11 @@ import java.util.stream.Stream;
 
 import org.assertj.core.util.Lists;
 
-import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.eval.TermSuiteEvals;
 import eu.project.ttc.eval.model.Corpus;
 import eu.project.ttc.eval.model.LangPair;
 import eu.project.ttc.eval.resources.Tsv3ColFile;
+import fr.univnantes.termsuite.model.Lang;
 
 public class AlignmentEvalService {
 

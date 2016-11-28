@@ -5,8 +5,8 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.eval.TermSuiteEvals;
+import fr.univnantes.termsuite.model.Lang;
 
 public enum Corpus{
 //	BREAST_CANCER("bc","breast-cancer", false),

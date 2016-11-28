@@ -28,11 +28,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import eu.project.ttc.engines.desc.TermSuitePipelineException;
-import eu.project.ttc.engines.desc.TermSuiteResourceException;
 import eu.project.ttc.test.unit.io.JsonTermIndexIOSpec;
-import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.cli.TermSuiteCLIUtils;
+import fr.univnantes.termsuite.tools.TermSuiteCLIUtils;
+import fr.univnantes.termsuite.uima.TermSuitePipeline;
+import fr.univnantes.termsuite.uima.TermSuitePipelineException;
+import fr.univnantes.termsuite.uima.TermSuiteResourceException;
 
 public class TermSuitePipelineSpec {
 	

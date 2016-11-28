@@ -43,16 +43,16 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.engines.desc.TermSuiteCollection;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.test.unit.TermSuiteExtractors;
-import eu.project.ttc.tools.TermSuitePipeline;
-import eu.project.ttc.tools.TermSuiteResource;
-import eu.project.ttc.tools.TermSuiteResourceManager;
-import eu.project.ttc.tools.utils.ControlFilesGenerator;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TermSuiteCollection;
+import fr.univnantes.termsuite.tools.ControlFilesGenerator;
+import fr.univnantes.termsuite.uima.TermSuitePipeline;
+import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public abstract class WindEnergySpec {
 

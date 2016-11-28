@@ -12,9 +12,6 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import eu.project.ttc.align.BilingualAligner;
-import eu.project.ttc.align.RequiresSize2Exception;
-import eu.project.ttc.align.TranslationCandidate;
 import eu.project.ttc.eval.bilangaligner.AlignmentEvalRun;
 import eu.project.ttc.eval.bilangaligner.AlignmentEvalService;
 import eu.project.ttc.eval.bilangaligner.AlignmentRecord;
@@ -24,9 +21,12 @@ import eu.project.ttc.eval.bilangaligner.RunTrace;
 import eu.project.ttc.eval.bilangaligner.TerminoConfig;
 import eu.project.ttc.eval.exceptions.DictionaryNotFoundException;
 import eu.project.ttc.eval.model.Corpus;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.tools.TermSuiteAlignerBuilder;
+import fr.univnantes.termsuite.alignment.BilingualAligner;
+import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
+import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
+import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 
 public class BilingualAlignementEvalRunner {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);

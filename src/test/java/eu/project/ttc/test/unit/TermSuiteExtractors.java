@@ -3,8 +3,8 @@ package eu.project.ttc.test.unit;
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
 
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.TermRelation;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.TermRelation;
 
 public class TermSuiteExtractors {
 	

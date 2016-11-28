@@ -15,11 +15,11 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermProperty;
-import eu.project.ttc.models.index.CustomTermIndex;
-import eu.project.ttc.models.index.TermIndexes;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.termino.CustomTermIndex;
+import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class Tsv3ColFile {
 

@@ -38,8 +38,8 @@ import org.assertj.core.util.Lists;
 
 import com.google.common.base.Joiner;
 
-import eu.project.ttc.types.SourceDocumentInformation;
-import eu.project.ttc.utils.JCasUtils;
+import fr.univnantes.termsuite.types.SourceDocumentInformation;
+import fr.univnantes.termsuite.utils.JCasUtils;
 
 public class CasAssert extends AbstractAssert<CasAssert, JCas> {
 

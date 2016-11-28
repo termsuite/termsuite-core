@@ -34,7 +34,7 @@ import org.junit.Test;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
-import eu.project.ttc.utils.CollectionUtils;
+import fr.univnantes.termsuite.utils.CollectionUtils;
 
 public class CollectionUtilsSpec {
 

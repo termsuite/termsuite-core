@@ -10,8 +10,8 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 
-import eu.project.ttc.engines.variant.SynonymicRule;
-import eu.project.ttc.engines.variant.VariantRule;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.SynonymicRule;
+import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRule;
 
 public class SynonymicRuleSpec {
 

@@ -33,8 +33,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import eu.project.ttc.models.TermWord;
-import eu.project.ttc.resources.SuffixDerivation;
+import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.resources.SuffixDerivation;
 
 public class SuffixDerivationSpec {
 	

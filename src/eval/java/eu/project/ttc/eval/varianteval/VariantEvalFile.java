@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import eu.project.ttc.models.Term;
+import fr.univnantes.termsuite.model.Term;
 
 public class VariantEvalFile {
 	

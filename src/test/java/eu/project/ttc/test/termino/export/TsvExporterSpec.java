@@ -12,14 +12,14 @@ import org.mockito.Mockito;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import eu.project.ttc.api.TsvOptions;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.termino.export.TsvExporter;
 import eu.project.ttc.test.TermSuiteAssertions;
 import eu.project.ttc.test.unit.TermFactory;
+import fr.univnantes.termsuite.api.TsvOptions;
+import fr.univnantes.termsuite.export.TsvExporter;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermRelation;
 
 public class TsvExporterSpec {
 

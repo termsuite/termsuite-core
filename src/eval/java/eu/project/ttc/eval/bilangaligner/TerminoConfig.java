@@ -4,13 +4,13 @@ import java.nio.file.Paths;
 
 import com.google.common.base.Charsets;
 
-import eu.project.ttc.api.TerminoExtractor;
-import eu.project.ttc.api.TerminoExtractor.ContextualizerMode;
-import eu.project.ttc.api.TerminoFilterConfig;
-import eu.project.ttc.engines.desc.Lang;
 import eu.project.ttc.eval.TermSuiteEvals;
 import eu.project.ttc.eval.model.Corpus;
-import eu.project.ttc.models.TermProperty;
+import fr.univnantes.termsuite.api.TerminoExtractor;
+import fr.univnantes.termsuite.api.TerminoExtractor.ContextualizerMode;
+import fr.univnantes.termsuite.api.TerminoFilterConfig;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.TermProperty;
 
 public class TerminoConfig {
 	

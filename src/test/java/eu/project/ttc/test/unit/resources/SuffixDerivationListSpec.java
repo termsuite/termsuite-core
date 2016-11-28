@@ -40,10 +40,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import eu.project.ttc.resources.SuffixDerivation;
-import eu.project.ttc.resources.SuffixDerivationList;
-import eu.project.ttc.resources.SuffixDerivationList.SuffixDerivationEntry;
 import eu.project.ttc.test.unit.TestUtil;
+import fr.univnantes.termsuite.resources.SuffixDerivation;
+import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
+import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList.SuffixDerivationEntry;
 
 public class SuffixDerivationListSpec {
 	private static final String SUFFIX_DERIVATIONS1 = "org/project/ttc/test/resources/derivational-suffixes1.txt";

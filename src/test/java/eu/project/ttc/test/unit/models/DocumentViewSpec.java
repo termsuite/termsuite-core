@@ -26,13 +26,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.project.ttc.models.Document;
-import eu.project.ttc.models.DocumentView;
-import eu.project.ttc.models.Form;
-import eu.project.ttc.models.OccurrenceType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermOccurrence;
 import eu.project.ttc.test.unit.Fixtures;
+import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.DocumentView;
+import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.OccurrenceType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermOccurrence;
 
 public class DocumentViewSpec {
 

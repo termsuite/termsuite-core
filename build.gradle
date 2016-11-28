@@ -41,7 +41,7 @@ sourceSets {
 
 ///////////////////////////////////////////////////////////////// CONFIGURATION
 javadoc{
-	exclude '**/eu/project/ttc/types/**'
+	exclude '**/fr/univnantes/termsuite/types/**'
 	options {
 		failOnError = false
 		encoding "UTF-8"
@@ -271,14 +271,14 @@ test {
 	/*
 	 *  explicitly exclude functional tests from default gradle build
 	 */
-	exclude 'eu/project/ttc/test/func/**'
+	exclude 'fr/univnantes/termsuite/test/func/**'
 }
 
 /*
  * Launches unit tests manually
  */
 task unitTest( type: Test ) {
-	exclude 'eu/project/ttc/test/func/**'
+	exclude 'fr/univnantes/termsuite/test/func/**'
 }
 
 /*
@@ -288,8 +288,8 @@ task cucumberTest( type: Test ) {
 	/*
 	 *  explicitly runs functional tests
 	 */
-	include 'eu/project/ttc/test/func/**'
-	exclude 'eu/project/ttc/test/unit/**'
+	include 'fr/univnantes/termsuite/test/func/**'
+	exclude 'fr/univnantes/termsuite/test/unit/**'
 }
 
 /*
@@ -328,7 +328,7 @@ jar {
 }
 
 clean.doLast {
-    project.delete (fileTree(dir: 'sources/eu/project/ttc/types'))
+    project.delete (fileTree(dir: 'sources/fr/univnantes/termsuite/types'))
     project.delete (fileTree(dir: 'sources/org')) // org.apache.uima.examples
     println 'Cleaning typesystem generated sources.'
 }

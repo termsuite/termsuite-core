@@ -48,22 +48,22 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
-import eu.project.ttc.api.JsonOptions;
-import eu.project.ttc.engines.desc.Lang;
-import eu.project.ttc.models.CompoundType;
-import eu.project.ttc.models.ContextVector;
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.RelationType;
-import eu.project.ttc.models.Term;
-import eu.project.ttc.models.TermBuilder;
-import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.Word;
-import eu.project.ttc.models.WordBuilder;
-import eu.project.ttc.models.index.JsonTermIndexIO;
-import eu.project.ttc.models.index.MemoryTermIndex;
-import eu.project.ttc.models.occstore.MemoryOccurrenceStore;
 import eu.project.ttc.test.unit.TestUtil;
+import fr.univnantes.termsuite.api.JsonOptions;
+import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.ContextVector;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.WordBuilder;
+import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
+import fr.univnantes.termsuite.model.termino.JsonTermIndexIO;
+import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
 
 public class JsonTermIndexIOSpec {
 	public static final String jsonFile1 = "org/project/ttc/test/json/termIndex1.json";

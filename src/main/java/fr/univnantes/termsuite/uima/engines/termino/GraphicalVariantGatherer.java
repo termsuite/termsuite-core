@@ -1,0 +1,245 @@
+/*******************************************************************************
+ * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ *
+ *******************************************************************************/
+package fr.univnantes.termsuite.uima.engines.termino;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import org.apache.uima.UimaContext;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.math.IntMath;
+
+import fr.univnantes.termsuite.metrics.DiacriticInsensitiveLevenshtein;
+import fr.univnantes.termsuite.metrics.EditDistance;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.termino.AbstractTermValueProvider;
+import fr.univnantes.termsuite.model.termino.CustomTermIndex;
+import fr.univnantes.termsuite.model.termino.TermValueProvider;
+import fr.univnantes.termsuite.uima.resources.ObserverResource;
+import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
+import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
+import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.utils.StringUtils;
+
+/**
+ * 
+ * Gather terms whe their edit distances (ignoring diacritics) are
+ * under certain threshold (not normalized).
+ * 
+ * @author Damien Cram
+ *
+ */
+public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
+	private static final Logger logger = LoggerFactory.getLogger(GraphicalVariantGatherer.class);
+	public static final String TASK_NAME = "Computing graphical variants";
+	private static final int OBSERVER_STEP = 10000;
+	private static final char JOIN_CHAR = ':';
+
+	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=false)
+	protected ObserverResource observerResource;
+	
+	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
+	private TermIndexResource termIndexResource;
+	
+	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
+	private TermHistoryResource historyResource;
+
+	public static final String LANG = "lang";
+	@ConfigurationParameter(name=LANG, mandatory=true)
+	private String lang;
+
+	public static final String SIMILARITY_THRESHOLD = "SimilarityThreshold";
+	@ConfigurationParameter(name=SIMILARITY_THRESHOLD, mandatory=true)
+	private float threshold;
+	
+	private EditDistance distance;
+	private Lang language;
+
+	private int totalComparisons = 0;
+	private int nbComparisons = 0;
+	
+
+	private TermValueProvider nFirstLettersProvider = new AbstractTermValueProvider("") {
+		@Override
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			if(term.getWords().size() == 1) {
+				Word word = term.getWords().get(0).getWord();
+				if(word.getLemma().length() < 5)
+					return ImmutableList.of();
+				else {
+					String substring = StringUtils.replaceAccents(word.getLemma().toLowerCase(language.getLocale()).substring(0, 4));
+					return ImmutableList.of(substring);
+				}
+			}
+			StringBuilder builder = new StringBuilder();
+			String normalizedStem;
+			int i = 0;
+			for(TermWord tw:term.getWords()) {
+				if(i>0) {
+					builder.append(JOIN_CHAR);
+				}
+				normalizedStem = tw.getWord().getNormalizedStem();
+				if(normalizedStem.length() > language.getGraphicalVariantNbPreindexingLetters())
+					builder.append(normalizedStem.substring(0, language.getGraphicalVariantNbPreindexingLetters()).toLowerCase(language.getLocale()));
+				else
+					builder.append(normalizedStem.toLowerCase(language.getLocale()));
+				i++;
+			}
+			if(builder.length() >= language.getGraphicalVariantNbPreindexingLetters())
+				return ImmutableList.of(builder.toString());
+			else
+				return ImmutableList.of();
+		}
+	};
+
+	
+	@Override
+	public void initialize(UimaContext context)
+			throws ResourceInitializationException {
+		super.initialize(context);
+		this.language = Lang.forName(lang);
+		distance = new DiacriticInsensitiveLevenshtein(this.language.getLocale());
+		if(observerResource != null)
+			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
+	}
+	
+	@Override
+	public void process(JCas aJCas) throws AnalysisEngineProcessException {}
+	
+	private Optional<SubTaskObserver> taskObserver = Optional.empty();
+	
+	@Override
+	public void collectionProcessComplete()
+			throws AnalysisEngineProcessException {
+		
+		if(language.getgVariantGatheringState().isDisabled())
+			return;
+		
+		logger.info("Starting graphical term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		
+		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+			return;
+
+		// create the index
+		String indexName = String.format("_%d_first_letters_", language.getGraphicalVariantNbPreindexingLetters());
+		final TermIndex termIndex = this.termIndexResource.getTermIndex();
+		CustomTermIndex customIndex = termIndex.createCustomIndex(
+				indexName,
+				nFirstLettersProvider);
+		
+		// clean singleton classes
+		logger.debug("Cleaning singleton keys");
+		customIndex.cleanSingletonKeys();
+		
+		logger.debug("Graphical gathering over {} classes", customIndex.size());
+		
+		// get the total number of comparisons
+		for(String key:customIndex.keySet()) 
+			totalComparisons+= IntMath.binomial(customIndex.getTerms(key).size(), 2);
+
+		if(taskObserver.isPresent())
+			taskObserver.get().setTotalTaskWork(totalComparisons);
+
+		logger.debug("Number of distance edition pairs to compute: {}", totalComparisons);
+		
+		
+		// Log the progress every 5 seconds
+		Timer progressLoggerTimer = new Timer("Syn. Variant Gathering Timer");
+		progressLoggerTimer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				GraphicalVariantGatherer.logger.info("progress for graphical variant gathering: {}%",
+						String.format("%.2f", ((float)nbComparisons*100)/totalComparisons)
+						);
+			}
+		}, 5000l, 5000l);
+		
+		
+		// do the distance computation on each class
+		List<Term> terms;
+		Term t1, t2;
+		int i, j;
+		int gatheredCnt = 0;
+		double dist = 0d;
+		for(String key:customIndex.keySet()) {
+			terms = customIndex.getTerms(key);
+			logger.trace("Graphical gathering over term class {} of size: {}", key, terms.size());
+			for(i=0; i<terms.size();i++) {
+				t1 = terms.get(i);
+				for(j=i+1; j<terms.size();j++) {
+					nbComparisons++;
+					if(nbComparisons % OBSERVER_STEP == 0 && taskObserver.isPresent())
+						taskObserver.get().work(OBSERVER_STEP);
+					t2 = terms.get(j);
+					dist = distance.computeNormalized(t1.getLemma(), t2.getLemma());
+					if(dist >= this.threshold) {
+						gatheredCnt++;
+						TermRelation rel1 = new TermRelation(RelationType.GRAPHICAL, t1, t2);
+						rel1.setProperty(RelationProperty.SIMILARITY, dist);
+						termIndex.addRelation(rel1);
+						TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, t2, t1);
+						rel2.setProperty(RelationProperty.SIMILARITY, dist);
+						termIndex.addRelation(rel2);
+						watch(t1, t2, dist);
+						watch(t2, t1, dist);
+
+					}
+				}
+			}
+		}
+		
+		// log some stats
+		logger.debug("Graphical gathering {} terms gathered / {} pairs compared", gatheredCnt, nbComparisons);
+		
+		// free memory taken by the index
+		termIndex.dropCustomIndex(indexName);
+		
+		progressLoggerTimer.cancel();
+	}
+
+	private void watch(Term t1, Term t2, double dist) {
+		if(historyResource.getHistory().isWatched(t1.getGroupingKey()))
+			historyResource.getHistory().saveEvent(
+					t1.getGroupingKey(),
+					this.getClass(), 
+					"Term has a new graphical variant " + t2 + " (dist="+dist+")");
+	}
+}
