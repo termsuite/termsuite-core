@@ -1,4 +1,7 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.bilangaligner;
+
+import eu.project.ttc.eval.model.Corpus;
+import eu.project.ttc.eval.model.LangPair;
 
 public class AlignmentEvalRun {
 

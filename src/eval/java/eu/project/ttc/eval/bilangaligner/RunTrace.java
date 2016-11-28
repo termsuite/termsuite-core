@@ -1,4 +1,4 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.bilangaligner;
 
 import java.util.List;
 import java.util.stream.Stream;

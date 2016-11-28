@@ -62,7 +62,7 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(tbxPath.toFile()).exists();
 		
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
-		assertThat(termindex).containsTerm("nn: wind energy").hasSize(843);
+		assertThat(termindex).containsTerm("nn: wind energy").hasNTerms(843);
 		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
 	}
 
@@ -110,8 +110,8 @@ public class TermSuiteTerminoCLISpec {
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.containsVariation("nn: wind energy", RelationType.SYNTACTICAL, "ann: offshore wind energy")
-			.hasSize(92);
+			.containsRelation("nn: wind energy", RelationType.SYNTACTICAL, "ann: offshore wind energy")
+			.hasNTerms(92);
 	}
 	
 
@@ -130,7 +130,7 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(jsonPath.toFile()).exists();
 		
 		TermIndex termindex = TermIndexIO.fromJson(jsonPath);
-		assertThat(termindex).containsTerm("nn: wind turbine").hasSize(100);
+		assertThat(termindex).containsTerm("nn: wind turbine").hasNTerms(100);
 	}
 
 	

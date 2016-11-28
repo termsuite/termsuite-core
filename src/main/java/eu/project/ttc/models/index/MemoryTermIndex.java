@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.AbstractIterator;
-import com.google.common.collect.HashMultimap;
+import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
@@ -85,8 +85,8 @@ public class MemoryTermIndex implements TermIndex {
 	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
 	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
 	private Map<String, Word> wordIndex = Maps.newHashMap();
-	private Multimap<Term, TermRelation> outboundVariations = HashMultimap.create();
-	private Multimap<Term, TermRelation> inboundVariations = HashMultimap.create();
+	private Multimap<Term, TermRelation> outboundVariations = LinkedListMultimap.create();
+	private Multimap<Term, TermRelation> inboundVariations = LinkedListMultimap.create();
 	
 	private String name;
 	private Lang lang;
@@ -293,7 +293,6 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public void removeTerm(Term t) {
-		
 		removeTermOnly(t);
 		occurrenceStore.removeTerm(t);
 	}
@@ -431,12 +430,12 @@ public class MemoryTermIndex implements TermIndex {
 			Set<RelationType> typeSet = Sets.newHashSet(types);
 			return this.outboundVariations.get(base).stream()
 					.filter(tv -> typeSet.contains(tv.getType()))
-					.collect(Collectors.toSet());
+					.collect(Collectors.toList());
 		}
 	}
 
 	@Override
-	public Collection<TermRelation> getInboundTermRelations(Term variant, RelationType... types) {
+	public Collection<TermRelation> getInboundRelations(Term variant, RelationType... types) {
 		if(types.length == 0)
 			return this.inboundVariations.get(variant);
 		else {
@@ -459,5 +458,21 @@ public class MemoryTermIndex implements TermIndex {
 	public void removeRelation(TermRelation variation) {
 		this.outboundVariations.remove(variation.getFrom(), variation);
 		this.inboundVariations.remove(variation.getTo(), variation);
+	}
+
+	@Override
+	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types) {
+		Stream<TermRelation> stream = outboundVariations.get(from)
+					.stream()
+					.filter(relation -> relation.getTo().equals(to));
+		
+		if(types.length == 0)
+			return stream;
+		else if(types.length == 0)
+			return stream.filter(relation -> relation.getType() == types[0]);
+		else {
+			Set<RelationType> typeSet = Sets.newHashSet(types);
+			return stream.filter(relation -> typeSet.contains(relation.getType()));
+		}
 	}
 }

@@ -23,9 +23,7 @@
 
 package eu.project.ttc.engines;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -36,26 +34,18 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-
 import eu.project.ttc.history.TermHistoryResource;
-import eu.project.ttc.models.RelationProperty;
-import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
-import eu.project.ttc.models.TermRelation;
-import eu.project.ttc.models.scored.ScoredModel;
-import eu.project.ttc.models.scored.ScoredTerm;
-import eu.project.ttc.models.scored.ScoredVariation;
 import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.ObserverResource.SubTaskObserver;
 import eu.project.ttc.resources.TermIndexResource;
-import eu.project.ttc.termino.engines.TermVariationScorer;
-import eu.project.ttc.termino.engines.VariantScorerConfig;
+import eu.project.ttc.resources.TermSuiteMemoryUIMAResource;
+import eu.project.ttc.termino.engines.ScorerConfig;
+import eu.project.ttc.termino.engines.TermPostProcessor;
 
-public class ScorerAE extends JCasAnnotator_ImplBase {
-	private static final Logger logger = LoggerFactory.getLogger(ScorerAE.class);
-	public static final String TASK_NAME = "Scorying terms";
+public class PostProcessorAE extends JCasAnnotator_ImplBase {
+	private static final Logger logger = LoggerFactory.getLogger(PostProcessorAE.class);
+	public static final String TASK_NAME = "Post-processing term index";
 
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
@@ -66,14 +56,21 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
 
+	public static final String SCORER_CONFIG = "ScorerConfig";
+	@ExternalResource(key=SCORER_CONFIG, mandatory=false)
+	protected TermSuiteMemoryUIMAResource<ScorerConfig> scorerConfigResource;
 	
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
+
+	private Optional<ScorerConfig> scorerConfig = Optional.empty();
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
+		if(scorerConfigResource != null)
+			scorerConfig = Optional.of(scorerConfigResource.getResourceObject());
 	}
 	
 	@Override
@@ -85,62 +82,14 @@ public class ScorerAE extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		logger.info("Scorying terms for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		logger.info(
+				"Post-processing terms and variants for TermIndex {}", 
+				this.termIndexResource.getTermIndex().getName());
 		TermIndex termIndex = termIndexResource.getTermIndex();
-		VariantScorerConfig defaultScorerConfig = termIndex.getLang().getScorerConfig();
-		TermVariationScorer variantScorer = new TermVariationScorer(defaultScorerConfig);
-		
-		/*
-		 * 1- compute scores
-		 */
-		logger.debug("Scorying");
-		variantScorer.setHistory(historyResource.getHistory());
-		ScoredModel scoredModel = variantScorer.score(termIndex);
-		
-		/*
-		 * 2- remove filtered terms
-		 */
-		logger.debug("Selecting terms for removal");
-		Set<Term> keptTerms = Sets.newHashSet();
-		for(ScoredTerm st:scoredModel.getTerms())
-			keptTerms.add(st.getTerm());
-		Set<Term> remTerms = Sets.newHashSet();
-		int size = termIndex.getTerms().size();
-		for(Term t:termIndex.getTerms())
-			if(!keptTerms.contains(t))
-				remTerms.add(t);
-		logger.debug("Removing filtered terms");
-		if(taskObserver.isPresent())
-			taskObserver.get().setTotalTaskWork(remTerms.size());
-		for(Term t:remTerms) {
-			if(taskObserver.isPresent())
-				taskObserver.get().work(1);
-			termIndex.removeTerm(t);
-		}
-		logger.debug("{} terms filtered (and removed from term index) out of {}", 
-				remTerms.size(),
-				size
-				);
-		
-		/*
-		 * 3- reset the sorted variations and unique bases
-		 */
-		logger.debug("Resetting scored variations and unique bases");
-		for(ScoredTerm st:scoredModel.getTerms()) {
-			for(ScoredVariation sv:st.getVariations()) {
-				TermRelation termVariation = sv.getTermVariation();
-				
-				/*
-				 * Add this term variation to the variants
-				 */
-				termVariation.setProperty(RelationProperty.VARIANT_SCORE,sv.getVariationScore());
-
-				List<TermRelation> toRem = Lists.newArrayList(termIndex.getInboundTermRelations(termVariation.getTo()));
-				for(TermRelation tv:toRem)
-					termIndex.removeRelation(tv);
-
-				termIndex.addRelation(termVariation);
-			}
-		}
+		if(!scorerConfig.isPresent())
+			scorerConfig = Optional.of(termIndex.getLang().getScorerConfig());
+		new TermPostProcessor(scorerConfig.get())
+			.setHistory(historyResource.getHistory())
+			.postprocess(termIndex);
 	}
 }

@@ -64,6 +64,6 @@ public class TermSuiteConstants {
 			TermSuiteConstants.R, 
 			TermSuiteConstants.A);
 	public static final String COMMA = ",";
-	public static final Object EMPTY_STRING = "";
+	public static final String EMPTY_STRING = "";
 	public static final String DEFAULT_RESOURCE_URL_PREFIX = "/fr/univnantes/termsuite/resources/";
 }

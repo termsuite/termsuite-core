@@ -1,4 +1,4 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.bilangaligner;
 
 import java.nio.file.Paths;
 
@@ -8,6 +8,8 @@ import eu.project.ttc.api.TerminoExtractor;
 import eu.project.ttc.api.TerminoExtractor.ContextualizerMode;
 import eu.project.ttc.api.TerminoFilterConfig;
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.eval.TermSuiteEvals;
+import eu.project.ttc.eval.model.Corpus;
 import eu.project.ttc.models.TermProperty;
 
 public class TerminoConfig {

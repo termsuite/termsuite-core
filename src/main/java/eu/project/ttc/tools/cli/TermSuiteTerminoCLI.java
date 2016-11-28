@@ -74,6 +74,7 @@ import eu.project.ttc.engines.desc.TermSuiteCollection;
 import eu.project.ttc.models.OccurrenceType;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermProperty;
+import eu.project.ttc.termino.engines.ScorerConfig;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.TermSuiteResourceManager;
 import eu.project.ttc.utils.FileUtils;
@@ -422,8 +423,10 @@ public class TermSuiteTerminoCLI {
 			}
 			
 			pipeline.aeExtensionDetector()
-				.aeScorer()
-				.aeRanker(TermProperty.SPECIFICITY, true);
+				.aeScorer(ScorerConfig.create())
+				.aeRanker(TermProperty.SPECIFICITY, true)
+				.aeMerger()
+				;
 			
 			
 			// filtering

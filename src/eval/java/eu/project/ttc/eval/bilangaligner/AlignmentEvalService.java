@@ -1,4 +1,4 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.bilangaligner;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,6 +11,10 @@ import java.util.stream.Stream;
 import org.assertj.core.util.Lists;
 
 import eu.project.ttc.engines.desc.Lang;
+import eu.project.ttc.eval.TermSuiteEvals;
+import eu.project.ttc.eval.model.Corpus;
+import eu.project.ttc.eval.model.LangPair;
+import eu.project.ttc.eval.resources.Tsv3ColFile;
 
 public class AlignmentEvalService {
 

@@ -236,9 +236,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termIndex)
-			.containsVariation("nn: wind turbine", RelationType.SYNTACTICAL, "nnn: wind regime turbine", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
-			.containsVariation("an: low frequency", RelationType.SYNTACTICAL, "aan: low audible frequency", RelationProperty.VARIATION_RULE, "S-I-AN-A")
-			.containsVariation("nn: wind generator", RelationType.SYNTACTICAL, "nnn: wind turbine generator", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
+			.containsRelation("nn: wind turbine", RelationType.SYNTACTICAL, "nnn: wind regime turbine", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
+			.containsRelation("an: low frequency", RelationType.SYNTACTICAL, "aan: low audible frequency", RelationProperty.VARIATION_RULE, "S-I-AN-A")
+			.containsRelation("nn: wind generator", RelationType.SYNTACTICAL, "nnn: wind turbine generator", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
 			;
 	}
 
@@ -320,21 +320,21 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testPrefixes() {
 		assertThat(termIndex)
-			.containsVariation("n: postconstruction", RelationType.IS_PREFIX_OF, "n: construction")
-			.containsVariation("n: microgeneration", RelationType.IS_PREFIX_OF, "n: generation")
-			.containsVariation("a: subtransient", RelationType.IS_PREFIX_OF, "a: transient")
-			.containsVariation("n: incompetence", RelationType.IS_PREFIX_OF, "n: competence")
-			.containsVariation("a: subacoustic", RelationType.IS_PREFIX_OF, "a: acoustic")
+			.containsRelation("n: postconstruction", RelationType.IS_PREFIX_OF, "n: construction")
+			.containsRelation("n: microgeneration", RelationType.IS_PREFIX_OF, "n: generation")
+			.containsRelation("a: subtransient", RelationType.IS_PREFIX_OF, "a: transient")
+			.containsRelation("n: incompetence", RelationType.IS_PREFIX_OF, "n: competence")
+			.containsRelation("a: subacoustic", RelationType.IS_PREFIX_OF, "a: acoustic")
 			;
 	}
 	
 	@Test
 	public void testDerivations() {
 		assertThat(termIndex)
-			.containsVariation("n: photograph", RelationType.DERIVES_INTO, "a: photographic")
-			.containsVariation("n: ethic", RelationType.DERIVES_INTO, "a: ethical")
-			.containsVariation("n: institution", RelationType.DERIVES_INTO, "a: institutional")
-			.containsVariation("n: industry", RelationType.DERIVES_INTO, "a: industrial")
+			.containsRelation("n: photograph", RelationType.DERIVES_INTO, "a: photographic")
+			.containsRelation("n: ethic", RelationType.DERIVES_INTO, "a: ethical")
+			.containsRelation("n: institution", RelationType.DERIVES_INTO, "a: institutional")
+			.containsRelation("n: industry", RelationType.DERIVES_INTO, "a: industrial")
 			;
 	}
 

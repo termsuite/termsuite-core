@@ -77,4 +77,9 @@ public class TermPair implements Comparable<TermPair> {
 				.compare(term2, o.term2)
 				.result();
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("{%s,%s}", term1, term2);
+	}
 }

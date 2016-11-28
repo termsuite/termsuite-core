@@ -56,7 +56,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		super(actual, TermIndexAssert.class);
 	}
 
-	public TermIndexAssert hasSize(int expected) {
+	public TermIndexAssert hasNTerms(int expected) {
 		if(actual.getTerms().size() != expected)
 			failWithMessage("Expected size was <%s>, but actual size is <%s>.", 
 					expected, actual.getTerms().size());
@@ -88,7 +88,19 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public TermIndexAssert containsVariation(String baseGroupingKey, RelationType type, String variantGroupingKey) {
+	public TermIndexAssert doesNotContainTerm(String expectedTerm) {
+		for(Term t:actual.getTerms()) {
+			if(t.getGroupingKey().equals(expectedTerm)) {
+				failWithMessage("Expected term <%s> to be absent from term index, but is actually present.", expectedTerm);
+				return this;
+			}
+		}
+		return this;
+		
+	}
+
+	
+	public TermIndexAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
@@ -105,6 +117,37 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 				);
 		return this;
 	}
+	
+	public TermIndexAssert containsRelationFrom(String fromKey, RelationType... types) {
+		if(failToFindTerms(fromKey))
+			return this;
+		
+		Term baseTerm = actual.getTermByGroupingKey(fromKey);
+		for(TermRelation tv:actual.getOutboundRelations(baseTerm, types))
+			return this;
+		
+		failWithMessage("No relation found from term <%s>%s", 
+				fromKey,
+				types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types))
+				);
+		return this;
+	}
+
+	
+	public TermIndexAssert containsRelationTo(String toKey, RelationType... types) {
+		if(failToFindTerms(toKey))
+			return this;
+		
+		Term term = actual.getTermByGroupingKey(toKey);
+		for(TermRelation tv:actual.getInboundRelations(term, types))
+			return this;
+		
+		failWithMessage("No relation found to term <%s>%s", 
+				toKey,
+				types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types))
+				);
+		return this;
+	}
 
 	private boolean failToFindTerms(String... groupingKeys) {
 		boolean failed = false;
@@ -117,7 +160,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return failed;
 	}
 	
-	public TermIndexAssert containsVariation(String baseGroupingKey, RelationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
+	public TermIndexAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
@@ -204,7 +247,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 
 	public TermIndexAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, RelationType... vTypes) {
 		isNotNull();
-		int actualSize = actual.getInboundTermRelations(variant, vTypes).size();
+		int actualSize = actual.getInboundRelations(variant, vTypes).size();
 		if (actualSize < atLeastN)
 			failWithMessage("Expected to find at least <%s> bases <%s> for term <%s>, but actually found <%s>",
 					atLeastN,
@@ -222,15 +265,15 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBases(Term variant) {
-		return assertThat(actual.getInboundTermRelations(variant));
+		return assertThat(actual.getInboundRelations(variant));
 	}
 	
 	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBasesOfType(Term variant, RelationType... types) {
-		return assertThat(actual.getInboundTermRelations(variant, types));
+		return assertThat(actual.getInboundRelations(variant, types));
 	}
 
 	public TermIndexAssert hasNBases(Term variant, int expectedNumberOfBases) {
-		Collection<TermRelation> bases = actual.getInboundTermRelations(variant);
+		Collection<TermRelation> bases = actual.getInboundRelations(variant);
 		if(bases.size() != expectedNumberOfBases)
 			failWithMessage("Expected <%s> bases but got <%s> (<%s>)", 
 					expectedNumberOfBases,
@@ -328,7 +371,52 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 					compoundTerm.getWords().get(0).getWord().getCompoundType().getShortName(),
 					compoundTerm.getGroupingKey(),
 					ControlFilesGenerator.toCompoundString(compoundTerm)
-					);
+				);
 		}
+	}
+
+
+	public TermIndexAssert hasNRelations(int expected, RelationType... types) {
+		long actualCnt = actual.getRelations(types).count();
+		if(actualCnt != expected) {
+			failWithMessage("Expected <%s> relations%s. Got <%s>", 
+					expected,
+					types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types)),
+					actualCnt
+				);
+		}
+		return this;
+	}
+
+	public TermIndexAssert hasNRelationsFrom(int expected, String fromKey, RelationType... types) {
+		if(failToFindTerms(fromKey))
+			return this;
+
+		long actualCnt = actual.getOutboundRelations(actual.getTermByGroupingKey(fromKey), types).size();
+		if(actualCnt != expected) {
+			failWithMessage("Expected <%s> relations%s from term %s. Got <%s>", 
+					expected,
+					types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types)),
+					fromKey,
+					actualCnt
+				);
+		}
+		return this;
+	}
+
+	public TermIndexAssert hasNRelationsTo(int expected, String toKey, RelationType... types) {
+		if(failToFindTerms(toKey))
+			return this;
+
+		long actualCnt = actual.getInboundRelations(actual.getTermByGroupingKey(toKey), types).size();
+		if(actualCnt != expected) {
+			failWithMessage("Expected <%s> relations%s to term %s. Got <%s>", 
+					expected,
+					types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types)),
+					toKey,
+					actualCnt
+				);
+		}
+		return this;
 	}
 }

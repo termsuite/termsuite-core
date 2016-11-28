@@ -1,4 +1,4 @@
-package eu.project.ttc.eval;
+package eu.project.ttc.eval.resources;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -30,24 +30,17 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.project.ttc.resources.ObserverResource;
 import eu.project.ttc.resources.TermIndexResource;
 
 /**
  * 
- * 
- * 
- * @author Damien Cram
- * 
+ * @
  *
  */
-public class Merger extends JCasAnnotator_ImplBase {
-	private static final Logger logger = LoggerFactory.getLogger(Merger.class);
-	public static final String TASK_NAME = "Merging variants";
+public class SWTSizeSetterAE extends JCasAnnotator_ImplBase {
+	private static final Logger logger = LoggerFactory.getLogger(SWTSizeSetterAE.class);
+	public static final String TASK_NAME = "Setting swt sizes";
 
-	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
-	protected ObserverResource observerResource;
-	
 	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
 	private TermIndexResource termIndexResource;
 	
@@ -61,8 +54,6 @@ public class Merger extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info("Starting " + TASK_NAME);
-		new TermMerger().mergeTerms(termIndexResource.getTermIndex());
+		new SWTSizeSetter().setSWTNumber(termIndexResource.getTermIndex());
 	}
-
-
 }

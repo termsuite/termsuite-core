@@ -23,7 +23,7 @@
 
 package eu.project.ttc.termino.engines;
 
-public class VariantScorerConfig {
+public class ScorerConfig {
 	private double extensionSpecTh = 0.1;
 	private double extensionGainTh = 0.1;
 	private double variantIndependanceTh = 0.5;
@@ -31,70 +31,86 @@ public class VariantScorerConfig {
 	private double orthographicScoreTh = 0.55;
 	private double termIndependanceTh = 0.10;
 
-	private VariantScorerConfig() {
+	private ScorerConfig() {
 	}
 
 	public double getExtensionSpecTh() {
 		return extensionSpecTh;
 	}
 
-	public void setExtensionSpecTh(double extensionSpecTh) {
+	public ScorerConfig setExtensionSpecTh(double extensionSpecTh) {
 		this.extensionSpecTh = extensionSpecTh;
+		return this;
+	}
+	
+	public ScorerConfig noFiltering() {
+		extensionSpecTh = -Double.MAX_VALUE;
+		extensionGainTh = -Double.MAX_VALUE;
+		variantIndependanceTh = -Double.MAX_VALUE;
+		variationScoreTh = -Double.MAX_VALUE;
+		orthographicScoreTh = -Double.MAX_VALUE;
+		termIndependanceTh = -Double.MAX_VALUE;
+		return this;
 	}
 
 	public double getExtensionGainTh() {
 		return extensionGainTh;
 	}
 
-	public void setExtensionGainTh(double extensionGainTh) {
+	public ScorerConfig setExtensionGainTh(double extensionGainTh) {
 		this.extensionGainTh = extensionGainTh;
+		return this;
 	}
 
 	public double getVariantIndependanceTh() {
 		return variantIndependanceTh;
 	}
 
-	public void setVariantIndependanceTh(double variantIndependanceTh) {
+	public ScorerConfig setVariantIndependanceTh(double variantIndependanceTh) {
 		this.variantIndependanceTh = variantIndependanceTh;
+		return this;
 	}
 
 	public double getVariationScoreTh() {
 		return variationScoreTh;
 	}
 
-	public void setVariationScoreTh(double variationScoreTh) {
+	public ScorerConfig setVariationScoreTh(double variationScoreTh) {
 		this.variationScoreTh = variationScoreTh;
+		return this;
 	}
 
 	public double getOrthographicScoreTh() {
 		return orthographicScoreTh;
 	}
 
-	public void setOrthographicScoreTh(double orthographicScoreTh) {
+	public ScorerConfig setOrthographicScoreTh(double orthographicScoreTh) {
 		this.orthographicScoreTh = orthographicScoreTh;
+		return this;
 	}
 
 	public double getTermIndependanceTh() {
 		return termIndependanceTh;
 	}
 
-	public void setTermIndependanceTh(double termIndependanceTh) {
+	public ScorerConfig setTermIndependanceTh(double termIndependanceTh) {
 		this.termIndependanceTh = termIndependanceTh;
+		return this;
 	}
 
-	public static VariantScorerConfig create(double variantIndependenceScoreThreshold, 
+	public static ScorerConfig create(double variantIndependenceScoreThreshold, 
 			double variantExtGainThreshold, 
 			double variantExtSpecThreshold, 
 			double variantScoreThreshold) {
-		VariantScorerConfig scorerConfig = create();
+		ScorerConfig scorerConfig = create();
 		scorerConfig.setExtensionGainTh(variantExtGainThreshold);
 		scorerConfig.setExtensionSpecTh(variantExtSpecThreshold);
 		scorerConfig.setVariantIndependanceTh(variantIndependenceScoreThreshold);
 		scorerConfig.setVariationScoreTh(variantScoreThreshold);
 		return scorerConfig;
 	}
-	public static VariantScorerConfig create() {
-		return new VariantScorerConfig();
+	public static ScorerConfig create() {
+		return new ScorerConfig();
 	}
 
 }

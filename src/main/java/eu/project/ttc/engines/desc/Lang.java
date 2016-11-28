@@ -24,18 +24,18 @@ package eu.project.ttc.engines.desc;
 import java.util.Locale;
 import java.util.NoSuchElementException;
 
-import eu.project.ttc.termino.engines.VariantScorerConfig;
+import eu.project.ttc.termino.engines.ScorerConfig;
 import eu.project.ttc.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.75f, 3, 4, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 3, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, VariantScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED);
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.75f, 3, 4, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.ENABLED),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.DISABLED),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,ScorerConfig.create(0.5, 0.1,0.1, 0.25), 3, EngineState.ENABLED),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED);
 	
 	private final float compostAlpha;
 	private final float compostBeta;
@@ -50,7 +50,7 @@ public enum Lang {
 	private final int gVariantNbPreindexingLetters;
 	private final EngineState gVariantGatheringState;
 
-	private VariantScorerConfig scorerConfig;
+	private ScorerConfig scorerConfig;
 
 
     private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
@@ -61,7 +61,7 @@ public enum Lang {
     		float compostCompostThreshold,
     		int compostMinComponentSize,
     		int compostMaxComponentNumber,
-    		VariantScorerConfig scorefierConfig,
+    		ScorerConfig scorefierConfig,
     		int gVariantNbPreindexingLetters,
     		EngineState gVariantGatheringState
     		) {
@@ -155,7 +155,7 @@ public enum Lang {
 		throw new NoSuchElementException(code);
 	}
 
-	public VariantScorerConfig getScorerConfig() {
+	public ScorerConfig getScorerConfig() {
 		return scorerConfig;
 	}
 	

@@ -72,7 +72,7 @@ public class TerminoExtractorSpec {
 	private void assertTermIndex(TermIndex termIndex) {
 		
 		assertThat(termIndex)
-			.hasSize(3)
+			.hasNTerms(3)
 			.containsTerm("na: énergie éolien", 2)
 			.containsTerm("npn: énergie du futur", 1)
 			.containsTerm("npn: énergie de demain", 1)
@@ -86,7 +86,7 @@ public class TerminoExtractorSpec {
 			.execute();
 		
 		assertThat(termIndex)
-			.hasSize(4)
+			.hasNTerms(4)
 			.containsTerm("n: éolienne", 1)
 			.containsTerm("n: énergie", 3)
 			.containsTerm("na: énergie éolien", 1)

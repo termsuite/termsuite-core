@@ -31,6 +31,7 @@ import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermProperty;
 import eu.project.ttc.readers.TermSuiteJsonCasDeserializer;
+import eu.project.ttc.termino.engines.ScorerConfig;
 import eu.project.ttc.tools.TermSuitePipeline;
 import eu.project.ttc.tools.api.internal.FileSystemUtils;
 import eu.project.ttc.tools.api.internal.PipelineUtils;
@@ -77,6 +78,11 @@ public class TerminoExtractor {
 	 */
 	private boolean preprocessed = false;
 	
+	
+	private boolean mergeGraphicalVariants = true;
+
+	
+	
 	/*
 	 * The maximum number of terms allowed in memory. empty 
 	 * if maxSizeFiltering is deactivated.
@@ -117,6 +123,13 @@ public class TerminoExtractor {
 	private Optional<TerminoFilterConfig> postFilterConfig = Optional.empty();
 	private Optional<TerminoFilterConfig> preFilterConfig  = Optional.empty();
 
+	
+	/*
+	 * 
+	 */
+	private Optional<ScorerConfig> scorerConfig = Optional.empty();
+	
+	
 	private boolean semanticAlignerEnabled = false;
 	
 	public static TerminoExtractor fromTextString(Lang lang, String text) {
@@ -231,8 +244,18 @@ public class TerminoExtractor {
 		return this;
 	}
 
+	public TerminoExtractor configureScoring(ScorerConfig scorerConfig) {
+		this.scorerConfig = Optional.of(scorerConfig);
+		return this;
+	}
+
 	public TerminoExtractor disableScoring() {
 		this.scoringEnabled = false;
+		return this;
+	}
+
+	public TerminoExtractor disableGraphVariantMerging() {
+		this.mergeGraphicalVariants = false;
 		return this;
 	}
 
@@ -376,8 +399,11 @@ public class TerminoExtractor {
 			pipeline.aeSemanticAligner();
 		
 		if(scoringEnabled)
-				pipeline.aeScorer()
-				.aeRanker(TermProperty.SPECIFICITY, true);
+			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig())
+					.aeRanker(TermProperty.SPECIFICITY, true);
+
+		if(mergeGraphicalVariants)
+			pipeline.aeMerger();
 
 		if(postFilterConfig.isPresent()) 
 			PipelineUtils.filter(pipeline, postFilterConfig.get());

@@ -38,18 +38,24 @@ import com.google.common.collect.Maps;
  */
 public enum TermProperty implements Property<Term> {
 	RANK("rank", "#", "rank", Integer.class),
+	IS_SINGLE_WORD("isSingleWord", "swt", "swt", Boolean.class),
 	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", "dfreq", Integer.class),
 	FREQUENCY_NORM("frequencyNorm", "fnorm", "f_norm", Double.class),
 	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class),
 	SPECIFICITY("specificity", "sp", "spec", Double.class),
 	FREQUENCY("frequency", "f", "freq", Integer.class),
+	ORTHOGRAPHIC_SCORE("OrthographicScore", "ortho", "ortho", Double.class),
+	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", "ifreq", Integer.class),
+	INDEPENDANCE("Independance", "ind", "ind", Double.class),
 	PILOT("pilot", "pilot", "pilot", String.class),
 	LEMMA("lemma", "lm", "lemma", String.class),
 	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class),
 	GROUPING_KEY("groupingKey", "gkey", "key", String.class),
 	PATTERN("pattern", "p", "pattern", String.class),
 	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 
-	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class),
+	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class), 
+	SWT_SIZE("SwtSize", "swtSize", "swtSize", Integer.class),
+	
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newHashMap();
@@ -107,7 +113,14 @@ public enum TermProperty implements Property<Term> {
 
 	@Override
 	public int compare(Term o1, Term o2) {
-		return ComparisonChain.start()
+		if(o1.getPropertyValueUnchecked(this) == o2.getPropertyValueUnchecked(this))
+			return 0;
+		else if(o1.getPropertyValueUnchecked(this)==null)
+			return -1;
+		else if(o2.getPropertyValueUnchecked(this)==null)
+			return 1;
+		else
+			return ComparisonChain.start()
 				.compare(
 						o1.getPropertyValueUnchecked(this), 
 						o2.getPropertyValueUnchecked(this))

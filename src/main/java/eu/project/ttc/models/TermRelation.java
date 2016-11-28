@@ -22,24 +22,21 @@
 package eu.project.ttc.models;
 
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 
 public class TermRelation extends PropertyHolder<RelationProperty> {
 	private RelationType relationType;
 	private Term from;
 	private Term to;
 	
-//	private boolean includedIn;
-//	private boolean prefixOf;
-//	private boolean suffixOf;
-	
 	public TermRelation(RelationType variationType, Term from, Term to) {
 		super();
+		Preconditions.checkNotNull(from);
+		Preconditions.checkNotNull(to);
+		Preconditions.checkNotNull(variationType);
 		this.relationType = variationType;
 		this.from = from;
 		this.to = to;
-//		this.includedIn = TermUtils.isIncludedIn(from, to);
-//		this.prefixOf = TermUtils.isPrefixOf(from, to);
-//		this.suffixOf = TermUtils.isSuffixOf(from, to);
 	}
 	
 	public RelationType getType() {
@@ -61,14 +58,11 @@ public class TermRelation extends PropertyHolder<RelationProperty> {
 	
 	@Override
 	public int hashCode() {
+		/*
+		 * FIXME Very bad choice since properties can change over the time.
+		 */
 		return Objects.hashCode(this.from, this.to, this.relationType, this.properties);
 	}
-	
-//	public String getLabel() {
-//		if(this._label == null) 
-//			this._label = this.relationType.getShortName() + ":" + this.info; 
-//		return this._label;
-//	}
 	
 	@Override
 	public boolean equals(Object obj) {
@@ -81,33 +75,4 @@ public class TermRelation extends PropertyHolder<RelationProperty> {
 		} else 
 			return false;
 	}
-	
-//	public boolean isIncludedIn() {
-//		return includedIn;
-//	}
-//	
-//	public boolean isSuffixOf() {
-//		return suffixOf;
-//	}
-//	
-//	public boolean isPrefixOf() {
-//		return prefixOf;
-//	}
-	
-//	public int compareTo(TermRelation tv) {
-//		return ComparisonChain.start()
-//				// sort by score desc
-//				.compare(tv.score, this.score)
-//				// then by non inclusion first
-//				.compare(this.includedIn ? 1 : 0, tv.includedIn ? 1 : 0)
-//				// then by length asc
-//				.compare(this.to.getWords().size(), tv.to.getWords().size())
-//				// then by term id
-//				.compare(this.to.getGroupingKey(), tv.to.getGroupingKey())
-//				// makes it consistent with equals
-//				.compare(this.from.getGroupingKey(), tv.from.getGroupingKey())
-//				.compare(this.relationType, tv.relationType)
-//				.result();
-//				
-//	}
 }

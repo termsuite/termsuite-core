@@ -22,23 +22,32 @@
 package eu.project.ttc.models;
 
 public enum RelationType {
-	MORPHOLOGICAL(1, "morph", true),
-	SYNTACTICAL(3, "syn", true),
-	GRAPHICAL(2, "graph", false),
-	DERIVES_INTO(4, "deriv", true),
-	IS_PREFIX_OF(5, "pref", true),
-	HAS_EXTENSION(6, "hasext", true), 
-	SYNONYMIC(7, "syno", true),
+	MORPHOLOGICAL("M", 1, "morph", true),
+	SYNTACTICAL("S", 3, "syn", true),
+	GRAPHICAL("G", 2, "graph", false),
+	DERIVES_INTO("D", 4, "deriv", true),
+	IS_PREFIX_OF("P", 5, "pref", true),
+	HAS_EXTENSION("E", 6, "hasext", true), 
+	SYNONYMIC("H", 7, "syno", true),
 	;
 	
+	private String letter;
 	private int order;
 	private String shortName;
 	private boolean directional;
 	
-	private RelationType(int order, String shortName, boolean directional) {
+	private RelationType(String letter, int order, String shortName, boolean directional) {
+		this.letter = letter;
 		this.order = order;
 		this.directional = directional;
 		this.shortName = shortName;
+	}
+
+	public static final RelationType[] VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL, GRAPHICAL, SYNONYMIC};
+	public static final RelationType[] SYNTAG_VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL};
+	
+	public String getLetter() {
+		return letter;
 	}
 	
 	public int getOrder() {

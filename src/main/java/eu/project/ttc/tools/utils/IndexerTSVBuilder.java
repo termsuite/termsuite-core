@@ -48,9 +48,12 @@ import java.util.List;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
+import eu.project.ttc.models.Property;
+import eu.project.ttc.models.RelationProperty;
 import eu.project.ttc.models.Term;
 import eu.project.ttc.models.TermIndex;
 import eu.project.ttc.models.TermProperty;
+import eu.project.ttc.models.TermRelation;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -59,19 +62,17 @@ import eu.project.ttc.models.TermProperty;
  */
 public class IndexerTSVBuilder extends AbstractTSVBuilder {
 
-	private List<TermProperty> properties;
+	private List<Property<?>> properties;
 	
-	private boolean showScores;
 	/**
 	 * Initializes a new instance using the specified output
 	 * 
 	 * @param out
 	 *            The output writer.
 	 */
-	public IndexerTSVBuilder(Writer out, List<TermProperty> properties, boolean showScores) {
+	public IndexerTSVBuilder(Writer out, List<Property<?>> properties) {
 		super(out);
 		this.properties = properties;
-		this.showScores = showScores;
 	}
 
 	
@@ -82,48 +83,68 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public void addTerm(TermIndex termIndex, Term term, String label) throws IOException {
-		startTerm(termIndex, term, label);
+	public void addTerm(TermIndex termIndex, Term term) throws IOException {
+		startTerm(termIndex, term);
 	}
 
 	private static final String SPEC_FORMAT = "%.2f";
-	private static final String T_LABEL_FORMAT = "T[%s]";
-	private static final String T_LABEL = "T";
-	private static final String V_LABEL_FORMAT = "V[%s]";
-	private static final String V_LABEL = "V";
+	private static final String T_FORMAT = "T";
+	private static final String V_FORMAT = "V[%s]";
 	
 	private Term currentTerm = null;
 	
-	public void startTerm(TermIndex termIndex, Term term, String label) throws IOException {
+	public void startTerm(TermIndex termIndex, Term term) throws IOException {
 		this.currentTerm = term;
-		if(showScores) {
-			appendTerm(termIndex, term, String.format(T_LABEL_FORMAT,label));
-		} else {
-			appendTerm(termIndex, term, T_LABEL);
-		}
+		appendTerm(
+				termIndex, 
+				term, 
+				String.format(T_FORMAT));
 	}
 
-	public void addVariant(TermIndex termIndex,Term variant, String label) throws IOException {
-		if(showScores) {
-			appendTerm(termIndex, variant, String.format(V_LABEL_FORMAT, label));
-		} else {
-			appendTerm(termIndex, variant, V_LABEL);
+	public void addVariant(TermIndex termIndex, TermRelation variation) throws IOException {
+		List<String> line = Lists.newArrayList();
+		line.add(String.format(V_FORMAT, variation.getType().getLetter()));
+		for(Property<?> p:properties) {
+			if(p instanceof RelationProperty) {
+				Comparable<?> value = variation.getPropertyValueUnchecked((RelationProperty)p);
+				line.add(getPropertyValue(value));
+			} else if(p instanceof TermProperty) {
+				Comparable<?> value = variation.getTo().getPropertyValueUnchecked((TermProperty)p);
+				line.add(getPropertyValue(value));
+			} else
+				line.add("");
 		}
+		append(
+				currentTerm.getRank() == null ? "-" : Integer.toString(currentTerm.getRank()), 
+				line.toArray(new String[line.size()]));
 	}
 
 	private void appendTerm(TermIndex termIndex, Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
-		for(TermProperty p:properties) {
-			Comparable<?> value = t.getPropertyValueUnchecked(p);
-			if (value instanceof Integer || value instanceof Long)
-				line.add(value.toString());
-			else if(value instanceof Double || value instanceof Float) {
-				line.add(String.format(SPEC_FORMAT, value));
+		for(Property<?> p:properties) {
+			if(p instanceof TermProperty) {
+				Comparable<?> value = t.getPropertyValueUnchecked((TermProperty)p);
+				line.add(getPropertyValue(value));
 			} else
-				line.add(value.toString());
+				line.add("");
 		}
-		append(Integer.toString(currentTerm.getRank()), line.toArray(new String[line.size()]));
+		append(
+				currentTerm.getRank() == null ? "-" : Integer.toString(currentTerm.getRank()), 
+				line.toArray(new String[line.size()]));
+	}
+
+	private String getPropertyValue(Comparable<?> value) {
+		if (value instanceof Integer || value instanceof Long)
+			return value.toString();
+		else if(value instanceof Boolean) 
+			return (boolean)value ? "1" : "0";
+		else if(value instanceof Double || value instanceof Float) {
+			return String.format(SPEC_FORMAT, value);
+		} else if(value == null)
+			return "";
+		else
+			return value.toString();
 	}
 
 
@@ -131,7 +152,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		List<String> headers = Lists.newArrayList();
 		headers.add("#");
 		headers.add("type");
-		for(TermProperty p:properties)
+		for(Property<?> p:properties)
 			headers.add(p.getShortName());
 		write(Joiner.on("\t").join(headers));
 		write("\n");
