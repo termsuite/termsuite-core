@@ -71,6 +71,7 @@ import eu.project.ttc.engines.PipelineObserver;
 import eu.project.ttc.engines.PostProcessorAE;
 import eu.project.ttc.engines.Ranker;
 import eu.project.ttc.engines.RegexSpotter;
+import eu.project.ttc.engines.SWTSizeSetterAE;
 import eu.project.ttc.engines.SemanticAlignerAE;
 import eu.project.ttc.engines.StringRegexFilter;
 import eu.project.ttc.engines.TermGathererAE;
@@ -1309,6 +1310,7 @@ public class TermSuitePipeline {
 			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0)
 						.aePilotSetter()
 						.aeDocumentFrequencySetter()
+						.aeSWTSizeSetter()
 						;
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
@@ -1336,6 +1338,19 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 
 			return aggregateAndReturn(ae, DocumentFrequencySetterAE.TASK_NAME, 0);
+		} catch (Exception e) {
+			throw new TermSuitePipelineException(e);
+		}		
+	}
+
+	private TermSuitePipeline aeSWTSizeSetter()  {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					SWTSizeSetterAE.class
+				);
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+
+			return aggregateAndReturn(ae, SWTSizeSetterAE.TASK_NAME, 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}		
