@@ -23,6 +23,9 @@
 
 package eu.project.ttc.termino.engines;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -73,11 +76,10 @@ public class TermPostProcessor {
 		// Score variations
 		new VariationScorer().score(termIndex);
 		
-		// Extract variants that are base terms
-		extractBaseTerms(termIndex);
+		
 		
 		// Filter extensions
-		filterExtensions(termIndex);
+		filterExtensionsByThresholds(termIndex);
 		
 		// Filter relations
 		Set<TermRelation> remRelations = termIndex.getRelations(RelationType.VARIATIONS)
@@ -86,6 +88,24 @@ public class TermPostProcessor {
 		LOGGER.debug("Filtered {} variants out of {} variants", remRelations.size(), termIndex.getRelations(RelationType.VARIATIONS).count());
 		
 
+
+		remRelations
+			.stream()
+			.forEach(termIndex::removeRelation);
+
+		
+		// Filter terms with bad orthograph and no independance
+		Set<Term> remTerms = termIndex.getTerms().stream()
+			.filter(this::filterTermByThresholds)
+			.collect(Collectors.toSet());
+		LOGGER.debug("Filtered {} terms out of {} terms", remTerms.size(), termIndex.getTerms().size());
+		remTerms
+			.stream()
+			.forEach(termIndex::removeTerm);
+		
+		// Detect 2-order extension variations
+		filterTwoOrderVariations(termIndex);
+		
 		// Rank variations extensions
 		termIndex.getTerms().forEach(t-> {
 			final MutableInt vrank = new MutableInt(0);
@@ -98,27 +118,43 @@ public class TermPostProcessor {
 				});
 		});
 
-		remRelations
-			.stream()
-			.forEach(termIndex::removeRelation);
-
-		
-		// Filter terms with bad orthograph and no independance
-		Set<Term> remTerms = termIndex.getTerms().stream()
-			.filter(this::filterTerm)
-			.collect(Collectors.toSet());
-		LOGGER.debug("Filtered {} terms out of {} terms", remTerms.size(), termIndex.getTerms().size());
-		remTerms
-			.stream()
-			.forEach(termIndex::removeTerm);
-
 	}
 
-	private void extractBaseTerms(TermIndex termIndex) {
-		
+	private void filterTwoOrderVariations(TermIndex termIndex) {
+		termIndex.getTerms().stream()
+			.sorted(TermProperty.FREQUENCY.getComparator(true))
+			.forEach(term -> {
+				final Map<Term, TermRelation> variants = new HashMap<>();
+
+				for(TermRelation rel:termIndex.getOutboundRelations(term, RelationType.SYNTAG_VARIATIONS)) {
+					if(rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION))
+						variants.put(rel.getTo(), rel);
+				}
+				
+				final Set<TermRelation> order2Rels = new HashSet<>();
+				
+				variants.keySet().forEach(variant-> {
+					termIndex
+						.getOutboundRelations(variant, RelationType.SYNTAG_VARIATIONS)
+						.stream()
+						.filter(order2Rel -> order2Rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION))
+						.filter(order2Rel -> variants.containsKey(order2Rel.getTo()))
+						.forEach(order2Rels::add)
+					;
+				});
+				
+				order2Rels.forEach(rel -> {
+					TermRelation r = variants.get(rel.getTo());
+					if(LOGGER.isDebugEnabled()) {
+						LOGGER.debug("Found order-2 relation in variation set {}-->{}-->{}", term, rel.getFrom(), rel.getTo());
+						LOGGER.debug("Removing {}", r);
+					}
+					termIndex.removeRelation(r);
+				});
+			});
 	}
 
-	private void filterExtensions(TermIndex termIndex) {
+	private void filterExtensionsByThresholds(TermIndex termIndex) {
 		Predicate<? super TermRelation> isExtension = rel -> 
 				rel.isPropertySet(RelationProperty.IS_EXTENSION) 
 				&& rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION);
@@ -160,7 +196,7 @@ public class TermPostProcessor {
 		remTargets.stream().map(TermRelation::getTo).forEach(termIndex::removeTerm);
 	}
 
-	private boolean filterTerm(Term term) {
+	private boolean filterTermByThresholds(Term term) {
 		if(StringUtils.getOrthographicScore(term.getLemma()) < this.config.getOrthographicScoreTh()) {
 			if(history != null && history.isWatched(term))
 				history.saveEvent(

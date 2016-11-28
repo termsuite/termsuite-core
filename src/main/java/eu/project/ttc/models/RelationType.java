@@ -44,6 +44,7 @@ public enum RelationType {
 	}
 
 	public static final RelationType[] VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL, GRAPHICAL, SYNONYMIC};
+	public static final RelationType[] SYNTAG_VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL};
 	
 	public String getLetter() {
 		return letter;
