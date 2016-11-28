@@ -43,7 +43,7 @@ public class PreProcessor {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PreProcessor.class);
 
 	/** Short usage description of the CLI */
-	private static final String USAGE = "java [-DconfigFile=<file>] -cp termsuite-core-x.x.jar eu.project.ttc.tools.PreProcessor";
+	private static final String USAGE = "java [-DconfigFile=<file>] -cp termsuite-core-x.x.jar fr.univnantes.termsuite.tools.PreProcessor";
 
 	
 	private Charset charset = Charset.forName("UTF-8");
@@ -92,7 +92,7 @@ public class PreProcessor {
 			 */
 			AnalysisEngineDescription tokenizerAe = AnalysisEngineFactory.createEngineDescription(
 					Lexer.class, 
-					Lexer.PARAM_TYPE, "eu.project.ttc.types.WordAnnotation"
+					Lexer.PARAM_TYPE, "fr.univnantes.termsuite.types.WordAnnotation"
 				);
 		
 			URL jarURI = new URL("jar:"+resourceJar.toUri()+"!/");
@@ -112,7 +112,7 @@ public class PreProcessor {
 				String treeTaggerHome = this.taggerPath.get().toString();
 				AnalysisEngineDescription taggerAe = AnalysisEngineFactory.createEngineDescription(
 						TreeTaggerWrapper.class, 
-						TreeTaggerWrapper.PARAM_ANNOTATION_TYPE, "eu.project.ttc.types.WordAnnotation",
+						TreeTaggerWrapper.PARAM_ANNOTATION_TYPE, "fr.univnantes.termsuite.types.WordAnnotation",
 						TreeTaggerWrapper.PARAM_TAG_FEATURE, "tag",
 						TreeTaggerWrapper.PARAM_LEMMA_FEATURE, "lemma",
 						TreeTaggerWrapper.PARAM_UPDATE_ANNOTATION_FEATURES, true,

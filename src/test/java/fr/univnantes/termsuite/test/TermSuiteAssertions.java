@@ -25,12 +25,12 @@ package fr.univnantes.termsuite.test;
 
 import org.apache.uima.jcas.JCas;
 
-import eu.project.ttc.test.func.TermAssert;
-import eu.project.ttc.test.func.TermIndexAssert;
-import eu.project.ttc.test.unit.CasAssert;
-import eu.project.ttc.test.unit.StringAssert;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.test.func.TermAssert;
+import fr.univnantes.termsuite.test.func.TermIndexAssert;
+import fr.univnantes.termsuite.test.unit.CasAssert;
+import fr.univnantes.termsuite.test.unit.StringAssert;
 
 public class TermSuiteAssertions {
 

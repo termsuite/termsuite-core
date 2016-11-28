@@ -3,10 +3,9 @@
 /* First created by JCasGen Mon Nov 28 18:03:45 CET 2016 */
 package fr.univnantes.termsuite.types;
 
-import org.apache.uima.jcas.JCas; 
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
-
 import org.apache.uima.jcas.tcas.Annotation;
 
 

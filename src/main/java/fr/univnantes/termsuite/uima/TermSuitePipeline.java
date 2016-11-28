@@ -662,7 +662,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					Lexer.class, 
-					Lexer.PARAM_TYPE, "eu.project.ttc.types.WordAnnotation"
+					Lexer.PARAM_TYPE, "fr.univnantes.termsuite.types.WordAnnotation"
 				);
 			
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
@@ -732,7 +732,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TreeTaggerWrapper.class, 
-					TreeTaggerWrapper.PARAM_ANNOTATION_TYPE, "eu.project.ttc.types.WordAnnotation",
+					TreeTaggerWrapper.PARAM_ANNOTATION_TYPE, "fr.univnantes.termsuite.types.WordAnnotation",
 					TreeTaggerWrapper.PARAM_TAG_FEATURE, "tag",
 					TreeTaggerWrapper.PARAM_LEMMA_FEATURE, "lemma",
 					TreeTaggerWrapper.PARAM_UPDATE_ANNOTATION_FEATURES, true,
@@ -1022,7 +1022,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					Mapper.class, 
-					Mapper.PARAM_SOURCE, "eu.project.ttc.types.WordAnnotation:tag",
+					Mapper.PARAM_SOURCE, "fr.univnantes.termsuite.types.WordAnnotation:tag",
 					Mapper.PARAM_TARGET, target,
 					Mapper.PARAM_UPDATE, true
 				);
@@ -1046,46 +1046,46 @@ public class TermSuitePipeline {
 
 	private TermSuitePipeline caseNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:case", 
+				"fr.univnantes.termsuite.types.WordAnnotation:case", 
 				getResUrl(TermSuiteResource.TAGGER_CASE_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline categoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:category", 
+				"fr.univnantes.termsuite.types.WordAnnotation:category", 
 				getResUrl(TermSuiteResource.TAGGER_CATEGORY_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline tenseNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:tense", 
+				"fr.univnantes.termsuite.types.WordAnnotation:tense", 
 				getResUrl(TermSuiteResource.TAGGER_TENSE_MAPPING, tagger));
 	}
 
 	private TermSuitePipeline subCategoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:subCategory", 
+				"fr.univnantes.termsuite.types.WordAnnotation:subCategory", 
 				getResUrl(TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING, tagger));
 	}
 
 	
 	private TermSuitePipeline moodNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:mood", 
+				"fr.univnantes.termsuite.types.WordAnnotation:mood", 
 				getResUrl(TermSuiteResource.TAGGER_MOOD_MAPPING, tagger));
 	}
 
 	
 	private TermSuitePipeline numberNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:number", 
+				"fr.univnantes.termsuite.types.WordAnnotation:number", 
 				getResUrl(TermSuiteResource.TAGGER_NUMBER_MAPPING, tagger));
 	}
 
 	
 	private TermSuitePipeline genderNormalizer(Tagger tagger)  {
 		return subNormalizer(
-				"eu.project.ttc.types.WordAnnotation:gender", 
+				"fr.univnantes.termsuite.types.WordAnnotation:gender", 
 				getResUrl(TermSuiteResource.TAGGER_GENDER_MAPPING, tagger));
 	}
 
@@ -1111,7 +1111,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					Stemmer.class,
-					Stemmer.PARAM_FEATURE, "eu.project.ttc.types.WordAnnotation:stem",
+					Stemmer.PARAM_FEATURE, "fr.univnantes.termsuite.types.WordAnnotation:stem",
 					Stemmer.PARAM_LANGUAGE, lang,
 					Stemmer.PARAM_UPDATE, true
 				);
@@ -1623,7 +1623,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					ChineseSegmenter.class,
-					ChineseSegmenter.ANNOTATION_TYPE, "eu.project.ttc.types.WordAnnotation"
+					ChineseSegmenter.ANNOTATION_TYPE, "fr.univnantes.termsuite.types.WordAnnotation"
 				);
 			ExternalResourceFactory.createDependencyAndBind(
 					ae,
