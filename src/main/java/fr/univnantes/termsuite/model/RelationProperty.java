@@ -24,6 +24,7 @@ public enum RelationProperty implements Property<TermRelation> {
 	NORMALIZED_EXTENSION_SCORE("NormalizedExtensionScore", "normExtScore", "normExtScore", Double.class), 
 	NORMALIZED_SOURCE_GAIN("NormalizedSourceGain", "normSrcGain", "normSrcGain", Double.class), 
 	NORMALIZED_AFFIX_SCORE("NormalizedAffixScore", "normAffScore", "normAffScore", Double.class), 
+	IS_INFERED("IsInfered", "isInfered", "isInfered", Boolean.class), 
 	;
 
 	private String propertyName;

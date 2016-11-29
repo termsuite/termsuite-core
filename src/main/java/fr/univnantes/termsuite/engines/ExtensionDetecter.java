@@ -69,11 +69,7 @@ public class ExtensionDetecter {
 				if(swt.equals(term))
 					continue;
 				else {
-					termIndex.addRelation(new TermRelation(
-								RelationType.HAS_EXTENSION,
-								swt, 
-								term
-							));
+					addExtensionRelationIfNotExisting(termIndex, swt, term);
 				}
 			}
 		}
@@ -81,6 +77,16 @@ public class ExtensionDetecter {
 		
 		termIndex.dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
 		
+	}
+
+
+	public void addExtensionRelationIfNotExisting(TermIndex termIndex, Term from, Term to) {
+		if(!termIndex.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent())
+			termIndex.addRelation(new TermRelation(
+					RelationType.HAS_EXTENSION,
+					from, 
+					to
+				));
 	}
 
 	public void setSize2Extensions(TermIndex termIndex) {
@@ -106,11 +112,11 @@ public class ExtensionDetecter {
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
-						termIndex.addRelation(new TermRelation(RelationType.HAS_EXTENSION, t1, t2));
+						addExtensionRelationIfNotExisting(termIndex, t1, t2);
 						watch(t1, t2);
 
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
-						termIndex.addRelation(new TermRelation(RelationType.HAS_EXTENSION, t2, t1));
+						addExtensionRelationIfNotExisting(termIndex, t2, t1);
 						watch(t2, t1);
 					}
 				}

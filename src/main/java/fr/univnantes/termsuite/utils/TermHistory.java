@@ -42,7 +42,7 @@ public class TermHistory {
 		for(String key:termKeys)
 			watchedTerms.add(key);
 	}
-	public void addWatchedTerms(String[] termKeys) {
+	public void addWatchedTerms(String... termKeys) {
 		addWatchedTerms(Lists.newArrayList(termKeys));
 	}
 	

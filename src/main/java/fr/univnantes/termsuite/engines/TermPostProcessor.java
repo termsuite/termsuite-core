@@ -87,15 +87,16 @@ public class TermPostProcessor {
 			.filter(this::filterVariation)
 			.collect(Collectors.toSet());
 		LOGGER.debug("Filtered {} variants out of {} variants", remRelations.size(), termIndex.getRelations(RelationType.VARIATIONS).count());
-		
-
-
 		remRelations
 			.stream()
 			.forEach(termIndex::removeRelation);
 
 		
-		// Filter terms with bad orthograph and no independance
+		/*
+		 *  Filter terms with bad orthograph and no independance
+		 *  
+		 *  IMPORTANT: must occur AFTER detection of 2-order extension variations
+		 */
 		Set<Term> remTerms = termIndex.getTerms().stream()
 			.filter(this::filterTermByThresholds)
 			.collect(Collectors.toSet());
@@ -104,8 +105,19 @@ public class TermPostProcessor {
 			.stream()
 			.forEach(termIndex::removeTerm);
 		
-		// Detect 2-order extension variations
-		filterTwoOrderVariations(termIndex);
+		/*
+		 *  Detect 2-order extension variations.
+		 *  
+		 *  
+		 *  wind turbine --> axis wind turbine
+		 *  axis wind turbine --> horizontal axis wind turbine
+		 *  wind turbine --> horizontal axis wind turbine
+		 *  
+		 *  would result in removal of wind turbine --> horizontal axis wind turbine
+		 *  
+		 *  IMPORTANT: must occur after term relation filtering. Otherwise:
+		 */
+		filterTwoOrderVariationPatterns(termIndex);
 		
 		// Rank variations extensions
 		termIndex.getTerms().forEach(t-> {
@@ -121,39 +133,98 @@ public class TermPostProcessor {
 
 	}
 
-	private void filterTwoOrderVariations(TermIndex termIndex) {
-		termIndex.getTerms().stream()
-			.sorted(TermProperty.FREQUENCY.getComparator(true))
-			.forEach(term -> {
-				final Map<Term, TermRelation> variants = new HashMap<>();
+	private void filterTwoOrderVariationPatterns(TermIndex termIndex) {
 
-				for(TermRelation rel:termIndex.getOutboundRelations(term, RelationType.SYNTAG_VARIATIONS)) {
-					if(rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION))
-						variants.put(rel.getTo(), rel);
-				}
-				
-				final Set<TermRelation> order2Rels = new HashSet<>();
-				
-				variants.keySet().forEach(variant-> {
-					termIndex
-						.getOutboundRelations(variant, RelationType.SYNTAG_VARIATIONS)
-						.stream()
-						.filter(order2Rel -> order2Rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION))
-						.filter(order2Rel -> variants.containsKey(order2Rel.getTo()))
-						.forEach(order2Rels::add)
-					;
-				});
-				
-				order2Rels.forEach(rel -> {
-					TermRelation r = variants.get(rel.getTo());
-					if(LOGGER.isDebugEnabled()) {
-						LOGGER.debug("Found order-2 relation in variation set {}-->{}-->{}", term, rel.getFrom(), rel.getTo());
-						LOGGER.debug("Removing {}", r);
-					}
-					termIndex.removeRelation(r);
-				});
-			});
+		/*
+		 * Removal pattern n°1: t --extension--> v1 --extension--> v2
+		 * 
+		 *  When 
+		 *  
+		 *  blade passage --> rotor blade passage
+		 *  rotor blade passage --> typical rotor blade passage
+		 *  blade passage --> typical rotor blade passage
+		 *  
+		 *  Then remove
+		 *  
+		 *  blade passage --> typical rotor blade passage
+		 *  
+		 */
+		filterTwoOrderVariations(termIndex,
+				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
+				r2 -> r2.getType().isSyntag() && r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
+			);
+
+		/*
+		 * Removal pattern n°2: t --extension--> v1 --morph--> v2
+		 * 
+		 * When 
+		 * 
+		 * wind turbine --> small-scale wind turbine
+		 * small-scale wind turbine --> small scale wind turbine
+		 * wind turbine --> small scale wind turbine
+		 * 
+		 * Then remove
+		 * 
+		 * wind turbine --> small scale wind turbine
+		 * 
+		 */
+		filterTwoOrderVariations(termIndex,
+				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
+				r2 -> r2.getType() == RelationType.MORPHOLOGICAL
+			);
 	}
+	
+	/*
+	 * When
+	 * 
+	 *   baseTerm -r1-> v1
+	 *   baseTerm ----> v2
+	 *   and v1 -r2-> v2
+	 *   
+	 * Then remove 
+	 *   
+	 *   baseTerm ----> v2 
+	 * 
+	 */
+	private void filterTwoOrderVariations(TermIndex termIndex, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
+		termIndex.getTerms().stream()
+		.sorted(TermProperty.FREQUENCY.getComparator(true))
+		.forEach(term -> {
+			final Map<Term, TermRelation> v1Set = new HashMap<>();
+
+			for(TermRelation rel:termIndex.getOutboundRelations(term)) {
+				if(r1.test(rel))
+					v1Set.put(rel.getTo(), rel);
+			}
+			
+			final Set<TermRelation> order2Rels = new HashSet<>();
+			
+			v1Set.keySet().forEach(variant-> {
+				termIndex
+					.getOutboundRelations(variant)
+					.stream()
+					.filter(r2)
+					.filter(order2Rel -> v1Set.containsKey(order2Rel.getTo()))
+					.forEach(order2Rels::add)
+				;
+			});
+			
+			order2Rels.forEach(rel -> {
+				TermRelation r = v1Set.get(rel.getTo());
+				if(LOGGER.isTraceEnabled()) {
+					LOGGER.trace("Found order-2 relation in variation set {}-->{}-->{}", term, rel.getFrom(), rel.getTo());
+					LOGGER.trace("Removing {}", r);
+				}
+				if(history.isWatched(r.getFrom())) 
+					history.saveEvent(r.getFrom().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
+				if(history.isWatched(r.getTo())) 
+					history.saveEvent(r.getTo().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
+				termIndex.removeRelation(r);
+			});
+		});
+
+	}
+
 
 	private void filterExtensionsByThresholds(TermIndex termIndex) {
 		Predicate<? super TermRelation> isExtension = rel -> 
@@ -193,8 +264,10 @@ public class TermPostProcessor {
 			watchTermRemoval(rel.getTo(), String.format("Removing term because it is the poor extension of term %s ", rel.getFrom()));
 		});
 		
-		LOGGER.debug("Removing {} extension targets from term index", remTargets.size());
-		remTargets.stream().map(TermRelation::getTo).forEach(termIndex::removeTerm);
+		
+		Set<Term> remSet = remTargets.stream().map(TermRelation::getTo).collect(Collectors.toSet());
+		LOGGER.debug("Removing {} extension targets from term index", remSet.size());
+		remSet.stream().forEach(termIndex::removeTerm);
 	}
 
 	private boolean filterTermByThresholds(Term term) {

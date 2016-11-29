@@ -72,4 +72,25 @@ public enum RelationType {
 				return vt;
 		throw new IllegalArgumentException("No such variation type with name: " + shortName);
 	}
+
+	public boolean isVariation() {
+		switch(this) {
+		case SYNTACTICAL:
+		case MORPHOLOGICAL:
+		case GRAPHICAL:
+		case SYNONYMIC:
+				return true;
+		default:
+			return false;
+		}		
+	}
+	public boolean isSyntag() {
+		switch(this) {
+		case SYNTACTICAL:
+		case MORPHOLOGICAL:
+			return true;
+		default:
+			return false;
+		}
+	}
 }

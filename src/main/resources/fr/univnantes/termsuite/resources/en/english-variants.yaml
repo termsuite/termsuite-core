@@ -276,10 +276,11 @@
 #  MORPHOLOGICAL  #
 #################################
 
-# windmill - wind mill, rotor-blades - rotor blade
+# n: windmill - nn: wind mill, n: rotor-blades - nn: rotor blade
+# n: horizontal-axis, an: horizontal-axis
 "M-S-NN":
   source: N [compound]
-  target: N N
+  target: N N, A N
   rule: s[0][0]==t[0] && s[0][1]==t[1]
 
 #local tip-speed - local tip speed

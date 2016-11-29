@@ -392,8 +392,9 @@ public class TerminoExtractor {
 				.aeTermVariantGatherer()
 				.aeGraphicalVariantGatherer();
 
-		if(scoringEnabled && semanticAlignerEnabled)
-			pipeline.aeExtensionDetector();
+		pipeline
+			.aeExtensionDetector()
+			.aeExtensionVariantGatherer();
 		
 		if(semanticAlignerEnabled)
 			pipeline.aeSemanticAligner();

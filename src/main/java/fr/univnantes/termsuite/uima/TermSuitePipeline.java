@@ -68,6 +68,7 @@ import fr.univnantes.termsuite.api.stream.DocumentProvider;
 import fr.univnantes.termsuite.api.stream.DocumentStream;
 import fr.univnantes.termsuite.api.stream.StreamingCasConsumer;
 import fr.univnantes.termsuite.engines.Contextualizer;
+import fr.univnantes.termsuite.engines.ExtensionVariantGatherer;
 import fr.univnantes.termsuite.engines.ScorerConfig;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.model.Lang;
@@ -115,6 +116,7 @@ import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
 import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
+import fr.univnantes.termsuite.uima.engines.termino.ExtensionVariantGathererAE;
 import fr.univnantes.termsuite.uima.engines.termino.GraphicalVariantGatherer;
 import fr.univnantes.termsuite.uima.engines.termino.MergerAE;
 import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
@@ -2030,6 +2032,29 @@ public class TermSuitePipeline {
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
+	}
+	
+	/**
+	 * Invokes {@link ExtensionVariantGatherer} on current term index.
+	 * 
+	 * @return
+	 * 		This chaining {@link TermSuitePipeline} builder object
+	 * 
+	 * @see ExtensionVariantGatherer
+	 */
+	public TermSuitePipeline aeExtensionVariantGatherer() {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+					ExtensionVariantGathererAE.class
+				);
+			
+			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resHistory());
+			return aggregateAndReturn(ae, "Infering variations on term extensions", 1);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+
 	}
 
 	/**
