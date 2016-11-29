@@ -3,9 +3,9 @@
 	<rule id="adjective-prefix">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.SingleWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.CompoundTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -55,7 +55,7 @@
 								<element>
 									<get>
 										<left>
-											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+											<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 												<element>
 													<variable name="variant" />
 												</element>
@@ -76,9 +76,9 @@
 	<rule id="adjective-suffix">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.SingleWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.CompoundTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -128,7 +128,7 @@
 								<element>
 									<get>
 										<left>
-											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+											<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 												<element>
 													<variable name="variant" />
 												</element>
@@ -149,9 +149,9 @@
 	<rule id="noun-prefix">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.SingleWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.CompoundTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -201,7 +201,7 @@
 								<element>
 									<get>
 										<left>
-											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+											<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 												<element>
 													<variable name="variant" />
 												</element>
@@ -222,9 +222,9 @@
 	<rule id="noun-suffix">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.SingleWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.SingleWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.CompoundTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -274,7 +274,7 @@
 								<element>
 									<get>
 										<left>
-											<sub type="eu.project.ttc.types.TermComponentAnnotation">
+											<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 												<element>
 													<variable name="variant" />
 												</element>
@@ -295,9 +295,9 @@
 	<rule id="noun-noun">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.CompoundTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -342,7 +342,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -360,7 +360,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -382,7 +382,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -400,7 +400,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -423,9 +423,9 @@
 	<rule id="adjective-noun">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.CompoundTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.CompoundTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -470,7 +470,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -488,7 +488,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -510,7 +510,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -528,7 +528,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -551,9 +551,9 @@
 	<rule id="adjective-noun-noun">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -598,7 +598,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -616,7 +616,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -638,7 +638,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -656,7 +656,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -679,9 +679,9 @@
 	<rule id="noun-adjective-noun">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -726,7 +726,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -744,7 +744,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -766,7 +766,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -784,7 +784,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -807,9 +807,9 @@
 	<rule id="noun-noun-noun">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -854,7 +854,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -872,7 +872,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -894,7 +894,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -912,7 +912,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -935,9 +935,9 @@
 	<rule id="noun-noun-dative">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -982,7 +982,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -1000,7 +1000,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -1022,7 +1022,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -1040,7 +1040,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -1063,9 +1063,9 @@
 	<rule id="noun-adjective-noun2">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -1110,7 +1110,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -1128,7 +1128,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -1150,7 +1150,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -1168,7 +1168,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -1191,9 +1191,9 @@
 	<rule id="noun-conjunction-noun-noun2">
 		<parameters>
 			<parameter name="base"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 			<parameter name="variant"
-				type="eu.project.ttc.types.MultiWordTermOccAnnotation" />
+				type="fr.univnantes.termsuite.types.MultiWordTermOccAnnotation" />
 		</parameters>
 		<constraint>
 			<and>
@@ -1238,7 +1238,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="base" />
 														</element>
@@ -1256,7 +1256,7 @@
 										<element>
 											<get>
 												<left>
-													<sub type="eu.project.ttc.types.TermComponentAnnotation">
+													<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 														<element>
 															<variable name="variant" />
 														</element>
@@ -1280,7 +1280,7 @@
 												<element>
 													<get>
 														<left>
-															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+															<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 																<element>
 																	<variable name="base" />
 																</element>
@@ -1298,7 +1298,7 @@
 												<element>
 													<get>
 														<left>
-															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+															<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 																<element>
 																	<variable name="variant" />
 																</element>
@@ -1320,7 +1320,7 @@
 												<element>
 													<get>
 														<left>
-															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+															<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 																<element>
 																	<variable name="base" />
 																</element>
@@ -1338,7 +1338,7 @@
 												<element>
 													<get>
 														<left>
-															<sub type="eu.project.ttc.types.TermComponentAnnotation">
+															<sub type="fr.univnantes.termsuite.types.TermComponentAnnotation">
 																<element>
 																	<variable name="variant" />
 																</element>

@@ -20,8 +20,8 @@
 #
 ################################################################################
 
-import eu.project.ttc.types.TermSuiteTypeSystem;
-use eu.project.ttc.types.WordAnnotation;
+import fr.univnantes.termsuite.types.TermSuiteTypeSystem;
+use fr.univnantes.termsuite.types.WordAnnotation;
 set inline = false;
 
 matcher P: [category=="preposition"];
