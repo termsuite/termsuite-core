@@ -41,7 +41,7 @@ artifacts/
 /termsuite-core.iml
 
 #JCasgen generated files
-src/main/java/eu/project/ttc/types/*.java
+src/main/java/fr/univnantes/termsuite/types/*.java
 src/main/java/org/apache/uima/examples/*.java
 *.tbx
 src/eval/resources/termsuite-eval.properties
