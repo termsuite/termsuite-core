@@ -62,9 +62,11 @@ public class TsvExporter {
 						.limit(options.getMaxVariantsPerTerm())
 						.forEach(tv -> {
 							try {
+								boolean hasVariant = !termIndex.getOutboundRelations(tv.getTo(), RelationType.VARIATIONS).isEmpty();
 								tsv.addVariant(
 										termIndex, 
-										tv);
+										tv,
+										options.tagsTermsHavingVariants() && hasVariant);
 							} catch (IOException e) {
 								throw new TermSuiteException(e);
 							}

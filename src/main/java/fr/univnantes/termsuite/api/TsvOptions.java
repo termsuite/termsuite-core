@@ -13,6 +13,7 @@ public class TsvOptions {
 	private boolean showHeaders = true;
 	private boolean showVariants = true;
 	private boolean showRank = true;
+	private boolean tagsTermsHavingVariants = true;
 	private int maxVariantsPerTerm = Integer.MAX_VALUE;
 	
 	public TsvOptions properties(Iterable<Property<?>> properties) {
@@ -64,4 +65,14 @@ public class TsvOptions {
 	public int getMaxVariantsPerTerm() {
 		return maxVariantsPerTerm;
 	}
+	
+	public boolean tagsTermsHavingVariants() {
+		return tagsTermsHavingVariants;
+	}
+
+	public TsvOptions tagsTermsHavingVariants(boolean flag) {
+		this.tagsTermsHavingVariants = flag;
+		return this;
+	}
+
 }

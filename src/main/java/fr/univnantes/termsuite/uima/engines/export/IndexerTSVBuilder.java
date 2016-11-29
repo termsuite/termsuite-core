@@ -101,9 +101,12 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				String.format(T_FORMAT));
 	}
 
-	public void addVariant(TermIndex termIndex, TermRelation variation) throws IOException {
+	public void addVariant(TermIndex termIndex, TermRelation variation, boolean addVariantTag) throws IOException {
 		List<String> line = Lists.newArrayList();
-		line.add(String.format(V_FORMAT, variation.getType().getLetter()));
+		String typeCol = String.format(V_FORMAT, variation.getType().getLetter());
+		if(addVariantTag)
+			typeCol = typeCol + "[+]";
+		line.add(typeCol);
 		for(Property<?> p:properties) {
 			if(p instanceof RelationProperty) {
 				Comparable<?> value = variation.getPropertyValueUnchecked((RelationProperty)p);
