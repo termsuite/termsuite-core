@@ -175,21 +175,6 @@ public class MemoryTermIndex implements TermIndex {
 		return term;
 	}
 	
-	@Override
-	public Iterator<Term> singleWordTermIterator() {
-		return new SingleMultiWordIterator(true); 
-	}
-
-	@Override
-	public Iterator<Term> multiWordTermIterator() {
-		return new SingleMultiWordIterator(false); 
-	}
-	
-	@Override
-	public Iterator<Term> compoundWordTermIterator() {
-		return new CompoundIterator(); 
-		};
-	
 	private abstract class TermIterator extends AbstractIterator<Term> {
 		protected Term t;
 		protected Iterator<Term> it;

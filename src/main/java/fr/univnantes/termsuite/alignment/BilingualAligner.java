@@ -65,7 +65,6 @@ import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 import fr.univnantes.termsuite.utils.AlignerUtils;
-import fr.univnantes.termsuite.utils.IteratorUtils;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermIndexUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -368,7 +367,7 @@ public class BilingualAligner {
 		ExplainedValue v;
 		int nbVectorsNotComputed = 0;
 		int nbVectorsComputed = 0;
-		for(Term targetTerm:IteratorUtils.toIterable(targetTermino.singleWordTermIterator())) {
+		for(Term targetTerm:targetTermino.getTerms().stream().filter(t->t.getWords().size()==1).collect(Collectors.toList())) {
 			if(targetTerm.getFrequency() < minCandidateFrequency)
 				continue;
 			if(targetTerm.getContext() != null) {
@@ -382,7 +381,7 @@ public class BilingualAligner {
 						v.getExplanation());
 				alignedCandidateQueue.add(candidate);
 			}
-		}
+		};
 		if(nbVectorsNotComputed > 0) {
 			LOGGER.warn(MSG_SEVERAL_VECTORS_NOT_COMPUTED, nbVectorsComputed, nbVectorsNotComputed);	
 		}
@@ -690,7 +689,7 @@ public class BilingualAligner {
 				 */
 				final Map<Term, Collection<String>> termLemmaLemmaKeys = Maps.newHashMap();
 				for(Term t:candidateCombinedTerms)
-					termLemmaLemmaKeys.put(t, TermValueProviders.WORD_LEMMA_LEMMA_PROVIDER.getClasses(targetTermino, t));
+					termLemmaLemmaKeys.put(t, TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS.getClasses(targetTermino, t));
 				Collections.sort(candidateCombinedTerms, new Comparator<Term>() { 
 					@Override
 					public int compare(Term o1, Term o2) {

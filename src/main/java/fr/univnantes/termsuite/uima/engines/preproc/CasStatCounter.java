@@ -49,7 +49,6 @@ import com.google.common.base.Functions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Iterables;
-import com.google.common.collect.Iterators;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
@@ -191,11 +190,12 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		
 		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, 
 				tIndex.getTerms().size(), 
-				Iterators.size(tIndex.singleWordTermIterator()),
-				Iterators.size(tIndex.multiWordTermIterator()));
+				tIndex.getTerms().stream().filter(t->t.getWords().size() == 1).count(),
+				tIndex.getTerms().stream().filter(t->t.getWords().size() > 1).count()
+				);
 		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, 
 				tIndex.getWords().size(), 
-				Iterators.size(tIndex.compoundWordTermIterator()));
+				tIndex.getWords().stream().filter(w->w.isCompound()).count());
 		LOGGER.info("[{}] Nb occurrences: {}", statName, 
 				nbOccurrences);
 		LOGGER.info("[{}] Nb variants: {} [morph: {}, syntactic: {}, graph: {}, synonyms: {}]", statName, 

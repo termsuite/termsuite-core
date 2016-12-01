@@ -106,10 +106,6 @@ public interface TermIndex {
 	public void removeRelation(TermRelation relation);
 
 	
-	public Iterator<Term> singleWordTermIterator();
-	public Iterator<Term> multiWordTermIterator();
-	public Iterator<Term> compoundWordTermIterator();
-	
 	/*
 	 * Custom indexes
 	 */

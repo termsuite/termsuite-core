@@ -24,6 +24,7 @@ package fr.univnantes.termsuite.engines;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -121,7 +122,7 @@ public class Contextualizer  {
 				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
 		
 		
-		int total = allTerms ?   termIndex.getTerms().size() : Iterators.size(termIndex.singleWordTermIterator());
+		long total = allTerms ?   termIndex.getTerms().size() : termIndex.getTerms().stream().filter(t->t.getWords().size()==1).count();
 		// 2- Generate context vectors
 		LOGGER.debug("2 - Create context vectors. allTerms: {} (number of contexts to compute: {})", 
 				allTerms,
@@ -153,7 +154,9 @@ public class Contextualizer  {
 	}
 
 	private Iterator<Term> getTermIterator(TermIndex termIndex) {
-		return allTerms ? termIndex.getTerms().iterator() : termIndex.singleWordTermIterator();
+		return allTerms ? 
+					termIndex.getTerms().iterator() 
+						: termIndex.getTerms().stream().filter(t->t.getWords().size()==1).collect(Collectors.toList()).iterator();
 	}
 	
 	
