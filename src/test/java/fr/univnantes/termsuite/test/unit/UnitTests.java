@@ -31,7 +31,7 @@ import fr.univnantes.termsuite.test.unit.engines.FixedExpressionSpotterSpec;
 import fr.univnantes.termsuite.test.unit.engines.GraphicalVariantGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.SuffixDerivationExceptionSetterSpec;
 import fr.univnantes.termsuite.test.unit.engines.SynonymicRuleSpec;
-import fr.univnantes.termsuite.test.unit.engines.SyntacticTermGathererSpec;
+import fr.univnantes.termsuite.test.unit.engines.TermGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.morpho.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.io.JsonTermIndexIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
@@ -62,7 +62,7 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 @Suite.SuiteClasses({
 	VariantRuleSpec.class, 
 	VariantRuleYamlIOSpec.class,
-	SyntacticTermGathererSpec.class,
+	TermGathererSpec.class,
 	TermSpec.class, 
 	SegmentationSpec.class, 
 	DocumentViewSpec.class, 

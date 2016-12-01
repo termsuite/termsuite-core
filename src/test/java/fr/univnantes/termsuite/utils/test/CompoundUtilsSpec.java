@@ -51,10 +51,10 @@ public class CompoundUtilsSpec {
 	public void setUp() {
 		w_abcdefgh = WordBuilder.start()
 				.setLemma("abcdefgg")
-				.addComponent(0, 2, "aa")
-				.addComponent(2, 4, "cc")
-				.addComponent(4, 6, "ee")
-				.addComponent(6, 8, "gg")
+				.addComponent(0, 2, "ab", "aa")
+				.addComponent(2, 4, "cd", "cc")
+				.addComponent(4, 6, "ef", "ee")
+				.addComponent(6, 8, "gg", "gg")
 				.create();
 		ab = w_abcdefgh.getComponents().get(0);
 		cd = w_abcdefgh.getComponents().get(1);
@@ -63,19 +63,19 @@ public class CompoundUtilsSpec {
 		
 		w_ab = WordBuilder.start()
 				.setLemma("aa")
-				.addComponent(0, 2, "aa")
+				.addComponent(0, 2, "aa", "aa")
 				.create();
 		w_abcd = WordBuilder.start()
 				.setLemma("abcc")
-				.addComponent(0, 2, "aa")
-				.addComponent(2, 4, "cc")
+				.addComponent(0, 2, "ab", "aa")
+				.addComponent(2, 4, "cc", "cc")
 				.create();
 
 		w_abcdef = WordBuilder.start()
 				.setLemma("abcdee")
-				.addComponent(0, 2, "aa")
-				.addComponent(2, 4, "cc")
-				.addComponent(4, 6, "ee")
+				.addComponent(0, 2, "ab", "aa")
+				.addComponent(2, 4, "cd", "cc")
+				.addComponent(4, 6, "ee", "ee")
 				.create();
 
 	}
@@ -140,6 +140,30 @@ public class CompoundUtilsSpec {
 		assertThat(m_abcdefgh.getLemma()).isEqualTo("abcdefgg");
 	}
 	
+	
+	@Test
+	public void testHorizontalAxis() {
+		Word horizontalAxis = WordBuilder.start()
+				.setLemma("horizontal-axis")
+				.addComponent(0, 7, "horizon", "horizon")
+				.addComponent(7, 10, "tal", "t")
+				.addComponent(11, 15, "axis", "axis")
+				.create();
+		
+		assertThat(CompoundUtils.innerComponentPairs(horizontalAxis))
+			.extracting("element1.lemma", "element2.lemma")
+			.contains(
+					tuple("horizon","t"),
+					tuple("horizon","axis"),
+					tuple("t","axis"),
+					tuple("horizont","axis"),
+					tuple("horizon","tal-axis")
+				)
+			.hasSize(5)
+			;
+
+	}
+
 	@Test
 	public void testMergeWithEmptyList() {
 		try {
@@ -172,7 +196,7 @@ public class CompoundUtilsSpec {
 	@Test
 	public void testMergeWithOverlappingComponents() {
 		try {
-			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(ab, new Component("titi", 1, 3)));
+			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(ab, new Component(1, 3, "titi")));
 			fail("Should have thrown Exception");
 		} catch(Exception e) {
 			  assertThat(e)
@@ -185,7 +209,7 @@ public class CompoundUtilsSpec {
 	public void testMergeWithBadComponentIndexes() {
 		/* Case 1, the bad component is the last one */
 		try {
-			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(ef, new Component("tata", 6, 9)));
+			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(ef, new Component(6, 9, "tata")));
 			fail("Should have thrown Exception");
 		} catch(Exception e) {
 			  assertThat(e)
@@ -195,7 +219,7 @@ public class CompoundUtilsSpec {
 		
 		/* Case 2, the bad component is not the last one */
 		try {
-			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(cd, new Component("toto", 4, 9), new Component("tata", 9, 12)));
+			CompoundUtils.merge(w_abcdefgh, ImmutableList.of(cd, new Component(4, 9, "toto", "toto"), new Component(9, 12, "tata")));
 			fail("Should have thrown Exception");
 		} catch(Exception e) {
 			 assertThat(e)
@@ -244,25 +268,25 @@ public class CompoundUtilsSpec {
 	
 	@Test
 	public void testAsLemmaPairs() {
-		assertThat(CompoundUtils.asLemmaPairs(w_ab))
+		assertThat(CompoundUtils.innerContiguousComponentPairs(w_ab))
 			.hasSize(0);
 
-		assertThat(CompoundUtils.asLemmaPairs(w_abcd))
+		assertThat(CompoundUtils.innerContiguousComponentPairs(w_abcd))
 			.hasSize(1)
-			.extracting("element1", "element2")
+			.extracting("element1.lemma", "element2.lemma")
 			.contains(
 				tuple("aa","cc"));
 		
-		assertThat(CompoundUtils.asLemmaPairs(w_abcdef))
+		assertThat(CompoundUtils.innerContiguousComponentPairs(w_abcdef))
 			.hasSize(2)
-			.extracting("element1", "element2")
+			.extracting("element1.lemma", "element2.lemma")
 			.contains(
 				tuple("aa","cdee"),
 				tuple("abcc","ee"));
 		
-		assertThat(CompoundUtils.asLemmaPairs(w_abcdefgh))
+		assertThat(CompoundUtils.innerContiguousComponentPairs(w_abcdefgh))
 			.hasSize(3)
-			.extracting("element1", "element2")
+			.extracting("element1.lemma", "element2.lemma")
 			.contains(
 				tuple("aa","cdefgg"),
 				tuple("abcc","efgg"),

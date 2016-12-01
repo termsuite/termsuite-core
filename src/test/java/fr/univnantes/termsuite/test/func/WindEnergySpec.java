@@ -123,6 +123,7 @@ public abstract class WindEnergySpec {
 			.aeTermVariantGatherer()
 			.aeGraphicalVariantGatherer()
 			.aeExtensionDetector()
+			.aeExtensionVariantGatherer()
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();
 			

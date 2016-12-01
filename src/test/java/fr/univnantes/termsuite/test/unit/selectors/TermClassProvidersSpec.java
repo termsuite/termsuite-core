@@ -72,9 +72,35 @@ public class TermClassProvidersSpec {
 		termFactory.addDerivesInto("N A", this.stator, this.statorique);
 	}
 
+	
 	@Test
-	public void testWordLemmaLemmaProvider() {
-		TermValueProvider provider = TermValueProviders.WORD_LEMMA_LEMMA_PROVIDER;
+	public void testWordHorizontalAxis() {
+		TermFactory fac = new TermFactory(termIndex);
+		Term horizontalAxisMorp = fac.create("N:horizontal-axis|horizontal-axis");
+		Term horizontalAxisSyntag = fac.create("A:horizontal|horizontal", "N:axis|axis");
+		fac.wordComposition(CompoundType.NATIVE, "horizontal-axis", "horizon|horizon", "tal|t", "axis|axis");
+		fac.wordComposition(CompoundType.NATIVE, "horizontal", "horizon|horizon", "tal|t");
+		TermValueProvider provider = TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS;
+
+		assertThat(provider.getClasses(termIndex, horizontalAxisMorp))
+			.hasSize(8)
+			.contains("axis+horizontal");
+		
+		assertThat(provider.getClasses(termIndex, horizontalAxisSyntag))
+			.hasSize(7)
+			.contains("horizon+t")
+			.contains("horizon+tal")
+			.contains("axis+horizontal")
+			.contains("axis+horizont")
+			.contains("axis+horizon")
+			.contains("axis+t")
+			.contains("axis+tal")
+		;
+	}
+
+	@Test
+	public void testAllCompLemmaSubstringPairsProvider() {
+		TermValueProvider provider = TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS;
 		assertThat(provider.getClasses(termIndex, machine_synchrone))
 			.hasSize(1)
 			.contains("machine+synchrone");

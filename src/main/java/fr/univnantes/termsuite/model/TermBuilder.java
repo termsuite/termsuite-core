@@ -157,8 +157,7 @@ public class TermBuilder {
 	
 
 	public TermBuilder addWord(Word word, String syntacticLabel, boolean isSWT) {
-		TermWord e = new TermWord(word, syntacticLabel);
-		e.setSwt(isSWT);
+		TermWord e = new TermWord(word, syntacticLabel, isSWT);
 		this.termWords.add(e);
 		return this;
 	}
@@ -207,8 +206,7 @@ public class TermBuilder {
 		Word word;
 		if((word = this.termIndex.getWord(lemma)) == null) 
 			word = WordBuilder.start().setLemma(lemma).setStem(stem).create();
-		TermWord w = new TermWord(word, label);
-		w.setSwt(isSWT);
+		TermWord w = new TermWord(word, label, isSWT);
 		this.termWords.add(w);
 	}
 	

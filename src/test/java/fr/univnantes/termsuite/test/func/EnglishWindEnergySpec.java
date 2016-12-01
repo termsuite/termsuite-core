@@ -27,6 +27,8 @@ import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
 import static fr.univnantes.termsuite.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,7 +42,9 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
@@ -146,6 +150,59 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.isCompound()
 			.hasCompoundType(CompoundType.NEOCLASSICAL)
 			.hasCompositionSubstrings("electro", "magnetic");
+	}
+
+	
+
+	@Test
+	public void testSWTFlagSet() {
+		Term term = termIndex.getTermByGroupingKey("npn: power of wind");
+		assertTrue(term.getWords().get(0).isSwt());
+		assertFalse(term.getWords().get(1).isSwt());
+		assertTrue(term.getWords().get(2).isSwt());
+	}
+
+	@Test
+	public void testTermHorizontalAxis() {
+		Term morph = termIndex.getTermByGroupingKey("n: horizontal-axis");
+		Term syntag = termIndex.getTermByGroupingKey("an: horizontal axis");
+
+		assertThat(morph)
+			.isCompound();
+
+		assertThat(morph.getWords().get(0).getWord().getComponents())
+			.extracting("lemma", "begin", "end")
+			.containsExactly(
+					tuple("horizontal", 0,10),
+					tuple("axis", 11,15)
+				);
+
+		assertThat(TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS.getClasses(termIndex, morph))
+			.containsExactly("axis+horizontal");
+
+		assertThat(TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS.getClasses(termIndex, syntag))
+			.contains("axis+horizontal");
+		
+		assertThat(termIndex)
+			.containsRelation("n: horizontal-axis", RelationType.MORPHOLOGICAL, "an: horizontal axis");
+	}
+	
+	@Test
+	public void testTermInference() {
+		assertThat(termIndex)
+			.containsTerm("nnn: horizontal-axis wind turbine")
+			.containsTerm("annn: horizontal axis wind turbine")
+			.containsRelation("nnn: horizontal-axis wind turbine", RelationType.MORPHOLOGICAL, "annn: horizontal axis wind turbine")
+			;
+		
+		TermRelation rel = termIndex.getRelations(
+				termIndex.getTermByGroupingKey("nnn: horizontal-axis wind turbine"), 
+				termIndex.getTermByGroupingKey("annn: horizontal axis wind turbine"), 
+				RelationType.MORPHOLOGICAL).findFirst().get();
+		
+		
+		assertThat(rel.getProperties())
+			.containsEntry(RelationProperty.IS_INFERED, true);
 	}
 
 	@Test

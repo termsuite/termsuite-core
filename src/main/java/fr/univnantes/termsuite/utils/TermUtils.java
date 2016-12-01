@@ -401,7 +401,7 @@ public class TermUtils {
 			if(w.isCompound())
 				sets.add(Sets.newHashSet(CompoundUtils.allSizeComponents(w)));
 			else {
-				sets.add(Sets.newHashSet(new Component(w.getLemma(), 0, w.getLemma().length())));
+				sets.add(Sets.newHashSet(new Component(0, w.getLemma().length(), w.getLemma())));
 			}
 		}
 		return sets;
@@ -410,9 +410,9 @@ public class TermUtils {
 	
 	
 	/**
-	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER}.
+	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#ALLCOMP_LEMMA_SUBSTRING_PAIRS}.
 	 * 
-	 * @see TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER
+	 * @see TermValueProviders#ALLCOMP_LEMMA_SUBSTRING_PAIRS
 	 * @param term1
 	 * 				First term of the pair
 	 * @param term2

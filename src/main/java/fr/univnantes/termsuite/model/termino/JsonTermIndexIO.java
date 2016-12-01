@@ -112,6 +112,7 @@ public class JsonTermIndexIO {
 	private static final String NAME = "name";
 	private static final String CORPUS_ID = "corpus-id";
 	private static final String LEMMA = "lemma";
+	private static final String SUBSTRING = "substring";
 	private static final String STEM = "stem";
 	private static final String COMPOUND_TYPE = "compound_type";
 	private static final String COMPOUND_NEOCLASSICAL_AFFIX = "neoAffix";
@@ -167,6 +168,7 @@ public class JsonTermIndexIO {
 		jp.enable(JsonParser.Feature.STRICT_DUPLICATE_DETECTION);
 		String fieldname;
 		String compLemma = null;
+		String substring = null;
 		int fileSource = -1;
 		String wordLemma = null;
 		boolean isSWT;
@@ -264,6 +266,8 @@ public class JsonTermIndexIO {
 									fieldname = jp.getCurrentName();
 									if (LEMMA.equals(fieldname)) 
 										compLemma = jp.nextTextValue();
+									else if (SUBSTRING.equals(fieldname)) 
+										substring = jp.nextTextValue();
 									else if (BEGIN.equals(fieldname)) 
 										begin = jp.nextIntValue(-2);
 									else if (COMPOUND_NEOCLASSICAL_AFFIX.equals(fieldname)) 
@@ -271,7 +275,7 @@ public class JsonTermIndexIO {
 									else if (END.equals(fieldname)) 
 										end = jp.nextIntValue(-2);
 								}
-								wordBuilder.addComponent(begin, end, compLemma, neoclassicalAffix);
+								wordBuilder.addComponent(begin, end, substring, compLemma, neoclassicalAffix);
 							}
 						}
 					}

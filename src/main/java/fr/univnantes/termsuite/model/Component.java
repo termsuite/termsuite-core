@@ -55,13 +55,17 @@ public class Component implements Comparable<Component> {
 	
 	public boolean neoclassicalAffix = false;
 	
-	public Component(String lemma, String substring, int begin, int end) {
+	public Component(int begin, int end, String substring, String lemma) {
+		this(begin, end, substring);
 		this.lemma = lemma;
+	}
+	
+	public Component(int begin, int end, String substring) {
 		this.begin = begin;
 		this.end = end;
 		this.substring = substring;
+		this.lemma = substring;
 	}
-
 	
 	public int getBegin() {
 		return begin;
@@ -97,7 +101,7 @@ public class Component implements Comparable<Component> {
 	
 	@Override
 	public String toString() {
-		return this.lemma;
+		return this.substring;
 	}
 
 	public void setNeoclassical() {

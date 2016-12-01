@@ -30,14 +30,11 @@ public class TermWord {
 	private String syntacticlabel;
 	private boolean swt = false;
 	
-	TermWord() {
-		super();
-	}
-		
-	TermWord(Word word, String label) {
+	TermWord(Word word, String label, boolean isSwt) {
 		super();
 		this.word = word;
 		this.syntacticlabel = label;
+		this.swt = isSwt;
 	}
 
 	@Override
@@ -64,7 +61,7 @@ public class TermWord {
 
 	@Override
 	public String toString() {
-		return syntacticlabel + ":" + word.getLemma();
+		return syntacticlabel + ":" + word.getLemma() + (swt? "[swt]":"");
 	}
 
 	public String toGroupingKey() {
@@ -72,10 +69,8 @@ public class TermWord {
 	}
 
 	public static TermWord create(String lemma, String label) {
-		TermWord tw = new TermWord();
-		tw.word = new Word(lemma, lemma);
-		tw.syntacticlabel = label;
-		return tw;
+		Word word = new Word(lemma, lemma);
+		return new TermWord(word, label, false);
 	}
 
 	public boolean isSwt() {

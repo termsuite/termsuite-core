@@ -60,6 +60,7 @@ import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.utils.JCasUtils;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * The in-memory implementation of a {@link TermIndex}.
@@ -108,8 +109,10 @@ public class MemoryTermIndex implements TermIndex {
 		this.termsByGroupingKey.put(term.getGroupingKey(), term);
 		for(CustomTermIndex termIndex:this.customIndexes.values())
 			termIndex.indexTerm(this, term);
-		for(TermWord tw:term.getWords())
+		for(TermWord tw:term.getWords()) {
 			privateAddWord(tw.getWord(), false);
+			tw.setSwt(termsByGroupingKey.containsKey(TermUtils.toGroupingKey(tw)));
+		}
 	}
 
 

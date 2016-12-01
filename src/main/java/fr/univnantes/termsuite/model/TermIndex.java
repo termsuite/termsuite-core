@@ -22,7 +22,6 @@
 package fr.univnantes.termsuite.model;
 
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.stream.Stream;
 
 import org.apache.uima.jcas.JCas;

@@ -101,7 +101,7 @@ public class TermFactory {
 			String substring = matcher.group(1);
 			String lemma = matcher.group(2);
 			int start = wordLemma.indexOf(substring);
-			Component component = new Component(lemma, substring, start, start + substring.length());
+			Component component = new Component(start, start + substring.length(), substring, lemma);
 			components.add(component);
 		}
 		

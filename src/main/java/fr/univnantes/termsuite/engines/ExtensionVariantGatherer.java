@@ -81,6 +81,7 @@ public class ExtensionVariantGatherer {
 									TermRelation inferedRel = new TermRelation(RelationType.MORPHOLOGICAL, rel1.getTo(), rel2.getTo());
 									inferedRel.setProperty(RelationProperty.IS_INFERED, true);
 									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
+									inferedRel.setProperty(RelationProperty.VARIATION_RULE, relation.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 									termIndex.addRelation(inferedRel);
 									watch(inferedRel, rel1, rel2);
 									

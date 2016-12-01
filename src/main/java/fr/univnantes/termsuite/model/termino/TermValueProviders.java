@@ -24,6 +24,7 @@ package fr.univnantes.termsuite.model.termino;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -54,6 +55,8 @@ public class TermValueProviders {
 	
 	private static final Collection<String> EMPTY_COLLECTION = Lists.newArrayList();
 	
+	private static final String PAIR_FORMAT = "%s+%s";
+
 	public static final TermValueProvider TERM_SINGLE_WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.SINGLE_WORD_LEMMA) {
 		
 		@Override
@@ -139,7 +142,6 @@ public class TermValueProviders {
 			return keys;
 		}
 	};
-	protected static final String NO_LEMMA_SET = "__no_lemma_set__";
 		
 	/**
 	 * Provides all lemma-lemma pairs found in the term.
@@ -154,37 +156,42 @@ public class TermValueProviders {
 	 * 			it2 --> {axis+horizontal, axis+turbine, axis+wind, horizontal+turbine, horizontal+wind, wind+turbine}
 	 * 			total -->  it1 U it2
 	 */
-	public static final TermValueProvider WORD_LEMMA_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_LEMMA) {
+	public static final TermValueProvider ALLCOMP_LEMMA_SUBSTRING_PAIRS = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_LEMMA) {
 
 		@Override
 		public Collection<String> getClasses(TermIndex termIndex, Term term) {
-			Set<String> classes = Sets.newHashSet();
-			List<Word> significantWords = Lists.newArrayListWithCapacity(term.getWords().size());
-			for(TermWord w:term.getWords()) {
-				/*
-				 * 1- Adds the inner classes to set
-				 */
-				if(w.getWord().isCompound()) 
-					for(Pair<Component> componentPair:CompoundUtils.innerComponentPairs(w.getWord())) 
-						classes.add(CompoundUtils.toIndexString(componentPair));
-							
-				/*
-				 * 2a- generate the list of component sets reprsentation of the term
-				 */
-				if(TermSuiteConstants.TERM_MATCHER_LABELS.contains(w.getSyntacticLabel()))
-					significantWords.add(w.getWord());
-			}	
+			Set<Pair<Component>> componentPairs = Sets.newHashSet();
+			Set<Word> significantWords = Sets.newHashSetWithExpectedSize(term.getWords().size());
 			
 			/*
-			 * 2b- build the term classes
+			 * 1- select significant words
 			 */
-			List<Set<Component>> componentSets = TermUtils.toComponentSets(significantWords);
-			for(Pair<Component> componentPair:CollectionUtils.combineAndProduct(componentSets)) {
-				classes.add(CompoundUtils.toIndexString(componentPair));
+			for(TermWord w:term.getWords()) {
+				if(w.isSwt())
+					significantWords.add(w.getWord());
 			}
 			
-			return classes;
+			/*
+			 * 2- Adds intra-compound component pairs (for compound words only)
+			 */
+			significantWords.stream()
+				.filter(Word::isCompound)
+				.forEach(w -> componentPairs.addAll(CompoundUtils.innerComponentPairs(w)));
 			
+			/*
+			 * 3- Add inter-word component pairs
+			 */
+			componentPairs.addAll(CollectionUtils.combineAndProduct(TermUtils.toComponentSets(significantWords)));
+			
+			
+			/*
+			 * 4- transform each component pair to class
+			 */
+			Set<String> classes = new HashSet<>();
+				
+			componentPairs.stream()
+				.forEach(pair -> classes.addAll(CompoundUtils.toIndexStrings(pair)));
+			return classes;
 		}
 	};
 
@@ -213,7 +220,7 @@ public class TermValueProviders {
 		valueProviders.put(TermIndexes.WORD_LEMMA, WORD_LEMMA_PROVIDER);
 		valueProviders.put(TermIndexes.LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
 		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
-		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_LEMMA, WORD_LEMMA_LEMMA_PROVIDER);
+		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_LEMMA, ALLCOMP_LEMMA_SUBSTRING_PAIRS);
 	}
 
 	public static TermValueProvider get(String key) {

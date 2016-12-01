@@ -51,7 +51,7 @@ import fr.univnantes.termsuite.uima.resources.termino.YamlVariantRules;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
-public class SyntacticTermGathererSpec {
+public class TermGathererSpec {
 	private MemoryTermIndex termIndex;
 	private Term machine_synchrone;
 	private Term machine_asynchrone;

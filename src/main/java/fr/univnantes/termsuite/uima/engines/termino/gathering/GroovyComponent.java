@@ -28,9 +28,11 @@ import fr.univnantes.termsuite.model.Component;
 
 public class GroovyComponent {
 	public String lemma;
+	public String substring;
 	
 	public GroovyComponent(Component a) {
 		this.lemma = a.getLemma();
+		this.substring = a.getSubstring();
 	}
 
 	@Override
@@ -39,7 +41,7 @@ public class GroovyComponent {
 	}
 	
 	private boolean hasLemma() {
-		return this.lemma != null && !this.lemma.equals(Component.NO_LEMMA);
+		return this.lemma != null;
 	}
 	
 	@Override

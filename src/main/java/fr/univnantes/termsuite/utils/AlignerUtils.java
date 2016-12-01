@@ -22,6 +22,7 @@
 package fr.univnantes.termsuite.utils;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -33,6 +34,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
+import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
@@ -270,9 +272,9 @@ public class AlignerUtils {
 			// sourceTerm is swtTerms.get(0);
 			if(term.isCompound()) {
 				lemmaSets.add(Lists.newArrayList(term));
-				for(Pair<String> pair:CompoundUtils.asLemmaPairs(term.getWords().get(0).getWord())) {
-					for(Term swt1:termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(pair.getElement1())) {
-						for(Term swt2:termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(pair.getElement2())) {
+				for(Pair<Component> pair:CompoundUtils.innerContiguousComponentPairs(term.getWords().get(0).getWord())) {
+					for(Term swt1:getSwtSetFromComponent(termIndex, pair.getElement1())) {
+						for(Term swt2:getSwtSetFromComponent(termIndex, pair.getElement2())) {
 							lemmaSets.add(new Pair<Term>(swt1, swt2).toList());
 							
 						}
@@ -289,6 +291,14 @@ public class AlignerUtils {
 			
 		}
 		return lemmaSets;
+	}
+
+
+	public static Set<Term> getSwtSetFromComponent(TermIndex termIndex, Component c) {
+		Set<Term> terms = new HashSet<>();
+		terms.addAll(termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getLemma()));
+		terms.addAll(termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getSubstring()));
+		return terms;
 	}
 
 }

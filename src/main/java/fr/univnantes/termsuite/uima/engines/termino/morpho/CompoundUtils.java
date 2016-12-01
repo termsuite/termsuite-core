@@ -23,6 +23,7 @@
 
 package fr.univnantes.termsuite.uima.engines.termino.morpho;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -138,7 +139,7 @@ public class CompoundUtils {
 					cur, word, word.getLemma().length(),
 					cur.getBegin(),cur.getEnd()
 					);
-			lemmaBuilder.append(word.getLemma().substring(lastComponent.getBegin(), lastComponent.getEnd()));
+			lemmaBuilder.append(lastComponent.getSubstring());
 			
 			if(lastComponent.getEnd() < cur.getBegin())
 				/*
@@ -149,7 +150,8 @@ public class CompoundUtils {
 			lastComponent = cur;
 		}
 		lemmaBuilder.append(lastComponent.getLemma());
-		return new Component(lemmaBuilder.toString(), begin, lastComponent.getEnd());
+		String substring = word.getLemma().substring(begin, lastComponent.getEnd());
+		return new Component(begin, lastComponent.getEnd(), substring, lemmaBuilder.toString());
 	}
 
 	
@@ -185,14 +187,43 @@ public class CompoundUtils {
 		return Lists.newArrayList(pairs);
 	}
 	
-	public static String toIndexString(Pair<Component> pair) {
-		boolean ordered = pair.getElement1().getLemma().compareTo(pair.getElement2().getLemma()) <= 0;
+	
+	public static String toClassString(String s1, String s2) {
+		boolean ordered = s1.compareTo(s2) <= 0;
 		StringBuilder sb = new StringBuilder();
-		sb.append(ordered ? pair.getElement1().getLemma() : pair.getElement2().getLemma());
+		sb.append(ordered ? s1 : s2);
 		sb.append(TermSuiteConstants.PLUS);
-		sb.append(ordered ? pair.getElement2().getLemma() : pair.getElement1().getLemma());
+		sb.append(ordered ? s2 : s1);
 		return sb.toString();
+	}
+	
+	
+	public static Set<String> toIndexStrings(Pair<Component> pair) {
+		Set<String> classes = new HashSet<>(4);
 		
+		// substring+substring
+		classes.add(toClassString(
+				pair.getElement1().getSubstring(), 
+				pair.getElement2().getSubstring()));
+		
+		
+		// lemma+lemma
+		classes.add(toClassString(
+			pair.getElement1().getLemma(), 
+			pair.getElement2().getLemma()));
+
+		// lemma+substring
+		classes.add(toClassString(
+			pair.getElement1().getLemma(), 
+			pair.getElement2().getSubstring()));
+
+		// substring+lemma
+		classes.add(toClassString(
+			pair.getElement1().getSubstring(), 
+			pair.getElement2().getLemma()));
+		
+		
+		return classes;
 	}
 
 	/**
@@ -233,18 +264,81 @@ public class CompoundUtils {
 	 * @param word
 	 * 			The input compound word
 	 */
-	public static List<Pair<String>> asLemmaPairs(Word word) {
-		List<Pair<String>> pairs = Lists.newArrayList();
+	public static Set<Pair<Component>> innerContiguousComponentPairs(Word word) {
+		Set<Pair<Component>> pairs = new HashSet<>();
 		if(word.isCompound()) {
-			String lemma1, lemma2;
 			int n = word.getComponents().size();
 			for(int i=0; i<n-1; i++) {
-				lemma1 = merge(word, word.getComponents().subList(0, i+1)).getLemma();
-				lemma2 = merge(word, word.getComponents().subList(i+1, n)).getLemma();
-				pairs.add(new Pair<String>(lemma1, lemma2));
+				pairs.add(new Pair<Component>(
+						merge(word, word.getComponents().subList(0, i+1)), 
+						merge(word, word.getComponents().subList(i+1, n))));
 			}
 		}
 		return pairs;
 	}
+	
+	
+	/**
+	 * 
+	 * Same as {@link #asContiguousLemmaPairs(Word)} except that component 
+	 * both lemmas and subtrings are concatenated instead of 
+	 * component lemmas only.
+	 * 
+	 * E.g.
+	 * 
+	 * ab:aa|cd:cc 
+	 * 
+	 * returns
+	 * 
+	 * [ab, cd]
+	 * [ab, cc]
+	 * [aa, cd]
+	 * [aa, cc]
+	 * 
+	 * @param word
+	 * @return
+	 */
+//	public static Set<Pair<String>> asContiguousLemmaSubstringPairs(Word word) {
+//		Set<Pair<String>> pairs = new HashSet<>();
+//		if(word.isCompound()) {
+//			int n = word.getComponents().size();
+//			for(int i=0; i<n-1; i++) {
+//				Component c1 = merge(word, word.getComponents().subList(0, i+1));
+//				Component c2 = merge(word, word.getComponents().subList(i+1, n));
+//				pairs.add(new Pair<String>(c1.getLemma(), c2.getLemma()));
+//				pairs.add(new Pair<String>(c1.getLemma(), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
+//				pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), c2.getLemma()));
+//				pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
+//			}
+//		}
+//		return pairs;
+//	}
+	
+	
+	
+//	public static Set<Pair<String>> asLemmaPairs(Word word) {
+//		Set<Pair<String>> pairs = new HashSet<>();
+//		
+//		for(Pair<Component> pair:innerComponentPairs(word)) 
+//			pairs.add(new Pair<String>(pair.getElement1().getLemma(), pair.getElement2().getLemma()));
+//		
+//		return pairs;
+//	}
+	
+	
+//	public static Set<Pair<String>> asLemmaSubstringPairs(Word word) {
+//		Set<Pair<String>> pairs = new HashSet<>();
+//		
+//		for(Pair<Component> pair:innerComponentPairs(word)) {
+//			Component c1 = pair.getElement1();
+//			Component c2 = pair.getElement2();
+//			pairs.add(new Pair<String>(c1.getLemma(), c2.getLemma()));
+//			pairs.add(new Pair<String>(c1.getLemma(), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
+//			pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), c2.getLemma()));
+//			pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
+//		}
+//		
+//		return pairs;
+//	}
 
 }

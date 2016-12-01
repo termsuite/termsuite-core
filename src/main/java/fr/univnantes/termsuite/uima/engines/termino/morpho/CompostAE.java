@@ -261,12 +261,19 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				boolean isNeoclassical = false;
 				for(Segment seg:bestSegmentation.getSegments()) {
 					String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
-					builder.addComponent(
-						seg.getBegin(), 
-						seg.getEnd(), 
-						lemma
-					);
-					
+					if(lemma == null)
+						builder.addComponent(
+							seg.getBegin(), 
+							seg.getEnd(), 
+							seg.getSubstring()
+						);
+					else
+						builder.addComponent(
+								seg.getBegin(), 
+								seg.getEnd(), 
+								seg.getSubstring(),
+								lemma
+							);
 					
 					if(compostIndex.isNeoclassical(seg.getSubstring())) {
 						isNeoclassical = true;
