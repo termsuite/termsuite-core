@@ -29,11 +29,12 @@ import com.google.common.collect.ImmutableList;
 
 import fr.univnantes.termsuite.utils.StringUtils;
 
-public class Word extends LemmaStemHolder {
+public class Word {
 	
 	private CompoundType compoundType;
 	
 	private String stem;
+	private String lemma;
 
 	private List<Component> components;
 
@@ -42,7 +43,7 @@ public class Word extends LemmaStemHolder {
 	private static final String MSG_NO_NEOCLASSICAL_COMPOUND = "No neoclassical compound found for word <%s>";
 	
 	public Word(String lemma, String stem) {
-		super(lemma);
+		this.lemma = lemma;
 		this.stem = stem;
 		resetComposition();
 	}
@@ -134,4 +135,10 @@ public class Word extends LemmaStemHolder {
 				return c;
 		throw new IllegalArgumentException(String.format(MSG_NO_NEOCLASSICAL_COMPOUND, this));
 	}
+	
+	public String getLemma() {
+		return lemma;
+	}
+	
+	
 }
