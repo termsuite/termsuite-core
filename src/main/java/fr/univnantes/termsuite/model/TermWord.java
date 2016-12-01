@@ -28,6 +28,7 @@ import fr.univnantes.termsuite.utils.TermSuiteUtils;
 public class TermWord {
 	private Word word;
 	private String syntacticlabel;
+	private boolean swt = false;
 	
 	TermWord() {
 		super();
@@ -75,5 +76,14 @@ public class TermWord {
 		tw.word = new Word(lemma, lemma);
 		tw.syntacticlabel = label;
 		return tw;
+	}
+
+	public boolean isSwt() {
+		return swt;
+	}
+	
+	
+	public void setSwt(boolean swt) {
+		this.swt = swt;
 	}
 }
