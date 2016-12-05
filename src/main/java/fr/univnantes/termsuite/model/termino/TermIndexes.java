@@ -33,7 +33,7 @@ public class TermIndexes {
 	public static final String WORD_LEMMA_LOWER_CASE = "word-lemma-lower-case";
 	public static final String TERM_NOCLASS = "no-class";
 	public static final String SWT_GROUPING_KEYS = "swt-grouping-keys";
-	public static final String PREFIXATION_LEMMAS = "term-has-prefix-lemma";
-	public static final String DERIVATION_LEMMAS = "term-has-derivates-lemma";
+	public static final String PREFIXATION_LEMMAS = "prefixation-lemmas";
+	public static final String DERIVATION_LEMMAS = "derivation-lemmas";
 	public static final String SINGLE_WORD_LEMMA = "single-word-lemma";
 }
