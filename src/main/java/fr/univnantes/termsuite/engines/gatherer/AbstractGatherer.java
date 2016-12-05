@@ -6,7 +6,11 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Preconditions;
+import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -18,18 +22,19 @@ import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class AbstractGatherer {
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractGatherer.class);
 	
-	private static final int DEFAULT_MAX_CLASS_SIZE = 2500;
+	private static final int DEFAULT_MAX_CLASS_COMPLEXITY = 1000000;
 
 	private Optional<TermHistory> history = Optional.empty();
 	protected Set<VariantRule> variantRules;
 	private GroovyService groovyService;
 	private RuleType ruleType;
 	private RelationType relationType;
-//	private Optional<Predicate<Term>> termPredicate = Optional.empty();
+	private long cnt = 0;
 	private String indexName = TermIndexes.ALLCOMP_PAIRS;
 
-	private int maxClassSize = DEFAULT_MAX_CLASS_SIZE;
+	private int maxClassComplexity = DEFAULT_MAX_CLASS_COMPLEXITY;
 	
 
 	AbstractGatherer setRuleType(RuleType ruleType) {
@@ -76,16 +81,19 @@ public class AbstractGatherer {
 	}
 	
 	public void gather(TermIndex termIndex) {
+		Stopwatch sw = Stopwatch.createStarted();
 		CustomTermIndex index = termIndex.getCustomIndex(indexName);
 		index.cleanSingletonKeys();
-		index.dropBiggerEntries(maxClassSize, true);
 		for(String key:index.keySet()) {
 			Collection<Term> terms = index.getTerms(key);
 //			if(termPredicate.isPresent())
 //				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
-			gather(termIndex, terms);
+			gather(termIndex, terms, key);
 		}
+		sw.stop();
+		LOGGER.debug("Term gathered in {} - Num of comparisons: {}", sw, cnt);
 	}
+	
 
 	private void watch(Term source, Term target, TermRelation tv) {
 		if(history.isPresent()) {
@@ -102,7 +110,7 @@ public class AbstractGatherer {
 		}
 	}
 
-	private void gather(TermIndex termIndex, Collection<Term> termClass) {
+	private void gather(TermIndex termIndex, Collection<Term> termClass, String clsName) {
 		for(VariantRule rule:variantRules) {
 			Set<Term> sources = termClass.stream()
 				.filter(rule::isSourceAcceptable)
@@ -116,11 +124,16 @@ public class AbstractGatherer {
 			if(targets.isEmpty())
 				continue;
 			
+			long complexity = sources.size() * targets.size();
+			if(complexity > maxClassComplexity)
+				LOGGER.debug("Skipping term class {} because complexity is too high. Complexity: {}. Max: {}", clsName, complexity, maxClassComplexity);
+			
 			for(Term source:sources) {
 				for(Term target:targets) {
 					if(source.equals(target))
 						continue;
 					
+					cnt++;
 					if(groovyService.matchesRule(rule, source, target)) 
 						createVariationRelation(termIndex, source, target, rule);
 				}
