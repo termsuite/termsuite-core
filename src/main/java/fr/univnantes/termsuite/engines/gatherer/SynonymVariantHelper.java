@@ -1,8 +1,8 @@
-package fr.univnantes.termsuite.uima.engines.termino.gathering;
+package fr.univnantes.termsuite.engines.gatherer;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 
-public class SynonymVariantHelper extends VariantHelper {
+public class SynonymVariantHelper extends GroovyHelper {
 
 	private MultimapFlatResource synonyms;
 

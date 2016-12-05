@@ -46,18 +46,21 @@ import java.util.Optional;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.YamlTermGatherer;
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
+import fr.univnantes.termsuite.engines.gatherer.YamlTermGatherer;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
-import fr.univnantes.termsuite.uima.resources.termino.YamlVariantRules;
+import fr.univnantes.termsuite.uima.resources.termino.YamlRuleSetResource;
 
 public class TermGathererAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermGathererAE.class);
@@ -71,17 +74,25 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
-	private YamlVariantRules yamlVariantRules;
+	private YamlRuleSetResource yamlVariantRules;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
+	
+	public static final String SYNONYMS = "Synonyms";
+	@ExternalResource(key = SYNONYMS, mandatory = false)
+	private MultimapFlatResource synonymResource;
+
+	public static final String SEMANTIC_ALIGNER_ENABLED = "SemanticAlignerEnabled";
+	@ConfigurationParameter(name=SEMANTIC_ALIGNER_ENABLED, mandatory=false)
+	private boolean semanticAlignerEnabled;
+
 	
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 	
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		this.yamlVariantRules.initialize(this.termIndexResource.getTermIndex());
 		if(observerResource != null)
 			taskObserver = Optional.of(observerResource.getTaskObserver(TASK_NAME));
 	}
@@ -100,7 +111,14 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 				.setTaskObserver(taskObserver.get());
 		gatherer
 				.setHistory(historyResource.getHistory())
-				.setRules(yamlVariantRules)
-				.gather(termIndexResource.getTermIndex());
+				.setRules(yamlVariantRules.getRuleSet());
+		
+		gatherer.setGathererOptions(new GathererOptions()
+				.setSemanticGathererEnabled(semanticAlignerEnabled));
+		
+		if(synonymResource != null)
+			gatherer.setDictionary(synonymResource);
+				
+		gatherer.gather(termIndexResource.getTermIndex());
 	}
 }

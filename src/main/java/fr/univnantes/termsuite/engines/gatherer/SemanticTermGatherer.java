@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,41 +22,49 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.uima.engines.termino.gathering.SynonymicRule;
-import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRule;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class SemanticAligner {
-	private static final Logger LOGGER = LoggerFactory.getLogger(SemanticAligner.class);
+public class SemanticTermGatherer extends AbstractGatherer {
+	private static final Logger LOGGER = LoggerFactory.getLogger(SemanticTermGatherer.class);
 	private Optional<TermHistory> history = Optional.empty();
 	private SimilarityDistance distance = new Cosine();
 	private double similarityThreshold = 0.40;
 	private int nbDistributionalCandidates = 5;
-	private SynonymicRule rule;
 	private MultimapFlatResource dico = new MultimapFlatResource();
 
-	public SemanticAligner setDistance(SimilarityDistance distance) {
+	public SemanticTermGatherer setDistance(SimilarityDistance distance) {
 		this.distance = distance;
 		return this;
 	}
 	
-	public SemanticAligner setSimilarityThreshold(double similarityThreshold) {
+	public SemanticTermGatherer setSimilarityThreshold(double similarityThreshold) {
 		this.similarityThreshold = similarityThreshold;
 		return this;
 	}
 	
-	public SemanticAligner setHistory(TermHistory history) {
-		this.history = Optional.of(history);
+	public SemanticTermGatherer setHistory(TermHistory history) {
+		if(history != null)
+			this.history = Optional.of(history);
 		return this;
 	}
 	
+	public SemanticTermGatherer setDictionary(Optional<MultimapFlatResource> dico) {
+		this.dico = dico.isPresent() ? dico.get() : new MultimapFlatResource();
+		return this;
+	}
+
+	@Override
+	public void gather(TermIndex termIndex) {
+		for(VariantRule rule:this.variantRules)
+			gather(termIndex, (SynonymicRule)rule);
+	}
 	
-	public void align(TermIndex termIndex) {
-		LOGGER.info("Aligning semantic variations {} for rule {}", termIndex.getName(), this.rule.getName());
+	public void gather(TermIndex termIndex, SynonymicRule rule) {
+		LOGGER.info("Aligning semantic variations {} for rule {}", termIndex.getName(), rule.getName());
 		if(termIndex.getTerms().isEmpty())
 			return;
-		Preconditions.checkNotNull(this.rule);
+		Preconditions.checkNotNull(rule);
 		
 		Preconditions.checkState(rule.getSynonymSourceWordIndex() != -1);
 		
@@ -177,18 +185,6 @@ public class SemanticAligner {
 						this.getClass(), 
 						"Term has a new semantic variant " + t1);
 		}
-	}
-
-	public SemanticAligner setRule(VariantRule rule) {
-		Preconditions.checkArgument(rule.isSynonymicRule(), "Rule must be synonymic: " + rule.getName());
-		this.rule = SynonymicRule.parseSynonymicRule(rule);
-		return this;
-	}
-
-
-	public SemanticAligner setDictionary(MultimapFlatResource dico) {
-		this.dico = dico == null ? new MultimapFlatResource() : dico ;
-		return this;
 	}
 
 }

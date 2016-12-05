@@ -90,7 +90,7 @@ public class ExtensionDetecter {
 	}
 
 	public void setSize2Extensions(TermIndex termIndex) {
-		String gatheringKey = TermIndexes.WORD_COUPLE_LEMMA_LEMMA;
+		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;
 		CustomTermIndex customIndex = termIndex.createCustomIndex(
 				gatheringKey,
 				TermValueProviders.get(gatheringKey));

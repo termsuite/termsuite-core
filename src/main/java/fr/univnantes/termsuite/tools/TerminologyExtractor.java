@@ -69,12 +69,12 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.engines.ScorerConfig;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.utils.FileUtils;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
@@ -405,7 +405,7 @@ public class TerminologyExtractor {
 			pipeline.aeCompostSplitter();
 			
 			// syntactic variant gathering
-			pipeline.aeTermVariantGatherer();
+			pipeline.aeTermVariantGatherer(false);
 
 			// graphical variant gathering
 			pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);

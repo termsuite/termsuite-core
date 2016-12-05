@@ -19,56 +19,36 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.gathering;
-
-import java.util.ArrayList;
-import java.util.List;
+package fr.univnantes.termsuite.engines.gatherer;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-import com.google.common.collect.ImmutableList;
 
 import fr.univnantes.termsuite.model.Component;
-import fr.univnantes.termsuite.model.CompoundType;
-import fr.univnantes.termsuite.model.TermWord;
 
-public class GroovyWord {
-	
-	private TermWord termWord;
-	
-	public boolean neoclassical;
-	public boolean compound;
+public class GroovyComponent {
 	public String lemma;
-	public String stem;
-	public String syntacticLabel;
-	public List<GroovyComponent> components;
+	public String substring;
 	
-	public GroovyWord(TermWord w, GroovyAdapter groovyAdapter) {
-		this.termWord = w;
-		
-		this.compound = w.getWord().isCompound();
-		this.neoclassical = w.getWord().isCompound() && w.getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
-		this.lemma = w.getWord().getLemma();
-		this.stem = w.getWord().getStem();
-		this.syntacticLabel = w.getSyntacticLabel();
-		List<GroovyComponent> aux= new ArrayList<GroovyComponent>(w.getWord().getComponents().size());
-		for(Component c:w.getWord().getComponents()) 
-			aux.add(groovyAdapter.asGroovyComponent(c));
-		this.components = ImmutableList.copyOf(aux);
+	public GroovyComponent(Component a) {
+		this.lemma = a.getLemma();
+		this.substring = a.getSubstring();
 	}
 
-	public GroovyComponent getAt(int index) {
-		return this.components.get(index);
-	}
-	
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(this.lemma);
+		return Objects.hashCode(lemma);
+	}
+	
+	private boolean hasLemma() {
+		return this.lemma != null;
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof GroovyWord)
+		if(!hasLemma())
+			return false;
+		else if(obj instanceof GroovyWord)
 			return this.lemma.equals(((GroovyWord)obj).lemma);
 		else if(obj instanceof GroovyComponent)
 			return this.lemma.equals(((GroovyComponent)obj).lemma);
@@ -83,9 +63,5 @@ public class GroovyWord {
 				.add("lemma", this.lemma)
 				.toString()
 				;
-	}
-	
-	public TermWord getTermWord() {
-		return this.termWord;
 	}
 }

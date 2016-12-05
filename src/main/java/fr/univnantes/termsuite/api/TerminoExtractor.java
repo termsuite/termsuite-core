@@ -25,11 +25,11 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.engines.ScorerConfig;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
 import fr.univnantes.termsuite.utils.FileSystemUtils;
@@ -388,16 +388,14 @@ public class TerminoExtractor {
 		
 		if(variationDetectionEnabled)
 			pipeline
+				.aeExtensionDetector()
 				.aeSuffixDerivationDetector()
-				.aeTermVariantGatherer()
+				.aeTermVariantGatherer(semanticAlignerEnabled)
 				.aeGraphicalVariantGatherer();
 
 		pipeline
-			.aeExtensionDetector()
 			.aeExtensionVariantGatherer();
 		
-		if(semanticAlignerEnabled)
-			pipeline.aeSemanticAligner();
 		
 		if(scoringEnabled)
 			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig())

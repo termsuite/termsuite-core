@@ -111,7 +111,9 @@ public class MemoryTermIndex implements TermIndex {
 			termIndex.indexTerm(this, term);
 		for(TermWord tw:term.getWords()) {
 			privateAddWord(tw.getWord(), false);
-			tw.setSwt(termsByGroupingKey.containsKey(TermUtils.toGroupingKey(tw)));
+			if(!tw.isSwt())
+				// try to set swt manually
+				tw.setSwt(termsByGroupingKey.containsKey(TermUtils.toGroupingKey(tw)));
 		}
 	}
 
@@ -225,10 +227,8 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
-		if(this.customIndexes.get(indexName) == null) {
-			TermValueProvider valueProvider = TermValueProviders.get(indexName, this);
-			createCustomIndex(indexName, valueProvider);
-		}
+		if(!this.customIndexes.containsKey(indexName))
+			createCustomIndex(indexName, TermValueProviders.get(indexName));
 		return this.customIndexes.get(indexName);
 	}
 

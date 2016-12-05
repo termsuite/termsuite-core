@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima.engines.termino.gathering;
+package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.Iterator;
 
@@ -34,11 +34,11 @@ import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class VariantHelper {
+public class GroovyHelper {
 
 	private TermIndex termIndex;
 	
-	public VariantHelper() {
+	public GroovyHelper() {
 		super();
 	}
 	

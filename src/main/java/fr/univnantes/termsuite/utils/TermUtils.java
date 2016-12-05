@@ -410,9 +410,9 @@ public class TermUtils {
 	
 	
 	/**
-	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#ALLCOMP_LEMMA_SUBSTRING_PAIRS}.
+	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#ALLCOMP_PAIRS}.
 	 * 
-	 * @see TermValueProviders#ALLCOMP_LEMMA_SUBSTRING_PAIRS
+	 * @see TermValueProviders#ALLCOMP_PAIRS
 	 * @param term1
 	 * 				First term of the pair
 	 * @param term2

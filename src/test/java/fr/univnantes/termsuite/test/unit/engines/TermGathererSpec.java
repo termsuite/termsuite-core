@@ -26,17 +26,17 @@ package fr.univnantes.termsuite.test.unit.engines;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
+import java.io.File;
+
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.fit.factory.ExternalResourceFactory;
-import org.apache.uima.resource.ExternalResourceDescription;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.util.InvalidXMLException;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.google.common.base.Charsets;
+import com.google.common.io.Files;
+
+import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
+import fr.univnantes.termsuite.engines.gatherer.YamlTermGatherer;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -44,12 +44,6 @@ import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
-import fr.univnantes.termsuite.uima.engines.termino.TermGathererAE;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
-import fr.univnantes.termsuite.uima.resources.termino.YamlVariantRules;
-import fr.univnantes.termsuite.utils.TermHistory;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TermGathererSpec {
 	private MemoryTermIndex termIndex;
@@ -64,14 +58,18 @@ public class TermGathererSpec {
 	private Term geothermie_hydraulique_solaire;
 	private Term geothermie_hydraulique;
 	
-	private AnalysisEngine ae;
+	private YamlTermGatherer engine;
 	
+	private static final String VARIANT_RULE_SET = "src/test/resources/fr/univnantes/termsuite/test/resources/variant-rules.yaml";
 	@Before
 	public void set() throws Exception {
+		String text = Files.toString(new File(VARIANT_RULE_SET), Charsets.UTF_8);
 		this.termIndex = Fixtures.termIndex();
-		makeAE();
 		populateTermIndex(new TermFactory(termIndex));
-		ae.collectionProcessComplete();
+		engine = new YamlTermGatherer()
+			.setRules(YamlRuleSetIO.fromYaml(text));
+		
+		engine.gather(this.termIndex);
 	}
 
 	private void populateTermIndex(TermFactory termFactory) {
@@ -97,50 +95,6 @@ public class TermGathererSpec {
 		termFactory.setProperty(TermProperty.FREQUENCY, 1);
 	}
 
-	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {
-		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		manager.clear();
-		String historyResourceName = "history";
-		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
-		manager.register(termIndex.getName(), termIndex);
-		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
-				TermGathererAE.class
-			);
-		
-
-		/*
-		 * The history resource
-		 */
-		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermHistoryResource.TERM_HISTORY,
-				TermHistoryResource.class, 
-				historyResourceName
-		);
-		ExternalResourceFactory.bindResource(aeDesc, historyResourceDesc);
-
-		
-		/*
-		 * The term index resource
-		 */
-		ExternalResourceDescription termIndexDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermIndexResource.TERM_INDEX,
-				TermIndexResource.class, 
-				this.termIndex.getName()
-		);
-		ExternalResourceFactory.bindResource(aeDesc, termIndexDesc);
-
-		/*
-		 * The rule list resources
-		 */
-		ExternalResourceDescription rulesDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermGathererAE.YAML_VARIANT_RULES,
-				YamlVariantRules.class, 
-				"file:fr/univnantes/termsuite/test/resources/variant-rules.yaml"
-		);
-		ExternalResourceFactory.bindResource(aeDesc, rulesDesc);
-		
-		ae = AnalysisEngineFactory.createEngine(aeDesc);
-	}
 	
 	@Test
 	public void testProcessDefault() throws AnalysisEngineProcessException{

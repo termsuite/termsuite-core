@@ -26,7 +26,7 @@ import java.util.NoSuchElementException;
 
 import fr.univnantes.termsuite.LanguageException;
 import fr.univnantes.termsuite.engines.EngineState;
-import fr.univnantes.termsuite.engines.ScorerConfig;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 
 public enum Lang {

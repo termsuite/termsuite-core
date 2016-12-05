@@ -118,11 +118,11 @@ public abstract class WindEnergySpec {
 			.aeStopWordsFilter()
 			.aeSpecificityComputer()
 			.aeCompostSplitter()
+			.aeExtensionDetector()
 			.aePrefixSplitter()
 			.aeSuffixDerivationDetector()
-			.aeTermVariantGatherer()
+			.aeTermVariantGatherer(false)
 			.aeGraphicalVariantGatherer()
-			.aeExtensionDetector()
 			.aeExtensionVariantGatherer()
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();

@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.gathering;
+package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class GroovyTerm {
 	public String stem;
 	public List<GroovyWord> words;
 	
-	public GroovyTerm(Term term, GroovyAdapter adapter) {
+	public GroovyTerm(Term term, GroovyService adapter) {
 		this.term = term;
 		
 		this.compound = term.isCompound();

@@ -24,15 +24,15 @@ package fr.univnantes.termsuite.uima.engines.export;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ExternalResource;
 
+import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.export.VariationRuleExamplesExporter;
 import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
-import fr.univnantes.termsuite.uima.resources.termino.YamlVariantRules;
 
 public class ExportVariationRuleExamplesAE extends AbstractTermIndexExporter {
 
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
-	private YamlVariantRules yamlVariantRules;
+	private YamlRuleSet yamlVariantRules;
 
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {

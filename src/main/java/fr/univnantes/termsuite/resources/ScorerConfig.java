@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.resources;
 
 public class ScorerConfig {
 	private double extensionSpecTh = 0.1;

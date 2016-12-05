@@ -69,7 +69,6 @@ import fr.univnantes.termsuite.api.stream.DocumentStream;
 import fr.univnantes.termsuite.api.stream.StreamingCasConsumer;
 import fr.univnantes.termsuite.engines.Contextualizer;
 import fr.univnantes.termsuite.engines.ExtensionVariantGatherer;
-import fr.univnantes.termsuite.engines.ScorerConfig;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -83,6 +82,7 @@ import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.resources.TermSuitePipelineObserver;
 import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
@@ -123,7 +123,6 @@ import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.PostProcessorAE;
 import fr.univnantes.termsuite.uima.engines.termino.Ranker;
 import fr.univnantes.termsuite.uima.engines.termino.SWTSizeSetterAE;
-import fr.univnantes.termsuite.uima.engines.termino.SemanticAlignerAE;
 import fr.univnantes.termsuite.uima.engines.termino.TermGathererAE;
 import fr.univnantes.termsuite.uima.engines.termino.TermSpecificityComputer;
 import fr.univnantes.termsuite.uima.engines.termino.cleaning.AbstractTermIndexCleaner;
@@ -164,7 +163,7 @@ import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 import fr.univnantes.termsuite.uima.resources.termino.ReferenceTermList;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
-import fr.univnantes.termsuite.uima.resources.termino.YamlVariantRules;
+import fr.univnantes.termsuite.uima.resources.termino.YamlRuleSetResource;
 import fr.univnantes.termsuite.utils.FileUtils;
 import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -1704,7 +1703,7 @@ public class TermSuitePipeline {
 	public ExternalResourceDescription resSyntacticVariantRules() {
 		if(syntacticVariantRules == null) {
 			syntacticVariantRules = ExternalResourceFactory.createExternalResourceDescription(
-					YamlVariantRules.class, 
+					YamlRuleSetResource.class, 
 					getResUrl(TermSuiteResource.VARIANTS)
 				);
 		}
@@ -1785,25 +1784,6 @@ public class TermSuitePipeline {
 		}
 	}
 
-	
-	public TermSuitePipeline aeSemanticAligner()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					SemanticAlignerAE.class
-				);
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			if(TermSuiteResource.SYNONYMS.exists(lang))
-				ExternalResourceFactory.bindResource(ae, SemanticAlignerAE.SYNONYMS, resSynonyms());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
-
-			return aggregateAndReturn(ae, "Computing semantic gathering (alignment)", 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
-	
 	public TermSuitePipeline setContextualizeCoTermsType(
 			OccurrenceType contextualizeCoTermsType) {
 		this.contextualizeCoTermsType = contextualizeCoTermsType;
@@ -1995,14 +1975,16 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeTermVariantGatherer()   {
+	public TermSuitePipeline aeTermVariantGatherer(boolean semanticAlignmentEnabled)   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TermGathererAE.class
+					TermGathererAE.class,
+					TermGathererAE.SEMANTIC_ALIGNER_ENABLED, semanticAlignmentEnabled
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
+			ExternalResourceFactory.bindResource(ae, resSynonyms());
 			ExternalResourceFactory.bindResource(ae, resObserver());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 

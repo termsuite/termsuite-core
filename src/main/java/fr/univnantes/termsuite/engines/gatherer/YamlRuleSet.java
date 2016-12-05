@@ -19,49 +19,28 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.gathering;
+package fr.univnantes.termsuite.engines.gatherer;
 
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
+import java.util.Collection;
 
-import fr.univnantes.termsuite.model.Component;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 
-public class GroovyComponent {
-	public String lemma;
-	public String substring;
-	
-	public GroovyComponent(Component a) {
-		this.lemma = a.getLemma();
-		this.substring = a.getSubstring();
+public class YamlRuleSet  {
+	private Multimap<RuleType, VariantRule> variantRules;
+
+	public Collection<VariantRule> getVariantRules(RuleType key) {
+		return variantRules.get(key);
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hashCode(lemma);
+	public YamlRuleSet(Iterable<VariantRule> rules) {
+		variantRules = HashMultimap.create();
+		for(VariantRule rule:rules) 
+			variantRules.put(rule.getRuleType(), rule);
 	}
 	
-	private boolean hasLemma() {
-		return this.lemma != null;
+	public Collection<VariantRule> getVariantRules() {
+		return variantRules.values();
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		if(!hasLemma())
-			return false;
-		else if(obj instanceof GroovyWord)
-			return this.lemma.equals(((GroovyWord)obj).lemma);
-		else if(obj instanceof GroovyComponent)
-			return this.lemma.equals(((GroovyComponent)obj).lemma);
-		else if(obj instanceof CharSequence)
-			return this.lemma.equals(obj);
-		else return false;
-	}
-	
-	@Override
-	public String toString() {
-		return MoreObjects.toStringHelper(this)
-				.add("lemma", this.lemma)
-				.toString()
-				;
-	}
 }

@@ -60,7 +60,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	protected List<String> getSyntacticMatchingRules() {
 		return Lists.newArrayList(
 				"M-S-NN",
-				"M-S-(A|N)NN",
 				"M-I-EN-N|A",
 				"M-I-NN-CA",
 				"M-R2I-ANN",
@@ -111,7 +110,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Override
 	protected List<String> getSyntacticNotMatchingRules() {
 		return Lists.newArrayList(
-				"M-IPR2-NPN",
 				"S-I1-NPN-CN",
 				"S-PEg-NN-NP", "S-PID-AN-P", "S-R2D-NN");
 	}
@@ -177,10 +175,10 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 					tuple("axis", 11,15)
 				);
 
-		assertThat(TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS.getClasses(termIndex, morph))
+		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termIndex, morph))
 			.containsExactly("axis+horizontal");
 
-		assertThat(TermValueProviders.ALLCOMP_LEMMA_SUBSTRING_PAIRS.getClasses(termIndex, syntag))
+		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termIndex, syntag))
 			.contains("axis+horizontal");
 		
 		assertThat(termIndex)
@@ -277,7 +275,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
-			.hasSize(128)
+			.hasSize(632)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: baseline", "nn: base line"), 

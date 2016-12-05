@@ -34,9 +34,9 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.ScorerConfig;
 import fr.univnantes.termsuite.engines.TermPostProcessor;
 import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
