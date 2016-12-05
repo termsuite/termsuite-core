@@ -57,36 +57,42 @@ public class YamlTermGatherer {
 	public void gather(TermIndex termIndex) {
 		GroovyService groovyService = new GroovyService(termIndex);
 
-		LOGGER.info("Gathering prefixation variants");
-		new AbstractGatherer()
-			.setRuleType(RuleType.PREFIXATION)
-			.setIndexName(TermIndexes.PREFIXATION_LEMMAS)
-			.setRelationType(RelationType.SYNTACTICAL)
-			.setGroovyAdapter(groovyService)
-			.setHistory(history)
-			.setVariantRules(rules.getVariantRules(RuleType.PREFIXATION))	
-			.gather(termIndex);
+		if(gathererOptions.isPrefixationGathererEnabled()) {
+			LOGGER.info("Gathering prefixation variants");
+			new AbstractGatherer()
+				.setRuleType(RuleType.PREFIXATION)
+				.setIndexName(TermIndexes.PREFIXATION_LEMMAS)
+				.setRelationType(RelationType.SYNTACTICAL)
+				.setGroovyAdapter(groovyService)
+				.setHistory(history)
+				.setVariantRules(rules.getVariantRules(RuleType.PREFIXATION))	
+				.gather(termIndex);
+		}
 		
-		LOGGER.info("Gathering derivation variants");
-		new AbstractGatherer()
-			.setIndexName(TermIndexes.DERIVATION_LEMMAS)
-			.setRuleType(RuleType.DERIVATION)
-			.setRelationType(RelationType.SYNTACTICAL)
-			.setGroovyAdapter(groovyService)
-			.setHistory(history)
-			.setVariantRules(rules.getVariantRules(RuleType.DERIVATION))	
-			.gather(termIndex);
+		if(gathererOptions.isDerivationGathererEnabled()) {
+			LOGGER.info("Gathering derivation variants");
+			new AbstractGatherer()
+				.setIndexName(TermIndexes.DERIVATION_LEMMAS)
+				.setRuleType(RuleType.DERIVATION)
+				.setRelationType(RelationType.SYNTACTICAL)
+				.setGroovyAdapter(groovyService)
+				.setHistory(history)
+				.setVariantRules(rules.getVariantRules(RuleType.DERIVATION))	
+				.gather(termIndex);
+		}
 		
-		LOGGER.info("Gathering morphological variants");
-		new AbstractGatherer()
-			.setRuleType(RuleType.MORPHOLOGICAL)
-			.setRelationType(RelationType.MORPHOLOGICAL)
-			.setGroovyAdapter(groovyService)
-			.setHistory(history)
-			.setVariantRules(rules.getVariantRules(RuleType.MORPHOLOGICAL))	
-			.gather(termIndex);
+		if(gathererOptions.isMorphologicalGathererEnabled()) {
+			LOGGER.info("Gathering morphological variants");
+			new AbstractGatherer()
+				.setRuleType(RuleType.MORPHOLOGICAL)
+				.setRelationType(RelationType.MORPHOLOGICAL)
+				.setGroovyAdapter(groovyService)
+				.setHistory(history)
+				.setVariantRules(rules.getVariantRules(RuleType.MORPHOLOGICAL))	
+				.gather(termIndex);
+		}
 		
-		LOGGER.info("Gathering morphological syntagmatic variants");
+		LOGGER.info("Gathering syntagmatic variants");
 		new AbstractGatherer()
 			.setRuleType(RuleType.SYNTAGMATIC)
 			.setRelationType(RelationType.SYNTACTICAL)
@@ -95,8 +101,9 @@ public class YamlTermGatherer {
 			.setVariantRules(rules.getVariantRules(RuleType.SYNTAGMATIC))	
 			.gather(termIndex);
 
-		LOGGER.info("Gathering morphological semantic variants");
-		new SemanticTermGatherer()
+		if(gathererOptions.isSemanticGathererEnabled()) {
+			LOGGER.info("Gathering morphological semantic variants");
+			new SemanticTermGatherer()
 			.setDictionary(dico)
 			.setRuleType(RuleType.SEMANTIC)
 			.setRelationType(RelationType.SYNONYMIC)
@@ -104,6 +111,7 @@ public class YamlTermGatherer {
 			.setHistory(history)
 			.setVariantRules(rules.getVariantRules(RuleType.SEMANTIC))	
 			.gather(termIndex);
+		}
 	}
 
 //	public void oldGather(TermIndex termIndex) {
