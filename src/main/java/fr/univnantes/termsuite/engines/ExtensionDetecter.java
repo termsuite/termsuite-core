@@ -39,7 +39,7 @@ public class ExtensionDetecter {
 		setIsExtensionProperty(termIndex);
 	}
 
-	private void setIsExtensionProperty(TermIndex termIndex) {
+	public void setIsExtensionProperty(TermIndex termIndex) {
 		termIndex
 			.getRelations()
 			.forEach(relation -> {

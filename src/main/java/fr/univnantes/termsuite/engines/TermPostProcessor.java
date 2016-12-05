@@ -72,6 +72,9 @@ public class TermPostProcessor {
 	public void postprocess(TermIndex termIndex) {
 		LOGGER.debug("Post-processing term index {}", termIndex.getName());
 
+		// resets all IS_EXTENSION properies
+		new ExtensionDetecter().setIsExtensionProperty(termIndex);
+		
 		// Score terms 
 		new TermScorer().score(termIndex);
 		
