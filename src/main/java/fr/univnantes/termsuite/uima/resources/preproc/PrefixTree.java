@@ -55,7 +55,7 @@ public class PrefixTree implements SharedResourceObject {
 		private boolean validPrefix;
 		private char character;
 		private Node parent;
-		private Map<Character, Node> children = Maps.newHashMap();
+		private Map<Character, Node> children = Maps.newConcurrentMap();
 		
 		public Node(char character) {
 			super();

@@ -26,6 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.commons.lang3.mutable.MutableInt;
 
@@ -46,7 +47,7 @@ import fr.univnantes.termsuite.metrics.AssociationRate;
  *
  */
 public class ContextVector {
-	private Map<Term, Entry> entries = Maps.newHashMap();
+	private ConcurrentMap<Term, Entry> entries = Maps.newConcurrentMap();
 	private List<Entry> _sortedEntries = null;
 	private int totalCooccurrences = 0;
 

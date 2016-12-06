@@ -25,9 +25,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -42,8 +43,8 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Lang;
@@ -82,11 +83,11 @@ public class MemoryTermIndex implements TermIndex {
 	 * this level of index. They me be indexed from their base-term
 	 * instead. 
 	 */
-	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
-	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
-	private Map<String, Word> wordIndex = Maps.newHashMap();
-	private Multimap<Term, TermRelation> outboundVariations = LinkedListMultimap.create();
-	private Multimap<Term, TermRelation> inboundVariations = LinkedListMultimap.create();
+	private ConcurrentMap<String, Term> termsByGroupingKey = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, CustomTermIndex> customIndexes = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, Word> wordIndex = new ConcurrentHashMap<>();
+	private Multimap<Term, TermRelation> outboundVariations = Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
+	private Multimap<Term, TermRelation> inboundVariations =  Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
 	
 	private String name;
 	private Lang lang;
@@ -242,8 +243,9 @@ public class MemoryTermIndex implements TermIndex {
 		this.customIndexes.put(indexName, customIndex);
 
 		LOGGER.debug("Indexing {} terms to index {}", this.getTerms().size(), indexName);
-		for(Term t:this.getTerms()) 
+		this.getTerms().parallelStream().forEach(t->{
 			customIndex.indexTerm(this, t);
+		}); 
 		return customIndex;
 	}
 

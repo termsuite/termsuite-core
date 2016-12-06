@@ -94,8 +94,8 @@ public class CrossTable {
 
 
 	private void init() {
-        this.aPlusB = Maps.newHashMap();
-        this.aPlusC = Maps.newHashMap();
+        this.aPlusB = Maps.newConcurrentMap();
+        this.aPlusC = Maps.newConcurrentMap();
         this.totalCoOccurrences = 0;
 //        this.totalFrequency = 0;
         

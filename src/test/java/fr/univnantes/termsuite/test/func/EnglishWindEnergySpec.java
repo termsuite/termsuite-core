@@ -224,8 +224,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(neoclassicals)
 			.isNotEmpty()
 			.extracting("lemma", "neoclassicalAffix.lemma")
+			.hasSize(769)
 			.contains(tuple("hydroelectric", "water"))
-			.hasSize(769);
+			;
 	}
 
 	
@@ -275,7 +276,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
-			.hasSize(632)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: baseline", "nn: base line"), 
@@ -283,6 +283,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				   tuple("n: spreadsheet", "nn: spread sheet"), 
 				   tuple("n: gearbox", "nn: gear box")
 			)
+			.hasSize(632)
 			;
 	}
 
@@ -336,7 +337,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("an: suitable site", "an: unsuitable site"),
 				tuple("an: national institute", "an: international institute")
 		)
-		.hasSize(32)
+		.hasSize(33)
 		;
 		
 	}

@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Stopwatch;
+
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermIndex;
@@ -55,13 +57,15 @@ public class YamlTermGatherer {
 	
 	
 	public void gather(TermIndex termIndex) {
+		Stopwatch sw = Stopwatch.createStarted();
+		
 		GroovyService groovyService = new GroovyService(termIndex);
 
 		if(gathererOptions.isPrefixationGathererEnabled()) {
 			LOGGER.info("Gathering prefixation variants");
 			new AbstractGatherer()
 				.setRuleType(RuleType.PREFIXATION)
-				.setIndexName(TermIndexes.PREFIXATION_LEMMAS)
+				.setIndexName(TermIndexes.PREFIXATION_LEMMAS, true)
 				.setRelationType(RelationType.SYNTACTICAL)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
@@ -72,7 +76,7 @@ public class YamlTermGatherer {
 		if(gathererOptions.isDerivationGathererEnabled()) {
 			LOGGER.info("Gathering derivation variants");
 			new AbstractGatherer()
-				.setIndexName(TermIndexes.DERIVATION_LEMMAS)
+				.setIndexName(TermIndexes.DERIVATION_LEMMAS, true)
 				.setRuleType(RuleType.DERIVATION)
 				.setRelationType(RelationType.SYNTACTICAL)
 				.setGroovyAdapter(groovyService)
@@ -84,16 +88,18 @@ public class YamlTermGatherer {
 		if(gathererOptions.isMorphologicalGathererEnabled()) {
 			LOGGER.info("Gathering morphological variants");
 			new AbstractGatherer()
+				.setIndexName(TermIndexes.ALLCOMP_PAIRS, false)
 				.setRuleType(RuleType.MORPHOLOGICAL)
 				.setRelationType(RelationType.MORPHOLOGICAL)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(RuleType.MORPHOLOGICAL))	
 				.gather(termIndex);
-		}
+		} 
 		
 		LOGGER.info("Gathering syntagmatic variants");
 		new AbstractGatherer()
+			.setIndexName(TermIndexes.ALLCOMP_PAIRS, true)
 			.setRuleType(RuleType.SYNTAGMATIC)
 			.setRelationType(RelationType.SYNTACTICAL)
 			.setGroovyAdapter(groovyService)
@@ -112,6 +118,8 @@ public class YamlTermGatherer {
 			.setVariantRules(rules.getVariantRules(RuleType.SEMANTIC))	
 			.gather(termIndex);
 		}
+		sw.stop();
+		LOGGER.debug("{} finished in {}", this.getClass().getSimpleName(), sw);
 	}
 
 //	public void oldGather(TermIndex termIndex) {

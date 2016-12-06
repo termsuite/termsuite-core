@@ -29,10 +29,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 
 import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.Term;
@@ -41,9 +43,9 @@ import fr.univnantes.termsuite.model.termino.TermSelector;
 
 public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 
-	private Multimap<Term, TermOccurrence> map = HashMultimap.create();
+	private Multimap<Term, TermOccurrence> map = Multimaps.synchronizedMultimap(HashMultimap.create());
 	
-	private Map<Term, Map<String, Form>> forms = new HashMap<>();
+	private Map<Term, Map<String, Form>> forms = new ConcurrentHashMap<>();
 
 	private Form getForm(Term term, String coveredText) {
 		if(!forms.containsKey(term))

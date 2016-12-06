@@ -70,7 +70,7 @@ import fr.univnantes.termsuite.utils.JCasUtils;
 public class CasStatCounter extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CasStatCounter.class);
 	
-	private Map<String, MutableInt> counters = Maps.newHashMap();
+	private Map<String, MutableInt> counters = Maps.newConcurrentMap();
 	
 	public static final String STAT_NAME = "StatName";
 	@ConfigurationParameter(name=STAT_NAME, mandatory=false)

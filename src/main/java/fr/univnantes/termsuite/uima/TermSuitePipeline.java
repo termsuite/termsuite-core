@@ -218,7 +218,7 @@ public class TermSuitePipeline {
 	/*
 	 * Regex Spotter params
 	 */
-	private boolean addSpottedAnnoToTermIndex = true;
+	private boolean addSpottedAnnoToTermIndex = false;
 	private boolean spotWithOccurrences = true;
 	private Optional<Boolean> logOverlappingRules = Optional.empty();
 	private Optional<String> postProcessingStrategy = Optional.empty();
@@ -1288,7 +1288,10 @@ public class TermSuitePipeline {
 					stopWordsRes
 				);
 
-			return aggregateAndReturn(ae, "Spotting terms", 0).aeTermOccAnnotationImporter();
+			TermSuitePipeline aggAE = aggregateAndReturn(ae, "Spotting terms", 0);
+			if(this.addSpottedAnnoToTermIndex)
+				aggAE.aeTermOccAnnotationImporter();
+			return aggAE;
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

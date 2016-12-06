@@ -1,7 +1,6 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 import org.codehaus.groovy.runtime.InvokerInvocationException;
 import org.slf4j.Logger;
@@ -23,10 +22,10 @@ public class GroovyService {
 	private static final String GROOVY_SET_HELPER_METHOD_NAME = "setHelper";
 	private static int CLASS_NUM = 0;
 
-	private Map<TermWord, GroovyWord> groovyWords = Maps.newHashMap();
-	private Map<Term, GroovyTerm> groovyTerms = Maps.newHashMap();
-	private Map<Component, GroovyComponent> groovyComponents = Maps.newHashMap();
-	private Map<VariantRule, GroovyObject> groovyRules = new HashMap<>();
+	private ConcurrentMap<TermWord, GroovyWord> groovyWords = Maps.newConcurrentMap();
+	private ConcurrentMap<Term, GroovyTerm> groovyTerms = Maps.newConcurrentMap();
+	private ConcurrentMap<Component, GroovyComponent> groovyComponents = Maps.newConcurrentMap();
+	private ConcurrentMap<VariantRule, GroovyObject> groovyRules = Maps.newConcurrentMap();
 	private GroovyHelper groovyHelper;
 	
 	public GroovyService(TermIndex termIndex) {

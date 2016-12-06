@@ -62,6 +62,12 @@ public class TerminoExtractor {
 	private Lang lang = null;
 	
 	/*
+	 * If present, start the extraction from an already imported term index
+	 */
+	private Optional<TermIndex> termIndex = Optional.empty();
+
+	
+	/*
 	 * Custom resources
 	 */
 	private Optional<String> customResourceDir = Optional.empty();
@@ -166,6 +172,15 @@ public class TerminoExtractor {
 			);
 		
 	}
+	
+	public static TerminoExtractor fromTermIndex(TermIndex termIndex) {
+		TerminoExtractor extractor = new TerminoExtractor();
+		extractor.termIndex = Optional.of(termIndex);
+		extractor.preprocessed = true;
+		extractor.lang = termIndex.getLang();
+		return extractor;
+	}
+
 
 	/**
 	 * WARNING : encoding of XMI file must be UTF-8.
@@ -344,8 +359,9 @@ public class TerminoExtractor {
 	public TermIndex execute() {
 		Preconditions.checkNotNull(this.lang, "Language cannot be null");
 		
-		TermSuitePipeline pipeline = TermSuitePipeline
-				.create(lang.getCode());
+		TermSuitePipeline pipeline = termIndex.isPresent() ?
+				TermSuitePipeline.create(termIndex.get())
+				: TermSuitePipeline.create(lang.getCode());
 		
 		if(history.isPresent())
 			pipeline.setHistory(history.get());
@@ -353,43 +369,45 @@ public class TerminoExtractor {
 		if(customResourceDir.isPresent())
 			pipeline.setResourceDir(this.customResourceDir.get());
 		
-		if(!preprocessed) {
+		if(!termIndex.isPresent()) {
+			if(!preprocessed) {
+				
+				pipeline.aeWordTokenizer()
+				.setTreeTaggerHome(this.treeTaggerHome)
+				.aeTreeTagger()
+				.aeUrlFilter()
+				.aeStemmer()
+				.aeRegexSpotter();
+				if(nbDocuments != -1)
+					pipeline.aeDocumentLogger(this.nbDocuments);
+			} else {
+				pipeline.aeUrlFilter()
+				.aeTermOccAnnotationImporter();
+			}
 			
-			pipeline.aeWordTokenizer()
-					.setTreeTaggerHome(this.treeTaggerHome)
-					.aeTreeTagger()
-					.aeUrlFilter()
-					.aeStemmer()
-					.aeRegexSpotter();
-		} else {
-			pipeline.aeUrlFilter()
-					.aeTermOccAnnotationImporter();
+			if(preFilterConfig.isPresent()) 
+				PipelineUtils.filter(pipeline, preFilterConfig.get());
+			
+			if(contextualizerEnabled)
+				pipeline.aeContextualizer(
+						contextualizerScope, 
+						contextualizerMode == ContextualizerMode.ON_ALL_TERMS ? true : false);
+			
+			
+			if(maxSizeFilter.isPresent())
+				pipeline.aeMaxSizeThresholdCleaner(TermProperty.FREQUENCY, maxSizeFilter.get());
 		}
 		
-		
-		if(preFilterConfig.isPresent()) 
-			PipelineUtils.filter(pipeline, preFilterConfig.get());
-			
-		if(contextualizerEnabled)
-			pipeline.aeContextualizer(
-					contextualizerScope, 
-					contextualizerMode == ContextualizerMode.ON_ALL_TERMS ? true : false);
-		
-		if(nbDocuments != -1)
-			pipeline.aeDocumentLogger(this.nbDocuments);
-		
-		if(maxSizeFilter.isPresent())
-			pipeline.aeMaxSizeThresholdCleaner(TermProperty.FREQUENCY, maxSizeFilter.get());
-		
 		pipeline
+				.aeStopWordsFilter()
 				.aeSpecificityComputer()
 				.aeCompostSplitter()
-				.aePrefixSplitter();
+				.aeExtensionDetector()
+				.aePrefixSplitter()
+				.aeSuffixDerivationDetector();
 		
 		if(variationDetectionEnabled)
 			pipeline
-				.aeExtensionDetector()
-				.aeSuffixDerivationDetector()
 				.aeTermVariantGatherer(semanticAlignerEnabled)
 				.aeGraphicalVariantGatherer();
 
@@ -398,8 +416,10 @@ public class TerminoExtractor {
 		
 		
 		if(scoringEnabled)
-			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig())
-					.aeRanker(TermProperty.SPECIFICITY, true);
+			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig());
+			
+		pipeline
+			.aeRanker(TermProperty.SPECIFICITY, true);
 
 		if(mergeGraphicalVariants)
 			pipeline.aeMerger();
@@ -417,32 +437,33 @@ public class TerminoExtractor {
 			final AnalysisEngine aae = UIMAFramework.produceAnalysisEngine(aaeDesc, resMgr, null);
 			
 			
-			
-			if(preprocessed) {
-				preprocessedCasStream.forEach(cas -> {
-					try {
-						aae.process(cas);
-					} catch (UIMAException e) {
-						throw new TermSuiteException(e);
-					}				
-				});
-			} else {
-				documentStream.forEach(document -> {
-					JCas cas;
-					try {
-						cas = JCasFactory.createJCas();
-						cas.setDocumentLanguage(document.getLang().getCode());
-						cas.setDocumentText(document.getText());
-						JCasUtils.initJCasSDI(
-								cas, 
-								document.getLang().getCode(), 
-								document.getText(), 
-								document.getUrl());
-						aae.process(cas);
-					} catch (UIMAException e) {
-						throw new TermSuiteException(e);
-					}
-				});
+			if(!termIndex.isPresent()) {
+				if(preprocessed) {
+					preprocessedCasStream.forEach(cas -> {
+						try {
+							aae.process(cas);
+						} catch (UIMAException e) {
+							throw new TermSuiteException(e);
+						}				
+					});
+				} else {
+					documentStream.forEach(document -> {
+						JCas cas;
+						try {
+							cas = JCasFactory.createJCas();
+							cas.setDocumentLanguage(document.getLang().getCode());
+							cas.setDocumentText(document.getText());
+							JCasUtils.initJCasSDI(
+									cas, 
+									document.getLang().getCode(), 
+									document.getText(), 
+									document.getUrl());
+							aae.process(cas);
+						} catch (UIMAException e) {
+							throw new TermSuiteException(e);
+						}
+					});
+				}
 			}
 			
 			aae.collectionProcessComplete();
@@ -459,4 +480,5 @@ public class TerminoExtractor {
 		this.history = Optional.of(history);
 		return this;
 	}
+
 }

@@ -8,6 +8,11 @@
     </encoder>
   </appender>
 
+<logger name="fr.univnantes.termsuite.engines.gatherer" level="debug"
+	additivity="false">
+	<appender-ref ref="STDOUT" />
+</logger>
+	
   <root level="INFO">
     <appender-ref ref="STDOUT" />
   </root>

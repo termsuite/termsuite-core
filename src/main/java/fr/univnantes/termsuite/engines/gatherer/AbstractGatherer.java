@@ -32,7 +32,8 @@ public class AbstractGatherer {
 	private RuleType ruleType;
 	private RelationType relationType;
 	private long cnt = 0;
-	private String indexName = TermIndexes.ALLCOMP_PAIRS;
+	private Optional<String> indexName = Optional.empty();
+	private boolean dropIndexAtEnd = true;
 
 	private int maxClassComplexity = DEFAULT_MAX_CLASS_COMPLEXITY;
 	
@@ -47,8 +48,9 @@ public class AbstractGatherer {
 		return this;
 	}
 
-	AbstractGatherer setIndexName(String indexName) {
-		this.indexName = indexName;
+	AbstractGatherer setIndexName(String indexName, boolean dropIndexAtEnd) {
+		this.indexName = Optional.of(indexName);
+		this.dropIndexAtEnd = dropIndexAtEnd;
 		return this;
 	}
 
@@ -81,16 +83,22 @@ public class AbstractGatherer {
 	}
 	
 	public void gather(TermIndex termIndex) {
-		Stopwatch sw = Stopwatch.createStarted();
-		CustomTermIndex index = termIndex.getCustomIndex(indexName);
+		CustomTermIndex index = termIndex.getCustomIndex(indexName.get());
 		index.cleanSingletonKeys();
-		for(String key:index.keySet()) {
-			Collection<Term> terms = index.getTerms(key);
-//			if(termPredicate.isPresent())
-//				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
-			gather(termIndex, terms, key);
-		}
+		Stopwatch sw = Stopwatch.createStarted();
+		index.keySet().stream()
+			.parallel()
+			.forEach(key -> {
+				Collection<Term> terms = index.getTerms(key);
+	//			if(termPredicate.isPresent())
+	//				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
+				gather(termIndex, terms, key);
+			});
 		sw.stop();
+		
+		if(dropIndexAtEnd)
+			termIndex.dropCustomIndex(indexName.get());
+		
 		LOGGER.debug("Term gathered in {} - Num of comparisons: {}", sw, cnt);
 	}
 	
