@@ -65,7 +65,6 @@ import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 import fr.univnantes.termsuite.utils.AlignerUtils;
-import fr.univnantes.termsuite.utils.IteratorUtils;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermIndexUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -368,7 +367,7 @@ public class BilingualAligner {
 		ExplainedValue v;
 		int nbVectorsNotComputed = 0;
 		int nbVectorsComputed = 0;
-		for(Term targetTerm:IteratorUtils.toIterable(targetTermino.singleWordTermIterator())) {
+		for(Term targetTerm:targetTermino.getTerms().stream().filter(t->t.getWords().size()==1).collect(Collectors.toList())) {
 			if(targetTerm.getFrequency() < minCandidateFrequency)
 				continue;
 			if(targetTerm.getContext() != null) {
@@ -382,7 +381,7 @@ public class BilingualAligner {
 						v.getExplanation());
 				alignedCandidateQueue.add(candidate);
 			}
-		}
+		};
 		if(nbVectorsNotComputed > 0) {
 			LOGGER.warn(MSG_SEVERAL_VECTORS_NOT_COMPUTED, nbVectorsComputed, nbVectorsNotComputed);	
 		}
@@ -405,7 +404,7 @@ public class BilingualAligner {
 		if(terms.size() == 1) {
 			return alignSize2(terms.get(0), nbCandidates, minCandidateFrequency, allowDistributionalAlignment);			
 		} else if(terms.size() == 2) {
-			CustomTermIndex lemmaLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.WORD_COUPLE_LEMMA_LEMMA);
+			CustomTermIndex lemmaLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.ALLCOMP_PAIRS);
 			String indexingKey = TermUtils.getLemmaLemmaKey(terms.get(0), terms.get(1));
 					
 			Optional<Term> recursiveTerm = lemmaLemmaIndex.getTerms(indexingKey).stream().max(TermProperty.FREQUENCY.getComparator(false));
@@ -678,7 +677,7 @@ public class BilingualAligner {
 				/*
 				 * 1- create candidate combine terms
 				 */
-				CustomTermIndex index = targetTermino.getCustomIndex(TermIndexes.WORD_COUPLE_LEMMA_LEMMA);
+				CustomTermIndex index = targetTermino.getCustomIndex(TermIndexes.ALLCOMP_PAIRS);
 				List<Term> candidateCombinedTerms = index.getTerms(candidate1.getTerm().getLemma() + "+" + candidate2.getTerm().getLemma());
 				candidateCombinedTerms.addAll(index.getTerms(candidate2.getTerm().getLemma() + "+" + candidate1.getTerm().getLemma()));
 				if(candidateCombinedTerms.isEmpty())
@@ -690,7 +689,7 @@ public class BilingualAligner {
 				 */
 				final Map<Term, Collection<String>> termLemmaLemmaKeys = Maps.newHashMap();
 				for(Term t:candidateCombinedTerms)
-					termLemmaLemmaKeys.put(t, TermValueProviders.WORD_LEMMA_LEMMA_PROVIDER.getClasses(targetTermino, t));
+					termLemmaLemmaKeys.put(t, TermValueProviders.ALLCOMP_PAIRS.getClasses(targetTermino, t));
 				Collections.sort(candidateCombinedTerms, new Comparator<Term>() { 
 					@Override
 					public int compare(Term o1, Term o2) {

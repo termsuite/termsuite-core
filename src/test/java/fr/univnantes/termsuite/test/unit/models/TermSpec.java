@@ -142,8 +142,8 @@ public class TermSpec {
 			.contains("radioélectrique");
 	
 		assertThat(provider.getClasses(termIndex, term3))
-			.hasSize(4)
-			.contains("accès", "radioélectrique", "de", "recouvrement");
+			.hasSize(3)
+			.contains("accès", "radioélectrique", "recouvrement");
 	}
 
 }

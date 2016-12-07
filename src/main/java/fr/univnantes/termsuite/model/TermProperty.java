@@ -58,7 +58,7 @@ public enum TermProperty implements Property<Term> {
 	
 	;
 	
-	private static Map<String, TermProperty> byNames = Maps.newHashMap();
+	private static Map<String, TermProperty> byNames = Maps.newConcurrentMap();
 	
 	static {
 		for(TermProperty p:TermProperty.values()) {

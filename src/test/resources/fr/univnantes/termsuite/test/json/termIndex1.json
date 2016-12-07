@@ -33,8 +33,8 @@
 			spec: 0.321,			
 			gf_norm: 0.025,
 			words: [
-				{lemma: "word1", syn: "N"},
-				{lemma: "word2", syn: "A"}
+				{lemma: "word1", syn: "N", swt: true},
+				{lemma: "word2", syn: "A", swt: true}
 			],
 			rule: "The rule",
 			occurrences: [
@@ -55,7 +55,7 @@
 			rank: 2,
 			spec: 0.111,			
 			words: [
-				{lemma: "word1", syn: "N"}
+				{lemma: "word1", syn: "N", swt: true}
 			],
 			context: {
 				total_cooccs: 13,
@@ -70,7 +70,7 @@
 			rank: 3,
 			spec: 0.222,						
 			words: [
-				{lemma: "word2", syn: "A"}
+				{lemma: "word2", syn: "A", swt: true}
 			],
 			context: {
 				total_cooccs: 60,

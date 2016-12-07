@@ -22,7 +22,6 @@
 package fr.univnantes.termsuite.model;
 
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.stream.Stream;
 
 import org.apache.uima.jcas.JCas;
@@ -105,10 +104,6 @@ public interface TermIndex {
 	public void addRelation(TermRelation relation);
 	public void removeRelation(TermRelation relation);
 
-	
-	public Iterator<Term> singleWordTermIterator();
-	public Iterator<Term> multiWordTermIterator();
-	public Iterator<Term> compoundWordTermIterator();
 	
 	/*
 	 * Custom indexes

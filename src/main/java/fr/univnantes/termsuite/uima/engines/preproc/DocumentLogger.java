@@ -58,7 +58,7 @@ public class DocumentLogger extends JCasAnnotator_ImplBase {
 		String msg = String.format("Processing document %d on %d [%.2f%%]. Uri: %s", 
 				docCnt,
 				nbDocuments,
-				100 * ((float)docCnt/nbDocuments),
+				100 * ((double)docCnt/nbDocuments),
 				sdi.getUri()
 				);
 		if(top - lastTop > TIME_SEP ) {

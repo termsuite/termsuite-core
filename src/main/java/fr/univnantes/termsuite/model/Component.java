@@ -46,17 +46,25 @@ import com.google.common.base.Objects;
 import com.google.common.collect.ComparisonChain;
 
 
-public class Component extends LemmaStemHolder implements Comparable<Component> {
+public class Component implements Comparable<Component> {
 
+	private String lemma;
+	private String substring;
 	private int begin;
 	private int end;
 	
 	public boolean neoclassicalAffix = false;
 	
-	public Component(String lemma, int begin, int end) {
-		super(lemma);
+	public Component(int begin, int end, String substring, String lemma) {
+		this(begin, end, substring);
+		this.lemma = lemma;
+	}
+	
+	public Component(int begin, int end, String substring) {
 		this.begin = begin;
 		this.end = end;
+		this.substring = substring;
+		this.lemma = substring;
 	}
 	
 	public int getBegin() {
@@ -93,7 +101,7 @@ public class Component extends LemmaStemHolder implements Comparable<Component> 
 	
 	@Override
 	public String toString() {
-		return this.lemma;
+		return this.substring;
 	}
 
 	public void setNeoclassical() {
@@ -102,5 +110,13 @@ public class Component extends LemmaStemHolder implements Comparable<Component> 
 
 	public boolean isNeoclassicalAffix() {
 		return neoclassicalAffix;
+	}
+	
+	public String getLemma() {
+		return lemma;
+	}
+	
+	public String getSubstring() {
+		return substring;
 	}
 }

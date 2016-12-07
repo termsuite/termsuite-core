@@ -89,7 +89,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 			for(Term term:termIndex.getTerms()) 
 				totalCount+=term.getFrequency();
 			for(Term term:termIndex.getTerms()) {
-				double frequency = (1000 * (float)term.getFrequency()) / totalCount;
+				double frequency = (1000 * (double)term.getFrequency()) / totalCount;
 				double generalFrequency = generalLanguage.getNormalizedFrequency(term.getLemma());
 				if (generalFrequency != 0.0) {
 					term.setFrequencyNorm(frequency);
@@ -100,10 +100,10 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 			}
 		} else {
 			for(Term term:termIndex.getTerms()) {
-				float generalTermFrequency = (float)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
-				float normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
-				float termFrequency = term.getFrequency();
-				float normalizedTermFrequency = (1000 * termFrequency)/termIndex.getWordAnnotationsNum();
+				double generalTermFrequency = (double)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
+				double normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
+				double termFrequency = term.getFrequency();
+				double normalizedTermFrequency = (1000 * termFrequency)/termIndex.getWordAnnotationsNum();
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
 				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));

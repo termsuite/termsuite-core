@@ -70,13 +70,13 @@ public class CompoundExporter {
 			sortedCompounds.addAll(compounds);
 			
 			for(Word w:sortedCompounds) {
-				List<String> compLemmas = Lists.newArrayList();
+				List<String> compStrings = Lists.newArrayList();
 				for(Component c:w.getComponents())
-					compLemmas.add(c.getLemma());
+					compStrings.add(c.getSubstring());
 				writer.write(String.format(LINE_FORMAT, 
 					w.getLemma(),
 					w.getCompoundType(),
-					Joiner.on('|').join(compLemmas),
+					Joiner.on('|').join(compStrings),
 					frequencies.get(w)
 				));
 			}

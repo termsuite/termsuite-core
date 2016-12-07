@@ -284,10 +284,11 @@
   rule: s[0][0]==t[0] && s[0][1]==t[1]
 
 #local tip-speed - local tip speed
-"M-S-(A|N)NN":
-  source: A N
-  target: A N N, N N N, A A N
-  rule: s[0]==t[0] && s[1][0]==t[1] && s[1][1]==t[2]
+# Infered from M-S-NN
+#"M-S-(A|N)NN":
+#  source: A N
+#  target: A N N, N N N, A A N
+#  rule: s[0]==t[0] && s[1][0]==t[1] && s[1][1]==t[2]
 
 # grid-connected - grid connection, right-sided - right side
 "M-SD-(N|A)N":
@@ -351,14 +352,6 @@
 #   source: A [compound]
 #   target: A P N
 #   rule: s[0][0]==t[2] && s[0][1]==t[0]
-
-# DOES NOT MATCH
-# bronchogenic carcinoma - carcinoma of the lung
-# should also match AN-NPDN
-"M-IPR2-NPN":
-  source: A N
-  target: N P N
-  rule: s[0].compound && s[1]==t[0]  && s[0][0]=="broncho" && t[2]=="lung"
 
 
 # airflow - air mass flow

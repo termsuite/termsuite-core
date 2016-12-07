@@ -25,9 +25,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -42,8 +43,8 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Lang;
@@ -60,6 +61,7 @@ import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.utils.JCasUtils;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * The in-memory implementation of a {@link TermIndex}.
@@ -81,11 +83,11 @@ public class MemoryTermIndex implements TermIndex {
 	 * this level of index. They me be indexed from their base-term
 	 * instead. 
 	 */
-	private Map<String, Term> termsByGroupingKey = Maps.newHashMap();
-	private Map<String, CustomTermIndex> customIndexes = Maps.newHashMap();
-	private Map<String, Word> wordIndex = Maps.newHashMap();
-	private Multimap<Term, TermRelation> outboundVariations = LinkedListMultimap.create();
-	private Multimap<Term, TermRelation> inboundVariations = LinkedListMultimap.create();
+	private ConcurrentMap<String, Term> termsByGroupingKey = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, CustomTermIndex> customIndexes = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, Word> wordIndex = new ConcurrentHashMap<>();
+	private Multimap<Term, TermRelation> outboundVariations = Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
+	private Multimap<Term, TermRelation> inboundVariations =  Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
 	
 	private String name;
 	private Lang lang;
@@ -108,8 +110,12 @@ public class MemoryTermIndex implements TermIndex {
 		this.termsByGroupingKey.put(term.getGroupingKey(), term);
 		for(CustomTermIndex termIndex:this.customIndexes.values())
 			termIndex.indexTerm(this, term);
-		for(TermWord tw:term.getWords())
+		for(TermWord tw:term.getWords()) {
 			privateAddWord(tw.getWord(), false);
+			if(!tw.isSwt())
+				// try to set swt manually
+				tw.setSwt(termsByGroupingKey.containsKey(TermUtils.toGroupingKey(tw)));
+		}
 	}
 
 
@@ -175,21 +181,6 @@ public class MemoryTermIndex implements TermIndex {
 		return term;
 	}
 	
-	@Override
-	public Iterator<Term> singleWordTermIterator() {
-		return new SingleMultiWordIterator(true); 
-	}
-
-	@Override
-	public Iterator<Term> multiWordTermIterator() {
-		return new SingleMultiWordIterator(false); 
-	}
-	
-	@Override
-	public Iterator<Term> compoundWordTermIterator() {
-		return new CompoundIterator(); 
-		};
-	
 	private abstract class TermIterator extends AbstractIterator<Term> {
 		protected Term t;
 		protected Iterator<Term> it;
@@ -237,10 +228,8 @@ public class MemoryTermIndex implements TermIndex {
 
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
-		if(this.customIndexes.get(indexName) == null) {
-			TermValueProvider valueProvider = TermValueProviders.get(indexName, this);
-			createCustomIndex(indexName, valueProvider);
-		}
+		if(!this.customIndexes.containsKey(indexName))
+			createCustomIndex(indexName, TermValueProviders.get(indexName, this.lang.getLocale()));
 		return this.customIndexes.get(indexName);
 	}
 
@@ -254,8 +243,9 @@ public class MemoryTermIndex implements TermIndex {
 		this.customIndexes.put(indexName, customIndex);
 
 		LOGGER.debug("Indexing {} terms to index {}", this.getTerms().size(), indexName);
-		for(Term t:this.getTerms()) 
+		this.getTerms().parallelStream().forEach(t->{
 			customIndex.indexTerm(this, t);
+		}); 
 		return customIndex;
 	}
 

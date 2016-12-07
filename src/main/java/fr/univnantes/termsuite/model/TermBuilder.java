@@ -156,9 +156,14 @@ public class TermBuilder {
 	}
 	
 
-	public TermBuilder addWord(Word word, String syntacticLabel) {
-		this.termWords.add(new TermWord(word, syntacticLabel));
+	public TermBuilder addWord(Word word, String syntacticLabel, boolean isSWT) {
+		TermWord e = new TermWord(word, syntacticLabel, isSWT);
+		this.termWords.add(e);
 		return this;
+	}
+
+	public TermBuilder addWord(Word word, String syntacticLabel) {
+		return addWord(word, syntacticLabel, false);
 	}
 
 	public TermBuilder setFrequency(int freq) {
@@ -197,11 +202,12 @@ public class TermBuilder {
 		return this;
 	}
 
-	public void addWord(String lemma, String stem, String label) {
+	public void addWord(String lemma, String stem, String label, boolean isSWT) {
 		Word word;
 		if((word = this.termIndex.getWord(lemma)) == null) 
 			word = WordBuilder.start().setLemma(lemma).setStem(stem).create();
-		this.termWords.add(new TermWord(word, label));
+		TermWord w = new TermWord(word, label, isSWT);
+		this.termWords.add(w);
 	}
 	
 	private List<Object[]> occurrences=Lists.newArrayList();

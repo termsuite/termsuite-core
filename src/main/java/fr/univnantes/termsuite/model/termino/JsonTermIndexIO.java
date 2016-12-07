@@ -112,6 +112,7 @@ public class JsonTermIndexIO {
 	private static final String NAME = "name";
 	private static final String CORPUS_ID = "corpus-id";
 	private static final String LEMMA = "lemma";
+	private static final String SUBSTRING = "substring";
 	private static final String STEM = "stem";
 	private static final String COMPOUND_TYPE = "compound_type";
 	private static final String COMPOUND_NEOCLASSICAL_AFFIX = "neoAffix";
@@ -122,6 +123,7 @@ public class JsonTermIndexIO {
 	private static final String ID = "id";
 	private static final String SYN = "syn";
 	private static final String RELATION_TYPE = "type";
+	private static final String IS_SWT = "swt";
 	
 	@Deprecated
 	private static final String BASE = "base";
@@ -166,8 +168,10 @@ public class JsonTermIndexIO {
 		jp.enable(JsonParser.Feature.STRICT_DUPLICATE_DETECTION);
 		String fieldname;
 		String compLemma = null;
+		String substring = null;
 		int fileSource = -1;
 		String wordLemma = null;
+		boolean isSWT;
 		String syntacticLabel = null;
 		boolean neoclassicalAffix = false;
 		int begin = -1;
@@ -262,6 +266,8 @@ public class JsonTermIndexIO {
 									fieldname = jp.getCurrentName();
 									if (LEMMA.equals(fieldname)) 
 										compLemma = jp.nextTextValue();
+									else if (SUBSTRING.equals(fieldname)) 
+										substring = jp.nextTextValue();
 									else if (BEGIN.equals(fieldname)) 
 										begin = jp.nextIntValue(-2);
 									else if (COMPOUND_NEOCLASSICAL_AFFIX.equals(fieldname)) 
@@ -269,7 +275,7 @@ public class JsonTermIndexIO {
 									else if (END.equals(fieldname)) 
 										end = jp.nextIntValue(-2);
 								}
-								wordBuilder.addComponent(begin, end, compLemma, neoclassicalAffix);
+								wordBuilder.addComponent(begin, end, substring, compLemma, neoclassicalAffix);
 							}
 						}
 					}
@@ -317,16 +323,19 @@ public class JsonTermIndexIO {
 								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 									wordLemma = null;
 									syntacticLabel = null;
+									isSWT = false;
 									while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 										fieldname = jp.getCurrentName();
 										if (LEMMA.equals(fieldname)) 
 											wordLemma = jp.nextTextValue();
+										else if (IS_SWT.equals(fieldname)) 
+											isSWT = jp.nextBooleanValue();
 										else if (SYN.equals(fieldname)) 
 											syntacticLabel = jp.nextTextValue();
 									}
 									Preconditions.checkArgument(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
 									Preconditions.checkArgument(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
-									builder.addWord(termIndex.getWord(wordLemma), syntacticLabel);
+									builder.addWord(termIndex.getWord(wordLemma), syntacticLabel, isSWT);
 								}// end words
 								
 							} else if (TERM_OCCURRENCES.equals(fieldname)) {
@@ -625,6 +634,8 @@ public class JsonTermIndexIO {
 				jg.writeStartObject();
 				jg.writeFieldName(SYN);
 				jg.writeString(tw.getSyntacticLabel());
+				jg.writeFieldName(IS_SWT);
+				jg.writeBoolean(tw.isSwt());
 				jg.writeFieldName(LEMMA);
 				jg.writeString(tw.getWord().getLemma());
 				jg.writeEndObject();

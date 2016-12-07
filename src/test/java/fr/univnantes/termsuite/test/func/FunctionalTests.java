@@ -132,4 +132,16 @@ public class FunctionalTests {
 		return getFunctionalTestsOutputDir().resolve("control");
 	}
 
+	public static Path getTestTmpDir() {
+		Path path = Paths.get(System.getProperty("java.io.tmpdir"), "termsuite-tests");
+		return createIfNotExist(path);
+	}
+		
+	
+	private static Path createIfNotExist(Path path) {
+		if(!path.toFile().exists())
+			path.toFile().mkdirs();
+		return path;
+	}
+
 }

@@ -28,7 +28,8 @@ import java.util.Optional;
 import com.google.common.collect.Lists;
 
 public class WordBuilder {
-	
+	private static final String ERR_MSG = "lemma is null. Must invoke #setLemma first";
+
 	private Optional<Word> word = Optional.empty();
 	private String stem;
 	private String lemma;
@@ -73,11 +74,20 @@ public class WordBuilder {
 		return w;
 	}
 
-	public WordBuilder addComponent(int begin, int end, String lemma) {
-		return addComponent(begin, end, lemma, false);
+
+	public WordBuilder addComponent(int begin, int end, String subString) {
+		Component component = new Component(begin, end,subString);
+		components.add(component);
+		return this;		
 	}
-	public WordBuilder addComponent(int begin, int end, String compLemma, boolean neoclassicalAffix) {
-		Component component = new Component(compLemma, begin, end);
+	
+	public WordBuilder addComponent(int begin, int end, String subString, String lemma) {
+		return addComponent(begin, end, subString, lemma, false);
+	}
+	
+	
+	public WordBuilder addComponent(int begin, int end, String substring, String compLemma, boolean neoclassicalAffix) {
+		Component component = new Component(begin, end,substring,compLemma);
 		if(neoclassicalAffix)
 			component.setNeoclassical();
 		components.add(component);

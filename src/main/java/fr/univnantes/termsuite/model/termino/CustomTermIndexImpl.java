@@ -31,6 +31,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
+import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Term;
@@ -47,7 +48,7 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	CustomTermIndexImpl(TermValueProvider valueProvider) {
 		super();
 		this.valueProvider = valueProvider;
-		this.index = ArrayListMultimap.create();
+		this.index =  Multimaps.synchronizedListMultimap(ArrayListMultimap.create());
 	}
 
 	@Override

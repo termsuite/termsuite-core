@@ -29,7 +29,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -37,6 +40,8 @@ import java.util.Set;
 import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
 
 import com.google.common.cache.CacheBuilder;
@@ -49,6 +54,7 @@ import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.TermSuiteResource;
@@ -102,31 +108,65 @@ public abstract class WindEnergySpec {
 	public void setup() {
 		this.termIndex = TERM_INDEX_CACHE.getUnchecked(lang);
 	}
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
 
-	protected static TermIndex runPipeline(Lang lang) {
+	protected static TermIndex runPipeline(Lang lang) throws IOException {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 		
-		TermSuitePipeline pipeline = TermSuitePipeline.create(lang.getCode())
-			.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
-			.aeWordTokenizer()
-			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-			.aeTreeTagger()
-			.aeUrlFilter()
-			.aeStemmer()
-			.aeRegexSpotter()
+		TermSuitePipeline pipeline = null;
+		ClearTempFiles.main(new String[0]);
+		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
+		
+		if(!jsonFile.toFile().exists()) {
+			try(FileWriter writer = new FileWriter(jsonFile.toFile())) {
+				LOGGER.info("JSON temp file not found", jsonFile);
+				LOGGER.info("Reprocessing txt files for {}", jsonFile);
+				pipeline = TermSuitePipeline.create(lang.getCode())
+					.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
+					.aeWordTokenizer()
+					.setTreeTaggerHome(FunctionalTests.getTaggerPath())
+					.aeTreeTagger()
+					.aeUrlFilter()
+					.aeStemmer()
+					.aeRegexSpotter()
+					.aeTermOccAnnotationImporter();
+//					.run();
+				
+//				TermIndexIO.toJson(
+//						p.getTermIndex(), 
+//						writer);
+			}
+			
+		}
+		
+//		LOGGER.info("Starting a new termino extractor from term index {}", jsonFile);
+//
+//		
+//		
+//		TermIndex termIndex = TermIndexIO.fromJson(jsonFile.toString());
+//				
+//		TerminoExtractor
+//			.fromTermIndex(termIndex)
+//			.disableScoring()
+//			.execute();
+			
+		pipeline
+//			.aeTermOccAnnotationImporter()
 			.aeStopWordsFilter()
 			.aeSpecificityComputer()
 			.aeCompostSplitter()
+			.aeExtensionDetector()
 			.aePrefixSplitter()
 			.aeSuffixDerivationDetector()
-			.aeTermVariantGatherer()
-			.aeGraphicalVariantGatherer()
-			.aeExtensionDetector()
+			.aeTermVariantGatherer(false)
+			.aeExtensionVariantGatherer()
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();
-			
+
 		return pipeline.getTermIndex();
+//		return termIndex;
 	}
 
 	@Test

@@ -33,6 +33,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import fr.univnantes.termsuite.engines.SWTFlagSetter;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
@@ -91,5 +92,11 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 					this.getClass(), 
 					"Term added to TermIndex " + termIndexResource.getTermIndex().getName());
 		}
+	}
+	
+	
+	@Override
+	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		new SWTFlagSetter().setSWTFlags(termIndexResource.getTermIndex());
 	}
 }

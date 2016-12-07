@@ -209,8 +209,8 @@ public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 
 
 	private void resetBuffers() {
-		this.termsBuffer = Maps.newHashMap();
-		this.occurrencesBuffer = Lists.newArrayList();
+		this.termsBuffer = Maps.newConcurrentMap();
+		this.occurrencesBuffer = Collections.synchronizedList(Lists.newArrayList());
 	}
 	
 

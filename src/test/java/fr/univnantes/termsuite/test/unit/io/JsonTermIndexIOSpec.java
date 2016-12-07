@@ -94,8 +94,8 @@ public class JsonTermIndexIOSpec {
 				.create();
 		term1 = TermBuilder.start(termIndex)
 			.setRank(1)
-			.addWord(word1, "L1")
-			.addWord(word2, "L2")
+			.addWord(word1, "L1", true)
+			.addWord(word2, "L2", true)
 			.addOccurrence(10, 12, "source2", "coveredText 3")
 			.addOccurrence(20, 30, "source3", "coveredText 4")
 			.setSpottingRule("spotRule1")
@@ -104,9 +104,9 @@ public class JsonTermIndexIOSpec {
 		String form2 = "coveredText 2";
 		term2 = TermBuilder.start(termIndex)
 				.setRank(2)
-				.addWord(word1, "L1")
-				.addWord(word2, "L2")
-				.addWord(word3, "L3")
+				.addWord(word1, "L1", true)
+				.addWord(word2, "L2", false)
+				.addWord(word3, "L3", true)
 				.setSpottingRule("spotRule1")
 				.addOccurrence(0, 2, "source2", "coveredText 1")
 				.addOccurrence(10, 12, "source1", form2)
@@ -316,7 +316,7 @@ public class JsonTermIndexIOSpec {
 		LinkedHashMap<?,?> t1 = (LinkedHashMap<?,?>)termList.get(0);
 		assertThat(t1.get("rank")).isEqualTo(1);
 		assertThat(t1.get("spec")).isEqualTo(1.1);
-		assertThat((List<?>)t1.get("words")).extracting("lemma", "syn").containsOnly(tuple("word1", "L1"), tuple("word2", "L2"));
+		assertThat((List<?>)t1.get("words")).extracting("lemma", "syn", "swt").containsOnly(tuple("word1", "L1", true), tuple("word2", "L2", true));
 		assertThat((List<?>)t1.get("occurrences")).hasSize(2).extracting("begin", "end", "file", "text").containsOnly(
 				tuple(10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),
 				tuple(20, 30, Integer.parseInt(sources.inverse().get("source3")), "coveredText 4")

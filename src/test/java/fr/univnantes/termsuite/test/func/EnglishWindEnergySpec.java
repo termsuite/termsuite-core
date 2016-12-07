@@ -27,6 +27,8 @@ import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
 import static fr.univnantes.termsuite.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,7 +42,9 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
@@ -56,7 +60,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	protected List<String> getSyntacticMatchingRules() {
 		return Lists.newArrayList(
 				"M-S-NN",
-				"M-S-(A|N)NN",
 				"M-I-EN-N|A",
 				"M-I-NN-CA",
 				"M-R2I-ANN",
@@ -107,7 +110,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Override
 	protected List<String> getSyntacticNotMatchingRules() {
 		return Lists.newArrayList(
-				"M-IPR2-NPN",
 				"S-I1-NPN-CN",
 				"S-PEg-NN-NP", "S-PID-AN-P", "S-R2D-NN");
 	}
@@ -148,6 +150,59 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.hasCompositionSubstrings("electro", "magnetic");
 	}
 
+	
+
+	@Test
+	public void testSWTFlagSet() {
+		Term term = termIndex.getTermByGroupingKey("npn: power of wind");
+		assertTrue(term.getWords().get(0).isSwt());
+		assertFalse(term.getWords().get(1).isSwt());
+		assertTrue(term.getWords().get(2).isSwt());
+	}
+
+	@Test
+	public void testTermHorizontalAxis() {
+		Term morph = termIndex.getTermByGroupingKey("n: horizontal-axis");
+		Term syntag = termIndex.getTermByGroupingKey("an: horizontal axis");
+
+		assertThat(morph)
+			.isCompound();
+
+		assertThat(morph.getWords().get(0).getWord().getComponents())
+			.extracting("lemma", "begin", "end")
+			.containsExactly(
+					tuple("horizontal", 0,10),
+					tuple("axis", 11,15)
+				);
+
+		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termIndex, morph))
+			.containsExactly("axis+horizontal");
+
+		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termIndex, syntag))
+			.contains("axis+horizontal");
+		
+		assertThat(termIndex)
+			.containsRelation("n: horizontal-axis", RelationType.MORPHOLOGICAL, "an: horizontal axis");
+	}
+	
+	@Test
+	public void testTermInference() {
+		assertThat(termIndex)
+			.containsTerm("nnn: horizontal-axis wind turbine")
+			.containsTerm("annn: horizontal axis wind turbine")
+			.containsRelation("nnn: horizontal-axis wind turbine", RelationType.MORPHOLOGICAL, "annn: horizontal axis wind turbine")
+			;
+		
+		TermRelation rel = termIndex.getRelations(
+				termIndex.getTermByGroupingKey("nnn: horizontal-axis wind turbine"), 
+				termIndex.getTermByGroupingKey("annn: horizontal axis wind turbine"), 
+				RelationType.MORPHOLOGICAL).findFirst().get();
+		
+		
+		assertThat(rel.getProperties())
+			.containsEntry(RelationProperty.IS_INFERED, true);
+	}
+
 	@Test
 	public void testTermHydroelectric() {
 		Term term = termIndex.getTermByGroupingKey("a: hydroelectric");
@@ -169,8 +224,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(neoclassicals)
 			.isNotEmpty()
 			.extracting("lemma", "neoclassicalAffix.lemma")
+			.hasSize(769)
 			.contains(tuple("hydroelectric", "water"))
-			.hasSize(769);
+			;
 	}
 
 	
@@ -220,7 +276,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(termIndex)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
-			.hasSize(128)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: baseline", "nn: base line"), 
@@ -228,6 +283,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				   tuple("n: spreadsheet", "nn: spread sheet"), 
 				   tuple("n: gearbox", "nn: gear box")
 			)
+			.hasSize(632)
 			;
 	}
 
@@ -281,7 +337,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("an: suitable site", "an: unsuitable site"),
 				tuple("an: national institute", "an: international institute")
 		)
-		.hasSize(32)
+		.hasSize(33)
 		;
 		
 	}

@@ -62,7 +62,7 @@ public class TermFactory {
 			String stem = lemma;
 			if(matcher.groupCount() == 3)
 				stem = matcher.group(3);
-			builder.addWord(lemma, stem, label);
+			builder.addWord(lemma, stem, label, label.equals("N") || label.equals("A"));
 		}
 		return builder.createAndAddToIndex();
 	}
@@ -101,7 +101,7 @@ public class TermFactory {
 			String substring = matcher.group(1);
 			String lemma = matcher.group(2);
 			int start = wordLemma.indexOf(substring);
-			Component component = new Component(lemma, start, start + substring.length());
+			Component component = new Component(start, start + substring.length(), substring, lemma);
 			components.add(component);
 		}
 		

@@ -148,5 +148,10 @@ public class LongestCommonSubsequence extends AbstractEditDistance {
 	public void setFailThreshold(double threshold) {
 		// Nothing
 	}
+
+	@Override
+	public int compute(String source, String target, int maxDistance) {
+		return compute(target, target);
+	}
     
 }

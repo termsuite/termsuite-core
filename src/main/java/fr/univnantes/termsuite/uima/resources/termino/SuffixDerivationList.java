@@ -81,7 +81,7 @@ public class SuffixDerivationList extends TabResource {
 	public static final String ERR_SHOULD_START_WITH_HYPHEN = "Suffix should start with hyphen. Got: \"%s\" at line %s ";
 	private static final String HYPHEN = "-";
 	
-	private Map<SuffixDerivationEntry, Set<SuffixDerivation>> derivations = Maps.newHashMap();
+	private Map<SuffixDerivationEntry, Set<SuffixDerivation>> derivations = Maps.newConcurrentMap();
 	private static final String ERR_REQUIRES_THREE_COLUMNS = "Row must have 3 columns at line %s. Got %s columns (line: \"%s\").";
 	private static final String ERR_PATTERN_MUST_BE_SIZE_2 = "Derivation pattern must be of size 2 at line %s. Got size %s (line: \"%s\")";
 

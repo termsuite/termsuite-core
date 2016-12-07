@@ -42,6 +42,7 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -71,6 +72,9 @@ public class TermPostProcessor {
 	public void postprocess(TermIndex termIndex) {
 		LOGGER.debug("Post-processing term index {}", termIndex.getName());
 
+		// resets all IS_EXTENSION properies
+		new ExtensionDetecter().setIsExtensionProperty(termIndex);
+		
 		// Score terms 
 		new TermScorer().score(termIndex);
 		

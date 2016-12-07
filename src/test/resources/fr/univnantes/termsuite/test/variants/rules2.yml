@@ -4,6 +4,7 @@
 # several special chars in expression
 My rule 1 :
   source: N [compound]
+  target: N A
   rule: s[0] == t[1].stem && s[1][0] != t[0]
 
 # rule defined on several lines

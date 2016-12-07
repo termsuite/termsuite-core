@@ -27,4 +27,11 @@ public abstract class AbstractEditDistance implements EditDistance {
 	public double computeNormalized(String source, String target) {
 		return normalize(compute(source, target), source, target);
 	}
+	
+	@Override
+	public double computeNormalized(String source, String target, double minSimilarity) {
+		int length = Math.max(source.length(), target.length());
+		int maxDistanceInt = (int)Math.ceil((1-minSimilarity)*length);
+		return normalize(compute(source, target, maxDistanceInt), source, target);
+	}
 }

@@ -27,15 +27,16 @@ import java.util.Map;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompostIndexEntry;
+import fr.univnantes.termsuite.engines.morpho.CompostIndexEntry;
 import fr.univnantes.termsuite.utils.IndexingKey;
 
 public class CompostIndex {
 	
 	private IndexingKey<String, String> indexingKey;
-	private Map<String, CompostIndexEntry> dico = Maps.newHashMap();
-	private Multimap<String, CompostIndexEntry> indexedDico = HashMultimap.create();
+	private Map<String, CompostIndexEntry> dico = Maps.newConcurrentMap();
+	private Multimap<String, CompostIndexEntry> indexedDico = Multimaps.synchronizedMultimap(HashMultimap.create());
 	
 	public CompostIndex(IndexingKey<String, String> indexingKey) {
 		super();

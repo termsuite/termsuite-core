@@ -135,7 +135,9 @@ public class StringUtils {
 	private static final String EMPTY_STRING = "";
 	private static final String ASCII_REPLACEMENT = "[^\\p{ASCII}]";
 	public static String replaceAccents(String string) {
-		String withoutAccent = Normalizer.normalize(string, Form.NFD).replaceAll(ASCII_REPLACEMENT, EMPTY_STRING);
+		String withoutAccent = Normalizer
+				.normalize(string, Form.NFD)
+				.replaceAll(ASCII_REPLACEMENT, EMPTY_STRING);
 
 		//FIXME accent removal fails for russian. This is a quick fix
 		if(withoutAccent.isEmpty() && !string.isEmpty()) 

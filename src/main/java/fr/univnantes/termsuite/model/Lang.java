@@ -26,24 +26,24 @@ import java.util.NoSuchElementException;
 
 import fr.univnantes.termsuite.LanguageException;
 import fr.univnantes.termsuite.engines.EngineState;
-import fr.univnantes.termsuite.engines.ScorerConfig;
+import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7f, 0.1f, 0.1f, 0.1f, 0.85f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 1f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.3f, 0.1f, 0.1f, 0.75f, 3, 4, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5f, 0.1f, 0.1f, 0.3f, 0.7f, 3, 2, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3f, 0.1f, 0.4f, 0.2f, 0.7f, 3, 3,ScorerConfig.create(0.5, 0.1,0.1, 0.25), 3, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED);
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.DISABLED),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3,ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED);
 	
-	private final float compostAlpha;
-	private final float compostBeta;
-	private final float compostGamma;
-	private final float compostDelta;
-	private final float compostScoreThreshold;
+	private final double compostAlpha;
+	private final double compostBeta;
+	private final double compostGamma;
+	private final double compostDelta;
+	private final double compostScoreThreshold;
 	private final int compostMinComponentSize;
 	private final int compostMaxComponentNumber;
 	private final Locale locale;
@@ -56,11 +56,11 @@ public enum Lang {
 
 
     private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
-    		float compostAlpha,
-    		float compostBeta,
-    		float compostGamma,
-    		float compostDelta,
-    		float compostCompostThreshold,
+    		double compostAlpha,
+    		double compostBeta,
+    		double compostGamma,
+    		double compostDelta,
+    		double compostCompostThreshold,
     		int compostMinComponentSize,
     		int compostMaxComponentNumber,
     		ScorerConfig scorefierConfig,
@@ -128,17 +128,17 @@ public enum Lang {
 		return locale;
 	}
 	
-	public float getCompostAlpha() {
+	public double getCompostAlpha() {
 		return compostAlpha;
 	}
 	
-	public float getCompostBeta() {
+	public double getCompostBeta() {
 		return compostBeta;
 	}
-	public float getCompostDelta() {
+	public double getCompostDelta() {
 		return compostDelta;
 	}
-	public float getCompostGamma() {
+	public double getCompostGamma() {
 		return compostGamma;
 	}
 	
@@ -146,7 +146,7 @@ public enum Lang {
 		return compostMaxComponentNumber;
 	}
 	
-	public float getCompostScoreThreshold() {
+	public double getCompostScoreThreshold() {
 		return compostScoreThreshold;
 	}
 	

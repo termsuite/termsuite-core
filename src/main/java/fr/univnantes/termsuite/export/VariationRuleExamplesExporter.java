@@ -13,6 +13,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.engines.gatherer.VariantRule;
+import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -20,15 +22,13 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.uima.engines.termino.gathering.VariantRule;
-import fr.univnantes.termsuite.uima.resources.termino.YamlVariantRules;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class VariationRuleExamplesExporter {
 
 	private TermIndex termIndex;
 	private Writer writer;
-	private YamlVariantRules yamlVariantRules;
+	private YamlRuleSet yamlVariantRules;
 
 	
 	class TermPair implements Comparable<TermPair> {
@@ -48,13 +48,13 @@ public class VariationRuleExamplesExporter {
 	}
 
 
-	private VariationRuleExamplesExporter(TermIndex termIndex, Writer writer, YamlVariantRules yamlVariantRules) {
+	private VariationRuleExamplesExporter(TermIndex termIndex, Writer writer, YamlRuleSet yamlVariantRules) {
 		this.termIndex = termIndex;
 		this.writer = writer;
 		this.yamlVariantRules = yamlVariantRules;
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, YamlVariantRules yamlVariantRules) {
+	public static void export(TermIndex termIndex, Writer writer, YamlRuleSet yamlVariantRules) {
 		new VariationRuleExamplesExporter(termIndex, writer, yamlVariantRules).doExport();
 	}
 

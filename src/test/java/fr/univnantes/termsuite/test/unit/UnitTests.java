@@ -29,13 +29,17 @@ import fr.univnantes.termsuite.test.unit.api.TraverserSpec;
 import fr.univnantes.termsuite.test.unit.engines.ContextualizerSpec;
 import fr.univnantes.termsuite.test.unit.engines.FixedExpressionSpotterSpec;
 import fr.univnantes.termsuite.test.unit.engines.GraphicalVariantGathererSpec;
+import fr.univnantes.termsuite.test.unit.engines.GroovyServiceSpec;
 import fr.univnantes.termsuite.test.unit.engines.SuffixDerivationExceptionSetterSpec;
-import fr.univnantes.termsuite.test.unit.engines.SynonymicRuleSpec;
-import fr.univnantes.termsuite.test.unit.engines.SyntacticTermGathererSpec;
+import fr.univnantes.termsuite.test.unit.engines.TermGathererSpec;
+import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpec;
+import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpecSynonymic;
 import fr.univnantes.termsuite.test.unit.engines.morpho.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.io.JsonTermIndexIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
 import fr.univnantes.termsuite.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
+import fr.univnantes.termsuite.test.unit.metrics.FastDiacriticInsensitiveLevenshteinSpec;
+import fr.univnantes.termsuite.test.unit.metrics.LevenshteinSpec;
 import fr.univnantes.termsuite.test.unit.metrics.SimilarityDistanceSpec;
 import fr.univnantes.termsuite.test.unit.models.ContextVectorSpec;
 import fr.univnantes.termsuite.test.unit.models.CrossTableSpec;
@@ -47,22 +51,20 @@ import fr.univnantes.termsuite.test.unit.resources.PrefixTreeSpec;
 import fr.univnantes.termsuite.test.unit.resources.SuffixDerivationListSpec;
 import fr.univnantes.termsuite.test.unit.resources.SuffixDerivationSpec;
 import fr.univnantes.termsuite.test.unit.selectors.HasSingleWordSelectorSpec;
-import fr.univnantes.termsuite.test.unit.selectors.TermClassProvidersSpec;
+import fr.univnantes.termsuite.test.unit.selectors.TermValueProvidersSpec;
 import fr.univnantes.termsuite.test.unit.tools.TermSuitePipelineSpec;
 import fr.univnantes.termsuite.test.unit.utils.OccurrenceBufferSpec;
 import fr.univnantes.termsuite.test.unit.utils.StringUtilsSpec;
 import fr.univnantes.termsuite.test.unit.utils.TermOccurrenceUtilsSpec;
 import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
-import fr.univnantes.termsuite.test.unit.variants.VariantRuleSpec;
-import fr.univnantes.termsuite.test.unit.variants.VariantRuleYamlIOSpec;
 import fr.univnantes.termsuite.utils.test.CollectionUtilsSpec;
 import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	VariantRuleSpec.class, 
-	VariantRuleYamlIOSpec.class,
-	SyntacticTermGathererSpec.class,
+	GroovyServiceSpec.class, 
+	YamlRuleSetIOSpec.class,
+	TermGathererSpec.class,
 	TermSpec.class, 
 	SegmentationSpec.class, 
 	DocumentViewSpec.class, 
@@ -81,7 +83,7 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	SuffixDerivationListSpec.class,
 	SuffixDerivationExceptionSetterSpec.class,
 	SuffixDerivationSpec.class,
-	TermClassProvidersSpec.class,
+	TermValueProvidersSpec.class,
 	HasSingleWordSelectorSpec.class,
 	DiacriticInsensitiveLevenshteinSpec.class,
 	GraphicalVariantGathererSpec.class,
@@ -89,8 +91,10 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	TermsuiteJsonCasSerializerDeserializerSpec.class,
 	TsvExporterSpec.class,
 	TraverserSpec.class,
-	SynonymicRuleSpec.class,
+	YamlRuleSetIOSpecSynonymic.class,
 	ContextualizerSpec.class,
+	LevenshteinSpec.class,
+	FastDiacriticInsensitiveLevenshteinSpec.class,
 	MemoryTermIndexSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,

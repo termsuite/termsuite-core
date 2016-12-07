@@ -36,6 +36,7 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.engines.morpho.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
@@ -51,7 +52,6 @@ import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.uima.TermSuiteResourceException;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompoundUtils;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 
 public class TermUtils {
@@ -401,7 +401,7 @@ public class TermUtils {
 			if(w.isCompound())
 				sets.add(Sets.newHashSet(CompoundUtils.allSizeComponents(w)));
 			else {
-				sets.add(Sets.newHashSet(new Component(w.getLemma(), 0, w.getLemma().length())));
+				sets.add(Sets.newHashSet(new Component(0, w.getLemma().length(), w.getLemma())));
 			}
 		}
 		return sets;
@@ -410,9 +410,9 @@ public class TermUtils {
 	
 	
 	/**
-	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER}.
+	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#ALLCOMP_PAIRS}.
 	 * 
-	 * @see TermValueProviders#WORD_LEMMA_LEMMA_PROVIDER
+	 * @see TermValueProviders#ALLCOMP_PAIRS
 	 * @param term1
 	 * 				First term of the pair
 	 * @param term2
