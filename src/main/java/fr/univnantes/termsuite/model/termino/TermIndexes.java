@@ -35,6 +35,7 @@ public class TermIndexes {
 	public static final String PREFIXATION_LEMMAS = "prefixation-lemmas";
 	public static final String DERIVATION_LEMMAS = "derivation-lemmas";
 	public static final String SINGLE_WORD_LEMMA = "single-word-lemma";
+	public static final String FIRST_LETTERS_1 = "1-first-letters";
 	public static final String FIRST_LETTERS_2 = "2-first-letters";
 	public static final String FIRST_LETTERS_3 = "3-first-letters";
 	public static final String FIRST_LETTERS_4 = "4-first-letters";

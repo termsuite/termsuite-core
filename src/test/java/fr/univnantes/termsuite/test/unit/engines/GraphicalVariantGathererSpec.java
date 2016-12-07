@@ -31,8 +31,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
-import fr.univnantes.termsuite.metrics.DiacriticInsensitiveLevenshtein;
-import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
@@ -75,7 +74,7 @@ public class GraphicalVariantGathererSpec {
 
 	private GraphicalGatherer makeAE(double similarityThreashhold) throws Exception {
 		return new GraphicalGatherer()
-				.setDistance(new DiacriticInsensitiveLevenshtein(Lang.FR.getLocale()))
+				.setDistance(new FastDiacriticInsensitiveLevenshtein(false))
 				.setSimilarityThreshold((float)similarityThreashhold);
 	}
 

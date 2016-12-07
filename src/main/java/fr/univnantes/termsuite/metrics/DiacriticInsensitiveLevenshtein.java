@@ -43,6 +43,7 @@ package fr.univnantes.termsuite.metrics;
 
 import java.text.Collator;
 import java.util.Locale;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * The {@link Levenshtein} {@link EditDistance} insensitive to diacritics, i.e.
@@ -54,7 +55,8 @@ import java.util.Locale;
  */
 public class DiacriticInsensitiveLevenshtein extends AbstractEditDistance{
 
-	public static int FastFailures = 0;
+	public static AtomicInteger FastFailures = new AtomicInteger(0);
+	public static AtomicInteger FullComputation = new AtomicInteger(0);
 
 	/** Similarity threshold under which the distance is not computed anymore */
 	private double failThreshold = -1;
@@ -97,31 +99,7 @@ public class DiacriticInsensitiveLevenshtein extends AbstractEditDistance{
 		int maxDistance = failThreshold == -1 ? Math.min(str.length(),
 				rst.length()) : (int) Math.round((1 - failThreshold) * l);
 
-		int[][] dp = new int[str.length() + 1][rst.length() + 1];
-		for (int i = 0; i < dp.length; i++) {
-			int bestPossibleEditDistance = dp.length;
-			for (int j = 0; j < dp[i].length; j++) {
-				dp[i][j] = i == 0 ? j : j == 0 ? i : 0;
-				if (i > 0 && j > 0) {
-					if (diacriticInsensitiveEquals(str.charAt(i - 1),
-							rst.charAt(j - 1))) {
-						dp[i][j] = dp[i - 1][j - 1];
-					} else {
-						dp[i][j] = Math.min(dp[i][j - 1] + 1, Math.min(
-								dp[i - 1][j - 1] + 1, dp[i - 1][j] + 1));
-					}
-					bestPossibleEditDistance = Math.min(
-							bestPossibleEditDistance, dp[i][j]);
-				}
-			}
-			// After calculating row i, look for the smallest value in a given
-			// column. Abort is maxDistance is strictly exceeded
-			if (i > maxDistance && bestPossibleEditDistance > maxDistance) {
-				FastFailures++;
-				return l;
-			}
-		}
-		return dp[str.length()][rst.length()];
+		return compute(str, rst, maxDistance);
 	}
 
 
@@ -155,5 +133,37 @@ public class DiacriticInsensitiveLevenshtein extends AbstractEditDistance{
 	@Override
 	public void setFailThreshold(double threshold) {
 		failThreshold = threshold;
+	}
+
+	@Override
+	public int compute(String str, String rst, int maxDistance) {
+		int l = Math.max(str.length(), rst.length());
+
+		int[][] dp = new int[str.length() + 1][rst.length() + 1];
+		for (int i = 0; i < dp.length; i++) {
+			int bestPossibleEditDistance = dp.length;
+			for (int j = 0; j < dp[i].length; j++) {
+				dp[i][j] = i == 0 ? j : j == 0 ? i : 0;
+				if (i > 0 && j > 0) {
+					if (diacriticInsensitiveEquals(str.charAt(i - 1),
+							rst.charAt(j - 1))) {
+						dp[i][j] = dp[i - 1][j - 1];
+					} else {
+						dp[i][j] = Math.min(dp[i][j - 1] + 1, Math.min(
+								dp[i - 1][j - 1] + 1, dp[i - 1][j] + 1));
+					}
+					bestPossibleEditDistance = Math.min(
+							bestPossibleEditDistance, dp[i][j]);
+				}
+			}
+			// After calculating row i, look for the smallest value in a given
+			// column. Abort is maxDistance is strictly exceeded
+			if (i > maxDistance && bestPossibleEditDistance > maxDistance) {
+				FastFailures.incrementAndGet();
+				return l;
+			}
+		}
+		FullComputation.incrementAndGet();
+		return dp[str.length()][rst.length()];
 	}
 }

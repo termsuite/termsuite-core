@@ -290,6 +290,8 @@ public class TermValueProviders {
 
 	public static TermValueProvider get(String key, Locale locale) {
 		switch(key) {
+		case TermIndexes.FIRST_LETTERS_1:
+			return new FirstLettersProvider(1, locale);
 		case TermIndexes.FIRST_LETTERS_2:
 			return new FirstLettersProvider(2, locale);
 		case TermIndexes.FIRST_LETTERS_3:

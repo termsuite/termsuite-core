@@ -38,6 +38,8 @@ import fr.univnantes.termsuite.test.unit.engines.morpho.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.io.JsonTermIndexIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
 import fr.univnantes.termsuite.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
+import fr.univnantes.termsuite.test.unit.metrics.FastDiacriticInsensitiveLevenshteinSpec;
+import fr.univnantes.termsuite.test.unit.metrics.LevenshteinSpec;
 import fr.univnantes.termsuite.test.unit.metrics.SimilarityDistanceSpec;
 import fr.univnantes.termsuite.test.unit.models.ContextVectorSpec;
 import fr.univnantes.termsuite.test.unit.models.CrossTableSpec;
@@ -91,6 +93,8 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	TraverserSpec.class,
 	YamlRuleSetIOSpecSynonymic.class,
 	ContextualizerSpec.class,
+	LevenshteinSpec.class,
+	FastDiacriticInsensitiveLevenshteinSpec.class,
 	MemoryTermIndexSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,

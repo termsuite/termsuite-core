@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
-import fr.univnantes.termsuite.metrics.DiacriticInsensitiveLevenshtein;
+import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
@@ -124,7 +124,7 @@ public class TermGatherer {
 		if(gathererOptions.isGraphicalGathererEnabled()) {
 			LOGGER.info("Gathering graphical variants");
 			new GraphicalGatherer()
-				.setDistance(new DiacriticInsensitiveLevenshtein(termIndex.getLang().getLocale()))
+				.setDistance(new FastDiacriticInsensitiveLevenshtein(false))
 				.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
 				.setNbFixedLetters(termIndex.getLang().getGraphicalVariantNbPreindexingLetters())
 				.setHistory(history)

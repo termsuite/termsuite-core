@@ -35,8 +35,8 @@ import org.junit.Test;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
-import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
+import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;

@@ -30,14 +30,14 @@ import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 4, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3,ScorerConfig.create(0.5, 0.1,0.1, 0.25), 3, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED);
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.DISABLED),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3,ScorerConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, ScorerConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED);
 	
 	private final double compostAlpha;
 	private final double compostBeta;

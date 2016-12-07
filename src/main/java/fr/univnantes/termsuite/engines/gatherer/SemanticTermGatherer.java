@@ -81,7 +81,8 @@ public class SemanticTermGatherer extends AbstractGatherer {
 		if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
-		CustomTermIndex index = termIndex.createCustomIndex("SubSequence"+rule.getName(), rule.getTermProvider());
+		String indexName = "SubSequence"+rule.getName();
+		CustomTermIndex index = termIndex.createCustomIndex(indexName, rule.getTermProvider());
 		
 		for(String key:index.keySet()) {
 			List<Term> terms = index.getTerms(key).stream()
@@ -152,6 +153,8 @@ public class SemanticTermGatherer extends AbstractGatherer {
 					});
 			}
 		}
+		
+		termIndex.dropCustomIndex(indexName);
 		
 		LOGGER.debug("Number of context vectors compared: {}, nb distributional synonymic relations found: {}. Total alignment time: {}. Total dico synonyms: {}", 
 				nbAlignments, 
