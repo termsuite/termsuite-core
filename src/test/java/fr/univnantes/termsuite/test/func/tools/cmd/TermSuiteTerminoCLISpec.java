@@ -11,6 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
@@ -27,6 +28,7 @@ import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.tools.TerminologyExtractor;
 import fr.univnantes.termsuite.utils.FileUtils;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TermSuiteTerminoCLISpec {
@@ -34,6 +36,11 @@ public class TermSuiteTerminoCLISpec {
 	@Rule
 	public TemporaryFolder folder = new TemporaryFolder();
 	
+	
+	@After
+	public void clear() {
+		TermSuiteResourceManager.getInstance().clear();
+	}
 	
 	@Test
 	public void testTerminoEnBasic() throws Exception {

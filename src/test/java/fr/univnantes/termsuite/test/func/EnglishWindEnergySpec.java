@@ -114,6 +114,19 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				"S-PEg-NN-NP", "S-PID-AN-P", "S-R2D-NN");
 	}
 
+	@Override
+	protected List<String> getRulesNotTested() {
+		return Lists.newArrayList(
+				"AN-synAN",
+				"AN-AsynN",
+				"NN-NsynN",
+				"NN-synNN",
+				"NPN-NPsynN",
+				"NPN-synNPN"
+				);
+	}
+
+	
 
 	@Test
 	public void testTop10ByFreq() {
@@ -224,7 +237,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(neoclassicals)
 			.isNotEmpty()
 			.extracting("lemma", "neoclassicalAffix.lemma")
-			.hasSize(769)
+			.hasSize(696)
 			.contains(tuple("hydroelectric", "water"))
 			;
 	}

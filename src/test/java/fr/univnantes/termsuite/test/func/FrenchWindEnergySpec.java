@@ -90,6 +90,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"M-PI-EN-P",
 				"M-R1-NA",
 				"M-I-NA-CE",
+				"S-IEg-NA-A,-CA",
 				"M-I-NA-EC");
 	}
 	
@@ -97,13 +98,22 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	protected List<String> getSyntacticNotMatchingRules() {
 		return Lists.newArrayList(
 				"S-IEg-NPN-PN,-CPN",
-				"S-IEg-NA-A,-CA",
 				"S-I-NA-RV",
 				"S-R2I2-NPN-PNP",
 				"S-I2-NPN-PN,PNC",
 				"S-PID-NA-P",
 				"S-PID-NAA-P",
 				"M-I2-NA");
+	}
+	
+	@Override
+	protected List<String> getRulesNotTested() {
+		return Lists.newArrayList(
+				"NA-NsynA",
+				"NA-synNA",
+				"NPN-NPsynN",
+				"NPN-synNPN"
+				);
 	}
 	
 	@Test
@@ -236,9 +246,9 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMSNNVariations() {
 		assertThat(termIndex)
-			.hasNVariationsOfType(43, RelationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(76, RelationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
-			.hasSize(9)
+			.hasSize(13)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: microsystème", "nn: micro système"), 

@@ -2,7 +2,6 @@ n: whispering	nat	whisper:whisper|ing:e
 r: environmentally	nat	environment:environment|ally:ally
 n: conviction	nat	convict:convict|ion:ion
 n: chainsaw	nat	chain:chain|saw:saw
-a: maximum	neo	maxi:maxi|mum:mum
 a: biological	neo	bio:bio|logical:logical
 a: methodological	neo	methodo:methodo|logical:logical
 n: psychoacoustics	neo	psycho:psycho|acoustics:acoustic
@@ -12,8 +11,6 @@ n: contrib	nat	cont:cont|rib:rib
 n: semi-conductor	neo	semi:semi|conductor:conductor
 a: quasi-steady	nat	quasi:quasi|steady:steady
 a: fully-attached	nat	fully:fully|attached:attach
-a: res-e	nat	res:re|e:e
-n: electronics	neo	electro:electro|nics:nic
 n: hearing-loss	nat	hearing:hearing|loss:loss
 n: reflection	nat	reflect:reflect|ion:ion
 n: guy-wire	nat	guy:guy|wire:wire
@@ -115,7 +112,6 @@ a: 5-step	nat	5:5|step:step
 n: hydrophone	neo	hydro:water|phone:phone
 n: grouping	nat	group:group|ing:e
 n: three-blade	nat	three:three|blade:blade
-n: leucopsis	neo	leuco:leuco|psis:psi
 n: pattern	nat	pat:pat|tern:tern
 n: relationship	nat	relation:relation|ship:ship
 a: patented	nat	paten:paten|ted:te
@@ -124,7 +120,6 @@ n: keywords	nat	key:key|words:word
 a: fail-safe	nat	fail:fail|safe:safe
 n: double-rotor	nat	double:double|rotor:rotor
 n: land-take	nat	land:land|take:take
-a: non-toxic	neo	non:non|toxic:toxic
 n: turbines-low	nat	turbines:turbine|low:low
 n: sailwing	nat	sail:sail|wing:wing
 n: grounding	nat	ground:ground|ing:e
@@ -210,7 +205,6 @@ a: marked	nat	mar:mar|ked:k
 n: spalding	nat	spal:sp|ding:de
 n: middleground	nat	middle:middle|ground:ground
 n: finland	nat	fin:fin|land:land
-a: stainless	neo	stain:stain|less:less
 n: mining	nat	min:min|ing:e
 n: baserad	nat	base:base|rad:rad
 n: pascal	nat	pas:pa|cal:cal
@@ -223,7 +217,6 @@ n: minimum	neo	mini:mini|mum:mum
 n: viewscapes	nat	views:view|capes:cape
 a: trivial	neo	tri:tri|vial:vi
 n: foamcores	nat	foam:foam|cores:core
-n: flashover	neo	flash:flash|over:over
 a: chartered	nat	chart:chart|ered:er
 n: vibration	nat	vib:vib|rat:rat|ion:ion
 n: barton	nat	bar:bar|ton:ton
@@ -233,7 +226,6 @@ n: kilometer	neo	kilo:kilo|meter:meter
 n: crediting	nat	credit:credit|ing:e
 a: well-connected	nat	well:well|connected:connected
 n: overhead	neo	over:over|head:head
-n: anti-scour	neo	anti:anti|scour:scour
 n: overheat	neo	over:over|heat:heat
 a: intertidal	neo	inter:inter|tidal:tidal
 n: nameplate	nat	name:name|plate:plate
@@ -294,7 +286,6 @@ a: burn-out	neo	burn:burn|out:out
 a: anticlockwise	neo	anti:anti|clockwise:clockwise
 n: eu-25	nat	eu:eu|25:25
 n: langston	nat	langs:lang|ton:ton
-n: overhang	neo	over:over|hang:hang
 a: well-documented	nat	well:well|documented:document
 n: screening	nat	screen:screen|ing:e
 a: southern	nat	south:south|ern:ern
@@ -390,8 +381,8 @@ a: eastern	nat	east:east|ern:ern
 a: 12-month	nat	12:12|month:month
 n: tracking	nat	track:track|ing:e
 a: repeated	nat	rep:rep|eated:eat
-n: police	nat	pol:pol|ice:ice
 n: crowbar	nat	crow:crow|bar:bar
+n: police	nat	pol:pol|ice:ice
 n: kingston	nat	kings:king|ton:ton
 n: parking	nat	park:park|ing:e
 n: policy	nat	pol:pol|icy:icy
@@ -438,7 +429,6 @@ a: departmental	nat	depart:depart|mental:mental
 n: technology	neo	techno:techno|logy:logy
 n: democrat	neo	demo:demo|crat:crat
 a: aerolastic	neo	aero:air|las:la|tic:tic
-a: exotic	neo	exo:exo|tic:tic
 n: land-use	nat	land:land|use:use
 n: microgeneration	neo	micro:micro|generation:generation
 n: equalloudness	nat	equal:equal|loudness:loudness
@@ -463,7 +453,6 @@ a: hand-arm	nat	hand:hand|arm:arm
 a: age-related	nat	age:age|related:related
 a: up-wind	nat	up:up|wind:wind
 n: freestream	nat	free:free|stream:stream
-a: non-obtrusive	neo	non:non|obtrusive:obtrusive
 n: benefactor	nat	bene:bene|factor:factor
 a: cost-benefit	nat	cost:cost|benefit:benefit
 a: translational	neo	trans:trans|lat:lat|ional:ion
@@ -503,14 +492,12 @@ n: programming	neo	pro:pro|gram:gram|ming:ming
 n: mergeformat	nat	merge:merge|format:format
 n: stateline	nat	state:state|line:line
 n: portfolio	nat	port:port|folio:folio
-n: resale	nat	res:re|ale:ale
 n: partner	nat	part:part|ner:n
 n: parameter	neo	para:para|meter:meter
 n: heading	nat	head:head|ing:e
 a: professional	nat	prof:prof|ess:ess|ional:ion
 a: time-consuming	nat	time:time|consuming:consuming
 a: maritime	nat	mari:mari|time:time
-n: self-sufficiency	neo	self:self|sufficiency:sufficiency
 a: gisassisted	nat	gis:gi|assisted:assist
 n: ground-source	nat	ground:ground|source:source
 n: eyesore	nat	eyes:eye|ore:ore
@@ -541,8 +528,6 @@ a: federal	nat	fed:fed|eral:er
 a: 50-metre	nat	50:50|metre:metre
 n: capability	nat	cap:cap|ability:ability
 n: passon	nat	pas:pa|son:son
-n: rescue	nat	res:re|cue:cue
-a: antialiased	neo	anti:anti|aliased:alias
 n: pathology	neo	patho:patho|logy:logy
 n: shortfall	nat	short:short|fall:fall
 n: setting	nat	set:set|ting:te
@@ -583,7 +568,6 @@ a: high-performance	nat	high:high|performance:performance
 n: inter-noise	neo	inter:inter|noise:noise
 a: pre-tested	neo	pre:pre|tes:te|ted:te
 n: jack-up	nat	jack:jack|up:up
-n: take-over	neo	take:take|over:over
 n: turbine-generator	nat	turbine:turbine|generator:generator
 a: north-west	nat	north:north|west:west
 n: thermostat	neo	thermo:thermo|stat:stat
@@ -646,7 +630,6 @@ n: landform	neo	land:land|form:form
 n: low-turbulence	nat	low:low|turbulence:turbulence
 n: non-dispatchability	neo	non:non|dispatch:dispatch|ability:ability
 n: accounting	nat	account:account|ing:e
-n: underwriter	neo	under:under|writer:writer
 n: robustness	nat	robust:robust|ness:ness
 n: transport	neo	trans:trans|port:port
 n: suggestion	nat	suggest:suggest|ion:ion
@@ -666,13 +649,11 @@ a: light-weight	nat	light:light|weight:weight
 n: deflection	nat	deflect:deflect|ion:ion
 n: protocol	neo	proto:proto|col:col
 n: seabird	nat	sea:sea|bird:bird
-a: hypodermic	neo	hypo:hypo|dermic:dermic
 n: multiscience	neo	multi:multi|science:science
 n: pull-in	neo	pull:pull|in:in
 n: magnet	nat	mag:mag|net:net
 a: hydroacoustic	neo	hydro:water|acoustic:acoustic
 n: illness	nat	ill:ill|ness:ness
-a: inside	nat	ins:in|ide:ide
 a: self-propelled	neo	self:self|propel:propel|led:le
 n: training	nat	train:train|ing:e
 n: permanentmagnet	nat	permanent:permanent|magnet:magnet
@@ -681,12 +662,9 @@ a: micro-mechanical	neo	micro:micro|mechanical:mechanical
 n: nonspeech	neo	non:non|speech:speech
 n: podiceps	neo	podi:podi|ceps:cep
 a: deblock	nat	deb:deb|lock:lock
-a: oncoming	neo	onco:onco|ming:ming
 a: megawatt-scale	nat	megawatt:megawatt|scale:scale
 a: far-reaching	nat	far:far|reaching:reach
-n: inside	nat	ins:in|ide:ide
 n: subsystem	neo	sub:sub|system:system
-n: undertaking	neo	under:under|taking:taking
 r: electrically	nat	electric:electric|ally:ally
 n: boreholes	nat	bore:bore|holes:hole
 n: toroidalstator	nat	toroidal:toroidal|stator:stator
@@ -705,11 +683,11 @@ a: northern	nat	north:north|ern:ern
 n: movement	nat	move:move|ment:ment
 n: lighting	nat	light:light|ing:e
 n: startup	nat	star:star|tup:tup
-n: stakeholder	nat	stake:stake|holder:holder
+n: stakeholder	nat	stake:stake|holder:hold
 a: deep-stalled	nat	deep:deep|stal:st|led:le
 n: t-pods	nat	t:t|pods:pod
 a: planned	nat	plan:plan|ned:n
-n: soft-starter	nat	soft:soft|starter:starter
+n: soft-starter	nat	soft:soft|starter:start
 a: 5-acre	nat	5:5|acre:acre
 a: starting	nat	star:star|ting:te
 a: skilled	nat	ski:ski|lled:ll
@@ -722,7 +700,6 @@ n: starter	nat	star:star|ter:ter
 a: postal	nat	pos:po|tal:t
 n: steel-tube	nat	steel:steel|tube:tube
 n: infrasound	nat	infra:infra|sound:sound
-n: disaster	neo	dis:dis|aster:aster
 n: manner	nat	man:man|ner:n
 n: pre-feasibility	neo	pre:pre|feasibility:feasibility
 a: implied	nat	imp:imp|lied:lie
@@ -732,7 +709,6 @@ a: day-care	nat	day:day|care:care
 a: power-effective	nat	power:power|effective:effective
 n: midwest	neo	mid:mid|west:west
 n: escrow	nat	esc:esc|row:row
-n: fibrosis	neo	fibro:fibro|sis:sis
 n: remainder	nat	remain:remain|der:d
 n: transverse-flux	neo	trans:trans|verse:verse|flux:flux
 n: superstructure	neo	super:super|structure:structure
@@ -740,10 +716,8 @@ a: preceding	neo	pre:pre|ceding:cede
 n: heritage	nat	herit:herit|age:age
 a: directlycoupled	nat	directly:directly|coupled:couple
 a: red-throated	nat	red:red|throated:throat
-a: non-participating	neo	non:non|participating:participating
 n: opening	nat	open:open|ing:e
 n: submission	neo	sub:sub|miss:mis|ion:ion
-n: disparity	neo	dis:dis|parity:parity
 a: supporting	nat	sup:sup|porting:port
 n: autodesk	neo	auto:auto|desk:desk
 n: stormwater	nat	storm:storm|water:water
@@ -754,7 +728,6 @@ n: wind-turbine	nat	wind:wind|turbine:turbine
 n: outsource	neo	out:out|source:source
 n: allocation	neo	allo:allo|cat:cat|ion:ion
 n: workmanship	nat	work:work|man:man|ship:ship
-a: discrete	neo	dis:dis|crete:crete
 n: reveal	nat	rev:rev|eal:e
 a: wind-powered	nat	wind:wind|powered:power
 a: worldwide	nat	world:world|wide:wide
@@ -780,7 +753,6 @@ n: safeguard	nat	safe:safe|guard:guard
 r: critically	nat	critic:critic|ally:ally
 n: over-current	neo	over:over|current:current
 a: high-speed	nat	high:high|speed:speed
-n: respond	nat	res:re|pond:pond
 n: butterworths	nat	butter:butter|worths:worth
 r: politically	nat	politic:politic|ally:ally
 n: hard-bottom	nat	hard:hard|bottom:bottom
@@ -793,12 +765,11 @@ n: re-vegetation	neo	re:re|vegetation:vegetation
 n: pre-stall	neo	pre:pre|stall:stall
 n: feeding	nat	fee:fee|ding:de
 n: countermoment	neo	counter:counter|moment:moment
-a: slotless	neo	slot:slot|less:less
 r: horizontally	nat	horizon:horizon|tally:tally
 n: vibration-decoupling	nat	vibration:vibration|decoupling:decoupling
 n: running	nat	run:run|ning:ning
-n: psychology	neo	psycho:psycho|logy:logy
 n: sub-total	neo	sub:sub|total:total
+n: psychology	neo	psycho:psycho|logy:logy
 a: reverse	nat	rev:rev|erse:erse
 n: audiometer	neo	audio:audio|meter:meter
 a: cross-sectional	nat	cross:cross|sectional:sectional
@@ -820,7 +791,6 @@ r: legally	nat	leg:leg|ally:ally
 n: manpower	nat	man:man|power:power
 n: holding	nat	hold:hold|ing:e
 a: one-hundred	nat	one:one|hundred:hundred
-r: toronto	neo	tor:tor|onto:onto
 n: display	neo	dis:dis|play:play
 n: message	nat	mess:mess|age:age
 n: self-erecting	neo	self:self|ere:ere|cting:ct
@@ -848,7 +818,6 @@ n: lifestyle	nat	life:life|style:style
 n: decision-maker	nat	decis:deci|ion:ion|maker:maker
 n: marsland	nat	mars:mar|land:land
 a: science-driven	nat	science:science|driven:driven
-n: muscle	neo	mus:mu|cle:cle
 a: non-audible	neo	non:non|audible:audible
 a: pathological	neo	patho:patho|logical:logical
 n: grid-connected-plants	nat	grid:grid|connected:connected|plants:plant
@@ -857,8 +826,8 @@ r: historically	nat	historic:historic|ally:ally
 n: railway	nat	rail:rail|way:way
 n: ice-accretion	nat	ice:ice|accretion:accretion
 n: radioactivity	neo	radio:radio|activity:activity
-a: isolated	neo	iso:iso|lated:late
 a: pitched	nat	pit:pit|ched:ch
+a: isolated	neo	iso:iso|lated:late
 n: feedlot	nat	feed:fee|lot:lot
 n: supervisor	neo	super:super|visor:visor
 a: peer-reviewed	nat	peer:pe|reviewed:review
@@ -867,8 +836,6 @@ n: neurology	neo	neuro:neuro|logy:logy
 n: extension	nat	ext:ext|ens:en|ion:ion
 a: cryogenic	neo	cryo:cryo|genic:genic
 n: finding	nat	fin:fin|ding:de
-n: decibel	neo	deci:deci|bel:bel
-a: non-assign	neo	non:non|assign:assign
 a: haul-out	neo	haul:haul|out:out
 a: doubly-fed	nat	doubly:doubly|fed:fed
 a: mainstream	nat	main:main|stream:stream
@@ -904,8 +871,8 @@ a: non-reversal	neo	non:non|rever:rev|sal:sal
 a: pre-selected	neo	pre:pre|selected:selected
 n: effects-temperature	nat	effects:effect|temperature:temperature
 n: one-mile	nat	one:one|mile:mile
-n: precision	neo	pre:pre|cis:ci|ion:ion
 a: topographical	neo	topo:topo|graphical:graphical
+n: precision	neo	pre:pre|cis:ci|ion:ion
 n: waterfowl	nat	water:water|fowl:fowl
 a: overlapping	neo	over:over|lap:lap|ping:pe
 n: guideline	nat	guide:guide|line:line
@@ -943,13 +910,13 @@ n: retrofitting	neo	retro:retro|fit:fit|ting:te
 n: topology	neo	topo:topo|logy:logy
 n: self-noise	neo	self:self|noise:noise
 n: slip-rings	nat	slip:slip|rings:ring
-n: powerpoint	nat	power:power|point:point
 n: ministerio	neo	mini:mini|ste:ste|rio:rio
+n: powerpoint	nat	power:power|point:point
 n: tionship	nat	tion:tion|ship:ship
 n: streambeds	nat	stream:stream|beds:bed
 n: basic-modelling	nat	basic:basic|model:model|ling:le
 n: misinterpretation	neo	mis:mi|interpretation:interpretation
-n: self-starter	neo	self:self|starter:starter
+n: self-starter	neo	self:self|starter:start
 n: tip-speed	nat	tip:tip|speed:speed
 n: two-stator	nat	two:two|stator:stator
 a: geospatial	neo	geo:geo|spatial:spatial
@@ -1004,7 +971,6 @@ a: statewide	nat	state:state|wide:wide
 n: discharge	neo	dis:dis|charge:charge
 n: pre-publication	neo	pre:pre|publication:publication
 n: naturalist	nat	natura:natura|list:list
-r: technically	neo	technic:technic|ally:ally
 a: predefined	neo	pre:pre|defined:define
 a: listed	nat	lis:li|ted:te
 n: eggbeater	nat	egg:egg|beater:beat
@@ -1021,7 +987,6 @@ n: tip-loss	nat	tip:tip|loss:loss
 n: aspect-ratio	nat	aspect:aspect|ratio:ratio
 n: far-wake	nat	far:far|wake:wake
 n: milling	nat	mill:mill|ing:e
-n: output	neo	out:out|put:put
 n: million	nat	mill:mill|ion:ion
 n: earnest	nat	ear:ear|nest:nest
 a: subdued	neo	sub:sub|dued:due
@@ -1055,11 +1020,9 @@ n: feeder	nat	fee:fee|der:d
 r: rotationally	nat	rotation:rotation|ally:ally
 n: insurer	nat	ins:in|urer:ur
 n: afternoon	nat	after:aft|noon:noon
-n: interval	neo	inter:inter|val:v
 n: insured	nat	ins:in|ured:ur
 a: nondimensionalized	neo	non:non|dimensional:dimensional|ized:ized
 n: operatio	nat	ope:ope|ratio:ratio
-a: non-productive	neo	non:non|productive:productive
 n: package	nat	pack:pack|age:age
 a: generatore	neo	gen:gen|era:era|tore:tore
 n: kilogram	neo	kilo:kilo|gram:gram
@@ -1076,7 +1039,6 @@ n: four-point	nat	four:four|point:point
 n: promotion	neo	pro:pro|motion:motion
 n: statement	nat	state:state|ment:ment
 a: centralized	nat	central:central|ized:ized
-n: nonlinearity	neo	non:non|linearity:linearity
 n: lowspeed	nat	lows:low|peed:pe
 a: self-selected	neo	self:self|selected:selected
 n: lift-curve	nat	lift:lift|curve:curve
@@ -1141,12 +1103,10 @@ n: sawmill	nat	saw:saw|mill:mill
 a: aerodynamic	neo	aero:air|dynamic:dynamic
 n: version	nat	vers:ver|ion:ion
 a: multibladed	neo	multi:multi|bladed:blade
-a: foregoing	neo	fore:fore|going:going
-n: viewing	nat	view:view|ing:e
+n: viewing	nat	vie:vie|wing:wing
 a: levelized	nat	level:level|ized:ized
 n: voices-slightly	nat	voices:voice|slightly:slightly
 a: technologies-based	nat	technologies:technology|based:base
-n: interconnectivity	neo	inter:inter|connectivity:connectivity
 n: manwell	nat	man:man|well:well
 n: workshop	nat	work:work|shop:shop
 n: non-peer	neo	non:non|peer:pe
@@ -1157,7 +1117,6 @@ a: long-range	nat	long:long|range:range
 n: exemption	nat	exempt:exempt|ion:ion
 n: tipspeed	nat	tips:tip|peed:pe
 a: contractual	nat	contr:contr|actual:actual
-a: distressed	neo	dis:dis|tressed:tress
 n: power-plants	nat	power:power|plants:plant
 n: worksheet	nat	work:work|sheet:sheet
 a: semi-implicit	neo	semi:semi|implicit:implicit
@@ -1173,7 +1132,6 @@ a: underground	neo	under:under|ground:ground
 a: site-specific	nat	site:site|specific:specific
 n: position	nat	posit:posit|ion:ion
 r: personally	nat	person:person|ally:ally
-a: non-refundable	neo	non:non|refundable:refundable
 n: teambuilding	nat	team:team|building:building
 n: backdrop	nat	back:back|drop:drop
 a: non-industrial	neo	non:non|indus:indus|trial:trial
@@ -1263,12 +1221,10 @@ a: multidisciplinary	neo	multi:multi|disciplinary:disciplinary
 a: non-designated	neo	non:non|designa:designa|ted:te
 n: intersection	neo	inter:inter|section:section
 n: federation	nat	fed:fed|era:era|tion:tion
-a: chemical	neo	chemi:chemi|cal:cal
 a: booted	nat	boo:boo|ted:te
 n: mooring	nat	moo:moo|ring:ring
 a: pressure-linked	nat	pressure:pressure|linked:link
 n: maintainability	nat	maintain:maintain|ability:ability
-a: non-zero	neo	non:non|zero:zero
 n: geography	neo	geo:geo|graphy:graphy
 a: land-based	nat	land:land|based:base
 n: master	nat	mas:ma|ter:ter
@@ -1288,7 +1244,6 @@ a: deciding	neo	deci:deci|ding:de
 n: outset	neo	out:out|set:set
 a: one-piece	nat	one:one|piece:piece
 n: qgridref	nat	qgrid:qgrid|ref:ref
-a: non-existent	neo	non:non|existent:existent
 n: organism	nat	organ:organ|ism:ism
 a: vertical-axis	nat	vertical:vertical|axis:axis
 a: self-supporting	neo	self:self|supporting:supporting
@@ -1301,7 +1256,6 @@ a: halsted	nat	hal:h|sted:st
 r: backwards	nat	back:back|wards:ward
 a: isometric	neo	iso:iso|metric:metric
 n: collision	nat	col:col|lis:li|ion:ion
-n: ovonics	neo	ovo:ovo|nics:nic
 a: cost-effective	nat	cost:cost|effective:effective
 n: woodlot	nat	wood:wood|lot:lot
 n: succession	nat	success:success|ion:ion
@@ -1311,8 +1265,6 @@ a: miniscule	neo	minis:mini|cule:cule
 n: chord-lengths	nat	chord:chord|lengths:length
 n: fall-pipe	nat	fall:fall|pipe:pipe
 n: substation	neo	sub:sub|stat:stat|ion:ion
-a: electronic	neo	electro:electro|nic:nic
-n: toronto	neo	tor:tor|onto:onto
 n: subcontractor	neo	sub:sub|contractor:contractor
 n: planning	nat	plan:plan|ning:ning
 a: non-structural	neo	non:non|structural:structural
@@ -1335,7 +1287,6 @@ a: outstanding	nat	outs:out|tan:tan|ding:de
 n: jacobson	nat	jacob:jacob|son:son
 n: full-inverse	nat	full:full|inverse:inverse
 n: two-mass	nat	two:two|mass:mass
-n: disposal	neo	dis:dis|posal:pos
 a: clever	neo	cle:cle|ver:ver
 n: westgate	nat	west:west|gate:gate
 n: hemodialysis	neo	hemo:hemo|dia:dia|lysis:lysis
@@ -1347,7 +1298,6 @@ n: ecosystem	neo	eco:eco|system:system
 n: fixedspeed	nat	fixeds:fixed|peed:pe
 n: birthplace	nat	birth:birth|place:place
 n: sub-station	neo	sub:sub|stat:stat|ion:ion
-n: non-conformity	neo	non:non|conformity:conformity
 n: high-frequency	nat	high:high|frequency:frequency
 a: accountable	nat	account:account|able:able
 n: postconstruction	neo	post:post|construction:construction
@@ -1374,7 +1324,6 @@ a: factual	nat	fact:fact|ual:u
 n: contender	nat	cont:cont|ender:end
 n: odebolt	nat	ode:ode|bolt:bolt
 a: two-year	nat	two:two|year:year
-a: kinetic	neo	kine:kine|tic:tic
 n: clothing	nat	clo:clo|thing:thing
 n: bottleneck	nat	bottle:bottle|neck:neck
 a: hydrostatic	neo	hydro:water|static:static
@@ -1398,7 +1347,6 @@ n: reasoning	nat	rea:rea|soning:son
 a: supra-national	nat	supra:supra|nat:nat|ional:ion
 r: probabilistically	nat	probabilistic:probabilistic|ally:ally
 n: kingdom	nat	king:king|dom:dom
-a: co-operative	neo	co:co|operative:operative
 n: pearsons	nat	pear:pear|sons:son
 n: metadata	neo	meta:meta|data:data
 n: carson	nat	car:car|son:son
@@ -1419,12 +1367,10 @@ n: windmaster	nat	wind:wind|master:mast
 a: non-reflective	neo	non:non|reflective:reflective
 a: nine-county	nat	nine:nine|county:county
 n: microwave	neo	micro:micro|wave:wave
-n: subway	neo	sub:sub|way:way
 n: outsider	nat	outs:out|ider:id
 n: rejection	nat	reject:reject|ion:ion
 a: 12-mile	nat	12:12|mile:mile
 a: agricultural	neo	agri:agri|cultural:cultural
-n: perkins	nat	perk:perk|ins:in
 a: colorless	neo	color:color|less:less
 n: disadvantage	neo	dis:dis|advantage:advantage
 a: pre-nuptial	neo	pre:pre|nuptial:nuptial
@@ -1436,7 +1382,6 @@ n: trucking	nat	truck:truck|ing:e
 a: eventual	nat	event:event|ual:u
 n: low-frequency	nat	low:low|frequency:frequency
 n: heating-up	nat	heating:heat|up:up
-n: anti-predator	neo	anti:anti|predator:predator
 n: mission	nat	miss:mis|ion:ion
 n: programme	neo	pro:pro|gramme:gramme
 n: beginning	nat	beg:beg|inning:inn
@@ -1467,7 +1412,6 @@ n: benefit-cost	nat	benefit:benefit|cost:cost
 n: framework	nat	frame:frame|work:work
 n: refurbishing	nat	ref:ref|urbi:urbi|shing:sh
 n: man-power	nat	man:man|power:power
-a: odorless	neo	odor:odor|less:less
 a: 10-mw	nat	10:10|mw:mw
 a: modern	nat	mod:mod|ern:ern
 n: windfarmperception	nat	wind:wind|farm:farm|perception:perception
@@ -1492,7 +1436,6 @@ a: isolating	neo	iso:iso|lating:late
 a: safety-relevant	nat	safety:safety|relevant:relevant
 n: two-row	nat	two:two|row:row
 n: microphone	neo	micro:micro|phone:phone
-n: millisecond	neo	milli:milli|second:second
 n: stall-teeter	nat	stall:stall|teeter:teeter
 a: zero-emissions	nat	zero:zero|emissions:emission
 n: multipartner	neo	multi:multi|partner:partner
@@ -1523,7 +1466,6 @@ a: low-pitched	nat	low:low|pitched:pitched
 n: fighting	nat	fight:fight|ing:e
 a: wisconsin-green	nat	wisconsin:wisconsin|green:green
 n: effective-radius	nat	effective:effective|radius:radius
-n: subscript	neo	sub:sub|script:script
 a: myocardial	neo	myo:myo|car:car|dial:dial
 n: mainshaft	nat	main:main|shaft:shaft
 a: two-blade	nat	two:two|blade:blade
@@ -1575,7 +1517,6 @@ n: singapore	nat	sin:sin|gap:gap|ore:ore
 n: wildlife	nat	wild:wild|life:life
 n: outline	neo	out:out|line:line
 a: threefold	nat	three:three|fold:fold
-n: outcome	neo	out:out|come:come
 n: correlation	nat	cor:cor|relation:relation
 n: self-inductor	neo	self:self|inductor:inductor
 n: grindstone	nat	grinds:grind|tone:tone
@@ -1627,9 +1568,7 @@ a: 49-metre	nat	49:49|metre:metre
 a: large-scale	nat	large:large|scale:scale
 n: waveform	neo	wave:wave|form:form
 n: labtech	nat	lab:lab|tech:tech
-r: inside	nat	ins:in|ide:ide
 a: three-bladed	nat	three:three|bladed:blade
-n: outlook	neo	out:out|look:look
 n: revolution	nat	revolut:revolut|ion:ion
 a: intergovernmental	neo	inter:inter|governmental:governmental
 n: acreage	nat	acre:acre|age:age
@@ -1711,7 +1650,6 @@ n: micro-processor	neo	micro:micro|processor:processor
 a: hot-galvanized	nat	hot:hot|galvanized:galvanized
 n: station	neo	stat:stat|ion:ion
 n: rotor-blades	nat	rotor:rotor|blades:blade
-a: built-in	neo	built:built|in:in
 n: repercussion	nat	reper:rep|cuss:cuss|ion:ion
 n: powerhouse	nat	power:power|house:house
 n: c-pods	nat	c:c|pods:pod
@@ -1719,9 +1657,7 @@ n: backwash	nat	back:back|wash:wash
 n: lowcost	nat	low:low|cost:cost
 n: terrain	nat	ter:ter|rain:rain
 a: double-multiple	nat	double:double|multiple:multiple
-n: trifloater	neo	tri:tri|floater:floater
 n: blade-radius	nat	blade:blade|radius:radius
-n: chemical	neo	chemi:chemi|cal:cal
 n: iron-oxidation	nat	iron:iron|oxidation:oxidation
 n: slipstream	nat	slip:slip|stream:stream
 a: dragless	neo	drag:drag|less:less
@@ -1758,7 +1694,6 @@ n: dimension	nat	dim:dim|ens:en|ion:ion
 n: pgridref	nat	pgrid:pgrid|ref:ref
 a: concurrent	nat	con:con|current:current
 a: halting	nat	hal:h|ting:te
-n: molecule	neo	mole:mole|cule:cule
 a: pubmed	nat	pub:pub|med:med
 n: sampling	nat	sam:sam|pling:pl
 a: 110-metre	nat	110:110|metre:metre
@@ -1769,7 +1704,6 @@ n: experience-sharing	nat	experience:experience|sharing:sharing
 a: self-staring	neo	self:self|staring:star
 a: prolonged	neo	pro:pro|longed:long
 a: binding	nat	bin:bin|ding:de
-n: forestry	nat	fores:fore|try:try
 n: margin	nat	mar:mar|gin:gin
 a: non-corrosive	neo	non:non|corrosive:corrosive
 n: data-loggers	nat	data:data|loggers:logger
@@ -1790,7 +1724,6 @@ a: after-tax	nat	after:aft|tax:tax
 n: option	nat	opt:opt|ion:ion
 n: contraction	nat	contract:contract|ion:ion
 n: high-torque	nat	high:high|torque:torque
-a: intermediate	neo	inter:inter|mediate:mediate
 a: largescale	nat	large:large|scale:scale
 n: leverage	nat	lever:lever|age:age
 a: market-oriented	nat	market:market|oriented:oriented
@@ -1928,7 +1861,6 @@ n: air-containing	nat	air:air|containing:containing
 a: bladesign	nat	blade:blade|sign:sign
 n: working	nat	work:work|ing:e
 n: preconstruction	neo	pre:pre|construction:construction
-a: internal	neo	inter:inter|nal:n
 n: outer-rotor	nat	outer:outer|rotor:rotor
 n: low-reflectivity	nat	low:low|reflectivity:reflectivity
 n: reynolds-number	nat	reynolds:reynolds|number:number
@@ -1960,12 +1892,11 @@ n: up-wind	nat	up:up|wind:wind
 n: ride-through	nat	ride:ride|through:through
 a: pivotable	nat	pivot:pivot|able:able
 n: windfarms	nat	wind:wind|farms:farm
-a: nonoscillatory	neo	non:non|oscillatory:oscillatory
 a: pitch-regulated	nat	pitch:pitch|regulated:regulated
 n: injection	nat	inject:inject|ion:ion
 n: demographic	neo	demo:demo|graphic:graphic
 n: washington	nat	washing:washing|ton:ton
-n: shareholder	nat	share:share|holder:holder
+n: shareholder	nat	share:share|holder:hold
 a: ecological	neo	eco:eco|logical:logical
 r: technologically	neo	techno:techno|logically:logically
 n: train-gear	nat	train:train|gear:gear
@@ -1989,7 +1920,6 @@ n: clearing	nat	clea:clea|ring:ring
 n: management	nat	man:man|age:age|ment:ment
 n: distancing	neo	dis:dis|tan:tan|cing:ce
 n: windmill	nat	wind:wind|mill:mill
-n: dispatch	neo	dis:dis|patch:patch
 n: shortcoming	nat	short:short|coming:coming
 a: partial-scale	nat	partial:partial|scale:scale
 n: installation-schedule	nat	installation:installation|schedule:schedule
@@ -2035,7 +1965,6 @@ a: birdlife	nat	bird:bird|life:life
 n: bioresources	neo	bio:bio|resources:resource
 n: viewsheds	nat	view:view|sheds:shed
 a: low-cost	nat	low:low|cost:cost
-n: intermediate	neo	inter:inter|mediate:mediate
 r: literally	nat	liter:liter|ally:ally
 a: in-home	neo	in:in|home:home
 a: uw-green	nat	uw:uw|green:green
@@ -2043,7 +1972,6 @@ n: desire	nat	des:de|ire:ire
 a: intraabdominal	neo	intra:intra|abdominal:abdominal
 n: axle-type	neo	axle:axle|type:type
 n: wind-kraft	nat	wind:wind|kraft:kraft
-a: underway	neo	under:under|way:way
 n: burning	nat	burn:burn|ing:e
 n: timekeeping	nat	time:time|keeping:keeping
 a: wearless	neo	wear:wear|less:less
@@ -2073,7 +2001,6 @@ a: directional	nat	direct:direct|ional:ion
 n: petition	nat	petit:petit|ion:ion
 a: hydrologic	neo	hydro:water|logic:logic
 n: down-stream	nat	down:down|stream:stream
-n: hypodermic	neo	hypo:hypo|dermic:dermic
 n: sherwood	nat	sher:sh|wood:wood
 a: environmental	nat	env:env|iron:iron|mental:mental
 n: turbines-standards	nat	turbines:turbine|standards:standard
@@ -2109,7 +2036,6 @@ n: passing	nat	pas:pa|sing:se
 n: overcapacity	neo	over:over|capacity:capacity
 a: noisecon	nat	noise:noise|con:con
 a: socioeconomic	neo	socio:socio|economic:economic
-n: takeover	neo	take:take|over:over
 n: disrepair	neo	dis:dis|rep:rep|air:air
 a: hydroelastic	neo	hydro:water|elastic:elastic
 a: non-charging	neo	non:non|charging:charging
@@ -2183,7 +2109,6 @@ n: re-grading	neo	re:re|grading:grade
 n: profies	nat	prof:prof|ies:ies
 n: force-transmitting	neo	force:force|trans:trans|mitting:mitt
 n: rotorlager	nat	rotor:rotor|lager:lager
-n: re-use	neo	re:re|use:use
 n: profile	neo	pro:pro|file:file
 a: electrotechnical	neo	electro:electro|technical:technical
 n: non-rotating	neo	non:non|rotating:rotate
@@ -2195,7 +2120,6 @@ n: gathering	nat	gath:gath|ering:er
 a: regional	nat	reg:reg|ional:ion
 a: utility-scale	nat	utility:utility|scale:scale
 a: hydrothermal	neo	hydro:water|thermal:thermal
-a: foremost	neo	fore:fore|most:most
 n: speech-language-hearing	nat	speech:speech|language:language|hearing:hearing
 n: wind-tunnel	nat	wind:wind|tunnel:tunnel
 n: dispersion	neo	dis:dis|pers:per|ion:ion
@@ -2210,8 +2134,8 @@ n: sub-page	neo	sub:sub|page:page
 n: reflex	nat	ref:ref|lex:lex
 r: aerodynamically	neo	aero:air|dynamically:dynamically
 n: self-repair	neo	self:self|rep:rep|air:air
-n: compaction	nat	compact:compact|ion:ion
 n: professorship	nat	professor:professor|ship:ship
+n: compaction	nat	compact:compact|ion:ion
 a: computer-aided	nat	computer:computer|aided:aide
 n: percent	nat	per:per|cent:cent
 n: newspaper	nat	news:news|paper:paper
@@ -2259,9 +2183,7 @@ n: generation	neo	gene:gene|rat:rat|ion:ion
 a: one-minute	nat	one:one|minute:minute
 a: one-dimensional	nat	one:one|dimensional:dimensional
 n: spreadsheet	nat	spread:spread|sheet:sheet
-n: maximum	neo	maxi:maxi|mum:mum
 n: invention	nat	invent:invent|ion:ion
-a: genetic	neo	gene:gene|tic:tic
 n: smokestack	nat	smoke:smoke|stack:stack
 n: emssions	nat	emss:ems|ions:ion
 n: interface	neo	inter:inter|face:face
@@ -2288,7 +2210,6 @@ n: airtricity	neo	air:air|tri:tri|city:city
 a: disease-free	nat	disease:disease|free:free
 n: element-momentum	nat	element:element|momentum:momentum
 n: rideout	neo	ride:ride|out:out
-a: intra-thoracic	neo	intra:intra|thoracic:thoracic
 n: tissue	nat	tis:ti|sue:sue
 n: preload	neo	pre:pre|load:load
 n: cut-in	neo	cut:cut|in:in
@@ -2352,14 +2273,12 @@ r: additionally	nat	addition:addition|ally:ally
 a: topographic	neo	topo:topo|graphic:graphic
 a: one-half	nat	one:one|half:half
 n: prediction	nat	pred:pr|ict:ict|ion:ion
-a: combined	nat	comb:comb|ined:in
 n: multiple-wedge	nat	multiple:multiple|wedge:wedge
 n: earplug	nat	ear:ear|plug:plug
 n: support	nat	sup:sup|port:port
 n: thinking	nat	thin:thin|king:king
 a: gridconnected	nat	grid:grid|connected:connected
 n: crosssection	nat	cross:cross|section:section
-n: hypervagotonia	neo	hyper:hyper|vagotonia:vagotonia
 n: sub-components	neo	sub:sub|components:component
 n: counter-rotation	neo	counter:counter|rotation:rotation
 n: nonexclusive	neo	non:non|exclusive:exclusive
@@ -2372,10 +2291,8 @@ n: megawatt	neo	mega:mega|watt:watt
 n: multi-pole	neo	multi:multi|pole:pole
 n: particulate	nat	part:part|icu:icu|late:late
 n: watercourse	nat	water:water|course:course
-a: subsonic	neo	sub:sub|sonic:sonic
 n: vibrations	nat	vib:vib|rat:rat|ions:ion
 a: southwestern	nat	south:south|western:western
-n: substance	neo	sub:sub|stance:stance
 n: career	nat	car:car|eer:eer
 n: aircraft	nat	air:air|craft:craft
 n: drainage	nat	drain:drain|age:age
@@ -2393,7 +2310,6 @@ a: central	nat	cent:cent|ral:r
 n: polyester	neo	poly:poly|ester:ester
 n: repair	nat	rep:rep|air:air
 n: source/plant	nat	source:source|/plant:/plant
-n: substratum	neo	sub:sub|stratum:stratum
 n: copyright	nat	copy:copy|right:right
 n: hydrology	neo	hydro:water|logy:logy
 a: 45-person	nat	45:45|person:person
@@ -2490,9 +2406,7 @@ a: polytechnic	neo	poly:poly|technic:technic
 a: lateral	nat	lat:lat|eral:er
 a: sub-set	neo	sub:sub|set:set
 a: strobe-like	nat	strobe:strobe|like:like
-n: senosios	nat	senos:seno|ios:io
 a: back-up	nat	back:back|up:up
-a: unidad	neo	uni:uni|dad:dad
 n: prevalence	neo	pre:pre|valence:valence
 n: procurement	neo	pro:pro|cure:cure|ment:ment
 n: television	neo	tele:tele|vision:vision
@@ -2540,7 +2454,6 @@ a: sub-metering	neo	sub:sub|metering:meter
 a: rightward	nat	right:right|ward:ward
 n: hypothesis	neo	hypo:hypo|thesis:thesis
 a: single-sided	nat	single:single|sided:side
-n: co-ordination	neo	co:co|ordination:ordination
 n: rotorline	nat	rotor:rotor|line:line
 n: newton	nat	new:new|ton:ton
 n: single-row	nat	single:single|row:row
@@ -2572,8 +2485,8 @@ a: governmental	nat	govern:govern|mental:mental
 n: forefront	neo	fore:fore|front:front
 n: bio-fuel	neo	bio:bio|fuel:fuel
 a: spatiotemporal	nat	spa:spa|tio:tio|temporal:temporal
-n: cross-simulation	nat	cross:cross|simulation:simulation
 a: socalled	nat	socal:soc|led:le
+n: cross-simulation	nat	cross:cross|simulation:simulation
 a: day-night	nat	day:day|night:night
 n: set-up	nat	set:set|up:up
 n: midrange	neo	mid:mid|range:range
@@ -2597,7 +2510,6 @@ n: alternative	nat	alter:alt|native:native
 n: soundscape	nat	sounds:sound|cape:cape
 a: zoological	neo	zoo:zoo|logical:logical
 n: repeatability	nat	rep:rep|eat:eat|ability:ability
-r: foremost	neo	fore:fore|most:most
 a: surrounding	nat	sur:sur|rounding:round
 n: auditing	nat	audit:audit|ing:e
 a: rational	nat	rat:rat|ional:ion
@@ -2621,7 +2533,6 @@ a: geophysical	neo	geo:geo|physical:physical
 n: killing	nat	kil:kil|ling:le
 a: white-tailed	nat	white:white|tailed:tail
 a: wave-like	nat	wave:wave|like:like
-n: in-between	neo	in:in|between:between
 a: triangular	neo	tri:tri|angular:angular
 a: high-level	nat	high:high|level:level
 n: tripod	neo	tri:tri|pod:pod
@@ -2639,7 +2550,6 @@ n: fossil-fuel	nat	fossil:fossil|fuel:fuel
 a: cast-iron	nat	cast:cast|iron:iron
 n: dc-link	nat	dc:dc|link:link
 r: periodically	nat	periodic:periodic|ally:ally
-a: zero-in	neo	zero:zero|in:in
 n: hydrodynamics	neo	hydro:water|dynamics:dynamic
 n: photovoltaic	neo	photo:photo|voltaic:voltaic
 n: linkage	nat	link:link|age:age

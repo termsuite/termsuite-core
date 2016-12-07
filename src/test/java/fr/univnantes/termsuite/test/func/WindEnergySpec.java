@@ -64,17 +64,20 @@ public abstract class WindEnergySpec {
 
 	protected TermIndex termIndex = null;
 	protected Lang lang;
+	protected List<String> notTestedRules = Lists.newArrayList();
 	protected List<String> syntacticMatchingRules = Lists.newArrayList();
 	protected List<String> syntacticNotMatchingRules = Lists.newArrayList();
 
 	public WindEnergySpec() {
 		super();
 		this.lang = getLang();
+		this.notTestedRules = getRulesNotTested();
 		this.syntacticMatchingRules = getSyntacticMatchingRules();
 		this.syntacticNotMatchingRules = getSyntacticNotMatchingRules();
 	}
 	
 	protected abstract Lang getLang();
+	protected abstract List<String> getRulesNotTested();
 	protected abstract List<String> getSyntacticMatchingRules();
 	protected abstract List<String> getSyntacticNotMatchingRules();
 
@@ -190,7 +193,8 @@ public abstract class WindEnergySpec {
 	
 			ruleNames.removeAll(syntacticMatchingRules);
 			ruleNames.removeAll(syntacticNotMatchingRules);
-			
+			ruleNames.removeAll(notTestedRules);
+
 			assertTrue(String.format("Bad rule list. Some rule are not under test: <%s>", ruleNames),
 					ruleNames.isEmpty());
 		

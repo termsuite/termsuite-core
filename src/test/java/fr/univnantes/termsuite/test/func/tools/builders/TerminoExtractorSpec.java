@@ -6,6 +6,7 @@ import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,7 @@ import fr.univnantes.termsuite.api.TerminoExtractor;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TerminoExtractorSpec {
 	
@@ -24,6 +26,10 @@ public class TerminoExtractorSpec {
 	Document document1;
 	Document document2;
 	
+	@After
+	public void clean() {
+		TermSuiteResourceManager.getInstance().clear();
+	}
 	
 	@Before
 	public void setup() {
