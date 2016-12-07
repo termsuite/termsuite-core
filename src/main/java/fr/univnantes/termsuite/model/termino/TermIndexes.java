@@ -24,7 +24,6 @@
 package fr.univnantes.termsuite.model.termino;
 
 public class TermIndexes {
-//	public static final String LEMMA = "term-lemma";
 	public static final String LEMMA_LOWER_CASE = "term-lemma-lower-case";
 	public static final String WORD_LEMMA = "word-lemma";
 	public static final String WORD_LEMMA_IF_SWT = "word-lemma-if-swt";
@@ -36,4 +35,7 @@ public class TermIndexes {
 	public static final String PREFIXATION_LEMMAS = "prefixation-lemmas";
 	public static final String DERIVATION_LEMMAS = "derivation-lemmas";
 	public static final String SINGLE_WORD_LEMMA = "single-word-lemma";
+	public static final String FIRST_LETTERS_2 = "2-first-letters";
+	public static final String FIRST_LETTERS_3 = "3-first-letters";
+	public static final String FIRST_LETTERS_4 = "4-first-letters";
 }

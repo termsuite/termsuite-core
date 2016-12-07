@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -25,12 +26,12 @@ public class AbstractGatherer {
 	
 	private static final int DEFAULT_MAX_CLASS_COMPLEXITY = 1000000;
 
-	private Optional<TermHistory> history = Optional.empty();
+	protected Optional<TermHistory> history = Optional.empty();
 	protected Set<VariantRule> variantRules;
 	private GroovyService groovyService;
 	private RuleType ruleType;
 	private RelationType relationType;
-	private long cnt = 0;
+	protected AtomicLong cnt = new AtomicLong(0);
 	private Optional<String> indexName = Optional.empty();
 	private boolean dropIndexAtEnd = true;
 
@@ -82,9 +83,13 @@ public class AbstractGatherer {
 	}
 	
 	public void gather(TermIndex termIndex) {
+		Stopwatch indexSw = Stopwatch.createStarted();
 		CustomTermIndex index = termIndex.getCustomIndex(indexName.get());
 		index.cleanSingletonKeys();
-		Stopwatch sw = Stopwatch.createStarted();
+		LOGGER.debug("Term grouped in classes in {}", indexSw);
+
+		indexSw.stop();
+		Stopwatch gatheringSw = Stopwatch.createStarted();
 		index.keySet().stream()
 			.parallel()
 			.forEach(key -> {
@@ -93,12 +98,12 @@ public class AbstractGatherer {
 	//				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
 				gather(termIndex, terms, key);
 			});
-		sw.stop();
+		gatheringSw.stop();
 		
 		if(dropIndexAtEnd)
 			termIndex.dropCustomIndex(indexName.get());
 		
-		LOGGER.debug("Term gathered in {} - Num of comparisons: {}", sw, cnt);
+		LOGGER.debug("Term gathered in {} - Num of comparisons: {}", gatheringSw, cnt);
 	}
 	
 
@@ -117,7 +122,7 @@ public class AbstractGatherer {
 		}
 	}
 
-	private void gather(TermIndex termIndex, Collection<Term> termClass, String clsName) {
+	protected void gather(TermIndex termIndex, Collection<Term> termClass, String clsName) {
 		for(VariantRule rule:variantRules) {
 			Set<Term> sources = termClass.stream()
 				.filter(rule::isSourceAcceptable)
@@ -140,7 +145,7 @@ public class AbstractGatherer {
 					if(source.equals(target))
 						continue;
 					
-					cnt++;
+					cnt.incrementAndGet();
 					if(groovyService.matchesRule(rule, source, target)) 
 						createVariationRelation(termIndex, source, target, rule);
 				}

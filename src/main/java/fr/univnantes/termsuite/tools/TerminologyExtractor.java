@@ -405,11 +405,11 @@ public class TerminologyExtractor {
 			pipeline.aeCompostSplitter();
 			
 			// syntactic variant gathering
-			pipeline.aeTermVariantGatherer(false);
+			pipeline
+				.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold)
+				.aeTermVariantGatherer(false);
 
 			// graphical variant gathering
-			pipeline.setGraphicalVariantSimilarityThreshold(graphicalSimilarityThreshold);
-			pipeline.aeGraphicalVariantGatherer();
 
 			if(periodicFilteringProperty.isPresent())
 				pipeline.aeMaxSizeThresholdCleaner(periodicFilteringProperty.get(), maxSizeFilteringMaxSize);

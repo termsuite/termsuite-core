@@ -1,5 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import fr.univnantes.termsuite.metrics.EditDistance;
+
 public class GathererOptions {
 	private boolean semanticGathererEnabled = false;
 	
@@ -8,17 +10,32 @@ public class GathererOptions {
 	private boolean prefixationGathererEnabled = true;
 	
 	private boolean morphologicalGathererEnabled = true;
+
+	private boolean graphicalGathererEnabled = true;
 	
 	// gathering is polynomial within a class
 	private int maxClassSize = 2000;
 	
 	// 10 millions
 	private int maxNumberOfComparisons = 1000000;
+	
+	private double graphicalSimilarityThreshold = 1d;
+
+	private Class<? extends EditDistance> graphicalEditDistance;
 
 	public boolean isSemanticGathererEnabled() {
 		return semanticGathererEnabled;
 	}
 
+	public GathererOptions setGraphicalSimilarityThreshold(double graphicalSimilarityThreshold) {
+		this.graphicalSimilarityThreshold = graphicalSimilarityThreshold;
+		return this;
+	}
+	
+	public double getGraphicalSimilarityThreshold() {
+		return graphicalSimilarityThreshold;
+	}
+	
 	public GathererOptions setSemanticGathererEnabled(boolean semanticGathererEnabled) {
 		this.semanticGathererEnabled = semanticGathererEnabled;
 		return this;
@@ -67,5 +84,23 @@ public class GathererOptions {
 	public GathererOptions setMaxNumberOfComparisons(int maxNumberOfComparisons) {
 		this.maxNumberOfComparisons = maxNumberOfComparisons;
 		return this;
+	}
+	
+	public GathererOptions setGraphicalGathererEnabled(boolean graphicalGathererEnabled) {
+		this.graphicalGathererEnabled = graphicalGathererEnabled;
+		return this;
+	}
+	
+	public boolean isGraphicalGathererEnabled() {
+		return graphicalGathererEnabled;
+	}
+	
+	public GathererOptions setGraphicalEditDistance(Class<? extends EditDistance> editDistance) {
+		this.graphicalEditDistance = editDistance;
+		return this;
+	}
+	
+	public Class<? extends EditDistance> getGraphicalEditDistance() {
+		return graphicalEditDistance;
 	}
 }

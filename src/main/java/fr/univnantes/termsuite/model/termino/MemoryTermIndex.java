@@ -229,7 +229,7 @@ public class MemoryTermIndex implements TermIndex {
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
 		if(!this.customIndexes.containsKey(indexName))
-			createCustomIndex(indexName, TermValueProviders.get(indexName));
+			createCustomIndex(indexName, TermValueProviders.get(indexName, this.lang.getLocale()));
 		return this.customIndexes.get(indexName);
 	}
 

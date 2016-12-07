@@ -9,14 +9,15 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.metrics.DiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.utils.TermHistory;
 
-public class YamlTermGatherer {
-	private static final Logger LOGGER = LoggerFactory.getLogger(YamlTermGatherer.class);
+public class TermGatherer {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermGatherer.class);
 
 	private static final int OBSERVING_STEP = 1000;
 
@@ -30,27 +31,27 @@ public class YamlTermGatherer {
 
 	private Optional<MultimapFlatResource> dico = Optional.empty();
 
-	public YamlTermGatherer setGathererOptions(GathererOptions gathererOptions) {
+	public TermGatherer setGathererOptions(GathererOptions gathererOptions) {
 		this.gathererOptions = gathererOptions;
 		return this;
 	}
 	
-	public YamlTermGatherer setRules(YamlRuleSet rules) {
+	public TermGatherer setRules(YamlRuleSet rules) {
 		this.rules = rules;
 		return this;
 	}
 	
-	public YamlTermGatherer setDictionary(MultimapFlatResource dico) {
+	public TermGatherer setDictionary(MultimapFlatResource dico) {
 		this.dico = Optional.of(dico);
 		return this;
 	}
 	
-	public YamlTermGatherer setTaskObserver(SubTaskObserver taskObserver) {
+	public TermGatherer setTaskObserver(SubTaskObserver taskObserver) {
 		this.taskObserver = Optional.of(taskObserver);
 		return this;
 	}
 	
-	public YamlTermGatherer setHistory(TermHistory history) {
+	public TermGatherer setHistory(TermHistory history) {
 		this.history = history;
 		return this;
 	}
@@ -118,6 +119,18 @@ public class YamlTermGatherer {
 			.setVariantRules(rules.getVariantRules(RuleType.SEMANTIC))	
 			.gather(termIndex);
 		}
+		
+		
+		if(gathererOptions.isGraphicalGathererEnabled()) {
+			LOGGER.info("Gathering graphical variants");
+			new GraphicalGatherer()
+				.setDistance(new DiacriticInsensitiveLevenshtein(termIndex.getLang().getLocale()))
+				.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
+				.setNbFixedLetters(termIndex.getLang().getGraphicalVariantNbPreindexingLetters())
+				.setHistory(history)
+				.gather(termIndex);
+		}
+
 		sw.stop();
 		LOGGER.debug("{} finished in {}", this.getClass().getSimpleName(), sw);
 	}

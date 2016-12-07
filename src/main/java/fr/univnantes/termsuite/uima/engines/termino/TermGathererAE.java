@@ -55,7 +55,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
-import fr.univnantes.termsuite.engines.gatherer.YamlTermGatherer;
+import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
@@ -87,6 +87,14 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name=SEMANTIC_ALIGNER_ENABLED, mandatory=false)
 	private boolean semanticAlignerEnabled;
 
+	public static final String LANG = "lang";
+	@ConfigurationParameter(name=LANG, mandatory=true)
+	private String lang;
+
+	public static final String SIMILARITY_THRESHOLD = "SimilarityThreshold";
+	@ConfigurationParameter(name=SIMILARITY_THRESHOLD, mandatory=true)
+	private double threshold;
+
 	
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 	
@@ -105,7 +113,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 			throws AnalysisEngineProcessException {
 		LOGGER.info("Starting syntactic term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
 		
-		YamlTermGatherer gatherer = new YamlTermGatherer();
+		TermGatherer gatherer = new TermGatherer();
 		if(taskObserver.isPresent())
 			gatherer
 				.setTaskObserver(taskObserver.get());
@@ -114,7 +122,8 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 				.setRules(yamlVariantRules.getRuleSet());
 		
 		gatherer.setGathererOptions(new GathererOptions()
-				.setSemanticGathererEnabled(semanticAlignerEnabled));
+				.setSemanticGathererEnabled(semanticAlignerEnabled)
+				.setGraphicalSimilarityThreshold(threshold));
 		
 		if(synonymResource != null)
 			gatherer.setDictionary(synonymResource);

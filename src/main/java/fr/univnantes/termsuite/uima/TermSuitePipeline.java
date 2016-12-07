@@ -117,7 +117,6 @@ import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionVariantGathererAE;
-import fr.univnantes.termsuite.uima.engines.termino.GraphicalVariantGatherer;
 import fr.univnantes.termsuite.uima.engines.termino.MergerAE;
 import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.PostProcessorAE;
@@ -1937,26 +1936,6 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline aeGraphicalVariantGatherer()   {
-		try {
-			float th = graphicalVariantSimilarityThreshold.isPresent() ? 
-					(float)graphicalVariantSimilarityThreshold.get().doubleValue() 
-						: 0.9f;
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					GraphicalVariantGatherer.class,
-					GraphicalVariantGatherer.LANG, lang.getCode(),
-					GraphicalVariantGatherer.SIMILARITY_THRESHOLD, th
-				);
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resObserver());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-
-			return aggregateAndReturn(ae, GraphicalVariantGatherer.TASK_NAME, 1);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
 	/**
 	 * Filters out URLs from CAS.
 	 * 
@@ -1983,9 +1962,15 @@ public class TermSuitePipeline {
 	 */
 	public TermSuitePipeline aeTermVariantGatherer(boolean semanticAlignmentEnabled)   {
 		try {
+			float th = graphicalVariantSimilarityThreshold.isPresent() ? 
+					(float)graphicalVariantSimilarityThreshold.get().doubleValue() 
+						: 0.9f;
+
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TermGathererAE.class,
-					TermGathererAE.SEMANTIC_ALIGNER_ENABLED, semanticAlignmentEnabled
+					TermGathererAE.SEMANTIC_ALIGNER_ENABLED, semanticAlignmentEnabled,
+					TermGathererAE.LANG, lang.getCode(),
+					TermGathererAE.SIMILARITY_THRESHOLD, th
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resSyntacticVariantRules());

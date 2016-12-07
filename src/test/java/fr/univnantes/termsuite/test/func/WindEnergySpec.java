@@ -161,7 +161,6 @@ public abstract class WindEnergySpec {
 			.aePrefixSplitter()
 			.aeSuffixDerivationDetector()
 			.aeTermVariantGatherer(false)
-			.aeGraphicalVariantGatherer()
 			.aeExtensionVariantGatherer()
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();

@@ -26,25 +26,18 @@ package fr.univnantes.termsuite.test.unit.engines;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.fit.factory.ExternalResourceFactory;
-import org.apache.uima.resource.ExternalResourceDescription;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
+import fr.univnantes.termsuite.metrics.DiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
-import fr.univnantes.termsuite.uima.engines.termino.GraphicalVariantGatherer;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
-import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class GraphicalVariantGathererSpec {
@@ -80,46 +73,15 @@ public class GraphicalVariantGathererSpec {
 	}
 
 
-	private AnalysisEngine makeAE(Lang lang, double similarityThreashhold) throws Exception {
-		TermSuiteResourceManager.getInstance().clear();
-
-		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
-				GraphicalVariantGatherer.class,
-				GraphicalVariantGatherer.LANG, lang.getCode(),
-				GraphicalVariantGatherer.SIMILARITY_THRESHOLD, (float)similarityThreashhold
-			);
-		
-		/*
-		 * The history resource
-		 */
-		String  historyResourceName = "Toto";
-		TermSuiteResourceManager.getInstance().register(historyResourceName, new TermHistory());
-		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermHistoryResource.TERM_HISTORY,
-				TermHistoryResource.class, 
-				historyResourceName
-		);
-		ExternalResourceFactory.bindResource(aeDesc, historyResourceDesc);
-
-		
-		/*
-		 * The term index resource
-		 */
-		TermSuiteResourceManager.getInstance().register(this.termIndex.getName(), this.termIndex);
-		ExternalResourceDescription termIndexDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermIndexResource.TERM_INDEX,
-				TermIndexResource.class, 
-				this.termIndex.getName()
-		);
-		ExternalResourceFactory.bindResource(aeDesc, termIndexDesc);
-
-		AnalysisEngine ae = AnalysisEngineFactory.createEngine(aeDesc);
-		return ae;
+	private GraphicalGatherer makeAE(double similarityThreashhold) throws Exception {
+		return new GraphicalGatherer()
+				.setDistance(new DiacriticInsensitiveLevenshtein(Lang.FR.getLocale()))
+				.setSimilarityThreshold((float)similarityThreashhold);
 	}
 
 	@Test
 	public void testCaseInsensitive() throws  Exception {
-		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
+		makeAE( 1.0d).gather(termIndex);
 		assertThat(termIndex.getInboundRelations(this.abcdefghijkl)).hasSize(1)
 		.extracting("from")
 		.contains(this.abcdefghijklCapped);
@@ -135,7 +97,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
-		makeAE(Lang.FR, 1.0d).collectionProcessComplete();
+		makeAE( 1.0d).gather(termIndex);
 		assertThat(termIndex.getOutboundRelations(this.tetetete))
 			.hasSize(1)
 			.extracting("type", "to")
@@ -144,7 +106,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
-		makeAE(Lang.FR, 0.9d).collectionProcessComplete();
+		makeAE( 0.9d).gather(termIndex);
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("to")
@@ -161,7 +123,7 @@ public class GraphicalVariantGathererSpec {
 	
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
-		makeAE(Lang.FR, 0.8d).collectionProcessComplete();
+		makeAE(0.8d).gather(termIndex);
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("to")

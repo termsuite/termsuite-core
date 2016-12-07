@@ -408,8 +408,7 @@ public class TerminoExtractor {
 		
 		if(variationDetectionEnabled)
 			pipeline
-				.aeTermVariantGatherer(semanticAlignerEnabled)
-				.aeGraphicalVariantGatherer();
+				.aeTermVariantGatherer(semanticAlignerEnabled);
 
 		pipeline
 			.aeExtensionVariantGatherer();

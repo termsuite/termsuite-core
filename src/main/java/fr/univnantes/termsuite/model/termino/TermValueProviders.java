@@ -26,6 +26,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -35,7 +36,6 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.morpho.CompoundUtils;
@@ -48,6 +48,7 @@ import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.CollectionUtils;
 import fr.univnantes.termsuite.utils.Pair;
+import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -210,8 +211,6 @@ public class TermValueProviders {
 		}
 	};
 
-	private static final Map<String, TermValueProvider> valueProviders = Maps.newHashMap();
-
 	public static final TermValueProvider PREFIXATION_LEMMAS = new AbstractTermValueProvider(TermIndexes.PREFIXATION_LEMMAS) {
 		@Override
 		public Collection<String> getClasses(TermIndex termIndex, Term term) {
@@ -243,20 +242,80 @@ public class TermValueProviders {
 		}
 	};
 
-	static {
-		valueProviders.put(TermIndexes.SINGLE_WORD_LEMMA, TERM_SINGLE_WORD_LEMMA_PROVIDER);
-		valueProviders.put(TermIndexes.TERM_NOCLASS, TERM_NOCLASS_PROVIDER);
-		valueProviders.put(TermIndexes.SWT_GROUPING_KEYS, WORD_SWT_GROUPING_KEYS_PROVIDER);
-		valueProviders.put(TermIndexes.WORD_LEMMA, WORD_LEMMA_PROVIDER);
-		valueProviders.put(TermIndexes.LEMMA_LOWER_CASE, TERM_LEMMA_LOWER_CASE_PROVIDER);
-		valueProviders.put(TermIndexes.WORD_COUPLE_LEMMA_STEM, WORD_LEMMA_STEM_PROVIDER);
-		valueProviders.put(TermIndexes.ALLCOMP_PAIRS, ALLCOMP_PAIRS);
-		valueProviders.put(TermIndexes.DERIVATION_LEMMAS, DERIVATION_LEMMAS);
-		valueProviders.put(TermIndexes.PREFIXATION_LEMMAS, PREFIXATION_LEMMAS);
+	private static class FirstLettersProvider extends AbstractTermValueProvider {
+		
+		private int nbLetters;
+		private Locale locale;
+
+		
+		public FirstLettersProvider(int nbLetters, Locale locale) {
+			super(nbLetters + "-first-letters");
+			this.nbLetters = nbLetters;
+			this.locale = locale;
+		}
+
+
+		@Override
+		public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			if(term.getWords().size() == 1) {
+//				return ImmutableList.of();
+				Word word = term.getWords().get(0).getWord();
+				if(word.getLemma().length() < 5)
+					return ImmutableList.of();
+				else {
+					String substring = StringUtils.replaceAccents(word.getLemma().toLowerCase(locale).substring(0, 4));
+					return ImmutableList.of(substring);
+				}
+			}
+			StringBuilder builder = new StringBuilder();
+			String normalizedStem;
+			int i = 0;
+			for(TermWord tw:term.getWords()) {
+				if(i>0) {
+					builder.append(TermSuiteConstants.COLONS);
+				}
+				normalizedStem = tw.getWord().getNormalizedStem();
+				if(normalizedStem.length() > nbLetters)
+					builder.append(normalizedStem.substring(0, nbLetters).toLowerCase(locale));
+				else
+					builder.append(normalizedStem.toLowerCase(locale));
+				i++;
+			}
+			if(builder.length() >= nbLetters)
+				return ImmutableList.of(builder.toString());
+			else
+				return ImmutableList.of();
+		}
+	};
+
+	public static TermValueProvider get(String key, Locale locale) {
+		switch(key) {
+		case TermIndexes.FIRST_LETTERS_2:
+			return new FirstLettersProvider(2, locale);
+		case TermIndexes.FIRST_LETTERS_3:
+			return new FirstLettersProvider(3, locale);
+		case TermIndexes.FIRST_LETTERS_4:
+			return new FirstLettersProvider(4, locale);
+		default:
+			return get(key);
+		}
 	}
 
 	public static TermValueProvider get(String key) {
-		return valueProviders.get(key);
+		switch(key) {
+		case TermIndexes.SINGLE_WORD_LEMMA: return TERM_SINGLE_WORD_LEMMA_PROVIDER;
+		case TermIndexes.TERM_NOCLASS: return TERM_NOCLASS_PROVIDER;
+		case TermIndexes.SWT_GROUPING_KEYS: return WORD_SWT_GROUPING_KEYS_PROVIDER;
+		case TermIndexes.WORD_LEMMA: return WORD_LEMMA_PROVIDER;
+		case TermIndexes.LEMMA_LOWER_CASE: return TERM_LEMMA_LOWER_CASE_PROVIDER;
+		case TermIndexes.WORD_COUPLE_LEMMA_STEM: return WORD_LEMMA_STEM_PROVIDER;
+		case TermIndexes.ALLCOMP_PAIRS: return ALLCOMP_PAIRS;
+		case TermIndexes.DERIVATION_LEMMAS: return DERIVATION_LEMMAS;
+		case TermIndexes.PREFIXATION_LEMMAS: return PREFIXATION_LEMMAS;
+		default:
+			throw new IllegalStateException("Unknown index: " + key);
+		}
+
 	}
 
 }

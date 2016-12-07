@@ -36,7 +36,7 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
-import fr.univnantes.termsuite.engines.gatherer.YamlTermGatherer;
+import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -58,7 +58,7 @@ public class TermGathererSpec {
 	private Term geothermie_hydraulique_solaire;
 	private Term geothermie_hydraulique;
 	
-	private YamlTermGatherer engine;
+	private TermGatherer engine;
 	
 	private static final String VARIANT_RULE_SET = "src/test/resources/fr/univnantes/termsuite/test/resources/variant-rules.yaml";
 	@Before
@@ -66,7 +66,7 @@ public class TermGathererSpec {
 		String text = Files.toString(new File(VARIANT_RULE_SET), Charsets.UTF_8);
 		this.termIndex = Fixtures.termIndex();
 		populateTermIndex(new TermFactory(termIndex));
-		engine = new YamlTermGatherer()
+		engine = new TermGatherer()
 			.setRules(YamlRuleSetIO.fromYaml(text));
 		
 		engine.gather(this.termIndex);
