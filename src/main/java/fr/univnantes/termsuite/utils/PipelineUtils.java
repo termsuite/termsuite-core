@@ -11,7 +11,7 @@ public class PipelineUtils {
 		case THRESHHOLD:
 			pipeline.aeThresholdCleaner(
 					config.getFilterProperty(), 
-					(float)config.getThreshhold());
+					(double)config.getThreshhold());
 			break;
 		case TOP_N:
 			pipeline.aeTopNCleaner(

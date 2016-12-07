@@ -91,10 +91,10 @@ public class EvalTrace implements SharedResourceObject {
 				return ((1 + beta*beta)*getPrecision()*getRecall())/(beta*beta*(getPrecision()+getRecall()));
 		}
 		public double getPrecision() {
-			return ((float)this.tp) / this.rank;
+			return ((double)this.tp) / this.rank;
 		}
 		public double getRecall() {
-			return ((float)this.tp) / EvalTrace.this.rtlSize;
+			return ((double)this.tp) / EvalTrace.this.rtlSize;
 		}
 		public double getValue(String pName) {
 			switch (pName) {

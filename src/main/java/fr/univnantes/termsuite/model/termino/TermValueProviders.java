@@ -38,6 +38,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.engines.morpho.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -45,7 +46,6 @@ import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompoundUtils;
 import fr.univnantes.termsuite.utils.CollectionUtils;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;

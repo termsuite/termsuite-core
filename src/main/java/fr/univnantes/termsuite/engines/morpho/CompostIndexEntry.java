@@ -19,15 +19,17 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.morpho;
 
-public class CompostDicoEntry {
+import com.google.common.base.MoreObjects;
+
+public class CompostIndexEntry {
 	private String text;
 	private boolean inDico = false;
 	private boolean inCorpus = false;
 	private boolean inNeoClassicalPrefix = false;
 	
-	public CompostDicoEntry() {
+	public CompostIndexEntry() {
 		super();
 	}
 
@@ -61,5 +63,16 @@ public class CompostDicoEntry {
 	
 	public void setText(String text) {
 		this.text = text;
+	}
+	
+	@Override
+	public String toString() {
+		return MoreObjects.toStringHelper(this)
+				.add("text", this.text)
+				.addValue(this.inDico)
+				.addValue(this.inCorpus)
+				.addValue(this.isInNeoClassicalPrefix())
+				.toString()
+				;
 	}
 }

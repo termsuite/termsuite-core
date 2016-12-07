@@ -93,7 +93,7 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 			termIndexResource.getTermIndex().deleteMany(new FrequencyUnderThreshholdSelector(currentThreshhold));
 
 			int sizeAfter = termIndexResource.getTermIndex().getTerms().size();
-			float removalRatio = ((float)(sizeBefore - sizeAfter))/sizeBefore;
+			double removalRatio = ((double)(sizeBefore - sizeAfter))/sizeBefore;
 			logger.info(
 					"Cleaned {} terms [before: {}, after: {}, ratio: {}] from term index (maxSize: {}, currentTh: {})", 
 					sizeBefore - sizeAfter,

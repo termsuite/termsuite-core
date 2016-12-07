@@ -37,7 +37,6 @@ import org.junit.runners.Suite;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
@@ -139,13 +138,6 @@ public class FunctionalTests {
 	}
 		
 	
-	public static Path getTempXMICasDirectory(Corpus corpus, Lang lang) {
-		Path path = getTestTmpDir()
-						.resolve("xmi")
-						.resolve(String.format("%s-%s", corpus.getShortName(), lang.getCode()));
-		return createIfNotExist(path);
-	}
-
 	private static Path createIfNotExist(Path path) {
 		if(!path.toFile().exists())
 			path.toFile().mkdirs();

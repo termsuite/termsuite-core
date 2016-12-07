@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.morpho;
 
 public  class CuttingPoint implements Comparable<CuttingPoint> {
 	private int index;

@@ -36,6 +36,7 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.engines.morpho.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
@@ -51,7 +52,6 @@ import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.uima.TermSuiteResourceException;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompoundUtils;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 
 public class TermUtils {

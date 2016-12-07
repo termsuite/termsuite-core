@@ -80,13 +80,13 @@ public class GraphicalVariantGathererSpec {
 	}
 
 
-	private AnalysisEngine makeAE(Lang lang, float similarityThreashhold) throws Exception {
+	private AnalysisEngine makeAE(Lang lang, double similarityThreashhold) throws Exception {
 		TermSuiteResourceManager.getInstance().clear();
 
 		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
 				GraphicalVariantGatherer.class,
 				GraphicalVariantGatherer.LANG, lang.getCode(),
-				GraphicalVariantGatherer.SIMILARITY_THRESHOLD, similarityThreashhold
+				GraphicalVariantGatherer.SIMILARITY_THRESHOLD, (float)similarityThreashhold
 			);
 		
 		/*
@@ -135,7 +135,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
-		makeAE(Lang.FR, 1.0f).collectionProcessComplete();
+		makeAE(Lang.FR, 1.0d).collectionProcessComplete();
 		assertThat(termIndex.getOutboundRelations(this.tetetete))
 			.hasSize(1)
 			.extracting("type", "to")
@@ -144,7 +144,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
-		makeAE(Lang.FR, 0.9f).collectionProcessComplete();
+		makeAE(Lang.FR, 0.9d).collectionProcessComplete();
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("to")
@@ -161,7 +161,7 @@ public class GraphicalVariantGathererSpec {
 	
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
-		makeAE(Lang.FR, 0.8f).collectionProcessComplete();
+		makeAE(Lang.FR, 0.8d).collectionProcessComplete();
 		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("to")

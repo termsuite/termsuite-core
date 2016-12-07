@@ -29,7 +29,7 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompostIndexEntry;
+import fr.univnantes.termsuite.engines.morpho.CompostIndexEntry;
 import fr.univnantes.termsuite.utils.IndexingKey;
 
 public class CompostIndex {

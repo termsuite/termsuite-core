@@ -88,7 +88,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 
 	public static final String SIMILARITY_THRESHOLD = "SimilarityThreshold";
 	@ConfigurationParameter(name=SIMILARITY_THRESHOLD, mandatory=true)
-	private float threshold;
+	private double threshold;
 	
 	private EditDistance distance;
 	private Lang language;
@@ -187,7 +187,7 @@ public class GraphicalVariantGatherer  extends JCasAnnotator_ImplBase {
 			@Override
 			public void run() {
 				GraphicalVariantGatherer.logger.info("progress for graphical variant gathering: {}%",
-						String.format("%.2f", ((float)nbComparisons*100)/totalComparisons)
+						String.format("%.2f", ((double)nbComparisons*100)/totalComparisons)
 						);
 			}
 		}, 5000l, 5000l);

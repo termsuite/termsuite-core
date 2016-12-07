@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.morpho;
 
 import java.util.HashSet;
 import java.util.Iterator;

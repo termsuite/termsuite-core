@@ -28,6 +28,7 @@ import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 
+import fr.univnantes.termsuite.engines.morpho.Segmentation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;

@@ -239,19 +239,19 @@ public class TermSuitePipeline {
 	/*
 	 * Compost Params
 	 */
-	private Optional<Float> alpha = Optional.empty();
-	private Optional<Float> beta = Optional.empty();
-	private Optional<Float> gamma = Optional.empty();
-	private Optional<Float> delta = Optional.empty();
-	private Optional<Float> compostScoreThreshold = Optional.empty();
+	private Optional<Double> alpha = Optional.empty();
+	private Optional<Double> beta = Optional.empty();
+	private Optional<Double> gamma = Optional.empty();
+	private Optional<Double> delta = Optional.empty();
+	private Optional<Double> compostScoreThreshold = Optional.empty();
 	private Optional<Integer> compostMinComponentSize = Optional.empty();
 	private Optional<Integer> compostMaxComponentNum = Optional.empty();
-	private Optional<Float> compostSegmentSimilarityThreshold = Optional.of(1f);
+	private Optional<Double> compostSegmentSimilarityThreshold = Optional.of(1d);
 
 	/*
 	 * Graphical Variant Gatherer parameters
 	 */
-	private Optional<Float> graphicalVariantSimilarityThreshold = Optional.empty();
+	private Optional<Double> graphicalVariantSimilarityThreshold = Optional.empty();
 	
 	/* JSON */
 	private boolean exportJsonWithOccurrences = true;
@@ -1845,14 +1845,14 @@ public class TermSuitePipeline {
 	}
 
 	
-	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				TermIndexThresholdCleaner.class,
 				AbstractTermIndexCleaner.CLEANING_PROPERTY, property,
 				AbstractTermIndexCleaner.NUM_TERMS_CLEANING_TRIGGER, termIndexSizeTrigger,
 				AbstractTermIndexCleaner.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
-				TermIndexThresholdCleaner.THRESHOLD, threshold
+				TermIndexThresholdCleaner.THRESHOLD, (float)threshold
 			);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			
@@ -1884,11 +1884,11 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeThresholdCleanerPeriodic(TermProperty property, float threshold, int cleaningPeriod)   {
+	public TermSuitePipeline aeThresholdCleanerPeriodic(TermProperty property, double threshold, int cleaningPeriod)   {
 		return aeThresholdCleaner(property, threshold, true, cleaningPeriod, 0);
 	}
 
-	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, float threshold, int termIndexSizeTrigger)   {
+	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, double threshold, int termIndexSizeTrigger)   {
 		return aeThresholdCleaner(property, threshold, false, 0, termIndexSizeTrigger);
 	}
 
@@ -1898,7 +1898,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline aeThresholdCleaner(TermProperty property, float threshold) {
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold) {
 		return aeThresholdCleaner(property, threshold, false, 0, 0);
 	}
 
@@ -1932,17 +1932,20 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline setGraphicalVariantSimilarityThreshold(float th) {
+	public TermSuitePipeline setGraphicalVariantSimilarityThreshold(double th) {
 		this.graphicalVariantSimilarityThreshold = Optional.of(th);
 		return this;
 	}
 	
 	public TermSuitePipeline aeGraphicalVariantGatherer()   {
 		try {
+			float th = graphicalVariantSimilarityThreshold.isPresent() ? 
+					(float)graphicalVariantSimilarityThreshold.get().doubleValue() 
+						: 0.9f;
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					GraphicalVariantGatherer.class,
 					GraphicalVariantGatherer.LANG, lang.getCode(),
-					GraphicalVariantGatherer.SIMILARITY_THRESHOLD, graphicalVariantSimilarityThreshold.isPresent() ? graphicalVariantSimilarityThreshold.get() : 0.9f
+					GraphicalVariantGatherer.SIMILARITY_THRESHOLD, th
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
@@ -2143,7 +2146,7 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline setCompostCoeffs(float alpha, float beta, float gamma, float delta) {
+	public TermSuitePipeline setCompostCoeffs(double alpha, double beta, double gamma, double delta) {
 		Preconditions.checkArgument(alpha + beta + gamma + delta == 1.0f, "The sum of coeff must be 1.0");
 		this.alpha = Optional.of(alpha);
 		this.beta = Optional.of(beta);
@@ -2162,13 +2165,13 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline setCompostScoreThreshold(float compostScoreThreshold) {
+	public TermSuitePipeline setCompostScoreThreshold(double compostScoreThreshold) {
 		this.compostScoreThreshold = Optional.of(compostScoreThreshold);
 		return this;
 	}
 	
 	public TermSuitePipeline setCompostSegmentSimilarityThreshold(
-			float compostSegmentSimilarityThreshold) {
+			double compostSegmentSimilarityThreshold) {
 		this.compostSegmentSimilarityThreshold = Optional.of(compostSegmentSimilarityThreshold);
 		return this;
 	}
@@ -2177,14 +2180,14 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					CompostAE.class,
-					CompostAE.SCORE_THRESHOLD, this.compostScoreThreshold.isPresent() ? this.compostScoreThreshold.get() : this.lang.getCompostScoreThreshold(),
-					CompostAE.ALPHA, alpha.isPresent() ? alpha.get() : lang.getCompostAlpha(),
-					CompostAE.BETA, beta.isPresent() ? beta.get() : lang.getCompostBeta(),
-					CompostAE.GAMMA, gamma.isPresent() ? gamma.get() : lang.getCompostGamma(),
-					CompostAE.DELTA, delta.isPresent() ? delta.get() : lang.getCompostDelta(),
+					CompostAE.SCORE_THRESHOLD, (float) (this.compostScoreThreshold.isPresent() ? this.compostScoreThreshold.get() : this.lang.getCompostScoreThreshold()),
+					CompostAE.ALPHA, (float) (alpha.isPresent() ? alpha.get() : lang.getCompostAlpha()),
+					CompostAE.BETA, (float) (beta.isPresent() ? beta.get() : lang.getCompostBeta()),
+					CompostAE.GAMMA, (float) (gamma.isPresent() ? gamma.get() : lang.getCompostGamma()),
+					CompostAE.DELTA, (float) (delta.isPresent() ? delta.get() : lang.getCompostDelta()),
 					CompostAE.MIN_COMPONENT_SIZE, this.compostMinComponentSize.isPresent() ? this.compostMinComponentSize.get() : this.lang.getCompostMinComponentSize(),
 					CompostAE.MAX_NUMBER_OF_COMPONENTS, this.compostMaxComponentNum.isPresent() ? this.compostMaxComponentNum.get() : this.lang.getCompostMaxComponentNumber(),
-					CompostAE.SEGMENT_SIMILARITY_THRESHOLD, this.compostSegmentSimilarityThreshold.get()
+					CompostAE.SEGMENT_SIMILARITY_THRESHOLD, (float) this.compostSegmentSimilarityThreshold.get().doubleValue()
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());

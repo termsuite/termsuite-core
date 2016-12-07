@@ -29,7 +29,7 @@ import org.junit.Test;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.uima.engines.termino.morpho.Segmentation;
+import fr.univnantes.termsuite.engines.morpho.Segmentation;
 
 public class SegmentationSpec {
 	private static String toStringList(List<Segmentation> segmentations) {

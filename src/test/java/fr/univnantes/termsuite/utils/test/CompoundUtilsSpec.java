@@ -34,10 +34,10 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
+import fr.univnantes.termsuite.engines.morpho.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompoundUtils;
 
 public class CompoundUtilsSpec {
 

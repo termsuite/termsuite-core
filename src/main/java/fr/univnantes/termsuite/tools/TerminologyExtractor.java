@@ -224,7 +224,7 @@ public class TerminologyExtractor {
     private String taggerHome = "";
     private String inlineText = null;
 	private TermSuiteCollection corpusType = TermSuiteCollection.TXT;
-	private float graphicalSimilarityThreshold = 0.9f;
+	private double graphicalSimilarityThreshold = 0.9f;
 
 	/*
 	 * Istex parameters
