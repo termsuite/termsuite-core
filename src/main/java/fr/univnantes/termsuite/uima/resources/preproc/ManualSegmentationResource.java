@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Maps;
 
 import fr.univnantes.julestar.uima.resources.MapResource;
-import fr.univnantes.termsuite.engines.morpho.Segmentation;
+import fr.univnantes.termsuite.engines.splitter.Segmentation;
 import fr.univnantes.termsuite.uima.resources.io.SegmentationParser;
 
 public class ManualSegmentationResource extends MapResource {

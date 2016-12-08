@@ -19,42 +19,35 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
-
-public class SegmentScoreEntry {
-	public static final SegmentScoreEntry SCORE_ZERO = new SegmentScoreEntry(null, null, 0, null);
+public  class CuttingPoint implements Comparable<CuttingPoint> {
+	private int index;
+	private int offset;
+	private boolean isHypen;
+	CuttingPoint(int index, int offset, boolean isHypen) {
+		super();
+		this.index = index;
+		this.offset = offset;
+		this.isHypen = isHypen;
+	}
+	public int getIndex() {
+		return index;
+	}
+	public int getOffset() {
+		return offset;
+	}
 	
-	private String segmentString;
-	private String lemma;
-	private double score;
-	private CompostIndexEntry dicoEntry;
-	
-	public SegmentScoreEntry(String segmentString, String lemma, double score,
-			CompostIndexEntry dicoEntry) {
-		this.segmentString = segmentString;
-		this.score = score;
-		this.lemma = lemma;
-		this.dicoEntry = dicoEntry;
-	}
-	public String getSegmentString() {
-		return segmentString;
-	}
-	public double getScore() {
-		return score;
-	}
-	public CompostIndexEntry getDicoEntry() {
-		return dicoEntry;
-	}
-	public String getLemma() {
-		return lemma;
-	}
 	@Override
-	public int hashCode() {
-		return segmentString.hashCode();
+	public int compareTo(CuttingPoint o) {
+		return Integer.compare(index, o.index);
 	}
+	
 	@Override
 	public String toString() {
-		return segmentString;
+		return ""+this.index + (this.offset>0 ? '*' : "");
+	}
+	public boolean isHypen() {
+		return this.isHypen;
 	}
 }

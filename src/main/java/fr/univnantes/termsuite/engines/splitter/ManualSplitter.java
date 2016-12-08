@@ -21,37 +21,24 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ExternalResource;
-import org.apache.uima.jcas.JCas;
-
-import fr.univnantes.termsuite.engines.morpho.Segmentation;
+import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 
-public class ManualCompositionSetter extends JCasAnnotator_ImplBase {
-//	private static final Logger LOGGER = LoggerFactory.getLogger(ManualCompositionSetter.class);
+public class ManualSplitter  {
 	
-	public static final String MANUAL_COMPOSITION_LIST = "ManualCompositionList";
-	@ExternalResource(key=MANUAL_COMPOSITION_LIST, mandatory=true)
 	private ManualSegmentationResource manualCompositions;
-
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
-
-	@Override
-	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		// do nothing
+	
+	public ManualSplitter setManualCompositions(ManualSegmentationResource manualCompositions) {
+		this.manualCompositions = manualCompositions;
+		return this;
 	}
 	
-	@Override
-	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+	public void split(TermIndex termIndex) {
 		Segmentation segmentation;
-		for(Word word:termIndexResource.getTermIndex().getWords()) {
+		for(Word word:termIndex.getWords()) {
 			segmentation = manualCompositions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1)

@@ -19,35 +19,64 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
-public  class CuttingPoint implements Comparable<CuttingPoint> {
-	private int index;
-	private int offset;
-	private boolean isHypen;
-	CuttingPoint(int index, int offset, boolean isHypen) {
-		super();
-		this.index = index;
-		this.offset = offset;
-		this.isHypen = isHypen;
-	}
-	public int getIndex() {
-		return index;
-	}
-	public int getOffset() {
-		return offset;
-	}
+import com.google.common.base.MoreObjects;
+
+public  class Segment implements Comparable<Segment> {
+	private int begin;
+	private int end;
+	
+	/* cached substring of the parent compound */
+	private String _substring;
+	private String lemma;
 	
 	@Override
-	public int compareTo(CuttingPoint o) {
-		return Integer.compare(index, o.index);
+	public int compareTo(Segment o) {
+		return Integer.compare(begin, o.begin);
+	}
+
+	public Segment(int begin, int end) {
+		super();
+		this.begin = begin;
+		this.end = end;
+	}
+
+	public int getBegin() {
+		return begin;
+	}
+
+	public int getEnd() {
+		return end;
 	}
 	
+	public String getSubstring() {
+		return _substring;
+	}
+	
+	public void setSubstring(String substring) {
+		this._substring = substring;
+	}
+
 	@Override
 	public String toString() {
-		return ""+this.index + (this.offset>0 ? '*' : "");
+		return MoreObjects.toStringHelper(this)
+				.add("substring", _substring)
+				.add("lemma", lemma)
+				.toString();
 	}
-	public boolean isHypen() {
-		return this.isHypen;
+
+	public String getLemma() {
+		return lemma;
+	}
+	
+	public void setLemma(String lemma) {
+		this.lemma = lemma;
+	}
+
+	public static Segment createFromParentString(int begin, int end, String string) {
+		Segment segment = new Segment(begin, end);
+		segment._substring = string.substring(begin, end);
+		return segment;
 	}
 }

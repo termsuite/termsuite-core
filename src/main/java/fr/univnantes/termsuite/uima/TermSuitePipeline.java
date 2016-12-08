@@ -117,6 +117,7 @@ import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionVariantGathererAE;
 import fr.univnantes.termsuite.uima.engines.termino.MergerAE;
+import fr.univnantes.termsuite.uima.engines.termino.MorphologicalAnalyzerAE;
 import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.PostProcessorAE;
 import fr.univnantes.termsuite.uima.engines.termino.Ranker;
@@ -127,12 +128,6 @@ import fr.univnantes.termsuite.uima.engines.termino.cleaning.AbstractTermIndexCl
 import fr.univnantes.termsuite.uima.engines.termino.cleaning.MaxSizeThresholdCleaner;
 import fr.univnantes.termsuite.uima.engines.termino.cleaning.TermIndexThresholdCleaner;
 import fr.univnantes.termsuite.uima.engines.termino.cleaning.TermIndexTopNCleaner;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.CompostAE;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.ManualCompositionSetter;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.ManualPrefixSetter;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.PrefixSplitter;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.SuffixDerivationDetecter;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.SuffixDerivationExceptionSetter;
 import fr.univnantes.termsuite.uima.readers.AbstractToTxtSaxHandler;
 import fr.univnantes.termsuite.uima.readers.CollectionDocument;
 import fr.univnantes.termsuite.uima.readers.EmptyCollectionReader;
@@ -1349,148 +1344,6 @@ public class TermSuitePipeline {
 
 	
 	/**
-	 * Naive morphological analysis of prefix compounds based on a 
-	 * prefix dictionary resource
-	 * 
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aePrefixSplitter()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					PrefixSplitter.class
-				);
-			
-			ExternalResourceDescription prefixTreeRes = ExternalResourceFactory.createExternalResourceDescription(
-					PrefixTree.class, 
-					getResUrl(TermSuiteResource.PREFIX_BANK));
-			
-			ExternalResourceFactory.bindResource(
-					ae,
-					PrefixTree.PREFIX_TREE, 
-					prefixTreeRes
-				);
-
-			ExternalResourceFactory.bindResource(ae, resHistory());
-			
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
-			return aggregateAndReturn(ae, "Splitting prefixes", 0)
-					.aePrefixExceptionsSetter();
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-	
-	public TermSuitePipeline aeSuffixDerivationDetector()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					SuffixDerivationDetecter.class
-				);
-			
-			ExternalResourceDescription suffixDerivationsRes = ExternalResourceFactory.createExternalResourceDescription(
-					SuffixDerivationList.class,
-					getResUrl(TermSuiteResource.SUFFIX_DERIVATIONS));
-			
-			ExternalResourceFactory.bindResource(
-					ae,
-					SuffixDerivationList.SUFFIX_DERIVATIONS, 
-					suffixDerivationsRes
-				);
-			
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-
-			return aggregateAndReturn(ae, "Detecting suffix derivations prefixes", 0)
-						.aeSuffixDerivationException();
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
-	private TermSuitePipeline aeSuffixDerivationException()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					SuffixDerivationExceptionSetter.class
-				);
-			
-			ExternalResourceDescription suffixDerivationsExceptionsRes = ExternalResourceFactory.createExternalResourceDescription(
-					MultimapFlatResource.class,
-					getResUrl(TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS));
-			
-			ExternalResourceFactory.bindResource(
-					ae,
-					SuffixDerivationExceptionSetter.SUFFIX_DERIVATION_EXCEPTION, 
-					suffixDerivationsExceptionsRes
-				);
-
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-
-			return aggregateAndReturn(ae, "Setting suffix derivation exceptions", 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-
-	}
-
-	
-
-	private TermSuitePipeline aeManualCompositionSetter()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ManualCompositionSetter.class
-				);
-			
-			ExternalResourceDescription manualCompositionListRes = ExternalResourceFactory.createExternalResourceDescription(
-					ManualSegmentationResource.class,
-					getResUrl(TermSuiteResource.MANUAL_COMPOSITIONS));
-			
-			ExternalResourceFactory.bindResource(
-					ae,
-					ManualCompositionSetter.MANUAL_COMPOSITION_LIST, 
-					manualCompositionListRes
-				);
-
-
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			
-			return aggregateAndReturn(ae, "Setting manual composition", 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-
-	}
-
-	private TermSuitePipeline aePrefixExceptionsSetter()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ManualPrefixSetter.class
-				);
-			
-			
-			ExternalResourceDescription prefixExceptionsRes = ExternalResourceFactory.createExternalResourceDescription(
-					ManualSegmentationResource.class,
-					getResUrl(TermSuiteResource.PREFIX_EXCEPTIONS));
-			
-			ExternalResourceFactory.bindResource(
-					ae,
-					ManualPrefixSetter.PREFIX_EXCEPTIONS, 
-					prefixExceptionsRes
-				);
-
-			ExternalResourceFactory.bindResource(ae, resTermIndex());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-
-			return aggregateAndReturn(ae, "Setting prefix exceptions", 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-
-	}
-
-	
-	/**
 	 * Removes from the term index any term having a 
 	 * stop word at its boundaries.
 	 * 
@@ -2134,30 +1987,85 @@ public class TermSuitePipeline {
 		return this;
 	}
 	
-	public TermSuitePipeline aeCompostSplitter()  {
+	public TermSuitePipeline aeMorphologicalAnalyzer()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					CompostAE.class,
-					CompostAE.SCORE_THRESHOLD, (float) (this.compostScoreThreshold.isPresent() ? this.compostScoreThreshold.get() : this.lang.getCompostScoreThreshold()),
-					CompostAE.ALPHA, (float) (alpha.isPresent() ? alpha.get() : lang.getCompostAlpha()),
-					CompostAE.BETA, (float) (beta.isPresent() ? beta.get() : lang.getCompostBeta()),
-					CompostAE.GAMMA, (float) (gamma.isPresent() ? gamma.get() : lang.getCompostGamma()),
-					CompostAE.DELTA, (float) (delta.isPresent() ? delta.get() : lang.getCompostDelta()),
-					CompostAE.MIN_COMPONENT_SIZE, this.compostMinComponentSize.isPresent() ? this.compostMinComponentSize.get() : this.lang.getCompostMinComponentSize(),
-					CompostAE.MAX_NUMBER_OF_COMPONENTS, this.compostMaxComponentNum.isPresent() ? this.compostMaxComponentNum.get() : this.lang.getCompostMaxComponentNumber(),
-					CompostAE.SEGMENT_SIMILARITY_THRESHOLD, (float) this.compostSegmentSimilarityThreshold.get().doubleValue()
+					MorphologicalAnalyzerAE.class,
+					MorphologicalAnalyzerAE.SCORE_THRESHOLD, (float) (this.compostScoreThreshold.isPresent() ? this.compostScoreThreshold.get() : this.lang.getCompostScoreThreshold()),
+					MorphologicalAnalyzerAE.ALPHA, (float) (alpha.isPresent() ? alpha.get() : lang.getCompostAlpha()),
+					MorphologicalAnalyzerAE.BETA, (float) (beta.isPresent() ? beta.get() : lang.getCompostBeta()),
+					MorphologicalAnalyzerAE.GAMMA, (float) (gamma.isPresent() ? gamma.get() : lang.getCompostGamma()),
+					MorphologicalAnalyzerAE.DELTA, (float) (delta.isPresent() ? delta.get() : lang.getCompostDelta()),
+					MorphologicalAnalyzerAE.MIN_COMPONENT_SIZE, this.compostMinComponentSize.isPresent() ? this.compostMinComponentSize.get() : this.lang.getCompostMinComponentSize(),
+					MorphologicalAnalyzerAE.MAX_NUMBER_OF_COMPONENTS, this.compostMaxComponentNum.isPresent() ? this.compostMaxComponentNum.get() : this.lang.getCompostMaxComponentNumber(),
+					MorphologicalAnalyzerAE.SEGMENT_SIMILARITY_THRESHOLD, (float) this.compostSegmentSimilarityThreshold.get().doubleValue()
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resObserver());
+
 			
+			ExternalResourceDescription prefixExceptionsRes = ExternalResourceFactory.createExternalResourceDescription(
+					ManualSegmentationResource.class,
+					getResUrl(TermSuiteResource.PREFIX_EXCEPTIONS));
 			
+			ExternalResourceFactory.bindResource(
+					ae,
+					MorphologicalAnalyzerAE.PREFIX_EXCEPTIONS, 
+					prefixExceptionsRes
+				);
+
+
+			
+			ExternalResourceDescription manualCompositionListRes = ExternalResourceFactory.createExternalResourceDescription(
+					ManualSegmentationResource.class,
+					getResUrl(TermSuiteResource.MANUAL_COMPOSITIONS));
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					MorphologicalAnalyzerAE.MANUAL_COMPOSITION_LIST, 
+					manualCompositionListRes
+				);
+
+
+			ExternalResourceDescription suffixDerivationsExceptionsRes = ExternalResourceFactory.createExternalResourceDescription(
+					MultimapFlatResource.class,
+					getResUrl(TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS));
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					MorphologicalAnalyzerAE.SUFFIX_DERIVATION_EXCEPTION, 
+					suffixDerivationsExceptionsRes
+				);
+
+
+			ExternalResourceDescription suffixDerivationsRes = ExternalResourceFactory.createExternalResourceDescription(
+					SuffixDerivationList.class,
+					getResUrl(TermSuiteResource.SUFFIX_DERIVATIONS));
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					SuffixDerivationList.SUFFIX_DERIVATIONS, 
+					suffixDerivationsRes
+				);
+
+			
+			ExternalResourceDescription prefixTreeRes = ExternalResourceFactory.createExternalResourceDescription(
+					PrefixTree.class, 
+					getResUrl(TermSuiteResource.PREFIX_BANK));
+			
+			ExternalResourceFactory.bindResource(
+					ae,
+					PrefixTree.PREFIX_TREE, 
+					prefixTreeRes
+				);
+
 			ExternalResourceDescription langDicoRes = ExternalResourceFactory.createExternalResourceDescription(
 					SimpleWordSet.class, 
 					getResUrl(TermSuiteResource.DICO));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.LANGUAGE_DICO, 
+					MorphologicalAnalyzerAE.LANGUAGE_DICO, 
 					langDicoRes
 				);
 			
@@ -2168,7 +2076,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.INFLECTION_RULES, 
+					MorphologicalAnalyzerAE.INFLECTION_RULES, 
 					compostInflectionRulesRes
 				);
 			
@@ -2179,7 +2087,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.TRANSFORMATION_RULES, 
+					MorphologicalAnalyzerAE.TRANSFORMATION_RULES, 
 					transformationRulesRes
 				);
 			
@@ -2189,7 +2097,7 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.STOP_LIST, 
+					MorphologicalAnalyzerAE.STOP_LIST, 
 					compostStopListRes
 				);
 			
@@ -2200,15 +2108,14 @@ public class TermSuitePipeline {
 			
 			ExternalResourceFactory.bindResource(
 					ae,
-					CompostAE.NEOCLASSICAL_PREFIXES, 
+					MorphologicalAnalyzerAE.NEOCLASSICAL_PREFIXES, 
 					neoClassicalPrefixesRes
 				);
 			
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			
-			return aeManualCompositionSetter()
-					.aggregateAndReturn(ae, CompostAE.TASK_NAME, 2);
+			return aggregateAndReturn(ae, MorphologicalAnalyzerAE.TASK_NAME, 2);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

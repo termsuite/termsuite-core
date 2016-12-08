@@ -19,64 +19,60 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
 import com.google.common.base.MoreObjects;
 
-public  class Segment implements Comparable<Segment> {
-	private int begin;
-	private int end;
+public class CompostIndexEntry {
+	private String text;
+	private boolean inDico = false;
+	private boolean inCorpus = false;
+	private boolean inNeoClassicalPrefix = false;
 	
-	/* cached substring of the parent compound */
-	private String _substring;
-	private String lemma;
-	
-	@Override
-	public int compareTo(Segment o) {
-		return Integer.compare(begin, o.begin);
-	}
-
-	public Segment(int begin, int end) {
+	public CompostIndexEntry() {
 		super();
-		this.begin = begin;
-		this.end = end;
 	}
 
-	public int getBegin() {
-		return begin;
+	public boolean isInDico() {
+		return inDico;
 	}
 
-	public int getEnd() {
-		return end;
+	public void setInDico(boolean inDico) {
+		this.inDico = inDico;
+	}
+
+	public boolean isInCorpus() {
+		return inCorpus;
+	}
+
+	public void setInCorpus(boolean inCorpus) {
+		this.inCorpus = inCorpus;
+	}
+
+	public boolean isInNeoClassicalPrefix() {
+		return inNeoClassicalPrefix;
+	}
+
+	public void setInNeoClassicalPrefix(boolean inNeoClassicalPrefix) {
+		this.inNeoClassicalPrefix = inNeoClassicalPrefix;
 	}
 	
-	public String getSubstring() {
-		return _substring;
+	public String getText() {
+		return text;
 	}
 	
-	public void setSubstring(String substring) {
-		this._substring = substring;
+	public void setText(String text) {
+		this.text = text;
 	}
-
+	
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
-				.add("substring", _substring)
-				.add("lemma", lemma)
-				.toString();
-	}
-
-	public String getLemma() {
-		return lemma;
-	}
-	
-	public void setLemma(String lemma) {
-		this.lemma = lemma;
-	}
-
-	public static Segment createFromParentString(int begin, int end, String string) {
-		Segment segment = new Segment(begin, end);
-		segment._substring = string.substring(begin, end);
-		return segment;
+				.add("text", this.text)
+				.addValue(this.inDico)
+				.addValue(this.inCorpus)
+				.addValue(this.isInNeoClassicalPrefix())
+				.toString()
+				;
 	}
 }

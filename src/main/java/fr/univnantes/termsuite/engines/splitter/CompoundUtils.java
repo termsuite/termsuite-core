@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
 import java.util.HashSet;
 import java.util.Iterator;

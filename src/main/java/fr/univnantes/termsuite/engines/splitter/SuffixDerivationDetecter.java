@@ -21,14 +21,10 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
 import java.util.List;
 
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ExternalResource;
-import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,36 +37,30 @@ import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.SuffixDerivation;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 import fr.univnantes.termsuite.utils.TermHistory;
 
-public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
+public class SuffixDerivationDetecter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SuffixDerivationDetecter.class);
 
 	private static final String LEMMA_INDEX = "LemmaIndex";
-	public static final String TASK_NAME = "Morphosyntactic analysis (suffix derivation)";
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
-	
-	@ExternalResource(key=SuffixDerivationList.SUFFIX_DERIVATIONS, mandatory=true)
 	private SuffixDerivationList suffixDerivationList;
 
-	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
-	private TermHistoryResource historyResource;
-
+	private TermHistory history;
 	
-	@Override
-	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		// do nothing
+	public SuffixDerivationDetecter setHistory(TermHistory history) {
+		this.history = history;
+		return this;
+	}
+
+	public SuffixDerivationDetecter setSuffixDerivationList(SuffixDerivationList suffixDerivationList) {
+		this.suffixDerivationList = suffixDerivationList;
+		return this;
 	}
 	
-	@Override
-	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Starting {} for TermIndex {}", TASK_NAME, this.termIndexResource.getTermIndex().getName());
-		TermIndex termIndex = termIndexResource.getTermIndex();
+	public void detectDerivations(TermIndex termIndex) {
+		LOGGER.info("Detecting suffix derivations for TermIndex {}", termIndex.getName());
 		CustomTermIndex lemmaIndex = termIndex.createCustomIndex(
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
@@ -110,18 +100,18 @@ public class SuffixDerivationDetecter extends JCasAnnotator_ImplBase {
 	}
 
 	private void watch(Term swt, Term baseTerm) {
-		TermHistory history = historyResource.getHistory();
-		if(history.isWatched(swt.getGroupingKey())) 
-			history.saveEvent(
-				swt.getGroupingKey(), 
-				this.getClass(), 
-				"Term is a derivate of term " + baseTerm);
-		
-		if(history.isWatched(baseTerm.getGroupingKey())) 
-			history.saveEvent(
-				baseTerm.getGroupingKey(), 
-				this.getClass(), 
-				"Term has a new found derivate: " + swt);
-
+		if(history != null) {
+			if(history.isWatched(swt.getGroupingKey())) 
+				history.saveEvent(
+						swt.getGroupingKey(), 
+						this.getClass(), 
+						"Term is a derivate of term " + baseTerm);
+			
+			if(history.isWatched(baseTerm.getGroupingKey())) 
+				history.saveEvent(
+						baseTerm.getGroupingKey(), 
+						this.getClass(), 
+						"Term has a new found derivate: " + swt);
+		}
 	}
 }

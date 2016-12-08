@@ -26,28 +26,21 @@ package fr.univnantes.termsuite.test.unit.engines;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.fit.factory.ExternalResourceFactory;
-import org.apache.uima.resource.ExternalResourceDescription;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.util.InvalidXMLException;
+import java.io.FileInputStream;
+
+import org.apache.uima.resource.DataResource;
 import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.engines.splitter.ManualSuffixDerivationDetecter;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
-import fr.univnantes.termsuite.uima.engines.termino.morpho.SuffixDerivationExceptionSetter;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
-import fr.univnantes.termsuite.utils.TermHistory;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
+import io.codearte.catchexception.shade.mockito.Mockito;
 
 public class SuffixDerivationExceptionSetterSpec {
 	
@@ -59,14 +52,19 @@ public class SuffixDerivationExceptionSetterSpec {
 	private Term pays;
 	private Term paysVraiDerive;
 	
-	private AnalysisEngine ae;
 	
 	@Before
 	public void set() throws Exception {
 		this.termIndex = Fixtures.termIndex();
-		makeAE();
+		DataResource dataReosurce = Mockito.mock(DataResource.class);
+		Mockito.when(dataReosurce.getInputStream())
+			.thenReturn(new FileInputStream("src/test/resources/fr/univnantes/termsuite/test/resources/suffix-derivation-exceptions.txt"));
+		MultimapFlatResource derivationExceptions = new MultimapFlatResource();
+		derivationExceptions.load(dataReosurce);
+		ManualSuffixDerivationDetecter engine = new ManualSuffixDerivationDetecter()
+			.setManualSuffixDerivations(derivationExceptions);
 		populateTermIndex(new TermFactory(termIndex));
-		ae.collectionProcessComplete();
+		engine.detectDerivations(termIndex);;
 	}
 
 	private void populateTermIndex(TermFactory termFactory) {
@@ -82,54 +80,6 @@ public class SuffixDerivationExceptionSetterSpec {
 		termFactory.addDerivesInto("N N", this.pays, this.paysVraiDerive);
 	}
 
-
-	private void makeAE() throws ResourceInitializationException, InvalidXMLException, ClassNotFoundException {
-		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		manager.clear();
-		manager.register(termIndex.getName(), termIndex);
-		
-		AnalysisEngineDescription aeDesc = AnalysisEngineFactory.createEngineDescription(
-				SuffixDerivationExceptionSetter.class
-			);
-		
-
-		/*
-		 * The history resource
-		 */
-		String  historyResourceName = "Toto";
-		manager.register(historyResourceName, new TermHistory());
-		ExternalResourceDescription historyResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermHistoryResource.TERM_HISTORY,
-				TermHistoryResource.class, 
-				historyResourceName
-		);
-		ExternalResourceFactory.bindResource(aeDesc, historyResourceDesc);
-		
-
-
-		/*
-		 * The term index resource
-		 */
-		ExternalResourceDescription termIndexDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermIndexResource.TERM_INDEX,
-				TermIndexResource.class, 
-				this.termIndex.getName()
-		);
-		ExternalResourceFactory.bindResource(aeDesc, termIndexDesc);
-
-		/*
-		 * The rule list resources
-		 */
-		ExternalResourceDescription rulesDesc = ExternalResourceFactory.createExternalResourceDescription(
-				SuffixDerivationExceptionSetter.SUFFIX_DERIVATION_EXCEPTION,
-				MultimapFlatResource.class, 
-				"file:fr/univnantes/termsuite/test/resources/suffix-derivation-exceptions.txt"
-		);
-		ExternalResourceFactory.bindResource(aeDesc, rulesDesc);
-		
-		ae = AnalysisEngineFactory.createEngine(aeDesc);
-	}
-	
 
 	@Test
 	public void testProcessCollectionComplete() {

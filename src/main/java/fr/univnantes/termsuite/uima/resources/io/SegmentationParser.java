@@ -30,8 +30,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.julestar.uima.resources.ResourceFormatException;
-import fr.univnantes.termsuite.engines.morpho.Segment;
-import fr.univnantes.termsuite.engines.morpho.Segmentation;
+import fr.univnantes.termsuite.engines.splitter.Segment;
+import fr.univnantes.termsuite.engines.splitter.Segmentation;
 
 public class SegmentationParser {
 	

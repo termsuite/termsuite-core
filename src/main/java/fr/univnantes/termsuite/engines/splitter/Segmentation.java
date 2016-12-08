@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -21,57 +21,48 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ExternalResource;
-import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.engines.morpho.Segmentation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 import fr.univnantes.termsuite.utils.TermHistory;
 
-public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
+public class ManualPrefixSetter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ManualPrefixSetter.class);
 	
-	public static final String PREFIX_EXCEPTIONS = "PrefixExceptions";
-	@ExternalResource(key=PREFIX_EXCEPTIONS, mandatory=true)
 	private ManualSegmentationResource prefixExceptions;
-
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
-
-	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
-	private TermHistoryResource historyResource;
-
-	@Override
-	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		// do nothing
+	private TermHistory history;
+	
+	public ManualPrefixSetter setHistory(TermHistory history) {
+		this.history = history;
+		return this;
 	}
 	
-	@Override
-	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+	public ManualPrefixSetter setPrefixExceptions(ManualSegmentationResource prefixExceptions) {
+		this.prefixExceptions = prefixExceptions;
+		return this;
+	}
+
+	public void setPrefixes(TermIndex termIndex)  {
 		Segmentation segmentation;
-		for(Term swt:termIndexResource.getTermIndex().getTerms()) {
+		for(Term swt:termIndex.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			Word word = swt.getWords().get(0).getWord();
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					for(TermRelation tv:Lists.newArrayList(termIndexResource.getTermIndex().getOutboundRelations(swt, RelationType.IS_PREFIX_OF))) {
-						termIndexResource.getTermIndex().removeRelation(tv);
+					for(TermRelation tv:Lists.newArrayList(termIndex.getOutboundRelations(swt, RelationType.IS_PREFIX_OF))) {
+						termIndex.removeRelation(tv);
 						watch(swt, tv);
 					}
 				} else {
@@ -83,18 +74,17 @@ public class ManualPrefixSetter extends JCasAnnotator_ImplBase {
 	}
 
 	private void watch(Term swt, TermRelation tv) {
-		TermHistory history = historyResource.getHistory();
-		if(history.isWatched(swt.getGroupingKey()))
-			history.saveEvent(
-				swt.getGroupingKey(), 
-				this.getClass(), 
-				"Prefix variation of term " + tv.getTo().getGroupingKey() + " removed");
-		if(history.isWatched(tv.getTo().getGroupingKey()))
-			history.saveEvent(
-				tv.getTo().getGroupingKey(), 
-				this.getClass(), 
-				"Prefix variation of term " + swt + " removed");
-
+		if(history != null) {
+			if(history.isWatched(swt.getGroupingKey()))
+				history.saveEvent(
+						swt.getGroupingKey(), 
+						this.getClass(), 
+						"Prefix variation of term " + tv.getTo().getGroupingKey() + " removed");
+			if(history.isWatched(tv.getTo().getGroupingKey()))
+				history.saveEvent(
+						tv.getTo().getGroupingKey(), 
+						this.getClass(), 
+						"Prefix variation of term " + swt + " removed");
+		}
 	}
-
 }

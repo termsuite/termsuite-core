@@ -398,10 +398,8 @@ public class TerminoExtractor {
 		pipeline
 				.aeStopWordsFilter()
 				.aeSpecificityComputer()
-				.aeCompostSplitter()
-				.aeExtensionDetector()
-				.aePrefixSplitter()
-				.aeSuffixDerivationDetector();
+				.aeMorphologicalAnalyzer()
+				.aeExtensionDetector();
 		
 		if(variationDetectionEnabled)
 			pipeline
@@ -409,7 +407,6 @@ public class TerminoExtractor {
 
 		pipeline
 			.aeExtensionVariantGatherer();
-		
 		
 		if(scoringEnabled)
 			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig());

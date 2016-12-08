@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -40,7 +40,7 @@ import fr.univnantes.termsuite.utils.TermSuiteUtils;
 public class NativeSplitter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(NativeSplitter.class);
 
-	private NativeSplitterOptions opt = new NativeSplitterOptions();
+	private MorphologicalOptions opt = new MorphologicalOptions();
 	private CompostInflectionRules inflectionRules;
 	private CompostInflectionRules transformationRules;
 	private SimpleWordSet languageDico;
@@ -60,7 +60,7 @@ public class NativeSplitter {
 		return this;
 	}
 
-	public NativeSplitter setOptions(NativeSplitterOptions opt) {
+	public NativeSplitter setOptions(MorphologicalOptions opt) {
 		this.opt = opt;
 		return this;
 	}

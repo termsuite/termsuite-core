@@ -59,10 +59,10 @@ public class SemanticGathererSpec {
 			.contains(
 					tuple("na: courant continu", false, "na: courant constant"),
 					tuple("npn: cadre de étude", true, "npn: cadre de projet"),
-					tuple("na: parc éolien", true, "na: ferme éolien"),
+//					tuple("na: parc éolien", true, "na: ferme éolien"),
 					tuple("na: puissance maximal", false, "na: puissance maximum")
 			)
-			.hasSize(2518)
+			.hasSize(2781)
 			;
 	}
 	

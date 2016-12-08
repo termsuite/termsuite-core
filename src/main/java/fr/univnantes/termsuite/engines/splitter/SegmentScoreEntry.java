@@ -19,47 +19,42 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.engines.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
-public class CompostDicoEntry {
-	private String text;
-	private boolean inDico = false;
-	private boolean inCorpus = false;
-	private boolean inNeoClassicalPrefix = false;
+
+public class SegmentScoreEntry {
+	public static final SegmentScoreEntry SCORE_ZERO = new SegmentScoreEntry(null, null, 0, null);
 	
-	public CompostDicoEntry() {
-		super();
-	}
-
-	public boolean isInDico() {
-		return inDico;
-	}
-
-	public void setInDico(boolean inDico) {
-		this.inDico = inDico;
-	}
-
-	public boolean isInCorpus() {
-		return inCorpus;
-	}
-
-	public void setInCorpus(boolean inCorpus) {
-		this.inCorpus = inCorpus;
-	}
-
-	public boolean isInNeoClassicalPrefix() {
-		return inNeoClassicalPrefix;
-	}
-
-	public void setInNeoClassicalPrefix(boolean inNeoClassicalPrefix) {
-		this.inNeoClassicalPrefix = inNeoClassicalPrefix;
-	}
+	private String segmentString;
+	private String lemma;
+	private double score;
+	private CompostIndexEntry dicoEntry;
 	
-	public String getText() {
-		return text;
+	public SegmentScoreEntry(String segmentString, String lemma, double score,
+			CompostIndexEntry dicoEntry) {
+		this.segmentString = segmentString;
+		this.score = score;
+		this.lemma = lemma;
+		this.dicoEntry = dicoEntry;
 	}
-	
-	public void setText(String text) {
-		this.text = text;
+	public String getSegmentString() {
+		return segmentString;
+	}
+	public double getScore() {
+		return score;
+	}
+	public CompostIndexEntry getDicoEntry() {
+		return dicoEntry;
+	}
+	public String getLemma() {
+		return lemma;
+	}
+	@Override
+	public int hashCode() {
+		return segmentString.hashCode();
+	}
+	@Override
+	public String toString() {
+		return segmentString;
 	}
 }

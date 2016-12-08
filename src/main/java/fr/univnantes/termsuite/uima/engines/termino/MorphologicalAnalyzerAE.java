@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.uima.engines.termino;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -31,12 +31,17 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.morpho.NativeSplitter;
-import fr.univnantes.termsuite.engines.morpho.NativeSplitterOptions;
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.engines.splitter.NativeSplitter;
+import fr.univnantes.termsuite.engines.splitter.MorphologicalAnalyzer;
+import fr.univnantes.termsuite.engines.splitter.MorphologicalOptions;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
+import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
+import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
+import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 
 /**
@@ -45,8 +50,8 @@ import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
  * @author Damien Cram
  *
  */
-public class CompostAE extends JCasAnnotator_ImplBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(CompostAE.class);
+public class MorphologicalAnalyzerAE extends JCasAnnotator_ImplBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(MorphologicalAnalyzerAE.class);
 
 	public static final String TASK_NAME = "Morphosyntactic analysis (native and neoclassical)";
 
@@ -68,7 +73,10 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TRANSFORMATION_RULES, mandatory=true, description="Inflection rules for all but last segments")
 	private CompostInflectionRules transformationRules;
 
-	
+	public static final String PREFIX_EXCEPTIONS = "PrefixExceptions";
+	@ExternalResource(key=PREFIX_EXCEPTIONS, mandatory=true)
+	private ManualSegmentationResource prefixExceptions;
+
 	public static final String NEOCLASSICAL_PREFIXES = "NeoClassicalPrefixes";
 	@ExternalResource(key=NEOCLASSICAL_PREFIXES, mandatory=true)
 	private SimpleWordSet neoclassicalPrefixes;
@@ -113,7 +121,26 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name=MAX_NUMBER_OF_COMPONENTS, mandatory=false, defaultValue = "3")
 	private int maxNumberOfComponents;
 
+
+	@ExternalResource(key=PrefixTree.PREFIX_TREE, mandatory=true)
+	private PrefixTree prefixTree;
+
+	public static final String CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS = "CheckIfMorphoExtensionInCorpus";
+	@ConfigurationParameter(name=CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS, mandatory=false, defaultValue = "true")
+	private boolean checkIfMorphoExtensionInCorpus;
 	
+	
+	public static final String MANUAL_COMPOSITION_LIST = "ManualCompositionList";
+	@ExternalResource(key=MANUAL_COMPOSITION_LIST, mandatory=true)
+	private ManualSegmentationResource manualCompositions;
+
+	@ExternalResource(key=SuffixDerivationList.SUFFIX_DERIVATIONS, mandatory=true)
+	private SuffixDerivationList suffixDerivationList;
+
+	public static final String SUFFIX_DERIVATION_EXCEPTION = "SuffixDerivationExceptions";
+	@ExternalResource(key=SUFFIX_DERIVATION_EXCEPTION, mandatory=true)
+	private MultimapFlatResource exceptionsByDerivateExceptionForms;
+
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
 		if(segmentSimilarityThreshold != 1.0) 
@@ -127,7 +154,7 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		NativeSplitterOptions opt = new NativeSplitterOptions()
+		MorphologicalOptions opt = new MorphologicalOptions()
 				.setAlpha(this.alpha)
 				.setBeta(this.beta)
 				.setGamma(this.gamma)
@@ -137,14 +164,19 @@ public class CompostAE extends JCasAnnotator_ImplBase {
 				.setScoreThreshold(this.scoreThreshold)
 				.setSegmentSimilarityThreshold(this.segmentSimilarityThreshold);
 		
-		new NativeSplitter()
+		new MorphologicalAnalyzer()
 				.setOptions(opt)
-				.setInflectionRules(this.inflectionRules)
-				.setTransformationRules(this.transformationRules)
-				.setLanguageDico(this.languageDico)
-				.setNeoclassicalPrefixes(this.neoclassicalPrefixes)
-				.setStopList(this.stopList)
-				.split(termIndexResource.getTermIndex());
+				.setHistory(historyResource.getHistory())
+				.setInflectionRules(inflectionRules)
+				.setLanguageDico(languageDico)
+				.setManualCompositions(manualCompositions)
+				.setManualSuffixDerivations(this.exceptionsByDerivateExceptionForms)
+				.setNeoclassicalPrefixes(neoclassicalPrefixes)
+				.setPrefixExceptions(prefixExceptions)
+				.setPrefixTree(prefixTree)
+				.setStopList(stopList)
+				.setSuffixDerivationList(suffixDerivationList)
+				.setTransformationRules(transformationRules)
+				.analyze(termIndexResource.getTermIndex());
 	}
-
 }

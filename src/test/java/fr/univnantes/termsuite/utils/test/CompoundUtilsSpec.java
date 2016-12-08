@@ -34,7 +34,7 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
-import fr.univnantes.termsuite.engines.morpho.CompoundUtils;
+import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;

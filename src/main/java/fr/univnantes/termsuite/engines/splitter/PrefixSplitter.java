@@ -21,13 +21,8 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima.engines.termino.morpho;
+package fr.univnantes.termsuite.engines.splitter;
 
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ExternalResource;
-import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,38 +34,34 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 import fr.univnantes.termsuite.utils.TermHistory;
 
-public class PrefixSplitter extends JCasAnnotator_ImplBase {
+public class PrefixSplitter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrefixSplitter.class);
 
-	public static final String TASK_NAME = "Morphosyntactic analysis (prefix)";
-
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
-	
-	@ExternalResource(key=PrefixTree.PREFIX_TREE, mandatory=true)
 	private PrefixTree prefixTree;
-
-	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
-	private TermHistoryResource historyResource;
-
-	public static final String CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS = "CheckIfMorphoExtensionInCorpus";
-	@ConfigurationParameter(name=CHECK_IF_MORPHO_EXTENSION_IS_IN_CORPUS, mandatory=false, defaultValue = "true")
-	private boolean checkIfMorphoExtensionInCorpus;
+	private TermHistory history;
+	private boolean checkIfMorphoExtensionInCorpus = true;
 	
-	@Override
-	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		// do nothing
+	public PrefixSplitter setCheckIfMorphoExtensionInCorpus(boolean checkIfMorphoExtensionInCorpus) {
+		this.checkIfMorphoExtensionInCorpus = checkIfMorphoExtensionInCorpus;
+		return this;
 	}
 	
-	@Override
-	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		TermIndex termIndex = termIndexResource.getTermIndex();
-		LOGGER.info("Starting {} for TermIndex {}", TASK_NAME, termIndex.getName());
+	public PrefixSplitter setPrefixTree(PrefixTree prefixTree) {
+		this.prefixTree = prefixTree;
+		return this;
+	}
+	
+	
+	public PrefixSplitter setHistory(TermHistory history) {
+		this.history = history;
+		return this;
+	}
+	
+	public void splitPrefixes(TermIndex termIndex) {
+		LOGGER.info("Starting prefix splitting for TermIndex {}", termIndex.getName());
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
@@ -117,17 +108,18 @@ public class PrefixSplitter extends JCasAnnotator_ImplBase {
 	}
 
 	private void watch(Term swt, Term target) {
-		TermHistory history = historyResource.getHistory();
-		if(history.isWatched(swt.getGroupingKey()))
-			history.saveEvent(
-				swt.getGroupingKey(), 
-				this.getClass(), 
-				"Term is prefix of term " + target);
-		if(history.isWatched(target.getGroupingKey()))
-			history.saveEvent(
-					target.getGroupingKey(), 
-				this.getClass(), 
-				"Term has a new found prefix: " + swt);
+		if(history != null) {
+			if(history.isWatched(swt.getGroupingKey()))
+				history.saveEvent(
+						swt.getGroupingKey(), 
+						this.getClass(), 
+						"Term is prefix of term " + target);
+			if(history.isWatched(target.getGroupingKey()))
+				history.saveEvent(
+						target.getGroupingKey(), 
+						this.getClass(), 
+						"Term has a new found prefix: " + swt);
+		}
 
 	}
 }

@@ -402,7 +402,7 @@ public class TerminologyExtractor {
 				pipeline.setCompostScoreThreshold(compostScoreThreshold.get());
 			if(compostSimilarityThreshold.isPresent()) 
 				pipeline.setCompostSegmentSimilarityThreshold(compostSimilarityThreshold.get());
-			pipeline.aeCompostSplitter();
+			pipeline.aeMorphologicalAnalyzer();
 			
 			// syntactic variant gathering
 			pipeline
