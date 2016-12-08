@@ -137,7 +137,6 @@ import fr.univnantes.termsuite.uima.readers.JsonCollectionReader;
 import fr.univnantes.termsuite.uima.readers.QueueRegistry;
 import fr.univnantes.termsuite.uima.readers.StreamingCollectionReader;
 import fr.univnantes.termsuite.uima.readers.StringCollectionReader;
-import fr.univnantes.termsuite.uima.readers.TeiCollectionReader;
 import fr.univnantes.termsuite.uima.readers.TxtCollectionReader;
 import fr.univnantes.termsuite.uima.readers.XmiCollectionReader;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
@@ -479,15 +478,6 @@ public class TermSuitePipeline {
 		Preconditions.checkNotNull(collectionEncoding);
 		try {
 			switch(termSuiteCollection) {
-			case TEI:
-				this.crDescription = CollectionReaderFactory.createReaderDescription(
-						TeiCollectionReader.class,
-						TeiCollectionReader.PARAM_INPUTDIR, collectionPath,
-						TxtCollectionReader.PARAM_COLLECTION_TYPE, termSuiteCollection,
-						TeiCollectionReader.PARAM_ENCODING, collectionEncoding,
-						TeiCollectionReader.PARAM_LANGUAGE, this.lang.getCode()
-						);
-				break;
 			case TXT:
 				this.crDescription = CollectionReaderFactory.createReaderDescription(
 						TxtCollectionReader.class,

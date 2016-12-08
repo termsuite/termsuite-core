@@ -25,15 +25,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.UIMAException;
@@ -46,16 +41,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.mockito.Mockito;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
 
 import com.google.common.collect.ObjectArrays;
 
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
-import fr.univnantes.termsuite.uima.readers.TeiToTxtSaxHandler;
 import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
@@ -122,25 +113,6 @@ public class TestUtil {
 	public static InputStream getInputStream(String file) {
 		InputStream is = TestUtil.class.getClassLoader().getResourceAsStream(file);
 		return is;
-	}
-
-	public static String getTeiTxt(String filename) throws ParserConfigurationException,
-	SAXException, IOException, FileNotFoundException {
-		SAXParserFactory spf = SAXParserFactory.newInstance();
-		spf.setNamespaceAware(true);
-		spf.setValidating(false);
-	    spf.setFeature("http://xml.org/sax/features/namespaces", true);
-	    spf.setFeature("http://xml.org/sax/features/validation", false);
-	    spf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
-	    spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-
-		SAXParser saxParser = spf.newSAXParser();
-		XMLReader xmlReader = saxParser.getXMLReader();
-		TeiToTxtSaxHandler handler = new TeiToTxtSaxHandler();
-		xmlReader.setContentHandler(handler);
-		xmlReader.parse(new InputSource(TestUtil.getInputStream(filename)));
-		String text = handler.getText();
-		return text;
 	}
 	
 	public static AnalysisEngine createAE(TermIndex termIndex, Class<? extends AnalysisComponent> cls, Object... config) {

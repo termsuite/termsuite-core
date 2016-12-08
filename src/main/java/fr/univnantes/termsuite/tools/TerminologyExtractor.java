@@ -812,9 +812,7 @@ public class TerminologyExtractor {
 		taggerHome = line.getOptionValue(P_TAGGER_HOME_DIRECTORY);
 			
 		if(line.hasOption(CORPUS_FORMAT)) {
-			if(line.getOptionValue(CORPUS_FORMAT).equals(TermSuiteCollection.TEI.name())) {
-				corpusType = TermSuiteCollection.TEI;
-			} else if(line.getOptionValue(CORPUS_FORMAT).equals(TermSuiteCollection.TXT.name())) {
+			if(line.getOptionValue(CORPUS_FORMAT).equals(TermSuiteCollection.TXT.name())) {
 				corpusType = TermSuiteCollection.TXT;
 			} else
 				TermSuiteCLIUtils.exitWithErrorMessage("Unknown corpus format: " + line.getOptionValue(CORPUS_FORMAT) + ". Supported formats: " + Joiner.on(',').join(TermSuiteCollection.values()));
