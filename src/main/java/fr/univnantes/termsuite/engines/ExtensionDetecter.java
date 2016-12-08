@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Stopwatch;
+
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -34,9 +36,13 @@ public class ExtensionDetecter {
 		if(termIndex.getTerms().isEmpty())
 			return;
 
+		Stopwatch sw = Stopwatch.createStarted();
+		
 		setSize1Extensions(termIndex);
 		setSize2Extensions(termIndex);
 		setIsExtensionProperty(termIndex);
+		LOGGER.debug("Extensions detected in {}", sw);
+
 	}
 
 	public void setIsExtensionProperty(TermIndex termIndex) {
@@ -63,6 +69,7 @@ public class ExtensionDetecter {
 				TermIndexes.SWT_GROUPING_KEYS,
 				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
 		
+		LOGGER.debug("Detecting size-1 extensions");
 		for (String swtGroupingKey : swtIndex.keySet()) {
 			Term swt = termIndex.getTermByGroupingKey(swtGroupingKey);
 			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
@@ -76,7 +83,6 @@ public class ExtensionDetecter {
 		
 		
 		termIndex.dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
-		
 	}
 
 
@@ -90,6 +96,8 @@ public class ExtensionDetecter {
 	}
 
 	public void setSize2Extensions(TermIndex termIndex) {
+		LOGGER.debug("Detecting size-1 extensions");
+
 		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;
 		CustomTermIndex customIndex = termIndex.createCustomIndex(
 				gatheringKey,

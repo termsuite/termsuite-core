@@ -30,6 +30,8 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Stopwatch;
+
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;
@@ -53,13 +55,16 @@ public class VariationScorer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VariationScorer.class);
 	
 	public void score(TermIndex termIndex) {
-		LOGGER.debug("Scorying variations in term index {}", termIndex.getName());
+		LOGGER.info("Computing scores for variations");
+		Stopwatch sw = Stopwatch.createStarted();
 
 		doRelationScores(termIndex);
 		normalizeSourceGain(termIndex);
 		doExtensionScores(termIndex);
 		normalizeExtensionScores(termIndex);
 		doVariantScores(termIndex);
+		sw.stop();
+		LOGGER.debug("Scores computed in {}", sw);
 	}
 
 	private void normalizeSourceGain(TermIndex termIndex) {

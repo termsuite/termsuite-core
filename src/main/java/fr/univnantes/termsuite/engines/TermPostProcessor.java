@@ -34,6 +34,7 @@ import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -70,7 +71,8 @@ public class TermPostProcessor {
 	}
 	
 	public void postprocess(TermIndex termIndex) {
-		LOGGER.debug("Post-processing term index {}", termIndex.getName());
+		LOGGER.info("Post-processing terms and variants");
+		Stopwatch sw = Stopwatch.createStarted();
 
 		// resets all IS_EXTENSION properies
 		new ExtensionDetecter().setIsExtensionProperty(termIndex);
@@ -87,13 +89,16 @@ public class TermPostProcessor {
 		filterExtensionsByThresholds(termIndex);
 		
 		// Filter relations
+		LOGGER.debug("Filtering variations");
+		Stopwatch variationFilteringSw = Stopwatch.createStarted();
 		Set<TermRelation> remRelations = termIndex.getRelations(RelationType.VARIATIONS)
 			.filter(this::filterVariation)
 			.collect(Collectors.toSet());
-		LOGGER.debug("Filtered {} variants out of {} variants", remRelations.size(), termIndex.getRelations(RelationType.VARIATIONS).count());
 		remRelations
 			.stream()
 			.forEach(termIndex::removeRelation);
+		variationFilteringSw.stop();
+		LOGGER.debug("Filtered {} variations in {}", remRelations.size(), variationFilteringSw);
 
 		
 		/*
@@ -101,13 +106,16 @@ public class TermPostProcessor {
 		 *  
 		 *  IMPORTANT: must occur AFTER detection of 2-order extension variations
 		 */
+		LOGGER.debug("Filtering terms");
+		Stopwatch termFilteringSw = Stopwatch.createStarted();
 		Set<Term> remTerms = termIndex.getTerms().stream()
 			.filter(this::filterTermByThresholds)
 			.collect(Collectors.toSet());
-		LOGGER.debug("Filtered {} terms out of {} terms", remTerms.size(), termIndex.getTerms().size());
 		remTerms
-			.stream()
+			.parallelStream()
 			.forEach(termIndex::removeTerm);
+		termFilteringSw.stop();
+		LOGGER.debug("Filtered {} terms in {}", remTerms.size(), termFilteringSw);
 		
 		/*
 		 *  Detect 2-order extension variations.
@@ -124,6 +132,7 @@ public class TermPostProcessor {
 		filterTwoOrderVariationPatterns(termIndex);
 		
 		// Rank variations extensions
+		LOGGER.debug("Ranking term variations");
 		termIndex.getTerms().forEach(t-> {
 			final MutableInt vrank = new MutableInt(0);
 			termIndex.getOutboundRelations(t, RelationType.VARIATIONS)
@@ -134,10 +143,14 @@ public class TermPostProcessor {
 					rel.setProperty(RelationProperty.VARIATION_RANK, vrank.intValue());
 				});
 		});
-
+		sw.stop();
+		
+		LOGGER.debug("Post-processing finished in {}", sw);
 	}
 
 	private void filterTwoOrderVariationPatterns(TermIndex termIndex) {
+		LOGGER.debug("Filtering two-order relations");
+		Stopwatch sw = Stopwatch.createStarted();
 
 		/*
 		 * Removal pattern n°1: t --extension--> v1 --extension--> v2
@@ -176,6 +189,9 @@ public class TermPostProcessor {
 				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getType() == RelationType.MORPHOLOGICAL
 			);
+		
+		sw.stop();
+		LOGGER.debug("Two-order variations detected in {}", sw);
 	}
 	
 	/*
