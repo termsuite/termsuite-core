@@ -36,15 +36,15 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
-public class TermIndexUtils {
+public class TerminologyUtils {
 
-	public static  Set<TermRelation> selectTermVariations(TermIndex termIndex, RelationType... types) {
+	public static  Set<TermRelation> selectTermVariations(Terminology termIndex, RelationType... types) {
 		Set<RelationType> typeSet = Sets.newHashSet(types);
 		return termIndex.getRelations().filter(tv -> 
 				typeSet.contains(tv.getType())
@@ -52,7 +52,7 @@ public class TermIndexUtils {
 	}
 
 
-	public static Collection<Term> selectCompounds(TermIndex termIndex) {
+	public static Collection<Term> selectCompounds(Terminology termIndex) {
 		Set<Term> compounds = Sets.newHashSet();
 		for(Term t:termIndex.getTerms())
 			if(t.isSingleWord() && t.isCompound())
@@ -71,7 +71,7 @@ public class TermIndexUtils {
 	 * @param component
 	 * @return
 	 */
-	public static Collection<Term> getMorphologicalExtensionsAsTerms(TermIndex termIndex, Term compound, Component component) {
+	public static Collection<Term> getMorphologicalExtensionsAsTerms(Terminology termIndex, Term compound, Component component) {
 		Preconditions.checkArgument(compound.isSingleWord());
 		Preconditions.checkArgument(compound.isCompound());
 		Preconditions.checkArgument(compound.getWords().get(0).getWord().getComponents().contains(component));

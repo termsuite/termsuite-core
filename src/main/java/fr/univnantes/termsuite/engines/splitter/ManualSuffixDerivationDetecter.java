@@ -30,7 +30,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -49,7 +49,7 @@ public class ManualSuffixDerivationDetecter {
 		return this;
 	}
 
-	public void detectDerivations(TermIndex termIndex) {
+	public void detectDerivations(Terminology termIndex) {
 		Term regularForm;
 		for(Term derivateForm:termIndex.getTerms()) {
 			if(!derivateForm.isSingleWord())

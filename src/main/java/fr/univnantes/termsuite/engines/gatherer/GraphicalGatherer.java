@@ -10,7 +10,7 @@ import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
@@ -57,7 +57,7 @@ public class GraphicalGatherer extends AbstractGatherer {
 	}
 	
 	@Override
-	protected void gather(TermIndex termIndex, Collection<Term> termClass, String clsName) {
+	protected void gather(Terminology termIndex, Collection<Term> termClass, String clsName) {
 		
 		List<Term> terms = termClass.getClass().isAssignableFrom(List.class) ? 
 				(List<Term>) termClass

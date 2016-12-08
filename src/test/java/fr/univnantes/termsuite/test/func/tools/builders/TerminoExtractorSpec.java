@@ -15,7 +15,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.api.Document;
 import fr.univnantes.termsuite.api.TerminoExtractor;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
@@ -45,7 +45,7 @@ public class TerminoExtractorSpec {
 	@Test
 	public void fromPreprocessedJsonFiles() {
 		String jsonDirPath = Paths.get(FunctionalTests.CORPUS2_PATH.toString(), "json").toString();
-		TermIndex termIndex = TerminoExtractor
+		Terminology termIndex = TerminoExtractor
 				.fromPreprocessedJsonFiles(Lang.FR, jsonDirPath)
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.execute();
@@ -56,7 +56,7 @@ public class TerminoExtractorSpec {
 	@Test
 	public void fromPreprocessedXmiFiles() {
 		String jsonDirPath = Paths.get(FunctionalTests.CORPUS2_PATH.toString(), "xmi").toString();
-		TermIndex termIndex = TerminoExtractor
+		Terminology termIndex = TerminoExtractor
 				.fromPreprocessedXmiFiles(Lang.FR, jsonDirPath)
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.execute();
@@ -66,7 +66,7 @@ public class TerminoExtractorSpec {
 
 	@Test
 	public void fromTxtCorpus() {
-		TermIndex termIndex = TerminoExtractor
+		Terminology termIndex = TerminoExtractor
 				.fromTxtCorpus(Lang.FR, FunctionalTests.CORPUS1_PATH.toString(), "**/*.txt", "UTF-8")
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.execute();
@@ -75,7 +75,7 @@ public class TerminoExtractorSpec {
 	}
 
 
-	private void assertTermIndex(TermIndex termIndex) {
+	private void assertTermIndex(Terminology termIndex) {
 		
 		assertThat(termIndex)
 			.hasNTerms(3)
@@ -87,7 +87,7 @@ public class TerminoExtractorSpec {
 
 	@Test
 	public void fromCustomDocumentStream() {
-		TermIndex termIndex = TerminoExtractor.fromDocumentStream(Lang.FR, documents.stream(), 2)
+		Terminology termIndex = TerminoExtractor.fromDocumentStream(Lang.FR, documents.stream(), 2)
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 			.execute();
 		

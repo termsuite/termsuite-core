@@ -10,32 +10,32 @@ import java.nio.file.Paths;
 
 import com.google.common.base.Charsets;
 
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.model.termino.JsonTermIndexIO;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
-public class TermIndexIO {
+public class TerminologyIO {
 	
-	public static void toJson(TermIndex termIndex, Writer writer) throws IOException {
+	public static void toJson(Terminology termIndex, Writer writer) throws IOException {
 		toJson(termIndex, writer, new JsonOptions());
 	}
 	
-	public static void toJson(TermIndex termIndex, Writer writer, JsonOptions options) throws IOException {
-		JsonTermIndexIO.save(writer, termIndex, options);
+	public static void toJson(Terminology termIndex, Writer writer, JsonOptions options) throws IOException {
+		JsonTerminologyIO.save(writer, termIndex, options);
 	}
 	
-	public static TermIndex fromJson(String filePath, JsonOptions options) {
+	public static Terminology fromJson(String filePath, JsonOptions options) {
 		return fromJson(Paths.get(filePath), options);
 	}
 
-	public static TermIndex fromJson(String filePath) {
+	public static Terminology fromJson(String filePath) {
 		return fromJson(filePath, new JsonOptions());
 	}
 
-	public static TermIndex fromJson(Path path) {
+	public static Terminology fromJson(Path path) {
 		return fromJson(path, new JsonOptions());
 	}
 	
-	public static TermIndex fromJson(Path path, JsonOptions options) {
+	public static Terminology fromJson(Path path, JsonOptions options) {
 		try {
 			return fromJson(path.toUri().toURL(), options);
 		} catch (MalformedURLException e) {
@@ -43,13 +43,13 @@ public class TermIndexIO {
 		}
 	}
 
-	public static TermIndex fromJson(URL termIndexUrl) {
+	public static Terminology fromJson(URL termIndexUrl) {
 		return fromJson(termIndexUrl, new JsonOptions());
 	}
 
-	public static TermIndex fromJson(URL termIndexUrl, JsonOptions options) {
+	public static Terminology fromJson(URL termIndexUrl, JsonOptions options) {
 		try {
-			return JsonTermIndexIO.load(
+			return JsonTerminologyIO.load(
 				new InputStreamReader(termIndexUrl.openStream(), Charsets.UTF_8),
 				options
 			);

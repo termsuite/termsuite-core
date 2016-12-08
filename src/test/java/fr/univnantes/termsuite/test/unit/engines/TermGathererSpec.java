@@ -40,13 +40,13 @@ import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 
 public class TermGathererSpec {
-	private MemoryTermIndex termIndex;
+	private MemoryTerminology termIndex;
 	private Term machine_synchrone;
 	private Term machine_asynchrone;
 	private Term synchrone;

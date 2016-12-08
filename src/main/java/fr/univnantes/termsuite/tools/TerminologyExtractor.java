@@ -72,7 +72,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceType;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.resources.ScorerConfig;
@@ -476,14 +476,14 @@ public class TerminologyExtractor {
             	pipeline.run(cas);
             	System.err.flush();
             	System.out.println("Term index: ");
-				TermIndex index = (TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName);
+				Terminology index = (Terminology)TermSuiteResourceManager.getInstance().get(termIndexName);
             	TermUtils.showIndex(index, System.out, watch);
             } else {
             	LOGGER.info("Running TermSuite pipeline in corpus mode");
             	pipeline.run();
             	if(watch.isPresent()) 
             		TermUtils.showIndex(
-            				(TermIndex)TermSuiteResourceManager.getInstance().get(termIndexName), 
+            				(Terminology)TermSuiteResourceManager.getInstance().get(termIndexName), 
             				new PrintStream(System.err, true, "UTF-8"), 
             				watch);
             }

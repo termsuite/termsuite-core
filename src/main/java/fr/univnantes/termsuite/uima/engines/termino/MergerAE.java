@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.TermMerger;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
  * 
@@ -49,8 +49,8 @@ public class MergerAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -62,7 +62,7 @@ public class MergerAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info("Starting " + TASK_NAME);
-		new TermMerger().mergeTerms(termIndexResource.getTermIndex());
+		new TermMerger().mergeTerms(terminoResource.getTerminology());
 	}
 
 

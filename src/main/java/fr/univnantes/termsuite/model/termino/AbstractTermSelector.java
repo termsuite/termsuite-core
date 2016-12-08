@@ -26,7 +26,7 @@ package fr.univnantes.termsuite.model.termino;
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public abstract class AbstractTermSelector implements TermSelector {
 
@@ -47,5 +47,5 @@ public abstract class AbstractTermSelector implements TermSelector {
 		return select(null, t);
 	}
 
-	public abstract boolean select(TermIndex termIndex, Term t);
+	public abstract boolean select(Terminology termIndex, Term t);
 }

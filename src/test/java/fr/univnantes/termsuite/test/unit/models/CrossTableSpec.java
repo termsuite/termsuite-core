@@ -32,12 +32,12 @@ import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.metrics.MutualInformation;
 import fr.univnantes.termsuite.model.CrossTable;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 
 public class CrossTableSpec {
 
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private CrossTable crossTable;
 
 	private Term t1;

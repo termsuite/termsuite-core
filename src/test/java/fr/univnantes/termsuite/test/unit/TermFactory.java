@@ -37,17 +37,17 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
 
 public class TermFactory {
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private static final Pattern TERM_WORD_PATTERN = Pattern.compile("(\\w+)\\:(\\S+)(?:\\|(\\S+))");
 	private static final Pattern COMPONENT_PATTERN = Pattern.compile("(\\S+)\\|(\\S+)");
 	
-	public TermFactory(TermIndex termIndex) {
+	public TermFactory(Terminology termIndex) {
 		super();
 		this.termIndex = termIndex;
 	}

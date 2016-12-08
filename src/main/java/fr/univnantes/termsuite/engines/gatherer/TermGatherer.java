@@ -11,7 +11,7 @@ import com.google.common.base.Stopwatch;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -57,7 +57,7 @@ public class TermGatherer {
 	}
 	
 	
-	public void gather(TermIndex termIndex) {
+	public void gather(Terminology termIndex) {
 		Stopwatch sw = Stopwatch.createStarted();
 		
 		GroovyService groovyService = new GroovyService(termIndex);

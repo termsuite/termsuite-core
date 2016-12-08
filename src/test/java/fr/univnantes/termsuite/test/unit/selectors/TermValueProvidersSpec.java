@@ -33,9 +33,9 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.test.unit.TermFactory;
@@ -45,11 +45,11 @@ public class TermValueProvidersSpec {
 	private Term machine_synchrone, synchrone, asynchrone, machine_statorique, machine_de_stator, statorique,
 				stator, machine_synchrone_de_stator, hommegrenouille, hommegrenouille_de_stator, term11, aveccapitale;
 
-	private TermIndex termIndex ;
+	private Terminology termIndex ;
 	
 	@Before
 	public void init() {
-		termIndex = new MemoryTermIndex("Test", Lang.FR, new MemoryOccurrenceStore());
+		termIndex = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
 		populateTermIndex(new TermFactory(termIndex));
 	}
 	

@@ -45,25 +45,25 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
-import fr.univnantes.termsuite.utils.TermIndexUtils;
+import fr.univnantes.termsuite.utils.TerminologyUtils;
 
-public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> {
+public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Terminology> {
 
-	public TermIndexAssert(TermIndex actual) {
-		super(actual, TermIndexAssert.class);
+	public TerminologyAssert(Terminology actual) {
+		super(actual, TerminologyAssert.class);
 	}
 
-	public TermIndexAssert hasNTerms(int expected) {
+	public TerminologyAssert hasNTerms(int expected) {
 		if(actual.getTerms().size() != expected)
 			failWithMessage("Expected size was <%s>, but actual size is <%s>.", 
 					expected, actual.getTerms().size());
 		return this;
 	}
 
-	public TermIndexAssert containsTerm(String expectedTerm, int frequency) {
+	public TerminologyAssert containsTerm(String expectedTerm, int frequency) {
 		for(Term t:actual.getTerms()) {
 			if(t.getGroupingKey().equals(expectedTerm)) {
 				if(t.getFrequency() != frequency)
@@ -78,7 +78,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public TermIndexAssert containsTerm(String expectedTerm) {
+	public TerminologyAssert containsTerm(String expectedTerm) {
 		for(Term t:actual.getTerms()) {
 			if(t.getGroupingKey().equals(expectedTerm))
 				return this;
@@ -88,7 +88,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public TermIndexAssert doesNotContainTerm(String expectedTerm) {
+	public TerminologyAssert doesNotContainTerm(String expectedTerm) {
 		for(Term t:actual.getTerms()) {
 			if(t.getGroupingKey().equals(expectedTerm)) {
 				failWithMessage("Expected term <%s> to be absent from term index, but is actually present.", expectedTerm);
@@ -100,7 +100,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 	
-	public TermIndexAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey) {
+	public TerminologyAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
@@ -118,7 +118,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public TermIndexAssert containsRelationFrom(String fromKey, RelationType... types) {
+	public TerminologyAssert containsRelationFrom(String fromKey, RelationType... types) {
 		if(failToFindTerms(fromKey))
 			return this;
 		
@@ -134,7 +134,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 	
-	public TermIndexAssert containsRelationTo(String toKey, RelationType... types) {
+	public TerminologyAssert containsRelationTo(String toKey, RelationType... types) {
 		if(failToFindTerms(toKey))
 			return this;
 		
@@ -160,7 +160,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return failed;
 	}
 	
-	public TermIndexAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
+	public TerminologyAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
@@ -185,7 +185,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return actual.getRelations().collect(Collectors.toSet());
 	}
 
-	public TermIndexAssert hasNVariationsOfType(int expected, RelationType type) {
+	public TerminologyAssert hasNVariationsOfType(int expected, RelationType type) {
 		int cnt = 0;
 		for(TermRelation tv:getVariations()) {
 			if(tv.getType() == type)
@@ -210,23 +210,23 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariations(RelationType... variations) {
 		return assertThat(
-				TermIndexUtils.selectTermVariations(actual, variations));
+				TerminologyUtils.selectTermVariations(actual, variations));
 	}
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends Term>, Term> asCompoundList() {
 		return assertThat(
-				TermIndexUtils.selectCompounds(actual));
+				TerminologyUtils.selectCompounds(actual));
 	}
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
-		for(TermRelation tv:TermIndexUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL, RelationType.SYNONYMIC)) 
+		for(TermRelation tv:TerminologyUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL, RelationType.SYNONYMIC)) 
 			matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		return assertThat(matchingRuleNames);
 	}
 
 	
-	public TermIndexAssert hasAtLeastNVariationsOfType(Term base, int atLeastN, RelationType... vType) {
+	public TerminologyAssert hasAtLeastNVariationsOfType(Term base, int atLeastN, RelationType... vType) {
 		isNotNull();
 		int actualSize = actual.getOutboundRelations(base, vType).size();
 		if (actualSize < atLeastN)
@@ -236,7 +236,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public TermIndexAssert hasNVariationsOfType(Term base, int n, RelationType... vType) {
+	public TerminologyAssert hasNVariationsOfType(Term base, int n, RelationType... vType) {
 		isNotNull();
 		int actualSize = actual.getOutboundRelations(base, vType).size();
 		if (actualSize != n)
@@ -245,7 +245,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public TermIndexAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, RelationType... vTypes) {
+	public TerminologyAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, RelationType... vTypes) {
 		isNotNull();
 		int actualSize = actual.getInboundRelations(variant, vTypes).size();
 		if (actualSize < atLeastN)
@@ -272,7 +272,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return assertThat(actual.getInboundRelations(variant, types));
 	}
 
-	public TermIndexAssert hasNBases(Term variant, int expectedNumberOfBases) {
+	public TerminologyAssert hasNBases(Term variant, int expectedNumberOfBases) {
 		Collection<TermRelation> bases = actual.getInboundRelations(variant);
 		if(bases.size() != expectedNumberOfBases)
 			failWithMessage("Expected <%s> bases but got <%s> (<%s>)", 
@@ -282,7 +282,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 	
-	public TermIndexAssert hasNVariations(Term base, int expectedNumberOfVariations) {
+	public TerminologyAssert hasNVariations(Term base, int expectedNumberOfVariations) {
 		Collection<TermRelation> variants = actual.getOutboundRelations(base);
 		if(variants.size() != expectedNumberOfVariations)
 			failWithMessage("Expected <%s> variations but got <%s> (<%s>)", 
@@ -292,7 +292,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public TermIndexAssert hasExpectedCompounds(Path diffFileIfFail, Tuple... expectedTuples) {
+	public TerminologyAssert hasExpectedCompounds(Path diffFileIfFail, Tuple... expectedTuples) {
 		CompoundTupleExtractor compoundTupleExtractor = new CompoundTupleExtractor();
 		Set<Tuple> actualTuples = actual.getTerms().stream()
 			.filter(Term::isCompound)
@@ -301,7 +301,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return tupleDiff(diffFileIfFail, Sets.newHashSet(expectedTuples), actualTuples);
 	}
 	
-	public TermIndexAssert tupleDiff(Path diffFileIfFail, Set<Tuple> expectedTuples, Set<Tuple> actualTuples) {
+	public TerminologyAssert tupleDiff(Path diffFileIfFail, Set<Tuple> expectedTuples, Set<Tuple> actualTuples) {
 		Set<Tuple> notFound = Sets.newHashSet(expectedTuples);
 		notFound.removeAll(actualTuples);
 		
@@ -376,7 +376,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 	}
 
 
-	public TermIndexAssert hasNRelations(int expected, RelationType... types) {
+	public TerminologyAssert hasNRelations(int expected, RelationType... types) {
 		long actualCnt = actual.getRelations(types).count();
 		if(actualCnt != expected) {
 			failWithMessage("Expected <%s> relations%s. Got <%s>", 
@@ -388,7 +388,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public TermIndexAssert hasNRelationsFrom(int expected, String fromKey, RelationType... types) {
+	public TerminologyAssert hasNRelationsFrom(int expected, String fromKey, RelationType... types) {
 		if(failToFindTerms(fromKey))
 			return this;
 
@@ -404,7 +404,7 @@ public class TermIndexAssert extends AbstractAssert<TermIndexAssert, TermIndex> 
 		return this;
 	}
 
-	public TermIndexAssert hasNRelationsTo(int expected, String toKey, RelationType... types) {
+	public TerminologyAssert hasNRelationsTo(int expected, String toKey, RelationType... types) {
 		if(failToFindTerms(toKey))
 			return this;
 

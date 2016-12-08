@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -42,7 +42,7 @@ public class ExtensionVariantGatherer {
 	}
 	
 	
-	public void gather(TermIndex termIndex) {
+	public void gather(Terminology termIndex) {
 		if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
 			LOGGER.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
 		

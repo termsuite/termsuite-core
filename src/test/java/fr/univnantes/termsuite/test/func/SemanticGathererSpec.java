@@ -16,13 +16,13 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class SemanticGathererSpec {
 
-	private static TermIndex termindex;
+	private static Terminology termindex;
 	
 	@BeforeClass
 	public static void setup() {

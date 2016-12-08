@@ -36,7 +36,7 @@ import org.mockito.Mockito;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.Fixtures;
@@ -44,7 +44,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermUtilsSpec {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	private Term energie;
 	private Term eolien;

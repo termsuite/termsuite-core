@@ -31,17 +31,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguage;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSpecificityComputer.class);
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	public static final String GENERAL_LANGUAGE_FREQUENCIES = "GeneralLanguageFrequencies";
 	@ExternalResource(key=GENERAL_LANGUAGE_FREQUENCIES, mandatory=true)
@@ -56,7 +56,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 		FSIterator<Annotation> it =  aJCas.getAnnotationIndex().iterator();
 		while(it.hasNext()) {
 			it.next();
-			TermIndex termIndex = this.termIndexResource.getTermIndex();
+			Terminology termIndex = this.terminoResource.getTerminology();
 			termIndex.setWordAnnotationsNum(termIndex.getWordAnnotationsNum() + 1);
 		}
 	}
@@ -64,9 +64,9 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Computing specificities and measures for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		LOGGER.info("Computing specificities and measures for TermIndex {}", this.terminoResource.getTerminology().getName());
 		
-		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+		if(terminoResource.getTerminology().getTerms().isEmpty())
 			return;
 		
 		computeSpecifities();
@@ -74,12 +74,12 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	}
 
 	private void computeMeasures() {
-		for(Term term:termIndexResource.getTermIndex().getTerms())
+		for(Term term:terminoResource.getTerminology().getTerms())
 			term.setSpecificity(Math.log10(1 + term.getFrequencyNorm() / term.getGeneralFrequencyNorm()));
 	}
 
 	private void computeSpecifities() {
-		TermIndex termIndex = termIndexResource.getTermIndex();
+		Terminology termIndex = terminoResource.getTerminology();
 		
 		//		double maxWR = 0.0;
 		if(generalLanguage.isCumulatedFrequencyMode()) {

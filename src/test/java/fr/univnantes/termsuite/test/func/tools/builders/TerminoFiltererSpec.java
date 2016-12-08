@@ -7,21 +7,21 @@ import java.net.MalformedURLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.api.TermIndexIO;
+import fr.univnantes.termsuite.api.TerminologyIO;
 import fr.univnantes.termsuite.api.TerminoFilterConfig;
 import fr.univnantes.termsuite.api.TerminoFilterer;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TerminoFiltererSpec {
 
-	TermIndex termIndex1;
+	Terminology termIndex1;
 	@Before
 	public void setup() throws MalformedURLException {
 		TermSuiteResourceManager.getInstance().clear();
-		termIndex1 = TermIndexIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
+		termIndex1 = TerminologyIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
 	}
 	
 	@Test

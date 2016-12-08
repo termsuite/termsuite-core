@@ -75,12 +75,12 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.resources.TermSuitePipelineObserver;
 import fr.univnantes.termsuite.types.FixedExpression;
@@ -108,7 +108,7 @@ import fr.univnantes.termsuite.uima.engines.preproc.MateLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.preproc.MateLemmatizerTagger;
 import fr.univnantes.termsuite.uima.engines.preproc.RegexSpotter;
 import fr.univnantes.termsuite.uima.engines.preproc.StringRegexFilter;
-import fr.univnantes.termsuite.uima.engines.preproc.TermIndexBlacklistWordFilterAE;
+import fr.univnantes.termsuite.uima.engines.preproc.TerminologyBlacklistWordFilterAE;
 import fr.univnantes.termsuite.uima.engines.preproc.TermOccAnnotationImporter;
 import fr.univnantes.termsuite.uima.engines.preproc.TreeTaggerLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
@@ -124,10 +124,10 @@ import fr.univnantes.termsuite.uima.engines.termino.Ranker;
 import fr.univnantes.termsuite.uima.engines.termino.SWTSizeSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.TermGathererAE;
 import fr.univnantes.termsuite.uima.engines.termino.TermSpecificityComputer;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.AbstractTermIndexCleaner;
+import fr.univnantes.termsuite.uima.engines.termino.cleaning.AbstractTerminologyCleaner;
 import fr.univnantes.termsuite.uima.engines.termino.cleaning.MaxSizeThresholdCleaner;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.TermIndexThresholdCleaner;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.TermIndexTopNCleaner;
+import fr.univnantes.termsuite.uima.engines.termino.cleaning.TerminologyThresholdCleaner;
+import fr.univnantes.termsuite.uima.engines.termino.cleaning.TerminologyTopNCleaner;
 import fr.univnantes.termsuite.uima.readers.AbstractToTxtSaxHandler;
 import fr.univnantes.termsuite.uima.readers.CollectionDocument;
 import fr.univnantes.termsuite.uima.readers.EmptyCollectionReader;
@@ -154,7 +154,7 @@ import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 import fr.univnantes.termsuite.uima.resources.termino.ReferenceTermList;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.uima.resources.termino.YamlRuleSetResource;
 import fr.univnantes.termsuite.utils.FileUtils;
 import fr.univnantes.termsuite.utils.OccurrenceBuffer;
@@ -192,7 +192,7 @@ public class TermSuitePipeline {
 	 * MAIN PIPELINE PARAMETERS
 	 */
 	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
-	private Optional<? extends TermIndex> termIndex = Optional.empty();
+	private Optional<? extends Terminology> termIndex = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
@@ -291,7 +291,7 @@ public class TermSuitePipeline {
 	}
 	
 
-	public static TermSuitePipeline create(TermIndex termIndex) {
+	public static TermSuitePipeline create(Terminology termIndex) {
 		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
 		
 		if(!TermSuiteResourceManager.getInstance().contains(termIndex.getName()))
@@ -805,7 +805,7 @@ public class TermSuitePipeline {
 	}
 	
 	/**
-	 * Exports the {@link TermIndex} in tsv format
+	 * Exports the {@link Terminology} in tsv format
 	 * 
 	 * @see #setTsvExportProperties(TermProperty...)
 	 * @param toFilePath
@@ -1122,7 +1122,7 @@ public class TermSuitePipeline {
 	}
 
 	/**
-	 * Iterates over the {@link TermIndex} and mark terms as
+	 * Iterates over the {@link Terminology} and mark terms as
 	 * "fixed expressions" when their lemmas are found in the 
 	 * {@link FixedExpressionResource}.
 	 * 
@@ -1269,7 +1269,7 @@ public class TermSuitePipeline {
 	
 	
 	/**
-	 * An AE thats imports all {@link TermOccAnnotation} in CAS to a {@link TermIndex}.
+	 * An AE thats imports all {@link TermOccAnnotation} in CAS to a {@link Terminology}.
 	 * 
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
@@ -1337,14 +1337,14 @@ public class TermSuitePipeline {
 	 * Removes from the term index any term having a 
 	 * stop word at its boundaries.
 	 * 
-	 * @see TermIndexBlacklistWordFilterAE
+	 * @see TerminologyBlacklistWordFilterAE
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline aeStopWordsFilter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TermIndexBlacklistWordFilterAE.class
+					TerminologyBlacklistWordFilterAE.class
 				);
 			
 			ExternalResourceDescription stopWordsFilterResourceRes = ExternalResourceFactory.createExternalResourceDescription(
@@ -1489,14 +1489,14 @@ public class TermSuitePipeline {
 		return termSynonymDesc;
 	}
 
-	private ExternalResourceDescription termIndexResourceDesc;
+	private ExternalResourceDescription terminoResourceDesc;
 	public ExternalResourceDescription resTermIndex() {
-		if(termIndexResourceDesc == null) {
+		if(terminoResourceDesc == null) {
 			if(!termIndex.isPresent())
 				emptyTermIndex(UUID.randomUUID().toString());
 			
-			termIndexResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
-					TermIndexResource.class, 
+			terminoResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
+					TerminologyResource.class, 
 					termIndex.get().getName());
 			
 			TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
@@ -1505,7 +1505,7 @@ public class TermSuitePipeline {
 			if(!manager.contains(termIndex.get().getName()))
 				manager.register(termIndex.get().getName(), termIndex.get());
 		}
-		return termIndexResourceDesc;
+		return terminoResourceDesc;
 		
 	}
 	
@@ -1548,7 +1548,7 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		The term index processed by this pipeline
 	 */
-	public TermIndex getTermIndex() {
+	public Terminology getTermIndex() {
 		return this.termIndex.get();
 	}
 	
@@ -1559,13 +1559,13 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline setTermIndex(TermIndex termIndex) {
+	public TermSuitePipeline setTermIndex(Terminology termIndex) {
 		this.termIndex = Optional.of(termIndex);
 		return this;
 	}
 	
 	/**
-	 * Creates a new in-memory {@link TermIndex} on which this 
+	 * Creates a new in-memory {@link Terminology} on which this 
 	 * piepline with run.
 	 * 
 	 * @param name
@@ -1574,7 +1574,7 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline emptyTermIndex(String name) {
-		MemoryTermIndex termIndex = new MemoryTermIndex(name, this.lang, this.occurrenceStore);
+		MemoryTerminology termIndex = new MemoryTerminology(name, this.lang, this.occurrenceStore);
 		LOGGER.info("Creating TermIndex {}", termIndex.getName());
 		this.termIndex = Optional.of(termIndex);
 		return this;
@@ -1647,7 +1647,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				MaxSizeThresholdCleaner.class,
-				AbstractTermIndexCleaner.CLEANING_PROPERTY, property,	
+				AbstractTerminologyCleaner.CLEANING_PROPERTY, property,	
 				MaxSizeThresholdCleaner.MAX_SIZE, maxSize
 			);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1663,11 +1663,11 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-				TermIndexThresholdCleaner.class,
-				AbstractTermIndexCleaner.CLEANING_PROPERTY, property,
-				AbstractTermIndexCleaner.NUM_TERMS_CLEANING_TRIGGER, termIndexSizeTrigger,
-				AbstractTermIndexCleaner.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
-				TermIndexThresholdCleaner.THRESHOLD, (float)threshold
+				TerminologyThresholdCleaner.class,
+				AbstractTerminologyCleaner.CLEANING_PROPERTY, property,
+				AbstractTerminologyCleaner.NUM_TERMS_CLEANING_TRIGGER, termIndexSizeTrigger,
+				AbstractTerminologyCleaner.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
+				TerminologyThresholdCleaner.THRESHOLD, (float)threshold
 			);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			
@@ -1684,8 +1684,8 @@ public class TermSuitePipeline {
 			AnalysisEngineDescription ae) {
 		if(isPeriodic)
 			addParameters(ae, 
-					AbstractTermIndexCleaner.PERIODIC_CAS_CLEAN_ON, true,
-					AbstractTermIndexCleaner.CLEANING_PERIOD, cleaningPeriod
+					AbstractTerminologyCleaner.PERIODIC_CAS_CLEAN_ON, true,
+					AbstractTerminologyCleaner.CLEANING_PERIOD, cleaningPeriod
 				);
 	}
 	
@@ -1733,9 +1733,9 @@ public class TermSuitePipeline {
 	public TermSuitePipeline aeTopNCleanerPeriodic(TermProperty property, int n, boolean isPeriodic, int cleaningPeriod)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TermIndexTopNCleaner.class,
-					AbstractTermIndexCleaner.CLEANING_PROPERTY, property,
-					TermIndexTopNCleaner.TOP_N, n
+					TerminologyTopNCleaner.class,
+					AbstractTerminologyCleaner.CLEANING_PROPERTY, property,
+					TerminologyTopNCleaner.TOP_N, n
 					);
 			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
@@ -1848,7 +1848,7 @@ public class TermSuitePipeline {
 	}
 
 	/**
-	 * Transforms the {@link TermIndex} into a flat one-n scored model.
+	 * Transforms the {@link Terminology} into a flat one-n scored model.
 	 * 
 	 * 
 	 * @return
@@ -1907,7 +1907,7 @@ public class TermSuitePipeline {
 	
 	/**
 	 * 
-	 * Sets the {@link Term#setRank(int)} of all terms of the {@link TermIndex}
+	 * Sets the {@link Term#setRank(int)} of all terms of the {@link Terminology}
 	 * given a {@link TermProperty}.
 	 * 
 	 * @param property
@@ -2237,7 +2237,7 @@ public class TermSuitePipeline {
 	
 	/**
 	 * Configures {@link RegexSpotter}. If <code>true</code>, 
-	 * adds all spotted occurrences to the {@link TermIndex}.
+	 * adds all spotted occurrences to the {@link Terminology}.
 	 * 
 	 * @see #aeRegexSpotter()
 	 * 

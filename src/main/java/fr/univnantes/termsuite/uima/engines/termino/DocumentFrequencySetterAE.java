@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.DocumentFrequencySetter;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
  * 
@@ -42,8 +42,8 @@ public class DocumentFrequencySetterAE extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(DocumentFrequencySetterAE.class);
 	public static final String TASK_NAME = "Setting documentFrequencies";
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -55,6 +55,6 @@ public class DocumentFrequencySetterAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info("Starting " + TASK_NAME);
-		new DocumentFrequencySetter().set(termIndexResource.getTermIndex());
+		new DocumentFrequencySetter().set(terminoResource.getTerminology());
 	}
 }

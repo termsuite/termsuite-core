@@ -4,23 +4,23 @@ import java.io.Writer;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 
 public class EvalExporter {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private boolean withVariants;
 	private Writer writer;
 	
-	private EvalExporter(TermIndex termIndex, Writer writer, boolean withVariants) {
+	private EvalExporter(Terminology termIndex, Writer writer, boolean withVariants) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
 		this.withVariants = withVariants;
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, boolean withVariants) {
+	public static void export(Terminology termIndex, Writer writer, boolean withVariants) {
 		new EvalExporter(termIndex, writer, withVariants).doExport();
 	}
 

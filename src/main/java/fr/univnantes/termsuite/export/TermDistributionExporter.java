@@ -9,18 +9,18 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 
 public class TermDistributionExporter {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Writer writer;
 	private Predicate<Term> selector;
 	
 	private List<TermProperty> termProperties = Lists.newArrayList();
 	
-	private TermDistributionExporter(TermIndex termIndex, Writer writer, Predicate<Term> selector, TermProperty... properties) {
+	private TermDistributionExporter(Terminology termIndex, Writer writer, Predicate<Term> selector, TermProperty... properties) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
@@ -28,7 +28,7 @@ public class TermDistributionExporter {
 		this.termProperties = Lists.newArrayList(properties);
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, Predicate<Term> selector, TermProperty... properties) {
+	public static void export(Terminology termIndex, Writer writer, Predicate<Term> selector, TermProperty... properties) {
 		new TermDistributionExporter(termIndex, writer, selector, properties).doExport();
 	}
 

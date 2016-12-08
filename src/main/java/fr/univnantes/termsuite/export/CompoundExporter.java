@@ -19,22 +19,22 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 
 public class CompoundExporter {
 	private static final String LINE_FORMAT = "%-30s %-10s %-35s %d\n";
 
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Writer writer;
 	
-	private CompoundExporter(TermIndex termIndex, Writer writer) {
+	private CompoundExporter(Terminology termIndex, Writer writer) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
 	}
 
-	public static void export(TermIndex termIndex, Writer writer) {
+	public static void export(Terminology termIndex, Writer writer) {
 		new CompoundExporter(termIndex, writer).doExport();
 	}
 

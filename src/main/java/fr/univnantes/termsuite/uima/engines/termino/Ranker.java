@@ -41,7 +41,7 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 public class Ranker extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(Ranker.class);
@@ -50,8 +50,8 @@ public class Ranker extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -75,8 +75,8 @@ public class Ranker extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		logger.info("Ranking terms for TermIndex {}", termIndexResource.getTermIndex().getName());
-		List<Term> ranked = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
+		logger.info("Ranking terms for TermIndex {}", terminoResource.getTerminology().getName());
+		List<Term> ranked = Lists.newArrayList(terminoResource.getTerminology().getTerms());
 		Comparator<Term> comparator = rankingProperty.getComparator(reverse);
 		Collections.sort(ranked, comparator);
 		for(int index = 0; index < ranked.size(); index++) {

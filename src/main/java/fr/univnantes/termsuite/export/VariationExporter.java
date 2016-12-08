@@ -15,7 +15,7 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 
@@ -26,22 +26,22 @@ public class VariationExporter {
 
 	private static final String TARGET_LINE_FORMAT = " [%s] %-30s {f=%d,%s}%n";
 
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Writer writer;
 	private List<RelationType> variationTypes;
 	
-	private VariationExporter(TermIndex termIndex, Writer writer, List<RelationType> variationTypes) {
+	private VariationExporter(Terminology termIndex, Writer writer, List<RelationType> variationTypes) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
 		this.variationTypes = Lists.newArrayList(variationTypes);
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, RelationType... variationTypes) {
+	public static void export(Terminology termIndex, Writer writer, RelationType... variationTypes) {
 		new VariationExporter(termIndex, writer, Lists.newArrayList(variationTypes)).doExport();
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, List<RelationType> variationTypes) {
+	public static void export(Terminology termIndex, Writer writer, List<RelationType> variationTypes) {
 		new VariationExporter(termIndex, writer, variationTypes).doExport();
 	}
 

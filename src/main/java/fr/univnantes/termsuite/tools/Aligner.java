@@ -72,8 +72,8 @@ import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.model.termino.JsonTermIndexIO;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 /**
  * Command line interface for the Terminology extraction (Spotter+Indexer) engines.
@@ -104,8 +104,8 @@ public class Aligner {
 	
 	// values
 	
-	private Optional<TermIndex> sourceTermino = Optional.empty();
-	private Optional<TermIndex> targetTermino = Optional.empty();
+	private Optional<Terminology> sourceTermino = Optional.empty();
+	private Optional<Terminology> targetTermino = Optional.empty();
 	private String dicoPath;
 	private int n = 10;
 	private List<String> terms = Lists.newArrayList();
@@ -304,11 +304,11 @@ public class Aligner {
 		LOGGER.info("loading source termino {}",line.getOptionValue(SOURCE_TERMINO));
 		JsonOptions loadOptions = new JsonOptions().withContexts(true);
 		sourceTermino = Optional.of(
-				JsonTermIndexIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), loadOptions)
+				JsonTerminologyIO.load(new FileReader(line.getOptionValue(SOURCE_TERMINO)), loadOptions)
 			);
 		LOGGER.info("loading target termino {}",line.getOptionValue(TARGET_TERMINO));
 		targetTermino = Optional.of(
-				JsonTermIndexIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), loadOptions)
+				JsonTerminologyIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), loadOptions)
 			);
 		dicoPath = line.getOptionValue(DICTIONARY);
 

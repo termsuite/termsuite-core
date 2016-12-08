@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
@@ -53,7 +53,7 @@ public class SynonymicRule extends VariantRule {
 			}
 			
 			@Override
-			public Collection<String> getClasses(TermIndex termIndex, Term term) {
+			public Collection<String> getClasses(Terminology termIndex, Term term) {
 				if(eqIndices.getLast() < term.getWords().size()) {
 					return Lists.newArrayList(term.getWords().subList(
 							eqIndices.getFirst(), 

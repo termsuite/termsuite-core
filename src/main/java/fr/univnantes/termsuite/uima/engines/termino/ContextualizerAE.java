@@ -37,7 +37,7 @@ import fr.univnantes.termsuite.metrics.AssociationRate;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.metrics.MutualInformation;
 import fr.univnantes.termsuite.model.OccurrenceType;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
  * A UIMA AE wrapper for {@link Contextualizer}.
@@ -48,8 +48,8 @@ import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
 public class ContextualizerAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ContextualizerAE.class);
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	public static final String SCOPE = "Scope";
 	@ConfigurationParameter(name=SCOPE, mandatory=false, defaultValue="3")
@@ -108,7 +108,7 @@ public class ContextualizerAE extends JCasAnnotator_ImplBase {
 			
 			new Contextualizer()
 					.setOptions(options)
-					.contextualize(termIndexResource.getTermIndex());
+					.contextualize(terminoResource.getTerminology());
 		} catch (ClassNotFoundException e) {
 			throw new AnalysisEngineProcessException(e);
 		}

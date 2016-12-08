@@ -38,7 +38,7 @@ public class TermBuilder {
 	private static final String ERR_NO_TERM_INDEX_GIVEN = "No TermIndex given.";
 	private static final String ERR_FREQ_AND_NUM_OCC_MUST_MATCH = "Cannot build a term with frequency %d and %d occurrences";
 
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	private Optional<String> groupingKey = Optional.empty();
 	private java.util.Optional<String> pilot = java.util.Optional.empty();
@@ -57,7 +57,7 @@ public class TermBuilder {
 	private TermBuilder() {
 	}
 	
-	private TermBuilder(TermIndex termIndex) {
+	private TermBuilder(Terminology termIndex) {
 		Preconditions.checkNotNull(termIndex);
 		this.termIndex = termIndex;
 	}
@@ -184,7 +184,7 @@ public class TermBuilder {
 	public void setContextVector(ContextVector vector) {
 		this.contextVector  = Optional.of(vector);
 	}
-	public static TermBuilder start(TermIndex termIndex) {
+	public static TermBuilder start(Terminology termIndex) {
 		return new TermBuilder(termIndex);
 	}
 

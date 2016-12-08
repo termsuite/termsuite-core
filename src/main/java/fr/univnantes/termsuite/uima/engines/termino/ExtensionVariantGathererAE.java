@@ -32,13 +32,13 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.ExtensionVariantGatherer;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 public class ExtensionVariantGathererAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionVariantGathererAE.class);
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -49,9 +49,9 @@ public class ExtensionVariantGathererAE extends JCasAnnotator_ImplBase {
 	}
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Infering term variations on extensions for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		LOGGER.info("Infering term variations on extensions for TermIndex {}", this.terminoResource.getTerminology().getName());
 		new ExtensionVariantGatherer()
 				.setHistory(historyResource.getHistory())
-				.gather(termIndexResource.getTermIndex());
+				.gather(terminoResource.getTerminology());
 	}
 }

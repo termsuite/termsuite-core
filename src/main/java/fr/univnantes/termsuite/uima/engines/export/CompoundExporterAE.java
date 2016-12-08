@@ -24,13 +24,13 @@ package fr.univnantes.termsuite.uima.engines.export;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 
 import fr.univnantes.termsuite.export.CompoundExporter;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 
-public class CompoundExporterAE extends AbstractTermIndexExporter {
+public class CompoundExporterAE extends AbstractTerminologyExporter {
 
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		CompoundExporter.export(termIndexResource.getTermIndex(), writer);
+		CompoundExporter.export(terminoResource.getTerminology(), writer);
 
 	}
 }

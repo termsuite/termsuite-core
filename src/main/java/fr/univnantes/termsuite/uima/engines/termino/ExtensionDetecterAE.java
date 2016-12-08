@@ -32,13 +32,13 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.ExtensionDetecter;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 public class ExtensionDetecterAE extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionDetecterAE.class);
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -50,10 +50,10 @@ public class ExtensionDetecterAE extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Detecting term extensions for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		LOGGER.info("Detecting term extensions for TermIndex {}", this.terminoResource.getTerminology().getName());
 		new ExtensionDetecter()
 				.setHistory(historyResource.getHistory())
-				.detectExtensions(termIndexResource.getTermIndex());
+				.detectExtensions(terminoResource.getTerminology());
 	}
 
 }

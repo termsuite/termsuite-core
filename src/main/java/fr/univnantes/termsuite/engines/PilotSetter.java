@@ -4,10 +4,10 @@ import java.util.List;
 
 import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class PilotSetter {
-	public void set(TermIndex index) {
+	public void set(Terminology index) {
 		for(Term t:index.getTerms()) {
 			List<Form> forms = index.getOccurrenceStore().getForms(t);
 			if(forms.isEmpty())

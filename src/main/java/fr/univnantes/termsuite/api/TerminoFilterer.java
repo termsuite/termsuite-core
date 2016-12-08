@@ -1,6 +1,6 @@
 package fr.univnantes.termsuite.api;
 
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.utils.PipelineUtils;
 
@@ -8,9 +8,9 @@ public class TerminoFilterer {
 
 	private TerminoFilterConfig config = new TerminoFilterConfig();
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
-	public static TerminoFilterer create(TermIndex termIndex) {
+	public static TerminoFilterer create(Terminology termIndex) {
 		TerminoFilterer terminoFilterer = new TerminoFilterer();
 		terminoFilterer.termIndex = termIndex;
 		return terminoFilterer;
@@ -25,7 +25,7 @@ public class TerminoFilterer {
 	}
 
 
-	public TermIndex execute() {
+	public Terminology execute() {
 		TermSuitePipeline pipeline = TermSuitePipeline
 				.create(termIndex);
 		PipelineUtils.filter(pipeline, config);

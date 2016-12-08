@@ -56,19 +56,19 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.JsonTermIndexIO;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.TestUtil;
 
-public class JsonTermIndexIOSpec {
+public class JsonTerminologyIOSpec {
 	public static final String jsonFile1 = "fr/univnantes/termsuite/test/json/termIndex1.json";
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Term term1;
 	private Term term2;
 	private Word word1;
@@ -79,7 +79,7 @@ public class JsonTermIndexIOSpec {
 	
 	@Before
 	public void initTermIndex() {
-		termIndex = new MemoryTermIndex("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
+		termIndex = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
 		termIndex.setCorpusId("ccid");
 		termIndex.setWordAnnotationsNum(222);
 		termIndex.setSpottedTermsNum(111);
@@ -135,9 +135,9 @@ public class JsonTermIndexIOSpec {
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
 		termIndex.removeRelation(termIndex.getOutboundRelations(term1, RelationType.SYNTACTICAL).iterator().next());
 		StringWriter writer = new StringWriter();
-		JsonTermIndexIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		JsonTermIndexIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
+		JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
 	}
 
 
@@ -145,9 +145,9 @@ public class JsonTermIndexIOSpec {
 	@Test
 	public void testSaveLoadReturn() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTermIndexIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		TermIndex termIndex2 = JsonTermIndexIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
+		Terminology termIndex2 = JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
 		
 		assertEquals(111, termIndex2.getSpottedTermsNum());
 		assertEquals(222, termIndex2.getWordAnnotationsNum());
@@ -190,7 +190,7 @@ public class JsonTermIndexIOSpec {
 	@Test
 	public void testExportTermIndexToJsonWithoutOccurrences() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTermIndexIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(false));
+		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(false));
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
@@ -201,7 +201,7 @@ public class JsonTermIndexIOSpec {
 
 	@Test
 	public void testLoadJsonTermIndex() throws IOException {
-		TermIndex termIndex = JsonTermIndexIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
+		Terminology termIndex = JsonTerminologyIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
 		
 		assertEquals("Toto va à la plage", termIndex.getName());
 		assertEquals("Toto va à la montagne", termIndex.getCorpusId());
@@ -275,7 +275,7 @@ public class JsonTermIndexIOSpec {
 	@Test
 	public void testExportTermIndexToJsonWithOccurrencesAndContext() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTermIndexIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
 		ObjectMapper mapper = new ObjectMapper();
 //		System.out.println(writer.toString());
 		Map<String,Object> map = mapper.readValue(writer.toString(), 

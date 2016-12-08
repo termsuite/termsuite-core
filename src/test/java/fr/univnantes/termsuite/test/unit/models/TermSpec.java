@@ -32,7 +32,7 @@ import com.google.common.collect.ImmutableList;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
@@ -59,7 +59,7 @@ public class TermSpec {
 	}
 
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	@Before
 	public void initContexts() {

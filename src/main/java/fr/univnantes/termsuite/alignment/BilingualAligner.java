@@ -57,7 +57,7 @@ import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
@@ -66,7 +66,7 @@ import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 import fr.univnantes.termsuite.utils.AlignerUtils;
 import fr.univnantes.termsuite.utils.StringUtils;
-import fr.univnantes.termsuite.utils.TermIndexUtils;
+import fr.univnantes.termsuite.utils.TerminologyUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 import fr.univnantes.termsuite.utils.WordUtils;
  
@@ -94,14 +94,14 @@ public class BilingualAligner {
 	public static final double DICO_CANDIDATE_BONUS_FACTOR = 30;
 
 	private BilingualDictionary dico;
-	private TermIndex sourceTermino;
-	private TermIndex targetTermino;
+	private Terminology sourceTermino;
+	private Terminology targetTermino;
 
 	private SimilarityDistance distance;
 	
 	private Map<Term, Term> manualDico = new HashMap<>();
 	
-	public BilingualAligner(BilingualDictionary dico, TermIndex sourceTermino, TermIndex targetTermino, SimilarityDistance distance) {
+	public BilingualAligner(BilingualDictionary dico, Terminology sourceTermino, Terminology targetTermino, SimilarityDistance distance) {
 		super();
 		this.dico = dico;
 		this.targetTermino = targetTermino;
@@ -282,7 +282,7 @@ public class BilingualAligner {
 				if (isValidTargetCandidate) {
 					targetCandidatesHavingSameAffix.add(targetCandidate);
 
-					Collection<Term> targetExtensions = TermIndexUtils.getMorphologicalExtensionsAsTerms(targetTermino,
+					Collection<Term> targetExtensions = TerminologyUtils.getMorphologicalExtensionsAsTerms(targetTermino,
 							targetCandidate, targetCompound.getNeoclassicalAffix());
 
 					for (Term morphologicalExtensin : targetExtensions)
@@ -294,7 +294,7 @@ public class BilingualAligner {
 		/*
 		 * 3. try recursive alignment on neoclassical extensions
 		 */
-		Collection<Term> possibleSourceExtensions = TermIndexUtils.getMorphologicalExtensionsAsTerms(
+		Collection<Term> possibleSourceExtensions = TerminologyUtils.getMorphologicalExtensionsAsTerms(
 				sourceTermino, 
 				sourceTerm, 
 				sourceNeoclassicalAffix);
@@ -512,7 +512,7 @@ public class BilingualAligner {
 		return sortTruncateNormalizeAndMerge(targetTermino, nbCandidates, mergedCandidates);
 	}
 
-	private List<TranslationCandidate> sortTruncateNormalizeAndMerge(TermIndex termIndex, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
+	private List<TranslationCandidate> sortTruncateNormalizeAndMerge(Terminology termIndex, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
 		List<TranslationCandidate> list = Lists.newArrayList();
 		
 		/*
@@ -543,7 +543,7 @@ public class BilingualAligner {
 	/*
 	 * Filter candidates by specificity
 	 */
-	private void applySpecificityBonus(TermIndex termIndex, List<TranslationCandidate> list) {
+	private void applySpecificityBonus(Terminology termIndex, List<TranslationCandidate> list) {
 		Iterator<TranslationCandidate> it = list.iterator();
 		TranslationCandidate c;
 		while (it.hasNext()) {
@@ -755,7 +755,7 @@ public class BilingualAligner {
 
 
 	private boolean ensuredExtensionsAreComputed = false;
-	private void ensureHasExtensionRelationsComputred(TermIndex termIndex) {
+	private void ensureHasExtensionRelationsComputred(Terminology termIndex) {
 		if(!ensuredExtensionsAreComputed) {
 			if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 				Stopwatch sw = Stopwatch.createStarted();

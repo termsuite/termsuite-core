@@ -50,7 +50,7 @@ import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
@@ -62,7 +62,7 @@ import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public abstract class WindEnergySpec {
 
-	protected TermIndex termIndex = null;
+	protected Terminology termIndex = null;
 	protected Lang lang;
 	protected List<String> notTestedRules = Lists.newArrayList();
 	protected List<String> syntacticMatchingRules = Lists.newArrayList();
@@ -93,12 +93,12 @@ public abstract class WindEnergySpec {
 			syntacticMatchingRules.add(rule);		
 	}
 	
-	private static final LoadingCache<Lang, TermIndex> TERM_INDEX_CACHE = CacheBuilder.newBuilder()
+	private static final LoadingCache<Lang, Terminology> TERM_INDEX_CACHE = CacheBuilder.newBuilder()
 				.maximumSize(1)
-				.build(new CacheLoader<Lang, TermIndex>() {
+				.build(new CacheLoader<Lang, Terminology>() {
 					@Override
-					public TermIndex load(Lang lang) throws Exception {
-						TermIndex termIndex = runPipeline(lang);
+					public Terminology load(Lang lang) throws Exception {
+						Terminology termIndex = runPipeline(lang);
 						File controlDir = FunctionalTests.getFunctionalTestsControlDir().resolve("we-" + lang.getCode()).toFile();
 						controlDir.mkdirs();
 						new ControlFilesGenerator(termIndex).generate(controlDir);
@@ -114,7 +114,7 @@ public abstract class WindEnergySpec {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
 
-	protected static TermIndex runPipeline(Lang lang) throws IOException {
+	protected static Terminology runPipeline(Lang lang) throws IOException {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 		

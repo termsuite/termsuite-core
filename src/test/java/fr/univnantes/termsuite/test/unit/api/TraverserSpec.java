@@ -16,17 +16,17 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.Traverser;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 
 public class TraverserSpec {
-	TermIndex termIndex;
+	Terminology termIndex;
 	Collection<Term> terms;
 	Term term1, term2, term3;
 	
 	@Before
 	public void setup() {
-		termIndex = Mockito.mock(TermIndex.class);
+		termIndex = Mockito.mock(Terminology.class);
 		term1 = TermFactory.termMock("t1", 1, 3, 0.8);
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);
 		term3 = TermFactory.termMock("t3", 3, 2, 1);

@@ -27,12 +27,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.StringUtils;
 
 public class StringUtilsSpec {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	@Before
 	public void setUp() {

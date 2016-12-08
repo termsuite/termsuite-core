@@ -25,16 +25,16 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import fr.univnantes.termsuite.export.EvalExporter;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 
 /**
- * Exports a {@link TermIndex} in the tsv evaluation format.
+ * Exports a {@link Terminology} in the tsv evaluation format.
  * 
  * @author Damien Cram
  *
  */
-public class EvalExporterAE extends AbstractTermIndexExporter {
+public class EvalExporterAE extends AbstractTerminologyExporter {
 
 	public static final String WITH_VARIANTS = "WithVariants";
 	@ConfigurationParameter(name=WITH_VARIANTS, mandatory=true)
@@ -43,6 +43,6 @@ public class EvalExporterAE extends AbstractTermIndexExporter {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		EvalExporter.export(termIndexResource.getTermIndex(), writer, withVariants);
+		EvalExporter.export(terminoResource.getTerminology(), writer, withVariants);
 	}
 }

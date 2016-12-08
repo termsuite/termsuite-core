@@ -10,18 +10,18 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 
 public class VariantDistributionExporter {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Writer writer;
 	private Predicate<TermRelation> selector;
 	
 	private List<RelationProperty> termProperties = Lists.newArrayList();
 	
-	private VariantDistributionExporter(TermIndex termIndex, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
+	private VariantDistributionExporter(Terminology termIndex, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
@@ -29,7 +29,7 @@ public class VariantDistributionExporter {
 		this.termProperties = Lists.newArrayList(properties);
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
+	public static void export(Terminology termIndex, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
 		new VariantDistributionExporter(termIndex, writer, selector, properties).doExport();
 	}
 

@@ -31,7 +31,7 @@ import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
@@ -60,7 +60,7 @@ public class PrefixSplitter {
 		return this;
 	}
 	
-	public void splitPrefixes(TermIndex termIndex) {
+	public void splitPrefixes(Terminology termIndex) {
 		LOGGER.info("Starting prefix splitting for TermIndex {}", termIndex.getName());
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;

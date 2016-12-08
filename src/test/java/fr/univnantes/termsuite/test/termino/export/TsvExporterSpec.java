@@ -16,16 +16,16 @@ import fr.univnantes.termsuite.export.TsvExporter;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 
 public class TsvExporterSpec {
 
-	TermIndex termIndex;
+	Terminology termIndex;
 	Collection<Term> terms;
 	Term term1, term2, term3;
 	StringWriter writer;
@@ -34,7 +34,7 @@ public class TsvExporterSpec {
 	public void setup() {
 		defaultLocale = Locale.getDefault();
 
-		termIndex = new MemoryTermIndex("", Lang.FR, new MemoryOccurrenceStore());
+		termIndex = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore());
 
 		term1 = TermFactory.termMock("t1", 1, 3, 0.8);
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);

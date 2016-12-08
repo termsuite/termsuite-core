@@ -38,17 +38,17 @@ import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.api.JsonOptions;
 import fr.univnantes.termsuite.model.OccurrenceStore;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.model.termino.JsonTermIndexIO;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 
 /**
- * Exports a {@link TermIndex} in the tsv evaluation format.
+ * Exports a {@link Terminology} in the tsv evaluation format.
  * 
  * @author Damien Cram
  *
  */
-public class JsonExporterAE extends AbstractTermIndexExporter {
+public class JsonExporterAE extends AbstractTerminologyExporter {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(JsonExporterAE.class);
 
@@ -70,7 +70,7 @@ public class JsonExporterAE extends AbstractTermIndexExporter {
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		occurrenceStore = termIndexResource.getTermIndex().getOccurrenceStore();
+		occurrenceStore = terminoResource.getTerminology().getOccurrenceStore();
 		if(linkedMongoStore) {
 			Preconditions.checkArgument(
 					occurrenceStore.getStoreType() == OccurrenceStore.Type.MONGODB,
@@ -87,7 +87,7 @@ public class JsonExporterAE extends AbstractTermIndexExporter {
 	
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		try {
-			LOGGER.info("Exporting {} terms to JSON file {}", this.termIndexResource.getTermIndex().getTerms().size(), this.toFilePath);
+			LOGGER.info("Exporting {} terms to JSON file {}", this.terminoResource.getTerminology().getTerms().size(), this.toFilePath);
 			FileOutputStream fos = new FileOutputStream(toFile);
 			Writer writer2 = new OutputStreamWriter(fos, "UTF-8");
 			JsonOptions saveOptions = new JsonOptions();
@@ -95,7 +95,7 @@ public class JsonExporterAE extends AbstractTermIndexExporter {
 			saveOptions.withContexts(withContexts);
 			if(linkedMongoStore)
 				saveOptions.mongoDBOccStoreURI(occurrenceStore.getUrl());
-			JsonTermIndexIO.save(writer2, this.termIndexResource.getTermIndex(), saveOptions);
+			JsonTerminologyIO.save(writer2, this.terminoResource.getTerminology(), saveOptions);
 			fos.flush();
 			fos.close();
 			writer2.close();

@@ -24,7 +24,7 @@ package fr.univnantes.termsuite.model.termino;
 import java.util.Collection;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 /**
  * 
@@ -36,5 +36,5 @@ import fr.univnantes.termsuite.model.TermIndex;
  */
 public interface TermValueProvider {
 	public String getName();
-	public Collection<String> getClasses(TermIndex termIndex, Term term);
+	public Collection<String> getClasses(Terminology termIndex, Term term);
 }

@@ -43,7 +43,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
@@ -71,12 +71,12 @@ public class TermUtils {
 		}
 	};
 	
-	public static void showIndex(TermIndex index, PrintStream stream) {
+	public static void showIndex(Terminology index, PrintStream stream) {
 		Optional<Pattern> watchExpression = Optional.empty();
 		showIndex(index, stream, watchExpression);
 	}
 		
-	public static void showIndex(TermIndex index, PrintStream stream, Optional<Pattern> watchExpression) {
+	public static void showIndex(Terminology index, PrintStream stream, Optional<Pattern> watchExpression) {
 		for(Term term:index.getTerms()) {
 			if(!watchExpression.isPresent()
 					|| (watchExpression.isPresent() && watchExpression.get().matcher(term.getGroupingKey()).find())
@@ -90,7 +90,7 @@ public class TermUtils {
 		}
 	}
 
-	public static void showCompounds(TermIndex index, PrintStream out, int threshhold) {
+	public static void showCompounds(Terminology index, PrintStream out, int threshhold) {
 		List<Term> terms = Lists.newArrayList();
 		for(Term term:index.getTerms()) {
 			if(term.isCompound() && term.getFrequency() >= threshhold)
@@ -111,7 +111,7 @@ public class TermUtils {
 	 * {@link TermIndexes#SINGLE_WORD_LEMMA}.
 	 * 
 	 * @param termIndex
-	 * 			The {@link TermIndex} in which single word terms must be found.
+	 * 			The {@link Terminology} in which single word terms must be found.
 	 * @param term
 	 * 			The input term.
 	 * @return
@@ -119,7 +119,7 @@ public class TermUtils {
 	 * 
 	 * @see Term#asComponentIterator(boolean)
 	 */
-	public static List<Term> getSingleWordTerms(TermIndex termIndex, Term term) {
+	public static List<Term> getSingleWordTerms(Terminology termIndex, Term term) {
 		List<Term> terms = Lists.newArrayList();
 		for(TermWord tw:term.getWords()) {
 			Term swt = termIndex.getTermByGroupingKey(toGroupingKey(tw));
@@ -206,7 +206,7 @@ public class TermUtils {
 	
 	/**
 	 * 
-	 * Finds in a {@link TermIndex} the biggest extension affix term of a term depending 
+	 * Finds in a {@link Terminology} the biggest extension affix term of a term depending 
 	 * on a base term.
 	 * 
 	 * For example, the term "offshore wind turbine" is an extension of 
@@ -224,7 +224,7 @@ public class TermUtils {
 	 * @throws IllegalArgumentException if <code>extension</code> id not an 
 	 * 			extension of the term <code>base</code>.
 	 */
-	public static Term getExtensionAffix(TermIndex termIndex, Term base, Term extension) {
+	public static Term getExtensionAffix(Terminology termIndex, Term base, Term extension) {
 		int index = TermUtils.getPosition(base, extension);
 		if(index == -1)
 			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
@@ -264,7 +264,7 @@ public class TermUtils {
 	}
 
 	/**
-	 * Finds in a {@link TermIndex} the biggest prefix of a sequence of
+	 * Finds in a {@link Terminology} the biggest prefix of a sequence of
 	 * {@link TermWord}s that exists as a term.
 	 * 
 	 * @param termIndex
@@ -275,7 +275,7 @@ public class TermUtils {
 	 * 			A {@link Term} found in <code>termIndex</code> that makes the
 	 * 			biggest possible prefix sequence for <code>words</code>.
 	 */
-	public static Term findBiggestPrefix(TermIndex termIndex, List<TermWord> words) {
+	public static Term findBiggestPrefix(Terminology termIndex, List<TermWord> words) {
 		Term t;
 		String gKey;
 		for(int i = words.size(); i > 0 ; i--) {
@@ -289,7 +289,7 @@ public class TermUtils {
 	
 
 	/**
-	 * Finds in a {@link TermIndex} the biggest suffix of a sequence of
+	 * Finds in a {@link Terminology} the biggest suffix of a sequence of
 	 * {@link TermWord}s that exists as a term.
 	 * 
 	 * @param termIndex
@@ -301,7 +301,7 @@ public class TermUtils {
 	 * 			biggest possible suffix sequence for <code>words</code>.
 
 	 */
-	public static Term findBiggestSuffix(TermIndex termIndex, List<TermWord> words) {
+	public static Term findBiggestSuffix(Terminology termIndex, List<TermWord> words) {
 		Term t;
 		String gKey;
 		for(int i = 0; i < words.size() ; i++) {
@@ -428,14 +428,14 @@ public class TermUtils {
 		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
 	}
 
-	public static Collection<Term> getExtensions(TermIndex termIndex, Term term) {
+	public static Collection<Term> getExtensions(Terminology termIndex, Term term) {
 		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
 				.stream()
 				.map(TermRelation::getTo)
 				.collect(Collectors.toSet());
 	}
 		
-	public static boolean isExtension(TermIndex termIndex, Term term, Term extension) {
+	public static boolean isExtension(Terminology termIndex, Term term, Term extension) {
 		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
 			.stream()
 			.filter(tv -> tv.getTo().equals(extension))
@@ -443,7 +443,7 @@ public class TermUtils {
 	}
 	
 	
-	public static Collection<TermRelation> getVariations(TermIndex termIndex, Term t) {
+	public static Collection<TermRelation> getVariations(Terminology termIndex, Term t) {
 		return termIndex.getOutboundRelations(t,
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
@@ -453,7 +453,7 @@ public class TermUtils {
 				RelationType.IS_PREFIX_OF);
 	}
 
-	public static Collection<TermRelation> getBases(TermIndex termIndex, Term current) {
+	public static Collection<TermRelation> getBases(Terminology termIndex, Term current) {
 		return termIndex.getInboundRelations(current,
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,

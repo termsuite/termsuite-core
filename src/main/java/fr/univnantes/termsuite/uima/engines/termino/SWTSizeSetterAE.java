@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.SWTSizeSetter;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
  * 
@@ -42,8 +42,8 @@ public class SWTSizeSetterAE extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(SWTSizeSetterAE.class);
 	public static final String TASK_NAME = "Setting swt sizes";
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -55,6 +55,6 @@ public class SWTSizeSetterAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info("Starting " + TASK_NAME);
-		new SWTSizeSetter().setSWTNumber(termIndexResource.getTermIndex());
+		new SWTSizeSetter().setSWTNumber(terminoResource.getTerminology());
 	}
 }

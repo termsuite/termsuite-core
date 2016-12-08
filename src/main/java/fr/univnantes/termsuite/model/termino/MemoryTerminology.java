@@ -52,7 +52,7 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
@@ -64,13 +64,13 @@ import fr.univnantes.termsuite.utils.TermSuiteUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
- * The in-memory implementation of a {@link TermIndex}.
+ * The in-memory implementation of a {@link Terminology}.
  * 
  * @author Damien Cram
  *
  */
-public class MemoryTermIndex implements TermIndex {
-	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTermIndex.class);
+public class MemoryTerminology implements Terminology {
+	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTerminology.class);
 	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
 
 	/**
@@ -96,7 +96,7 @@ public class MemoryTermIndex implements TermIndex {
 	private int nbWordAnnotations = 0;
 	private int nbSpottedTerms = 0;
 	
-	public MemoryTermIndex(String name, Lang lang, OccurrenceStore occurrenceStore) {
+	public MemoryTerminology(String name, Lang lang, OccurrenceStore occurrenceStore) {
 		this.lang = lang;
 		this.name = name;
 		this.occurrenceStore = occurrenceStore;
@@ -187,7 +187,7 @@ public class MemoryTermIndex implements TermIndex {
 		
 		private TermIterator() {
 			super();
-			this.it = MemoryTermIndex.this.termsByGroupingKey.values().iterator();
+			this.it = MemoryTerminology.this.termsByGroupingKey.values().iterator();
 		}
 	}
 	

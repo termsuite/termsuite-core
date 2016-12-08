@@ -39,7 +39,7 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerDeEnSpec;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerFrEnSpec;
@@ -114,7 +114,7 @@ public class FunctionalTests {
 		return (String)getConfigProperty(PROP_TREETAGGER_HOME_PATH);
 	}
 	
-	public static List<Term> termsByProperty(TermIndex termIndex, TermProperty termProperty, boolean desc) {
+	public static List<Term> termsByProperty(Terminology termIndex, TermProperty termProperty, boolean desc) {
 		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
 		Collections.sort(terms, termProperty.getComparator(desc));
 		return terms;

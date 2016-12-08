@@ -9,7 +9,7 @@ import org.junit.Test;
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 
 public class ContextualizerSpec {
@@ -18,7 +18,7 @@ public class ContextualizerSpec {
 	private Term termWithContext2;
 	private Term termWithContext3;
 	private Contextualizer contextualizer;
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	
 	@Before

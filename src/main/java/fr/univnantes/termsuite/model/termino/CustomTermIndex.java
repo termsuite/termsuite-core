@@ -25,7 +25,7 @@ import java.util.Collection;
 import java.util.List;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public interface CustomTermIndex {
 	public Collection<String> keySet();
@@ -38,10 +38,10 @@ public interface CustomTermIndex {
 	 * @param term
 	 * 			The term to add to index.
 	 */
-	public void indexTerm(TermIndex termIndex, Term term);
+	public void indexTerm(Terminology termIndex, Term term);
 	public void cleanSingletonKeys();
 	public int size();
-	public void removeTerm(TermIndex termIndex, Term t);
+	public void removeTerm(Terminology termIndex, Term t);
 	
 	/**
 	 * For each entry of this index, increase the frequency threshhold and 

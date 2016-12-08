@@ -5,18 +5,18 @@ import java.io.Writer;
 
 import fr.univnantes.termsuite.api.JsonOptions;
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.model.termino.JsonTermIndexIO;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 public class JsonExporter {
 
-	public static void export(TermIndex termIndex, Writer writer) {
+	public static void export(Terminology termIndex, Writer writer) {
 		export(termIndex, writer, new JsonOptions());
 	}
 	
-	public static void export(TermIndex termIndex, Writer writer, JsonOptions options) {
+	public static void export(Terminology termIndex, Writer writer, JsonOptions options) {
 		try {
-			JsonTermIndexIO.save(writer, termIndex, options);
+			JsonTerminologyIO.save(writer, termIndex, options);
 		} catch (IOException e) {
 			throw new TermSuiteException(e);
 		}

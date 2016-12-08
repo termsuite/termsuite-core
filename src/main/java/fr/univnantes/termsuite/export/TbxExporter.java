@@ -31,7 +31,7 @@ import fr.univnantes.termsuite.api.Traverser;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
 
@@ -57,13 +57,13 @@ public class TbxExporter {
 	/* The tbx document */
 	private Document document;
 
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	private Traverser traverser;
 
 	private Writer writer;
 	
-	private TbxExporter(TermIndex termIndex, Writer writer, Traverser traverser) {
+	private TbxExporter(Terminology termIndex, Writer writer, Traverser traverser) {
 		NUMBER_FORMATTER.setMaximumFractionDigits(4);
 		NUMBER_FORMATTER.setMinimumFractionDigits(4);
 		NUMBER_FORMATTER.setRoundingMode(RoundingMode.UP);
@@ -94,11 +94,11 @@ public class TbxExporter {
 		}
 	}
 
-	public static void export(TermIndex termIndex, Writer writer) {
+	public static void export(Terminology termIndex, Writer writer) {
 		export(termIndex, writer, Traverser.create());
 	}
 
-	public static void export(TermIndex termIndex, Writer writer, Traverser traverser) {
+	public static void export(Terminology termIndex, Writer writer, Traverser traverser) {
 		new TbxExporter(termIndex, writer, traverser).doExport();
 	}
 	

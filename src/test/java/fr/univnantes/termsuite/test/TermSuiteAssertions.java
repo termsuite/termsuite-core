@@ -26,9 +26,9 @@ package fr.univnantes.termsuite.test;
 import org.apache.uima.jcas.JCas;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.TermAssert;
-import fr.univnantes.termsuite.test.func.TermIndexAssert;
+import fr.univnantes.termsuite.test.func.TerminologyAssert;
 import fr.univnantes.termsuite.test.unit.CasAssert;
 import fr.univnantes.termsuite.test.unit.StringAssert;
 
@@ -42,8 +42,8 @@ public class TermSuiteAssertions {
 		return new TermAssert(term);
 	}
 	
-	public static TermIndexAssert assertThat(TermIndex termIndex) {
-		return new TermIndexAssert(termIndex);
+	public static TerminologyAssert assertThat(Terminology termIndex) {
+		return new TerminologyAssert(termIndex);
 	}
 	
 	public static StringAssert assertThat(String string) {

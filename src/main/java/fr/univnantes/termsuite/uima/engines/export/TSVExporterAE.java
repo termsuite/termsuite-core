@@ -41,20 +41,20 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TsvOptions;
 import fr.univnantes.termsuite.export.TsvExporter;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
- * Exports a {@link TermIndex} in TSV format.
+ * Exports a {@link Terminology} in TSV format.
  * 
  * @author Damien Cram
  *
  */
 public class TSVExporterAE extends JCasAnnotator_ImplBase {
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	public static final String TERM_PROPERTIES = "TermProperties";
 	@ConfigurationParameter(name=TERM_PROPERTIES, mandatory=false, defaultValue="pilot,specificity")
@@ -101,7 +101,7 @@ public class TSVExporterAE extends JCasAnnotator_ImplBase {
 				new FileOutputStream(new File(toFilePath)),
 				Charset.forName("UTF-8").newEncoder())) {
 			
-			TsvExporter.export(termIndexResource.getTermIndex(), writer, new TsvOptions()
+			TsvExporter.export(terminoResource.getTerminology(), writer, new TsvOptions()
 					.showHeaders(showHeaders));
 		} catch (Exception e) {
 			throw new AnalysisEngineProcessException(e);

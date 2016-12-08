@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
@@ -59,7 +59,7 @@ public class SuffixDerivationDetecter {
 		return this;
 	}
 	
-	public void detectDerivations(TermIndex termIndex) {
+	public void detectDerivations(Terminology termIndex) {
 		LOGGER.info("Detecting suffix derivations for TermIndex {}", termIndex.getName());
 		CustomTermIndex lemmaIndex = termIndex.createCustomIndex(
 				LEMMA_INDEX, 

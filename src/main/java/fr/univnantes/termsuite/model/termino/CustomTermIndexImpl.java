@@ -35,7 +35,7 @@ import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class CustomTermIndexImpl implements CustomTermIndex {
 	
@@ -62,7 +62,7 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	}
 
 	@Override
-	public void indexTerm(TermIndex termIndex, Term term) {
+	public void indexTerm(Terminology termIndex, Term term) {
 		Collection<String> classes = valueProvider.getClasses(termIndex, term);
 		if(classes != null) {
 			for(String cls:classes) {
@@ -86,7 +86,7 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	}
 
 	@Override
-	public void removeTerm(TermIndex termIndex, Term t) {
+	public void removeTerm(Terminology termIndex, Term t) {
 		for(String k:valueProvider.getClasses(termIndex, t))
 			this.index.remove(k, t);
 	}

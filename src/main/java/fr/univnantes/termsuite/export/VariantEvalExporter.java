@@ -11,14 +11,14 @@ import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class VariantEvalExporter {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Writer writer;
 
 	private int nbVariantsPerTerm;
@@ -26,7 +26,7 @@ public class VariantEvalExporter {
 	private int nbExampleOccurrences;
 	private int topN;
 	
-	private VariantEvalExporter(TermIndex termIndex, Writer writer, int nbVariantsPerTerm, int contextSize,
+	private VariantEvalExporter(Terminology termIndex, Writer writer, int nbVariantsPerTerm, int contextSize,
 			int nbExampleOccurrences, int topN) {
 		super();
 		this.termIndex = termIndex;
@@ -38,7 +38,7 @@ public class VariantEvalExporter {
 	}
 	
 	
-	public static void export(TermIndex termIndex, Writer writer, int nbVariantsPerTerm, int contextSize,
+	public static void export(Terminology termIndex, Writer writer, int nbVariantsPerTerm, int contextSize,
 			int nbExampleOccurrences, int topN) {
 		new VariantEvalExporter(termIndex, writer, nbVariantsPerTerm, contextSize, nbExampleOccurrences, topN).doExport();
 	}

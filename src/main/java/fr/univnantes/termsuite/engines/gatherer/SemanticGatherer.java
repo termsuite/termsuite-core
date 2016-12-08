@@ -21,7 +21,7 @@ import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.utils.Pair;
@@ -76,7 +76,7 @@ public class SemanticGatherer extends AbstractGatherer {
 	
 	
 	@Override
-	public void gather(TermIndex termIndex) {
+	public void gather(Terminology termIndex) {
 		Stopwatch gatherSw = Stopwatch.createStarted();
 		for(VariantRule rule:this.variantRules)
 			gather(termIndex, (SynonymicRule)rule);
@@ -95,7 +95,7 @@ public class SemanticGatherer extends AbstractGatherer {
 				nbAlignments);
 	}
 	
-	public void gather(TermIndex termIndex, SynonymicRule rule) {
+	public void gather(Terminology termIndex, SynonymicRule rule) {
 		LOGGER.info("Aligning semantic variations for rule {}", rule.getName());
 		if(termIndex.getTerms().isEmpty())
 			return;
@@ -200,7 +200,7 @@ public class SemanticGatherer extends AbstractGatherer {
 				);
 	}
 
-	public void createDicoRelation(TermIndex termIndex, Term t1, Term t2) {
+	public void createDicoRelation(Terminology termIndex, Term t1, Term t2) {
 		TermRelation rel = new TermRelation(
 				RelationType.SYNONYMIC,
 				t1,

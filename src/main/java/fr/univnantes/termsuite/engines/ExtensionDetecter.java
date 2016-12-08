@@ -11,7 +11,7 @@ import com.google.common.base.Stopwatch;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
@@ -31,7 +31,7 @@ public class ExtensionDetecter {
 	}
 	
 	
-	public void detectExtensions(TermIndex termIndex) {
+	public void detectExtensions(Terminology termIndex) {
 		LOGGER.info("Detecting extensions on term index {}", termIndex.getName());
 		if(termIndex.getTerms().isEmpty())
 			return;
@@ -45,7 +45,7 @@ public class ExtensionDetecter {
 
 	}
 
-	public void setIsExtensionProperty(TermIndex termIndex) {
+	public void setIsExtensionProperty(Terminology termIndex) {
 		termIndex
 			.getRelations()
 			.forEach(relation -> {
@@ -64,7 +64,7 @@ public class ExtensionDetecter {
 	}
 
 
-	public void setSize1Extensions(TermIndex termIndex) {
+	public void setSize1Extensions(Terminology termIndex) {
 		CustomTermIndex swtIndex = termIndex.createCustomIndex(
 				TermIndexes.SWT_GROUPING_KEYS,
 				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
@@ -86,7 +86,7 @@ public class ExtensionDetecter {
 	}
 
 
-	public void addExtensionRelationIfNotExisting(TermIndex termIndex, Term from, Term to) {
+	public void addExtensionRelationIfNotExisting(Terminology termIndex, Term from, Term to) {
 		if(!termIndex.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent())
 			termIndex.addRelation(new TermRelation(
 					RelationType.HAS_EXTENSION,
@@ -95,7 +95,7 @@ public class ExtensionDetecter {
 				));
 	}
 
-	public void setSize2Extensions(TermIndex termIndex) {
+	public void setSize2Extensions(Terminology termIndex) {
 		LOGGER.debug("Detecting size-1 extensions");
 
 		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;

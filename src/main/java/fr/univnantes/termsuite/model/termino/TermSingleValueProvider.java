@@ -26,7 +26,7 @@ import java.util.Collection;
 import com.google.common.collect.ImmutableList;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public abstract class TermSingleValueProvider extends AbstractTermValueProvider {
 	
@@ -35,9 +35,9 @@ public abstract class TermSingleValueProvider extends AbstractTermValueProvider 
 	}
 
 	@Override
-	public Collection<String> getClasses(TermIndex termIndex, Term term) {
+	public Collection<String> getClasses(Terminology termIndex, Term term) {
 		return ImmutableList.of(getClass(termIndex, term));
 	}
 
-	public abstract String getClass(TermIndex termIndex, Term term);
+	public abstract String getClass(Terminology termIndex, Term term);
 }

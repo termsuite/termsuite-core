@@ -28,7 +28,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
@@ -65,7 +65,7 @@ public class TerminoExtractor {
 	/*
 	 * If present, start the extraction from an already imported term index
 	 */
-	private Optional<TermIndex> termIndex = Optional.empty();
+	private Optional<Terminology> termIndex = Optional.empty();
 
 	
 	/*
@@ -173,7 +173,7 @@ public class TerminoExtractor {
 		
 	}
 	
-	public static TerminoExtractor fromTermIndex(TermIndex termIndex) {
+	public static TerminoExtractor fromTermIndex(Terminology termIndex) {
 		TerminoExtractor extractor = new TerminoExtractor();
 		extractor.termIndex = Optional.of(termIndex);
 		extractor.preprocessed = true;
@@ -293,7 +293,7 @@ public class TerminoExtractor {
 	}
 	
 	/**
-	 * Filters the {@link TermIndex} before the term variant detection phase.
+	 * Filters the {@link Terminology} before the term variant detection phase.
 	 * 
 	 * This early-stage filtering will result in missing several low-frequency variations
 	 * during the term variation detection but is often necessary 
@@ -315,7 +315,7 @@ public class TerminoExtractor {
 	
 	/**
 	 * 
-	 * Filters the {@link TermIndex} dynamically during the term spotting phase (RegexSpotter)
+	 * Filters the {@link Terminology} dynamically during the term spotting phase (RegexSpotter)
 	 * of terminology extraction by cleaning by frequency whenever the number of terms in-memory 
 	 * exceeds a max number of terms allowed.
 	 * 
@@ -337,7 +337,7 @@ public class TerminoExtractor {
 	
 	
 	/**
-	 * Filters the {@link TermIndex} at the end of the pipeline,
+	 * Filters the {@link Terminology} at the end of the pipeline,
 	 * i.e. after the term variant detection phase.
 	 * 
 	 * This filtering is loss-less when configured with {@link TerminoFilterConfig#keepVariants(true)}.
@@ -355,7 +355,7 @@ public class TerminoExtractor {
 		return this;
 	}	
 	
-	public TermIndex execute() {
+	public Terminology execute() {
 		Preconditions.checkNotNull(this.lang, "Language cannot be null");
 		
 		TermSuitePipeline pipeline = termIndex.isPresent() ?

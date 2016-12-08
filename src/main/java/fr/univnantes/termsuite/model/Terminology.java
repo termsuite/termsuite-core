@@ -31,7 +31,7 @@ import fr.univnantes.termsuite.model.termino.TermSelector;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 
-public interface TermIndex {
+public interface Terminology {
 	
 	/*
 	 * Attributes
@@ -130,7 +130,7 @@ public interface TermIndex {
 	/**
 	 * 
 	 * The number of terms added to this TermIndex by invoking
-	 * {@link TermIndex#addTermOccurrence(TermOccAnnotation, String, boolean)}
+	 * {@link Terminology#addTermOccurrence(TermOccAnnotation, String, boolean)}
 	 * 
 	 * @return
 	 * 		The number of spotted terms, 0 if none has been added through

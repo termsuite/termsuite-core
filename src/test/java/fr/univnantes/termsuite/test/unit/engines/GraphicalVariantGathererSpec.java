@@ -34,7 +34,7 @@ import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
@@ -42,7 +42,7 @@ import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 public class GraphicalVariantGathererSpec {
 	
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Term tetetete;
 	private Term tetetetx;
 	private Term teteteteAccent;
@@ -56,10 +56,10 @@ public class GraphicalVariantGathererSpec {
 	}
 	
 	
-	private TermIndex termIndex() {
+	private Terminology termIndex() {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
-		TermIndex termIndex = Fixtures.emptyTermIndex();
+		Terminology termIndex = Fixtures.emptyTermIndex();
 		manager.register(termIndex.getName(), termIndex);
 		TermFactory termFactory = new TermFactory(termIndex);
 		tetetete = termFactory.create("N:tetetete|tetetete");

@@ -42,7 +42,7 @@ import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
  * A UIMA wrapper for {@link NativeSplitter}
@@ -58,8 +58,8 @@ public class MorphologicalAnalyzerAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	public static final String LANGUAGE_DICO = "LanguageDico";
 	@ExternalResource(key=LANGUAGE_DICO, mandatory=true)
@@ -177,6 +177,6 @@ public class MorphologicalAnalyzerAE extends JCasAnnotator_ImplBase {
 				.setStopList(stopList)
 				.setSuffixDerivationList(suffixDerivationList)
 				.setTransformationRules(transformationRules)
-				.analyze(termIndexResource.getTermIndex());
+				.analyze(terminoResource.getTerminology());
 	}
 }

@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 
 public class TermMerger {
@@ -16,11 +16,11 @@ public class TermMerger {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermMerger.class);
 	
 	private static final Double MERGING_THRESHOLD = 2d;
-	public void mergeTerms(TermIndex termIndex) {
+	public void mergeTerms(Terminology termIndex) {
 		mergeGraphicalVariants(termIndex);
 	}
 
-	private void mergeGraphicalVariants(TermIndex termIndex) {
+	private void mergeGraphicalVariants(Terminology termIndex) {
 		final MutableInt nbMerged = new MutableInt(0);
 		
 		termIndex.getRelations(RelationType.GRAPHICAL)

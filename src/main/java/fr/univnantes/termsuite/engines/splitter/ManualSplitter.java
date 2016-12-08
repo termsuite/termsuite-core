@@ -23,7 +23,7 @@
 
 package fr.univnantes.termsuite.engines.splitter;
 
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 
@@ -36,7 +36,7 @@ public class ManualSplitter  {
 		return this;
 	}
 	
-	public void split(TermIndex termIndex) {
+	public void split(Terminology termIndex) {
 		Segmentation segmentation;
 		for(Word word:termIndex.getWords()) {
 			segmentation = manualCompositions.getSegmentation(word.getLemma());

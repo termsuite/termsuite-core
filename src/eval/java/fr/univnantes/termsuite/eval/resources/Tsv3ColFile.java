@@ -16,7 +16,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
@@ -39,7 +39,7 @@ public class Tsv3ColFile {
 			.collect(Collectors.toList());
 	}
 	
-	public Stream<Term[]> pairs(TermIndex sourceTermino, TermIndex targetTermino) throws IOException {
+	public Stream<Term[]> pairs(Terminology sourceTermino, Terminology targetTermino) throws IOException {
 		CustomTermIndex sourceLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
 		CustomTermIndex targetLemmaIndex = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
 

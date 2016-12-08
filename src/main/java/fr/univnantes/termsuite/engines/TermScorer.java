@@ -11,7 +11,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.StringUtils;
@@ -22,7 +22,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
 public class TermScorer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermScorer.class);
 
-	public void score(TermIndex index) {
+	public void score(Terminology index) {
 		LOGGER.info("Computing scores for terms");
 		Stopwatch sw = Stopwatch.createStarted();
 		scoreIndependance(index);
@@ -31,7 +31,7 @@ public class TermScorer {
 		LOGGER.debug("Scores computed in {}", sw);
 	}
 	
-	public void scoreIndependance(TermIndex index) {
+	public void scoreIndependance(Terminology index) {
 		if(!index.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
 			new ExtensionDetecter().detectExtensions(index);
@@ -48,7 +48,7 @@ public class TermScorer {
 		});
 	}
 	
-	public void scoreOrthographic(TermIndex index) {
+	public void scoreOrthographic(Terminology index) {
 		for(Term term:index.getTerms()) 
 			term.setProperty(
 					TermProperty.ORTHOGRAPHIC_SCORE, 

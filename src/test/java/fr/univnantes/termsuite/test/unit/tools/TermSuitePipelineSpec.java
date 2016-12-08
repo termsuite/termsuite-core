@@ -28,7 +28,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import fr.univnantes.termsuite.test.unit.io.JsonTermIndexIOSpec;
+import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
 import fr.univnantes.termsuite.tools.TermSuiteCLIUtils;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.TermSuitePipelineException;
@@ -100,7 +100,7 @@ public class TermSuitePipelineSpec {
 		thrown.expectMessage("Not a jar");
 		
 		TermSuitePipeline pipeline = startPipeline();
-		pipeline.setResourceJar(JsonTermIndexIOSpec.jsonFile1);
+		pipeline.setResourceJar(JsonTerminologyIOSpec.jsonFile1);
 		runPipeline(pipeline);
 	}
 

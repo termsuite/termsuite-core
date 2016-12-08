@@ -33,15 +33,15 @@ import com.google.common.base.Preconditions;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 
 
 public class TermSuiteAlignerBuilder {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteAlignerBuilder.class);
 	
-	private Optional<TermIndex> sourceTerminology = Optional.empty();
-	private Optional<TermIndex> targetTerminology = Optional.empty();
+	private Optional<Terminology> sourceTerminology = Optional.empty();
+	private Optional<Terminology> targetTerminology = Optional.empty();
 	private Optional<String> dicoPath = Optional.empty();
 	private Optional<? extends SimilarityDistance> distance = Optional.of(new Cosine());
 //	private Optional<String> sourceTerminologyLanguage = Optional.empty();
@@ -69,7 +69,7 @@ public class TermSuiteAlignerBuilder {
 //		return this;
 //	}
 
-	public TermSuiteAlignerBuilder setSourceTerminology(TermIndex sourceTerminology) {
+	public TermSuiteAlignerBuilder setSourceTerminology(Terminology sourceTerminology) {
 		this.sourceTerminology = Optional.of(sourceTerminology);
 		return this;
 	}
@@ -79,7 +79,7 @@ public class TermSuiteAlignerBuilder {
 		return this;
 	}
 	
-	public TermSuiteAlignerBuilder setTargetTerminology(TermIndex targetTerminology) {
+	public TermSuiteAlignerBuilder setTargetTerminology(Terminology targetTerminology) {
 		this.targetTerminology = Optional.of(targetTerminology);
 		return this;
 	}

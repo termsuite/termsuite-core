@@ -52,7 +52,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -62,9 +62,9 @@ import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
 
-public class JsonTermIndexIO {
+public class JsonTerminologyIO {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(JsonTermIndexIO.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(JsonTerminologyIO.class);
 	
 	/*
 	 * Error messages for parsing
@@ -151,7 +151,7 @@ public class JsonTermIndexIO {
 	
 	
 	/**
-	 * Loads the json-serialized term index into the param {@link TermIndex} object.
+	 * Loads the json-serialized term index into the param {@link Terminology} object.
 	 * 
 	 * @param reader
 	 * @param options
@@ -160,8 +160,8 @@ public class JsonTermIndexIO {
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
-	public static TermIndex load(Reader reader, JsonOptions options) throws JsonParseException, IOException {
-		TermIndex termIndex = null;
+	public static Terminology load(Reader reader, JsonOptions options) throws JsonParseException, IOException {
+		Terminology termIndex = null;
 		JsonFactory jsonFactory = new JsonFactory(); 
 		JsonParser jp = jsonFactory.createParser(reader); // or Stream, Reader
 		jp.enable(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES);
@@ -237,7 +237,7 @@ public class JsonTermIndexIO {
 				} else
 					occurrenceStore = new MemoryOccurrenceStore();
 				
-				termIndex = new MemoryTermIndex(termIndexName, lang, occurrenceStore);
+				termIndex = new MemoryTerminology(termIndexName, lang, occurrenceStore);
 				if(corpusID != null)
 					termIndex.setCorpusId(corpusID);
 				if(nbWordAnnos != -1)
@@ -531,7 +531,7 @@ public class JsonTermIndexIO {
 		return termIndex;
 	}
 
-	public static void save(Writer writer, TermIndex termIndex, JsonOptions options) throws IOException {
+	public static void save(Writer writer, Terminology termIndex, JsonOptions options) throws IOException {
 		JsonFactory jsonFactory = new JsonFactory(); // or, for data binding, org.codehaus.jackson.mapper.MappingJsonFactory 
 //		jsonFactory.configure(f, state)
 		JsonGenerator jg = jsonFactory.createGenerator(writer); // or Stream, Reader

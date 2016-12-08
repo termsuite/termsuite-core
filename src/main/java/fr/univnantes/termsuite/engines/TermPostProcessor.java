@@ -40,7 +40,7 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.resources.ScorerConfig;
@@ -48,7 +48,7 @@ import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
- * Turn a {@link TermIndex} to a {@link ScoredModel}
+ * Turn a {@link Terminology} to a {@link ScoredModel}
  * 
  * @author Damien Cram
  *
@@ -70,7 +70,7 @@ public class TermPostProcessor {
 		return this;
 	}
 	
-	public void postprocess(TermIndex termIndex) {
+	public void postprocess(Terminology termIndex) {
 		LOGGER.info("Post-processing terms and variants");
 		Stopwatch sw = Stopwatch.createStarted();
 
@@ -148,7 +148,7 @@ public class TermPostProcessor {
 		LOGGER.debug("Post-processing finished in {}", sw);
 	}
 
-	private void filterTwoOrderVariationPatterns(TermIndex termIndex) {
+	private void filterTwoOrderVariationPatterns(Terminology termIndex) {
 		LOGGER.debug("Filtering two-order relations");
 		Stopwatch sw = Stopwatch.createStarted();
 
@@ -206,7 +206,7 @@ public class TermPostProcessor {
 	 *   baseTerm ----> v2 
 	 * 
 	 */
-	private void filterTwoOrderVariations(TermIndex termIndex, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
+	private void filterTwoOrderVariations(Terminology termIndex, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
 		termIndex.getTerms().stream()
 		.sorted(TermProperty.FREQUENCY.getComparator(true))
 		.forEach(term -> {
@@ -246,7 +246,7 @@ public class TermPostProcessor {
 	}
 
 
-	private void filterExtensionsByThresholds(TermIndex termIndex) {
+	private void filterExtensionsByThresholds(Terminology termIndex) {
 		Predicate<? super TermRelation> isExtension = rel -> 
 				rel.isPropertySet(RelationProperty.IS_EXTENSION) 
 				&& rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION);

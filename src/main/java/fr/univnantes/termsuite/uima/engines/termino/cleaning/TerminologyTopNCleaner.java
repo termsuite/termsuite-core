@@ -21,48 +21,45 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.uima.engines.termino.cleaning;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
+import com.google.common.collect.Lists;
+
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 
 /**
- * Removes terms from the {@link TermIndex} according to 
- * a custom property threshhold.
+ * Keeps only top n terms in a {@link Terminology} after having ranked 
+ * them according to a parameter term property.
  */
-public class TermIndexThresholdCleaner extends AbstractTermIndexCleaner {
+public class TerminologyTopNCleaner extends AbstractTerminologyCleaner {
 
-	public static final String THRESHOLD="Threshold";
-	@ConfigurationParameter(name=THRESHOLD, mandatory=true)
-	private float threshold;
-	
-	protected boolean acceptTerm(Term term) {
-		if(property.getRange().equals(Double.class))
-			return term.getPropertyDoubleValue(property) >= threshold;
-		else if(property.getRange().equals(Integer.class))
-			return term.getPropertyIntegerValue(property) >= threshold;
-		else if(property.getRange().equals(Float.class))
-			return term.getPropertyFloatValue(property) >= threshold;
-		else 
-			throw new IllegalStateException("Should never happen since this has been checked at AE init");
-	}
+
+	public static final String TOP_N="TopN";
+	@ConfigurationParameter(name=TOP_N, mandatory=true)
+	private int topN;
 
 	@Override
 	protected void doCleaningPartition(Set<Term> keptTerms,
 			Set<Term> removedTerms) {
-		for(Term t:termIndexResource.getTermIndex().getTerms()) {
-			if(acceptTerm(t))
-				keptTerms.add(t);
+		List<Term> terms = Lists.newArrayList(terminoResource.getTerminology().getTerms());
+		Collections.sort(terms, property.getComparator(true));
+		for(int index = 0; index < terms.size(); index++) {
+			if(index < topN)
+				keptTerms.add(terms.get(index));
 			else
-				removedTerms.add(t);
+				removedTerms.add(terms.get(index));
 		}
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("%s >= %.2f", property.getPropertyName(), threshold);
+		return String.format("keeping top %d terms by %s", topN, property.getPropertyName());
 	}
+
 }

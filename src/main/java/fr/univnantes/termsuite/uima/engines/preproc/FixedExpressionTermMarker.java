@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.uima.resources.preproc.FixedExpressionResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 
 /**
@@ -46,8 +46,8 @@ public class FixedExpressionTermMarker extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=FixedExpressionResource.FIXED_EXPRESSION_RESOURCE, mandatory=true)
 	protected FixedExpressionResource fixedExpressionResource;
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -57,11 +57,11 @@ public class FixedExpressionTermMarker extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		LOGGER.info("Start fixed expressions marker");
-		if(termIndexResource.getTermIndex().getTerms().isEmpty())
+		if(terminoResource.getTerminology().getTerms().isEmpty())
 			return;
 
 		int cnt = 0;
-		for(Term t:termIndexResource.getTermIndex().getTerms()) {
+		for(Term t:terminoResource.getTerminology().getTerms()) {
 			boolean fixedExpression = fixedExpressionResource.containsLemma(t.getLemma());
 			t.setFixedExpression(fixedExpression);
 			if(fixedExpression)
@@ -70,7 +70,7 @@ public class FixedExpressionTermMarker extends JCasAnnotator_ImplBase {
 		
 		LOGGER.debug("Num of fixed expressions: {} (out of {} terms)",
 				cnt,
-				termIndexResource.getTermIndex().getTerms().size());
+				terminoResource.getTerminology().getTerms().size());
 		
 
 	}

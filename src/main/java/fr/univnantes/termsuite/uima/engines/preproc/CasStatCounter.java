@@ -54,11 +54,11 @@ import com.google.common.collect.Ordering;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.JCasUtils;
 
 /**
@@ -90,8 +90,8 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 
 	private static final String TSV_LINE_FORMAT="%d\t%d\t%d\t%d\t%d\n";
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	private Stopwatch sw;
 	@Override
@@ -141,7 +141,7 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			this.sw.elapsed(TimeUnit.MILLISECONDS),
 			this.docIt,
 			this.cumulatedFileSize,
-			this.termIndexResource.getTermIndex().getTerms().size(),
+			this.terminoResource.getTerminology().getTerms().size(),
 			this.counters.get(WordAnnotation.class.getSimpleName()).intValue()
 		);
 		LOGGER.debug(line);
@@ -175,8 +175,8 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		int nbGraphicalVariants = 0;
 		int nbSynonymicVariants = 0;
 		int nbOccurrences = 0;
-		TermIndex termIndex = termIndexResource.getTermIndex();
-		TermIndex tIndex = termIndex;
+		Terminology termIndex = terminoResource.getTerminology();
+		Terminology tIndex = termIndex;
 		for(Term t:tIndex.getTerms()) {
 			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
 			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNTACTICAL));

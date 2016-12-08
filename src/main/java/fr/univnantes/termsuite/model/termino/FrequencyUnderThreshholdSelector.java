@@ -24,7 +24,7 @@
 package fr.univnantes.termsuite.model.termino;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class FrequencyUnderThreshholdSelector extends AbstractTermSelector {
 	
@@ -40,7 +40,7 @@ public class FrequencyUnderThreshholdSelector extends AbstractTermSelector {
 	}
 
 	@Override
-	public boolean select(TermIndex termIndex, Term t) {
+	public boolean select(Terminology termIndex, Term t) {
 		return t.getFrequency() < this.threshhold;
 	}
 }

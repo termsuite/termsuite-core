@@ -34,23 +34,23 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import fr.univnantes.termsuite.engines.SWTFlagSetter;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.JCasUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 /**
- * Imports all {@link TermOccAnnotation} to a {@link TermIndex}.
+ * Imports all {@link TermOccAnnotation} to a {@link Terminology}.
  */
 public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 	
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	public static final String KEEP_OCCURRENCES_IN_TERM_INDEX = "KeepOccurrencesInTermIndex";
 	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERM_INDEX, mandatory = false, defaultValue = "true")
@@ -75,28 +75,28 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 			TermHistory history = historyResource.getHistory();
 			watch(gKey, history);
 	
-			this.termIndexResource.getTermIndex().addTermOccurrence(
+			this.terminoResource.getTerminology().addTermOccurrence(
 					toa, 
 					currentFileURI, 
 					keepOccurrencesInTermIndex);
 			
 		}
-		this.termIndexResource.getTermIndex().getOccurrenceStore().flush();
+		this.terminoResource.getTerminology().getOccurrenceStore().flush();
 	}
 
 	private void watch(String gKey, TermHistory history) {
 		if(history.isWatched(gKey)) {
-			if(this.termIndexResource.getTermIndex().getTermByGroupingKey(gKey) == null)
+			if(this.terminoResource.getTerminology().getTermByGroupingKey(gKey) == null)
 				history.saveEvent(
 					gKey, 
 					this.getClass(), 
-					"Term added to TermIndex " + termIndexResource.getTermIndex().getName());
+					"Term added to TermIndex " + terminoResource.getTerminology().getName());
 		}
 	}
 	
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		new SWTFlagSetter().setSWTFlags(termIndexResource.getTermIndex());
+		new SWTFlagSetter().setSWTFlags(terminoResource.getTerminology());
 	}
 }

@@ -16,7 +16,7 @@ import com.google.common.base.Stopwatch;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -82,7 +82,7 @@ public class AbstractGatherer {
 		return this;
 	}
 	
-	public void gather(TermIndex termIndex) {
+	public void gather(Terminology termIndex) {
 		Stopwatch indexSw = Stopwatch.createStarted();
 		CustomTermIndex index = termIndex.getCustomIndex(indexName.get());
 		index.cleanSingletonKeys();
@@ -122,7 +122,7 @@ public class AbstractGatherer {
 		}
 	}
 
-	protected void gather(TermIndex termIndex, Collection<Term> termClass, String clsName) {
+	protected void gather(Terminology termIndex, Collection<Term> termClass, String clsName) {
 		for(VariantRule rule:variantRules) {
 			Set<Term> sources = termClass.stream()
 				.filter(rule::isSourceAcceptable)
@@ -153,7 +153,7 @@ public class AbstractGatherer {
 		}
 	}
 
-	private void createVariationRelation(TermIndex termIndex, Term source, Term target, VariantRule rule) {
+	private void createVariationRelation(Terminology termIndex, Term source, Term target, VariantRule rule) {
 		TermRelation relation = new TermRelation(relationType, source, target);
 		relation.setProperty(RelationProperty.VARIATION_RULE, rule.getName());
 		termIndex.addRelation(relation);

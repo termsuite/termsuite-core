@@ -45,9 +45,9 @@ import org.mockito.Mockito;
 import com.google.common.collect.ObjectArrays;
 
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TestUtil {
@@ -115,19 +115,19 @@ public class TestUtil {
 		return is;
 	}
 	
-	public static AnalysisEngine createAE(TermIndex termIndex, Class<? extends AnalysisComponent> cls, Object... config) {
+	public static AnalysisEngine createAE(Terminology termIndex, Class<? extends AnalysisComponent> cls, Object... config) {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 
-		ExternalResourceDescription termIndexResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TermIndexResource.class, 
+		ExternalResourceDescription terminoResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
+				TerminologyResource.class, 
 				termIndex.getName());
 		
 		
 		manager.register(termIndex.getName(), termIndex);
 		
 		Object[] config2 = ObjectArrays.concat(config, new Object[]{
-				TermIndexResource.TERM_INDEX, termIndexResourceDesc
+				TerminologyResource.TERMINOLOGY, terminoResourceDesc
 		}, Object.class);
 		try {
 			return AnalysisEngineFactory.createEngine(cls, config2);

@@ -12,22 +12,22 @@ import fr.univnantes.termsuite.alignment.AlignmentMethod;
 import fr.univnantes.termsuite.alignment.BilingualAligner;
 import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
-import fr.univnantes.termsuite.api.TermIndexIO;
+import fr.univnantes.termsuite.api.TerminologyIO;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
 public class BilingualAlignerDeEnSpec {
 
-	TermIndex deTermino;
-	TermIndex enTermino;
+	Terminology deTermino;
+	Terminology enTermino;
 	BilingualAligner aligner;
 	
 	@Before
 	public void setup() {
-		deTermino = TermIndexIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.DE));
-		enTermino = TermIndexIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.EN));
+		deTermino = TerminologyIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.DE));
+		enTermino = TerminologyIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.EN));
 		aligner = TermSuiteAlignerBuilder.start()
 				.setSourceTerminology(deTermino)
 				.setTargetTerminology(enTermino)

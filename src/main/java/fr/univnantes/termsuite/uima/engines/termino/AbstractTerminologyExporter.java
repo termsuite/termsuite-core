@@ -38,23 +38,23 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.api.Traverser;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
- * Exports a {@link TermIndex} in TSV format
+ * Exports a {@link Terminology} in TSV format
  * 
  * @author Damien Cram
  *
  */
-public abstract class AbstractTermIndexExporter extends JCasAnnotator_ImplBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractTermIndexExporter.class);
+public abstract class AbstractTerminologyExporter extends JCasAnnotator_ImplBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractTerminologyExporter.class);
 
 	/*
 	 *  AE resources
 	 */
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	protected TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	protected TerminologyResource terminoResource;
 	
 	/*
 	 * AE parameters

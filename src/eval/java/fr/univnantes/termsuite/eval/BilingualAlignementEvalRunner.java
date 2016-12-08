@@ -26,7 +26,7 @@ import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.exceptions.DictionaryNotFoundException;
 import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class BilingualAlignementEvalRunner {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);
@@ -87,8 +87,8 @@ public class BilingualAlignementEvalRunner {
 		if(!dicoPath.toFile().isFile()) 
 			throw new DictionaryNotFoundException(dicoPath.toString());
 		
-		TermIndex sourceTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getSource(), run.getTerminoConfig());
-		TermIndex targetTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getTarget(), run.getTerminoConfig());
+		Terminology sourceTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getSource(), run.getTerminoConfig());
+		Terminology targetTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getTarget(), run.getTerminoConfig());
 		
 		BilingualAligner aligner = TermSuiteAlignerBuilder.start()
 				.setSourceTerminology(sourceTermino)

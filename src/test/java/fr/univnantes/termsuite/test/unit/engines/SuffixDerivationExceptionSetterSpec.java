@@ -36,7 +36,7 @@ import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.splitter.ManualSuffixDerivationDetecter;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
@@ -44,7 +44,7 @@ import io.codearte.catchexception.shade.mockito.Mockito;
 
 public class SuffixDerivationExceptionSetterSpec {
 	
-	private MemoryTermIndex termIndex;
+	private MemoryTerminology termIndex;
 
 	private Term ferme_n;
 	private Term ferme_a;

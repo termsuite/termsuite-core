@@ -34,20 +34,20 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.termino.FrequencyUnderThreshholdSelector;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 
 /**
- * Removes terms from the {@link TermIndex}.
+ * Removes terms from the {@link Terminology}.
  */
 public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(MaxSizeThresholdCleaner.class);
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	protected TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	protected TerminologyResource terminoResource;
 
 	public static final String MAX_SIZE="MaxSize";
 	@ConfigurationParameter(name=MAX_SIZE, mandatory=true)
@@ -82,17 +82,17 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		
-		int sizeBefore = termIndexResource.getTermIndex().getTerms().size();
-		if(termIndexResource.getTermIndex().getTerms().size() >= maxSize) {
+		int sizeBefore = terminoResource.getTerminology().getTerms().size();
+		if(terminoResource.getTerminology().getTerms().size() >= maxSize) {
 			logger.debug(
 					"Current term index size = {} (> {}). Start cleaning with th={}", 
 					sizeBefore,
 					maxSize, 
 					currentThreshhold);
 			
-			termIndexResource.getTermIndex().deleteMany(new FrequencyUnderThreshholdSelector(currentThreshhold));
+			terminoResource.getTerminology().deleteMany(new FrequencyUnderThreshholdSelector(currentThreshhold));
 
-			int sizeAfter = termIndexResource.getTermIndex().getTerms().size();
+			int sizeAfter = terminoResource.getTerminology().getTerms().size();
 			double removalRatio = ((double)(sizeBefore - sizeAfter))/sizeBefore;
 			logger.info(
 					"Cleaned {} terms [before: {}, after: {}, ratio: {}] from term index (maxSize: {}, currentTh: {})", 

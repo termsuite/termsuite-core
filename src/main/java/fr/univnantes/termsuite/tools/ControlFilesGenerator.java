@@ -41,25 +41,25 @@ import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.utils.TermIndexUtils;
+import fr.univnantes.termsuite.utils.TerminologyUtils;
 
 /**
  * 
  * A tool that generates all control files required for 
- * functional tests from a {@link TermIndex}.
+ * functional tests from a {@link Terminology}.
  * 
  * @author Damien Cram
  *
  */
 public class ControlFilesGenerator {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	
-	public ControlFilesGenerator(TermIndex termIndex) {
+	public ControlFilesGenerator(Terminology termIndex) {
 		super();
 		this.termIndex = termIndex;
 	}
@@ -98,14 +98,14 @@ public class ControlFilesGenerator {
 		 * Write prefix variations
 		 */
 		String prefixPath = directory.getAbsolutePath() + "/" + getPrefixFileName();
-		writeVariations(prefixPath, TermIndexUtils.selectTermVariations(termIndex, RelationType.IS_PREFIX_OF));
+		writeVariations(prefixPath, TerminologyUtils.selectTermVariations(termIndex, RelationType.IS_PREFIX_OF));
 		
 
 		/*
 		 * Write derivative variations
 		 */
 		String derivativePath = directory.getAbsolutePath() + "/" + getDerivatesFileName();
-		writeVariations(derivativePath, TermIndexUtils.selectTermVariations(termIndex, RelationType.DERIVES_INTO));
+		writeVariations(derivativePath, TerminologyUtils.selectTermVariations(termIndex, RelationType.DERIVES_INTO));
 
 		/*
 		 * Write compounds

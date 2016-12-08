@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -17,7 +17,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
  */
 public class SWTFlagSetter {
 	
-	public void setSWTFlags(TermIndex termIndex) {
+	public void setSWTFlags(Terminology termIndex) {
 		Set<String> swts = termIndex.getTerms().stream()
 				.filter(t -> t.getWords().size() == 1)
 				.map(Term::getGroupingKey)

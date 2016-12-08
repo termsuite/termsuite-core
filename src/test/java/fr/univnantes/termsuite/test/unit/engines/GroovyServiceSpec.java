@@ -10,9 +10,9 @@ import fr.univnantes.termsuite.engines.gatherer.GroovyService;
 import fr.univnantes.termsuite.engines.gatherer.VariantRule;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;
@@ -28,7 +28,7 @@ public class GroovyServiceSpec {
 	/* accès radioélectrique de recouvrement */
 	private Term term3;
 	
-	private TermIndex tIndex;
+	private Terminology tIndex;
 
 	
 	@Before
@@ -36,7 +36,7 @@ public class GroovyServiceSpec {
 		term1 = Fixtures.term1();
 		term2 = Fixtures.term2();
 		term3 = Fixtures.term3();
-		TermIndex tIndex = new MemoryTermIndex("tata", Lang.FR, new MemoryOccurrenceStore());
+		Terminology tIndex = new MemoryTerminology("tata", Lang.FR, new MemoryOccurrenceStore());
 		tIndex.addTerm(term1);
 		tIndex.addTerm(term2);
 		tIndex.addTerm(term3);

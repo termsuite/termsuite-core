@@ -24,19 +24,19 @@ package fr.univnantes.termsuite.uima.engines.export;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 
 import fr.univnantes.termsuite.export.TbxExporter;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 
 /**
- * Exports a {@link TermIndex} in TSV format
+ * Exports a {@link Terminology} in TSV format
  * 
  * @author Damien Cram
  *
  */
-public class TbxExporterAE extends AbstractTermIndexExporter {
+public class TbxExporterAE extends AbstractTerminologyExporter {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		TbxExporter.export(this.termIndexResource.getTermIndex(), writer, traverser);
+		TbxExporter.export(this.terminoResource.getTerminology(), writer, traverser);
 	}
 }

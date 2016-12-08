@@ -25,23 +25,23 @@ import org.apache.uima.resource.DataResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.SharedResourceObject;
 
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
-public class TermIndexResource implements SharedResourceObject {
+public class TerminologyResource implements SharedResourceObject {
 	/**
 	 * The name of the Term Index as UIMA resource
 	 */
-	public static final String TERM_INDEX = "TermIndex";
+	public static final String TERMINOLOGY = "Terminology";
 	
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	public void load(DataResource arg0) throws ResourceInitializationException {
-		this.termIndex = (TermIndex) TermSuiteResourceManager.getInstance().get(arg0.getUri().toString());
+		this.termIndex = (Terminology) TermSuiteResourceManager.getInstance().get(arg0.getUri().toString());
 	};
 	
-	public TermIndex getTermIndex() {
+	public Terminology getTerminology() {
 		return this.termIndex;
 	}
 }

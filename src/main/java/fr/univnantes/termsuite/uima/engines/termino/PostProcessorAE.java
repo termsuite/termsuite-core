@@ -35,13 +35,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.TermPostProcessor;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.TermSuiteMemoryUIMAResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(PostProcessorAE.class);
@@ -50,8 +50,8 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
 	protected ObserverResource observerResource;
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -84,8 +84,8 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info(
 				"Post-processing terms and variants for TermIndex {}", 
-				this.termIndexResource.getTermIndex().getName());
-		TermIndex termIndex = termIndexResource.getTermIndex();
+				this.terminoResource.getTerminology().getName());
+		Terminology termIndex = terminoResource.getTerminology();
 		if(!scorerConfig.isPresent())
 			scorerConfig = Optional.of(termIndex.getLang().getScorerConfig());
 		new TermPostProcessor(scorerConfig.get())

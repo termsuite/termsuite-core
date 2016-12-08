@@ -24,10 +24,10 @@
 package fr.univnantes.termsuite.model.termino;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 
 public interface TermSelector {
 
 	public boolean select(Term t);
-	public boolean select(TermIndex termIndex, Term t);
+	public boolean select(Terminology termIndex, Term t);
 }

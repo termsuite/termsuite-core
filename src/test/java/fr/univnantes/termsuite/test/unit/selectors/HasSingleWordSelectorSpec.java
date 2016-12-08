@@ -32,10 +32,10 @@ import org.junit.Test;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.HasSingleWordVariationSelector;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.model.termino.TermSelector;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 
@@ -49,11 +49,11 @@ public class HasSingleWordSelectorSpec {
 	private Term term6;
 	private Term term7;
 	
-	private TermIndex termIndex ;
+	private Terminology termIndex ;
 	
 	@Before
 	public void init() {
-		termIndex = new MemoryTermIndex("Test", Lang.FR, new MemoryOccurrenceStore());
+		termIndex = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
 		populateTermIndex(new TermFactory(termIndex));
 	}
 	

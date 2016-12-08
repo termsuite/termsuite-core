@@ -30,7 +30,7 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
@@ -52,7 +52,7 @@ public class ManualPrefixSetter {
 		return this;
 	}
 
-	public void setPrefixes(TermIndex termIndex)  {
+	public void setPrefixes(Terminology termIndex)  {
 		Segmentation segmentation;
 		for(Term swt:termIndex.getTerms()) {
 			if(!swt.isSingleWord())

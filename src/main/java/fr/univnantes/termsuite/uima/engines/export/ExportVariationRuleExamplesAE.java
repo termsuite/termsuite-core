@@ -26,9 +26,9 @@ import org.apache.uima.fit.descriptor.ExternalResource;
 
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.export.VariationRuleExamplesExporter;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 
-public class ExportVariationRuleExamplesAE extends AbstractTermIndexExporter {
+public class ExportVariationRuleExamplesAE extends AbstractTerminologyExporter {
 
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
@@ -36,6 +36,6 @@ public class ExportVariationRuleExamplesAE extends AbstractTermIndexExporter {
 
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		VariationRuleExamplesExporter.export(termIndexResource.getTermIndex(), writer, yamlVariantRules);
+		VariationRuleExamplesExporter.export(terminoResource.getTerminology(), writer, yamlVariantRules);
 	}
 }

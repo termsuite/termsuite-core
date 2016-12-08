@@ -25,16 +25,16 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import fr.univnantes.termsuite.export.VariantEvalExporter;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 
 /**
- * Exports a {@link TermIndex} in the tsv evaluation format.
+ * Exports a {@link Terminology} in the tsv evaluation format.
  * 
  * @author Damien Cram
  *
  */
-public class VariantEvalExporterAE extends AbstractTermIndexExporter {
+public class VariantEvalExporterAE extends AbstractTerminologyExporter {
 
 	public static final String TOP_N = "TopN";
 	@ConfigurationParameter(name = TOP_N, mandatory = false, defaultValue = "50")
@@ -55,7 +55,7 @@ public class VariantEvalExporterAE extends AbstractTermIndexExporter {
 
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		VariantEvalExporter.export(termIndexResource.getTermIndex(), writer, nbVariantsPerTerm, contextSize, nbExampleOccurrences, topN);
+		VariantEvalExporter.export(terminoResource.getTerminology(), writer, nbVariantsPerTerm, contextSize, nbExampleOccurrences, topN);
 	}
 
 }

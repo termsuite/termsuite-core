@@ -11,17 +11,17 @@ import fr.univnantes.termsuite.api.TsvOptions;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.engines.export.IndexerTSVBuilder;
 
 public class TsvExporter {
 	
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	private Writer writer;
 	private TsvOptions options;
 	private Traverser traverser;
 	
-	private TsvExporter(TermIndex termIndex, Writer writer, Traverser traverser, TsvOptions options) {
+	private TsvExporter(Terminology termIndex, Writer writer, Traverser traverser, TsvOptions options) {
 		super();
 		this.termIndex = termIndex;
 		this.writer = writer;
@@ -29,15 +29,15 @@ public class TsvExporter {
 		this.traverser = traverser;
 	}
 
-	public static void export(TermIndex termIndex, Writer writer) {
+	public static void export(Terminology termIndex, Writer writer) {
 		export(termIndex, writer, Traverser.create(), new TsvOptions());
 	}
 
-	public static void export(TermIndex termIndex, Writer writer,  TsvOptions options) {
+	public static void export(Terminology termIndex, Writer writer,  TsvOptions options) {
 		new TsvExporter(termIndex, writer, Traverser.create(), options).doExport();
 	}
 	
-	public static void export(TermIndex termIndex, Writer writer, Traverser traverser, TsvOptions options) {
+	public static void export(Terminology termIndex, Writer writer, Traverser traverser, TsvOptions options) {
 		new TsvExporter(termIndex, writer, traverser, options).doExport();
 	}
 

@@ -39,7 +39,7 @@ import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.DocumentView;
 import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.uima.TermSuitePipelineException;
 import fr.univnantes.termsuite.utils.IteratorUtils;
@@ -72,7 +72,7 @@ public class Contextualizer  {
 		return this;
 	}
 	
-	public void contextualize(TermIndex termIndex) {
+	public void contextualize(Terminology termIndex) {
 		if(termIndex.getTerms().isEmpty())
 			return;
 		
@@ -122,7 +122,7 @@ public class Contextualizer  {
 		documentViews = null;
 	}
 
-	private Iterator<Term> getTermIterator(TermIndex termIndex) {
+	private Iterator<Term> getTermIterator(Terminology termIndex) {
 		return termIndex
 				.getTerms()
 				.stream()
@@ -142,7 +142,7 @@ public class Contextualizer  {
 	 * @return
 	 * 		The computed {@link ContextVector} object
 	 */
-	public ContextVector computeContextVector(TermIndex termIndex, Term t, OccurrenceType coTermsType, int contextSize, 
+	public ContextVector computeContextVector(Terminology termIndex, Term t, OccurrenceType coTermsType, int contextSize, 
 			int cooccFrequencyThreshhold) {
 		// 1- compute context vector
 		ContextVector vector = new ContextVector(t);
@@ -160,7 +160,7 @@ public class Contextualizer  {
 		return vector;
 	}
 	
-	private Iterator<Iterator<TermOccurrence>> contextIterator(TermIndex termIndex, final Term t, final OccurrenceType coTermsType, final int contextSize) {
+	private Iterator<Iterator<TermOccurrence>> contextIterator(Terminology termIndex, final Term t, final OccurrenceType coTermsType, final int contextSize) {
 		return new AbstractIterator<Iterator<TermOccurrence>>() {
 			private Iterator<TermOccurrence> it = termIndex.getOccurrenceStore().occurrenceIterator(t);
 			

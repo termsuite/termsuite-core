@@ -59,7 +59,7 @@ import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.uima.resources.termino.YamlRuleSetResource;
 
 public class TermGathererAE extends JCasAnnotator_ImplBase {
@@ -69,8 +69,8 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=false)
 	protected ObserverResource observerResource;
 
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 	
 	public static final String YAML_VARIANT_RULES = "YamlVariantRules";
 	@ExternalResource(key = YAML_VARIANT_RULES, mandatory = true)
@@ -111,7 +111,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Starting syntactic term gathering for TermIndex {}", this.termIndexResource.getTermIndex().getName());
+		LOGGER.info("Starting syntactic term gathering for TermIndex {}", this.terminoResource.getTerminology().getName());
 		
 		TermGatherer gatherer = new TermGatherer();
 		if(taskObserver.isPresent())
@@ -128,6 +128,6 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 		if(synonymResource != null)
 			gatherer.setDictionary(synonymResource);
 				
-		gatherer.gather(termIndexResource.getTermIndex());
+		gatherer.gather(terminoResource.getTerminology());
 	}
 }

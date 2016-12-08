@@ -3,7 +3,7 @@ package fr.univnantes.termsuite.engines.splitter;
 import java.util.Optional;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
@@ -88,7 +88,7 @@ public class MorphologicalAnalyzer {
 		return this;
 	}
 
-	public void analyze(TermIndex termIndex) {
+	public void analyze(Terminology termIndex) {
 		if(options.isPrefixSplitterEnabled()) {
 			if(prefixTree.isPresent())
 				new PrefixSplitter()

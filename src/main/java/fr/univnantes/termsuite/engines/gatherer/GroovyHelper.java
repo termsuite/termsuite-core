@@ -30,19 +30,19 @@ import com.google.common.base.Objects;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class GroovyHelper {
 
-	private TermIndex termIndex;
+	private Terminology termIndex;
 	
 	public GroovyHelper() {
 		super();
 	}
 	
-	void setTermIndex(TermIndex termIndex) {
+	void setTermIndex(Terminology termIndex) {
 		this.termIndex = termIndex;
 	}
 	

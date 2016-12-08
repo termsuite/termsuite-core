@@ -38,26 +38,26 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * 
- * An abstract AE for {@link TermIndex} post-processing cleaning 
+ * An abstract AE for {@link Terminology} post-processing cleaning 
  * based on a property.
  * 
  * @author Damien Cram
  *
  */
-public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
-	private static final Logger logger = LoggerFactory.getLogger(AbstractTermIndexCleaner.class);
+public abstract class AbstractTerminologyCleaner extends JCasAnnotator_ImplBase {
+	private static final Logger logger = LoggerFactory.getLogger(AbstractTerminologyCleaner.class);
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	protected TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	protected TerminologyResource terminoResource;
 	
 	public static final String CLEANING_PROPERTY="CleaningProperty";
 	@ConfigurationParameter(name=CLEANING_PROPERTY, mandatory=true)
@@ -98,11 +98,11 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 		casNum++;
 		if(
 				(periodicCasClean && this.casNum % this.cleaningPeriod == 0) // Term Index must be cleaned every cleaningPeriod
-				|| (numTermsCleaningTrigger > 0 && this.termIndexResource.getTermIndex().getTerms().size() > numTermsCleaningTrigger) // Term Index must be cleaning because it goes above the max size
+				|| (numTermsCleaningTrigger > 0 && this.terminoResource.getTerminology().getTerms().size() > numTermsCleaningTrigger) // Term Index must be cleaning because it goes above the max size
 				) {
-			int beforeSize = this.termIndexResource.getTermIndex().getTerms().size();
+			int beforeSize = this.terminoResource.getTerminology().getTerms().size();
 			clean();
-			int afterSize = this.termIndexResource.getTermIndex().getTerms().size();
+			int afterSize = this.terminoResource.getTerminology().getTerms().size();
 			logger.info("[{} on property {}] TermIndex cleaned at iteration {}. Before removal: {} terms, after removal: {} terms.",
 					this.getClass().getSimpleName(),
 					this.property,
@@ -117,7 +117,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
 		logger.info("Cleaning TermIndex {} on property {} - {}", 
-				termIndexResource.getTermIndex().getName(), 
+				terminoResource.getTerminology().getName(), 
 				this.property,
 				this.toString());
 		clean();
@@ -135,7 +135,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 				current = it.next();
 				// checks that this is no variant of a kept term
 				currentBases = Sets.newHashSet();
-				for(TermRelation v:TermUtils.getBases(termIndexResource.getTermIndex(), current)) 
+				for(TermRelation v:TermUtils.getBases(terminoResource.getTerminology(), current)) 
 					currentBases.add(v.getFrom());
 
 				for(Term v:currentBases) {	
@@ -150,7 +150,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 		
 		// effectively remove terms
 		for(Term r:rem) {
-			this.termIndexResource.getTermIndex().removeTerm(r);
+			this.terminoResource.getTerminology().removeTerm(r);
 			
 			if(historyResource.getHistory().isWatched(r))
 				historyResource.getHistory().saveEvent(
@@ -159,7 +159,7 @@ public abstract class AbstractTermIndexCleaner extends JCasAnnotator_ImplBase {
 						"Term is removed from term index by cleaner AE <" + toString() + ">");
 		}
 		
-		termIndexResource.getTermIndex().cleanOrphanWords();
+		terminoResource.getTerminology().cleanOrphanWords();
 	}
 	
 	/**

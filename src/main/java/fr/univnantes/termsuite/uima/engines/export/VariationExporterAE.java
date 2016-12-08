@@ -33,10 +33,10 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.export.VariationExporter;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.uima.engines.termino.AbstractTermIndexExporter;
+import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
-public class VariationExporterAE extends AbstractTermIndexExporter {
+public class VariationExporterAE extends AbstractTerminologyExporter {
 
 	public static final String VARIATION_TYPES = "VariationTypes";
 	@ConfigurationParameter(name = VARIATION_TYPES, mandatory=true)
@@ -54,6 +54,6 @@ public class VariationExporterAE extends AbstractTermIndexExporter {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		VariationExporter.export(termIndexResource.getTermIndex(), writer, variationTypes);
+		VariationExporter.export(terminoResource.getTerminology(), writer, variationTypes);
 	}
 }

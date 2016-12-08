@@ -35,7 +35,7 @@ import fr.univnantes.termsuite.test.unit.engines.TermGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpecSynonymic;
 import fr.univnantes.termsuite.test.unit.engines.morpho.SegmentationSpec;
-import fr.univnantes.termsuite.test.unit.io.JsonTermIndexIOSpec;
+import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
 import fr.univnantes.termsuite.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
 import fr.univnantes.termsuite.test.unit.metrics.FastDiacriticInsensitiveLevenshteinSpec;
@@ -44,7 +44,7 @@ import fr.univnantes.termsuite.test.unit.metrics.SimilarityDistanceSpec;
 import fr.univnantes.termsuite.test.unit.models.ContextVectorSpec;
 import fr.univnantes.termsuite.test.unit.models.CrossTableSpec;
 import fr.univnantes.termsuite.test.unit.models.DocumentViewSpec;
-import fr.univnantes.termsuite.test.unit.models.MemoryTermIndexSpec;
+import fr.univnantes.termsuite.test.unit.models.MemoryTerminologySpec;
 import fr.univnantes.termsuite.test.unit.models.TermSpec;
 import fr.univnantes.termsuite.test.unit.readers.TermsuiteJsonCasSerializerDeserializerSpec;
 import fr.univnantes.termsuite.test.unit.resources.PrefixTreeSpec;
@@ -72,7 +72,7 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	FixedExpressionSpotterSpec.class,
 	OccurrenceBufferSpec.class,
 	SimilarityDistanceSpec.class,
-	JsonTermIndexIOSpec.class,
+	JsonTerminologyIOSpec.class,
 	ContextVectorSpec.class,
 	TermOccurrenceUtilsSpec.class,
 	CollectionUtilsSpec.class,
@@ -95,7 +95,7 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	ContextualizerSpec.class,
 	LevenshteinSpec.class,
 	FastDiacriticInsensitiveLevenshteinSpec.class,
-	MemoryTermIndexSpec.class,
+	MemoryTerminologySpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,
 	})

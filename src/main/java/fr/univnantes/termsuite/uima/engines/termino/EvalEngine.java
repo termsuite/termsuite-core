@@ -56,7 +56,7 @@ import fr.univnantes.termsuite.uima.resources.preproc.EvalTrace;
 import fr.univnantes.termsuite.uima.resources.preproc.EvalTrace.RecPoint;
 import fr.univnantes.termsuite.uima.resources.termino.ReferenceTermList;
 import fr.univnantes.termsuite.uima.resources.termino.ReferenceTermList.RTLTerm;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.FileUtils;
 
 /**
@@ -76,8 +76,8 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 	@ExternalResource(key = REFERENCE_LIST, mandatory = true)
 	private ReferenceTermList rtl;
 
-	@ExternalResource(key = TermIndexResource.TERM_INDEX, mandatory = true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key = TerminologyResource.TERMINOLOGY, mandatory = true)
+	private TerminologyResource terminoResource;
 	
 	public static final String EVAL_TRACE = "EvalTrace";
 	@ExternalResource(key=EVAL_TRACE, mandatory=true)
@@ -154,8 +154,8 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 		if(outputLogFile != null) {
 			try {
 				int numVariationPaths = 0;
-				for(Term lcTerm:termIndexResource.getTermIndex().getTerms())
-					numVariationPaths += termIndexResource.getTermIndex().getOutboundRelations(lcTerm).size();
+				for(Term lcTerm:terminoResource.getTerminology().getTerms())
+					numVariationPaths += terminoResource.getTerminology().getOutboundRelations(lcTerm).size();
 				PrintStream stream = new PrintStream(outputLogFile);
 				stream.println(HORIZONTAL_RULE);
 				if(!customLogHeaderString.isEmpty())
@@ -164,8 +164,8 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 //				stream.format("Variant depth: %d\n", 10);
 				
 				stream.format("RTL Mode: %s\n", getModeString());
-				stream.format("LC term index: %s\n", termIndexResource.getTermIndex().getName());
-				stream.format("Num. LC terms: %d\tIncl. variants: %d\n", termIndexResource.getTermIndex().getTerms().size(), numVariationPaths);
+				stream.format("LC term index: %s\n", terminoResource.getTerminology().getName());
+				stream.format("Num. LC terms: %d\tIncl. variants: %d\n", terminoResource.getTerminology().getTerms().size(), numVariationPaths);
 				
 				for(int i:new int[]{10,100,1000}) {
 					RecPoint p = evalTrace.getAtRank(i);
@@ -248,7 +248,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 				FileUtils.getFileName(rtl.getPath()),
 				rtlV);
 		rtlTermsNotFound = Sets.newHashSet(rtl.asList());
-		List<Term> lc = Lists.newArrayList(termIndexResource.getTermIndex().getTerms());
+		List<Term> lc = Lists.newArrayList(terminoResource.getTerminology().getTerms());
 		Collections.sort(lc, TermProperty.SPECIFICITY.getComparator(true));
 		generateRecPointIndexes(lc.size());
 		
@@ -331,7 +331,7 @@ public class EvalEngine  extends JCasAnnotator_ImplBase {
 			
 		Set<Term> lc = Sets.newHashSet();
 		lc.add(lcTerm);
-		for(TermRelation tv:termIndexResource.getTermIndex().getOutboundRelations(lcTerm))
+		for(TermRelation tv:terminoResource.getTerminology().getOutboundRelations(lcTerm))
 				lc.add(tv.getTo());
 		
 		

@@ -51,7 +51,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 
@@ -83,7 +83,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public void addTerm(TermIndex termIndex, Term term) throws IOException {
+	public void addTerm(Terminology termIndex, Term term) throws IOException {
 		startTerm(termIndex, term);
 	}
 
@@ -93,7 +93,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	
 	private Term currentTerm = null;
 	
-	public void startTerm(TermIndex termIndex, Term term) throws IOException {
+	public void startTerm(Terminology termIndex, Term term) throws IOException {
 		this.currentTerm = term;
 		appendTerm(
 				termIndex, 
@@ -101,7 +101,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				String.format(T_FORMAT));
 	}
 
-	public void addVariant(TermIndex termIndex, TermRelation variation, boolean addVariantTag) throws IOException {
+	public void addVariant(Terminology termIndex, TermRelation variation, boolean addVariantTag) throws IOException {
 		List<String> line = Lists.newArrayList();
 		String typeCol = String.format(V_FORMAT, variation.getType().getLetter());
 		if(addVariantTag)
@@ -122,7 +122,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				line.toArray(new String[line.size()]));
 	}
 
-	private void appendTerm(TermIndex termIndex, Term t, String termType) throws IOException {
+	private void appendTerm(Terminology termIndex, Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
 		for(Property<?> p:properties) {

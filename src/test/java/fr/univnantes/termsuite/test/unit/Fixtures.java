@@ -25,11 +25,11 @@ import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermIndex;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTermIndex;
+import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 
 public class Fixtures {
 
@@ -118,7 +118,7 @@ public class Fixtures {
 	 * na: énergie éolien
 	 * @return
 	 */
-	public static Term term1(TermIndex termIndex) {
+	public static Term term1(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 					.setGroupingKey("na: énergie éolien")
 					.addWord(word1(), "N", true)
@@ -130,7 +130,7 @@ public class Fixtures {
 	 * a: radioélectrique
 	 * @return
 	 */
-	public static Term term2(TermIndex termIndex) {
+	public static Term term2(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 					.setGroupingKey("a: radioélectrique")
 					.addWord(word4(), "A", true)
@@ -141,7 +141,7 @@ public class Fixtures {
 	 * napn: accès radioélectrique de recouvrement
 	 * @return
 	 */
-	public static Term term3(TermIndex termIndex) {
+	public static Term term3(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("napn: accès radioélectrique de recouvrement")
 				.addWord(word3(), "N", true)
@@ -155,7 +155,7 @@ public class Fixtures {
 	 * napna: accès radioélectrique de recouvrement total
 	 * @return
 	 */
-	public static Term term4(TermIndex termIndex) {
+	public static Term term4(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("napna: accès radioélectrique de recouvrement total")
 				.addWord(word3(), "N", true)
@@ -171,7 +171,7 @@ public class Fixtures {
 	 * na: accès radioélectrique
 	 * @return
 	 */
-	public static Term term5(TermIndex termIndex) {
+	public static Term term5(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("na: accès radioélectrique")
 				.addWord(word3(), "N", true)
@@ -184,7 +184,7 @@ public class Fixtures {
 	 * a: total
 	 * @return
 	 */
-	public static Term term7(TermIndex termIndex) {
+	public static Term term7(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("a: total")
 				.addWord(word7(), "A", true)
@@ -195,7 +195,7 @@ public class Fixtures {
 	 * n: accès
 	 * @return
 	 */
-	public static Term term8(TermIndex termIndex) {
+	public static Term term8(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("n: accès")
 				.addWord(word3(), "N", true)
@@ -206,7 +206,7 @@ public class Fixtures {
 	 * n: recouvrement
 	 * @return
 	 */
-	public static Term term9(TermIndex termIndex) {
+	public static Term term9(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("n: recouvrement")
 				.addWord(word6(), "N", true)
@@ -217,7 +217,7 @@ public class Fixtures {
 	 * n: énergie
 	 * @return
 	 */
-	public static Term term10(TermIndex termIndex) {
+	public static Term term10(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("n: énergie")
 				.addWord(word1(), "N", true)
@@ -228,7 +228,7 @@ public class Fixtures {
 	 * a: éolien
 	 * @return
 	 */
-	public static Term term11(TermIndex termIndex) {
+	public static Term term11(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("a: éolien")
 				.addWord(word2(), "A", true)
@@ -239,7 +239,7 @@ public class Fixtures {
 	 * na: recouvrement total
 	 * @return
 	 */
-	public static Term term12(TermIndex termIndex) {
+	public static Term term12(Terminology termIndex) {
 		return TermBuilder.start(termIndex)
 				.setGroupingKey("na: recouvrement total")
 				.addWord(word6(), "N", true)
@@ -273,13 +273,13 @@ public class Fixtures {
 		return new Document("url2");
 	}
 	
-	public static MemoryTermIndex emptyTermIndex() {
-		return new MemoryTermIndex("EmptyTermIndex", Lang.EN, new MemoryOccurrenceStore());
+	public static MemoryTerminology emptyTermIndex() {
+		return new MemoryTerminology("EmptyTermIndex", Lang.EN, new MemoryOccurrenceStore());
 	}
 
 		
-	public static MemoryTermIndex termIndex() {
-		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndex", Lang.EN, new MemoryOccurrenceStore());
+	public static MemoryTerminology termIndex() {
+		MemoryTerminology memoryTermIndex = new MemoryTerminology("TermIndex", Lang.EN, new MemoryOccurrenceStore());
 //		term1(memoryTermIndex);
 //		term2(memoryTermIndex);
 //		term3(memoryTermIndex);
@@ -288,8 +288,8 @@ public class Fixtures {
 		return memoryTermIndex;
 	}
 	
-	public static MemoryTermIndex termIndexWithOccurrences() {
-		MemoryTermIndex memoryTermIndex = new MemoryTermIndex("TermIndexWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
+	public static MemoryTerminology termIndexWithOccurrences() {
+		MemoryTerminology memoryTermIndex = new MemoryTerminology("TermIndexWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
 		final Document doc = document1();
 		
 		

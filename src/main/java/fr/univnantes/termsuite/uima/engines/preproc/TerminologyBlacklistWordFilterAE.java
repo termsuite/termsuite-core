@@ -33,23 +33,23 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermIndex;
-import fr.univnantes.termsuite.uima.resources.termino.TermIndexResource;
+import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import uima.sandbox.filter.resources.FilterResource;
 
 /**
- * An AE that filters {@link TermIndex} based on a word black list. Each term having a word
- * in the black list at any of its extremity will be removed from {@link TermIndex}.
+ * An AE that filters {@link Terminology} based on a word black list. Each term having a word
+ * in the black list at any of its extremity will be removed from {@link Terminology}.
  * 
  * @author Damien Cram
  *
  */
-public class TermIndexBlacklistWordFilterAE extends JCasAnnotator_ImplBase{
+public class TerminologyBlacklistWordFilterAE extends JCasAnnotator_ImplBase{
 
-	private static final Logger logger = LoggerFactory.getLogger(TermIndexBlacklistWordFilterAE.class);
+	private static final Logger logger = LoggerFactory.getLogger(TerminologyBlacklistWordFilterAE.class);
 	
-	@ExternalResource(key=TermIndexResource.TERM_INDEX, mandatory=true)
-	private TermIndexResource termIndexResource;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
 
 	@ExternalResource(key=FilterResource.KEY_FILTERS)
 	private FilterResource filter;
@@ -70,7 +70,7 @@ public class TermIndexBlacklistWordFilterAE extends JCasAnnotator_ImplBase{
 		Set<String> filters = filter.getFilters();
 		
 		Set<Term> toRem = Sets.newHashSet();
-		for(Term t:termIndexResource.getTermIndex().getTerms()) {
+		for(Term t:terminoResource.getTerminology().getTerms()) {
 			if(filters.contains(t.getWords().get(0).getWord().getLemma())) {
 				// first word of term is a filter word
 				toRem.add(t);
@@ -84,7 +84,7 @@ public class TermIndexBlacklistWordFilterAE extends JCasAnnotator_ImplBase{
 		String remTermMsg = "Removing term {}";
 		for(Term t:toRem) {
 			logger.trace(remTermMsg, t);
-			this.termIndexResource.getTermIndex().removeTerm(t);
+			this.terminoResource.getTerminology().removeTerm(t);
 		}
 	};
 	
