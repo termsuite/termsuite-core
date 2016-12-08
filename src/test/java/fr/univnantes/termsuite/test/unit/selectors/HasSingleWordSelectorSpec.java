@@ -49,12 +49,12 @@ public class HasSingleWordSelectorSpec {
 	private Term term6;
 	private Term term7;
 	
-	private Terminology termIndex ;
+	private Terminology termino ;
 	
 	@Before
 	public void init() {
-		termIndex = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
-		populateTermIndex(new TermFactory(termIndex));
+		termino = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
+		populateTermIndex(new TermFactory(termino));
 	}
 	
 	private void populateTermIndex(TermFactory termFactory) {
@@ -76,25 +76,25 @@ public class HasSingleWordSelectorSpec {
 	@Test
 	public void testPrefix() {
 		TermSelector selector = new HasSingleWordVariationSelector(RelationType.IS_PREFIX_OF);
-		assertTrue(selector.select(termIndex, term1));
-		assertTrue(selector.select(termIndex, term2));
-		assertTrue(selector.select(termIndex, term3));
-		assertFalse(selector.select(termIndex, term4));
-		assertFalse(selector.select(termIndex, term5));
-		assertFalse(selector.select(termIndex, term6));
-		assertFalse(selector.select(termIndex, term7));
+		assertTrue(selector.select(termino, term1));
+		assertTrue(selector.select(termino, term2));
+		assertTrue(selector.select(termino, term3));
+		assertFalse(selector.select(termino, term4));
+		assertFalse(selector.select(termino, term5));
+		assertFalse(selector.select(termino, term6));
+		assertFalse(selector.select(termino, term7));
 	}
 
 	@Test
 	public void testDerivation() {
 		TermSelector selector = new HasSingleWordVariationSelector(RelationType.DERIVES_INTO);
-		assertFalse(selector.select(termIndex, term1));
-		assertFalse(selector.select(termIndex, term2));
-		assertFalse(selector.select(termIndex, term3));
-		assertTrue(selector.select(termIndex, term4));
-		assertTrue(selector.select(termIndex, term5));
-		assertTrue(selector.select(termIndex, term6));
-		assertTrue(selector.select(termIndex, term7));
+		assertFalse(selector.select(termino, term1));
+		assertFalse(selector.select(termino, term2));
+		assertFalse(selector.select(termino, term3));
+		assertTrue(selector.select(termino, term4));
+		assertTrue(selector.select(termino, term5));
+		assertTrue(selector.select(termino, term6));
+		assertTrue(selector.select(termino, term7));
 	}
 
 }

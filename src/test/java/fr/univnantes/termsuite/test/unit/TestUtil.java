@@ -115,16 +115,16 @@ public class TestUtil {
 		return is;
 	}
 	
-	public static AnalysisEngine createAE(Terminology termIndex, Class<? extends AnalysisComponent> cls, Object... config) {
+	public static AnalysisEngine createAE(Terminology termino, Class<? extends AnalysisComponent> cls, Object... config) {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 
 		ExternalResourceDescription terminoResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
 				TerminologyResource.class, 
-				termIndex.getName());
+				termino.getName());
 		
 		
-		manager.register(termIndex.getName(), termIndex);
+		manager.register(termino.getName(), termino);
 		
 		Object[] config2 = ObjectArrays.concat(config, new Object[]{
 				TerminologyResource.TERMINOLOGY, terminoResourceDesc

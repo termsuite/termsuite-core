@@ -44,7 +44,7 @@ import io.codearte.catchexception.shade.mockito.Mockito;
 
 public class SuffixDerivationExceptionSetterSpec {
 	
-	private MemoryTerminology termIndex;
+	private MemoryTerminology termino;
 
 	private Term ferme_n;
 	private Term ferme_a;
@@ -55,7 +55,7 @@ public class SuffixDerivationExceptionSetterSpec {
 	
 	@Before
 	public void set() throws Exception {
-		this.termIndex = Fixtures.termIndex();
+		this.termino = Fixtures.termino();
 		DataResource dataReosurce = Mockito.mock(DataResource.class);
 		Mockito.when(dataReosurce.getInputStream())
 			.thenReturn(new FileInputStream("src/test/resources/fr/univnantes/termsuite/test/resources/suffix-derivation-exceptions.txt"));
@@ -63,8 +63,8 @@ public class SuffixDerivationExceptionSetterSpec {
 		derivationExceptions.load(dataReosurce);
 		ManualSuffixDerivationDetecter engine = new ManualSuffixDerivationDetecter()
 			.setManualSuffixDerivations(derivationExceptions);
-		populateTermIndex(new TermFactory(termIndex));
-		engine.detectDerivations(termIndex);;
+		populateTermIndex(new TermFactory(termino));
+		engine.detectDerivations(termino);;
 	}
 
 	private void populateTermIndex(TermFactory termFactory) {
@@ -83,10 +83,10 @@ public class SuffixDerivationExceptionSetterSpec {
 
 	@Test
 	public void testProcessCollectionComplete() {
-		assertThat(termIndex.getOutboundRelations(this.pays))
+		assertThat(termino.getOutboundRelations(this.pays))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
 			.contains(tuple(this.pays, RelationType.DERIVES_INTO, paysVraiDerive));
-		assertThat(termIndex.getOutboundRelations(ferme_a)).hasSize(0);
+		assertThat(termino.getOutboundRelations(ferme_a)).hasSize(0);
 	}
 }

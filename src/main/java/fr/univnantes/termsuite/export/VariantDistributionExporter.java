@@ -10,27 +10,27 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class VariantDistributionExporter {
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 	private Predicate<TermRelation> selector;
 	
 	private List<RelationProperty> termProperties = Lists.newArrayList();
 	
-	private VariantDistributionExporter(Terminology termIndex, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
+	private VariantDistributionExporter(Terminology termino, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.writer = writer;
 		this.selector = selector;
 		this.termProperties = Lists.newArrayList(properties);
 	}
 
-	public static void export(Terminology termIndex, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
-		new VariantDistributionExporter(termIndex, writer, selector, properties).doExport();
+	public static void export(Terminology termino, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
+		new VariantDistributionExporter(termino, writer, selector, properties).doExport();
 	}
 
 	private void doExport() {
@@ -44,7 +44,7 @@ public class VariantDistributionExporter {
 			writer.write(termProperties.stream().map(RelationProperty::getShortName).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
-			termIndex.getRelations()
+			termino.getRelations()
 				.filter(selector)
 				.forEach( relation -> {
 				try {

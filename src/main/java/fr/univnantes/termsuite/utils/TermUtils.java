@@ -43,10 +43,10 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
@@ -110,7 +110,7 @@ public class TermUtils {
 	 * This method creates an index on TermIndex based on key
 	 * {@link TermIndexes#SINGLE_WORD_LEMMA}.
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * 			The {@link Terminology} in which single word terms must be found.
 	 * @param term
 	 * 			The input term.
@@ -119,10 +119,10 @@ public class TermUtils {
 	 * 
 	 * @see Term#asComponentIterator(boolean)
 	 */
-	public static List<Term> getSingleWordTerms(Terminology termIndex, Term term) {
+	public static List<Term> getSingleWordTerms(Terminology termino, Term term) {
 		List<Term> terms = Lists.newArrayList();
 		for(TermWord tw:term.getWords()) {
-			Term swt = termIndex.getTermByGroupingKey(toGroupingKey(tw));
+			Term swt = termino.getTermByGroupingKey(toGroupingKey(tw));
 			if(swt != null)
 				terms.add(swt);
 		}
@@ -212,19 +212,19 @@ public class TermUtils {
 	 * For example, the term "offshore wind turbine" is an extension of 
 	 * "wind turbine". The extension affix is the term "offshore".
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * 			The term index that both terms belong to.
 	 * @param base
 	 * 			The base term
 	 * @param extension
 	 * 			The extension term
 	 * @return
-	 * 		the extension affix found in <code>termIndex</code>, <code>null</code> if none
+	 * 		the extension affix found in <code>termino</code>, <code>null</code> if none
 	 * 		has been found.
 	 * @throws IllegalArgumentException if <code>extension</code> id not an 
 	 * 			extension of the term <code>base</code>.
 	 */
-	public static Term getExtensionAffix(Terminology termIndex, Term base, Term extension) {
+	public static Term getExtensionAffix(Terminology termino, Term base, Term extension) {
 		int index = TermUtils.getPosition(base, extension);
 		if(index == -1)
 			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
@@ -253,12 +253,12 @@ public class TermUtils {
 		
 		if(isPrefix) 
 			return findBiggestSuffix(
-					termIndex, 
+					termino, 
 					extension.getWords().subList(index + base.getWords().size(), extension.getWords().size())
 				);
 		else
 			return findBiggestPrefix(
-					termIndex, 
+					termino, 
 					extension.getWords().subList(0, index)
 				);
 	}
@@ -267,20 +267,20 @@ public class TermUtils {
 	 * Finds in a {@link Terminology} the biggest prefix of a sequence of
 	 * {@link TermWord}s that exists as a term.
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * 			the term index
 	 * @param words
 	 * 			the initial sequence of {@link TermWord}s
 	 * @return
-	 * 			A {@link Term} found in <code>termIndex</code> that makes the
+	 * 			A {@link Term} found in <code>termino</code> that makes the
 	 * 			biggest possible prefix sequence for <code>words</code>.
 	 */
-	public static Term findBiggestPrefix(Terminology termIndex, List<TermWord> words) {
+	public static Term findBiggestPrefix(Terminology termino, List<TermWord> words) {
 		Term t;
 		String gKey;
 		for(int i = words.size(); i > 0 ; i--) {
 			gKey = TermSuiteUtils.getGroupingKey(words.subList(0, i));
-			t = termIndex.getTermByGroupingKey(gKey);
+			t = termino.getTermByGroupingKey(gKey);
 			if(t!=null)
 				return t;
 		}
@@ -292,21 +292,21 @@ public class TermUtils {
 	 * Finds in a {@link Terminology} the biggest suffix of a sequence of
 	 * {@link TermWord}s that exists as a term.
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * 			the term index
 	 * @param words
 	 * 			the initial sequence of {@link TermWord}s
 	 * @return
-	 * 			A {@link Term} found in <code>termIndex</code> that makes the
+	 * 			A {@link Term} found in <code>termino</code> that makes the
 	 * 			biggest possible suffix sequence for <code>words</code>.
 
 	 */
-	public static Term findBiggestSuffix(Terminology termIndex, List<TermWord> words) {
+	public static Term findBiggestSuffix(Terminology termino, List<TermWord> words) {
 		Term t;
 		String gKey;
 		for(int i = 0; i < words.size() ; i++) {
 			gKey = TermSuiteUtils.getGroupingKey(words.subList(i, words.size()));
-			t = termIndex.getTermByGroupingKey(gKey);
+			t = termino.getTermByGroupingKey(gKey);
 			if(t!=null)
 				return t;
 		}
@@ -428,23 +428,23 @@ public class TermUtils {
 		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
 	}
 
-	public static Collection<Term> getExtensions(Terminology termIndex, Term term) {
-		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
+	public static Collection<Term> getExtensions(Terminology termino, Term term) {
+		return termino.getOutboundRelations(term, RelationType.HAS_EXTENSION)
 				.stream()
 				.map(TermRelation::getTo)
 				.collect(Collectors.toSet());
 	}
 		
-	public static boolean isExtension(Terminology termIndex, Term term, Term extension) {
-		return termIndex.getOutboundRelations(term, RelationType.HAS_EXTENSION)
+	public static boolean isExtension(Terminology termino, Term term, Term extension) {
+		return termino.getOutboundRelations(term, RelationType.HAS_EXTENSION)
 			.stream()
 			.filter(tv -> tv.getTo().equals(extension))
 			.findAny().isPresent();
 	}
 	
 	
-	public static Collection<TermRelation> getVariations(Terminology termIndex, Term t) {
-		return termIndex.getOutboundRelations(t,
+	public static Collection<TermRelation> getVariations(Terminology termino, Term t) {
+		return termino.getOutboundRelations(t,
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,
@@ -453,8 +453,8 @@ public class TermUtils {
 				RelationType.IS_PREFIX_OF);
 	}
 
-	public static Collection<TermRelation> getBases(Terminology termIndex, Term current) {
-		return termIndex.getInboundRelations(current,
+	public static Collection<TermRelation> getBases(Terminology termino, Term current) {
+		return termino.getInboundRelations(current,
 				RelationType.SYNTACTICAL, 
 				RelationType.MORPHOLOGICAL,
 				RelationType.GRAPHICAL,

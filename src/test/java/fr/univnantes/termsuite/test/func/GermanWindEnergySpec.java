@@ -107,7 +107,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTop10ByFreq() {
-		assertThat(termsByProperty(termIndex, TermProperty.FREQUENCY, true).subList(0, 10))
+		assertThat(termsByProperty(termino, TermProperty.FREQUENCY, true).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -125,7 +125,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTop10ByWR() {
-		assertThat(termsByProperty(termIndex, TermProperty.SPECIFICITY, true).subList(0, 10))
+		assertThat(termsByProperty(termino, TermProperty.SPECIFICITY, true).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -144,7 +144,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTop10ByRank() {
-		assertThat(termsByProperty(termIndex, TermProperty.RANK, false).subList(0, 10))
+		assertThat(termsByProperty(termino, TermProperty.RANK, false).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -164,7 +164,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void weNeoclassicalCompounds() {
-		List<Word> neoclassicals = termIndex.getWords().stream()
+		List<Word> neoclassicals = termino.getWords().stream()
 			.filter(Word::isCompound)
 			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
 		
@@ -181,7 +181,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermWindenergie() {
-		assertThat(termIndex.getTermByGroupingKey("n: windenergie"))
+		assertThat(termino.getTermByGroupingKey("n: windenergie"))
 				.hasFrequency(588)
 				.hasGroupingKey("n: windenergie")
 				.isCompound()
@@ -193,7 +193,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermSelbstverständlich() {
-		assertThat(termIndex.getTermByGroupingKey("a: selbstverständlich"))
+		assertThat(termino.getTermByGroupingKey("a: selbstverständlich"))
 		.hasFrequency(3)
 		.hasGroupingKey("a: selbstverständlich")
 		.isCompound()
@@ -206,7 +206,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHochwert() {
-		Term term = termIndex.getTermByGroupingKey("a: hochwert");
+		Term term = termino.getTermByGroupingKey("a: hochwert");
 		
 		assertThat(term)
 			.isCompound()
@@ -219,7 +219,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermElektromagnetisch() {
-		Term term = termIndex.getTermByGroupingKey("a: elektromagnetisch");
+		Term term = termino.getTermByGroupingKey("a: elektromagnetisch");
 		
 		assertThat(term)
 			.isCompound()
@@ -230,7 +230,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermWasserkraftwerke() {
-		Term term = termIndex.getTermByGroupingKey("a: wasserkraftwerke");
+		Term term = termino.getTermByGroupingKey("a: wasserkraftwerke");
 		
 		assertThat(term)
 			.isCompound()
@@ -243,7 +243,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHydrothermale() {
-		Term term = termIndex.getTermByGroupingKey("a: hydrothermale");
+		Term term = termino.getTermByGroupingKey("a: hydrothermale");
 		
 		assertThat(term)
 			.isCompound()
@@ -255,7 +255,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testMSNorANVariations() {
-		assertThat(termIndex)
+		assertThat(termino)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-(N|A)N")
 			.extracting("from.groupingKey", "to.groupingKey")
@@ -267,7 +267,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
-		List<TermRelation> msnanVars = termIndex.getRelations()
+		List<TermRelation> msnanVars = termino.getRelations()
 				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
 				.collect(Collectors.toList());
 		// TODO investigate why the size varies
@@ -279,7 +279,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testSyntacticalVariations() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.containsRelation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
 			.containsRelation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
 			;
@@ -298,7 +298,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testPrefixes() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.asTermVariations(RelationType.IS_PREFIX_OF)
 			.hasSize(962)
 			;
@@ -306,7 +306,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testDerivations() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.asTermVariations(RelationType.DERIVES_INTO)
 			.hasSize(0);
 	}

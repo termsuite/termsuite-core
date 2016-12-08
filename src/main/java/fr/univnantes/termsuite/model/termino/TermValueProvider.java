@@ -36,5 +36,5 @@ import fr.univnantes.termsuite.model.Terminology;
  */
 public interface TermValueProvider {
 	public String getName();
-	public Collection<String> getClasses(Terminology termIndex, Term term);
+	public Collection<String> getClasses(Terminology termino, Term term);
 }

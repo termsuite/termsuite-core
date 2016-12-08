@@ -36,25 +36,25 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class TerminologyUtils {
 
-	public static  Set<TermRelation> selectTermVariations(Terminology termIndex, RelationType... types) {
+	public static  Set<TermRelation> selectTermVariations(Terminology termino, RelationType... types) {
 		Set<RelationType> typeSet = Sets.newHashSet(types);
-		return termIndex.getRelations().filter(tv -> 
+		return termino.getRelations().filter(tv -> 
 				typeSet.contains(tv.getType())
 			).collect(Collectors.toSet());
 	}
 
 
-	public static Collection<Term> selectCompounds(Terminology termIndex) {
+	public static Collection<Term> selectCompounds(Terminology termino) {
 		Set<Term> compounds = Sets.newHashSet();
-		for(Term t:termIndex.getTerms())
+		for(Term t:termino.getTerms())
 			if(t.isSingleWord() && t.isCompound())
 				compounds.add(t);
 		return compounds;
@@ -66,12 +66,12 @@ public class TerminologyUtils {
 	 * term [électricité]
 	 * 
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * @param compound
 	 * @param component
 	 * @return
 	 */
-	public static Collection<Term> getMorphologicalExtensionsAsTerms(Terminology termIndex, Term compound, Component component) {
+	public static Collection<Term> getMorphologicalExtensionsAsTerms(Terminology termino, Term compound, Component component) {
 		Preconditions.checkArgument(compound.isSingleWord());
 		Preconditions.checkArgument(compound.isCompound());
 		Preconditions.checkArgument(compound.getWords().get(0).getWord().getComponents().contains(component));
@@ -99,7 +99,7 @@ public class TerminologyUtils {
 		
 		
 		List<Term> extensionTerms = Lists.newArrayList();
-		CustomTermIndex lemmaIndex = termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
+		CustomTermIndex lemmaIndex = termino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
 		for(String s:possibleExtensionLemmas)
 			extensionTerms.addAll(lemmaIndex.getTerms(s.toLowerCase()));
 

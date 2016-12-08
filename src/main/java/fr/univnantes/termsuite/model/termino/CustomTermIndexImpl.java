@@ -62,8 +62,8 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	}
 
 	@Override
-	public void indexTerm(Terminology termIndex, Term term) {
-		Collection<String> classes = valueProvider.getClasses(termIndex, term);
+	public void indexTerm(Terminology termino, Term term) {
+		Collection<String> classes = valueProvider.getClasses(termino, term);
 		if(classes != null) {
 			for(String cls:classes) {
 				if(cls!= null)			
@@ -86,8 +86,8 @@ public class CustomTermIndexImpl implements CustomTermIndex {
 	}
 
 	@Override
-	public void removeTerm(Terminology termIndex, Term t) {
-		for(String k:valueProvider.getClasses(termIndex, t))
+	public void removeTerm(Terminology termino, Term t) {
+		for(String k:valueProvider.getClasses(termino, t))
 			this.index.remove(k, t);
 	}
 

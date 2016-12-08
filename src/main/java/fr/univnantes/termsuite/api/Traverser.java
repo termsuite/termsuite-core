@@ -13,8 +13,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class Traverser {
 
@@ -114,17 +114,17 @@ public class Traverser {
 	}
 
 	
-	public Iterator<Term> iterator(Terminology termIndex) {
-		List<Term> terms = toList(termIndex);
+	public Iterator<Term> iterator(Terminology termino) {
+		List<Term> terms = toList(termino);
 		return terms.iterator();
 	}
 
-	public Stream<Term> stream(Terminology termIndex) {
-		return toList(termIndex).stream();
+	public Stream<Term> stream(Terminology termino) {
+		return toList(termino).stream();
 	}
 
-	public List<Term> toList(Terminology termIndex) {
-		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
+	public List<Term> toList(Terminology termino) {
+		List<Term> terms = Lists.newArrayList(termino.getTerms());
 		Collections.sort(terms, toComparator());
 		return terms;
 	}

@@ -64,7 +64,7 @@ public class CrossTable {
 	/**
 	 * The term index of the corpus
 	 */
-    private Terminology termIndex;
+    private Terminology termino;
 
     private Map<Term, MutableDouble> aPlusB;
     private Map<Term, MutableDouble> aPlusC;
@@ -86,9 +86,9 @@ public class CrossTable {
      * @throws NullPointerException
      * 			when the context vectors of term index terms are not
      */
-    public CrossTable(Terminology termIndex) {
+    public CrossTable(Terminology termino) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		init();
 	}
 
@@ -100,7 +100,7 @@ public class CrossTable {
 //        this.totalFrequency = 0;
         
         Term term;
-        for (Iterator<Term> it1 = this.termIndex.getTerms().iterator(); it1.hasNext() ;) {
+        for (Iterator<Term> it1 = this.termino.getTerms().iterator(); it1.hasNext() ;) {
             term = it1.next();
 //            this.totalFrequency++;
             if(term.getContext() == null)

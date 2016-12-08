@@ -32,9 +32,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
-import fr.univnantes.termsuite.engines.splitter.NativeSplitter;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalAnalyzer;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalOptions;
+import fr.univnantes.termsuite.engines.splitter.NativeSplitter;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;

@@ -18,21 +18,21 @@ public class ContextualizerSpec {
 	private Term termWithContext2;
 	private Term termWithContext3;
 	private Contextualizer contextualizer;
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	
 	@Before
 	public void setup() {
-		termIndex = Fixtures.termIndexWithOccurrences();
-		termWithContext1 = termIndex.getTermByGroupingKey("n: énergie");
-		termWithContext2 = termIndex.getTermByGroupingKey("a: éolien");
-		termWithContext3 = termIndex.getTermByGroupingKey("n: accès");
+		termino = Fixtures.terminoWithOccurrences();
+		termWithContext1 = termino.getTermByGroupingKey("n: énergie");
+		termWithContext2 = termino.getTermByGroupingKey("a: éolien");
+		termWithContext3 = termino.getTermByGroupingKey("n: accès");
 		contextualizer = new Contextualizer();
 	}
 	
 	@Test
 	public void computeContextVectorScope1() {
-		contextualizer.setOptions(new ContextualizerOptions().setScope(1)).contextualize(termIndex);
+		contextualizer.setOptions(new ContextualizerOptions().setScope(1)).contextualize(termino);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 
@@ -54,7 +54,7 @@ public class ContextualizerSpec {
 
 	@Test
 	public void computeContextVectorScope3() {
-		contextualizer.setOptions(new ContextualizerOptions().setScope(3)).contextualize(termIndex);
+		contextualizer.setOptions(new ContextualizerOptions().setScope(3)).contextualize(termino);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 

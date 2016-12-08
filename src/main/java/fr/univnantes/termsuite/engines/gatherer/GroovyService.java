@@ -10,8 +10,8 @@ import com.google.common.collect.Maps;
 
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Terminology;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
@@ -28,10 +28,10 @@ public class GroovyService {
 	private ConcurrentMap<VariantRule, GroovyObject> groovyRules = Maps.newConcurrentMap();
 	private GroovyHelper groovyHelper;
 	
-	public GroovyService(Terminology termIndex) {
+	public GroovyService(Terminology termino) {
 		super();
 		this.groovyHelper = new GroovyHelper();
-		this.groovyHelper.setTermIndex(termIndex);
+		this.groovyHelper.setTermIndex(termino);
 	}
 
 	public GroovyTerm asGroovyTerm(Term term) {

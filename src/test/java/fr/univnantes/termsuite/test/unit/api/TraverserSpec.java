@@ -20,13 +20,13 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 
 public class TraverserSpec {
-	Terminology termIndex;
+	Terminology termino;
 	Collection<Term> terms;
 	Term term1, term2, term3;
 	
 	@Before
 	public void setup() {
-		termIndex = Mockito.mock(Terminology.class);
+		termino = Mockito.mock(Terminology.class);
 		term1 = TermFactory.termMock("t1", 1, 3, 0.8);
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
@@ -35,17 +35,17 @@ public class TraverserSpec {
 				term2,
 				term3
 			);
-		Mockito.when(termIndex.getTerms()).thenReturn(terms);
+		Mockito.when(termino.getTerms()).thenReturn(terms);
 	}
 
 	@Test
 	public void testByFrequency() {
-		List<Term> list = Traverser.by("f desc").toList(termIndex);
+		List<Term> list = Traverser.by("f desc").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t3", "t2", "t1");
 		
-		list = Traverser.by("f").toList(termIndex);
+		list = Traverser.by("f").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t1", "t2", "t3");
@@ -54,7 +54,7 @@ public class TraverserSpec {
 	
 	@Test
 	public void testDefaultTraverser() {
-		List<Term> list = Traverser.create().toList(termIndex);
+		List<Term> list = Traverser.create().toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t2", "t3", "t1");
@@ -63,12 +63,12 @@ public class TraverserSpec {
 
 	@Test
 	public void testByRank() {
-		List<Term> list = Traverser.by("#").toList(termIndex);
+		List<Term> list = Traverser.by("#").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t2", "t3", "t1");
 		
-		list = Traverser.by("# desc").toList(termIndex);
+		list = Traverser.by("# desc").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t1", "t3", "t2");
@@ -76,12 +76,12 @@ public class TraverserSpec {
 
 	@Test
 	public void testBySpecificity() {
-		List<Term> list = Traverser.by("sp").toList(termIndex);
+		List<Term> list = Traverser.by("sp").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t2", "t1", "t3");
 		
-		list = Traverser.by("sp desc").toList(termIndex);
+		list = Traverser.by("sp desc").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t3", "t2", "t1");
@@ -90,12 +90,12 @@ public class TraverserSpec {
 
 	@Test
 	public void testBySpecificityAndRank() {
-		List<Term> list = Traverser.by("sp desc, #").toList(termIndex);
+		List<Term> list = Traverser.by("sp desc, #").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t3", "t2", "t1");
 		
-		list = Traverser.by("sp desc, # desc").toList(termIndex);
+		list = Traverser.by("sp desc, # desc").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t3", "t1", "t2");
@@ -103,12 +103,12 @@ public class TraverserSpec {
 
 	@Test
 	public void testBySpecificityAndFrequency() {
-		List<Term> list = Traverser.by("sp desc, f").toList(termIndex);
+		List<Term> list = Traverser.by("sp desc, f").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t3", "t1", "t2");
 		
-		list = Traverser.by("sp desc, f desc").toList(termIndex);
+		list = Traverser.by("sp desc, f desc").toList(termino);
 		assertThat(list)
 			.extracting("groupingKey")
 			.containsExactly("t3", "t2", "t1");

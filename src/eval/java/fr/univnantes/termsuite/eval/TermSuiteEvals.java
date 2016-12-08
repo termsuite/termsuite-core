@@ -93,9 +93,9 @@ public class TermSuiteEvals {
 		if(!path.toFile().isFile()) {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
 			TermSuiteResourceManager.getInstance().clear();
-			Terminology termIndex = config.toExtractor(lang, corpus).execute();
+			Terminology termino = config.toExtractor(lang, corpus).execute();
 			try(FileWriter writer = new FileWriter(path.toFile())){
-				TerminologyIO.toJson(termIndex, writer, new JsonOptions().withOccurrences(false).withContexts(true));
+				TerminologyIO.toJson(termino, writer, new JsonOptions().withOccurrences(false).withContexts(true));
 			} catch (IOException e) {
 				LOGGER.error("Could not create terminology {}", getTerminologyFileName(lang, corpus, config));
 				throw new RuntimeException(e);

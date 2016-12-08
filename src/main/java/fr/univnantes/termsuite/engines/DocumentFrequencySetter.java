@@ -1,8 +1,8 @@
 package fr.univnantes.termsuite.engines;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class DocumentFrequencySetter {
 	public void set(Terminology index) {

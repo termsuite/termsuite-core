@@ -42,7 +42,7 @@ import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 public class GraphicalVariantGathererSpec {
 	
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	private Term tetetete;
 	private Term tetetetx;
 	private Term teteteteAccent;
@@ -52,23 +52,23 @@ public class GraphicalVariantGathererSpec {
 	
 	@Before
 	public void setup() {
-		this.termIndex = termIndex();
+		this.termino = termino();
 	}
 	
 	
-	private Terminology termIndex() {
+	private Terminology termino() {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
-		Terminology termIndex = Fixtures.emptyTermIndex();
-		manager.register(termIndex.getName(), termIndex);
-		TermFactory termFactory = new TermFactory(termIndex);
+		Terminology termino = Fixtures.emptyTermIndex();
+		manager.register(termino.getName(), termino);
+		TermFactory termFactory = new TermFactory(termino);
 		tetetete = termFactory.create("N:tetetete|tetetete");
 		tetetetx = termFactory.create("N:tetetetx|tetetetx");
 		teteteteAccent = termFactory.create("N:tétetete|tétetete");
 		abcdefghijklCapped = termFactory.create("N:Abcdefghijkl|Abcdefghijkl");
 		abcdefghijkl = termFactory.create("N:abcdefghijkl|abcdefghijkl");
 		abcdefghijkx = termFactory.create("N:abcdefghijkx|abcdefghijkx");
-		return termIndex;
+		return termino;
 	}
 
 
@@ -80,24 +80,24 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testCaseInsensitive() throws  Exception {
-		makeAE( 1.0d).gather(termIndex);
-		assertThat(termIndex.getInboundRelations(this.abcdefghijkl)).hasSize(1)
+		makeAE( 1.0d).gather(termino);
+		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(1)
 		.extracting("from")
 		.contains(this.abcdefghijklCapped);
-		assertThat(termIndex.getOutboundRelations(this.abcdefghijkl)).hasSize(1);
+		assertThat(termino.getOutboundRelations(this.abcdefghijkl)).hasSize(1);
 		
-		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
+		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(1)
 			.extracting("to")
 			.contains(this.abcdefghijkl);
-		assertThat(termIndex.getInboundRelations(this.abcdefghijklCapped)).hasSize(1);
+		assertThat(termino.getInboundRelations(this.abcdefghijklCapped)).hasSize(1);
 	}
 
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
-		makeAE( 1.0d).gather(termIndex);
-		assertThat(termIndex.getOutboundRelations(this.tetetete))
+		makeAE( 1.0d).gather(termino);
+		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(1)
 			.extracting("type", "to")
 			.contains(tuple(RelationType.GRAPHICAL, this.teteteteAccent));
@@ -105,13 +105,13 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
-		makeAE( 0.9d).gather(termIndex);
-		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
+		makeAE( 0.9d).gather(termino);
+		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("to")
 			.contains(this.abcdefghijkl, this.abcdefghijkx);
 		
-		assertThat(termIndex.getOutboundRelations(this.tetetete))
+		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(1)
 			.extracting("type", "to")
 			.contains(
@@ -122,13 +122,13 @@ public class GraphicalVariantGathererSpec {
 	
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
-		makeAE(0.8d).gather(termIndex);
-		assertThat(termIndex.getOutboundRelations(this.abcdefghijklCapped))
+		makeAE(0.8d).gather(termino);
+		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(2)
 			.extracting("to")
 			.contains(this.abcdefghijkl, this.abcdefghijkx);
 		
-		assertThat(termIndex.getOutboundRelations(this.tetetete))
+		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(2)
 			.extracting("type", "to")
 			.contains(

@@ -32,8 +32,8 @@ import com.google.common.collect.ImmutableList;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
@@ -59,11 +59,11 @@ public class TermSpec {
 	}
 
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	@Before
 	public void initContexts() {
-		termIndex = Fixtures.termIndexWithOccurrences();
+		termino = Fixtures.terminoWithOccurrences();
 	}
 	
 	@Test
@@ -71,60 +71,60 @@ public class TermSpec {
 		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_COUPLE_LEMMA_STEM);
 		Assert.assertEquals(
 				ImmutableList.of("energie+eol"),
-				provider.getClasses(termIndex, term1));
+				provider.getClasses(termino, term1));
 		Assert.assertEquals(
 				ImmutableList.of(),
-				provider.getClasses(termIndex, term2));
+				provider.getClasses(termino, term2));
 		Assert.assertEquals(
 				ImmutableList.of("acces+radioelectriq", "acces+recouvr", "radioelectrique+recouvr"), 
-				provider.getClasses(termIndex, term3));
+				provider.getClasses(termino, term3));
 	}
 
 
 	@Test
 	public void testAddTermVariation() {
-		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term3)).hasSize(0);
-		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term4)).hasSize(0);
+		assertThat(termino.getOutboundRelations(this.term5)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term5)).hasSize(0);
+		assertThat(termino.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term3)).hasSize(0);
+		assertThat(termino.getOutboundRelations(this.term4)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term4)).hasSize(0);
 		
 		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term5, term3);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "Tata");
-		termIndex.addRelation(rel1);
+		termino.addRelation(rel1);
 		
-		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(1);
-		assertThat(termIndex.getInboundRelations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term3)).hasSize(1);
-		assertThat(termIndex.getInboundRelations(this.term3))
+		assertThat(termino.getOutboundRelations(this.term5)).hasSize(1);
+		assertThat(termino.getInboundRelations(this.term5)).hasSize(0);
+		assertThat(termino.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term3)).hasSize(1);
+		assertThat(termino.getInboundRelations(this.term3))
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata");
 		
 		TermRelation rel2 = new TermRelation(RelationType.SYNTACTICAL, term5, term4);
 		rel2.setProperty(RelationProperty.VARIATION_RULE, "Tata");
-		termIndex.addRelation(rel2);
-		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(2);
-		assertThat(termIndex.getInboundRelations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term3)).hasSize(1);
-		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term4)).hasSize(1);
-		assertThat(termIndex.getOutboundRelations(this.term5))
+		termino.addRelation(rel2);
+		assertThat(termino.getOutboundRelations(this.term5)).hasSize(2);
+		assertThat(termino.getInboundRelations(this.term5)).hasSize(0);
+		assertThat(termino.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term3)).hasSize(1);
+		assertThat(termino.getOutboundRelations(this.term4)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term4)).hasSize(1);
+		assertThat(termino.getOutboundRelations(this.term5))
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata","Tata");
 		
 		TermRelation rel3 = new TermRelation(RelationType.SYNTACTICAL, term5, term3);
 		rel3.setProperty(RelationProperty.VARIATION_RULE, "Tata");
-		termIndex.addRelation(rel3);
-		assertThat(termIndex.getOutboundRelations(this.term5)).hasSize(3);
-		assertThat(termIndex.getInboundRelations(this.term5)).hasSize(0);
-		assertThat(termIndex.getOutboundRelations(this.term3)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term3)).hasSize(2);
-		assertThat(termIndex.getOutboundRelations(this.term4)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(this.term4)).hasSize(1);
-		assertThat(termIndex.getOutboundRelations(this.term5))
+		termino.addRelation(rel3);
+		assertThat(termino.getOutboundRelations(this.term5)).hasSize(3);
+		assertThat(termino.getInboundRelations(this.term5)).hasSize(0);
+		assertThat(termino.getOutboundRelations(this.term3)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term3)).hasSize(2);
+		assertThat(termino.getOutboundRelations(this.term4)).hasSize(0);
+		assertThat(termino.getInboundRelations(this.term4)).hasSize(1);
+		assertThat(termino.getOutboundRelations(this.term5))
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata","Tata", "Tata");
 	}
@@ -133,15 +133,15 @@ public class TermSpec {
 	public void testGetLemmaKeys() {
 		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_LEMMA);
 		
-		assertThat(provider.getClasses(termIndex, term1))
+		assertThat(provider.getClasses(termino, term1))
 			.hasSize(2)
 			.contains("énergie", "éolien");
 		
-		assertThat(provider.getClasses(termIndex, term2))
+		assertThat(provider.getClasses(termino, term2))
 			.hasSize(1)
 			.contains("radioélectrique");
 	
-		assertThat(provider.getClasses(termIndex, term3))
+		assertThat(provider.getClasses(termino, term3))
 			.hasSize(3)
 			.contains("accès", "radioélectrique", "recouvrement");
 	}

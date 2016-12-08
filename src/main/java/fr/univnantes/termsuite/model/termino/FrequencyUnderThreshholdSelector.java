@@ -40,7 +40,7 @@ public class FrequencyUnderThreshholdSelector extends AbstractTermSelector {
 	}
 
 	@Override
-	public boolean select(Terminology termIndex, Term t) {
+	public boolean select(Terminology termino, Term t) {
 		return t.getFrequency() < this.threshhold;
 	}
 }

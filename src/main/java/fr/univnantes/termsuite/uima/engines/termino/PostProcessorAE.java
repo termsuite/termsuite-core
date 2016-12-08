@@ -85,11 +85,11 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 		logger.info(
 				"Post-processing terms and variants for TermIndex {}", 
 				this.terminoResource.getTerminology().getName());
-		Terminology termIndex = terminoResource.getTerminology();
+		Terminology termino = terminoResource.getTerminology();
 		if(!scorerConfig.isPresent())
-			scorerConfig = Optional.of(termIndex.getLang().getScorerConfig());
+			scorerConfig = Optional.of(termino.getLang().getScorerConfig());
 		new TermPostProcessor(scorerConfig.get())
 			.setHistory(historyResource.getHistory())
-			.postprocess(termIndex);
+			.postprocess(termino);
 	}
 }

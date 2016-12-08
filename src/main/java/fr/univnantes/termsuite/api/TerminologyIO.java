@@ -15,12 +15,12 @@ import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 public class TerminologyIO {
 	
-	public static void toJson(Terminology termIndex, Writer writer) throws IOException {
-		toJson(termIndex, writer, new JsonOptions());
+	public static void toJson(Terminology termino, Writer writer) throws IOException {
+		toJson(termino, writer, new JsonOptions());
 	}
 	
-	public static void toJson(Terminology termIndex, Writer writer, JsonOptions options) throws IOException {
-		JsonTerminologyIO.save(writer, termIndex, options);
+	public static void toJson(Terminology termino, Writer writer, JsonOptions options) throws IOException {
+		JsonTerminologyIO.save(writer, termino, options);
 	}
 	
 	public static Terminology fromJson(String filePath, JsonOptions options) {
@@ -43,14 +43,14 @@ public class TerminologyIO {
 		}
 	}
 
-	public static Terminology fromJson(URL termIndexUrl) {
-		return fromJson(termIndexUrl, new JsonOptions());
+	public static Terminology fromJson(URL terminoUrl) {
+		return fromJson(terminoUrl, new JsonOptions());
 	}
 
-	public static Terminology fromJson(URL termIndexUrl, JsonOptions options) {
+	public static Terminology fromJson(URL terminoUrl, JsonOptions options) {
 		try {
 			return JsonTerminologyIO.load(
-				new InputStreamReader(termIndexUrl.openStream(), Charsets.UTF_8),
+				new InputStreamReader(terminoUrl.openStream(), Charsets.UTF_8),
 				options
 			);
 		} catch (Exception e) {

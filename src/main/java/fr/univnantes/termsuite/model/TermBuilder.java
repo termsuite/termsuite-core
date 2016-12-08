@@ -38,7 +38,7 @@ public class TermBuilder {
 	private static final String ERR_NO_TERM_INDEX_GIVEN = "No TermIndex given.";
 	private static final String ERR_FREQ_AND_NUM_OCC_MUST_MATCH = "Cannot build a term with frequency %d and %d occurrences";
 
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	private Optional<String> groupingKey = Optional.empty();
 	private java.util.Optional<String> pilot = java.util.Optional.empty();
@@ -57,19 +57,19 @@ public class TermBuilder {
 	private TermBuilder() {
 	}
 	
-	private TermBuilder(Terminology termIndex) {
-		Preconditions.checkNotNull(termIndex);
-		this.termIndex = termIndex;
+	private TermBuilder(Terminology termino) {
+		Preconditions.checkNotNull(termino);
+		this.termino = termino;
 	}
 
 	public Term createAndAddToIndex() {
-		Preconditions.checkNotNull(this.termIndex, ERR_NO_TERM_INDEX_GIVEN);
+		Preconditions.checkNotNull(this.termino, ERR_NO_TERM_INDEX_GIVEN);
 
 		Term term = create();
-		this.termIndex.addTerm(term);
+		this.termino.addTerm(term);
 
 		for(Object[] occ:occurrences) {
-			termIndex.getOccurrenceStore().addOccurrence(
+			termino.getOccurrenceStore().addOccurrence(
 					term, 
 					(String)occ[0], 
 					(Integer)occ[1], 
@@ -184,8 +184,8 @@ public class TermBuilder {
 	public void setContextVector(ContextVector vector) {
 		this.contextVector  = Optional.of(vector);
 	}
-	public static TermBuilder start(Terminology termIndex) {
-		return new TermBuilder(termIndex);
+	public static TermBuilder start(Terminology termino) {
+		return new TermBuilder(termino);
 	}
 
 	public static TermBuilder start() {
@@ -204,7 +204,7 @@ public class TermBuilder {
 
 	public void addWord(String lemma, String stem, String label, boolean isSWT) {
 		Word word;
-		if((word = this.termIndex.getWord(lemma)) == null) 
+		if((word = this.termino.getWord(lemma)) == null) 
 			word = WordBuilder.start().setLemma(lemma).setStem(stem).create();
 		TermWord w = new TermWord(word, label, isSWT);
 		this.termWords.add(w);

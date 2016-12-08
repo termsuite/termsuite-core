@@ -45,12 +45,12 @@ public class TermValueProvidersSpec {
 	private Term machine_synchrone, synchrone, asynchrone, machine_statorique, machine_de_stator, statorique,
 				stator, machine_synchrone_de_stator, hommegrenouille, hommegrenouille_de_stator, term11, aveccapitale;
 
-	private Terminology termIndex ;
+	private Terminology termino ;
 	
 	@Before
 	public void init() {
-		termIndex = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
-		populateTermIndex(new TermFactory(termIndex));
+		termino = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
+		populateTermIndex(new TermFactory(termino));
 	}
 	
 	private void populateTermIndex(TermFactory termFactory) {
@@ -75,18 +75,18 @@ public class TermValueProvidersSpec {
 	
 	@Test
 	public void testWordHorizontalAxis() {
-		TermFactory fac = new TermFactory(termIndex);
+		TermFactory fac = new TermFactory(termino);
 		Term horizontalAxisMorp = fac.create("N:horizontal-axis|horizontal-axis");
 		Term horizontalAxisSyntag = fac.create("A:horizontal|horizontal", "N:axis|axis");
 		fac.wordComposition(CompoundType.NATIVE, "horizontal-axis", "horizon|horizon", "tal|t", "axis|axis");
 		fac.wordComposition(CompoundType.NATIVE, "horizontal", "horizon|horizon", "tal|t");
 		TermValueProvider provider = TermValueProviders.ALLCOMP_PAIRS;
 
-		assertThat(provider.getClasses(termIndex, horizontalAxisMorp))
+		assertThat(provider.getClasses(termino, horizontalAxisMorp))
 			.hasSize(8)
 			.contains("axis+horizontal");
 		
-		assertThat(provider.getClasses(termIndex, horizontalAxisSyntag))
+		assertThat(provider.getClasses(termino, horizontalAxisSyntag))
 			.hasSize(7)
 			.contains("horizon+t")
 			.contains("horizon+tal")
@@ -101,19 +101,19 @@ public class TermValueProvidersSpec {
 	@Test
 	public void testPrefixationLemmas() {
 		TermValueProvider provider = TermValueProviders.PREFIXATION_LEMMAS;
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("asynchrone+synchrone");
-		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
 			.hasSize(1)
 			.contains("asynchrone+synchrone");
-		assertThat(provider.getClasses(termIndex, asynchrone))
+		assertThat(provider.getClasses(termino, asynchrone))
 			.hasSize(1)
 			.contains("asynchrone+synchrone");
-		assertThat(provider.getClasses(termIndex, synchrone))
+		assertThat(provider.getClasses(termino, synchrone))
 			.hasSize(1)
 			.contains("asynchrone+synchrone");
-		assertThat(provider.getClasses(termIndex, this.machine_statorique))
+		assertThat(provider.getClasses(termino, this.machine_statorique))
 			.hasSize(0);
 
 	}
@@ -122,13 +122,13 @@ public class TermValueProvidersSpec {
 	@Test
 	public void testDerivationLemmas() {
 		TermValueProvider provider = TermValueProviders.DERIVATION_LEMMAS;
-		assertThat(provider.getClasses(termIndex, this.machine_statorique))
+		assertThat(provider.getClasses(termino, this.machine_statorique))
 			.contains("stator+statorique")
 			.hasSize(1);
-		assertThat(provider.getClasses(termIndex, this.machine_de_stator))
+		assertThat(provider.getClasses(termino, this.machine_de_stator))
 			.contains("stator+statorique")
 			.hasSize(1);
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(0);
 
 	}
@@ -136,85 +136,85 @@ public class TermValueProvidersSpec {
 	@Test
 	public void testAllCompLemmaSubstringPairsProvider() {
 		TermValueProvider provider = TermValueProviders.ALLCOMP_PAIRS;
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("machine+synchrone");
-		assertThat(provider.getClasses(termIndex, synchrone))
+		assertThat(provider.getClasses(termino, synchrone))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, asynchrone))
+		assertThat(provider.getClasses(termino, asynchrone))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, machine_statorique))
+		assertThat(provider.getClasses(termino, machine_statorique))
 			.hasSize(1).contains("machine+statorique");
-		assertThat(provider.getClasses(termIndex, machine_de_stator))
+		assertThat(provider.getClasses(termino, machine_de_stator))
 			.hasSize(1).contains("machine+stator");
-		assertThat(provider.getClasses(termIndex, statorique))
+		assertThat(provider.getClasses(termino, statorique))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, stator))
+		assertThat(provider.getClasses(termino, stator))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
 			.hasSize(3).contains("machine+stator", "machine+synchrone", "stator+synchrone");
-		assertThat(provider.getClasses(termIndex, hommegrenouille))
+		assertThat(provider.getClasses(termino, hommegrenouille))
 			.hasSize(1).contains("grenouille+homme");
-		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
 			.hasSize(4).contains(
 					"homme-grenouille+stator", "grenouille+homme", "grenouille+stator", "homme+stator");
-		assertThat(provider.getClasses(termIndex, aveccapitale))
+		assertThat(provider.getClasses(termino, aveccapitale))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testWordLemmaStemProvider() {
 		TermValueProvider provider = TermValueProviders.WORD_LEMMA_STEM_PROVIDER;
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("machine+synchro");
-		assertThat(provider.getClasses(termIndex, synchrone))
+		assertThat(provider.getClasses(termino, synchrone))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, asynchrone))
+		assertThat(provider.getClasses(termino, asynchrone))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, machine_statorique))
+		assertThat(provider.getClasses(termino, machine_statorique))
 			.hasSize(1).contains("machine+statoric");
-		assertThat(provider.getClasses(termIndex, machine_de_stator))
+		assertThat(provider.getClasses(termino, machine_de_stator))
 			.hasSize(1).contains("machine+stator");
-		assertThat(provider.getClasses(termIndex, statorique))
+		assertThat(provider.getClasses(termino, statorique))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, stator))
+		assertThat(provider.getClasses(termino, stator))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
 			.hasSize(3).contains("machine+stator", "machine+synchro", "stator+synchro");
-		assertThat(provider.getClasses(termIndex, hommegrenouille))
+		assertThat(provider.getClasses(termino, hommegrenouille))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
 			.hasSize(1).contains("homme-grenouille+stator");
-		assertThat(provider.getClasses(termIndex, aveccapitale))
+		assertThat(provider.getClasses(termino, aveccapitale))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testTermLemmaLowerCaseProvider() {
 		TermValueProvider provider = TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER;
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("machine synchrone");
-		assertThat(provider.getClasses(termIndex, synchrone))
+		assertThat(provider.getClasses(termino, synchrone))
 			.hasSize(1).contains("synchrone");
-		assertThat(provider.getClasses(termIndex, asynchrone))
+		assertThat(provider.getClasses(termino, asynchrone))
 			.hasSize(1).contains("asynchrone");
-		assertThat(provider.getClasses(termIndex, machine_statorique))
+		assertThat(provider.getClasses(termino, machine_statorique))
 			.hasSize(1).contains("machine statorique");
-		assertThat(provider.getClasses(termIndex, machine_de_stator))
+		assertThat(provider.getClasses(termino, machine_de_stator))
 			.hasSize(1).contains("machine de stator");
-		assertThat(provider.getClasses(termIndex, statorique))
+		assertThat(provider.getClasses(termino, statorique))
 			.hasSize(1).contains("statorique");
-		assertThat(provider.getClasses(termIndex, stator))
+		assertThat(provider.getClasses(termino, stator))
 			.hasSize(1).contains("stator");
-		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
 			.hasSize(1).contains("machine synchrone de stator");
-		assertThat(provider.getClasses(termIndex, hommegrenouille))
+		assertThat(provider.getClasses(termino, hommegrenouille))
 			.hasSize(1).contains("homme-grenouille");
-		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
 			.hasSize(1).contains("homme-grenouille de stator");
-		assertThat(provider.getClasses(termIndex, aveccapitale))
+		assertThat(provider.getClasses(termino, aveccapitale))
 			.hasSize(1).contains("aveccapitale");
 	}
 
@@ -222,7 +222,7 @@ public class TermValueProvidersSpec {
 	public void testWordNoClassProvider() {
 		TermValueProvider provider = TermValueProviders.TERM_NOCLASS_PROVIDER;
 		for(Term t:Lists.newArrayList(machine_synchrone, synchrone, asynchrone, machine_statorique, machine_de_stator, statorique, stator, machine_synchrone_de_stator, hommegrenouille, hommegrenouille_de_stator, term11))
-			assertThat(provider.getClasses(termIndex, t))
+			assertThat(provider.getClasses(termino, t))
 				.hasSize(1)
 				.contains("noclass");
 	}
@@ -230,55 +230,55 @@ public class TermValueProvidersSpec {
 	@Test
 	public void testSingleWordLemmaProvider() {
 		TermValueProvider provider = TermValueProviders.TERM_SINGLE_WORD_LEMMA_PROVIDER;
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, synchrone))
+		assertThat(provider.getClasses(termino, synchrone))
 			.hasSize(1).contains("synchrone");
-		assertThat(provider.getClasses(termIndex, asynchrone))
+		assertThat(provider.getClasses(termino, asynchrone))
 			.hasSize(1).contains("asynchrone");
-		assertThat(provider.getClasses(termIndex, machine_statorique))
+		assertThat(provider.getClasses(termino, machine_statorique))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, machine_de_stator))
+		assertThat(provider.getClasses(termino, machine_de_stator))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, statorique))
+		assertThat(provider.getClasses(termino, statorique))
 			.hasSize(1).contains("statorique");
-		assertThat(provider.getClasses(termIndex, stator))
+		assertThat(provider.getClasses(termino, stator))
 			.hasSize(1).contains("stator");
-		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, hommegrenouille))
+		assertThat(provider.getClasses(termino, hommegrenouille))
 			.hasSize(1).contains("homme-grenouille");
-		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
 			.hasSize(0);
-		assertThat(provider.getClasses(termIndex, aveccapitale))
+		assertThat(provider.getClasses(termino, aveccapitale))
 			.hasSize(1).contains("Aveccapitale");
 	}
 
 	@Test
 	public void testWordLemmaProvider() {
 		TermValueProvider provider = TermValueProviders.WORD_LEMMA_PROVIDER;
-		assertThat(provider.getClasses(termIndex, machine_synchrone))
+		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(2)
 			.contains("machine", "synchrone");
-		assertThat(provider.getClasses(termIndex, synchrone))
+		assertThat(provider.getClasses(termino, synchrone))
 			.hasSize(1).contains("synchrone");
-		assertThat(provider.getClasses(termIndex, asynchrone))
+		assertThat(provider.getClasses(termino, asynchrone))
 			.hasSize(1).contains("asynchrone");
-		assertThat(provider.getClasses(termIndex, machine_statorique))
+		assertThat(provider.getClasses(termino, machine_statorique))
 			.hasSize(2).contains("machine", "statorique");
-		assertThat(provider.getClasses(termIndex, machine_de_stator))
+		assertThat(provider.getClasses(termino, machine_de_stator))
 			.hasSize(2).contains("machine",  "stator");
-		assertThat(provider.getClasses(termIndex, statorique))
+		assertThat(provider.getClasses(termino, statorique))
 			.hasSize(1).contains("statorique");
-		assertThat(provider.getClasses(termIndex, stator))
+		assertThat(provider.getClasses(termino, stator))
 			.hasSize(1).contains("stator");
-		assertThat(provider.getClasses(termIndex, machine_synchrone_de_stator))
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
 			.hasSize(3).contains("machine", "synchrone", "stator");
-		assertThat(provider.getClasses(termIndex, hommegrenouille))
+		assertThat(provider.getClasses(termino, hommegrenouille))
 			.hasSize(1).contains("homme-grenouille");
-		assertThat(provider.getClasses(termIndex, hommegrenouille_de_stator))
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
 			.hasSize(2).contains("homme-grenouille", "stator");
-		assertThat(provider.getClasses(termIndex, aveccapitale))
+		assertThat(provider.getClasses(termino, aveccapitale))
 			.hasSize(1).contains("aveccapitale");
 	}
 	

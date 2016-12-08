@@ -54,8 +54,8 @@ import com.google.common.collect.Ordering;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
@@ -175,27 +175,26 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		int nbGraphicalVariants = 0;
 		int nbSynonymicVariants = 0;
 		int nbOccurrences = 0;
-		Terminology termIndex = terminoResource.getTerminology();
-		Terminology tIndex = termIndex;
-		for(Term t:tIndex.getTerms()) {
-			nbMorphologicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
-			nbSyntacticVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNTACTICAL));
-			nbGraphicalVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.GRAPHICAL));
-			nbSynonymicVariants+=Iterables.size(termIndex.getOutboundRelations(t,RelationType.SYNONYMIC));
-			Collection<TermOccurrence> occurrences = termIndex.getOccurrenceStore().getOccurrences(t);
+		Terminology termino = terminoResource.getTerminology();
+		for(Term t:termino.getTerms()) {
+			nbMorphologicalVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
+			nbSyntacticVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.SYNTACTICAL));
+			nbGraphicalVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.GRAPHICAL));
+			nbSynonymicVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.SYNONYMIC));
+			Collection<TermOccurrence> occurrences = termino.getOccurrenceStore().getOccurrences(t);
 			nbOccurrences+=occurrences.size();
 		}
 		// graphical variants are bidirectional
 		nbGraphicalVariants/=2;
 		
 		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, 
-				tIndex.getTerms().size(), 
-				tIndex.getTerms().stream().filter(t->t.getWords().size() == 1).count(),
-				tIndex.getTerms().stream().filter(t->t.getWords().size() > 1).count()
+				termino.getTerms().size(), 
+				termino.getTerms().stream().filter(t->t.getWords().size() == 1).count(),
+				termino.getTerms().stream().filter(t->t.getWords().size() > 1).count()
 				);
 		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, 
-				tIndex.getWords().size(), 
-				tIndex.getWords().stream().filter(w->w.isCompound()).count());
+				termino.getWords().size(), 
+				termino.getWords().stream().filter(w->w.isCompound()).count());
 		LOGGER.info("[{}] Nb occurrences: {}", statName, 
 				nbOccurrences);
 		LOGGER.info("[{}] Nb variants: {} [morph: {}, syntactic: {}, graph: {}, synonyms: {}]", statName, 

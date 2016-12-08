@@ -11,8 +11,8 @@ import com.google.common.base.Stopwatch;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
@@ -31,28 +31,28 @@ public class ExtensionDetecter {
 	}
 	
 	
-	public void detectExtensions(Terminology termIndex) {
-		LOGGER.info("Detecting extensions on term index {}", termIndex.getName());
-		if(termIndex.getTerms().isEmpty())
+	public void detectExtensions(Terminology termino) {
+		LOGGER.info("Detecting extensions on term index {}", termino.getName());
+		if(termino.getTerms().isEmpty())
 			return;
 
 		Stopwatch sw = Stopwatch.createStarted();
 		
-		setSize1Extensions(termIndex);
-		setSize2Extensions(termIndex);
-		setIsExtensionProperty(termIndex);
+		setSize1Extensions(termino);
+		setSize2Extensions(termino);
+		setIsExtensionProperty(termino);
 		LOGGER.debug("Extensions detected in {}", sw);
 
 	}
 
-	public void setIsExtensionProperty(Terminology termIndex) {
-		termIndex
+	public void setIsExtensionProperty(Terminology termino) {
+		termino
 			.getRelations()
 			.forEach(relation -> {
 				if(relation.getType() == RelationType.HAS_EXTENSION)
 					relation.setProperty(RelationProperty.IS_EXTENSION, true);
 				else {
-					boolean isExtension = termIndex
+					boolean isExtension = termino
 						.getRelations(relation.getFrom(), relation.getTo(), RelationType.HAS_EXTENSION)
 						.findAny().isPresent();
 					relation.setProperty(
@@ -64,42 +64,42 @@ public class ExtensionDetecter {
 	}
 
 
-	public void setSize1Extensions(Terminology termIndex) {
-		CustomTermIndex swtIndex = termIndex.createCustomIndex(
+	public void setSize1Extensions(Terminology termino) {
+		CustomTermIndex swtIndex = termino.createCustomIndex(
 				TermIndexes.SWT_GROUPING_KEYS,
 				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
 		
 		LOGGER.debug("Detecting size-1 extensions");
 		for (String swtGroupingKey : swtIndex.keySet()) {
-			Term swt = termIndex.getTermByGroupingKey(swtGroupingKey);
+			Term swt = termino.getTermByGroupingKey(swtGroupingKey);
 			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
 				if(swt.equals(term))
 					continue;
 				else {
-					addExtensionRelationIfNotExisting(termIndex, swt, term);
+					addExtensionRelationIfNotExisting(termino, swt, term);
 				}
 			}
 		}
 		
 		
-		termIndex.dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
+		termino.dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
 	}
 
 
-	public void addExtensionRelationIfNotExisting(Terminology termIndex, Term from, Term to) {
-		if(!termIndex.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent())
-			termIndex.addRelation(new TermRelation(
+	public void addExtensionRelationIfNotExisting(Terminology termino, Term from, Term to) {
+		if(!termino.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent())
+			termino.addRelation(new TermRelation(
 					RelationType.HAS_EXTENSION,
 					from, 
 					to
 				));
 	}
 
-	public void setSize2Extensions(Terminology termIndex) {
+	public void setSize2Extensions(Terminology termino) {
 		LOGGER.debug("Detecting size-1 extensions");
 
 		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;
-		CustomTermIndex customIndex = termIndex.createCustomIndex(
+		CustomTermIndex customIndex = termino.createCustomIndex(
 				gatheringKey,
 				TermValueProviders.get(gatheringKey));
 		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
@@ -120,18 +120,18 @@ public class ExtensionDetecter {
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
-						addExtensionRelationIfNotExisting(termIndex, t1, t2);
+						addExtensionRelationIfNotExisting(termino, t1, t2);
 						watch(t1, t2);
 
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
-						addExtensionRelationIfNotExisting(termIndex, t2, t1);
+						addExtensionRelationIfNotExisting(termino, t2, t1);
 						watch(t2, t1);
 					}
 				}
 			}
 		}
 		//finalize
-		termIndex.dropCustomIndex(gatheringKey);
+		termino.dropCustomIndex(gatheringKey);
 	}
 
 	private void watch(Term t1, Term t2) {

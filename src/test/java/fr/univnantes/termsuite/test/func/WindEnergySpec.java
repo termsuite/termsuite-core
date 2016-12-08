@@ -50,9 +50,9 @@ import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
@@ -62,7 +62,7 @@ import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public abstract class WindEnergySpec {
 
-	protected Terminology termIndex = null;
+	protected Terminology termino = null;
 	protected Lang lang;
 	protected List<String> notTestedRules = Lists.newArrayList();
 	protected List<String> syntacticMatchingRules = Lists.newArrayList();
@@ -98,18 +98,18 @@ public abstract class WindEnergySpec {
 				.build(new CacheLoader<Lang, Terminology>() {
 					@Override
 					public Terminology load(Lang lang) throws Exception {
-						Terminology termIndex = runPipeline(lang);
+						Terminology termino = runPipeline(lang);
 						File controlDir = FunctionalTests.getFunctionalTestsControlDir().resolve("we-" + lang.getCode()).toFile();
 						controlDir.mkdirs();
-						new ControlFilesGenerator(termIndex).generate(controlDir);
-						return termIndex;
+						new ControlFilesGenerator(termino).generate(controlDir);
+						return termino;
 					}
 				});
 	
 	
 	@Before
 	public void setup() {
-		this.termIndex = TERM_INDEX_CACHE.getUnchecked(lang);
+		this.termino = TERM_INDEX_CACHE.getUnchecked(lang);
 	}
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
@@ -148,10 +148,10 @@ public abstract class WindEnergySpec {
 //
 //		
 //		
-//		TermIndex termIndex = TermIndexIO.fromJson(jsonFile.toString());
+//		TermIndex termino = TermIndexIO.fromJson(jsonFile.toString());
 //				
 //		TerminoExtractor
-//			.fromTermIndex(termIndex)
+//			.fromTermIndex(termino)
 //			.disableScoring()
 //			.execute();
 			
@@ -167,7 +167,7 @@ public abstract class WindEnergySpec {
 			.run();
 
 		return pipeline.getTermIndex();
-//		return termIndex;
+//		return termino;
 	}
 
 	@Test
@@ -196,7 +196,7 @@ public abstract class WindEnergySpec {
 			assertTrue(String.format("Bad rule list. Some rule are not under test: <%s>", ruleNames),
 					ruleNames.isEmpty());
 		
-			assertThat(termIndex)
+			assertThat(termino)
 				.asMatchingRules()
 				.containsAll(syntacticMatchingRules)
 				.doesNotContainAnyElementsOf(syntacticNotMatchingRules);
@@ -209,7 +209,7 @@ public abstract class WindEnergySpec {
 
 	@Test
 	public void weControlPrefixes() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.asTermVariations(RelationType.IS_PREFIX_OF)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.containsOnly(
@@ -219,7 +219,7 @@ public abstract class WindEnergySpec {
 
 	@Test
 	public void weControlDerivates() {
-		assertThat(termIndex)
+		assertThat(termino)
 		.asTermVariations(RelationType.DERIVES_INTO)
 		.extracting(TermSuiteExtractors.RELATION_DERIVTYPE_FROMGKEY_TOGKEY)
 		.containsOnly(
@@ -229,7 +229,7 @@ public abstract class WindEnergySpec {
 
 	@Test
 	public void weCompounds() throws FileNotFoundException {
-		assertThat(termIndex)
+		assertThat(termino)
 			.hasExpectedCompounds(
 					FunctionalTests.getTestsOutputFile(String.format("compounds-we-%s.txt", lang.getCode())),
 					ControlFiles.compoundTuples(lang, "we"));

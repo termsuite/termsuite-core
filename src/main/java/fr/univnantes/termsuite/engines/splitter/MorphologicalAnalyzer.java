@@ -88,38 +88,38 @@ public class MorphologicalAnalyzer {
 		return this;
 	}
 
-	public void analyze(Terminology termIndex) {
+	public void analyze(Terminology termino) {
 		if(options.isPrefixSplitterEnabled()) {
 			if(prefixTree.isPresent())
 				new PrefixSplitter()
 					.setHistory(history)
 					.setPrefixTree(prefixTree.get())
-					.splitPrefixes(termIndex);
+					.splitPrefixes(termino);
 			
 			if(prefixExceptions.isPresent())
 				new ManualPrefixSetter()
 					.setHistory(history)
 					.setPrefixExceptions(prefixExceptions.get())
-					.setPrefixes(termIndex);
+					.setPrefixes(termino);
 		}
 		
 		if(manualCompositions.isPresent())
 			new ManualSplitter()
 				.setManualCompositions(manualCompositions.get())
-				.split(termIndex);
+				.split(termino);
 		
 		if(options.isDerivationDetecterEnabled()) {
 			if(suffixDerivationList.isPresent())
 				new SuffixDerivationDetecter()
 					.setHistory(history)
 					.setSuffixDerivationList(suffixDerivationList.get())
-					.detectDerivations(termIndex);
+					.detectDerivations(termino);
 			
 			if(manualSuffixDerivations.isPresent())
 				new ManualSuffixDerivationDetecter()
 					.setHistory(history)
 					.setManualSuffixDerivations(manualSuffixDerivations.get())
-					.detectDerivations(termIndex);
+					.detectDerivations(termino);
 		}
 		
 		if(options.isNativeSplittingEnabled()) {
@@ -130,7 +130,7 @@ public class MorphologicalAnalyzer {
 				.setLanguageDico(this.languageDico.get())
 				.setNeoclassicalPrefixes(this.neoclassicalPrefixes.get())
 				.setStopList(this.stopList.get())
-				.split(termIndex);
+				.split(termino);
 		}
 	}
 	

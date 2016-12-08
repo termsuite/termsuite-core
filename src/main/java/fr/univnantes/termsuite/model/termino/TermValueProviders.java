@@ -42,9 +42,9 @@ import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.CollectionUtils;
 import fr.univnantes.termsuite.utils.Pair;
@@ -60,7 +60,7 @@ public class TermValueProviders {
 	public static final TermValueProvider TERM_SINGLE_WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.SINGLE_WORD_LEMMA) {
 		
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
+		public Collection<String> getClasses(Terminology termino, Term term) {
 			if(term.isSingleWord())
 				return Lists.newArrayList(term.getWords().get(0).getWord().getLemma());
 			return EMPTY_COLLECTION;
@@ -68,24 +68,24 @@ public class TermValueProviders {
 	};
 
 	public static final TermValueProvider TERM_LEMMA_LOWER_CASE_PROVIDER = new AbstractTermValueProvider(TermIndexes.LEMMA_LOWER_CASE) {
-		public java.util.Collection<String> getClasses(Terminology termIndex, Term term) {
+		public java.util.Collection<String> getClasses(Terminology termino, Term term) {
 			return ImmutableList.of(term.getLemma().toLowerCase());
 		};
 	};
 
 	public static final TermValueProvider TERM_NOCLASS_PROVIDER = new AbstractTermValueProvider(TermIndexes.TERM_NOCLASS) {
 		private String value = "noclass";
-		public java.util.Collection<String> getClasses(Terminology termIndex, Term term) {
+		public java.util.Collection<String> getClasses(Terminology termino, Term term) {
 			return ImmutableList.of(value);
 		};
 	};
 
 	public static final TermValueProvider WORD_SWT_GROUPING_KEYS_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
+		public Collection<String> getClasses(Terminology termino, Term term) {
 			List<String> swtGroupingKeys = Lists.newArrayListWithCapacity(term.getWords().size());
 			for(TermWord tw:term.getWords()) {
-				if(termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(tw)) != null) 
+				if(termino.getTermByGroupingKey(TermUtils.toGroupingKey(tw)) != null) 
 					swtGroupingKeys.add(tw.toGroupingKey());
 			}
 			return swtGroupingKeys;
@@ -109,7 +109,7 @@ public class TermValueProviders {
 	public static final TermValueProvider WORD_LEMMA_STEM_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_STEM) {
 
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
+		public Collection<String> getClasses(Terminology termino, Term term) {
 			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 			
 			Map<String, String> stems = new HashMap<String, String>();
@@ -159,7 +159,7 @@ public class TermValueProviders {
 	public static final TermValueProvider ALLCOMP_PAIRS = new AbstractTermValueProvider(TermIndexes.ALLCOMP_PAIRS) {
 
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
+		public Collection<String> getClasses(Terminology termino, Term term) {
 			Set<Pair<Component>> componentPairs = Sets.newHashSet();
 			Set<Word> significantWords = Sets.newHashSetWithExpectedSize(term.getWords().size());
 			
@@ -201,7 +201,7 @@ public class TermValueProviders {
 	public static final TermValueProvider WORD_LEMMA_PROVIDER = new AbstractTermValueProvider(TermIndexes.ALLCOMP_PAIRS) {
 
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
+		public Collection<String> getClasses(Terminology termino, Term term) {
 			Set<String> classes = Sets.newHashSet();
 			for(TermWord w:term.getWords()) 
 				if(w.isSwt())
@@ -213,19 +213,19 @@ public class TermValueProviders {
 
 	public static final TermValueProvider PREFIXATION_LEMMAS = new AbstractTermValueProvider(TermIndexes.PREFIXATION_LEMMAS) {
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
-			return toRelationPairs(termIndex, term, RelationType.IS_PREFIX_OF);
+		public Collection<String> getClasses(Terminology termino, Term term) {
+			return toRelationPairs(termino, term, RelationType.IS_PREFIX_OF);
 		}
 
 	};
 	
-	private static Collection<String> toRelationPairs(Terminology termIndex, Term term, RelationType relType) {
+	private static Collection<String> toRelationPairs(Terminology termino, Term term, RelationType relType) {
 		Set<TermRelation> prefixations = new HashSet<>();
 		for(TermWord tw:term.getWords()) {
-			Term t =termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(tw));
+			Term t =termino.getTermByGroupingKey(TermUtils.toGroupingKey(tw));
 			if(t!=null) {
-				prefixations.addAll(termIndex.getInboundRelations(t, relType));
-				prefixations.addAll(termIndex.getOutboundRelations(t, relType));
+				prefixations.addAll(termino.getInboundRelations(t, relType));
+				prefixations.addAll(termino.getOutboundRelations(t, relType));
 			}
 		}
 		return prefixations.stream()
@@ -237,8 +237,8 @@ public class TermValueProviders {
 
 	public static final TermValueProvider DERIVATION_LEMMAS = new AbstractTermValueProvider(TermIndexes.DERIVATION_LEMMAS) {
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
-			return toRelationPairs(termIndex, term, RelationType.DERIVES_INTO);
+		public Collection<String> getClasses(Terminology termino, Term term) {
+			return toRelationPairs(termino, term, RelationType.DERIVES_INTO);
 		}
 	};
 
@@ -256,7 +256,7 @@ public class TermValueProviders {
 
 
 		@Override
-		public Collection<String> getClasses(Terminology termIndex, Term term) {
+		public Collection<String> getClasses(Terminology termino, Term term) {
 			if(term.getWords().size() == 1) {
 //				return ImmutableList.of();
 				Word word = term.getWords().get(0).getWord();

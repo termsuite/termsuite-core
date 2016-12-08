@@ -7,38 +7,38 @@ import java.net.MalformedURLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.api.TerminologyIO;
 import fr.univnantes.termsuite.api.TerminoFilterConfig;
 import fr.univnantes.termsuite.api.TerminoFilterer;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.api.TerminologyIO;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TerminoFiltererSpec {
 
-	Terminology termIndex1;
+	Terminology termino1;
 	@Before
 	public void setup() throws MalformedURLException {
 		TermSuiteResourceManager.getInstance().clear();
-		termIndex1 = TerminologyIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
+		termino1 = TerminologyIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
 	}
 	
 	@Test
 	public void test1() {
 		
-		assertThat(termIndex1)
+		assertThat(termino1)
 			.hasNTerms(3)
 			.containsTerm("a: word2")
 			.containsTerm("n: word1")
 			.containsTerm("na: word1 word2")
 			;
 		
-		TerminoFilterer.create(termIndex1)
+		TerminoFilterer.create(termino1)
 			.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(6))
 			.execute();
 
-		assertThat(termIndex1)
+		assertThat(termino1)
 			.hasNTerms(1)
 			.containsTerm("na: word1 word2")
 			;
@@ -47,18 +47,18 @@ public class TerminoFiltererSpec {
 	@Test
 	public void test2() {
 		
-		assertThat(termIndex1)
+		assertThat(termino1)
 		.hasNTerms(3)
 		.containsTerm("a: word2")
 		.containsTerm("n: word1")
 		.containsTerm("na: word1 word2")
 		;
 		
-		TerminoFilterer.create(termIndex1)
+		TerminoFilterer.create(termino1)
 		.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(10))
 		.execute();
 		
-		assertThat(termIndex1)
+		assertThat(termino1)
 		.hasNTerms(0)
 		;
 	}

@@ -41,8 +41,8 @@ import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.TerminologyUtils;
 
@@ -56,12 +56,12 @@ import fr.univnantes.termsuite.utils.TerminologyUtils;
  */
 public class ControlFilesGenerator {
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	
-	public ControlFilesGenerator(Terminology termIndex) {
+	public ControlFilesGenerator(Terminology termino) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 	}
 
 
@@ -75,7 +75,7 @@ public class ControlFilesGenerator {
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
-		termIndex.getRelations().forEach( tv -> {
+		termino.getRelations().forEach( tv -> {
 			if(tv.getType() == RelationType.SYNTACTICAL
 					|| tv.getType() == RelationType.MORPHOLOGICAL
 					|| tv.getType() == RelationType.SYNONYMIC)
@@ -87,7 +87,7 @@ public class ControlFilesGenerator {
 		 */
 		for(String ruleName:distinctRuleNames) {
 			String pathname = directory.getAbsolutePath() + "/" + getSyntacticRuleFileName(ruleName);
-			writeVariations(pathname, termIndex.getRelations()
+			writeVariations(pathname, termino.getRelations()
 					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULE))
 					.filter(r-> r.getPropertyStringValue(RelationProperty.VARIATION_RULE).equals(ruleName))
 					.collect(Collectors.toList())
@@ -98,14 +98,14 @@ public class ControlFilesGenerator {
 		 * Write prefix variations
 		 */
 		String prefixPath = directory.getAbsolutePath() + "/" + getPrefixFileName();
-		writeVariations(prefixPath, TerminologyUtils.selectTermVariations(termIndex, RelationType.IS_PREFIX_OF));
+		writeVariations(prefixPath, TerminologyUtils.selectTermVariations(termino, RelationType.IS_PREFIX_OF));
 		
 
 		/*
 		 * Write derivative variations
 		 */
 		String derivativePath = directory.getAbsolutePath() + "/" + getDerivatesFileName();
-		writeVariations(derivativePath, TerminologyUtils.selectTermVariations(termIndex, RelationType.DERIVES_INTO));
+		writeVariations(derivativePath, TerminologyUtils.selectTermVariations(termino, RelationType.DERIVES_INTO));
 
 		/*
 		 * Write compounds
@@ -138,7 +138,7 @@ public class ControlFilesGenerator {
 
 	private void writeCompounds(String filePath) throws IOException {
 		Writer writer = new FileWriter(filePath);
-		for(Term t:termIndex.getTerms()) {
+		for(Term t:termino.getTerms()) {
 			if(t.isSingleWord() && t.isCompound()) {
 				writer.append(String.format("%s\t%s\t%s%n", 
 						t.getGroupingKey(),

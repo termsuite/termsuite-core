@@ -25,8 +25,8 @@ package fr.univnantes.termsuite.model.termino;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
@@ -51,13 +51,13 @@ public class HasSingleWordVariationSelector extends AbstractTermSelector {
 	}
 	
 	@Override
-	public boolean select(Terminology termIndex, Term term) {
+	public boolean select(Terminology termino, Term term) {
 		Term swt;
 		for (TermWord termWord : term.getWords()) {
-			swt = termIndex.getTermByGroupingKey(TermUtils.toGroupingKey(termWord));
+			swt = termino.getTermByGroupingKey(TermUtils.toGroupingKey(termWord));
 			if (swt != null) {
-				if(termIndex.getInboundRelations(swt,this.variationType).iterator().hasNext()
-					|| termIndex.getOutboundRelations(swt,this.variationType).iterator().hasNext())
+				if(termino.getInboundRelations(swt,this.variationType).iterator().hasNext()
+					|| termino.getOutboundRelations(swt,this.variationType).iterator().hasNext())
 					return true;
 			}
 		}

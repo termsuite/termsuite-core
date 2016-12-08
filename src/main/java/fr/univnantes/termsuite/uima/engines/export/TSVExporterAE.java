@@ -41,8 +41,8 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TsvOptions;
 import fr.univnantes.termsuite.export.TsvExporter;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**

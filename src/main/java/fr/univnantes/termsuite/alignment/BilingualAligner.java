@@ -57,8 +57,8 @@ import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
@@ -66,8 +66,8 @@ import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 import fr.univnantes.termsuite.utils.AlignerUtils;
 import fr.univnantes.termsuite.utils.StringUtils;
-import fr.univnantes.termsuite.utils.TerminologyUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
+import fr.univnantes.termsuite.utils.TerminologyUtils;
 import fr.univnantes.termsuite.utils.WordUtils;
  
  
@@ -512,7 +512,7 @@ public class BilingualAligner {
 		return sortTruncateNormalizeAndMerge(targetTermino, nbCandidates, mergedCandidates);
 	}
 
-	private List<TranslationCandidate> sortTruncateNormalizeAndMerge(Terminology termIndex, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
+	private List<TranslationCandidate> sortTruncateNormalizeAndMerge(Terminology termino, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
 		List<TranslationCandidate> list = Lists.newArrayList();
 		
 		/*
@@ -543,7 +543,7 @@ public class BilingualAligner {
 	/*
 	 * Filter candidates by specificity
 	 */
-	private void applySpecificityBonus(Terminology termIndex, List<TranslationCandidate> list) {
+	private void applySpecificityBonus(Terminology termino, List<TranslationCandidate> list) {
 		Iterator<TranslationCandidate> it = list.iterator();
 		TranslationCandidate c;
 		while (it.hasNext()) {
@@ -755,16 +755,16 @@ public class BilingualAligner {
 
 
 	private boolean ensuredExtensionsAreComputed = false;
-	private void ensureHasExtensionRelationsComputred(Terminology termIndex) {
+	private void ensureHasExtensionRelationsComputred(Terminology termino) {
 		if(!ensuredExtensionsAreComputed) {
-			if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
+			if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 				Stopwatch sw = Stopwatch.createStarted();
-				new ExtensionDetecter().detectExtensions(termIndex);
+				new ExtensionDetecter().detectExtensions(termino);
 				sw.stop();
 				LOGGER.info("Term extensions detected in {} [{} terms, {} HAS_EXTENSION relations found]", 
 						sw, 
-						termIndex.getTerms().size(),
-						termIndex.getRelations(RelationType.HAS_EXTENSION).count());
+						termino.getTerms().size(),
+						termino.getRelations(RelationType.HAS_EXTENSION).count());
 			}
 			ensuredExtensionsAreComputed = true;
 		}

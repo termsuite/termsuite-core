@@ -10,13 +10,13 @@ import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 public class JsonExporter {
 
-	public static void export(Terminology termIndex, Writer writer) {
-		export(termIndex, writer, new JsonOptions());
+	public static void export(Terminology termino, Writer writer) {
+		export(termino, writer, new JsonOptions());
 	}
 	
-	public static void export(Terminology termIndex, Writer writer, JsonOptions options) {
+	public static void export(Terminology termino, Writer writer, JsonOptions options) {
 		try {
-			JsonTerminologyIO.save(writer, termIndex, options);
+			JsonTerminologyIO.save(writer, termino, options);
 		} catch (IOException e) {
 			throw new TermSuiteException(e);
 		}

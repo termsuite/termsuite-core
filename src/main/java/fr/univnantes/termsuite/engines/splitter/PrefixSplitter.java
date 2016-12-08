@@ -31,8 +31,8 @@ import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -60,19 +60,19 @@ public class PrefixSplitter {
 		return this;
 	}
 	
-	public void splitPrefixes(Terminology termIndex) {
-		LOGGER.info("Starting prefix splitting for TermIndex {}", termIndex.getName());
+	public void splitPrefixes(Terminology termino) {
+		LOGGER.info("Starting prefix splitting for TermIndex {}", termino.getName());
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
-		for(Term swt:termIndex.getTerms()) {
+		for(Term swt:termino.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			else {
 				lemmaIndex.put(swt.getLemma(), swt);
 			}
 		}
-		for(Term swt:termIndex.getTerms()) {
+		for(Term swt:termino.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 
@@ -91,7 +91,7 @@ public class PrefixSplitter {
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
 							watch(swt, target);
-							termIndex.addRelation(new TermRelation(
+							termino.addRelation(new TermRelation(
 									RelationType.IS_PREFIX_OF,
 									swt, 
 									target
@@ -104,7 +104,7 @@ public class PrefixSplitter {
 		}
 		LOGGER.debug("Number of words with prefix composition: {} out of {}", 
 				nb, 
-				termIndex.getWords().size());
+				termino.getWords().size());
 	}
 
 	private void watch(Term swt, Term target) {

@@ -15,9 +15,9 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class VariationExporter {
 	
@@ -26,30 +26,30 @@ public class VariationExporter {
 
 	private static final String TARGET_LINE_FORMAT = " [%s] %-30s {f=%d,%s}%n";
 
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 	private List<RelationType> variationTypes;
 	
-	private VariationExporter(Terminology termIndex, Writer writer, List<RelationType> variationTypes) {
+	private VariationExporter(Terminology termino, Writer writer, List<RelationType> variationTypes) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.writer = writer;
 		this.variationTypes = Lists.newArrayList(variationTypes);
 	}
 
-	public static void export(Terminology termIndex, Writer writer, RelationType... variationTypes) {
-		new VariationExporter(termIndex, writer, Lists.newArrayList(variationTypes)).doExport();
+	public static void export(Terminology termino, Writer writer, RelationType... variationTypes) {
+		new VariationExporter(termino, writer, Lists.newArrayList(variationTypes)).doExport();
 	}
 
-	public static void export(Terminology termIndex, Writer writer, List<RelationType> variationTypes) {
-		new VariationExporter(termIndex, writer, variationTypes).doExport();
+	public static void export(Terminology termino, Writer writer, List<RelationType> variationTypes) {
+		new VariationExporter(termino, writer, variationTypes).doExport();
 	}
 
 	public void doExport() {
 		try {
 			Multimap<Term,TermRelation> acceptedVariations = HashMultimap.create();
-			for(Term t:termIndex.getTerms()) {
-				for(TermRelation v:termIndex.getOutboundRelations(t)) {
+			for(Term t:termino.getTerms()) {
+				for(TermRelation v:termino.getOutboundRelations(t)) {
 					if(this.variationTypes.isEmpty()
 							|| this.variationTypes.contains(v.getType()))
 						acceptedVariations.put(t, v);

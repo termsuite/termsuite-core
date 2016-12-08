@@ -9,27 +9,27 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class TermDistributionExporter {
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 	private Predicate<Term> selector;
 	
 	private List<TermProperty> termProperties = Lists.newArrayList();
 	
-	private TermDistributionExporter(Terminology termIndex, Writer writer, Predicate<Term> selector, TermProperty... properties) {
+	private TermDistributionExporter(Terminology termino, Writer writer, Predicate<Term> selector, TermProperty... properties) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.writer = writer;
 		this.selector = selector;
 		this.termProperties = Lists.newArrayList(properties);
 	}
 
-	public static void export(Terminology termIndex, Writer writer, Predicate<Term> selector, TermProperty... properties) {
-		new TermDistributionExporter(termIndex, writer, selector, properties).doExport();
+	public static void export(Terminology termino, Writer writer, Predicate<Term> selector, TermProperty... properties) {
+		new TermDistributionExporter(termino, writer, selector, properties).doExport();
 	}
 
 	private void doExport() {
@@ -39,7 +39,7 @@ public class TermDistributionExporter {
 			writer.write(termProperties.stream().map(TermProperty::getShortName).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
-			for(Term t: termIndex.getTerms()) {
+			for(Term t: termino.getTerms()) {
 				if(!selector.test(t))
 					continue;
 				

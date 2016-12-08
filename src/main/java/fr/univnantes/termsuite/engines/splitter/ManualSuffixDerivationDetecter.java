@@ -30,8 +30,8 @@ import com.google.common.collect.Lists;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class ManualSuffixDerivationDetecter {
@@ -49,21 +49,21 @@ public class ManualSuffixDerivationDetecter {
 		return this;
 	}
 
-	public void detectDerivations(Terminology termIndex) {
+	public void detectDerivations(Terminology termino) {
 		Term regularForm;
-		for(Term derivateForm:termIndex.getTerms()) {
+		for(Term derivateForm:termino.getTerms()) {
 			if(!derivateForm.isSingleWord())
 				continue;
 			List<TermRelation> toRem = Lists.newArrayList();
 			for(String regularFormException:manualSuffixDerivations.getValues(derivateForm.getWords().get(0).getWord().getLemma())) {
-				for(TermRelation tv:termIndex.getInboundRelations(derivateForm, RelationType.DERIVES_INTO)) {
+				for(TermRelation tv:termino.getInboundRelations(derivateForm, RelationType.DERIVES_INTO)) {
 					regularForm = tv.getFrom();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 
 						toRem.add(tv);
 				}
 			}
 			for(TermRelation rem:toRem) {
-				termIndex.removeRelation(rem);
+				termino.removeRelation(rem);
 				watch(rem);
 			}
 		}

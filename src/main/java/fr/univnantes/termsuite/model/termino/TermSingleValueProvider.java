@@ -35,9 +35,9 @@ public abstract class TermSingleValueProvider extends AbstractTermValueProvider 
 	}
 
 	@Override
-	public Collection<String> getClasses(Terminology termIndex, Term term) {
-		return ImmutableList.of(getClass(termIndex, term));
+	public Collection<String> getClasses(Terminology termino, Term term) {
+		return ImmutableList.of(getClass(termino, term));
 	}
 
-	public abstract String getClass(Terminology termIndex, Term term);
+	public abstract String getClass(Terminology termino, Term term);
 }

@@ -19,14 +19,14 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class VariationRuleExamplesExporter {
 
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 	private YamlRuleSet yamlVariantRules;
 
@@ -48,21 +48,21 @@ public class VariationRuleExamplesExporter {
 	}
 
 
-	private VariationRuleExamplesExporter(Terminology termIndex, Writer writer, YamlRuleSet yamlVariantRules) {
-		this.termIndex = termIndex;
+	private VariationRuleExamplesExporter(Terminology termino, Writer writer, YamlRuleSet yamlVariantRules) {
+		this.termino = termino;
 		this.writer = writer;
 		this.yamlVariantRules = yamlVariantRules;
 	}
 
-	public static void export(Terminology termIndex, Writer writer, YamlRuleSet yamlVariantRules) {
-		new VariationRuleExamplesExporter(termIndex, writer, yamlVariantRules).doExport();
+	public static void export(Terminology termino, Writer writer, YamlRuleSet yamlVariantRules) {
+		new VariationRuleExamplesExporter(termino, writer, yamlVariantRules).doExport();
 	}
 
 	private void doExport() {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
-		for (Term t : termIndex.getTerms()) {
-			for (TermRelation v : termIndex.getOutboundRelations(t, RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL))
+		for (Term t : termino.getTerms()) {
+			for (TermRelation v : termino.getOutboundRelations(t, RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL))
 				pairs.put(v.getPropertyStringValue(RelationProperty.VARIATION_RULE), new TermPair(t, v.getTo()));
 		}
 
@@ -107,7 +107,7 @@ public class VariationRuleExamplesExporter {
 				int nbStrictOccs = 0;
 				List<String> lines = Lists.newArrayList();
 				for (TermPair pair : sortedPairs) {
-					OccurrenceStore occStore = termIndex.getOccurrenceStore();
+					OccurrenceStore occStore = termino.getOccurrenceStore();
 					List<TermOccurrence> targetStrictOccurrences = Lists.newLinkedList(occStore.getOccurrences(pair.target));
 					TermOccurrenceUtils.removeOverlaps(occStore.getOccurrences(pair.source), targetStrictOccurrences);
 					nbOverlappingOccs += pair.target.getFrequency();

@@ -31,9 +31,9 @@ import fr.univnantes.termsuite.api.Traverser;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class TbxExporter {
 
@@ -57,19 +57,19 @@ public class TbxExporter {
 	/* The tbx document */
 	private Document document;
 
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	private Traverser traverser;
 
 	private Writer writer;
 	
-	private TbxExporter(Terminology termIndex, Writer writer, Traverser traverser) {
+	private TbxExporter(Terminology termino, Writer writer, Traverser traverser) {
 		NUMBER_FORMATTER.setMaximumFractionDigits(4);
 		NUMBER_FORMATTER.setMinimumFractionDigits(4);
 		NUMBER_FORMATTER.setRoundingMode(RoundingMode.UP);
 		NUMBER_FORMATTER.setGroupingUsed(false);
 		this.writer = writer;
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.traverser = traverser;
 	}
 
@@ -78,9 +78,9 @@ public class TbxExporter {
 			prepareTBXDocument();
 			
 			try {
-				for(Term t: traverser.toList(termIndex)) {
+				for(Term t: traverser.toList(termino)) {
 					addTermEntry(t, false);
-					for(TermRelation v:termIndex.getOutboundRelations(t))
+					for(TermRelation v:termino.getOutboundRelations(t))
 						addTermEntry(v.getTo(), true);
 				}
 				exportTBXDocument();
@@ -94,12 +94,12 @@ public class TbxExporter {
 		}
 	}
 
-	public static void export(Terminology termIndex, Writer writer) {
-		export(termIndex, writer, Traverser.create());
+	public static void export(Terminology termino, Writer writer) {
+		export(termino, writer, Traverser.create());
 	}
 
-	public static void export(Terminology termIndex, Writer writer, Traverser traverser) {
-		new TbxExporter(termIndex, writer, traverser).doExport();
+	public static void export(Terminology termino, Writer writer, Traverser traverser) {
+		new TbxExporter(termino, writer, traverser).doExport();
 	}
 	
 	/**
@@ -200,17 +200,17 @@ public class TbxExporter {
 		body.appendChild(termEntry);
 		Element langSet = document.createElement("langSet");
 		langSet.setAttribute("xml:id", langsetId);
-		langSet.setAttribute("xml:lang", this.termIndex.getLang().getCode());
+		langSet.setAttribute("xml:lang", this.termino.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (TermRelation variation : termIndex.getInboundRelations(term)) 
+		for (TermRelation variation : termino.getInboundRelations(term)) 
 			this.addTermBase(langSet, variation.getFrom().getGroupingKey(), null);
 
-		for (TermRelation variation : termIndex.getOutboundRelations(term)) {
+		for (TermRelation variation : termino.getOutboundRelations(term)) {
 			this.addTermVariant(langSet, String.format("langset-%d", getId(variation.getTo())),
 					variation.getTo().getGroupingKey());
 		}
-		Collection<TermOccurrence> allOccurrences = termIndex.getOccurrenceStore().getOccurrences(term);
+		Collection<TermOccurrence> allOccurrences = termino.getOccurrenceStore().getOccurrences(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());
 
 		Element tig = document.createElement("tig");
@@ -220,7 +220,7 @@ public class TbxExporter {
 		termElmt.setTextContent(term.getGroupingKey());
 		tig.appendChild(termElmt);
 
-		List<Form> forms = termIndex.getOccurrenceStore().getForms(term);
+		List<Form> forms = termino.getOccurrenceStore().getForms(term);
 		addNote(langSet, tig, "termPilot", term.getPilot());
 
 		this.addNote(langSet, tig, "termType", isVariant ? "variant" : "termEntry");
@@ -285,7 +285,7 @@ public class TbxExporter {
 		StringBuilder sb = new StringBuilder("[");
 
 		int i = 0;
-		for (Form form:termIndex.getOccurrenceStore().getForms(term)) {
+		for (Form form:termino.getOccurrenceStore().getForms(term)) {
 			if (i > 0)
 				sb.append(", ");
 			sb.append("{term=\"").append(form);

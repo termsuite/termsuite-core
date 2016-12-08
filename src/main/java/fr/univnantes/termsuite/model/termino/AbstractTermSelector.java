@@ -47,5 +47,5 @@ public abstract class AbstractTermSelector implements TermSelector {
 		return select(null, t);
 	}
 
-	public abstract boolean select(Terminology termIndex, Term t);
+	public abstract boolean select(Terminology termino, Term t);
 }

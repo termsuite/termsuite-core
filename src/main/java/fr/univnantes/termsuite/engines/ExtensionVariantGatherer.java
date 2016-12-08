@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -42,33 +42,33 @@ public class ExtensionVariantGatherer {
 	}
 	
 	
-	public void gather(Terminology termIndex) {
-		if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
+	public void gather(Terminology termino) {
+		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
 			LOGGER.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
 		
-		termIndex.getRelations(RelationType.VARIATIONS)
+		termino.getRelations(RelationType.VARIATIONS)
 			.filter(r -> !r.isPropertySet(RelationProperty.IS_INFERED))
 			.forEach(r-> r.setProperty(RelationProperty.IS_INFERED, false));
 		
 		final MutableInt cnt = new MutableInt(0);
 		
-		termIndex.getRelations(RelationType.MORPHOLOGICAL)
+		termino.getRelations(RelationType.MORPHOLOGICAL)
 			.forEach(relation -> {
 				Term m1 = relation.getFrom();
 				Term m2 = relation.getTo();
 				
 				
-				termIndex.getOutboundRelations(m1, RelationType.HAS_EXTENSION)
+				termino.getOutboundRelations(m1, RelationType.HAS_EXTENSION)
 					.stream()
 					.forEach(rel1 -> {
-						Term affix1 = TermUtils.getExtensionAffix(termIndex, m1, rel1.getTo());
+						Term affix1 = TermUtils.getExtensionAffix(termino, m1, rel1.getTo());
 						if(affix1 == null)
 							return;
 						
-						termIndex.getOutboundRelations(m2, RelationType.HAS_EXTENSION)
+						termino.getOutboundRelations(m2, RelationType.HAS_EXTENSION)
 							.stream()
 							.forEach(rel2 -> {
-								Term affix2 = TermUtils.getExtensionAffix(termIndex, m2, rel2.getTo());
+								Term affix2 = TermUtils.getExtensionAffix(termino, m2, rel2.getTo());
 								if(affix2 == null)
 									return;
 
@@ -82,7 +82,7 @@ public class ExtensionVariantGatherer {
 									inferedRel.setProperty(RelationProperty.IS_INFERED, true);
 									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
 									inferedRel.setProperty(RelationProperty.VARIATION_RULE, relation.getPropertyStringValue(RelationProperty.VARIATION_RULE));
-									termIndex.addRelation(inferedRel);
+									termino.addRelation(inferedRel);
 									watch(inferedRel, rel1, rel2);
 									
 								}

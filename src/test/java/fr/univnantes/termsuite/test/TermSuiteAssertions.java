@@ -42,8 +42,8 @@ public class TermSuiteAssertions {
 		return new TermAssert(term);
 	}
 	
-	public static TerminologyAssert assertThat(Terminology termIndex) {
-		return new TerminologyAssert(termIndex);
+	public static TerminologyAssert assertThat(Terminology termino) {
+		return new TerminologyAssert(termino);
 	}
 	
 	public static StringAssert assertThat(String string) {

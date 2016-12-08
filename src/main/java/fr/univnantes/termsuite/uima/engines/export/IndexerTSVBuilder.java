@@ -51,9 +51,9 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -83,8 +83,8 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public void addTerm(Terminology termIndex, Term term) throws IOException {
-		startTerm(termIndex, term);
+	public void addTerm(Terminology termino, Term term) throws IOException {
+		startTerm(termino, term);
 	}
 
 	private static final String SPEC_FORMAT = "%.2f";
@@ -93,15 +93,15 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	
 	private Term currentTerm = null;
 	
-	public void startTerm(Terminology termIndex, Term term) throws IOException {
+	public void startTerm(Terminology termino, Term term) throws IOException {
 		this.currentTerm = term;
 		appendTerm(
-				termIndex, 
+				termino, 
 				term, 
 				String.format(T_FORMAT));
 	}
 
-	public void addVariant(Terminology termIndex, TermRelation variation, boolean addVariantTag) throws IOException {
+	public void addVariant(Terminology termino, TermRelation variation, boolean addVariantTag) throws IOException {
 		List<String> line = Lists.newArrayList();
 		String typeCol = String.format(V_FORMAT, variation.getType().getLetter());
 		if(addVariantTag)
@@ -122,7 +122,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				line.toArray(new String[line.size()]));
 	}
 
-	private void appendTerm(Terminology termIndex, Term t, String termType) throws IOException {
+	private void appendTerm(Terminology termino, Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
 		for(Property<?> p:properties) {

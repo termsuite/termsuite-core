@@ -46,7 +46,7 @@ import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 
 public class TermGathererSpec {
-	private MemoryTerminology termIndex;
+	private MemoryTerminology termino;
 	private Term machine_synchrone;
 	private Term machine_asynchrone;
 	private Term synchrone;
@@ -64,12 +64,12 @@ public class TermGathererSpec {
 	@Before
 	public void set() throws Exception {
 		String text = Files.toString(new File(VARIANT_RULE_SET), Charsets.UTF_8);
-		this.termIndex = Fixtures.termIndex();
-		populateTermIndex(new TermFactory(termIndex));
+		this.termino = Fixtures.termino();
+		populateTermIndex(new TermFactory(termino));
 		engine = new TermGatherer()
 			.setRules(YamlRuleSetIO.fromYaml(text));
 		
-		engine.gather(this.termIndex);
+		engine.gather(this.termino);
 	}
 
 	private void populateTermIndex(TermFactory termFactory) {
@@ -98,34 +98,34 @@ public class TermGathererSpec {
 	
 	@Test
 	public void testProcessDefault() throws AnalysisEngineProcessException{
-		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique))
+		assertThat(termino.getOutboundRelations(this.geothermie_hydraulique))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
 			.contains(tuple(this.geothermie_hydraulique, RelationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
 		
-		assertThat(termIndex.getOutboundRelations(this.geothermie_hydraulique_solaire))
+		assertThat(termino.getOutboundRelations(this.geothermie_hydraulique_solaire))
 			.hasSize(0);
 	}
 
 	
 	@Test
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
-		assertThat(termIndex.getOutboundRelations(this.machine_synchrone))
+		assertThat(termino.getOutboundRelations(this.machine_synchrone))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.RELATION_TYPE_RULE_TO)
 			.contains(tuple(RelationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
 		
-		assertThat(termIndex.getOutboundRelations(this.machine_asynchrone))
+		assertThat(termino.getOutboundRelations(this.machine_asynchrone))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
-		assertThat(termIndex.getOutboundRelations(this.phase_du_stator))
+		assertThat(termino.getOutboundRelations(this.phase_du_stator))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.RELATION_TYPE_RULE_TO)
 			.contains(tuple(RelationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
-		assertThat(termIndex.getOutboundRelations(this.phase_statorique))
+		assertThat(termino.getOutboundRelations(this.phase_statorique))
 			.hasSize(0);
 		
 	}

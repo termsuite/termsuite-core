@@ -39,8 +39,8 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerDeEnSpec;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerFrEnSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TermSuitePreprocessorSpec;
@@ -66,7 +66,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 public class FunctionalTests {
 	
 
-	public static final Path TERM_INDEX_1=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "json", "termIndex1.json");
+	public static final Path TERM_INDEX_1=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "json", "termino1.json");
 	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "corpus", "corpus2");
 	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "corpus", "corpus1");
 	public static final Path TERMINO_WESHORT_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "termino");
@@ -114,8 +114,8 @@ public class FunctionalTests {
 		return (String)getConfigProperty(PROP_TREETAGGER_HOME_PATH);
 	}
 	
-	public static List<Term> termsByProperty(Terminology termIndex, TermProperty termProperty, boolean desc) {
-		List<Term> terms = Lists.newArrayList(termIndex.getTerms());
+	public static List<Term> termsByProperty(Terminology termino, TermProperty termProperty, boolean desc) {
+		List<Term> terms = Lists.newArrayList(termino.getTerms());
 		Collections.sort(terms, termProperty.getComparator(desc));
 		return terms;
 	}

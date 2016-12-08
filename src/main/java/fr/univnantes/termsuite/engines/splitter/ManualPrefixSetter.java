@@ -30,8 +30,8 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -52,17 +52,17 @@ public class ManualPrefixSetter {
 		return this;
 	}
 
-	public void setPrefixes(Terminology termIndex)  {
+	public void setPrefixes(Terminology termino)  {
 		Segmentation segmentation;
-		for(Term swt:termIndex.getTerms()) {
+		for(Term swt:termino.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			Word word = swt.getWords().get(0).getWord();
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					for(TermRelation tv:Lists.newArrayList(termIndex.getOutboundRelations(swt, RelationType.IS_PREFIX_OF))) {
-						termIndex.removeRelation(tv);
+					for(TermRelation tv:Lists.newArrayList(termino.getOutboundRelations(swt, RelationType.IS_PREFIX_OF))) {
+						termino.removeRelation(tv);
 						watch(swt, tv);
 					}
 				} else {

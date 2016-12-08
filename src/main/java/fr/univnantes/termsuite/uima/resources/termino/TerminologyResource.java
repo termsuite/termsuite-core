@@ -35,13 +35,13 @@ public class TerminologyResource implements SharedResourceObject {
 	public static final String TERMINOLOGY = "Terminology";
 	
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	public void load(DataResource arg0) throws ResourceInitializationException {
-		this.termIndex = (Terminology) TermSuiteResourceManager.getInstance().get(arg0.getUri().toString());
+		this.termino = (Terminology) TermSuiteResourceManager.getInstance().get(arg0.getUri().toString());
 	};
 	
 	public Terminology getTerminology() {
-		return this.termIndex;
+		return this.termino;
 	}
 }

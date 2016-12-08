@@ -37,7 +37,7 @@ import fr.univnantes.termsuite.test.unit.Fixtures;
 
 public class CrossTableSpec {
 
-	private Terminology termIndex;
+	private Terminology termino;
 	private CrossTable crossTable;
 
 	private Term t1;
@@ -47,18 +47,18 @@ public class CrossTableSpec {
 	@Before
 	public void init() {
 
-		this.termIndex = Fixtures.termIndexWithOccurrences();
+		this.termino = Fixtures.terminoWithOccurrences();
 		
-		t1 = this.termIndex.getTermByGroupingKey("n: énergie");
-		t2 = this.termIndex.getTermByGroupingKey("a: éolien");
-		t3 = this.termIndex.getTermByGroupingKey("n: accès");
+		t1 = this.termino.getTermByGroupingKey("n: énergie");
+		t2 = this.termino.getTermByGroupingKey("a: éolien");
+		t3 = this.termino.getTermByGroupingKey("n: accès");
 		
 		// T1 T2 T3 T1 T3 T3 T1
 		new Contextualizer()
 				.setOptions(new ContextualizerOptions().setScope(1))
-				.contextualize(termIndex);
+				.contextualize(termino);
 		
-		this.crossTable = new CrossTable(this.termIndex);
+		this.crossTable = new CrossTable(this.termino);
 	}
 	
 	@Test

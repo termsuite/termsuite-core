@@ -39,8 +39,8 @@ import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.DocumentView;
 import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.TermSuitePipelineException;
 import fr.univnantes.termsuite.utils.IteratorUtils;
 
@@ -72,33 +72,33 @@ public class Contextualizer  {
 		return this;
 	}
 	
-	public void contextualize(Terminology termIndex) {
-		if(termIndex.getTerms().isEmpty())
+	public void contextualize(Terminology termino) {
+		if(termino.getTerms().isEmpty())
 			return;
 		
 		// 0- drop all context vectors
 		LOGGER.debug("0 - Drop all context vectors");
-		for(Term t:termIndex.getTerms())
+		for(Term t:termino.getTerms())
 			t.setContext(null);
 		
 		
 		// 1- index all occurrences in source documents
 		LOGGER.debug("1 - Create occurrence index");
 		documentViews = new HashMap<>();
-		for(Document document:termIndex.getOccurrenceStore().getDocuments()) 
+		for(Document document:termino.getOccurrenceStore().getDocuments()) 
 			documentViews.put(document, new DocumentView());
-		for(Term term:termIndex.getTerms())
-			for(TermOccurrence occ:termIndex.getOccurrenceStore().getOccurrences(term))
+		for(Term term:termino.getTerms())
+			for(TermOccurrence occ:termino.getOccurrenceStore().getOccurrences(term))
 				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
 		
 		
-		long total = termIndex.getTerms().stream().filter(t->t.getWords().size()==1).count();
+		long total = termino.getTerms().stream().filter(t->t.getWords().size()==1).count();
 		// 2- Generate context vectors
 		LOGGER.debug("2 - Create context vectors. (number of contexts to compute: {})", 
 				total);
-		Iterator<Term> iterator = getTermIterator(termIndex);
+		Iterator<Term> iterator = getTermIterator(termino);
 		for(Term t:IteratorUtils.toIterable(iterator)) {
-			ContextVector vector =computeContextVector(termIndex, t, options.getCoTermType(), options.getScope(), options.getMinimumCooccFrequencyThreshold());
+			ContextVector vector =computeContextVector(termino, t, options.getCoTermType(), options.getScope(), options.getMinimumCooccFrequencyThreshold());
 			t.setContext(vector);
 		}
 		
@@ -106,11 +106,11 @@ public class Contextualizer  {
 		// 3- Normalize context vectors
 		LOGGER.debug("3 - Normalizing context vectors");
 		LOGGER.debug("3a - Generating the cross table");
-		CrossTable crossTable = new CrossTable(termIndex);
+		CrossTable crossTable = new CrossTable(termino);
 		LOGGER.debug("3b - Normalizing {} context vectors", total);
 		String traceMsg = "[Progress: {} / {}] Normalizing term {}";
 		int progress = 0;
-		for(Term t:IteratorUtils.toIterable(getTermIterator(termIndex))) {
+		for(Term t:IteratorUtils.toIterable(getTermIterator(termino))) {
 			++progress;
 			if(progress%500 == 0)
 				LOGGER.trace(traceMsg, progress, total, t);
@@ -122,8 +122,8 @@ public class Contextualizer  {
 		documentViews = null;
 	}
 
-	private Iterator<Term> getTermIterator(Terminology termIndex) {
-		return termIndex
+	private Iterator<Term> getTermIterator(Terminology termino) {
+		return termino
 				.getTerms()
 				.stream()
 				.filter(t->t.getWords().size()==1)
@@ -142,11 +142,11 @@ public class Contextualizer  {
 	 * @return
 	 * 		The computed {@link ContextVector} object
 	 */
-	public ContextVector computeContextVector(Terminology termIndex, Term t, OccurrenceType coTermsType, int contextSize, 
+	public ContextVector computeContextVector(Terminology termino, Term t, OccurrenceType coTermsType, int contextSize, 
 			int cooccFrequencyThreshhold) {
 		// 1- compute context vector
 		ContextVector vector = new ContextVector(t);
-		vector.addAllCooccurrences(Iterators.concat(contextIterator(termIndex, t, coTermsType, contextSize)));
+		vector.addAllCooccurrences(Iterators.concat(contextIterator(termino, t, coTermsType, contextSize)));
 		vector.removeCoTerm(t);
 		
 		// 2- filter entries that under the co-occurrence threshold
@@ -160,9 +160,9 @@ public class Contextualizer  {
 		return vector;
 	}
 	
-	private Iterator<Iterator<TermOccurrence>> contextIterator(Terminology termIndex, final Term t, final OccurrenceType coTermsType, final int contextSize) {
+	private Iterator<Iterator<TermOccurrence>> contextIterator(Terminology termino, final Term t, final OccurrenceType coTermsType, final int contextSize) {
 		return new AbstractIterator<Iterator<TermOccurrence>>() {
-			private Iterator<TermOccurrence> it = termIndex.getOccurrenceStore().occurrenceIterator(t);
+			private Iterator<TermOccurrence> it = termino.getOccurrenceStore().occurrenceIterator(t);
 			
 			@Override
 			protected Iterator<TermOccurrence> computeNext() {

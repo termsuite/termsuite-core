@@ -75,9 +75,9 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
@@ -108,8 +108,8 @@ import fr.univnantes.termsuite.uima.engines.preproc.MateLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.preproc.MateLemmatizerTagger;
 import fr.univnantes.termsuite.uima.engines.preproc.RegexSpotter;
 import fr.univnantes.termsuite.uima.engines.preproc.StringRegexFilter;
-import fr.univnantes.termsuite.uima.engines.preproc.TerminologyBlacklistWordFilterAE;
 import fr.univnantes.termsuite.uima.engines.preproc.TermOccAnnotationImporter;
+import fr.univnantes.termsuite.uima.engines.preproc.TerminologyBlacklistWordFilterAE;
 import fr.univnantes.termsuite.uima.engines.preproc.TreeTaggerLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
 import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
@@ -192,7 +192,7 @@ public class TermSuitePipeline {
 	 * MAIN PIPELINE PARAMETERS
 	 */
 	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
-	private Optional<? extends Terminology> termIndex = Optional.empty();
+	private Optional<? extends Terminology> termino = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
@@ -291,15 +291,15 @@ public class TermSuitePipeline {
 	}
 	
 
-	public static TermSuitePipeline create(Terminology termIndex) {
-		Preconditions.checkNotNull(termIndex.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
+	public static TermSuitePipeline create(Terminology termino) {
+		Preconditions.checkNotNull(termino.getName(), "The term index must have a name before it can be used in TermSuitePipeline");
 		
-		if(!TermSuiteResourceManager.getInstance().contains(termIndex.getName()))
-			TermSuiteResourceManager.getInstance().register(termIndex.getName(), termIndex);
+		if(!TermSuiteResourceManager.getInstance().contains(termino.getName()))
+			TermSuiteResourceManager.getInstance().register(termino.getName(), termino);
 		
-		TermSuitePipeline pipeline = create(termIndex.getLang().getCode());
+		TermSuitePipeline pipeline = create(termino.getLang().getCode());
 		pipeline.emptyCollection();
-		pipeline.setTermIndex(termIndex);
+		pipeline.setTermIndex(termino);
 		
 		return pipeline;
 	}
@@ -396,8 +396,8 @@ public class TermSuitePipeline {
 
 		
 	private void terminates() {
-		if(termIndex.isPresent() && termIndex.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
-			((MongoDBOccurrenceStore)termIndex.get().getOccurrenceStore()).close();
+		if(termino.isPresent() && termino.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
+			((MongoDBOccurrenceStore)termino.get().getOccurrenceStore()).close();
 			
 	}
 
@@ -1492,18 +1492,18 @@ public class TermSuitePipeline {
 	private ExternalResourceDescription terminoResourceDesc;
 	public ExternalResourceDescription resTermIndex() {
 		if(terminoResourceDesc == null) {
-			if(!termIndex.isPresent())
+			if(!termino.isPresent())
 				emptyTermIndex(UUID.randomUUID().toString());
 			
 			terminoResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
 					TerminologyResource.class, 
-					termIndex.get().getName());
+					termino.get().getName());
 			
 			TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 			
 			// register the term index if not in term index manager
-			if(!manager.contains(termIndex.get().getName()))
-				manager.register(termIndex.get().getName(), termIndex.get());
+			if(!manager.contains(termino.get().getName()))
+				manager.register(termino.get().getName(), termino.get());
 		}
 		return terminoResourceDesc;
 		
@@ -1549,18 +1549,18 @@ public class TermSuitePipeline {
 	 * 		The term index processed by this pipeline
 	 */
 	public Terminology getTermIndex() {
-		return this.termIndex.get();
+		return this.termino.get();
 	}
 	
 	/**
 	 * Sets the term index on which this pipeline will run.
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline setTermIndex(Terminology termIndex) {
-		this.termIndex = Optional.of(termIndex);
+	public TermSuitePipeline setTermIndex(Terminology termino) {
+		this.termino = Optional.of(termino);
 		return this;
 	}
 	
@@ -1574,9 +1574,9 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline emptyTermIndex(String name) {
-		MemoryTerminology termIndex = new MemoryTerminology(name, this.lang, this.occurrenceStore);
-		LOGGER.info("Creating TermIndex {}", termIndex.getName());
-		this.termIndex = Optional.of(termIndex);
+		MemoryTerminology termino = new MemoryTerminology(name, this.lang, this.occurrenceStore);
+		LOGGER.info("Creating TermIndex {}", termino.getName());
+		this.termino = Optional.of(termino);
 		return this;
 	}
 

@@ -57,10 +57,10 @@ public class TermGatherer {
 	}
 	
 	
-	public void gather(Terminology termIndex) {
+	public void gather(Terminology termino) {
 		Stopwatch sw = Stopwatch.createStarted();
 		
-		GroovyService groovyService = new GroovyService(termIndex);
+		GroovyService groovyService = new GroovyService(termino);
 
 		if(gathererOptions.isPrefixationGathererEnabled()) {
 			LOGGER.info("Gathering prefixation variants");
@@ -71,7 +71,7 @@ public class TermGatherer {
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(RuleType.PREFIXATION))	
-				.gather(termIndex);
+				.gather(termino);
 		}
 		
 		if(gathererOptions.isDerivationGathererEnabled()) {
@@ -83,7 +83,7 @@ public class TermGatherer {
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(RuleType.DERIVATION))	
-				.gather(termIndex);
+				.gather(termino);
 		}
 		
 		if(gathererOptions.isMorphologicalGathererEnabled()) {
@@ -95,7 +95,7 @@ public class TermGatherer {
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(RuleType.MORPHOLOGICAL))	
-				.gather(termIndex);
+				.gather(termino);
 		} 
 		
 		LOGGER.info("Gathering syntagmatic variants");
@@ -106,7 +106,7 @@ public class TermGatherer {
 			.setGroovyAdapter(groovyService)
 			.setHistory(history)
 			.setVariantRules(rules.getVariantRules(RuleType.SYNTAGMATIC))	
-			.gather(termIndex);
+			.gather(termino);
 
 		if(gathererOptions.isSemanticGathererEnabled()) {
 			LOGGER.info("Gathering morphological semantic variants");
@@ -117,7 +117,7 @@ public class TermGatherer {
 			.setGroovyAdapter(groovyService)
 			.setHistory(history)
 			.setVariantRules(rules.getVariantRules(RuleType.SEMANTIC))	
-			.gather(termIndex);
+			.gather(termino);
 		}
 		
 		
@@ -126,17 +126,17 @@ public class TermGatherer {
 			new GraphicalGatherer()
 				.setDistance(new FastDiacriticInsensitiveLevenshtein(false))
 				.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
-				.setNbFixedLetters(termIndex.getLang().getGraphicalVariantNbPreindexingLetters())
+				.setNbFixedLetters(termino.getLang().getGraphicalVariantNbPreindexingLetters())
 				.setHistory(history)
-				.gather(termIndex);
+				.gather(termino);
 		}
 
 		sw.stop();
 		LOGGER.debug("{} finished in {}", this.getClass().getSimpleName(), sw);
 	}
 
-//	public void oldGather(TermIndex termIndex) {
-//		if(termIndex.getTerms().isEmpty())
+//	public void oldGather(TermIndex termino) {
+//		if(termino.getTerms().isEmpty())
 //			return;
 //
 //		/*
@@ -145,7 +145,7 @@ public class TermGatherer {
 //		for(RunConfig runConfig:RUN_CONFIGS) {
 //			LOGGER.debug("Gathering terms with index {} - rule type: {}", runConfig.indexName, runConfig.variantRuleIndex);
 //			
-//			CustomTermIndex customIndex = termIndex.getCustomIndex(runConfig.indexName);
+//			CustomTermIndex customIndex = termino.getCustomIndex(runConfig.indexName);
 //			customIndex.cleanSingletonKeys();
 //			// clean biggest classes
 //			customIndex.cleanEntriesByMaxSize(WARNING_CRITICAL_SIZE);
@@ -196,16 +196,16 @@ public class TermGatherer {
 //
 //		LOGGER.debug("Gathering with default variant rule indexing (source and target patterns)");
 //		for(RunConfig runConfig:RUN_CONFIGS) {
-//			gather(termIndex, runConfig.indexName, runConfig.variantRuleIndex);
-//			termIndex.dropCustomIndex(runConfig.indexName);
+//			gather(termino, runConfig.indexName, runConfig.variantRuleIndex);
+//			termino.dropCustomIndex(runConfig.indexName);
 //		}
 //	}
 //	
-//	private void gather(TermIndex termIndex, final String gatheringKey, VariantRuleIndex variantRuleIndex) {
+//	private void gather(TermIndex termino, final String gatheringKey, VariantRuleIndex variantRuleIndex) {
 //		LOGGER.debug("Rule-based gathering over the pregathering key {}", gatheringKey);
 //
 //		// create the index
-//		CustomTermIndex customIndex = termIndex.getCustomIndex(gatheringKey);
+//		CustomTermIndex customIndex = termino.getCustomIndex(gatheringKey);
 //		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
 //
 //
@@ -245,8 +245,8 @@ public class TermGatherer {
 //					nbComparisons+=2;
 //					target=targetIt.next();
 //					
-//					applyGatheringRules(termIndex, variantRuleIndex, source, target);
-//					applyGatheringRules(termIndex, variantRuleIndex, target, source);
+//					applyGatheringRules(termino, variantRuleIndex, source, target);
+//					applyGatheringRules(termino, variantRuleIndex, target, source);
 //					if(nbComparisons % OBSERVING_STEP == 0) 
 //						if(taskObserver.isPresent())
 //							taskObserver.get().work(OBSERVING_STEP);

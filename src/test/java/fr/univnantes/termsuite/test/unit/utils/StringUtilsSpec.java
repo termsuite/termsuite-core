@@ -32,7 +32,7 @@ import fr.univnantes.termsuite.utils.StringUtils;
 
 public class StringUtilsSpec {
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	@Before
 	public void setUp() {

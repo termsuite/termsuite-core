@@ -21,8 +21,8 @@ import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -76,10 +76,10 @@ public class SemanticGatherer extends AbstractGatherer {
 	
 	
 	@Override
-	public void gather(Terminology termIndex) {
+	public void gather(Terminology termino) {
 		Stopwatch gatherSw = Stopwatch.createStarted();
 		for(VariantRule rule:this.variantRules)
-			gather(termIndex, (SynonymicRule)rule);
+			gather(termino, (SynonymicRule)rule);
 		gatherSw.stop();
 		LOGGER.debug("Cumulated indexing time: {}", indexingSw);
 		
@@ -95,9 +95,9 @@ public class SemanticGatherer extends AbstractGatherer {
 				nbAlignments);
 	}
 	
-	public void gather(Terminology termIndex, SynonymicRule rule) {
+	public void gather(Terminology termino, SynonymicRule rule) {
 		LOGGER.info("Aligning semantic variations for rule {}", rule.getName());
-		if(termIndex.getTerms().isEmpty())
+		if(termino.getTerms().isEmpty())
 			return;
 		Preconditions.checkNotNull(rule);
 		
@@ -107,15 +107,15 @@ public class SemanticGatherer extends AbstractGatherer {
 		AtomicInteger nbDicoRelationFound = new AtomicInteger(0);
 		
 		
-		if(!termIndex.getTerms().stream().filter(t->t.getContext()!= null).findAny().isPresent())
+		if(!termino.getTerms().stream().filter(t->t.getContext()!= null).findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires a contextualized term index");
-		if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
+		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
 		String indexName = "SubSequence"+rule.getName();
 
 		indexingSw.start();
-		CustomTermIndex index = termIndex.createCustomIndex(indexName, rule.getTermProvider());
+		CustomTermIndex index = termino.createCustomIndex(indexName, rule.getTermProvider());
 		indexingSw.stop();
 
 		Stopwatch ruleSw = Stopwatch.createStarted();
@@ -131,7 +131,7 @@ public class SemanticGatherer extends AbstractGatherer {
 			for(int i=0; i<terms.size();i++) {
 				t1 = terms.get(i);
 				String akey1 = TermUtils.toGroupingKey(t1.getWords().get(rule.getSynonymSourceWordIndex()));
-				a1 = termIndex.getTermByGroupingKey(akey1);
+				a1 = termino.getTermByGroupingKey(akey1);
 				if(a1 == null) {
 					continue;
 				} else if(a1.getContext() == null) {
@@ -145,7 +145,7 @@ public class SemanticGatherer extends AbstractGatherer {
 						continue;
 					t2 = terms.get(j);
 					String akey2 = TermUtils.toGroupingKey(t2.getWords().get(rule.getSynonymSourceWordIndex()));
-					a2 = termIndex.getTermByGroupingKey(akey2);
+					a2 = termino.getTermByGroupingKey(akey2);
 					if(a2 == null) {
 						continue;
 					} 
@@ -154,7 +154,7 @@ public class SemanticGatherer extends AbstractGatherer {
 						// test all synonyms from dico
 						if(dico.getValues(a1.getLemma()).contains(a2.getLemma())) {
 							nbDicoRelationFound.incrementAndGet();
-							createDicoRelation(termIndex, t1, t2);
+							createDicoRelation(termino, t1, t2);
 						}
 					}
 					
@@ -185,14 +185,14 @@ public class SemanticGatherer extends AbstractGatherer {
 					.limit(this.nbDistributionalCandidates)
 					.forEach(rel -> {
 						nbDistribRelationsFound.incrementAndGet();
-						termIndex.addRelation(rel);
+						termino.addRelation(rel);
 						watch(rel.getFrom(), rel.getTo());
 					});
 			}
 		});
 		ruleSw.stop();
 
-		termIndex.dropCustomIndex(indexName);
+		termino.dropCustomIndex(indexName);
 		LOGGER.debug("Semantic alignment finished for rule {} in {}", rule, ruleSw);
 		LOGGER.debug("Nb distributional synonymic relations found: {}. Total dico synonyms: {}", 
 				nbDistribRelationsFound, 
@@ -200,13 +200,13 @@ public class SemanticGatherer extends AbstractGatherer {
 				);
 	}
 
-	public void createDicoRelation(Terminology termIndex, Term t1, Term t2) {
+	public void createDicoRelation(Terminology termino, Term t1, Term t2) {
 		TermRelation rel = new TermRelation(
 				RelationType.SYNONYMIC,
 				t1,
 				t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
-		termIndex.addRelation(rel);
+		termino.addRelation(rel);
 		watch(t1, t2);
 	}
 

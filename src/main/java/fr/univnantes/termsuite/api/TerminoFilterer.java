@@ -8,11 +8,11 @@ public class TerminoFilterer {
 
 	private TerminoFilterConfig config = new TerminoFilterConfig();
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	
-	public static TerminoFilterer create(Terminology termIndex) {
+	public static TerminoFilterer create(Terminology termino) {
 		TerminoFilterer terminoFilterer = new TerminoFilterer();
-		terminoFilterer.termIndex = termIndex;
+		terminoFilterer.termino = termino;
 		return terminoFilterer;
 	}
 	
@@ -27,9 +27,9 @@ public class TerminoFilterer {
 
 	public Terminology execute() {
 		TermSuitePipeline pipeline = TermSuitePipeline
-				.create(termIndex);
+				.create(termino);
 		PipelineUtils.filter(pipeline, config);
 		pipeline.run();
-		return termIndex;
+		return termino;
 	}
 }

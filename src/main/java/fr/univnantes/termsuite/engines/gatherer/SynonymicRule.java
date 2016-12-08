@@ -53,7 +53,7 @@ public class SynonymicRule extends VariantRule {
 			}
 			
 			@Override
-			public Collection<String> getClasses(Terminology termIndex, Term term) {
+			public Collection<String> getClasses(Terminology termino, Term term) {
 				if(eqIndices.getLast() < term.getWords().size()) {
 					return Lists.newArrayList(term.getWords().subList(
 							eqIndices.getFirst(), 

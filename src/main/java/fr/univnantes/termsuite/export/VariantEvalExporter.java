@@ -11,14 +11,14 @@ import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class VariantEvalExporter {
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 
 	private int nbVariantsPerTerm;
@@ -26,10 +26,10 @@ public class VariantEvalExporter {
 	private int nbExampleOccurrences;
 	private int topN;
 	
-	private VariantEvalExporter(Terminology termIndex, Writer writer, int nbVariantsPerTerm, int contextSize,
+	private VariantEvalExporter(Terminology termino, Writer writer, int nbVariantsPerTerm, int contextSize,
 			int nbExampleOccurrences, int topN) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.writer = writer;
 		this.nbVariantsPerTerm = nbVariantsPerTerm;
 		this.contextSize = contextSize;
@@ -38,21 +38,21 @@ public class VariantEvalExporter {
 	}
 	
 	
-	public static void export(Terminology termIndex, Writer writer, int nbVariantsPerTerm, int contextSize,
+	public static void export(Terminology termino, Writer writer, int nbVariantsPerTerm, int contextSize,
 			int nbExampleOccurrences, int topN) {
-		new VariantEvalExporter(termIndex, writer, nbVariantsPerTerm, contextSize, nbExampleOccurrences, topN).doExport();
+		new VariantEvalExporter(termino, writer, nbVariantsPerTerm, contextSize, nbExampleOccurrences, topN).doExport();
 	}
 
 	private void doExport() {
 		try {
 			int rank = 0;
 			int variantCnt = 0;
-			for(Term t:termIndex.getTerms()) {
-				if(!termIndex.getOutboundRelations(t).isEmpty())
+			for(Term t:termino.getTerms()) {
+				if(!termino.getOutboundRelations(t).isEmpty())
 					continue;
 				printBase(++rank, t);
 				int variantRank = 0;
-				for(TermRelation variation:termIndex.getOutboundRelations(t,  RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
+				for(TermRelation variation:termino.getOutboundRelations(t,  RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL)) {
 					if(variantRank >= nbVariantsPerTerm)
 						break;
 					variantCnt++;
@@ -99,7 +99,7 @@ public class VariantEvalExporter {
 	}
 
 	private void printTermOccurrences(Term term) throws IOException {
-		List<TermOccurrence> occurrences = Lists.newArrayList(termIndex.getOccurrenceStore().getOccurrences(term));
+		List<TermOccurrence> occurrences = Lists.newArrayList(termino.getOccurrenceStore().getOccurrences(term));
 		Collections.shuffle(occurrences);
 		int occCnt = 0;
 		for(TermOccurrence occurrence:occurrences) {

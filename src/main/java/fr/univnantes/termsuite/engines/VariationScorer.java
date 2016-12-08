@@ -38,10 +38,10 @@ import fr.univnantes.termsuite.metrics.Normalizer;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -54,45 +54,45 @@ import fr.univnantes.termsuite.utils.TermUtils;
 public class VariationScorer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VariationScorer.class);
 	
-	public void score(Terminology termIndex) {
+	public void score(Terminology termino) {
 		LOGGER.info("Computing scores for variations");
 		Stopwatch sw = Stopwatch.createStarted();
 
-		doRelationScores(termIndex);
-		normalizeSourceGain(termIndex);
-		doExtensionScores(termIndex);
-		normalizeExtensionScores(termIndex);
-		doVariantScores(termIndex);
+		doRelationScores(termino);
+		normalizeSourceGain(termino);
+		doExtensionScores(termino);
+		normalizeExtensionScores(termino);
+		doVariantScores(termino);
 		sw.stop();
 		LOGGER.debug("Scores computed in {}", sw);
 	}
 
-	private void normalizeSourceGain(Terminology termIndex) {
+	private void normalizeSourceGain(Terminology termino) {
 		final Normalizer normalizer = new LinearNormalizer(0.33, 1);
 		
-		termIndex.getRelations()
+		termino.getRelations()
 			.filter(r -> r.isPropertySet(RelationProperty.SOURCE_GAIN))
 			.forEach(r -> 
 				r.setProperty(RelationProperty.NORMALIZED_SOURCE_GAIN, 
 						normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN))));
 	}
 
-	private void normalizeExtensionScores(Terminology termIndex) {
-		final Normalizer normalizer = new MinMaxNormalizer(termIndex
+	private void normalizeExtensionScores(Terminology termino) {
+		final Normalizer normalizer = new MinMaxNormalizer(termino
 				.getRelations()
 				.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
 				.map(r -> r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))
 				.collect(Collectors.toList()));
 		
-		termIndex.getRelations()
+		termino.getRelations()
 			.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
 			.forEach(r -> 
 					r.setProperty(RelationProperty.NORMALIZED_EXTENSION_SCORE, 
 							normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))));
 	}
 
-	public void doVariantScores(Terminology termIndex) {
-		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
+	public void doVariantScores(Terminology termino) {
+		termino.getRelations(RelationType.VARIATIONS).forEach( relation -> {
 			double score = relation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
 							0.91*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
 							0.89 + 0.1*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
@@ -102,37 +102,37 @@ public class VariationScorer {
 		});
 	}
 
-	public void doRelationScores(Terminology termIndex) {
-		termIndex.getRelations(RelationType.VARIATIONS).forEach( relation -> {
+	public void doRelationScores(Terminology termino) {
+		termino.getRelations(RelationType.VARIATIONS).forEach( relation -> {
 			double sourceGain = Math.log10((double)relation.getTo().getFrequency()/relation.getFrom().getFrequency());
 			relation.setProperty(RelationProperty.SOURCE_GAIN, 
 					sourceGain);
 
 			relation.setProperty(RelationProperty.STRICTNESS, 
 					TermUtils.getStrictness(
-					termIndex.getOccurrenceStore(), 
+							termino.getOccurrenceStore(), 
 					relation.getTo(), 
 					relation.getFrom()));
 		});
 	}
 
-	public void doExtensionScores(Terminology termIndex) {
-		if(!termIndex.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
+	public void doExtensionScores(Terminology termino) {
+		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
-			new ExtensionDetecter().detectExtensions(termIndex);
+			new ExtensionDetecter().detectExtensions(termino);
 		}
 		
 		Term affix;
 		Set<Term> extensions;
-		for(Term from:termIndex.getTerms()) {
-			extensions = termIndex.getOutboundRelations(from, RelationType.HAS_EXTENSION)
+		for(Term from:termino.getTerms()) {
+			extensions = termino.getOutboundRelations(from, RelationType.HAS_EXTENSION)
 					.stream()
 					.map(TermRelation::getTo)
 					.collect(Collectors.toSet());
-			for(TermRelation variation:termIndex.getOutboundRelations(from, RelationType.VARIATIONS)) {
+			for(TermRelation variation:termino.getOutboundRelations(from, RelationType.VARIATIONS)) {
 				if(extensions.contains(variation.getTo())) {
 					affix = TermUtils.getExtensionAffix(
-							termIndex,
+							termino,
 							from, 
 							variation.getTo());
 					
@@ -177,7 +177,7 @@ public class VariationScorer {
 		
 
 		// normalize affix score
-		List<Double> affixScores = termIndex
+		List<Double> affixScores = termino
 				.getRelations()
 				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
 				.map(r -> r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE))
@@ -185,7 +185,7 @@ public class VariationScorer {
 		if(!affixScores.isEmpty()) {
 			final Normalizer affixScoreNormalizer = new MinMaxNormalizer(affixScores);
 			
-			termIndex
+			termino
 				.getRelations()
 				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
 				.forEach(r -> {
@@ -197,7 +197,7 @@ public class VariationScorer {
 		}
 
 		// compute global extension score
-		termIndex.getRelations()
+		termino.getRelations()
 			.filter(rel -> rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX) && rel.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX))
 			.forEach(rel -> {
 				double extensionScore = (rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN)

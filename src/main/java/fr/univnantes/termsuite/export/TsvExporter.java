@@ -16,29 +16,29 @@ import fr.univnantes.termsuite.uima.engines.export.IndexerTSVBuilder;
 
 public class TsvExporter {
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 	private TsvOptions options;
 	private Traverser traverser;
 	
-	private TsvExporter(Terminology termIndex, Writer writer, Traverser traverser, TsvOptions options) {
+	private TsvExporter(Terminology termino, Writer writer, Traverser traverser, TsvOptions options) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.writer = writer;
 		this.options = options;
 		this.traverser = traverser;
 	}
 
-	public static void export(Terminology termIndex, Writer writer) {
-		export(termIndex, writer, Traverser.create(), new TsvOptions());
+	public static void export(Terminology termino, Writer writer) {
+		export(termino, writer, Traverser.create(), new TsvOptions());
 	}
 
-	public static void export(Terminology termIndex, Writer writer,  TsvOptions options) {
-		new TsvExporter(termIndex, writer, Traverser.create(), options).doExport();
+	public static void export(Terminology termino, Writer writer,  TsvOptions options) {
+		new TsvExporter(termino, writer, Traverser.create(), options).doExport();
 	}
 	
-	public static void export(Terminology termIndex, Writer writer, Traverser traverser, TsvOptions options) {
-		new TsvExporter(termIndex, writer, traverser, options).doExport();
+	public static void export(Terminology termino, Writer writer, Traverser traverser, TsvOptions options) {
+		new TsvExporter(termino, writer, traverser, options).doExport();
 	}
 
 	private void doExport() {
@@ -52,19 +52,19 @@ public class TsvExporter {
 			if(options.showHeaders())
 				tsv.writeHeaders();
 				
-			for(Term t:traverser.toList(termIndex)) {
-				tsv.startTerm(termIndex, t);
+			for(Term t:traverser.toList(termino)) {
+				tsv.startTerm(termino, t);
 				
 				if(options.isShowVariants())
-					termIndex.getOutboundRelations(t, RelationType.VARIATIONS)
+					termino.getOutboundRelations(t, RelationType.VARIATIONS)
 						.stream()
 						.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
 						.limit(options.getMaxVariantsPerTerm())
 						.forEach(tv -> {
 							try {
-								boolean hasVariant = !termIndex.getOutboundRelations(tv.getTo(), RelationType.VARIATIONS).isEmpty();
+								boolean hasVariant = !termino.getOutboundRelations(tv.getTo(), RelationType.VARIATIONS).isEmpty();
 								tsv.addVariant(
-										termIndex, 
+										termino, 
 										tv,
 										options.tagsTermsHavingVariants() && hasVariant);
 							} catch (IOException e) {

@@ -38,10 +38,10 @@ public interface CustomTermIndex {
 	 * @param term
 	 * 			The term to add to index.
 	 */
-	public void indexTerm(Terminology termIndex, Term term);
+	public void indexTerm(Terminology termino, Term term);
 	public void cleanSingletonKeys();
 	public int size();
-	public void removeTerm(Terminology termIndex, Term t);
+	public void removeTerm(Terminology termino, Term t);
 	
 	/**
 	 * For each entry of this index, increase the frequency threshhold and 

@@ -38,8 +38,8 @@ import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
@@ -255,12 +255,12 @@ public class AlignerUtils {
 	 * Gives the list of all possible single lemma terms decompositino for a complex term.
 	 * 
 	 * 
-	 * @param termIndex
+	 * @param termino
 	 * @param term
 	 * @return
 	 */
-	public static List<List<Term>> getSingleLemmaTerms(Terminology termIndex, Term term) {
-		List<Term> swtTerms = TermUtils.getSingleWordTerms(termIndex, term);
+	public static List<List<Term>> getSingleLemmaTerms(Terminology termino, Term term) {
+		List<Term> swtTerms = TermUtils.getSingleWordTerms(termino, term);
 		List<List<Term>> lemmaSets = Lists.newArrayList();
 		if(swtTerms.size() == 1) {
 			
@@ -273,8 +273,8 @@ public class AlignerUtils {
 			if(term.isCompound()) {
 				lemmaSets.add(Lists.newArrayList(term));
 				for(Pair<Component> pair:CompoundUtils.innerContiguousComponentPairs(term.getWords().get(0).getWord())) {
-					for(Term swt1:getSwtSetFromComponent(termIndex, pair.getElement1())) {
-						for(Term swt2:getSwtSetFromComponent(termIndex, pair.getElement2())) {
+					for(Term swt1:getSwtSetFromComponent(termino, pair.getElement1())) {
+						for(Term swt2:getSwtSetFromComponent(termino, pair.getElement2())) {
 							lemmaSets.add(new Pair<Term>(swt1, swt2).toList());
 							
 						}
@@ -294,10 +294,10 @@ public class AlignerUtils {
 	}
 
 
-	public static Set<Term> getSwtSetFromComponent(Terminology termIndex, Component c) {
+	public static Set<Term> getSwtSetFromComponent(Terminology termino, Component c) {
 		Set<Term> terms = new HashSet<>();
-		terms.addAll(termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getLemma()));
-		terms.addAll(termIndex.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getSubstring()));
+		terms.addAll(termino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getLemma()));
+		terms.addAll(termino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getSubstring()));
 		return terms;
 	}
 

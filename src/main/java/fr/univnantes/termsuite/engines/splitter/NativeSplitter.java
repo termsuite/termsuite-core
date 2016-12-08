@@ -25,8 +25,8 @@ import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
@@ -46,7 +46,7 @@ public class NativeSplitter {
 	private SimpleWordSet languageDico;
 	private SimpleWordSet neoclassicalPrefixes;
 	private SimpleWordSet stopList;
-	private Terminology termIndex;
+	private Terminology termino;
 
 	private CompostIndex compostIndex;
 	private static IndexingKey<String, String> similarityIndexingKey = TermSuiteUtils.KEY_THREE_FIRST_LETTERS;
@@ -106,12 +106,12 @@ public class NativeSplitter {
 	           });
 
 	
-	public void split(Terminology termIndex) {
-		this.termIndex = termIndex;
-		LOGGER.info("Starting morphologyical compound detection for TermIndex {}", termIndex.getName());
+	public void split(Terminology termino) {
+		this.termino = termino;
+		LOGGER.info("Starting morphologyical compound detection for TermIndex {}", termino.getName());
 		LOGGER.debug(this.toString());
-		swtLemmaIndex = termIndex.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
-		buildCompostIndex(termIndex);
+		swtLemmaIndex = termino.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		buildCompostIndex(termino);
 
 		
 		final MutableLong cnt = new MutableLong(0);
@@ -120,7 +120,7 @@ public class NativeSplitter {
 		progressLoggerTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				int total = termIndex.getWords().size();
+				int total = termino.getWords().size();
 				LOGGER.info("Progress: {}% ({} on {})",
 						String.format("%.2f", ((double)cnt.longValue()*100)/total),
 						cnt.longValue(),
@@ -130,7 +130,7 @@ public class NativeSplitter {
 
 		
 //		int observingStep = 100;
-		termIndex.getTerms()
+		termino.getTerms()
 			.parallelStream()
 			.filter(Term::isSingleWord)
 			.forEach( swt -> {
@@ -224,12 +224,12 @@ public class NativeSplitter {
 		LOGGER.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
 		LOGGER.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
-		termIndex.dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		termino.dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
 	}
 	
-	private void buildCompostIndex(Terminology termIndex) {
+	private void buildCompostIndex(Terminology termino) {
 		LOGGER.debug("Building compost index");
 
 		compostIndex = new CompostIndex(similarityIndexingKey);
@@ -237,7 +237,7 @@ public class NativeSplitter {
 			compostIndex.addDicoWord(word);
 		for(String word:neoclassicalPrefixes.getElements())
 			compostIndex.addNeoclassicalPrefix(word);
-		for(Word w:termIndex.getWords())
+		for(Word w:termino.getWords())
 			compostIndex.addInCorpus(w.getLemma());
 		LOGGER.debug("Compost index size: " + compostIndex.size());
 	}
@@ -362,7 +362,7 @@ public class NativeSplitter {
 	public double getMaxSpec() {
 		if(!maxSpec.isPresent()) {
 			Comparator<Term> specComparator = TermProperty.SPECIFICITY.getComparator(false);
-			double wrLog = termIndex.getTerms().stream().max(specComparator).get().getSpecificity();
+			double wrLog = termino.getTerms().stream().max(specComparator).get().getSpecificity();
 			maxSpec = Optional.of((double)Math.pow(10, wrLog));
 		}
 		return maxSpec.get();

@@ -31,8 +31,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguage;
 import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
@@ -56,8 +56,8 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 		FSIterator<Annotation> it =  aJCas.getAnnotationIndex().iterator();
 		while(it.hasNext()) {
 			it.next();
-			Terminology termIndex = this.terminoResource.getTerminology();
-			termIndex.setWordAnnotationsNum(termIndex.getWordAnnotationsNum() + 1);
+			Terminology termino = this.terminoResource.getTerminology();
+			termino.setWordAnnotationsNum(termino.getWordAnnotationsNum() + 1);
 		}
 	}
 	
@@ -79,16 +79,16 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	}
 
 	private void computeSpecifities() {
-		Terminology termIndex = terminoResource.getTerminology();
+		Terminology termino = terminoResource.getTerminology();
 		
 		//		double maxWR = 0.0;
 		if(generalLanguage.isCumulatedFrequencyMode()) {
 			// process specificity for old versions of GeneralLanguage resources that do not have __NB_CORPUS_WORDS__ key
 			
 			int totalCount = 0;
-			for(Term term:termIndex.getTerms()) 
+			for(Term term:termino.getTerms()) 
 				totalCount+=term.getFrequency();
-			for(Term term:termIndex.getTerms()) {
+			for(Term term:termino.getTerms()) {
 				double frequency = (1000 * (double)term.getFrequency()) / totalCount;
 				double generalFrequency = generalLanguage.getNormalizedFrequency(term.getLemma());
 				if (generalFrequency != 0.0) {
@@ -99,11 +99,11 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 					LOGGER.warn("GeneralFrequency resource returned 0.0 for the term " + term.getGroupingKey() + ". Ignoring this term.");
 			}
 		} else {
-			for(Term term:termIndex.getTerms()) {
+			for(Term term:termino.getTerms()) {
 				double generalTermFrequency = (double)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
 				double normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
 				double termFrequency = term.getFrequency();
-				double normalizedTermFrequency = (1000 * termFrequency)/termIndex.getWordAnnotationsNum();
+				double normalizedTermFrequency = (1000 * termFrequency)/termino.getWordAnnotationsNum();
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
 				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));

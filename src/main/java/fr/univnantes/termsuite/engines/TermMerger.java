@@ -8,29 +8,29 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.model.Terminology;
 
 public class TermMerger {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermMerger.class);
 	
 	private static final Double MERGING_THRESHOLD = 2d;
-	public void mergeTerms(Terminology termIndex) {
-		mergeGraphicalVariants(termIndex);
+	public void mergeTerms(Terminology termino) {
+		mergeGraphicalVariants(termino);
 	}
 
-	private void mergeGraphicalVariants(Terminology termIndex) {
+	private void mergeGraphicalVariants(Terminology termino) {
 		final MutableInt nbMerged = new MutableInt(0);
 		
-		termIndex.getRelations(RelationType.GRAPHICAL)
+		termino.getRelations(RelationType.GRAPHICAL)
 			.filter(rel -> rel.getFrom().getFrequency() > rel.getTo().getFrequency())
 			.filter(rel -> rel.getTo().getFrequency() > 0)
 			.filter(rel -> (double)rel.getFrom().getFrequency() / rel.getTo().getFrequency() > MERGING_THRESHOLD)
 			.collect(Collectors.toList())
 			.forEach(rel -> {
 				LOGGER.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
-				OccurrenceStore occStore = termIndex.getOccurrenceStore();
+				OccurrenceStore occStore = termino.getOccurrenceStore();
 				for(TermOccurrence occ:occStore.getOccurrences(rel.getTo()))
 					occ.setTerm(rel.getFrom());
 				for(TermOccurrence o2:occStore.getOccurrences(rel.getTo()))
@@ -38,7 +38,7 @@ public class TermMerger {
 				rel.getFrom().setFrequency(rel.getFrom().getFrequency() + rel.getTo().getFrequency());
 				rel.getFrom().setFrequencyNorm(rel.getFrom().getFrequencyNorm() + rel.getTo().getFrequencyNorm());
 				rel.getFrom().setGeneralFrequencyNorm(rel.getFrom().getGeneralFrequencyNorm() + rel.getTo().getGeneralFrequencyNorm());
-				termIndex.removeTerm(rel.getTo());
+				termino.removeTerm(rel.getTo());
 				nbMerged.increment();
 			});
 		

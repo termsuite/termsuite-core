@@ -29,5 +29,5 @@ import fr.univnantes.termsuite.model.Terminology;
 public interface TermSelector {
 
 	public boolean select(Term t);
-	public boolean select(Terminology termIndex, Term t);
+	public boolean select(Terminology termino, Term t);
 }

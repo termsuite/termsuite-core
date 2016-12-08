@@ -36,9 +36,9 @@ public class ManualSplitter  {
 		return this;
 	}
 	
-	public void split(Terminology termIndex) {
+	public void split(Terminology termino) {
 		Segmentation segmentation;
-		for(Word word:termIndex.getWords()) {
+		for(Word word:termino.getWords()) {
 			segmentation = manualCompositions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1)

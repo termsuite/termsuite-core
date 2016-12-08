@@ -56,8 +56,8 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
@@ -66,9 +66,9 @@ import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.TestUtil;
 
 public class JsonTerminologyIOSpec {
-	public static final String jsonFile1 = "fr/univnantes/termsuite/test/json/termIndex1.json";
+	public static final String jsonFile1 = "fr/univnantes/termsuite/test/json/termino1.json";
 	
-	private Terminology termIndex;
+	private Terminology termino;
 	private Term term1;
 	private Term term2;
 	private Word word1;
@@ -79,10 +79,10 @@ public class JsonTerminologyIOSpec {
 	
 	@Before
 	public void initTermIndex() {
-		termIndex = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
-		termIndex.setCorpusId("ccid");
-		termIndex.setWordAnnotationsNum(222);
-		termIndex.setSpottedTermsNum(111);
+		termino = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
+		termino.setCorpusId("ccid");
+		termino.setWordAnnotationsNum(222);
+		termino.setSpottedTermsNum(111);
 		word1 = new Word("word1", "stem1");
 		word2 = new Word("word2", "stem2");
 		word3 = WordBuilder.start()
@@ -92,7 +92,7 @@ public class JsonTerminologyIOSpec {
 				.addComponent(2, 5,"rd3")
 				.setCompoundType(CompoundType.NATIVE)
 				.create();
-		term1 = TermBuilder.start(termIndex)
+		term1 = TermBuilder.start(termino)
 			.setRank(1)
 			.addWord(word1, "L1", true)
 			.addWord(word2, "L2", true)
@@ -102,7 +102,7 @@ public class JsonTerminologyIOSpec {
 			.setSpecificity(1.1)
 			.createAndAddToIndex();
 		String form2 = "coveredText 2";
-		term2 = TermBuilder.start(termIndex)
+		term2 = TermBuilder.start(termino)
 				.setRank(2)
 				.addWord(word1, "L1", true)
 				.addWord(word2, "L2", false)
@@ -115,10 +115,10 @@ public class JsonTerminologyIOSpec {
 				.createAndAddToIndex();
 		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term1, term2);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
-		termIndex.addRelation(rel1);
+		termino.addRelation(rel1);
 		TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, term1, term2);
 		rel2.setProperty(RelationProperty.SIMILARITY, 0.956d);
-		termIndex.addRelation(rel2);
+		termino.addRelation(rel2);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -133,9 +133,9 @@ public class JsonTerminologyIOSpec {
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
-		termIndex.removeRelation(termIndex.getOutboundRelations(term1, RelationType.SYNTACTICAL).iterator().next());
+		termino.removeRelation(termino.getOutboundRelations(term1, RelationType.SYNTACTICAL).iterator().next());
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
 		JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
 	}
@@ -145,19 +145,19 @@ public class JsonTerminologyIOSpec {
 	@Test
 	public void testSaveLoadReturn() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		Terminology termIndex2 = JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
+		Terminology termino2 = JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
 		
-		assertEquals(111, termIndex2.getSpottedTermsNum());
-		assertEquals(222, termIndex2.getWordAnnotationsNum());
-		assertThat(termIndex2.getTerms()).hasSameElementsAs(termIndex.getTerms());
-		assertThat(termIndex2.getWords()).hasSameElementsAs(termIndex.getWords());
-		for(Term t:termIndex.getTerms()) {
-			Term t2 = termIndex2.getTermByGroupingKey(t.getGroupingKey());
-			assertThat(termIndex2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(termIndex.getOccurrenceStore().getOccurrences(t));
-			assertThat(termIndex2.getOutboundRelations(t2)).hasSameElementsAs(termIndex.getOutboundRelations(t));
-			assertThat(termIndex2.getInboundRelations(t2)).hasSameElementsAs(termIndex.getInboundRelations(t));
+		assertEquals(111, termino2.getSpottedTermsNum());
+		assertEquals(222, termino2.getWordAnnotationsNum());
+		assertThat(termino2.getTerms()).hasSameElementsAs(termino.getTerms());
+		assertThat(termino2.getWords()).hasSameElementsAs(termino.getWords());
+		for(Term t:termino.getTerms()) {
+			Term t2 = termino2.getTermByGroupingKey(t.getGroupingKey());
+			assertThat(termino2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(termino.getOccurrenceStore().getOccurrences(t));
+			assertThat(termino2.getOutboundRelations(t2)).hasSameElementsAs(termino.getOutboundRelations(t));
+			assertThat(termino2.getInboundRelations(t2)).hasSameElementsAs(termino.getInboundRelations(t));
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
 			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
@@ -178,8 +178,8 @@ public class JsonTerminologyIOSpec {
 			}
 
 		}
-		for(Word w:termIndex.getWords()) {
-			Word w2 = termIndex2.getWord(w.getLemma());
+		for(Word w:termino.getWords()) {
+			Word w2 = termino2.getWord(w.getLemma());
 			assertThat(w2.getStem()).isEqualTo(w.getStem());
 			assertThat(w2.isCompound()).isEqualTo(w.isCompound());
 			assertThat(w2.getCompoundType()).isEqualTo(w.getCompoundType());
@@ -190,7 +190,7 @@ public class JsonTerminologyIOSpec {
 	@Test
 	public void testExportTermIndexToJsonWithoutOccurrences() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(false));
+		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(false));
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
@@ -201,45 +201,45 @@ public class JsonTerminologyIOSpec {
 
 	@Test
 	public void testLoadJsonTermIndex() throws IOException {
-		Terminology termIndex = JsonTerminologyIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
+		Terminology termino = JsonTerminologyIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
 		
-		assertEquals("Toto va à la plage", termIndex.getName());
-		assertEquals("Toto va à la montagne", termIndex.getCorpusId());
-		assertEquals(Lang.EN, termIndex.getLang());
-		assertEquals(123, termIndex.getWordAnnotationsNum());
-		assertEquals(456, termIndex.getSpottedTermsNum());
+		assertEquals("Toto va à la plage", termino.getName());
+		assertEquals("Toto va à la montagne", termino.getCorpusId());
+		assertEquals(Lang.EN, termino.getLang());
+		assertEquals(123, termino.getWordAnnotationsNum());
+		assertEquals(456, termino.getSpottedTermsNum());
 
 		// test term rank
-		assertThat(termIndex.getTerms()).hasSize(3)
+		assertThat(termino.getTerms()).hasSize(3)
 		.extracting("rank")
 		.containsOnly(1, 2, 3)
 		;
 
 		
 		// test terms
-		assertThat(termIndex.getTerms()).hasSize(3)
+		assertThat(termino.getTerms()).hasSize(3)
 			.extracting("groupingKey")
 			.containsOnly("na: word1 word2", "n: word1", "a: word2")
 			;
 		
 		// test terms
-		Term t1 = termIndex.getTermByGroupingKey("na: word1 word2");
-		Term t2 = termIndex.getTermByGroupingKey("n: word1");
-		Term t3 = termIndex.getTermByGroupingKey("a: word2");
+		Term t1 = termino.getTermByGroupingKey("na: word1 word2");
+		Term t2 = termino.getTermByGroupingKey("n: word1");
+		Term t3 = termino.getTermByGroupingKey("a: word2");
 		assertThat(t1.getSpecificity()).isCloseTo(0.321d, offset(0.000001d));
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(termIndex.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("to").containsOnly(t2);
-		assertThat(termIndex.getOutboundRelations(t1, RelationType.SYNTACTICAL)).hasSize(0);
-		assertThat(termIndex.getInboundRelations(t1))
+		assertThat(termino.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("to").containsOnly(t2);
+		assertThat(termino.getOutboundRelations(t1, RelationType.SYNTACTICAL)).hasSize(0);
+		assertThat(termino.getInboundRelations(t1))
 			.hasSize(2)
 			.extracting("from")
 			.containsOnly(t2, t3);	
 		
 		
 		// test words
-		assertThat(termIndex.getWords()).hasSize(2)
+		assertThat(termino.getWords()).hasSize(2)
 			.extracting("lemma", "stem")
 			.containsOnly(
 					tuple("word1", "stem1"), 
@@ -248,7 +248,7 @@ public class JsonTerminologyIOSpec {
 		
 		// test word composition
 		
-		Iterator<Word> iterator = termIndex.getWords().iterator();
+		Iterator<Word> iterator = termino.getWords().iterator();
 		Word w1 = iterator.next();
 		assertFalse(w1.isCompound());
 		assertThat(w1.getComponents()).hasSize(0);
@@ -275,7 +275,7 @@ public class JsonTerminologyIOSpec {
 	@Test
 	public void testExportTermIndexToJsonWithOccurrencesAndContext() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termIndex, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
 		ObjectMapper mapper = new ObjectMapper();
 //		System.out.println(writer.toString());
 		Map<String,Object> map = mapper.readValue(writer.toString(), 

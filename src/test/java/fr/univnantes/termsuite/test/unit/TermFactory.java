@@ -37,23 +37,23 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 
 public class TermFactory {
-	private Terminology termIndex;
+	private Terminology termino;
 	private static final Pattern TERM_WORD_PATTERN = Pattern.compile("(\\w+)\\:(\\S+)(?:\\|(\\S+))");
 	private static final Pattern COMPONENT_PATTERN = Pattern.compile("(\\S+)\\|(\\S+)");
 	
-	public TermFactory(Terminology termIndex) {
+	public TermFactory(Terminology termino) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 	}
 
 	public Term create(String... termWordSpecs) {
-		TermBuilder builder = TermBuilder.start(termIndex);
+		TermBuilder builder = TermBuilder.start(termino);
 		for(String termWordSpec:termWordSpecs) {
 			Matcher matcher = TERM_WORD_PATTERN.matcher(termWordSpec);
 			Preconditions.checkArgument(matcher.find(), "Bad term word spec: %s", termWordSpec);
@@ -69,26 +69,26 @@ public class TermFactory {
 
 	public void addPrefix(Term term1, Term term2) {
 		termsExist(term1, term2);
-		termIndex.addRelation(new TermRelation(RelationType.IS_PREFIX_OF, term1, term2));
+		termino.addRelation(new TermRelation(RelationType.IS_PREFIX_OF, term1, term2));
 	}
 
 	public void addDerivesInto(String type, Term term1, Term term2) {
 		termsExist(term1, term2);
 		TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, term1, term2);
 		relation.setProperty(RelationProperty.DERIVATION_TYPE, type);
-		termIndex.addRelation(relation);
+		termino.addRelation(relation);
 	}
 
 	private void termsExist(Term... terms) {
 		for(Term t:terms)
 			Preconditions.checkArgument(
-					this.termIndex.getTermByGroupingKey(t.getGroupingKey()) != null,
+					this.termino.getTermByGroupingKey(t.getGroupingKey()) != null,
 					"Term %s does not exists in term index",
 					t.getGroupingKey());
 	}
 
 	public void wordComposition(CompoundType type, String wordLemma, String... componentSpecs) {
-		Word word = this.termIndex.getWord(wordLemma);
+		Word word = this.termino.getWord(wordLemma);
 		Preconditions.checkArgument(
 				word != null,
 				"No such word: %s", wordLemma);
@@ -119,6 +119,6 @@ public class TermFactory {
 	}
 
 	public void setProperty(TermProperty p, Comparable<?> value) {
-		this.termIndex.getTerms().stream().forEach(t-> t.setProperty(p, value));
+		this.termino.getTerms().stream().forEach(t-> t.setProperty(p, value));
 	}
 }

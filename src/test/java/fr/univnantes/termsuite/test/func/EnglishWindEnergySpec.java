@@ -130,7 +130,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTop10ByFreq() {
-		assertThat(termsByProperty(termIndex, TermProperty.FREQUENCY, true).subList(0, 10))
+		assertThat(termsByProperty(termino, TermProperty.FREQUENCY, true).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -142,7 +142,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTop10ByWR() {
-		assertThat(termsByProperty(termIndex, TermProperty.SPECIFICITY, true).subList(0, 10))
+		assertThat(termsByProperty(termino, TermProperty.SPECIFICITY, true).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -155,7 +155,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermElectromagnec() {
-		Term term = termIndex.getTermByGroupingKey("a: electromagnetic");
+		Term term = termino.getTermByGroupingKey("a: electromagnetic");
 		
 		assertThat(term)
 			.isCompound()
@@ -167,7 +167,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testSWTFlagSet() {
-		Term term = termIndex.getTermByGroupingKey("npn: power of wind");
+		Term term = termino.getTermByGroupingKey("npn: power of wind");
 		assertTrue(term.getWords().get(0).isSwt());
 		assertFalse(term.getWords().get(1).isSwt());
 		assertTrue(term.getWords().get(2).isSwt());
@@ -175,8 +175,8 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHorizontalAxis() {
-		Term morph = termIndex.getTermByGroupingKey("n: horizontal-axis");
-		Term syntag = termIndex.getTermByGroupingKey("an: horizontal axis");
+		Term morph = termino.getTermByGroupingKey("n: horizontal-axis");
+		Term syntag = termino.getTermByGroupingKey("an: horizontal axis");
 
 		assertThat(morph)
 			.isCompound();
@@ -188,27 +188,27 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 					tuple("axis", 11,15)
 				);
 
-		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termIndex, morph))
+		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termino, morph))
 			.containsExactly("axis+horizontal");
 
-		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termIndex, syntag))
+		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termino, syntag))
 			.contains("axis+horizontal");
 		
-		assertThat(termIndex)
+		assertThat(termino)
 			.containsRelation("n: horizontal-axis", RelationType.MORPHOLOGICAL, "an: horizontal axis");
 	}
 	
 	@Test
 	public void testTermInference() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.containsTerm("nnn: horizontal-axis wind turbine")
 			.containsTerm("annn: horizontal axis wind turbine")
 			.containsRelation("nnn: horizontal-axis wind turbine", RelationType.MORPHOLOGICAL, "annn: horizontal axis wind turbine")
 			;
 		
-		TermRelation rel = termIndex.getRelations(
-				termIndex.getTermByGroupingKey("nnn: horizontal-axis wind turbine"), 
-				termIndex.getTermByGroupingKey("annn: horizontal axis wind turbine"), 
+		TermRelation rel = termino.getRelations(
+				termino.getTermByGroupingKey("nnn: horizontal-axis wind turbine"), 
+				termino.getTermByGroupingKey("annn: horizontal axis wind turbine"), 
 				RelationType.MORPHOLOGICAL).findFirst().get();
 		
 		
@@ -218,7 +218,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHydroelectric() {
-		Term term = termIndex.getTermByGroupingKey("a: hydroelectric");
+		Term term = termino.getTermByGroupingKey("a: hydroelectric");
 		
 		assertThat(term)
 			.isCompound()
@@ -230,7 +230,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void weNeoclassicalCompounds() {
-		List<Word> neoclassicals = termIndex.getWords().stream()
+		List<Word> neoclassicals = termino.getWords().stream()
 			.filter(Word::isCompound)
 			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
 		
@@ -245,11 +245,11 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermHighSpeed() {
-		Term term = termIndex.getTermByGroupingKey("a: high-speed");
+		Term term = termino.getTermByGroupingKey("a: high-speed");
 		assertThat(term)
 			.hasFrequency(6);
 		
-		assertThat(termIndex)
+		assertThat(termino)
 			.hasNBases(term, 1) // a: highspeed
 			.hasAtLeastNBasesOfType(term, 1, RelationType.GRAPHICAL)
 			.hasNVariationsOfType(term, 4, RelationType.MORPHOLOGICAL)
@@ -267,14 +267,14 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testWindTurbine() {
-		assertThat(termIndex.getTermByGroupingKey("nn: wind turbine"))
+		assertThat(termino.getTermByGroupingKey("nn: wind turbine"))
 				.hasFrequency(1852)
 				.hasGroupingKey("nn: wind turbine");
 	}
 
 	@Test
 	public void testTop10ByRank() {
-		assertThat(termsByProperty(termIndex, TermProperty.RANK, false).subList(0, 10))
+		assertThat(termsByProperty(termino, TermProperty.RANK, false).subList(0, 10))
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
@@ -286,7 +286,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testMSNNVariations() {
-		assertThat(termIndex)
+		assertThat(termino)
 //			.hasNVariationsOfType(1266, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
 			.extracting("from.groupingKey", "to.groupingKey")
@@ -304,7 +304,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testSyntacticalVariations() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.containsRelation("nn: wind turbine", RelationType.SYNTACTICAL, "nnn: wind regime turbine", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
 			.containsRelation("an: low frequency", RelationType.SYNTACTICAL, "aan: low audible frequency", RelationProperty.VARIATION_RULE, "S-I-AN-A")
 			.containsRelation("nn: wind generator", RelationType.SYNTACTICAL, "nnn: wind turbine generator", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
@@ -313,7 +313,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testSyntacticalVariationsWithPrefixes() {
-		assertThat(termIndex)
+		assertThat(termino)
 		.asTermVariationsHavingRule("AN-prefAN")
 		.extracting("from.groupingKey", "to.groupingKey")
 		.contains(
@@ -358,7 +358,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testSyntacticalVariationsWithDerivates() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.asTermVariationsHavingRule("S-R2D-NN1")
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
@@ -388,7 +388,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testPrefixes() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.containsRelation("n: postconstruction", RelationType.IS_PREFIX_OF, "n: construction")
 			.containsRelation("n: microgeneration", RelationType.IS_PREFIX_OF, "n: generation")
 			.containsRelation("a: subtransient", RelationType.IS_PREFIX_OF, "a: transient")
@@ -399,7 +399,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testDerivations() {
-		assertThat(termIndex)
+		assertThat(termino)
 			.containsRelation("n: photograph", RelationType.DERIVES_INTO, "a: photographic")
 			.containsRelation("n: ethic", RelationType.DERIVES_INTO, "a: ethical")
 			.containsRelation("n: institution", RelationType.DERIVES_INTO, "a: institutional")

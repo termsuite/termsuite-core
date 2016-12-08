@@ -40,9 +40,9 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.ScorerConfig;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -70,33 +70,33 @@ public class TermPostProcessor {
 		return this;
 	}
 	
-	public void postprocess(Terminology termIndex) {
+	public void postprocess(Terminology termino) {
 		LOGGER.info("Post-processing terms and variants");
 		Stopwatch sw = Stopwatch.createStarted();
 
 		// resets all IS_EXTENSION properies
-		new ExtensionDetecter().setIsExtensionProperty(termIndex);
+		new ExtensionDetecter().setIsExtensionProperty(termino);
 		
 		// Score terms 
-		new TermScorer().score(termIndex);
+		new TermScorer().score(termino);
 		
 		// Score variations
-		new VariationScorer().score(termIndex);
+		new VariationScorer().score(termino);
 		
 		
 		
 		// Filter extensions
-		filterExtensionsByThresholds(termIndex);
+		filterExtensionsByThresholds(termino);
 		
 		// Filter relations
 		LOGGER.debug("Filtering variations");
 		Stopwatch variationFilteringSw = Stopwatch.createStarted();
-		Set<TermRelation> remRelations = termIndex.getRelations(RelationType.VARIATIONS)
+		Set<TermRelation> remRelations = termino.getRelations(RelationType.VARIATIONS)
 			.filter(this::filterVariation)
 			.collect(Collectors.toSet());
 		remRelations
 			.stream()
-			.forEach(termIndex::removeRelation);
+			.forEach(termino::removeRelation);
 		variationFilteringSw.stop();
 		LOGGER.debug("Filtered {} variations in {}", remRelations.size(), variationFilteringSw);
 
@@ -108,12 +108,12 @@ public class TermPostProcessor {
 		 */
 		LOGGER.debug("Filtering terms");
 		Stopwatch termFilteringSw = Stopwatch.createStarted();
-		Set<Term> remTerms = termIndex.getTerms().stream()
+		Set<Term> remTerms = termino.getTerms().stream()
 			.filter(this::filterTermByThresholds)
 			.collect(Collectors.toSet());
 		remTerms
 			.parallelStream()
-			.forEach(termIndex::removeTerm);
+			.forEach(termino::removeTerm);
 		termFilteringSw.stop();
 		LOGGER.debug("Filtered {} terms in {}", remTerms.size(), termFilteringSw);
 		
@@ -129,13 +129,13 @@ public class TermPostProcessor {
 		 *  
 		 *  IMPORTANT: must occur after term relation filtering. Otherwise:
 		 */
-		filterTwoOrderVariationPatterns(termIndex);
+		filterTwoOrderVariationPatterns(termino);
 		
 		// Rank variations extensions
 		LOGGER.debug("Ranking term variations");
-		termIndex.getTerms().forEach(t-> {
+		termino.getTerms().forEach(t-> {
 			final MutableInt vrank = new MutableInt(0);
-			termIndex.getOutboundRelations(t, RelationType.VARIATIONS)
+			termino.getOutboundRelations(t, RelationType.VARIATIONS)
 				.stream()
 				.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
 				.forEach(rel -> {
@@ -148,7 +148,7 @@ public class TermPostProcessor {
 		LOGGER.debug("Post-processing finished in {}", sw);
 	}
 
-	private void filterTwoOrderVariationPatterns(Terminology termIndex) {
+	private void filterTwoOrderVariationPatterns(Terminology termino) {
 		LOGGER.debug("Filtering two-order relations");
 		Stopwatch sw = Stopwatch.createStarted();
 
@@ -166,7 +166,7 @@ public class TermPostProcessor {
 		 *  blade passage --> typical rotor blade passage
 		 *  
 		 */
-		filterTwoOrderVariations(termIndex,
+		filterTwoOrderVariations(termino,
 				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getType().isSyntag() && r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
 			);
@@ -185,7 +185,7 @@ public class TermPostProcessor {
 		 * wind turbine --> small scale wind turbine
 		 * 
 		 */
-		filterTwoOrderVariations(termIndex,
+		filterTwoOrderVariations(termino,
 				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getType() == RelationType.MORPHOLOGICAL
 			);
@@ -206,13 +206,13 @@ public class TermPostProcessor {
 	 *   baseTerm ----> v2 
 	 * 
 	 */
-	private void filterTwoOrderVariations(Terminology termIndex, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
-		termIndex.getTerms().stream()
+	private void filterTwoOrderVariations(Terminology termino, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
+		termino.getTerms().stream()
 		.sorted(TermProperty.FREQUENCY.getComparator(true))
 		.forEach(term -> {
 			final Map<Term, TermRelation> v1Set = new HashMap<>();
 
-			for(TermRelation rel:termIndex.getOutboundRelations(term)) {
+			for(TermRelation rel:termino.getOutboundRelations(term)) {
 				if(r1.test(rel))
 					v1Set.put(rel.getTo(), rel);
 			}
@@ -220,7 +220,7 @@ public class TermPostProcessor {
 			final Set<TermRelation> order2Rels = new HashSet<>();
 			
 			v1Set.keySet().forEach(variant-> {
-				termIndex
+				termino
 					.getOutboundRelations(variant)
 					.stream()
 					.filter(r2)
@@ -239,14 +239,14 @@ public class TermPostProcessor {
 					history.saveEvent(r.getFrom().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
 				if(history.isWatched(r.getTo())) 
 					history.saveEvent(r.getTo().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
-				termIndex.removeRelation(r);
+				termino.removeRelation(r);
 			});
 		});
 
 	}
 
 
-	private void filterExtensionsByThresholds(Terminology termIndex) {
+	private void filterExtensionsByThresholds(Terminology termino) {
 		Predicate<? super TermRelation> isExtension = rel -> 
 				rel.isPropertySet(RelationProperty.IS_EXTENSION) 
 				&& rel.getPropertyBooleanValue(RelationProperty.IS_EXTENSION);
@@ -257,7 +257,7 @@ public class TermPostProcessor {
 		/*
 		 *	Remove target term if it has no affix
 		 */
-		termIndex
+		termino
 			.getRelations()
 			.filter(isExtension)
 			.filter(rel -> 
@@ -269,7 +269,7 @@ public class TermPostProcessor {
 		/*
 		 *	Remove target term if its frequency is 1 
 		 */
-		termIndex
+		termino
 			.getRelations()
 			.filter(isExtension)
 			.filter(rel -> rel.getTo().getFrequency() == 1 && rel.getFrom().getFrequency() > 1)
@@ -287,7 +287,7 @@ public class TermPostProcessor {
 		
 		Set<Term> remSet = remTargets.stream().map(TermRelation::getTo).collect(Collectors.toSet());
 		LOGGER.debug("Removing {} extension targets from term index", remSet.size());
-		remSet.stream().forEach(termIndex::removeTerm);
+		remSet.stream().forEach(termino::removeTerm);
 	}
 
 	private boolean filterTermByThresholds(Term term) {

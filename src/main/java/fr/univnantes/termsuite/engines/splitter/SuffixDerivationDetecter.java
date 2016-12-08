@@ -31,9 +31,9 @@ import org.slf4j.LoggerFactory;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.SuffixDerivation;
@@ -59,15 +59,15 @@ public class SuffixDerivationDetecter {
 		return this;
 	}
 	
-	public void detectDerivations(Terminology termIndex) {
-		LOGGER.info("Detecting suffix derivations for TermIndex {}", termIndex.getName());
-		CustomTermIndex lemmaIndex = termIndex.createCustomIndex(
+	public void detectDerivations(Terminology termino) {
+		LOGGER.info("Detecting suffix derivations for TermIndex {}", termino.getName());
+		CustomTermIndex lemmaIndex = termino.createCustomIndex(
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 		
 		int nbDerivations = 0, nbSwt = 0;
 		TermWord candidateDerivateTermWord, baseTermWord;
-		for(Term swt:termIndex.getTerms()) {
+		for(Term swt:termino.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			nbSwt++;
@@ -84,7 +84,7 @@ public class SuffixDerivationDetecter {
 								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
 							TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, baseTerm, swt);
 							relation.setProperty(RelationProperty.DERIVATION_TYPE, suffixDerivation.getType());
-							termIndex.addRelation(relation);
+							termino.addRelation(relation);
 							watch(swt, baseTerm);
 						}
 					}
@@ -92,7 +92,7 @@ public class SuffixDerivationDetecter {
 			}
 		}
 		
-		termIndex.dropCustomIndex(LEMMA_INDEX);
+		termino.dropCustomIndex(LEMMA_INDEX);
 		
 		LOGGER.debug("Number of derivations found: {} out of {} SWTs", 
 				nbDerivations, 

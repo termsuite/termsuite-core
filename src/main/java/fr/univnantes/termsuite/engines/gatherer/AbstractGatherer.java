@@ -16,8 +16,8 @@ import com.google.common.base.Stopwatch;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -82,9 +82,9 @@ public class AbstractGatherer {
 		return this;
 	}
 	
-	public void gather(Terminology termIndex) {
+	public void gather(Terminology termino) {
 		Stopwatch indexSw = Stopwatch.createStarted();
-		CustomTermIndex index = termIndex.getCustomIndex(indexName.get());
+		CustomTermIndex index = termino.getCustomIndex(indexName.get());
 		index.cleanSingletonKeys();
 		LOGGER.debug("Term grouped in classes in {}", indexSw);
 
@@ -96,12 +96,12 @@ public class AbstractGatherer {
 				Collection<Term> terms = index.getTerms(key);
 	//			if(termPredicate.isPresent())
 	//				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
-				gather(termIndex, terms, key);
+				gather(termino, terms, key);
 			});
 		gatheringSw.stop();
 		
 		if(dropIndexAtEnd)
-			termIndex.dropCustomIndex(indexName.get());
+			termino.dropCustomIndex(indexName.get());
 		
 		LOGGER.debug("Term gathered in {} - Num of comparisons: {}", gatheringSw, cnt);
 	}
@@ -122,7 +122,7 @@ public class AbstractGatherer {
 		}
 	}
 
-	protected void gather(Terminology termIndex, Collection<Term> termClass, String clsName) {
+	protected void gather(Terminology termino, Collection<Term> termClass, String clsName) {
 		for(VariantRule rule:variantRules) {
 			Set<Term> sources = termClass.stream()
 				.filter(rule::isSourceAcceptable)
@@ -147,16 +147,16 @@ public class AbstractGatherer {
 					
 					cnt.incrementAndGet();
 					if(groovyService.matchesRule(rule, source, target)) 
-						createVariationRelation(termIndex, source, target, rule);
+						createVariationRelation(termino, source, target, rule);
 				}
 			}
 		}
 	}
 
-	private void createVariationRelation(Terminology termIndex, Term source, Term target, VariantRule rule) {
+	private void createVariationRelation(Terminology termino, Term source, Term target, VariantRule rule) {
 		TermRelation relation = new TermRelation(relationType, source, target);
 		relation.setProperty(RelationProperty.VARIATION_RULE, rule.getName());
-		termIndex.addRelation(relation);
+		termino.addRelation(relation);
 		watch(source, target, relation);
 	}
 }

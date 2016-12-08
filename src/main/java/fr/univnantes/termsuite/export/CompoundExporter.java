@@ -25,24 +25,24 @@ import fr.univnantes.termsuite.model.Word;
 public class CompoundExporter {
 	private static final String LINE_FORMAT = "%-30s %-10s %-35s %d\n";
 
-	private Terminology termIndex;
+	private Terminology termino;
 	private Writer writer;
 	
-	private CompoundExporter(Terminology termIndex, Writer writer) {
+	private CompoundExporter(Terminology termino, Writer writer) {
 		super();
-		this.termIndex = termIndex;
+		this.termino = termino;
 		this.writer = writer;
 	}
 
-	public static void export(Terminology termIndex, Writer writer) {
-		new CompoundExporter(termIndex, writer).doExport();
+	public static void export(Terminology termino, Writer writer) {
+		new CompoundExporter(termino, writer).doExport();
 	}
 
 	private void doExport() {
 		try {
 			Multimap<Word,Term> terms = HashMultimap.create();
 			Set<Word> compounds = Sets.newHashSet();
-			for(Term t:termIndex.getTerms()) {
+			for(Term t:termino.getTerms()) {
 				Word w = t.getWords().get(0).getWord();
 				if(t.getWords().size() == 1 && w.isCompound()) {
 					compounds.add(w);

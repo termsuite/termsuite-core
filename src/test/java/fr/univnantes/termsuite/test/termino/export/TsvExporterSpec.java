@@ -7,7 +7,6 @@ import java.util.Locale;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import com.google.common.collect.Lists;
 
@@ -16,8 +15,8 @@ import fr.univnantes.termsuite.export.TsvExporter;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
@@ -25,7 +24,7 @@ import fr.univnantes.termsuite.test.unit.TermFactory;
 
 public class TsvExporterSpec {
 
-	Terminology termIndex;
+	Terminology termino;
 	Collection<Term> terms;
 	Term term1, term2, term3;
 	StringWriter writer;
@@ -34,17 +33,17 @@ public class TsvExporterSpec {
 	public void setup() {
 		defaultLocale = Locale.getDefault();
 
-		termIndex = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore());
+		termino = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore());
 
 		term1 = TermFactory.termMock("t1", 1, 3, 0.8);
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
 		
 		TermRelation tv = new TermRelation(RelationType.MORPHOLOGICAL, term3, term1);
-		termIndex.addTerm(term1);
-		termIndex.addTerm(term2);
-		termIndex.addTerm(term3);
-		termIndex.addRelation(tv);
+		termino.addTerm(term1);
+		termino.addTerm(term2);
+		termino.addTerm(term3);
+		termino.addRelation(tv);
 		
 		terms = Lists.newArrayList(
 				term1,
@@ -66,7 +65,7 @@ public class TsvExporterSpec {
 	
 	@Test
 	public void testTsvExportNoScore() {
-		TsvExporter.export(termIndex, writer);
+		TsvExporter.export(termino, writer);
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(5)
 			.tsvLineEquals(1, "#","type", "gkey", "f")
@@ -79,7 +78,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoHeaders() {
-		TsvExporter.export(termIndex, writer, new TsvOptions().showHeaders(false));
+		TsvExporter.export(termino, writer, new TsvOptions().showHeaders(false));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(4)
 			.tsvLineEquals(1, 1, "T", "t2", 2)
@@ -91,7 +90,7 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoVariant() {
-		TsvExporter.export(termIndex, writer, new TsvOptions().setShowVariants(false));
+		TsvExporter.export(termino, writer, new TsvOptions().setShowVariants(false));
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(4)
 			.tsvLineEquals(1, "#","type", "gkey", "f")

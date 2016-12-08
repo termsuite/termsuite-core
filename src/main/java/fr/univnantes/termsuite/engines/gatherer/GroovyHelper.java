@@ -30,20 +30,20 @@ import com.google.common.base.Objects;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class GroovyHelper {
 
-	private Terminology termIndex;
+	private Terminology termino;
 	
 	public GroovyHelper() {
 		super();
 	}
 	
-	void setTermIndex(Terminology termIndex) {
-		this.termIndex = termIndex;
+	void setTermIndex(Terminology termino) {
+		this.termino = termino;
 	}
 	
 	public boolean areSynonym(GroovyWord s, GroovyWord t) {
@@ -59,7 +59,7 @@ public class GroovyHelper {
 			return false;
 		
 		TermRelation tv;
-		for(Iterator<TermRelation> it = termIndex.getOutboundRelations(sourceTerm, RelationType.DERIVES_INTO).iterator()
+		for(Iterator<TermRelation> it = termino.getOutboundRelations(sourceTerm, RelationType.DERIVES_INTO).iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -81,7 +81,7 @@ public class GroovyHelper {
 			return false;
 		
 		TermRelation tv;
-		for(Iterator<TermRelation> it = termIndex.getOutboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).iterator()
+		for(Iterator<TermRelation> it = termino.getOutboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -95,7 +95,7 @@ public class GroovyHelper {
 
 	private Term toTerm(GroovyWord s) {
 		String sourceGroupingKey = TermUtils.toGroupingKey(s.getTermWord());
-		Term sourceTerm = this.termIndex.getTermByGroupingKey(sourceGroupingKey);
+		Term sourceTerm = this.termino.getTermByGroupingKey(sourceGroupingKey);
 		return sourceTerm;
 	}
 
