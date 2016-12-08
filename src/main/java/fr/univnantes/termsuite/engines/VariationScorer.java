@@ -23,6 +23,7 @@
 
 package fr.univnantes.termsuite.engines;
 
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -171,22 +172,24 @@ public class VariationScorer {
 		
 
 		// normalize affix score
-		final Normalizer affixScoreNormalizer = new MinMaxNormalizer(termIndex
+		List<Double> affixScores = termIndex
 				.getRelations()
 				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
 				.map(r -> r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE))
-				.collect(Collectors.toList()));
-		
-		termIndex
-			.getRelations()
-			.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
-			.forEach(r -> {
-					r.setProperty(
-								RelationProperty.NORMALIZED_AFFIX_SCORE, 
-								affixScoreNormalizer.normalize(r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE)));
-				}
-			);
-		
+				.collect(Collectors.toList());
+		if(!affixScores.isEmpty()) {
+			final Normalizer affixScoreNormalizer = new MinMaxNormalizer(affixScores);
+			
+			termIndex
+				.getRelations()
+				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
+				.forEach(r -> {
+						r.setProperty(
+									RelationProperty.NORMALIZED_AFFIX_SCORE, 
+									affixScoreNormalizer.normalize(r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE)));
+					}
+				);
+		}
 
 		// compute global extension score
 		termIndex.getRelations()

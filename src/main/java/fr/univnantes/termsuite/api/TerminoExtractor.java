@@ -380,10 +380,9 @@ public class TerminoExtractor {
 				.aeRegexSpotter();
 				if(nbDocuments != -1)
 					pipeline.aeDocumentLogger(this.nbDocuments);
-			} else {
-				pipeline.aeUrlFilter()
+			} 
+			pipeline
 				.aeTermOccAnnotationImporter();
-			}
 			
 			if(preFilterConfig.isPresent()) 
 				PipelineUtils.filter(pipeline, preFilterConfig.get());

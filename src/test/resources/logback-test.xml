@@ -8,7 +8,7 @@
     </encoder>
   </appender>
 
-<logger name="fr.univnantes.termsuite.engines.gatherer" level="debug"
+<logger name="fr.univnantes.termsuite" level="debug"
 	additivity="false">
 	<appender-ref ref="STDOUT" />
 </logger>

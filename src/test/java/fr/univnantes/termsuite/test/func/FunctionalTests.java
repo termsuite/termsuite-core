@@ -60,6 +60,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	TermSuiteAlignerCLISpec.class,
 	BilingualAlignerFrEnSpec.class,
 	BilingualAlignerDeEnSpec.class,
+	SemanticGathererSpec.class,
 	TerminoExtractorSpec.class
 	})
 public class FunctionalTests {

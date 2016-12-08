@@ -110,7 +110,7 @@ public class TermGatherer {
 
 		if(gathererOptions.isSemanticGathererEnabled()) {
 			LOGGER.info("Gathering morphological semantic variants");
-			new SemanticTermGatherer()
+			new SemanticGatherer()
 			.setDictionary(dico)
 			.setRuleType(RuleType.SEMANTIC)
 			.setRelationType(RelationType.SYNONYMIC)
