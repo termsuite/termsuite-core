@@ -74,7 +74,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 				return this;
 			}
 		}
-		failWithMessage("No such term <%s> found in term index.", expectedTerm);
+		failWithMessage("No such term <%s> found in termino.", expectedTerm);
 		return this;
 	}
 	
@@ -154,7 +154,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		for(String gKey:groupingKeys) {
 			if(actual.getTermByGroupingKey(gKey) == null) {
 				failed = true;
-				failWithMessage("Could not find term <%s> in termIndex", gKey);
+				failWithMessage("Could not find term <%s> in termino", gKey);
 			}
 		}
 		return failed;

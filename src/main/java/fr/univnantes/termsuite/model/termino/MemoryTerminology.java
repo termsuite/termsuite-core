@@ -108,8 +108,8 @@ public class MemoryTerminology implements Terminology {
 				!this.termsByGroupingKey.containsKey(term.getGroupingKey()));
 
 		this.termsByGroupingKey.put(term.getGroupingKey(), term);
-		for(CustomTermIndex termIndex:this.customIndexes.values())
-			termIndex.indexTerm(this, term);
+		for(CustomTermIndex index:this.customIndexes.values())
+			index.indexTerm(this, term);
 		for(TermWord tw:term.getWords()) {
 			privateAddWord(tw.getWord(), false);
 			if(!tw.isSwt())

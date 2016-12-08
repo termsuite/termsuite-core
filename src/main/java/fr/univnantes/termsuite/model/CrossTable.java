@@ -81,7 +81,7 @@ public class CrossTable {
      * @see Term#getContextVector()
      * @throws NullPointerException
      * 			if terms' context vectors are not already computed
-     * @param termIndex
+     * @param termino
      * 			The term index of the corpus
      * @throws NullPointerException
      * 			when the context vectors of term index terms are not

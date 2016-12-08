@@ -169,13 +169,6 @@ import uima.sandbox.mapper.engines.Mapper;
 import uima.sandbox.mapper.resources.Mapping;
 import uima.sandbox.mapper.resources.MappingResource;
 
-/*
- * TODO Integrates frozen expressions
- * TODO integrate Sonar runner
- * TODO Add functional pipeline TestCases for each collection type and for different pipeline configs
- */
-
-
 /**
  * A collection reader and ae aggregator (builder pattern) that 
  * creates and runs a full pipeline.
@@ -1660,12 +1653,12 @@ public class TermSuitePipeline {
 	}
 
 	
-	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold, boolean isPeriodic, int cleaningPeriod, int termIndexSizeTrigger) {
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold, boolean isPeriodic, int cleaningPeriod, int terminoSizeTrigger) {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				TerminologyThresholdCleaner.class,
 				AbstractTerminologyCleaner.CLEANING_PROPERTY, property,
-				AbstractTerminologyCleaner.NUM_TERMS_CLEANING_TRIGGER, termIndexSizeTrigger,
+				AbstractTerminologyCleaner.NUM_TERMS_CLEANING_TRIGGER, terminoSizeTrigger,
 				AbstractTerminologyCleaner.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
 				TerminologyThresholdCleaner.THRESHOLD, (float)threshold
 			);
@@ -1703,8 +1696,8 @@ public class TermSuitePipeline {
 		return aeThresholdCleaner(property, threshold, true, cleaningPeriod, 0);
 	}
 
-	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, double threshold, int termIndexSizeTrigger)   {
-		return aeThresholdCleaner(property, threshold, false, 0, termIndexSizeTrigger);
+	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, double threshold, int terminoSizeTrigger)   {
+		return aeThresholdCleaner(property, threshold, false, 0, terminoSizeTrigger);
 	}
 
 	
@@ -1741,7 +1734,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resTermino());
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
-			return aggregateAndReturn(ae, "Cleaning TermIndex. Keepings only top " + n + " terms on property " + property.toString().toLowerCase(), 0);
+			return aggregateAndReturn(ae, "Cleaning termino. Keepings only top " + n + " terms on property " + property.toString().toLowerCase(), 0);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

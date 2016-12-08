@@ -467,7 +467,7 @@ public class TerminologyExtractor {
 			}
 
 			// run the pipeline
-			final String termIndexName = "ScriptTermino_" + System.currentTimeMillis();
+			final String terminoName = "ScriptTermino_" + System.currentTimeMillis();
             if(collectionMode == CollectionMode.INLINE_TEXT) {
             	LOGGER.info("Running TermSuite pipeline (inline mode)");
             	JCas cas = JCasFactory.createJCas();
@@ -475,15 +475,15 @@ public class TerminologyExtractor {
             	cas.setDocumentLanguage(language.getCode());
             	pipeline.run(cas);
             	System.err.flush();
-            	System.out.println("Term index: ");
-				Terminology index = (Terminology)TermSuiteResourceManager.getInstance().get(termIndexName);
+            	System.out.println("termino: ");
+				Terminology index = (Terminology)TermSuiteResourceManager.getInstance().get(terminoName);
             	TermUtils.showIndex(index, System.out, watch);
             } else {
             	LOGGER.info("Running TermSuite pipeline in corpus mode");
             	pipeline.run();
             	if(watch.isPresent()) 
             		TermUtils.showIndex(
-            				(Terminology)TermSuiteResourceManager.getInstance().get(termIndexName), 
+            				(Terminology)TermSuiteResourceManager.getInstance().get(terminoName), 
             				new PrintStream(System.err, true, "UTF-8"), 
             				watch);
             }

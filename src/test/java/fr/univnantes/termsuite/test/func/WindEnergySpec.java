@@ -135,25 +135,13 @@ public abstract class WindEnergySpec {
 					.aeStemmer()
 					.aeRegexSpotter()
 					.aeTermOccAnnotationImporter();
-//					.run();
 				
 			}
 			
 		}
 		
-//		LOGGER.info("Starting a new termino extractor from term index {}", jsonFile);
-//
-//		
-//		
-//		TermIndex termino = TermIndexIO.fromJson(jsonFile.toString());
-//				
-//		TerminoExtractor
-//			.fromTermIndex(termino)
-//			.disableScoring()
-//			.execute();
 			
 		pipeline
-//			.aeTermOccAnnotationImporter()
 			.aeStopWordsFilter()
 			.aeSpecificityComputer()
 			.aeMorphologicalAnalyzer()
@@ -164,7 +152,6 @@ public abstract class WindEnergySpec {
 			.run();
 
 		return pipeline.getTerminology();
-//		return termino;
 	}
 
 	@Test

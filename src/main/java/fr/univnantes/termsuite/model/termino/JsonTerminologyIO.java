@@ -204,7 +204,7 @@ public class JsonTerminologyIO {
 			fieldname = jp.getCurrentName();
 			if (METADATA.equals(fieldname)) {
 				jp.nextToken();
-				String termIndexName = null;
+				String terminoName = null;
 				Lang lang = null;
 				String corpusID = null;
 				String occurrenceStorage = null;
@@ -215,7 +215,7 @@ public class JsonTerminologyIO {
 					if (LANG.equals(fieldname)) {
 						lang = Lang.forName(jp.nextTextValue());
 					} else if (NAME.equals(fieldname)) {
-						termIndexName = jp.nextTextValue();
+						terminoName = jp.nextTextValue();
 					} else if (NB_WORD_ANNOTATIONS.equals(fieldname)) {
 						nbWordAnnos = jp.nextIntValue(-1);
 					} else if (NB_SPOTTED_TERMS.equals(fieldname)) {
@@ -229,7 +229,7 @@ public class JsonTerminologyIO {
 					}
 				}
 				Preconditions.checkState(lang != null, "The property meta.lang must be defined");
-				Preconditions.checkState(termIndexName != null, "The property meta.name must be defined");
+				Preconditions.checkState(terminoName != null, "The property meta.name must be defined");
 				
 				if(occurrenceStorage != null && occurrenceStorage.equals(OCCURRENCE_STORAGE_MONGODB)) {
 					Preconditions.checkNotNull(occurrenceStoreURI, "Missing attribute " + OCCURRENCE_MONGODB_STORE_URI);
@@ -237,7 +237,7 @@ public class JsonTerminologyIO {
 				} else
 					occurrenceStore = new MemoryOccurrenceStore();
 				
-				termino = new MemoryTerminology(termIndexName, lang, occurrenceStore);
+				termino = new MemoryTerminology(terminoName, lang, occurrenceStore);
 				if(corpusID != null)
 					termino.setCorpusId(corpusID);
 				if(nbWordAnnos != -1)
