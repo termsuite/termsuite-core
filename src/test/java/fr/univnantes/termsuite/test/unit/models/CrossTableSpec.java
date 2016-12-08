@@ -26,7 +26,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.engines.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.metrics.MutualInformation;
 import fr.univnantes.termsuite.model.CrossTable;
@@ -53,9 +54,9 @@ public class CrossTableSpec {
 		t3 = this.termIndex.getTermByGroupingKey("n: accès");
 		
 		// T1 T2 T3 T1 T3 T3 T1
-		new Contextualizer(termIndex)
-				.setScope(1)
-				.contextualize();
+		new Contextualizer()
+				.setOptions(new ContextualizerOptions().setScope(1))
+				.contextualize(termIndex);
 		
 		this.crossTable = new CrossTable(this.termIndex);
 	}

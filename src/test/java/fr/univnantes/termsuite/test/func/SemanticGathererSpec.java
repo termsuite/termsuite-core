@@ -12,6 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -27,9 +28,12 @@ public class SemanticGathererSpec {
 	public static void setup() {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
+		ContextualizerOptions opt = new ContextualizerOptions()
+				.setMinimumCooccFrequencyThreshold(2);
 		termindex = TerminoExtractor
 			.fromTxtCorpus(Lang.FR, FunctionalTests.getCorpusWEPath(Lang.FR), "**/*.txt")
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
+			.useContextualizer(opt)
 			.enableSemanticAlignment()
 			.execute();
 	}
@@ -52,13 +56,13 @@ public class SemanticGathererSpec {
 				.collect(Collectors.toList());
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
-			.hasSize(2518)
 			.contains(
 					tuple("na: courant continu", false, "na: courant constant"),
 					tuple("npn: cadre de étude", true, "npn: cadre de projet"),
 					tuple("na: parc éolien", true, "na: ferme éolien"),
 					tuple("na: puissance maximal", false, "na: puissance maximum")
 			)
+			.hasSize(2518)
 			;
 	}
 	

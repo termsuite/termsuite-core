@@ -5,8 +5,8 @@ import java.nio.file.Paths;
 import com.google.common.base.Charsets;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
-import fr.univnantes.termsuite.api.TerminoExtractor.ContextualizerMode;
 import fr.univnantes.termsuite.api.TerminoFilterConfig;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.eval.TermSuiteEvals;
 import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.model.Lang;
@@ -65,7 +65,7 @@ public class TerminoConfig {
 				.setTreeTaggerHome(TermSuiteEvals.getTreeTaggerPath().toString())
 				.disableScoring()
 				.disableVariationDetection()
-				.useContextualizer(scope, swtOnly ? ContextualizerMode.ON_SWT_TERMS : ContextualizerMode.ON_ALL_TERMS);
+				.useContextualizer(new ContextualizerOptions().setScope(scope));
 		
 		if(frequencyTh > 1)
 			extractor.preFilter(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(frequencyTh));

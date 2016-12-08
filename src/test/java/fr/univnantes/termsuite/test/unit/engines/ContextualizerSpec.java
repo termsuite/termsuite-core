@@ -6,7 +6,8 @@ import static org.assertj.core.api.Assertions.tuple;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.engines.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.test.unit.Fixtures;
@@ -26,12 +27,12 @@ public class ContextualizerSpec {
 		termWithContext1 = termIndex.getTermByGroupingKey("n: énergie");
 		termWithContext2 = termIndex.getTermByGroupingKey("a: éolien");
 		termWithContext3 = termIndex.getTermByGroupingKey("n: accès");
-		contextualizer = new Contextualizer(termIndex);
+		contextualizer = new Contextualizer();
 	}
 	
 	@Test
 	public void computeContextVectorScope1() {
-		contextualizer.setScope(1).contextualize();
+		contextualizer.setOptions(new ContextualizerOptions().setScope(1)).contextualize(termIndex);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 
@@ -53,7 +54,7 @@ public class ContextualizerSpec {
 
 	@Test
 	public void computeContextVectorScope3() {
-		contextualizer.setScope(3).contextualize();
+		contextualizer.setOptions(new ContextualizerOptions().setScope(3)).contextualize(termIndex);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 

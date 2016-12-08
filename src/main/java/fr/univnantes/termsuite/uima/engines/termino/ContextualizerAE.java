@@ -31,7 +31,8 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.metrics.AssociationRate;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.metrics.MutualInformation;
@@ -67,10 +68,6 @@ public class ContextualizerAE extends JCasAnnotator_ImplBase {
 	private String coTermsTypeString;
 	private OccurrenceType coTermType;
 
-	public static final String COMPUTE_CONTEXTS_FOR_ALL_TERMS = "ComputeContextForAllTerms";
-	@ConfigurationParameter(name=COMPUTE_CONTEXTS_FOR_ALL_TERMS, mandatory=false, defaultValue="true")
-	private boolean allTerms;
-
 	/**
 	 * The association rate measure for context vector normalization.
 	 */
@@ -97,15 +94,24 @@ public class ContextualizerAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Contextualizing");
-		Contextualizer contextualizer = new Contextualizer(termIndexResource.getTermIndex());
-		contextualizer
-					.setAllTerms(allTerms)
-					.setCoTermType(coTermType)
-					.setMinimumCooccFrequencyThreshold(minimumCooccFrequencyThreshold)
-					.setRate(rate)
+			LOGGER.info("Contextualizing");
+			
+			Class<?> assocRateClass;
+			try {
+				assocRateClass = this.getClass().getClassLoader().loadClass(associationRateName);
+			@SuppressWarnings("unchecked")
+			ContextualizerOptions options = new ContextualizerOptions()
 					.setScope(scope)
-					.contextualize();
+					.setCoTermType(coTermType)
+					.setAssociationRate((Class<? extends AssociationRate>) assocRateClass)
+					.setMinimumCooccFrequencyThreshold(minimumCooccFrequencyThreshold);
+			
+			new Contextualizer()
+					.setOptions(options)
+					.contextualize(termIndexResource.getTermIndex());
+		} catch (ClassNotFoundException e) {
+			throw new AnalysisEngineProcessException(e);
+		}
 						
 	}
 }

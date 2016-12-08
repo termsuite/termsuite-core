@@ -67,12 +67,11 @@ import fr.univnantes.termsuite.api.stream.ConsumerRegistry;
 import fr.univnantes.termsuite.api.stream.DocumentProvider;
 import fr.univnantes.termsuite.api.stream.DocumentStream;
 import fr.univnantes.termsuite.api.stream.StreamingCasConsumer;
-import fr.univnantes.termsuite.engines.Contextualizer;
 import fr.univnantes.termsuite.engines.ExtensionVariantGatherer;
-import fr.univnantes.termsuite.metrics.LogLikelihood;
+import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
-import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.Term;
@@ -222,13 +221,6 @@ public class TermSuitePipeline {
 	private Optional<Boolean> logOverlappingRules = Optional.empty();
 	private Optional<String> postProcessingStrategy = Optional.empty();
 	private boolean enableSyntacticLabels = false;
-
-	/*
-	 * Contextualizer options
-	 */
-	private OccurrenceType contextualizeCoTermsType = OccurrenceType.SINGLE_WORD;
-	private int contextualizeWithCoOccurrenceFrequencyThreshhold = 1;
-	private String contextAssocRateMeasure = LogLikelihood.class.getName();
 
 	/*
 	 * Cleaner properties
@@ -623,12 +615,6 @@ public class TermSuitePipeline {
 		return this;
 	}
 
-
-	public TermSuitePipeline setContextAssocRateMeasure(String contextAssocRateMeasure) {
-		this.contextAssocRateMeasure = contextAssocRateMeasure;
-		return this;
-	}
-	
 	public TermSuitePipeline emptyCollection() {
 		return setCollection(TermSuiteCollection.EMPTY, "", "UTF-8");
 	}
@@ -1786,18 +1772,6 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline setContextualizeCoTermsType(
-			OccurrenceType contextualizeCoTermsType) {
-		this.contextualizeCoTermsType = contextualizeCoTermsType;
-		return this;
-	}
-	
-	public TermSuitePipeline setContextualizeWithCoOccurrenceFrequencyThreshhold(
-			int contextualizeWithCoOccurrenceFrequencyThreshhold) {
-		this.contextualizeWithCoOccurrenceFrequencyThreshhold = contextualizeWithCoOccurrenceFrequencyThreshhold;
-		return this;
-	}
-	
 	/**
 	 * Computes the {@link Contextualizer} vector of all 
 	 * single-word terms in the term index.
@@ -1808,16 +1782,15 @@ public class TermSuitePipeline {
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeContextualizer(int scope, boolean allTerms) {
+	public TermSuitePipeline aeContextualizer(ContextualizerOptions options) {
 		AnalysisEngineDescription ae;
 		try {
 			ae = AnalysisEngineFactory.createEngineDescription(
 					ContextualizerAE.class,
-					ContextualizerAE.SCOPE, scope,
-					ContextualizerAE.CO_TERMS_TYPE, contextualizeCoTermsType,
-					ContextualizerAE.COMPUTE_CONTEXTS_FOR_ALL_TERMS, allTerms,
-					ContextualizerAE.ASSOCIATION_RATE, contextAssocRateMeasure,
-					ContextualizerAE.MINIMUM_COOCC_FREQUENCY_THRESHOLD, contextualizeWithCoOccurrenceFrequencyThreshhold
+					ContextualizerAE.SCOPE, options.getScope(),
+					ContextualizerAE.CO_TERMS_TYPE, options.getCoTermType(),
+					ContextualizerAE.ASSOCIATION_RATE, options.getAssociationRate().getName(),
+					ContextualizerAE.MINIMUM_COOCC_FREQUENCY_THRESHOLD, options.getMinimumCooccFrequencyThreshold()
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 

@@ -69,6 +69,7 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.TermIndex;
@@ -235,10 +236,9 @@ public class TerminologyExtractor {
 	/*
 	 * contetxualizer
 	 */
+
 	private boolean contextualize = false;
-	private boolean contextualizeAllTerms = false;
-	private boolean allowMWTInContexts = false;
-	private int contextScope = 3;
+	private static ContextualizerOptions contextualizerOptions = new ContextualizerOptions();
 
 
 	/*
@@ -261,7 +261,7 @@ public class TerminologyExtractor {
 	 */
 	private boolean spotWithOccurrences = true;
 	
-	
+
 	
 	/*
 	 * Export params
@@ -417,8 +417,7 @@ public class TerminologyExtractor {
 			// contextualize
 			if(contextualize) {
 				pipeline
-					.setContextualizeCoTermsType(allowMWTInContexts ? OccurrenceType.ALL : OccurrenceType.SINGLE_WORD)
-					.aeContextualizer(contextScope, contextualizeAllTerms);
+					.aeContextualizer(contextualizerOptions);
 				
 			}
 			
@@ -865,10 +864,10 @@ public class TerminologyExtractor {
 		 * Contextualizer
 		 */
 		contextualize = line.hasOption(CONTEXTUALIZE);
-		allowMWTInContexts = line.hasOption(ALLOW_MWT_IN_CONTEXTS);
-		contextualizeAllTerms = line.hasOption(CONTEXTUALIZE_ALL_TERMS);
+		if(line.hasOption(ALLOW_MWT_IN_CONTEXTS))
+			contextualizerOptions.setCoTermType(OccurrenceType.ALL);
 		if(line.hasOption(CONTEXT_SCOPE)) {
-			contextScope = Integer.parseInt(line.getOptionValue(CONTEXT_SCOPE));
+			contextualizerOptions.setScope(Integer.parseInt(line.getOptionValue(CONTEXT_SCOPE)));
 		}
 
 		Preconditions.checkArgument(

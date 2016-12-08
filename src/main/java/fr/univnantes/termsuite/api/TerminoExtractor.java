@@ -25,6 +25,7 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
@@ -76,8 +77,7 @@ public class TerminoExtractor {
 	 * Contextualizer properties
 	 */
 	private boolean contextualizerEnabled = false;
-	private int contextualizerScope = 3;
-	private ContextualizerMode contextualizerMode = ContextualizerMode.ON_SWT_TERMS;
+	private Optional<ContextualizerOptions> contextualizerOptions = Optional.empty();
 
 	/*
 	 * true if the input is preprocessed, false otherwise.
@@ -286,10 +286,9 @@ public class TerminoExtractor {
 		return this;
 	}
 	
-	public TerminoExtractor useContextualizer(int scope, ContextualizerMode contextualizerMode) {
+	public TerminoExtractor useContextualizer(ContextualizerOptions options) {
 		this.contextualizerEnabled = true;
-		this.contextualizerScope = 3;
-		this.contextualizerMode = contextualizerMode;
+		this.contextualizerOptions = Optional.of(options);
 		return this;
 	}
 	
@@ -389,8 +388,7 @@ public class TerminoExtractor {
 			
 			if(contextualizerEnabled)
 				pipeline.aeContextualizer(
-						contextualizerScope, 
-						contextualizerMode == ContextualizerMode.ON_ALL_TERMS ? true : false);
+						contextualizerOptions.get());
 			
 			
 			if(maxSizeFilter.isPresent())

@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.engines.contextualizer;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -33,7 +33,6 @@ import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.Iterators;
 
 import fr.univnantes.termsuite.metrics.AssociationRate;
-import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.CrossTable;
 import fr.univnantes.termsuite.model.Document;
@@ -42,6 +41,7 @@ import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermIndex;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.uima.TermSuitePipelineException;
 import fr.univnantes.termsuite.utils.IteratorUtils;
 
 /**
@@ -54,58 +54,28 @@ import fr.univnantes.termsuite.utils.IteratorUtils;
 public class Contextualizer  {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Contextualizer.class);
 	
-	private TermIndex termIndex;
-	private int scope;
-	private int minimumCooccFrequencyThreshold;
-	private OccurrenceType coTermType;
-	private boolean allTerms;
 	private AssociationRate rate;
-	
-	public Contextualizer(TermIndex termIndex) {
-		super();
-		this.termIndex = termIndex;
-		this.rate = new LogLikelihood();
-		this.scope = 3;
-		this.allTerms = false;
-		this.coTermType = OccurrenceType.SINGLE_WORD;
-		this.minimumCooccFrequencyThreshold = 1;
-	}
-
-	public Contextualizer setScope(int scope) {
-		this.scope = scope;
-		return this;
-	}
-
-
-	public Contextualizer setMinimumCooccFrequencyThreshold(int minimumCooccFrequencyThreshold) {
-		this.minimumCooccFrequencyThreshold = minimumCooccFrequencyThreshold;
-		return this;
-	}
-
-	public Contextualizer setCoTermType(OccurrenceType coTermType) {
-		this.coTermType = coTermType;
-		return this;
-	}
-
-	public Contextualizer setAllTerms(boolean allTerms) {
-		this.allTerms = allTerms;
-		return this;
-	}
-
-	public Contextualizer setRate(AssociationRate rate) {
-		this.rate = rate;
-		return this;
-	}
-
-
 	private Map<Document, DocumentView> documentViews;
+	private ContextualizerOptions options;
+
+	public Contextualizer() {
+		setOptions(new ContextualizerOptions().setMinimumCooccFrequencyThreshold(2));
+	}
 	
-	public void contextualize() {
+	public Contextualizer setOptions(ContextualizerOptions options) {
+		this.options = options;
+		try {
+			this.rate = options.getAssociationRate().newInstance();
+		} catch (Exception e) {
+			throw new TermSuitePipelineException("Cannot instanciate association rate measure" + options.getAssociationRate(), e);
+		}
+		return this;
+	}
+	
+	public void contextualize(TermIndex termIndex) {
 		if(termIndex.getTerms().isEmpty())
 			return;
 		
-		
-
 		// 0- drop all context vectors
 		LOGGER.debug("0 - Drop all context vectors");
 		for(Term t:termIndex.getTerms())
@@ -122,14 +92,13 @@ public class Contextualizer  {
 				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
 		
 		
-		long total = allTerms ?   termIndex.getTerms().size() : termIndex.getTerms().stream().filter(t->t.getWords().size()==1).count();
+		long total = termIndex.getTerms().stream().filter(t->t.getWords().size()==1).count();
 		// 2- Generate context vectors
-		LOGGER.debug("2 - Create context vectors. allTerms: {} (number of contexts to compute: {})", 
-				allTerms,
+		LOGGER.debug("2 - Create context vectors. (number of contexts to compute: {})", 
 				total);
 		Iterator<Term> iterator = getTermIterator(termIndex);
 		for(Term t:IteratorUtils.toIterable(iterator)) {
-			ContextVector vector =computeContextVector(termIndex, t, coTermType, scope, this.minimumCooccFrequencyThreshold);
+			ContextVector vector =computeContextVector(termIndex, t, options.getCoTermType(), options.getScope(), options.getMinimumCooccFrequencyThreshold());
 			t.setContext(vector);
 		}
 		
@@ -154,11 +123,12 @@ public class Contextualizer  {
 	}
 
 	private Iterator<Term> getTermIterator(TermIndex termIndex) {
-		return allTerms ? 
-					termIndex.getTerms().iterator() 
-						: termIndex.getTerms().stream().filter(t->t.getWords().size()==1).collect(Collectors.toList()).iterator();
+		return termIndex
+				.getTerms()
+				.stream()
+				.filter(t->t.getWords().size()==1)
+				.collect(Collectors.toList()).iterator();
 	}
-	
 	
 	/**
 	 * 
