@@ -83,7 +83,7 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info(
-				"Post-processing terms and variants for TermIndex {}", 
+				"Post-processing terms and variants for Terminology {}", 
 				this.terminoResource.getTerminology().getName());
 		Terminology termino = terminoResource.getTerminology();
 		if(!scorerConfig.isPresent())

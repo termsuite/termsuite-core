@@ -120,16 +120,16 @@ public interface Terminology {
 	 */
 	//TODO remove these
 	@Deprecated // Should use import JCas (important for the inner nbWordAnnotation)
-	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermIndex);
+	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermino);
 
-	public void importCas(JCas cas, boolean keepOccurrenceInTermIndex);
+	public void importCas(JCas cas, boolean keepOccurrenceInTermino);
 
 	public void setWordAnnotationsNum(int nbWordAnnotations);
 	public int getWordAnnotationsNum();
 
 	/**
 	 * 
-	 * The number of terms added to this TermIndex by invoking
+	 * The number of terms added to this termino by invoking
 	 * {@link Terminology#addTermOccurrence(TermOccAnnotation, String, boolean)}
 	 * 
 	 * @return

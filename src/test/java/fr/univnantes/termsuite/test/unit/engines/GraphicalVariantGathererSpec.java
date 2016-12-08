@@ -59,7 +59,7 @@ public class GraphicalVariantGathererSpec {
 	private Terminology termino() {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
-		Terminology termino = Fixtures.emptyTermIndex();
+		Terminology termino = Fixtures.emptyTermino();
 		manager.register(termino.getName(), termino);
 		TermFactory termFactory = new TermFactory(termino);
 		tetetete = termFactory.create("N:tetetete|tetetete");

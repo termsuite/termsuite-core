@@ -31,7 +31,7 @@ public class GroovyService {
 	public GroovyService(Terminology termino) {
 		super();
 		this.groovyHelper = new GroovyHelper();
-		this.groovyHelper.setTermIndex(termino);
+		this.groovyHelper.setTerminology(termino);
 	}
 
 	public GroovyTerm asGroovyTerm(Term term) {

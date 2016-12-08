@@ -42,7 +42,7 @@ public class GroovyHelper {
 		super();
 	}
 	
-	void setTermIndex(Terminology termino) {
+	void setTerminology(Terminology termino) {
 		this.termino = termino;
 	}
 	

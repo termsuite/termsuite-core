@@ -65,14 +65,14 @@ public class TermGathererSpec {
 	public void set() throws Exception {
 		String text = Files.toString(new File(VARIANT_RULE_SET), Charsets.UTF_8);
 		this.termino = Fixtures.termino();
-		populateTermIndex(new TermFactory(termino));
+		populateTermino(new TermFactory(termino));
 		engine = new TermGatherer()
 			.setRules(YamlRuleSetIO.fromYaml(text));
 		
 		engine.gather(this.termino);
 	}
 
-	private void populateTermIndex(TermFactory termFactory) {
+	private void populateTermino(TermFactory termFactory) {
 		
 		this.machine_synchrone = termFactory.create("N:machine|machin", "A:synchrone|synchro");
 		this.machine_asynchrone = termFactory.create("N:machine|machin", "A:asynchrone|asynchro");

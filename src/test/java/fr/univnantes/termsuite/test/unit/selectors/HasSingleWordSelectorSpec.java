@@ -54,10 +54,10 @@ public class HasSingleWordSelectorSpec {
 	@Before
 	public void init() {
 		termino = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
-		populateTermIndex(new TermFactory(termino));
+		populateTermino(new TermFactory(termino));
 	}
 	
-	private void populateTermIndex(TermFactory termFactory) {
+	private void populateTermino(TermFactory termFactory) {
 		
 		this.term1 = termFactory.create("N:machine|machin", "A:synchrone|synchro");
 		this.term2 = termFactory.create("A:synchrone|synchron");

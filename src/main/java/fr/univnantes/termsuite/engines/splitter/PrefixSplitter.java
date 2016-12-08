@@ -61,7 +61,7 @@ public class PrefixSplitter {
 	}
 	
 	public void splitPrefixes(Terminology termino) {
-		LOGGER.info("Starting prefix splitting for TermIndex {}", termino.getName());
+		LOGGER.info("Starting prefix splitting for termino {}", termino.getName());
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;

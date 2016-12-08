@@ -60,7 +60,7 @@ public class SuffixDerivationDetecter {
 	}
 	
 	public void detectDerivations(Terminology termino) {
-		LOGGER.info("Detecting suffix derivations for TermIndex {}", termino.getName());
+		LOGGER.info("Detecting suffix derivations for termino {}", termino.getName());
 		CustomTermIndex lemmaIndex = termino.createCustomIndex(
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);

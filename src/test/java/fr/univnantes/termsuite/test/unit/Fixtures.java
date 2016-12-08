@@ -247,17 +247,17 @@ public class Fixtures {
 				.createAndAddToIndex();
 	}
 
-	public static Term term1() {return term1(emptyTermIndex());}
-	public static Term term2() {return term2(emptyTermIndex());}
-	public static Term term3() {return term3(emptyTermIndex());}
-	public static Term term4() {return term4(emptyTermIndex());}
-	public static Term term5() {return term5(emptyTermIndex());}
-	public static Term term7() {return term7(emptyTermIndex());}
-	public static Term term8() {return term8(emptyTermIndex());}
-	public static Term term9() {return term9(emptyTermIndex());}
-	public static Term term10() {return term10(emptyTermIndex());}
-	public static Term term11() {return term11(emptyTermIndex());}
-	public static Term term12() {return term12(emptyTermIndex());}
+	public static Term term1() {return term1(emptyTermino());}
+	public static Term term2() {return term2(emptyTermino());}
+	public static Term term3() {return term3(emptyTermino());}
+	public static Term term4() {return term4(emptyTermino());}
+	public static Term term5() {return term5(emptyTermino());}
+	public static Term term7() {return term7(emptyTermino());}
+	public static Term term8() {return term8(emptyTermino());}
+	public static Term term9() {return term9(emptyTermino());}
+	public static Term term10() {return term10(emptyTermino());}
+	public static Term term11() {return term11(emptyTermino());}
+	public static Term term12() {return term12(emptyTermino());}
 	
 	/**
 	 * @return
@@ -273,28 +273,28 @@ public class Fixtures {
 		return new Document("url2");
 	}
 	
-	public static MemoryTerminology emptyTermIndex() {
-		return new MemoryTerminology("EmptyTermIndex", Lang.EN, new MemoryOccurrenceStore());
+	public static MemoryTerminology emptyTermino() {
+		return new MemoryTerminology("EmptyTermino", Lang.EN, new MemoryOccurrenceStore());
 	}
 
 		
 	public static MemoryTerminology termino() {
-		MemoryTerminology memoryTermIndex = new MemoryTerminology("TermIndex", Lang.EN, new MemoryOccurrenceStore());
-//		term1(memoryTermIndex);
-//		term2(memoryTermIndex);
-//		term3(memoryTermIndex);
-//		term4(memoryTermIndex);
-//		term5(memoryTermIndex);
-		return memoryTermIndex;
+		MemoryTerminology memoryTermino = new MemoryTerminology("Termino", Lang.EN, new MemoryOccurrenceStore());
+//		term1(memoryTermino);
+//		term2(memoryTermino);
+//		term3(memoryTermino);
+//		term4(memoryTermino);
+//		term5(memoryTermino);
+		return memoryTermino;
 	}
 	
 	public static MemoryTerminology terminoWithOccurrences() {
-		MemoryTerminology memoryTermIndex = new MemoryTerminology("TermIndexWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
+		MemoryTerminology memoryTermino = new MemoryTerminology("TerminoWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
 		final Document doc = document1();
 		
 		
 		String form = "blabla";
-		TermBuilder.start(memoryTermIndex)
+		TermBuilder.start(memoryTermino)
 			.setGroupingKey("n: énergie")
 			.addWord(Fixtures.word1(), "N")
 			.addOccurrence(0, 10, doc.getUrl(), form)
@@ -302,7 +302,7 @@ public class Fixtures {
 			.addOccurrence(61, 70, doc.getUrl(), form)
 			.createAndAddToIndex();
 		
-		TermBuilder.start(memoryTermIndex)
+		TermBuilder.start(memoryTermino)
 			.setGroupingKey("a: éolien")
 			.addWord(Fixtures.word2(), "A")
 			.addOccurrence(11, 20, doc.getUrl(), form)
@@ -310,7 +310,7 @@ public class Fixtures {
 		
 		
 		
-		TermBuilder.start(memoryTermIndex)
+		TermBuilder.start(memoryTermino)
 			.setGroupingKey("n: accès")
 			.addWord(Fixtures.word3(), "N")
 			.addOccurrence(21, 30, doc.getUrl(), form)
@@ -318,7 +318,7 @@ public class Fixtures {
 			.addOccurrence(51, 60, doc.getUrl(), form)
 			.createAndAddToIndex();
 
-		return memoryTermIndex;
+		return memoryTermino;
 
 	}
 }

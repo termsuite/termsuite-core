@@ -78,7 +78,7 @@ public class JsonTerminologyIOSpec {
 	private String json1;
 	
 	@Before
-	public void initTermIndex() {
+	public void initTermino() {
 		termino = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
 		termino.setCorpusId("ccid");
 		termino.setWordAnnotationsNum(222);
@@ -127,7 +127,7 @@ public class JsonTerminologyIOSpec {
 	}
 	
 	@Before
-	public void initJsonTermIndex() {
+	public void initJsonTermino() {
 		json1 = TestUtil.readFile(jsonFile1);
 	}
 	
@@ -188,7 +188,7 @@ public class JsonTerminologyIOSpec {
 	}
 
 	@Test
-	public void testExportTermIndexToJsonWithoutOccurrences() throws IOException {
+	public void testExportTerminoToJsonWithoutOccurrences() throws IOException {
 		StringWriter writer = new StringWriter();
 		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(false));
 		ObjectMapper mapper = new ObjectMapper();
@@ -200,7 +200,7 @@ public class JsonTerminologyIOSpec {
 	}
 
 	@Test
-	public void testLoadJsonTermIndex() throws IOException {
+	public void testLoadJsonTermino() throws IOException {
 		Terminology termino = JsonTerminologyIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
 		
 		assertEquals("Toto va à la plage", termino.getName());
@@ -273,7 +273,7 @@ public class JsonTerminologyIOSpec {
 	}
 
 	@Test
-	public void testExportTermIndexToJsonWithOccurrencesAndContext() throws IOException {
+	public void testExportTerminoToJsonWithOccurrencesAndContext() throws IOException {
 		StringWriter writer = new StringWriter();
 		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
 		ObjectMapper mapper = new ObjectMapper();

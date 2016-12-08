@@ -111,7 +111,7 @@ public class TermGathererAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		LOGGER.info("Starting syntactic term gathering for TermIndex {}", this.terminoResource.getTerminology().getName());
+		LOGGER.info("Starting syntactic term gathering for Terminology {}", this.terminoResource.getTerminology().getName());
 		
 		TermGatherer gatherer = new TermGatherer();
 		if(taskObserver.isPresent())

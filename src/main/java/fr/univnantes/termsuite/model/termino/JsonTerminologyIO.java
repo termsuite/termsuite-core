@@ -282,8 +282,8 @@ public class JsonTerminologyIO {
 					try {
 						termino.addWord(wordBuilder.create());
 					} catch(Exception e) {
-						LOGGER.error("Could not add word "+wordBuilder.getLemma()+" to term index",e);
-						LOGGER.warn("Error ignored, trying ton continue the loading of TermIndex");
+						LOGGER.error("Could not add word "+wordBuilder.getLemma()+" to termino",e);
+						LOGGER.warn("Error ignored, trying to continue the loading of termino");
 					}
 				}
 			} else if (TERMS.equals(fieldname)) {
@@ -411,7 +411,7 @@ public class JsonTerminologyIO {
 						builder.createAndAddToIndex();
 					} catch(Exception e) {
 						LOGGER.error("Could not add term "+currentGroupingKey+" to term index",e);
-						LOGGER.warn("Error ignored, trying ton continue the loading of TermIndex");
+						LOGGER.warn("Error ignored, trying ton continue the loading of termino");
 					}
 
 					if(options.isWithContexts())

@@ -173,7 +173,7 @@ public class TerminoExtractor {
 		
 	}
 	
-	public static TerminoExtractor fromTermIndex(Terminology termino) {
+	public static TerminoExtractor fromTerminology(Terminology termino) {
 		TerminoExtractor extractor = new TerminoExtractor();
 		extractor.termino = Optional.of(termino);
 		extractor.preprocessed = true;
@@ -320,7 +320,7 @@ public class TerminoExtractor {
 	 * exceeds a max number of terms allowed.
 	 * 
 	 * 
-	 * @param maxTermIndexSize
+	 * @param maxTerminoSize
 	 * 			the maximum number of {@link Term} instances allowed to be kept in memory 
 	 * 			during the terminology extraction process.
 	 * @return
@@ -329,8 +329,8 @@ public class TerminoExtractor {
 	 * @see TermSuitePipeline#aeMaxSizeThresholdCleaner(TermProperty, int)
 	 * 
 	 */
-	public TerminoExtractor dynamicMaxSizeFilter(int maxTermIndexSize) {
-		this.maxSizeFilter = Optional.of(maxTermIndexSize);
+	public TerminoExtractor dynamicMaxSizeFilter(int maxTerminoSize) {
+		this.maxSizeFilter = Optional.of(maxTerminoSize);
 		return this;
 	}
 
@@ -464,7 +464,7 @@ public class TerminoExtractor {
 			throw new TermSuiteException(e1);
 		}
 
-		return pipeline.getTermIndex();
+		return pipeline.getTerminology();
 	}
 
 	private Optional<TermHistory> history = Optional.empty();

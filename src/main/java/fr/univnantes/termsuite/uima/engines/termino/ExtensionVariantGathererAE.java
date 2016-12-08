@@ -49,7 +49,7 @@ public class ExtensionVariantGathererAE extends JCasAnnotator_ImplBase {
 	}
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Infering term variations on extensions for TermIndex {}", this.terminoResource.getTerminology().getName());
+		LOGGER.info("Infering term variations on extensions for Terminology {}", this.terminoResource.getTerminology().getName());
 		new ExtensionVariantGatherer()
 				.setHistory(historyResource.getHistory())
 				.gather(terminoResource.getTerminology());

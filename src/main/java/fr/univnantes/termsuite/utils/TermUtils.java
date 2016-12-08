@@ -107,7 +107,7 @@ public class TermUtils {
 	 * If the input term has compounds, this method will iterate 
 	 * over each compound and try to find a matching swt for each compound.
 	 * 
-	 * This method creates an index on TermIndex based on key
+	 * This method creates an index on Terminology based on key
 	 * {@link TermIndexes#SINGLE_WORD_LEMMA}.
 	 * 
 	 * @param termino

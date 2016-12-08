@@ -32,9 +32,9 @@ public abstract class AbstractTermSelector implements TermSelector {
 
 	private boolean requiredTermino;
 	
-	public AbstractTermSelector(boolean requiredTermIndex) {
+	public AbstractTermSelector(boolean terminoRequired) {
 		super();
-		this.requiredTermino = requiredTermIndex;
+		this.requiredTermino = terminoRequired;
 	}
 
 	@Override

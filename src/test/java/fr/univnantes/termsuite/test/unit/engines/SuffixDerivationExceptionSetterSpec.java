@@ -63,11 +63,11 @@ public class SuffixDerivationExceptionSetterSpec {
 		derivationExceptions.load(dataReosurce);
 		ManualSuffixDerivationDetecter engine = new ManualSuffixDerivationDetecter()
 			.setManualSuffixDerivations(derivationExceptions);
-		populateTermIndex(new TermFactory(termino));
+		populateTermino(new TermFactory(termino));
 		engine.detectDerivations(termino);;
 	}
 
-	private void populateTermIndex(TermFactory termFactory) {
+	private void populateTermino(TermFactory termFactory) {
 		
 		this.ferme_n = termFactory.create("N:ferme|ferm");
 		this.ferme_a = termFactory.create("A:fermé|ferm");

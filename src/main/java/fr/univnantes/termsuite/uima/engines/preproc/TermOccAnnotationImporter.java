@@ -90,7 +90,7 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 				history.saveEvent(
 					gKey, 
 					this.getClass(), 
-					"Term added to TermIndex " + terminoResource.getTerminology().getName());
+					"Term added to Terminology " + terminoResource.getTerminology().getName());
 		}
 	}
 	

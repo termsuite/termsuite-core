@@ -50,10 +50,10 @@ public class TermValueProvidersSpec {
 	@Before
 	public void init() {
 		termino = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
-		populateTermIndex(new TermFactory(termino));
+		populateTermino(new TermFactory(termino));
 	}
 	
-	private void populateTermIndex(TermFactory termFactory) {
+	private void populateTermino(TermFactory termFactory) {
 		
 		this.machine_synchrone = termFactory.create("N:machine|machin", "A:synchrone|synchro");
 		this.synchrone = termFactory.create("A:synchrone|synchron");

@@ -108,7 +108,7 @@ public class NativeSplitter {
 	
 	public void split(Terminology termino) {
 		this.termino = termino;
-		LOGGER.info("Starting morphologyical compound detection for TermIndex {}", termino.getName());
+		LOGGER.info("Starting morphologyical compound detection for termino {}", termino.getName());
 		LOGGER.debug(this.toString());
 		swtLemmaIndex = termino.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex(termino);

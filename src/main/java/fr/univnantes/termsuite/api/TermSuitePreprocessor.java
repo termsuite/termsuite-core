@@ -131,7 +131,7 @@ public class TermSuitePreprocessor {
 				.setTreeTaggerHome(treeTaggerHome)
 				.aeTreeTagger()
 				.aeStemmer()
-				.setAddSpottedAnnoToTermIndex(false)
+				.setAddSpottedAnnoToTermino(false)
 				.aeRegexSpotter();
 		
 	    ResourceManager resMgr = UIMAFramework.newDefaultResourceManager();

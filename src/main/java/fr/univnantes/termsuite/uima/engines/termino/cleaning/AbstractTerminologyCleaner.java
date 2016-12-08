@@ -103,7 +103,7 @@ public abstract class AbstractTerminologyCleaner extends JCasAnnotator_ImplBase 
 			int beforeSize = this.terminoResource.getTerminology().getTerms().size();
 			clean();
 			int afterSize = this.terminoResource.getTerminology().getTerms().size();
-			logger.info("[{} on property {}] TermIndex cleaned at iteration {}. Before removal: {} terms, after removal: {} terms.",
+			logger.info("[{} on property {}] Terminology cleaned at iteration {}. Before removal: {} terms, after removal: {} terms.",
 					this.getClass().getSimpleName(),
 					this.property,
 					casNum,
@@ -116,7 +116,7 @@ public abstract class AbstractTerminologyCleaner extends JCasAnnotator_ImplBase 
 	@Override
 	public void collectionProcessComplete()
 			throws AnalysisEngineProcessException {
-		logger.info("Cleaning TermIndex {} on property {} - {}", 
+		logger.info("Cleaning Terminology {} on property {} - {}", 
 				terminoResource.getTerminology().getName(), 
 				this.property,
 				this.toString());

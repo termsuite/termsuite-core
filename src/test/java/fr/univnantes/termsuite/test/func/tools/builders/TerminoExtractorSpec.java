@@ -49,7 +49,7 @@ public class TerminoExtractorSpec {
 				.fromPreprocessedJsonFiles(Lang.FR, jsonDirPath)
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.execute();
-		assertTermIndex(termino);
+		assertTermino(termino);
 	}
 
 
@@ -60,7 +60,7 @@ public class TerminoExtractorSpec {
 				.fromPreprocessedXmiFiles(Lang.FR, jsonDirPath)
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.execute();
-		assertTermIndex(termino);
+		assertTermino(termino);
 	}
 
 
@@ -71,11 +71,11 @@ public class TerminoExtractorSpec {
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.execute();
 		
-		assertTermIndex(termino);
+		assertTermino(termino);
 	}
 
 
-	private void assertTermIndex(Terminology termino) {
+	private void assertTermino(Terminology termino) {
 		
 		assertThat(termino)
 			.hasNTerms(3)

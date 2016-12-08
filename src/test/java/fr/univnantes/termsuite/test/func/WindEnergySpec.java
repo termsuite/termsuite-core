@@ -137,9 +137,6 @@ public abstract class WindEnergySpec {
 					.aeTermOccAnnotationImporter();
 //					.run();
 				
-//				TermIndexIO.toJson(
-//						p.getTermIndex(), 
-//						writer);
 			}
 			
 		}
@@ -166,7 +163,7 @@ public abstract class WindEnergySpec {
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();
 
-		return pipeline.getTermIndex();
+		return pipeline.getTerminology();
 //		return termino;
 	}
 

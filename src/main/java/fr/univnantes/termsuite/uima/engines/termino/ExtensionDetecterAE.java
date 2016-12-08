@@ -50,7 +50,7 @@ public class ExtensionDetecterAE extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		LOGGER.info("Detecting term extensions for TermIndex {}", this.terminoResource.getTerminology().getName());
+		LOGGER.info("Detecting term extensions for Terminology {}", this.terminoResource.getTerminology().getName());
 		new ExtensionDetecter()
 				.setHistory(historyResource.getHistory())
 				.detectExtensions(terminoResource.getTerminology());

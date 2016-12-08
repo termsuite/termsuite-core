@@ -467,7 +467,7 @@ public class TerminologyExtractor {
 			}
 
 			// run the pipeline
-			final String termIndexName = "ScriptTermIndex_" + System.currentTimeMillis();
+			final String termIndexName = "ScriptTermino_" + System.currentTimeMillis();
             if(collectionMode == CollectionMode.INLINE_TEXT) {
             	LOGGER.info("Running TermSuite pipeline (inline mode)");
             	JCas cas = JCasFactory.createJCas();
