@@ -66,7 +66,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 public class FunctionalTests {
 	
 
-	public static final Path TERM_INDEX_1=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "json", "termino1.json");
+	public static final Path TERMINOLOGY_1=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "json", "termino1.json");
 	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "corpus", "corpus2");
 	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "corpus", "corpus1");
 	public static final Path TERMINO_WESHORT_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "termino");

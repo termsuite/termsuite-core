@@ -91,20 +91,6 @@ public class TermValueProviders {
 			return swtGroupingKeys;
 		}
 	};
-
-//	public static final TermValueProvider WORD_LEMMA_IF_SWT_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_LEMMA_IF_SWT) {
-//		@Override
-//		public Collection<String> getClasses(TermIndex termIndex, Term term) {
-//			List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
-//			for(TermWord tw:term.getWords()) {
-//				if(tw.isSwt()) 
-//					lemmas.add(tw.getWord().getLemma());
-//			}
-//			return lemmas;
-//		}
-//	};
-
-
 	
 	public static final TermValueProvider WORD_LEMMA_STEM_PROVIDER = new AbstractTermValueProvider(TermIndexes.WORD_COUPLE_LEMMA_STEM) {
 

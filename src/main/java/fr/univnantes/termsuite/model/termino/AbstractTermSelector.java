@@ -30,19 +30,19 @@ import fr.univnantes.termsuite.model.Terminology;
 
 public abstract class AbstractTermSelector implements TermSelector {
 
-	private boolean requiredTermIndex;
+	private boolean requiredTermino;
 	
 	public AbstractTermSelector(boolean requiredTermIndex) {
 		super();
-		this.requiredTermIndex = requiredTermIndex;
+		this.requiredTermino = requiredTermIndex;
 	}
 
 	@Override
 	public boolean select(Term t) {
-		String ERR_TERM_INDEX_REQUIRED = "TermIndex is required for selector %s. You must invoke the #select(TermIndex, Term).";
+		String ERR_TERMINOLOGY_REQUIRED = "Terminology is required for selector %s. You must invoke the #select(Terminology, Term).";
 		Preconditions.checkState(
-				!this.requiredTermIndex,
-				ERR_TERM_INDEX_REQUIRED,
+				!this.requiredTermino,
+				ERR_TERMINOLOGY_REQUIRED,
 				this.getClass().getName());
 		return select(null, t);
 	}

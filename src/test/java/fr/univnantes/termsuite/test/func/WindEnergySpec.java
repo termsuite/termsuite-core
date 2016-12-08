@@ -93,7 +93,7 @@ public abstract class WindEnergySpec {
 			syntacticMatchingRules.add(rule);		
 	}
 	
-	private static final LoadingCache<Lang, Terminology> TERM_INDEX_CACHE = CacheBuilder.newBuilder()
+	private static final LoadingCache<Lang, Terminology> TERMINOLOGY_CACHE = CacheBuilder.newBuilder()
 				.maximumSize(1)
 				.build(new CacheLoader<Lang, Terminology>() {
 					@Override
@@ -109,7 +109,7 @@ public abstract class WindEnergySpec {
 	
 	@Before
 	public void setup() {
-		this.termino = TERM_INDEX_CACHE.getUnchecked(lang);
+		this.termino = TERMINOLOGY_CACHE.getUnchecked(lang);
 	}
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);

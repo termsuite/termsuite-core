@@ -52,9 +52,9 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
 	private TerminologyResource terminoResource;
 	
-	public static final String KEEP_OCCURRENCES_IN_TERM_INDEX = "KeepOccurrencesInTermIndex";
-	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERM_INDEX, mandatory = false, defaultValue = "true")
-	private boolean keepOccurrencesInTermIndex;
+	public static final String KEEP_OCCURRENCES_IN_TERMINOLOGY = "KeepOccurrencesInTerminology";
+	@ConfigurationParameter(name = KEEP_OCCURRENCES_IN_TERMINOLOGY, mandatory = false, defaultValue = "true")
+	private boolean keepOccurrencesInTermino;
 
 	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
 	private TermHistoryResource historyResource;
@@ -78,7 +78,7 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 			this.terminoResource.getTerminology().addTermOccurrence(
 					toa, 
 					currentFileURI, 
-					keepOccurrencesInTermIndex);
+					keepOccurrencesInTermino);
 			
 		}
 		this.terminoResource.getTerminology().getOccurrenceStore().flush();

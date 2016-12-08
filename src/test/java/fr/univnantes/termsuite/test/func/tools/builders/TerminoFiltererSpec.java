@@ -21,7 +21,7 @@ public class TerminoFiltererSpec {
 	@Before
 	public void setup() throws MalformedURLException {
 		TermSuiteResourceManager.getInstance().clear();
-		termino1 = TerminologyIO.fromJson(FunctionalTests.TERM_INDEX_1.toUri().toURL());
+		termino1 = TerminologyIO.fromJson(FunctionalTests.TERMINOLOGY_1.toUri().toURL());
 	}
 	
 	@Test

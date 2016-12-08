@@ -1278,7 +1278,7 @@ public class TermSuitePipeline {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					TermOccAnnotationImporter.class,
-					TermOccAnnotationImporter.KEEP_OCCURRENCES_IN_TERM_INDEX, spotWithOccurrences
+					TermOccAnnotationImporter.KEEP_OCCURRENCES_IN_TERMINOLOGY, spotWithOccurrences
 				);
 			ExternalResourceFactory.bindResource(ae, resTermIndex());
 			ExternalResourceFactory.bindResource(ae, resHistory());
