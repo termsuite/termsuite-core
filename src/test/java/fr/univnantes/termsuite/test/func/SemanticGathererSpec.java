@@ -58,11 +58,11 @@ public class SemanticGathererSpec {
 			.extracting(SYNONYM_EXTRACTOR)
 			.contains(
 					tuple("na: courant continu", false, "na: courant constant"),
+					tuple("na: coût global", false, "na: coût total"),
 					tuple("npn: cadre de étude", true, "npn: cadre de projet"),
-//					tuple("na: parc éolien", true, "na: ferme éolien"),
-					tuple("na: puissance maximal", false, "na: puissance maximum")
+					tuple("na: batterie rechargeable", true, "na: batterie électrochimique")
 			)
-			.hasSize(2781)
+			.hasSize(2017)
 			;
 	}
 	

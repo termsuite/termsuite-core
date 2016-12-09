@@ -45,6 +45,3 @@ src/main/java/fr/univnantes/termsuite/types/*.java
 src/main/java/org/apache/uima/examples/*.java
 *.tbx
 src/eval/resources/termsuite-eval.properties
-
-# Ignore synonym files for the moment
-src/main/resources/fr/univnantes/termsuite/resources/**/*-synonyms.txt
