@@ -150,12 +150,9 @@ public class SemanticGatherer extends AbstractGatherer {
 						continue;
 					} 
 					
-					if(!dico.getValues(a1.getLemma()).isEmpty()) {
-						// test all synonyms from dico
-						if(dico.getValues(a1.getLemma()).contains(a2.getLemma())) {
-							nbDicoRelationFound.incrementAndGet();
-							createDicoRelation(termino, t1, t2);
-						}
+					if(areDicoSynonyms(a1, a2)) {
+						nbDicoRelationFound.incrementAndGet();
+						createDicoRelation(termino, t1, t2);
 					}
 					
 					if(a2.getContext() == null) {
@@ -198,6 +195,11 @@ public class SemanticGatherer extends AbstractGatherer {
 				nbDistribRelationsFound, 
 				nbDicoRelationFound
 				);
+	}
+
+	private boolean areDicoSynonyms(Term a1, Term a2) {
+		return dico.getValues(a1.getLemma()).contains(a2.getLemma())
+				|| dico.getValues(a2.getLemma()).contains(a1.getLemma());
 	}
 
 	public void createDicoRelation(Terminology termino, Term t1, Term t2) {
