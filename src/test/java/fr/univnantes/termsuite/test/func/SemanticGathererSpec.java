@@ -2,13 +2,14 @@ package fr.univnantes.termsuite.test.func;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
@@ -24,14 +25,17 @@ public class SemanticGathererSpec {
 
 	private static Terminology termindex;
 	
-	@BeforeClass
-	public static void setup() {
+	@Before
+	public void setup() {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
+	}
+
+	public static void extract(Lang lang) {
 		ContextualizerOptions opt = new ContextualizerOptions()
 				.setMinimumCooccFrequencyThreshold(2);
 		termindex = TerminoExtractor
-			.fromTxtCorpus(Lang.FR, FunctionalTests.getCorpusWEPath(Lang.FR), "**/*.txt")
+			.fromTxtCorpus(lang, FunctionalTests.getCorpusWEPath(lang), "**/*.txt")
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 			.useContextualizer(opt)
 			.enableSemanticAlignment()
@@ -50,7 +54,8 @@ public class SemanticGathererSpec {
 	};
 
 	@Test
-	public void testVariations() {
+	public void testVariationsFR() {
+		extract(Lang.FR);
 		List<TermRelation> relations = termindex
 				.getRelations(RelationType.SYNONYMIC)
 				.collect(Collectors.toList());
@@ -62,8 +67,34 @@ public class SemanticGathererSpec {
 					tuple("npn: cadre de étude", true, "npn: cadre de projet"),
 					tuple("na: batterie rechargeable", true, "na: batterie électrochimique")
 			)
-			.hasSize(2017)
 			;
+		
+		assertTrue("Expected number of relations between 2090 and 2100" ,
+				relations.size() > 2090 && relations.size() < 2100);
+
 	}
+	
+	@Test
+	public void testVariationsEN() {
+		extract(Lang.EN);
+
+		List<TermRelation> relations = termindex
+				.getRelations(RelationType.SYNONYMIC)
+				.collect(Collectors.toList());
+		assertThat(relations)
+			.extracting(SYNONYM_EXTRACTOR)
+			.contains(
+					tuple("an: technical report", false, "an: technical paper"),
+					tuple("an: potential hazard", false, "an: potential risk"),
+					tuple("nn: max torque", true, "nn: min torque"),
+					tuple("an: environmental effect", true, "an: environmental consequence")
+			)
+			;
+		
+		assertTrue("Expected number of relations between 900 and 910" ,
+				relations.size() > 900 && relations.size() < 910);
+		
+	}
+
 	
 }
