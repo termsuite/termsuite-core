@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -57,7 +58,9 @@ public class SemanticGathererSpec {
 	public void testVariationsFR() {
 		extract(Lang.FR);
 		List<TermRelation> relations = termindex
-				.getRelations(RelationType.SYNONYMIC)
+				.getRelations(RelationType.VARIATION)
+				.filter(tv -> tv.isPropertySet(RelationProperty.VARIATION_TYPE))
+				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC)
 				.collect(Collectors.toList());
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
@@ -79,7 +82,9 @@ public class SemanticGathererSpec {
 		extract(Lang.EN);
 
 		List<TermRelation> relations = termindex
-				.getRelations(RelationType.SYNONYMIC)
+				.getRelations(RelationType.VARIATION)
+				.filter(tv -> tv.isPropertySet(RelationProperty.VARIATION_TYPE))
+				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC)
 				.collect(Collectors.toList());
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)

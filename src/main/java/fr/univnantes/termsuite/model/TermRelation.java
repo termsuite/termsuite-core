@@ -30,7 +30,7 @@ public class TermRelation extends PropertyHolder<RelationProperty> {
 	private Term to;
 	
 	public TermRelation(RelationType variationType, Term from, Term to) {
-		super();
+		super(RelationProperty.class);
 		Preconditions.checkNotNull(from);
 		Preconditions.checkNotNull(to);
 		Preconditions.checkNotNull(variationType);
@@ -75,4 +75,5 @@ public class TermRelation extends PropertyHolder<RelationProperty> {
 		} else 
 			return false;
 	}
+
 }

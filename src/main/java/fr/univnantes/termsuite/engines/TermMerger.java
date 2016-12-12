@@ -6,7 +6,9 @@ import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.Terminology;
@@ -23,7 +25,8 @@ public class TermMerger {
 	private void mergeGraphicalVariants(Terminology termino) {
 		final MutableInt nbMerged = new MutableInt(0);
 		
-		termino.getRelations(RelationType.GRAPHICAL)
+		termino.getRelations(RelationType.VARIATION)
+			.filter(rel -> rel.get(RelationProperty.VARIATION_TYPE) == VariationType.GRAPHICAL)
 			.filter(rel -> rel.getFrom().getFrequency() > rel.getTo().getFrequency())
 			.filter(rel -> rel.getTo().getFrequency() > 0)
 			.filter(rel -> (double)rel.getFrom().getFrequency() / rel.getTo().getFrequency() > MERGING_THRESHOLD)

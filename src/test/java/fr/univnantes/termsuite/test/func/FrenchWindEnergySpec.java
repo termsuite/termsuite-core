@@ -34,6 +34,7 @@ import java.util.stream.Collectors;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -198,7 +199,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		
 		assertThat(termino)
 			.hasNBases(term, 2)
-			.hasNVariationsOfType(term, 24, RelationType.SYNTACTICAL)
+			.hasNVariationsOfType(term, 24, VariationType.SYNTAGMATIC)
 			.getVariations(term)
 			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
 			.contains(
@@ -246,7 +247,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMSNNVariations() {
 		assertThat(termino)
-			.hasNVariationsOfType(76, RelationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(76, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
 			.hasSize(13)
 			.extracting("from.groupingKey", "to.groupingKey")
@@ -264,12 +265,12 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsRelation("npn: phase du stator", RelationType.SYNTACTICAL, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
-			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
-			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
-			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
-			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "napan: machine asynchrone à double alimentation",RelationProperty.VARIATION_RULE,  "S-Ed-NA-PAN")
-			.containsRelation("na: machine asynchrone", RelationType.SYNTACTICAL, "naca: machine synchrone ou asynchrone", RelationProperty.VARIATION_RULE, "S-I-NA-AC")
+			.containsVariation("npn: phase du stator", VariationType.SYNTAGMATIC, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
+			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
+			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
+			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
+			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napan: machine asynchrone à double alimentation",RelationProperty.VARIATION_RULE,  "S-Ed-NA-PAN")
+			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "naca: machine synchrone ou asynchrone", RelationProperty.VARIATION_RULE, "S-I-NA-AC")
 			;
 	}
 

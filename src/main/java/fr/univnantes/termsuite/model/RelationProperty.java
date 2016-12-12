@@ -4,9 +4,12 @@ import java.util.Comparator;
 
 import com.google.common.collect.ComparisonChain;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
+
 public enum RelationProperty implements Property<TermRelation> {
 	VARIATION_RANK("VariationRank", "vrank", "vrank", Integer.class),
 	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
+	VARIATION_TYPE("VariationRuleType", "vruleType", "vruleType", VariationType.class),
 	DERIVATION_TYPE("DerivationType", "dtype", "dtype", String.class),
 	SIMILARITY("Similarity", "sim", "sim", Double.class),
 	VARIANT_SCORE("Score", "vScore", "vScore", Double.class), 

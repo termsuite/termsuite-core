@@ -22,7 +22,7 @@ public class GraphicalGatherer extends AbstractGatherer {
 	public GraphicalGatherer() {
 		super();
 		
-		setRelationType(RelationType.GRAPHICAL);
+		setRelationType(RelationType.VARIATION);
 		setNbFixedLetters(2);
 	}
 
@@ -75,11 +75,13 @@ public class GraphicalGatherer extends AbstractGatherer {
 				dist = distance.computeNormalized(t1.getLemma(), t2.getLemma(), this.similarityThreshold);
 				if(dist >= this.similarityThreshold) {
 //					gatheredCnt++;
-					TermRelation rel1 = new TermRelation(RelationType.GRAPHICAL, t1, t2);
+					TermRelation rel1 = new TermRelation(RelationType.VARIATION, t1, t2);
 					rel1.setProperty(RelationProperty.SIMILARITY, dist);
+					rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
 					termino.addRelation(rel1);
-					TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, t2, t1);
+					TermRelation rel2 = new TermRelation(RelationType.VARIATION, t2, t1);
 					rel2.setProperty(RelationProperty.SIMILARITY, dist);
+					rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
 					termino.addRelation(rel2);
 					watch(t1, t2, dist);
 					watch(t2, t1, dist);

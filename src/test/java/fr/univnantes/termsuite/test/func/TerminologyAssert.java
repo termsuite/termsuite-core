@@ -29,7 +29,9 @@ import static org.assertj.core.api.Assertions.tuple;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -42,6 +44,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -100,13 +103,35 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	}
 
 	
-	public TerminologyAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey) {
+	public TerminologyAssert containsRelation(String baseGroupingKey, RelationType relation, String variantGroupingKey) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
 		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
-		for(TermRelation tv:actual.getOutboundRelations(baseTerm, type)) {
+		for(TermRelation tv:actual.getOutboundRelations(baseTerm, relation)) {
 			if(tv.getTo().getGroupingKey().equals(variantGroupingKey))
+				return this;
+		}
+		
+		failWithMessage("No such relation <%s--%s[%s]--%s> found in term index", 
+				baseGroupingKey, relation, 
+				info,
+				variantGroupingKey
+				);
+		return this;
+
+	}
+
+	
+	public TerminologyAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey) {
+		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
+			return this;
+		
+		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
+		for(TermRelation tv:actual.getOutboundRelations(baseTerm, RelationType.VARIATION)) {
+			if(tv.isPropertySet(RelationProperty.VARIATION_TYPE)
+					&& tv.get(RelationProperty.VARIATION_TYPE) == type
+					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
 		
@@ -160,13 +185,15 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return failed;
 	}
 	
-	public TerminologyAssert containsRelation(String baseGroupingKey, RelationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
+	public TerminologyAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
 		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
-		for(TermRelation tv:actual.getOutboundRelations(baseTerm, type)) {
-			if(java.util.Objects.equals(tv.getPropertyStringValue(p), expectedValue) 
+		for(TermRelation tv:actual.getOutboundRelations(baseTerm, RelationType.VARIATION)) {
+			if(tv.get(RelationProperty.VARIATION_TYPE) == type
+					&& tv.isPropertySet(p)
+					&& java.util.Objects.equals(tv.getPropertyStringValue(p), expectedValue) 
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
@@ -185,10 +212,11 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return actual.getRelations().collect(Collectors.toSet());
 	}
 
-	public TerminologyAssert hasNVariationsOfType(int expected, RelationType type) {
+	public TerminologyAssert hasNVariationsOfType(int expected, VariationType type) {
 		int cnt = 0;
 		for(TermRelation tv:getVariations()) {
-			if(tv.getType() == type)
+			if(tv.isPropertySet(RelationProperty.VARIATION_TYPE)
+					&& tv.get(RelationProperty.VARIATION_TYPE) == type)
 				cnt++;
 		}
 	
@@ -220,8 +248,9 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
-		for(TermRelation tv:TerminologyUtils.selectTermVariations(actual, RelationType.SYNTACTICAL, RelationType.MORPHOLOGICAL, RelationType.SYNONYMIC)) 
-			matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
+		for(TermRelation tv:TerminologyUtils.selectTermVariations(actual, RelationType.VARIATION)) 
+			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
+				matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		return assertThat(matchingRuleNames);
 	}
 
@@ -236,18 +265,31 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 
-	public TerminologyAssert hasNVariationsOfType(Term base, int n, RelationType... vType) {
+	public TerminologyAssert hasNVariationsOfType(Term base, int n, VariationType... vTypes) {
 		isNotNull();
-		int actualSize = actual.getOutboundRelations(base, vType).size();
+		Set<VariationType> vTypesSet = new HashSet<>(Arrays.asList(vTypes));
+		int actualSize = (int)actual.getOutboundRelations(base, RelationType.VARIATION)
+				.stream()
+				.filter(r -> 
+					r.isPropertySet(RelationProperty.VARIATION_TYPE)	
+						&& vTypesSet.contains(r.get(RelationProperty.VARIATION_TYPE)))
+				.count();
 		if (actualSize != n)
 			failWithMessage("Expected to find <%s> variations of type <%s> for term <%s>, but actually found <%s>", n,
-					vType, base, actualSize);
+					vTypes, base, actualSize);
 		return this;
 	}
 
-	public TerminologyAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, RelationType... vTypes) {
+	public TerminologyAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, VariationType... vTypes) {
 		isNotNull();
-		int actualSize = actual.getInboundRelations(variant, vTypes).size();
+		
+		Set<VariationType> vTypesSet = new HashSet<>(Arrays.asList(vTypes));
+		int actualSize = (int)actual.getInboundRelations(variant, RelationType.VARIATION)
+				.stream()
+				.filter(r -> 
+					r.isPropertySet(RelationProperty.VARIATION_TYPE)	
+					&& vTypesSet.contains(r.get(RelationProperty.VARIATION_TYPE)))
+				.count();
 		if (actualSize < atLeastN)
 			failWithMessage("Expected to find at least <%s> bases <%s> for term <%s>, but actually found <%s>",
 					atLeastN,
@@ -419,4 +461,5 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		}
 		return this;
 	}
+
 }

@@ -31,6 +31,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.uima.UimaContext;
@@ -48,10 +49,11 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Functions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableSortedMap;
-import com.google.common.collect.Iterables;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
@@ -170,20 +172,22 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			Entry<String, MutableInt> mostFrequentAnno = it.next();
 			LOGGER.info("[{}] {}: {} ", statName, mostFrequentAnno.getKey(), mostFrequentAnno.getValue().intValue());
 		}
-		int nbSyntacticVariants = 0;
-		int nbMorphologicalVariants = 0;
-		int nbGraphicalVariants = 0;
-		int nbSynonymicVariants = 0;
-		int nbOccurrences = 0;
+		long nbSyntacticVariants = 0;
+		long nbMorphologicalVariants = 0;
+		long nbGraphicalVariants = 0;
+		long nbSynonymicVariants = 0;
+		AtomicLong nbOccurrences = new AtomicLong(0);
 		Terminology termino = terminoResource.getTerminology();
+		nbMorphologicalVariants = count(termino, VariationType.MORPHOLOGICAL);
+		nbSyntacticVariants = count(termino, VariationType.SYNTAGMATIC);
+		nbGraphicalVariants = count(termino, VariationType.GRAPHICAL);
+		nbSynonymicVariants = count(termino, VariationType.SEMANTIC);
+		
 		for(Term t:termino.getTerms()) {
-			nbMorphologicalVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.MORPHOLOGICAL));
-			nbSyntacticVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.SYNTACTICAL));
-			nbGraphicalVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.GRAPHICAL));
-			nbSynonymicVariants+=Iterables.size(termino.getOutboundRelations(t,RelationType.SYNONYMIC));
 			Collection<TermOccurrence> occurrences = termino.getOccurrenceStore().getOccurrences(t);
-			nbOccurrences+=occurrences.size();
+			nbOccurrences.addAndGet(occurrences.size());
 		}
+			
 		// graphical variants are bidirectional
 		nbGraphicalVariants/=2;
 		
@@ -203,5 +207,12 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 				nbSyntacticVariants, 
 				nbGraphicalVariants,
 				nbSynonymicVariants);
+	}
+
+	public long count(Terminology termino, VariationType type) {
+		return termino
+				.getRelations(RelationType.VARIATION)
+				.filter(r->r.get(RelationProperty.VARIATION_TYPE) == type)
+				.count();
 	}
 }

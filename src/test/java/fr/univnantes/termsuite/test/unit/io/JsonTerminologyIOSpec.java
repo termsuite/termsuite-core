@@ -39,6 +39,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -49,6 +50,7 @@ import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
 import fr.univnantes.termsuite.api.JsonOptions;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
@@ -113,10 +115,12 @@ public class JsonTerminologyIOSpec {
 				.addOccurrence(14, 20, "source2", form2)
 				.setSpecificity(2.2)
 				.createAndAddToIndex();
-		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term1, term2);
+		TermRelation rel1 = new TermRelation(RelationType.VARIATION, term1, term2);
+		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
 		termino.addRelation(rel1);
-		TermRelation rel2 = new TermRelation(RelationType.GRAPHICAL, term1, term2);
+		TermRelation rel2 = new TermRelation(RelationType.VARIATION, term1, term2);
+		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
 		rel2.setProperty(RelationProperty.SIMILARITY, 0.956d);
 		termino.addRelation(rel2);
 		
@@ -133,7 +137,7 @@ public class JsonTerminologyIOSpec {
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
-		termino.removeRelation(termino.getOutboundRelations(term1, RelationType.SYNTACTICAL).iterator().next());
+		termino.removeRelation(termino.getOutboundRelations(term1, RelationType.VARIATION).iterator().next());
 		StringWriter writer = new StringWriter();
 		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
@@ -230,8 +234,17 @@ public class JsonTerminologyIOSpec {
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(termino.getOutboundRelations(t1, RelationType.GRAPHICAL)).extracting("to").containsOnly(t2);
-		assertThat(termino.getOutboundRelations(t1, RelationType.SYNTACTICAL)).hasSize(0);
+		assertThat(termino
+				.getOutboundRelations(t1, RelationType.VARIATION)
+				.stream()
+				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.GRAPHICAL)
+				.collect(Collectors.toList())
+				).extracting("to").containsOnly(t2);
+		assertThat(termino.getOutboundRelations(t1, RelationType.VARIATION)
+				.stream()
+				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC)
+				.collect(Collectors.toList())
+				).hasSize(0);
 		assertThat(termino.getInboundRelations(t1))
 			.hasSize(2)
 			.extracting("from")

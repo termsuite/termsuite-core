@@ -21,8 +21,8 @@ import org.junit.runners.MethodSorters;
 import com.google.common.base.Splitter;
 
 import fr.univnantes.termsuite.api.TerminologyIO;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
@@ -117,7 +117,7 @@ public class TermSuiteTerminoCLISpec {
 		Terminology termindex = TerminologyIO.fromJson(jsonPath);
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.containsRelation("nn: wind energy", RelationType.SYNTACTICAL, "ann: offshore wind energy")
+			.containsVariation("nn: wind energy", VariationType.SYNTAGMATIC, "ann: offshore wind energy")
 			.hasNTerms(92);
 	}
 	

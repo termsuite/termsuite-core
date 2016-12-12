@@ -52,14 +52,14 @@ public class VariantRule {
 	protected Set<String> sourcePatterns = new HashSet<>();
 	protected Set<String> targetPatterns = new HashSet<>();
 
-	private RuleType ruleType;
+	private VariationType variationType;
 	
-	public RuleType getRuleType() {
-		return ruleType;
+	public VariationType getVariationType() {
+		return variationType;
 	}
 	
-	public void setRuleType(RuleType ruleType) {
-		this.ruleType = ruleType;
+	public void setVariationType(VariationType ruleType) {
+		this.variationType = ruleType;
 	}
 	
 	public VariantRule(String name) {

@@ -62,7 +62,7 @@ public class VariationRuleExamplesExporter {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
 		for (Term t : termino.getTerms()) {
-			for (TermRelation v : termino.getOutboundRelations(t, RelationType.SYNONYMIC, RelationType.MORPHOLOGICAL, RelationType.SYNTACTICAL))
+			for (TermRelation v : termino.getOutboundRelations(t, RelationType.VARIATION))
 				pairs.put(v.getPropertyStringValue(RelationProperty.VARIATION_RULE), new TermPair(t, v.getTo()));
 		}
 

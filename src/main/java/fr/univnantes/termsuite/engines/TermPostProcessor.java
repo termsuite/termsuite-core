@@ -37,6 +37,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -91,7 +92,7 @@ public class TermPostProcessor {
 		// Filter relations
 		LOGGER.debug("Filtering variations");
 		Stopwatch variationFilteringSw = Stopwatch.createStarted();
-		Set<TermRelation> remRelations = termino.getRelations(RelationType.VARIATIONS)
+		Set<TermRelation> remRelations = termino.getRelations(RelationType.VARIATION)
 			.filter(this::filterVariation)
 			.collect(Collectors.toSet());
 		remRelations
@@ -135,7 +136,7 @@ public class TermPostProcessor {
 		LOGGER.debug("Ranking term variations");
 		termino.getTerms().forEach(t-> {
 			final MutableInt vrank = new MutableInt(0);
-			termino.getOutboundRelations(t, RelationType.VARIATIONS)
+			termino.getOutboundRelations(t, RelationType.VARIATION)
 				.stream()
 				.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
 				.forEach(rel -> {
@@ -167,8 +168,8 @@ public class TermPostProcessor {
 		 *  
 		 */
 		filterTwoOrderVariations(termino,
-				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
-				r2 -> r2.getType().isSyntag() && r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
+				r1 -> r1.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
+				r2 -> r2.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC && r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
 			);
 
 		/*
@@ -186,8 +187,8 @@ public class TermPostProcessor {
 		 * 
 		 */
 		filterTwoOrderVariations(termino,
-				r1 -> r1.getType().isSyntag() && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
-				r2 -> r2.getType() == RelationType.MORPHOLOGICAL
+				r1 -> r1.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC  && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
+				r2 -> r2.get(RelationProperty.VARIATION_TYPE) == VariationType.MORPHOLOGICAL 
 			);
 		
 		sw.stop();

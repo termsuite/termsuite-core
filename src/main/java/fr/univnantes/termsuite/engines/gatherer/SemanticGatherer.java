@@ -164,11 +164,12 @@ public class SemanticGatherer extends AbstractGatherer {
 						Double value = alignmentScores.getUnchecked(pair);
 						if(value > similarityThreshold) {
 							TermRelation rel = new TermRelation(
-									RelationType.SYNONYMIC,
+									RelationType.VARIATION,
 									t1,
 									t2);
 							rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 							rel.setProperty(RelationProperty.SIMILARITY, value);
+							rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC.name());
 							t1Relations.add(rel);
 						}
 					}
@@ -204,7 +205,7 @@ public class SemanticGatherer extends AbstractGatherer {
 
 	public void createDicoRelation(Terminology termino, Term t1, Term t2) {
 		TermRelation rel = new TermRelation(
-				RelationType.SYNONYMIC,
+				RelationType.VARIATION,
 				t1,
 				t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);

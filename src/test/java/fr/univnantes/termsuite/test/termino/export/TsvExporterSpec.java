@@ -11,8 +11,10 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TsvOptions;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.export.TsvExporter;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -39,7 +41,8 @@ public class TsvExporterSpec {
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
 		
-		TermRelation tv = new TermRelation(RelationType.MORPHOLOGICAL, term3, term1);
+		TermRelation tv = new TermRelation(RelationType.VARIATION, term3, term1);
+		tv.setProperty(RelationProperty.VARIATION_TYPE, VariationType.MORPHOLOGICAL);
 		termino.addTerm(term1);
 		termino.addTerm(term2);
 		termino.addTerm(term3);

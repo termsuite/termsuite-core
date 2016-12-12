@@ -110,13 +110,13 @@ public class YamlRuleSetIO {
 						"Missing key %s for rule named %s", key, ruleName);
 			
 			String expression = (String)props.get(P_RULE);
-			RuleType type = inferRuleType(expression, ruleName);
-			VariantRule rule = type == RuleType.SEMANTIC ? new SynonymicRule(ruleName) : new VariantRule(ruleName);
-			rule.setRuleType(type);
+			VariationType type = inferRuleType(expression, ruleName);
+			VariantRule rule = type == VariationType.SEMANTIC ? new SynonymicRule(ruleName) : new VariantRule(ruleName);
+			rule.setVariationType(type);
 			parseSourceTarget(rule, P_SOURCE, props.get(P_SOURCE));
 			parseSourceTarget(rule, P_TARGET, props.get(P_TARGET));
 			parseExpression(rule, props.get(P_RULE));
-			if(type == RuleType.SEMANTIC) {
+			if(type == VariationType.SEMANTIC) {
 				parseSemanticExpression((SynonymicRule)rule);
 			}
 			this.variantRules.add(rule);
@@ -297,18 +297,18 @@ public class YamlRuleSetIO {
 	
 	
 
-	public static RuleType inferRuleType(String expression, String ruleName) {
-		List<RuleType> ruleTypes = new ArrayList<>();
+	public static VariationType inferRuleType(String expression, String ruleName) {
+		List<VariationType> ruleTypes = new ArrayList<>();
 		if(DERIVATION_RULE_PATTERN.matcher(expression).find())
-			ruleTypes.add(RuleType.DERIVATION);
+			ruleTypes.add(VariationType.DERIVATION);
 		if(PREFIX_RULE_PATTERN.matcher(expression).find())
-			ruleTypes.add(RuleType.PREFIXATION);
+			ruleTypes.add(VariationType.PREFIXATION);
 		if(SYNONYMIC_RULE_PATTERN.matcher(expression).find())
-			ruleTypes.add(RuleType.SEMANTIC);
+			ruleTypes.add(VariationType.SEMANTIC);
 		if(MORPHOLOGICAL_RULE_PATTERN.matcher(expression).find())
-			ruleTypes.add(RuleType.MORPHOLOGICAL);
+			ruleTypes.add(VariationType.MORPHOLOGICAL);
 		if(ruleTypes.isEmpty())
-			ruleTypes.add(RuleType.SYNTAGMATIC);
+			ruleTypes.add(VariationType.SYNTAGMATIC);
 	
 		if(ruleTypes.size()>1)
 			throw new VariantRuleFormatException(

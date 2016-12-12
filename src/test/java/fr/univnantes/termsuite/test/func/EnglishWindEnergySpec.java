@@ -36,6 +36,7 @@ import java.util.stream.Collectors;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -195,7 +196,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.contains("axis+horizontal");
 		
 		assertThat(termino)
-			.containsRelation("n: horizontal-axis", RelationType.MORPHOLOGICAL, "an: horizontal axis");
+			.containsVariation("n: horizontal-axis", VariationType.MORPHOLOGICAL, "an: horizontal axis");
 	}
 	
 	@Test
@@ -203,13 +204,16 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(termino)
 			.containsTerm("nnn: horizontal-axis wind turbine")
 			.containsTerm("annn: horizontal axis wind turbine")
-			.containsRelation("nnn: horizontal-axis wind turbine", RelationType.MORPHOLOGICAL, "annn: horizontal axis wind turbine")
+			.containsVariation("nnn: horizontal-axis wind turbine", VariationType.MORPHOLOGICAL, "annn: horizontal axis wind turbine")
 			;
 		
 		TermRelation rel = termino.getRelations(
 				termino.getTermByGroupingKey("nnn: horizontal-axis wind turbine"), 
 				termino.getTermByGroupingKey("annn: horizontal axis wind turbine"), 
-				RelationType.MORPHOLOGICAL).findFirst().get();
+				RelationType.VARIATION)
+				.filter(r -> r.get(RelationProperty.VARIATION_TYPE) == VariationType.MORPHOLOGICAL)
+				.findFirst()
+				.get();
 		
 		
 		assertThat(rel.getProperties())
@@ -251,10 +255,10 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		
 		assertThat(termino)
 			.hasNBases(term, 1) // a: highspeed
-			.hasAtLeastNBasesOfType(term, 1, RelationType.GRAPHICAL)
-			.hasNVariationsOfType(term, 4, RelationType.MORPHOLOGICAL)
-			.hasNVariationsOfType(term, 0, RelationType.SYNTACTICAL)
-			.hasNVariationsOfType(term, 0, RelationType.SYNONYMIC)
+			.hasAtLeastNBasesOfType(term, 1, VariationType.GRAPHICAL)
+			.hasNVariationsOfType(term, 4, VariationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(term, 0, VariationType.SYNTAGMATIC)
+			.hasNVariationsOfType(term, 0, VariationType.SEMANTIC)
 			.getVariations(term)
 			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
 			.contains(
@@ -305,9 +309,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsRelation("nn: wind turbine", RelationType.SYNTACTICAL, "nnn: wind regime turbine", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
-			.containsRelation("an: low frequency", RelationType.SYNTACTICAL, "aan: low audible frequency", RelationProperty.VARIATION_RULE, "S-I-AN-A")
-			.containsRelation("nn: wind generator", RelationType.SYNTACTICAL, "nnn: wind turbine generator", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
+			.containsVariation("nn: wind turbine", VariationType.SYNTAGMATIC, "nnn: wind regime turbine", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
+			.containsVariation("an: low frequency", VariationType.SYNTAGMATIC, "aan: low audible frequency", RelationProperty.VARIATION_RULE, "S-I-AN-A")
+			.containsVariation("nn: wind generator", VariationType.SYNTAGMATIC, "nnn: wind turbine generator", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
 			;
 	}
 

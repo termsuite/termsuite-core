@@ -36,8 +36,8 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
@@ -100,8 +100,8 @@ public class TermGathererSpec {
 	public void testProcessDefault() throws AnalysisEngineProcessException{
 		assertThat(termino.getOutboundRelations(this.geothermie_hydraulique))
 			.hasSize(1)
-			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
-			.contains(tuple(this.geothermie_hydraulique, RelationType.SYNTACTICAL, this.geothermie_hydraulique_solaire));
+			.extracting(TermSuiteExtractors.VARIATION_FROM_TYPE_TO)
+			.contains(tuple(this.geothermie_hydraulique, VariationType.SYNTAGMATIC, this.geothermie_hydraulique_solaire));
 		
 		assertThat(termino.getOutboundRelations(this.geothermie_hydraulique_solaire))
 			.hasSize(0);
@@ -112,8 +112,8 @@ public class TermGathererSpec {
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
 		assertThat(termino.getOutboundRelations(this.machine_synchrone))
 			.hasSize(1)
-			.extracting(TermSuiteExtractors.RELATION_TYPE_RULE_TO)
-			.contains(tuple(RelationType.SYNTACTICAL, "NA-NprefA", this.machine_asynchrone));
+			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
+			.contains(tuple(VariationType.PREFIXATION, "NA-NprefA", this.machine_asynchrone));
 		
 		assertThat(termino.getOutboundRelations(this.machine_asynchrone))
 			.hasSize(0);
@@ -123,8 +123,8 @@ public class TermGathererSpec {
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
 		assertThat(termino.getOutboundRelations(this.phase_du_stator))
 			.hasSize(1)
-			.extracting(TermSuiteExtractors.RELATION_TYPE_RULE_TO)
-			.contains(tuple(RelationType.SYNTACTICAL, "S-R2D-NPN", this.phase_statorique));
+			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
+			.contains(tuple(VariationType.DERIVATION, "S-R2D-NPN", this.phase_statorique));
 		assertThat(termino.getOutboundRelations(this.phase_statorique))
 			.hasSize(0);
 		

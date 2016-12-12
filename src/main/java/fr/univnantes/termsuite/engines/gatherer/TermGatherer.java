@@ -65,12 +65,12 @@ public class TermGatherer {
 		if(gathererOptions.isPrefixationGathererEnabled()) {
 			LOGGER.info("Gathering prefixation variants");
 			new AbstractGatherer()
-				.setRuleType(RuleType.PREFIXATION)
+				.setVariationType(VariationType.PREFIXATION)
 				.setIndexName(TermIndexes.PREFIXATION_LEMMAS, true)
-				.setRelationType(RelationType.SYNTACTICAL)
+				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
-				.setVariantRules(rules.getVariantRules(RuleType.PREFIXATION))	
+				.setVariantRules(rules.getVariantRules(VariationType.PREFIXATION))	
 				.gather(termino);
 		}
 		
@@ -78,11 +78,11 @@ public class TermGatherer {
 			LOGGER.info("Gathering derivation variants");
 			new AbstractGatherer()
 				.setIndexName(TermIndexes.DERIVATION_LEMMAS, true)
-				.setRuleType(RuleType.DERIVATION)
-				.setRelationType(RelationType.SYNTACTICAL)
+				.setVariationType(VariationType.DERIVATION)
+				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
-				.setVariantRules(rules.getVariantRules(RuleType.DERIVATION))	
+				.setVariantRules(rules.getVariantRules(VariationType.DERIVATION))	
 				.gather(termino);
 		}
 		
@@ -90,33 +90,33 @@ public class TermGatherer {
 			LOGGER.info("Gathering morphological variants");
 			new AbstractGatherer()
 				.setIndexName(TermIndexes.ALLCOMP_PAIRS, false)
-				.setRuleType(RuleType.MORPHOLOGICAL)
-				.setRelationType(RelationType.MORPHOLOGICAL)
+				.setVariationType(VariationType.MORPHOLOGICAL)
+				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
-				.setVariantRules(rules.getVariantRules(RuleType.MORPHOLOGICAL))	
+				.setVariantRules(rules.getVariantRules(VariationType.MORPHOLOGICAL))	
 				.gather(termino);
 		} 
 		
 		LOGGER.info("Gathering syntagmatic variants");
 		new AbstractGatherer()
 			.setIndexName(TermIndexes.ALLCOMP_PAIRS, true)
-			.setRuleType(RuleType.SYNTAGMATIC)
-			.setRelationType(RelationType.SYNTACTICAL)
+			.setVariationType(VariationType.SYNTAGMATIC)
+			.setRelationType(RelationType.VARIATION)
 			.setGroovyAdapter(groovyService)
 			.setHistory(history)
-			.setVariantRules(rules.getVariantRules(RuleType.SYNTAGMATIC))	
+			.setVariantRules(rules.getVariantRules(VariationType.SYNTAGMATIC))	
 			.gather(termino);
 
 		if(gathererOptions.isSemanticGathererEnabled()) {
 			LOGGER.info("Gathering morphological semantic variants");
 			new SemanticGatherer()
 			.setDictionary(dico)
-			.setRuleType(RuleType.SEMANTIC)
-			.setRelationType(RelationType.SYNONYMIC)
+			.setVariationType(VariationType.SEMANTIC)
+			.setRelationType(RelationType.VARIATION)
 			.setGroovyAdapter(groovyService)
 			.setHistory(history)
-			.setVariantRules(rules.getVariantRules(RuleType.SEMANTIC))	
+			.setVariantRules(rules.getVariantRules(VariationType.SEMANTIC))	
 			.gather(termino);
 		}
 		

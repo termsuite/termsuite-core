@@ -35,9 +35,9 @@ import org.junit.rules.ExpectedException;
 
 import com.google.common.collect.ImmutableSet;
 
-import fr.univnantes.termsuite.engines.gatherer.RuleType;
 import fr.univnantes.termsuite.engines.gatherer.VariantRule;
 import fr.univnantes.termsuite.engines.gatherer.VariantRuleFormatException;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
 import fr.univnantes.termsuite.test.unit.TestUtil;
@@ -155,25 +155,25 @@ public class YamlRuleSetIOSpec {
 	@Test
 	public void testInferRuleType() {
 		assertEquals(
-				RuleType.PREFIXATION, 
+				VariationType.PREFIXATION, 
 				YamlRuleSetIO.inferRuleType("s[0]==t[0] && prefix(t[1],s[1])", "Toto"));
 		
 
 		assertEquals(
-				RuleType.SYNTAGMATIC, 
+				VariationType.SYNTAGMATIC, 
 				YamlRuleSetIO.inferRuleType("s[0]==t[0]", "Toto"));
 
 
 		assertEquals(
-				RuleType.DERIVATION, 
+				VariationType.DERIVATION, 
 				YamlRuleSetIO.inferRuleType("s[0]==t[0] && deriv(\"A N\",t[1],s[1])", "Toto"));
 
 		assertEquals(
-				RuleType.SEMANTIC, 
+				VariationType.SEMANTIC, 
 				YamlRuleSetIO.inferRuleType("s[0]==t[0] && synonym(t[1],s[1])", "Toto"));
 
 		assertEquals(
-				RuleType.MORPHOLOGICAL, 
+				VariationType.MORPHOLOGICAL, 
 				YamlRuleSetIO.inferRuleType("s[0][2]==t[0]", "Toto"));
 
 	}
@@ -185,14 +185,14 @@ public class YamlRuleSetIOSpec {
 	@Test
 	public void testInferRuleTypeFailIfMultiple1() {
 		thrown.expect(VariantRuleFormatException.class);
-		thrown.expectMessage(containsString("types: [" + RuleType.DERIVATION + ", " + RuleType.MORPHOLOGICAL));
+		thrown.expectMessage(containsString("types: [" + VariationType.DERIVATION + ", " + VariationType.MORPHOLOGICAL));
 		YamlRuleSetIO.inferRuleType("s[0][2]==t[0] && deriv(\"A N\",t[1],s[1])", "Toto");
 	}
 
 	@Test
 	public void testInferRuleTypeFailIfMultiple2() {
 		thrown.expect(VariantRuleFormatException.class);
-		thrown.expectMessage(containsString("types: [" + RuleType.PREFIXATION + ", " + RuleType.SEMANTIC));
+		thrown.expectMessage(containsString("types: [" + VariationType.PREFIXATION + ", " + VariationType.SEMANTIC));
 		YamlRuleSetIO.inferRuleType("synonym(s[0],t[0]) && prefix(t[1],s[1])", "Toto");
 	}
 

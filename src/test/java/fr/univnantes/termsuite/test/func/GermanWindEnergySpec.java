@@ -37,6 +37,7 @@ import org.junit.Test;
 
 import com.google.common.base.Objects;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -280,8 +281,8 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsRelation("an: staatlich umweltamt", RelationType.SYNTACTICAL, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
-			.containsRelation("acan: topographisch und meteorologisch verhältnis", RelationType.SYNTACTICAL, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
+			.containsVariation("an: staatlich umweltamt", VariationType.SYNTAGMATIC, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
+			.containsVariation("acan: topographisch und meteorologisch verhältnis", VariationType.SYNTAGMATIC, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
 			;
 	}
 

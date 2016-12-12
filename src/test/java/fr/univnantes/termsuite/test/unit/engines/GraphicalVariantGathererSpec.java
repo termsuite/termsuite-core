@@ -31,12 +31,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
+import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class GraphicalVariantGathererSpec {
@@ -99,9 +100,11 @@ public class GraphicalVariantGathererSpec {
 		makeAE( 1.0d).gather(termino);
 		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(1)
-			.extracting("type", "to")
-			.contains(tuple(RelationType.GRAPHICAL, this.teteteteAccent));
+			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
+			.contains(tuple(VariationType.GRAPHICAL, this.teteteteAccent));
 	}
+	
+	
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
@@ -113,9 +116,9 @@ public class GraphicalVariantGathererSpec {
 		
 		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(1)
-			.extracting("type", "to")
+			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(
-					tuple(RelationType.GRAPHICAL, this.teteteteAccent)
+					tuple(VariationType.GRAPHICAL, this.teteteteAccent)
 					);
 	}
 
@@ -130,10 +133,10 @@ public class GraphicalVariantGathererSpec {
 		
 		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(2)
-			.extracting("type", "to")
+			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(
-					tuple(RelationType.GRAPHICAL, this.teteteteAccent),
-					tuple(RelationType.GRAPHICAL, this.tetetetx)
+					tuple(VariationType.GRAPHICAL, this.teteteteAccent),
+					tuple(VariationType.GRAPHICAL, this.tetetetx)
 					);
 
 	}

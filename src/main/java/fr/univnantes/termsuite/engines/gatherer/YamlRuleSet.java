@@ -27,16 +27,16 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 public class YamlRuleSet  {
-	private Multimap<RuleType, VariantRule> variantRules;
+	private Multimap<VariationType, VariantRule> variantRules;
 
-	public Collection<VariantRule> getVariantRules(RuleType key) {
+	public Collection<VariantRule> getVariantRules(VariationType key) {
 		return variantRules.get(key);
 	}
 
 	public YamlRuleSet(Iterable<VariantRule> rules) {
 		variantRules = HashMultimap.create();
 		for(VariantRule rule:rules) 
-			variantRules.put(rule.getRuleType(), rule);
+			variantRules.put(rule.getVariationType(), rule);
 	}
 	
 	public Collection<VariantRule> getVariantRules() {

@@ -29,6 +29,7 @@ import org.junit.Test;
 
 import com.google.common.collect.ImmutableList;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -90,7 +91,8 @@ public class TermSpec {
 		assertThat(termino.getOutboundRelations(this.term4)).hasSize(0);
 		assertThat(termino.getInboundRelations(this.term4)).hasSize(0);
 		
-		TermRelation rel1 = new TermRelation(RelationType.SYNTACTICAL, term5, term3);
+		TermRelation rel1 = new TermRelation(RelationType.VARIATION, term5, term3);
+		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		termino.addRelation(rel1);
 		
@@ -102,7 +104,8 @@ public class TermSpec {
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata");
 		
-		TermRelation rel2 = new TermRelation(RelationType.SYNTACTICAL, term5, term4);
+		TermRelation rel2 = new TermRelation(RelationType.VARIATION, term5, term4);
+		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel2.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		termino.addRelation(rel2);
 		assertThat(termino.getOutboundRelations(this.term5)).hasSize(2);
@@ -115,7 +118,8 @@ public class TermSpec {
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata","Tata");
 		
-		TermRelation rel3 = new TermRelation(RelationType.SYNTACTICAL, term5, term3);
+		TermRelation rel3 = new TermRelation(RelationType.VARIATION, term5, term3);
+		rel3.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel3.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		termino.addRelation(rel3);
 		assertThat(termino.getOutboundRelations(this.term5)).hasSize(3);

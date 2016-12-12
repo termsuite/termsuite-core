@@ -445,20 +445,14 @@ public class TermUtils {
 	
 	public static Collection<TermRelation> getVariations(Terminology termino, Term t) {
 		return termino.getOutboundRelations(t,
-				RelationType.SYNTACTICAL, 
-				RelationType.MORPHOLOGICAL,
-				RelationType.GRAPHICAL,
-				RelationType.SYNONYMIC,
+				RelationType.VARIATION, 
 				RelationType.DERIVES_INTO,
 				RelationType.IS_PREFIX_OF);
 	}
 
 	public static Collection<TermRelation> getBases(Terminology termino, Term current) {
 		return termino.getInboundRelations(current,
-				RelationType.SYNTACTICAL, 
-				RelationType.MORPHOLOGICAL,
-				RelationType.GRAPHICAL,
-				RelationType.SYNONYMIC,
+				RelationType.VARIATION, 
 				RelationType.DERIVES_INTO,
 				RelationType.IS_PREFIX_OF);
 	}

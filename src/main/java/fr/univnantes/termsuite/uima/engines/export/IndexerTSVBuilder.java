@@ -46,10 +46,13 @@ import java.io.Writer;
 import java.util.List;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -102,8 +105,11 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	}
 
 	public void addVariant(Terminology termino, TermRelation variation, boolean addVariantTag) throws IOException {
+		Preconditions.checkArgument(variation.getType() == RelationType.VARIATION, "Relation is not a variation: %s", variation);
+		Preconditions.checkArgument(variation.isPropertySet(RelationProperty.VARIATION_TYPE), "Property %s not set for variation %s", RelationProperty.VARIATION_TYPE, variation);
 		List<String> line = Lists.newArrayList();
-		String typeCol = String.format(V_FORMAT, variation.getType().getLetter());
+		VariationType variationType = (VariationType)variation.get(RelationProperty.VARIATION_TYPE);
+		String typeCol = String.format(V_FORMAT, variationType.getLetter());
 		if(addVariantTag)
 			typeCol = typeCol + "[+]";
 		line.add(typeCol);

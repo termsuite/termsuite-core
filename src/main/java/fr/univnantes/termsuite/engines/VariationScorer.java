@@ -92,7 +92,7 @@ public class VariationScorer {
 	}
 
 	public void doVariantScores(Terminology termino) {
-		termino.getRelations(RelationType.VARIATIONS).forEach( relation -> {
+		termino.getRelations(RelationType.VARIATION).forEach( relation -> {
 			double score = relation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
 							0.91*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
 							0.89 + 0.1*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
@@ -103,7 +103,7 @@ public class VariationScorer {
 	}
 
 	public void doRelationScores(Terminology termino) {
-		termino.getRelations(RelationType.VARIATIONS).forEach( relation -> {
+		termino.getRelations(RelationType.VARIATION).forEach( relation -> {
 			double sourceGain = Math.log10((double)relation.getTo().getFrequency()/relation.getFrom().getFrequency());
 			relation.setProperty(RelationProperty.SOURCE_GAIN, 
 					sourceGain);
@@ -129,7 +129,7 @@ public class VariationScorer {
 					.stream()
 					.map(TermRelation::getTo)
 					.collect(Collectors.toSet());
-			for(TermRelation variation:termino.getOutboundRelations(from, RelationType.VARIATIONS)) {
+			for(TermRelation variation:termino.getOutboundRelations(from, RelationType.VARIATION)) {
 				if(extensions.contains(variation.getTo())) {
 					affix = TermUtils.getExtensionAffix(
 							termino,

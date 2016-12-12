@@ -22,13 +22,14 @@
 package fr.univnantes.termsuite.model;
 
 public enum RelationType {
-	MORPHOLOGICAL("M", 1, "morph", true),
-	SYNTACTICAL("S", 3, "syn", true),
-	GRAPHICAL("G", 2, "graph", false),
+	VARIATION("V", 1, "var", true),
+//	MORPHOLOGICAL("M", 1, "morph", true),
+//	SYNTACTICAL("S", 3, "syn", true),
+//	GRAPHICAL("G", 2, "graph", false),
 	DERIVES_INTO("D", 4, "deriv", true),
 	IS_PREFIX_OF("P", 5, "pref", true),
 	HAS_EXTENSION("E", 6, "hasext", true), 
-	SYNONYMIC("H", 7, "syno", true),
+//	SYNONYMIC("H", 7, "syno", true),
 	;
 	
 	private String letter;
@@ -43,8 +44,8 @@ public enum RelationType {
 		this.shortName = shortName;
 	}
 
-	public static final RelationType[] VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL, GRAPHICAL, SYNONYMIC};
-	public static final RelationType[] SYNTAG_VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL};
+//	public static final RelationType[] VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL, GRAPHICAL, SYNONYMIC};
+//	public static final RelationType[] SYNTAG_VARIATIONS = new RelationType[]{SYNTACTICAL, MORPHOLOGICAL};
 	
 	public String getLetter() {
 		return letter;
@@ -73,24 +74,24 @@ public enum RelationType {
 		throw new IllegalArgumentException("No such variation type with name: " + shortName);
 	}
 
-	public boolean isVariation() {
-		switch(this) {
-		case SYNTACTICAL:
-		case MORPHOLOGICAL:
-		case GRAPHICAL:
-		case SYNONYMIC:
-				return true;
-		default:
-			return false;
-		}		
-	}
-	public boolean isSyntag() {
-		switch(this) {
-		case SYNTACTICAL:
-		case MORPHOLOGICAL:
-			return true;
-		default:
-			return false;
-		}
-	}
+//	public boolean isVariation() {
+//		switch(this) {
+//		case SYNTACTICAL:
+//		case MORPHOLOGICAL:
+//		case GRAPHICAL:
+//		case SYNONYMIC:
+//				return true;
+//		default:
+//			return false;
+//		}		
+//	}
+//	public boolean isSyntag() {
+//		switch(this) {
+//		case SYNTACTICAL:
+//		case MORPHOLOGICAL:
+//			return true;
+//		default:
+//			return false;
+//		}
+//	}
 }

@@ -1,21 +1,26 @@
 package fr.univnantes.termsuite.model;
 
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
-public class PropertyHolder<T extends Property<?>> {
+public class PropertyHolder<T extends Enum<T> & Property<?>> {
 	
 	private static final String ERR_PROPERTY_CANNOT_BE_NULL = "Property cannot be null";
 	private static final String ERR_VALUE_CANNOT_BE_NULL = "Value cannot be null for property %s";
 	private static final String ERR_PROPERTY_NOT_SET = "Property %s not set";
 	private static final String ERR_NOT_AN_INSTANCE = "Value <%s> is not an instance of range %s";
 	
-	protected Map<T, Comparable<?>> properties = new HashMap<>();
+	protected Map<T, Comparable<?>> properties;
 	
+	public PropertyHolder(Class<T> cls) {
+		super();
+		this.properties = Collections.synchronizedMap(new EnumMap<>(cls));
+	}
+
 	public void setProperty(T property, Comparable<?> value) {
 		Preconditions.checkNotNull(property, ERR_PROPERTY_CANNOT_BE_NULL);
 		Preconditions.checkNotNull(value, ERR_VALUE_CANNOT_BE_NULL, property);
@@ -131,4 +136,9 @@ public class PropertyHolder<T extends Property<?>> {
 		} else
 			return false;
 	}
+	
+	public Comparable<?> get(RelationProperty p) {
+		return properties.get(p);
+	}
+
 }

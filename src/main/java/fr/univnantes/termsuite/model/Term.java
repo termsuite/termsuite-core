@@ -39,6 +39,7 @@ public class Term extends PropertyHolder<TermProperty> implements Comparable<Ter
 	private List<TermWord> termWords = Lists.newArrayList();
 	
 	Term(String groupingKey, List<TermWord> termWords) {
+		super(TermProperty.class);
 		this.termWords = termWords;
 		setProperty(TermProperty.GROUPING_KEY, groupingKey);
 	}

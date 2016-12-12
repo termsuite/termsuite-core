@@ -29,7 +29,7 @@ public class AbstractGatherer {
 	protected Optional<TermHistory> history = Optional.empty();
 	protected Set<VariantRule> variantRules;
 	private GroovyService groovyService;
-	private RuleType ruleType;
+	private VariationType variationType;
 	private RelationType relationType;
 	protected AtomicLong cnt = new AtomicLong(0);
 	private Optional<String> indexName = Optional.empty();
@@ -38,8 +38,8 @@ public class AbstractGatherer {
 	private int maxClassComplexity = DEFAULT_MAX_CLASS_COMPLEXITY;
 	
 
-	AbstractGatherer setRuleType(RuleType ruleType) {
-		this.ruleType = ruleType;
+	AbstractGatherer setVariationType(VariationType variationType) {
+		this.variationType = variationType;
 		return this;
 	}
 	
@@ -72,11 +72,11 @@ public class AbstractGatherer {
 	
 	AbstractGatherer setVariantRules(Collection<VariantRule> variantRules) {
 		for(VariantRule rule:variantRules)
-			Preconditions.checkArgument(rule.getRuleType() == ruleType, 
+			Preconditions.checkArgument(rule.getVariationType() == variationType, 
 			"Bad rule type for gatherer of type %s. Expected rule type %s, got: %s.",
 				this.getClass().getSimpleName(),
-				ruleType,
-				rule.getRuleType()
+				variationType,
+				rule.getVariationType()
 			);
 		this.variantRules = new HashSet<>(variantRules);
 		return this;
@@ -156,6 +156,7 @@ public class AbstractGatherer {
 	private void createVariationRelation(Terminology termino, Term source, Term target, VariantRule rule) {
 		TermRelation relation = new TermRelation(relationType, source, target);
 		relation.setProperty(RelationProperty.VARIATION_RULE, rule.getName());
+		relation.setProperty(RelationProperty.VARIATION_TYPE, rule.getVariationType());
 		termino.addRelation(relation);
 		watch(source, target, relation);
 	}

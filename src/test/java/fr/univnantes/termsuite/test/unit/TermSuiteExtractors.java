@@ -17,6 +17,35 @@ public class TermSuiteExtractors {
 		}
 	};
 
+	public static final Extractor<TermRelation, Tuple> VARIATION_TYPE_RULE_TO = new Extractor<TermRelation, Tuple>() {
+		@Override
+		public Tuple extract(TermRelation input) {
+			return new Tuple(
+					input.get(RelationProperty.VARIATION_TYPE),
+					input.get(RelationProperty.VARIATION_RULE),
+					input.getTo());
+		}
+	};
+
+
+	public static final Extractor<TermRelation, Tuple> VARIATION_FROM_TYPE_TO = new Extractor<TermRelation, Tuple>() {
+		@Override
+		public Tuple extract(TermRelation input) {
+			return new Tuple(
+					input.getFrom(),
+					input.getPropertyValue(RelationProperty.VARIATION_TYPE),
+					input.getTo());
+		}
+
+	};
+	public static final Extractor<TermRelation, Tuple> VARIATION_TYPE_TO = new Extractor<TermRelation, Tuple>() {
+		@Override
+		public Tuple extract(TermRelation input) {
+			return new Tuple(input.getPropertyValue(RelationProperty.VARIATION_TYPE),
+					input.getTo());
+		}
+	};
+	
 	public static final Extractor<TermRelation, Tuple> RELATION_FROM_RULE_TO = new Extractor<TermRelation, Tuple>() {
 		@Override
 		public Tuple extract(TermRelation input) {

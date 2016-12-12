@@ -56,13 +56,13 @@ public class TsvExporter {
 				tsv.startTerm(termino, t);
 				
 				if(options.isShowVariants())
-					termino.getOutboundRelations(t, RelationType.VARIATIONS)
+					termino.getOutboundRelations(t, RelationType.VARIATION)
 						.stream()
 						.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
 						.limit(options.getMaxVariantsPerTerm())
 						.forEach(tv -> {
 							try {
-								boolean hasVariant = !termino.getOutboundRelations(tv.getTo(), RelationType.VARIATIONS).isEmpty();
+								boolean hasVariant = !termino.getOutboundRelations(tv.getTo(), RelationType.VARIATION).isEmpty();
 								tsv.addVariant(
 										termino, 
 										tv,

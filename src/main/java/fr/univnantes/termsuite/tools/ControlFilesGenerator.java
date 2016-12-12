@@ -75,10 +75,8 @@ public class ControlFilesGenerator {
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
-		termino.getRelations().forEach( tv -> {
-			if(tv.getType() == RelationType.SYNTACTICAL
-					|| tv.getType() == RelationType.MORPHOLOGICAL
-					|| tv.getType() == RelationType.SYNONYMIC)
+		termino.getRelations(RelationType.VARIATION).forEach( tv -> {
+			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
 				distinctRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		});
 
