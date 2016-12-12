@@ -24,6 +24,8 @@ package fr.univnantes.termsuite.model.termino;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -42,12 +44,15 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import fr.univnantes.termsuite.api.JsonOptions;
+import fr.univnantes.termsuite.engines.gatherer.PropertyValue;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.Property;
+import fr.univnantes.termsuite.model.PropertyHolder;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -72,6 +77,9 @@ public class JsonTerminologyIO {
 	private static final String MSG_EXPECT_PROP_FOR_VAR = "Expecting %s property for term variation";
 	private static final String MSG_EXPECT_PROP_FOR_OCCURRENCE = "Expecting %s property for occurrence";
 	private static final String MSG_EXPECT_PROP_FOR_TERM_WORD = "Expecting %s property for term word";
+	private static final String MSG_NO_GROUPING_KEY_SET = "No GROUPING_KEY set for term";
+	private static final String MSG_NO_FILE_SOURCE_WITH_ID = "No file source with id: %s";
+	private static final String MSG_NO_GKEY_FOR_TERM = "No grouping found for current term.";
 
 	/*
 	 * Occurrence storing options
@@ -90,19 +98,6 @@ public class JsonTerminologyIO {
 	private static final String TERM_OCCURRENCES = "occurrences";
 	private static final String TERM_CONTEXT = "context";
 	
-	/*
-	 * Term properties
-	 */
-	private static final String TERM_GROUPING_KEY = "key";
-	private static final String TERM_PILOT = "pilot";
-	private static final String TERM_DOCUMENT_FREQUENCY = "dfreq";
-	private static final String TERM_FREQUENCY = "freq";
-	private static final String TERM_SPOTTING_RULE = "rule";
-	private static final String TERM_RANK = "rank";
-	private static final String TERM_SPECIFICITY = "spec";
-	private static final String TERM_FREQ_NORM = "f_norm";
-	private static final String TERM_GENERAL_FREQ_NORM = "gf_norm";
-
 	
 	@Deprecated
 	private static final String TERM_VARIATIONS = "variations";
@@ -120,9 +115,9 @@ public class JsonTerminologyIO {
 	private static final String BEGIN = "begin";
 	private static final String END = "end";
 	private static final String TERMS = "terms";
-	private static final String ID = "id";
 	private static final String SYN = "syn";
 	private static final String RELATION_TYPE = "type";
+	private static final String PROPERTIES = "props";
 	private static final String IS_SWT = "swt";
 	
 	@Deprecated
@@ -132,8 +127,6 @@ public class JsonTerminologyIO {
 	@Deprecated
 	private static final String VARIANT = "variant";
 	private static final String TO = "to";
-
-	private static final String VARIANT_SCORE = "vscore";
 
 	private static final String TEXT = "text";
 	private static final String INPUT_SOURCES = "input_sources";
@@ -184,9 +177,7 @@ public class JsonTerminologyIO {
 		String base;
 		String variant;
 //		String rule;
-		Object infoToken;
-		String variantType;
-		Double variantScore;
+		String relationType;
 
 		Map<Integer, String> inputSources = Maps.newTreeMap();
 		
@@ -291,124 +282,103 @@ public class JsonTerminologyIO {
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) { 
 					TermBuilder builder = TermBuilder.start(termino);
 					List<TempVecEntry> currentContextVector = Lists.newArrayList();
+					Map<TermProperty, Comparable<?>> properties = null;
 					String currentGroupingKey = null;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
-						if (TERM_GROUPING_KEY.equals(fieldname)) {
-							currentGroupingKey = jp.nextTextValue();
-							builder.setGroupingKey(currentGroupingKey);
-						} else if (TERM_PILOT.equals(fieldname)) 
-							builder.setPilot(jp.nextTextValue());
-						else if (TERM_DOCUMENT_FREQUENCY.equals(fieldname)) 
-							builder.setDocumentFrequency(jp.nextIntValue(-1));
-						else if (TERM_SPOTTING_RULE.equals(fieldname)) 
-							builder.setSpottingRule(jp.nextTextValue());
-						else if (ID.equals(fieldname))  {
-							// term ids are deprecated
-						} else if (TERM_RANK.equals(fieldname)) {
-							builder.setRank(jp.nextIntValue(-1));
-						} else if (TERM_FREQUENCY.equals(fieldname)) {
-							builder.setFrequency(jp.nextIntValue(-1));
-						} else {
-							if (TERM_FREQ_NORM.equals(fieldname)) {
-								jp.nextToken();
-								builder.setFrequencyNorm((double)jp.getFloatValue());
-							} else if (TERM_SPECIFICITY.equals(fieldname))  {
-								jp.nextToken();
-								builder.setSpecificity((double)jp.getDoubleValue());
-							} else if (TERM_GENERAL_FREQ_NORM.equals(fieldname))  {
-								jp.nextToken();
-								builder.setGeneralFrequencyNorm((double)jp.getFloatValue());
-							} else if (TERM_WORDS.equals(fieldname)) {
+						if (PROPERTIES.equals(fieldname)) {
+							properties = readProperties(TermProperty.class, jp);
+							Preconditions.checkState(properties.containsKey(TermProperty.GROUPING_KEY), MSG_NO_GROUPING_KEY_SET);
+							currentGroupingKey = (String)properties.get(TermProperty.GROUPING_KEY);
+						} else if (TERM_WORDS.equals(fieldname)) {
+							while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
+								wordLemma = null;
+								syntacticLabel = null;
+								isSWT = false;
+								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+									fieldname = jp.getCurrentName();
+									if (LEMMA.equals(fieldname)) 
+										wordLemma = jp.nextTextValue();
+									else if (IS_SWT.equals(fieldname)) 
+										isSWT = jp.nextBooleanValue();
+									else if (SYN.equals(fieldname)) 
+										syntacticLabel = jp.nextTextValue();
+								}
+								Preconditions.checkArgument(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
+								Preconditions.checkArgument(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
+								builder.addWord(termino.getWord(wordLemma), syntacticLabel, isSWT);
+							}
+						} else if (TERM_OCCURRENCES.equals(fieldname)) {
+							tok = jp.nextToken();
+							if(tok == JsonToken.START_ARRAY) {
+								
 								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-									wordLemma = null;
-									syntacticLabel = null;
-									isSWT = false;
+									begin = -1;
+									end = -1;
+									fileSource = -1;
+									text = null;
 									while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 										fieldname = jp.getCurrentName();
-										if (LEMMA.equals(fieldname)) 
-											wordLemma = jp.nextTextValue();
-										else if (IS_SWT.equals(fieldname)) 
-											isSWT = jp.nextBooleanValue();
-										else if (SYN.equals(fieldname)) 
-											syntacticLabel = jp.nextTextValue();
+										if (BEGIN.equals(fieldname)) 
+											begin = jp.nextIntValue(-1);
+										else if (TEXT.equals(fieldname)) 
+											text = jp.nextTextValue();
+										else if (END.equals(fieldname)) 
+											end = jp.nextIntValue(-1);
+										else if (FILE.equals(fieldname)) {
+											fileSource = jp.nextIntValue(-1);
+										}
 									}
-									Preconditions.checkArgument(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
-									Preconditions.checkArgument(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
-									builder.addWord(termino.getWord(wordLemma), syntacticLabel, isSWT);
-								}// end words
-								
-							} else if (TERM_OCCURRENCES.equals(fieldname)) {
-								tok = jp.nextToken();
-								if(tok == JsonToken.START_ARRAY) {
 									
+									Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
+									Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
+									Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
+									Preconditions.checkNotNull(inputSources.get(fileSource), MSG_NO_FILE_SOURCE_WITH_ID, fileSource);
+									Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
+									if(occurrenceStore.getStoreType() == OccurrenceStore.Type.MEMORY)
+										builder.addOccurrence(begin, end, inputSources.get(fileSource), text);
+								} 
+							}
+							// end occurrences
+						} else if (TERM_CONTEXT.equals(fieldname)) {
+							@SuppressWarnings("unused")
+							int totalCooccs = 0;
+							while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+								fieldname = jp.getCurrentName();
+								if (TOTAL_COOCCURRENCES.equals(fieldname)) 
+									/*
+									 * value never used since the total will 
+									 * be reincremented in the contextVector
+									 */
+									totalCooccs = jp.nextIntValue(-1);
+								else if (CO_OCCURRENCES.equals(fieldname)) {
+									jp.nextToken();
 									while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-										begin = -1;
-										end = -1;
-										fileSource = -1;
-										text = null;
+										TempVecEntry entry = new TempVecEntry();
 										while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 											fieldname = jp.getCurrentName();
-											if (BEGIN.equals(fieldname)) 
-												begin = jp.nextIntValue(-1);
-											else if (TEXT.equals(fieldname)) 
-												text = jp.nextTextValue();
-											else if (END.equals(fieldname)) 
-												end = jp.nextIntValue(-1);
+											if (NB_COCCS.equals(fieldname)) 
+												entry.setNbCooccs(jp.nextIntValue(-1));
+											else if (ASSOC_RATE.equals(fieldname)) {
+												jp.nextToken();
+												entry.setAssocRate(jp.getFloatValue());
+											} else if (CO_TERM.equals(fieldname)) 
+												entry.setTermGroupingKey(jp.nextTextValue());
 											else if (FILE.equals(fieldname)) {
 												fileSource = jp.nextIntValue(-1);
 											}
 										}
-										
-										Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
-										Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
-										Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
-										Preconditions.checkNotNull(inputSources.get(fileSource), "No file source with id: %s", fileSource);
-										Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
-										if(occurrenceStore.getStoreType() == OccurrenceStore.Type.MEMORY)
-											builder.addOccurrence(begin, end, inputSources.get(fileSource), text);
-									} 
-								}
-							// end occurrences
-							} else if (TERM_CONTEXT.equals(fieldname)) {
-								@SuppressWarnings("unused")
-								int totalCooccs = 0;
-								while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-									fieldname = jp.getCurrentName();
-									if (TOTAL_COOCCURRENCES.equals(fieldname)) 
-										/*
-										 * value never used since the total will 
-										 * be reincremented in the contextVector
-										 */
-										totalCooccs = jp.nextIntValue(-1);
-									else if (CO_OCCURRENCES.equals(fieldname)) {
-										jp.nextToken();
-										while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-											TempVecEntry entry = new TempVecEntry();
-											while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-												fieldname = jp.getCurrentName();
-												if (NB_COCCS.equals(fieldname)) 
-													entry.setNbCooccs(jp.nextIntValue(-1));
-												else if (ASSOC_RATE.equals(fieldname)) {
-													jp.nextToken();
-													entry.setAssocRate(jp.getFloatValue());
-												} else if (CO_TERM.equals(fieldname)) 
-													entry.setTermGroupingKey(jp.nextTextValue());
-												else if (FILE.equals(fieldname)) {
-													fileSource = jp.nextIntValue(-1);
-												}
-											}
-											currentContextVector.add(entry);
-										}
+										currentContextVector.add(entry);
 									}
 								}
 							}
 						} //end if fieldname
 							 
-
 					} // end term object
 					try {
-						builder.createAndAddToIndex();
+						Preconditions.checkState(currentGroupingKey != null, MSG_NO_GKEY_FOR_TERM);
+						Term t = builder.createAndAddToIndex();
+						t.setProperties(properties);
 					} catch(Exception e) {
 						LOGGER.error("Could not add term "+currentGroupingKey+" to term index",e);
 						LOGGER.warn("Error ignored, trying ton continue the loading of termino");
@@ -435,9 +405,8 @@ public class JsonTerminologyIO {
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					base = null;
 					variant = null;
-					variantType = null;
-					variantScore = null;
-					Map<RelationProperty, Comparable<?>> properties = Maps.newHashMap();
+					relationType = null;
+					Map<RelationProperty,Comparable<?>> properties = new HashMap<>();
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
 						if (BASE.equals(fieldname) || FROM.equals(fieldname)) 
@@ -445,51 +414,24 @@ public class JsonTerminologyIO {
 						else if (VARIANT.equals(fieldname) || TO.equals(fieldname)) 
 							variant = jp.nextTextValue();
 						else if (RELATION_TYPE.equals(fieldname)) 
-							variantType = jp.nextTextValue();
-						else if (VARIANT_SCORE.equals(fieldname)) {
-							jp.nextToken();
-							variantScore = jp.getDoubleValue();
-						} else if(RelationProperty.fromJsonField(fieldname) != null){
-							RelationProperty p = RelationProperty.fromJsonField(fieldname);
-							JsonToken token = jp.nextToken();
-							switch(token) {
-							case VALUE_NUMBER_FLOAT:
-								properties.put(p, jp.getDoubleValue());
-								break;
-							case VALUE_NUMBER_INT:
-								properties.put(p, jp.getIntValue());
-								break;
-							case VALUE_STRING:
-								properties.put(p, jp.getValueAsString());
-								break;
-							case VALUE_TRUE:
-							case VALUE_FALSE:
-								properties.put(p, jp.getValueAsBoolean());
-								break;
-							default:
-								LOGGER.info("Unsupported property range for json token " + token);
-							}
-							
-						}
-					} // end syntactic variant object
+							relationType = jp.nextTextValue();
+						else if (PROPERTIES.equals(fieldname)) 
+							properties = readProperties(RelationProperty.class, jp);
+					}
+					
 					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_VAR, FROM);
 					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_VAR, TO);
 					b = termino.getTermByGroupingKey(base);
 					v = termino.getTermByGroupingKey(variant);
 					if(b != null && v != null) {
 						
-						RelationType vType = RelationType.fromShortName(variantType);
+						RelationType vType = RelationType.fromShortName(relationType);
 						
 						TermRelation tv = new TermRelation(
 								vType, 
 								b, 
 								v);
-						
-						for(Map.Entry<RelationProperty, Comparable<?>> e:properties.entrySet())
-							tv.setProperty(e.getKey(), e.getValue());
-						
-						if(variantScore != null)
-							tv.setProperty(RelationProperty.VARIANT_SCORE, variantScore);
+						tv.setProperties(properties);
 						termino.addRelation(tv);
 					} else {
 						if(b==null)
@@ -529,6 +471,77 @@ public class JsonTerminologyIO {
 		}
 
 		return termino;
+	}
+
+	@SuppressWarnings("unchecked")
+	private static <T extends Enum<T> & Property<?>> Map<T,Comparable<?>> readProperties(Class<T> pCls, JsonParser jp) throws IOException {
+		Map<T,Comparable<?>> properties = new HashMap<>();
+		T property;
+		String fieldname;
+
+		Preconditions.checkArgument(jp.nextToken() == JsonToken.START_OBJECT);
+		while (jp.nextToken() != JsonToken.END_OBJECT) {
+			fieldname = jp.getCurrentName();
+			jp.nextToken();
+			if(pCls.equals(RelationProperty.class))
+				property = (T) RelationProperty.fromJsonString(fieldname);
+			else if(pCls.equals(TermProperty.class))
+				property = (T) TermProperty.fromJsonString(fieldname);
+			else 
+				throw new UnsupportedOperationException("Unsupported property class: " + pCls);
+			properties.put(property, readPropertyValue(jp, property));
+		}
+		return properties;
+	}
+
+	public static <T extends Enum<T> & Property<?>> Comparable<?> readPropertyValue(JsonParser jp, 
+			T property) throws IOException {
+		if(property.getRange().equals(Double.class)) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_FLOAT);
+			return jp.getDoubleValue();
+		} else if(property.getRange().equals(Float.class)) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_FLOAT);
+			return (float)jp.getDoubleValue();
+		} else if(property.getRange().equals(Integer.class)) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_INT);
+			return jp.getIntValue();
+		} else if(property.getRange().equals(Long.class)) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_INT);
+			return jp.getLongValue();
+		} else if(property.getRange().equals(Long.class)) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_FALSE, JsonToken.VALUE_TRUE);
+			return jp.getBooleanValue();
+		} else if(property.getRange().equals(String.class)) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_STRING);
+			return jp.getValueAsString();
+		} else if(property.getRange().isEnum()) {
+			checkToken(property, jp.currentToken(), JsonToken.VALUE_STRING);
+			PropertyValue theValue;
+			String jsonString = jp.getValueAsString();
+			theValue = loadEnumConstant(property, jsonString);
+			return (Comparable<?>) theValue;
+		} else {
+			throw new UnsupportedOperationException(String.format(
+					"Unsupported property range <%s> in property %s",property.getRange(), property));
+		}
+	}
+
+	public static <T extends Enum<T> & Property<?>> PropertyValue loadEnumConstant(T property, String jsonString) {
+		for(Object value:property.getRange().getEnumConstants()) {
+			if(((PropertyValue)value).getSerializedString().equals(jsonString))
+				return (PropertyValue)value;
+		}
+		throw new IllegalStateException(String.format("Unkown value <%s> for enun class %s", jsonString, property.getRange()));
+	}
+
+	public static <T extends Enum<T> & Property<?>> void checkToken(T property, JsonToken valueToken, JsonToken... expectedToken) {
+		if(!Arrays.asList(expectedToken).contains(valueToken))
+			throw new IllegalStateException(String.format(
+				"Expected %s token for property %s (range: %s). Got: <%s>", 
+				expectedToken,
+				property, 
+				property.getRange(),
+				valueToken));
 	}
 
 	public static void save(Writer writer, Terminology termino, JsonOptions options) throws IOException {
@@ -617,17 +630,10 @@ public class JsonTerminologyIO {
 		jg.writeStartArray();
 		for(Term t:termino.getTerms()) {
 			jg.writeStartObject();
-			
-			Preconditions.checkState(t.isPropertySet(TermProperty.GROUPING_KEY));
-			jg.writeFieldName(TERM_GROUPING_KEY);
-			jg.writeString(t.getGroupingKey());
-			
-			for(TermProperty p:t.getProperties().keySet()) {
-				if(p == TermProperty.GROUPING_KEY)
-					continue;
-				jg.writeFieldName(p.getJsonField());
-				jg.writeObject(t.getPropertyValue(p));
-			}
+			jg.writeFieldName(PROPERTIES);
+			jg.writeStartObject();
+			writeProperties(jg, t);
+			jg.writeEndObject();
 			jg.writeFieldName(TERM_WORDS);
 			jg.writeStartArray();
 			for(TermWord tw:t.getWords()) {
@@ -699,10 +705,10 @@ public class JsonTerminologyIO {
 			jg.writeString(relation.getTo().getGroupingKey());
 			jg.writeFieldName(RELATION_TYPE);
 			jg.writeString(relation.getType().getShortName());
-			for(RelationProperty p:relation.getProperties().keySet()) {
-				jg.writeFieldName(p.getJsonField());
-				jg.writeObject(relation.getPropertyValue(p));
-			}
+			jg.writeFieldName(PROPERTIES);
+			jg.writeStartObject();
+			writeProperties(jg, relation);
+			jg.writeEndObject();
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();
@@ -710,7 +716,31 @@ public class JsonTerminologyIO {
 		jg.writeEndObject();
 		jg.close();
 	}
+
+	public static <P extends Enum<P> & Property<?>> void writeProperties(JsonGenerator jg, PropertyHolder<P> t) throws IOException {
+		for(P p:t.getProperties().keySet()) {
+			jg.writeFieldName(p.getJsonField());
+			writePropertyValue(jg, p, t.get(p));
+		}
+	}
 	
+	private static <P extends Enum<P> & Property<?>> void writePropertyValue(JsonGenerator jg, P p, Comparable<?> value) throws IOException {
+		if(p.getRange().equals(Double.class)) 
+			jg.writeNumber((Double)value);
+		else if(p.getRange().equals(Integer.class)) 
+			jg.writeNumber((Integer)value);
+		else if(p.getRange().equals(Float.class)) 
+			jg.writeNumber((Float)value);
+		else if(p.getRange().equals(String.class)) 
+			jg.writeString((String)value);
+		else if(p.getRange().equals(Boolean.class)) 
+			jg.writeBoolean((Boolean)value);
+		else if(PropertyValue.class.isAssignableFrom(p.getRange())) {
+			jg.writeString(((PropertyValue)value).getSerializedString());
+		} else 
+			throw new UnsupportedOperationException(String.format("Cannot serialize property %s. Unsupported range: %s", p, p.getRange()));
+	}
+
 	private static class TempVecEntry {
 		String termGroupingKey;
 		double assocRate;

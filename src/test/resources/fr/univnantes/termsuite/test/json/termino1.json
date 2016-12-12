@@ -26,17 +26,20 @@
 	],
 	terms: [
 		{
-			key: "na: word1 word2",
-			rank: 1,
-			freq: 6,
-			f_norm: 0.123,
-			spec: 0.321,			
-			gf_norm: 0.025,
+			props: {
+				key: "na: word1 word2",
+				rank: 1,
+				freq: 6,
+				f_norm: 0.123,
+				spec: 0.321,			
+				rule: "The rule",
+				gf_norm: 0.025
+			},
 			words: [
 				{lemma: "word1", syn: "N", swt: true},
 				{lemma: "word2", syn: "A", swt: true}
 			],
-			rule: "The rule",
+
 			occurrences: [
 				{begin:1, end:3, text:"occ 1", file: 1},
 				{begin:10, end:14, text:"occ 1", file: 2}
@@ -51,9 +54,11 @@
 			
 		},
 		{
-			key: "n: word1",
-			rank: 2,
-			spec: 0.111,			
+			props: {
+				key: "n: word1",
+				rank: 2,
+				spec: 0.111
+			},			
 			words: [
 				{lemma: "word1", syn: "N", swt: true}
 			],
@@ -66,9 +71,11 @@
 			}
 		},
 		{
-			key: "a: word2",
-			rank: 3,
-			spec: 0.222,						
+			props: {
+				key: "a: word2",
+				rank: 3,
+				spec: 0.222
+			},						
 			words: [
 				{lemma: "word2", syn: "A", swt: true}
 			],
@@ -83,8 +90,8 @@
 		}
 	],
 	relations: [
-		{from: "n: word1", to: "na: word1 word2", vrule: "n-na", type: "syn"},
-		{from: "a: word2", to: "na: word1 word2", vrule: "a-na", type: "syn"},
-		{from: "na: word1 word2", to: "n: word1", sim: 0.914, type: "graph"}
+		{from: "n: word1", to: "na: word1 word2", type: "var", props: {vrule: "n-na", vtype: "syn"}},
+		{from: "a: word2", to: "na: word1 word2", type: "var", props: {vrule: "a-na", vtype: "syn"}},
+		{from: "na: word1 word2", to: "n: word1", type: "var", props: {sim: 0.914, vtype: "graph"}}
 	]
 }

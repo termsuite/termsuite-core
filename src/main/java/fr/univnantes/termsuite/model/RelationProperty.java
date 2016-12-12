@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.model;
 
 import java.util.Comparator;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
@@ -9,7 +10,7 @@ import fr.univnantes.termsuite.engines.gatherer.VariationType;
 public enum RelationProperty implements Property<TermRelation> {
 	VARIATION_RANK("VariationRank", "vrank", "vrank", Integer.class),
 	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
-	VARIATION_TYPE("VariationRuleType", "vruleType", "vruleType", VariationType.class),
+	VARIATION_TYPE("VariationRuleType", "vtype", "vtype", VariationType.class),
 	DERIVATION_TYPE("DerivationType", "dtype", "dtype", String.class),
 	SIMILARITY("Similarity", "sim", "sim", Double.class),
 	VARIANT_SCORE("Score", "vScore", "vScore", Double.class), 
@@ -84,11 +85,12 @@ public enum RelationProperty implements Property<TermRelation> {
 		return jsonField;
 	}
 
-	public static RelationProperty fromJsonField(String field) {
+	public static RelationProperty fromJsonString(String field) {
+		Preconditions.checkNotNull(field);
 		for(RelationProperty p:values())
 			if(p.jsonField.equals(field))
 				return p;
-		return null;
+		throw new IllegalArgumentException("No RelationProperty with such json field: " + field);
 	}
 
 	@Override
@@ -108,4 +110,5 @@ public enum RelationProperty implements Property<TermRelation> {
 			}
 		};
 	}
+
 }

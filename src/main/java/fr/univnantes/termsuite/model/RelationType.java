@@ -21,6 +21,8 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.model;
 
+import com.google.common.base.Preconditions;
+
 public enum RelationType {
 	VARIATION("V", 1, "var", true),
 //	MORPHOLOGICAL("M", 1, "morph", true),
@@ -68,6 +70,7 @@ public enum RelationType {
 	}
 	
 	public static RelationType fromShortName(String shortName) {
+		Preconditions.checkNotNull(shortName);
 		for(RelationType vt:values())
 			if(vt.getShortName().equals(shortName))
 				return vt;

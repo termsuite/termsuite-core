@@ -3,6 +3,7 @@ package fr.univnantes.termsuite.model;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
@@ -137,8 +138,12 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 			return false;
 	}
 	
-	public Comparable<?> get(RelationProperty p) {
+	public Comparable<?> get(T p) {
 		return properties.get(p);
 	}
 
+	public void setProperties(Map<T, Comparable<?>> properties) {
+		for(Entry<T, Comparable<?>> e:properties.entrySet())
+			setProperty(e.getKey(), e.getValue());
+	}
 }

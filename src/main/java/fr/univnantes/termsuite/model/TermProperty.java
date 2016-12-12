@@ -25,6 +25,7 @@ import java.util.Comparator;
 import java.util.Map;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Maps;
 
@@ -160,5 +161,13 @@ public enum TermProperty implements Property<Term> {
 	@Override
 	public Comparator<Term> getComparator() {
 		return getComparator(false);
+	}
+
+	public static TermProperty fromJsonString(String field) {
+		Preconditions.checkNotNull(field);
+		for(TermProperty p:values())
+			if(p.jsonField.equals(field))
+				return p;
+		throw new IllegalArgumentException("No TermProperty with such json field: " + field);
 	}
 }

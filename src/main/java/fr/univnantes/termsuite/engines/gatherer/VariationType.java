@@ -10,7 +10,7 @@ import fr.univnantes.termsuite.model.TermRelation;
  * @author Damien Cram
  * 
  */
-public enum VariationType {
+public enum VariationType implements PropertyValue {
 	PREFIXATION("P", 5, "pref", true), 
 	DERIVATION("D", 4, "deriv", true),
 	SEMANTIC("H", 7, "syno", true),
@@ -46,4 +46,10 @@ public enum VariationType {
 	public boolean isDirectional() {
 		return directional;
 	}
+
+	@Override
+	public String getSerializedString() {
+		return this.shortName;
+	}
+
 }

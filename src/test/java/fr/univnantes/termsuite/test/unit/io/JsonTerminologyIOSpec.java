@@ -67,6 +67,7 @@ import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.TestUtil;
 
+@SuppressWarnings("unchecked")
 public class JsonTerminologyIOSpec {
 	public static final String jsonFile1 = "fr/univnantes/termsuite/test/json/termino1.json";
 	
@@ -198,9 +199,16 @@ public class JsonTerminologyIOSpec {
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
-		@SuppressWarnings("unchecked")
 		Map<String,Object> t1 = (Map<String,Object>)((List<?>)map.get("terms")).iterator().next();
-		assertThat(t1.keySet()).contains("key").doesNotContain("occurrences");
+		assertThat(t1.keySet()).contains("props", "words", "context");
+		assertThat((Map<String,Object>)t1.get("props"))
+			.containsEntry("key", "l1l2: word1 word2")
+			.containsEntry("spec", 1.1)
+			.containsEntry("rank", 1)
+			.containsEntry("pattern", "L1 L2")
+			.containsEntry("freq", 2)
+			.containsEntry("rule", "spotRule1")
+			;
 	}
 
 	@Test
@@ -301,7 +309,6 @@ public class JsonTerminologyIOSpec {
 		assertThat(metadata).containsOnlyKeys("name", "corpus-id", "wordsNum", "spottedTermsNum", "lang", "occurrence_storage");
 		
 		// test input sources1
-		@SuppressWarnings("unchecked")
 		Map<String,String> inputSources = (LinkedHashMap<String,String>)map.get("input_sources");
 		assertThat(inputSources).containsOnlyKeys("1", "2", "3");
 		assertThat(inputSources.values()).containsOnly("source1", "source2", "source3");
@@ -327,8 +334,9 @@ public class JsonTerminologyIOSpec {
 		BiMap<String, String> sources = HashBiMap.create(inputSources);
 		List<?> termList = (List<?>)map.get("terms");
 		LinkedHashMap<?,?> t1 = (LinkedHashMap<?,?>)termList.get(0);
-		assertThat(t1.get("rank")).isEqualTo(1);
-		assertThat(t1.get("spec")).isEqualTo(1.1);
+		LinkedHashMap<?,?> props = (LinkedHashMap<?, ?>) t1.get("props");
+		assertThat(props.get("rank")).isEqualTo(1);
+		assertThat(props.get("spec")).isEqualTo(1.1);
 		assertThat((List<?>)t1.get("words")).extracting("lemma", "syn", "swt").containsOnly(tuple("word1", "L1", true), tuple("word2", "L2", true));
 		assertThat((List<?>)t1.get("occurrences")).hasSize(2).extracting("begin", "end", "file", "text").containsOnly(
 				tuple(10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),
@@ -353,11 +361,21 @@ public class JsonTerminologyIOSpec {
 		
 		// test syntactic variants
 		List<?> variantList = (List<?>)map.get("relations");
-		assertThat(variantList).hasSize(2)
-			.extracting("from", "to", "vrule", "sim", "type")
+		assertThat(variantList)
+			.extracting("from", "to", "type")
 			.contains(
-					tuple(term1.getGroupingKey(), term2.getGroupingKey(), "variationRule1", null, "syn"),
-					tuple(term1.getGroupingKey(), term2.getGroupingKey(), null, 0.956, "graph")
-				);
+				tuple(term1.getGroupingKey(), term2.getGroupingKey(), "var"),
+				tuple(term1.getGroupingKey(), term2.getGroupingKey(), "var")
+			);
+		
+		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(0)).get("props"))
+			.containsEntry("vrule", "variationRule1")
+			.containsEntry("vtype", "syn")
+			.doesNotContainKey("sim");
+
+		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(1)).get("props"))
+			.containsEntry("sim", 0.956)
+			.containsEntry("vtype", "graph")
+			.doesNotContainKey("vrule");
 	}
 }
