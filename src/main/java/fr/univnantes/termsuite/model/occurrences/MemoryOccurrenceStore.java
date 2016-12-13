@@ -37,11 +37,16 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 
 import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.termino.TermSelector;
 
 public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
+
+	public MemoryOccurrenceStore(Lang lang) {
+		super(lang);
+	}
 
 	private Multimap<Term, TermOccurrence> map = Multimaps.synchronizedMultimap(HashMultimap.create());
 	

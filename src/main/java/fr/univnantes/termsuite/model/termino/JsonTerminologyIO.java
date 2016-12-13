@@ -190,13 +190,14 @@ public class JsonTerminologyIO {
 		// useful var for debug
 		JsonToken tok;
 
+		Lang lang = null;
+		
 		while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 			 
 			fieldname = jp.getCurrentName();
 			if (METADATA.equals(fieldname)) {
 				jp.nextToken();
 				String terminoName = null;
-				Lang lang = null;
 				String corpusID = null;
 				String occurrenceStorage = null;
 				String occurrenceStoreURI = null;
@@ -224,10 +225,12 @@ public class JsonTerminologyIO {
 				
 				if(occurrenceStorage != null && occurrenceStorage.equals(OCCURRENCE_STORAGE_MONGODB)) {
 					Preconditions.checkNotNull(occurrenceStoreURI, "Missing attribute " + OCCURRENCE_MONGODB_STORE_URI);
-					occurrenceStore = new MongoDBOccurrenceStore(occurrenceStoreURI, OccurrenceStore.State.INDEXED);
-				} else
-					occurrenceStore = new MemoryOccurrenceStore();
-				
+					Preconditions.checkNotNull(lang, "Missing metadata attribute " + LANG);
+					occurrenceStore = new MongoDBOccurrenceStore(lang, occurrenceStoreURI, OccurrenceStore.State.INDEXED);
+				} else {
+					Preconditions.checkNotNull(lang, "Missing metadata attribute " + LANG);
+					occurrenceStore = new MemoryOccurrenceStore(lang);
+				}
 				termino = new MemoryTerminology(terminoName, lang, occurrenceStore);
 				if(corpusID != null)
 					termino.setCorpusId(corpusID);

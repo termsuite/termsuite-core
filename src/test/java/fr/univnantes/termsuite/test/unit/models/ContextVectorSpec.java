@@ -30,6 +30,7 @@ import org.junit.Test;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 
@@ -41,7 +42,7 @@ public class ContextVectorSpec {
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		this.vector = new ContextVector(Fixtures.term1());
-		this.doc = new Document("doc1");
+		this.doc = new Document(Lang.FR, "doc1");
 		Form form1 = new Form("text1");
 		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term1(), form1, doc, 10, 15));
 		Form form2 = new Form("text2");

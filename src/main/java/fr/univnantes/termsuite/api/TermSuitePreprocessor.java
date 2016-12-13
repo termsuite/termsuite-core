@@ -25,6 +25,7 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
@@ -43,7 +44,6 @@ public class TermSuitePreprocessor {
 	private String inputDirectory = "/";
 
 	private String treeTaggerHome = null;
-
 	private String outputEncoding = Charset.defaultCharset().name();
 	
 	private Optional<String> outputDirectory = Optional.empty();
@@ -148,11 +148,11 @@ public class TermSuitePreprocessor {
 				try {
 					cas = JCasFactory.createJCas();
 					cas.setDocumentLanguage(document.getLang().getCode());
-					cas.setDocumentText(document.getText());
+					cas.setDocumentText(document.getText().get());
 					JCasUtils.initJCasSDI(
 							cas, 
 							document.getLang().getCode(), 
-							document.getText(), 
+							document.getText().get(), 
 							document.getUrl());
 					aae.process(cas);
 					

@@ -53,7 +53,7 @@ public class HasSingleWordSelectorSpec {
 	
 	@Before
 	public void init() {
-		termino = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore());
+		termino = new MemoryTerminology("Test", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 		populateTermino(new TermFactory(termino));
 	}
 	
