@@ -352,9 +352,10 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("an: national agency", "an: international agency"),
 				tuple("an: limited amount", "an: unlimited amount"),
 				tuple("an: suitable site", "an: unsuitable site"),
-				tuple("an: national institute", "an: international institute")
+				tuple("an: national institute", "an: international institute"),
+				tuple("annn: conventional horizontal-axis wind turbine", "annn: unconventional horizontal-axis wind turbine")
 		)
-		.hasSize(33)
+		.hasSize(47)
 		;
 		
 	}
@@ -386,7 +387,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("nn: industry noise", "an: industrial noise"),
 				tuple("nn: axis direction", "an: axial direction")
 			)
-			.hasSize(19)
+			.hasSize(20)
 		;
 	}
 

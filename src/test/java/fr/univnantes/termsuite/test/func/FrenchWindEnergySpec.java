@@ -265,7 +265,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsVariation("npn: phase du stator", VariationType.SYNTAGMATIC, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
+			.containsVariation("npn: phase du stator", VariationType.DERIVATION, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
 			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
 			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
 			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
@@ -282,6 +282,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		.contains(
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
 			tuple("na: machine synchrone", "na: machine asynchrone"),
+			tuple("naa: machine synchrone classique", "naa: machine asynchrone classique"),
 			tuple("na: contrôle direct", "na: contrôle indirect"),
 			tuple("na: mode direct", "na: mode indirect"),
 			tuple("na: aspect esthétique", "na: aspect inesthétique"),
@@ -290,7 +291,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			tuple("na: mesure précis", "na: mesure imprécis"),
 			tuple("na: circulation stationnaire", "na: circulation instationnaire")
 		)
-		.hasSize(27)
+		.hasSize(36)
 		;
 		
 	}
@@ -299,9 +300,10 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termino)
 			.asTermVariationsHavingRule("S-R2D-NPN")
-			.hasSize(77)
+			.hasSize(82)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
+					tuple("npnpn: résistance du bobinage de stator", "npna: résistance du bobinage statorique"),
 					tuple("npn: production de électricité", "na: production électrique"),
 					tuple("npn: étude de environnement", "na: étude environnemental"),
 					tuple("npn: génération de électricité", "na: génération électrique")

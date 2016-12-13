@@ -1,11 +1,14 @@
 package fr.univnantes.termsuite.engines;
 
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Stopwatch;
+
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -43,21 +46,42 @@ public class ExtensionVariantGatherer {
 	
 	
 	public void gather(Terminology termino) {
+		LOGGER.debug("Infering variations of term extensions");
 		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
 			LOGGER.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
 		
-		termino.getRelations(RelationType.VARIATIONS)
+		
+		termino.getRelations(RelationType.VARIATION)
 			.filter(r -> !r.isPropertySet(RelationProperty.IS_INFERED))
 			.forEach(r-> r.setProperty(RelationProperty.IS_INFERED, false));
 		
-		final MutableInt cnt = new MutableInt(0);
-		
-		termino.getRelations(RelationType.MORPHOLOGICAL)
+		Stopwatch sw = Stopwatch.createStarted();
+		/*
+		 * Infer variations for all types but VariationType.SYNTAGMATIC
+		 * as syntagmatic extensions variants are supposed to be exhaustively
+		 * listed in lang-multi-word-rule-system.regex resource.
+		 */
+		inferVariations(termino, VariationType.MORPHOLOGICAL);
+		inferVariations(termino, VariationType.DERIVATION);
+		inferVariations(termino, VariationType.GRAPHICAL);
+		inferVariations(termino, VariationType.PREFIXATION);
+		inferVariations(termino, VariationType.SEMANTIC);
+		sw.stop();
+		LOGGER.debug("Infered variations of term extensions gathered in {}", sw);
+	}
+
+
+	public void inferVariations(Terminology termino, VariationType type) {
+		AtomicInteger cnt = new AtomicInteger(0);
+		Stopwatch sw = Stopwatch.createStarted();
+		termino.getRelations(RelationType.VARIATION)
+			.filter(rel -> rel.isPropertySet(RelationProperty.VARIATION_TYPE))
+			// Apply to all variations but syntagmatic ones
+			.filter(rel -> rel.get(RelationProperty.VARIATION_TYPE) == type)
+//			.parallel()
 			.forEach(relation -> {
 				Term m1 = relation.getFrom();
 				Term m2 = relation.getTo();
-				
-				
 				termino.getOutboundRelations(m1, RelationType.HAS_EXTENSION)
 					.stream()
 					.forEach(rel1 -> {
@@ -73,24 +97,28 @@ public class ExtensionVariantGatherer {
 									return;
 
 								if(Objects.equals(affix1, affix2)) {
-									cnt.increment();
+									cnt.incrementAndGet();
 									
 									if(LOGGER.isTraceEnabled()) 
 										LOGGER.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
 									
-									TermRelation inferedRel = new TermRelation(RelationType.MORPHOLOGICAL, rel1.getTo(), rel2.getTo());
+									TermRelation inferedRel = new TermRelation(relation.getType(), rel1.getTo(), rel2.getTo());
 									inferedRel.setProperty(RelationProperty.IS_INFERED, true);
 									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
-									inferedRel.setProperty(RelationProperty.VARIATION_RULE, relation.getPropertyStringValue(RelationProperty.VARIATION_RULE));
+									inferedRel.setProperty(RelationProperty.VARIATION_TYPE, type);
+									if(relation.isPropertySet(RelationProperty.VARIATION_RULE))
+										inferedRel.setProperty(
+												RelationProperty.VARIATION_RULE, 
+												relation.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 									termino.addRelation(inferedRel);
 									watch(inferedRel, rel1, rel2);
-									
 								}
 							});
 						});
 			});
 		
-		LOGGER.debug("Infered {} variations", cnt.intValue());
+		sw.stop();
+		LOGGER.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
 	}
 
 
