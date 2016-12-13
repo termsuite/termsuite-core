@@ -14,8 +14,8 @@ import org.apache.commons.io.FileUtils;
 
 import com.google.common.base.Preconditions;
 
-import fr.univnantes.termsuite.api.Document;
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 
 public class FileSystemUtils {

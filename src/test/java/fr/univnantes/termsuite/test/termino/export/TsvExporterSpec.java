@@ -35,7 +35,7 @@ public class TsvExporterSpec {
 	public void setup() {
 		defaultLocale = Locale.getDefault();
 
-		termino = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore());
+		termino = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 
 		term1 = TermFactory.termMock("t1", 1, 3, 0.8);
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);

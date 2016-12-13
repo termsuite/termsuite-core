@@ -18,8 +18,8 @@ import org.junit.rules.TemporaryFolder;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.api.Document;
 import fr.univnantes.termsuite.api.TermSuitePreprocessor;
+import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
@@ -143,7 +143,7 @@ public class TermSuitePreprocessorSpec {
 	public void testPreprocessorFromTextString() {
 		
 		Iterator<JCas> iterator = TermSuitePreprocessor
-			.fromTextString(lang, document1.getText())
+			.fromTextString(lang, document1.getText().get())
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 			.stream().iterator();
 		JCas cas = iterator.next();

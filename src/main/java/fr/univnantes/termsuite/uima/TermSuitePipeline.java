@@ -184,7 +184,7 @@ public class TermSuitePipeline {
 	/* ******************************
 	 * MAIN PIPELINE PARAMETERS
 	 */
-	private OccurrenceStore occurrenceStore = new MemoryOccurrenceStore();
+	private OccurrenceStore occurrenceStore;
 	private Optional<? extends Terminology> termino = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
@@ -252,6 +252,7 @@ public class TermSuitePipeline {
 	 */
 	private TermSuitePipeline(String lang, String urlPrefix) {
 		this.lang = Lang.forName(lang);
+		this.occurrenceStore = new MemoryOccurrenceStore(this.lang);
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
 
@@ -2209,7 +2210,8 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUri) {
-		this.occurrenceStore = new MongoDBOccurrenceStore(mongoDBUri);
+		Preconditions.checkState(this.lang != null, "Language needs to be set on pipeline before occurrence store");
+		this.occurrenceStore = new MongoDBOccurrenceStore(lang, mongoDBUri);
 		return this;
 	}
 

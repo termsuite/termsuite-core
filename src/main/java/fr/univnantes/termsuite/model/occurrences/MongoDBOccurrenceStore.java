@@ -62,6 +62,7 @@ import com.mongodb.client.model.WriteModel;
 
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.termino.FrequencyUnderThreshholdSelector;
@@ -152,13 +153,13 @@ public class MongoDBOccurrenceStore extends AbstractMemoryOccStore {
 	private BlockingThreadPoolExecutor executor;
 	private MyMonitorThread monitor;
 	
-	public MongoDBOccurrenceStore(String dbURI) {
-		this(dbURI, State.COLLECTING);
+	public MongoDBOccurrenceStore(Lang lang, String dbURI) {
+		this(lang, dbURI, State.COLLECTING);
 	}
 	
 
-	public MongoDBOccurrenceStore(String mongoDbUri, State state) {
-		super();
+	public MongoDBOccurrenceStore(Lang lang, String mongoDbUri, State state) {
+		super(lang);
 		
 		Preconditions.checkNotNull(mongoDbUri, "MongoDB dadabase's URI must not be null");
 		Preconditions.checkState(

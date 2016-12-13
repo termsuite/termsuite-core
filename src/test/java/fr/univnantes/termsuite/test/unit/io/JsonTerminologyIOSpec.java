@@ -82,7 +82,7 @@ public class JsonTerminologyIOSpec {
 	
 	@Before
 	public void initTermino() {
-		termino = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore());
+		termino = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 		termino.setCorpusId("ccid");
 		termino.setWordAnnotationsNum(222);
 		termino.setSpottedTermsNum(111);

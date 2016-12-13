@@ -36,7 +36,7 @@ public class GroovyServiceSpec {
 		term1 = Fixtures.term1();
 		term2 = Fixtures.term2();
 		term3 = Fixtures.term3();
-		Terminology tIndex = new MemoryTerminology("tata", Lang.FR, new MemoryOccurrenceStore());
+		Terminology tIndex = new MemoryTerminology("tata", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 		tIndex.addTerm(term1);
 		tIndex.addTerm(term2);
 		tIndex.addTerm(term3);

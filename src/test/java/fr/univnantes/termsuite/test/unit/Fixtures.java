@@ -263,23 +263,23 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Document document1() {
-		return new Document("url1");
+		return new Document(Lang.EN, "url1");
 	}
 	
 	/**
 	 * @return
 	 */
 	public static Document document2() {
-		return new Document("url2");
+		return new Document(Lang.EN, "url2");
 	}
 	
 	public static MemoryTerminology emptyTermino() {
-		return new MemoryTerminology("EmptyTermino", Lang.EN, new MemoryOccurrenceStore());
+		return new MemoryTerminology("EmptyTermino", Lang.EN, new MemoryOccurrenceStore(Lang.FR));
 	}
 
 		
 	public static MemoryTerminology termino() {
-		MemoryTerminology memoryTermino = new MemoryTerminology("Termino", Lang.EN, new MemoryOccurrenceStore());
+		MemoryTerminology memoryTermino = new MemoryTerminology("Termino", Lang.EN, new MemoryOccurrenceStore(Lang.FR));
 //		term1(memoryTermino);
 //		term2(memoryTermino);
 //		term3(memoryTermino);
@@ -289,7 +289,7 @@ public class Fixtures {
 	}
 	
 	public static MemoryTerminology terminoWithOccurrences() {
-		MemoryTerminology memoryTermino = new MemoryTerminology("TerminoWithOccurrences", Lang.EN, new MemoryOccurrenceStore());
+		MemoryTerminology memoryTermino = new MemoryTerminology("TerminoWithOccurrences", Lang.EN, new MemoryOccurrenceStore(Lang.FR));
 		final Document doc = document1();
 		
 		

@@ -21,6 +21,8 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.model;
 
+import java.util.Optional;
+
 /**
  * A data model class that represents a document in a corpus.
  * 
@@ -30,22 +32,36 @@ package fr.univnantes.termsuite.model;
  */
 public class Document {
 	
-	
 	/**
 	 * The locator of the document
 	 */
 	private String url;
-	
-	public Document(String url) {
+	private Optional<String> text = Optional.empty();
+	private Lang lang;
+
+	public Document(Lang lang, String url, String text) {
+		this(lang, url);
+		setText(text);
+	}
+	public Document(Lang lang, String url) {
 		super();
 		this.url = url;
+		this.lang = lang;
+	}
+	
+	public Document setText(String text) {
+		this.text = Optional.of(text);
+		return this;
+	}
+	
+	public Optional<String> getText() {
+		return text;
 	}
 	
 	public String getUrl() {
 		return url;
 	}
 
-	
 	@Override
 	public int hashCode() {
 		return url.hashCode();
@@ -62,5 +78,9 @@ public class Document {
 	@Override
 	public String toString() {
 		return String.format("%s", url);
+	}
+	
+	public Lang getLang() {
+		return lang;
 	}
 }

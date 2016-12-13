@@ -24,7 +24,7 @@ public class MemoryTerminologySpec {
 	
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		terminology = new MemoryTerminology("test1", Lang.FR, new MemoryOccurrenceStore());
+		terminology = new MemoryTerminology("test1", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 		term1 = TermBuilder.start(terminology).setGroupingKey("t1").createAndAddToIndex();
 		term2 = TermBuilder.start(terminology).setGroupingKey("t2").createAndAddToIndex();
 		term3 = TermBuilder.start(terminology).setGroupingKey("t3").createAndAddToIndex();
