@@ -169,7 +169,7 @@ public class SemanticGatherer extends AbstractGatherer {
 									t2);
 							rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 							rel.setProperty(RelationProperty.SIMILARITY, value);
-							rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC.name());
+							rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
 							t1Relations.add(rel);
 						}
 					}
@@ -209,6 +209,7 @@ public class SemanticGatherer extends AbstractGatherer {
 				t1,
 				t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
+		rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
 		termino.addRelation(rel);
 		watch(t1, t2);
 	}
