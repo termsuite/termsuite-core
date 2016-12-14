@@ -31,8 +31,8 @@ import org.apache.uima.resource.ResourceInitializationException;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.export.VariationExporter;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.uima.engines.termino.AbstractTerminologyExporter;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
@@ -41,7 +41,7 @@ public class VariationExporterAE extends AbstractTerminologyExporter {
 	public static final String VARIATION_TYPES = "VariationTypes";
 	@ConfigurationParameter(name = VARIATION_TYPES, mandatory=true)
 	private String variationTypeStrings;
-	protected List<RelationType> variationTypes;
+	protected List<VariationType> variationTypes;
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
@@ -49,7 +49,7 @@ public class VariationExporterAE extends AbstractTerminologyExporter {
 		List<String> strings = Splitter.on(TermSuiteConstants.COMMA).splitToList(variationTypeStrings);
 		variationTypes = Lists.newArrayList();
 		for(String vType:strings) 
-			variationTypes.add(RelationType.valueOf(vType));
+			variationTypes.add(VariationType.valueOf(vType));
 	}
 	
 	@Override

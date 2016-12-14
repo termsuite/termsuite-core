@@ -70,9 +70,9 @@ import fr.univnantes.termsuite.api.stream.StreamingCasConsumer;
 import fr.univnantes.termsuite.engines.ExtensionVariantGatherer;
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -868,7 +868,7 @@ public class TermSuitePipeline {
 		}
 	}
 
-	public TermSuitePipeline haeVariationExporter(String toFilePath, RelationType... vTypes) {
+	public TermSuitePipeline haeVariationExporter(String toFilePath, VariationType... vTypes) {
 		try {
 			String typeStrings = Joiner.on(",").join(vTypes);
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(

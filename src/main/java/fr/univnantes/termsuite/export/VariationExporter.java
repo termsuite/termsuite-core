@@ -13,7 +13,8 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -28,20 +29,20 @@ public class VariationExporter {
 
 	private Terminology termino;
 	private Writer writer;
-	private List<RelationType> variationTypes;
+	private List<VariationType> variationTypes;
 	
-	private VariationExporter(Terminology termino, Writer writer, List<RelationType> variationTypes) {
+	private VariationExporter(Terminology termino, Writer writer, List<VariationType> variationTypes) {
 		super();
 		this.termino = termino;
 		this.writer = writer;
 		this.variationTypes = Lists.newArrayList(variationTypes);
 	}
 
-	public static void export(Terminology termino, Writer writer, RelationType... variationTypes) {
+	public static void export(Terminology termino, Writer writer, VariationType... variationTypes) {
 		new VariationExporter(termino, writer, Lists.newArrayList(variationTypes)).doExport();
 	}
 
-	public static void export(Terminology termino, Writer writer, List<RelationType> variationTypes) {
+	public static void export(Terminology termino, Writer writer, List<VariationType> variationTypes) {
 		new VariationExporter(termino, writer, variationTypes).doExport();
 	}
 
@@ -51,7 +52,8 @@ public class VariationExporter {
 			for(Term t:termino.getTerms()) {
 				for(TermRelation v:termino.getOutboundRelations(t)) {
 					if(this.variationTypes.isEmpty()
-							|| this.variationTypes.contains(v.getType()))
+							|| (v.isPropertySet(RelationProperty.VARIATION_TYPE)
+									&& this.variationTypes.contains(v.get(RelationProperty.VARIATION_TYPE))))
 						acceptedVariations.put(t, v);
 				}
 			}
