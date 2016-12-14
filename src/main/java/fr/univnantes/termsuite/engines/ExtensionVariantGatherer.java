@@ -58,12 +58,13 @@ public class ExtensionVariantGatherer {
 		Stopwatch sw = Stopwatch.createStarted();
 		/*
 		 * Infer variations for all types but VariationType.SYNTAGMATIC
-		 * as syntagmatic extensions variants are supposed to be exhaustively
+		 * and VariationType.GRAPHICAL as:
+		 *  1- syntagmatic extensions variants are supposed to be exhaustively
 		 * listed in lang-multi-word-rule-system.regex resource.
+		 *  2- graphical variants are merged later on
 		 */
 		inferVariations(termino, VariationType.MORPHOLOGICAL);
 		inferVariations(termino, VariationType.DERIVATION);
-		inferVariations(termino, VariationType.GRAPHICAL);
 		inferVariations(termino, VariationType.PREFIXATION);
 		inferVariations(termino, VariationType.SEMANTIC);
 		sw.stop();
