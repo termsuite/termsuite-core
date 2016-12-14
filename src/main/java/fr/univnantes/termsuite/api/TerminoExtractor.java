@@ -78,7 +78,7 @@ public class TerminoExtractor {
 	 * Contextualizer properties
 	 */
 	private boolean contextualizerEnabled = false;
-	private Optional<ContextualizerOptions> contextualizerOptions = Optional.empty();
+	private Optional<ContextualizerOptions> contextualizerOptions = Optional.of(new ContextualizerOptions());
 
 	/*
 	 * true if the input is preprocessed, false otherwise.
