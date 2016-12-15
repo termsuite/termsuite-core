@@ -196,7 +196,8 @@ public class SemanticGatherer extends AbstractGatherer {
 	}
 
 	private TermRelation createDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
-		TermRelation rel = terminoService.createVariation(VariationType.SEMANTIC, t1, t2);
+		TermRelation rel = new TermRelation(RelationType.VARIATION, t1, t2);
+		rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 		rel.setProperty(RelationProperty.SIMILARITY, value);
 		watch(t1, t2);
@@ -204,7 +205,8 @@ public class SemanticGatherer extends AbstractGatherer {
 	}
 
 	private TermRelation createDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
-		TermRelation rel = terminoService.createVariation(VariationType.SEMANTIC, t1, t2);
+		TermRelation rel = new TermRelation(RelationType.VARIATION, t1, t2);
+		rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
 		watch(t1, t2);
 		return rel;
