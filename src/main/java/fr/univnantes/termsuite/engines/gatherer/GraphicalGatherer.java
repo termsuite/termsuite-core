@@ -5,13 +5,13 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class GraphicalGatherer extends AbstractGatherer {
@@ -57,7 +57,7 @@ public class GraphicalGatherer extends AbstractGatherer {
 	}
 	
 	@Override
-	protected void gather(Terminology termino, Collection<Term> termClass, String clsName) {
+	protected void gather(TerminologyService termino, Collection<Term> termClass, String clsName) {
 		
 		List<Term> terms = termClass.getClass().isAssignableFrom(List.class) ? 
 				(List<Term>) termClass
@@ -75,15 +75,8 @@ public class GraphicalGatherer extends AbstractGatherer {
 				dist = distance.computeNormalized(t1.getLemma(), t2.getLemma(), this.similarityThreshold);
 				if(dist >= this.similarityThreshold) {
 //					gatheredCnt++;
-					TermRelation rel1 = new TermRelation(RelationType.VARIATION, t1, t2);
-					rel1.setProperty(RelationProperty.SIMILARITY, dist);
-					rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
-					termino.addRelation(rel1);
-					TermRelation rel2 = new TermRelation(RelationType.VARIATION, t2, t1);
-					rel2.setProperty(RelationProperty.SIMILARITY, dist);
-					rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
-					termino.addRelation(rel2);
-					watch(t1, t2, dist);
+					createGraphicalRelation(termino, t1, t2, dist);
+					createGraphicalRelation(termino, t2, t1, dist);
 					watch(t2, t1, dist);
 
 				}
@@ -94,6 +87,13 @@ public class GraphicalGatherer extends AbstractGatherer {
 //		logger.debug("Graphical gathering {} terms gathered / {} pairs compared", gatheredCnt, nbComparisons);
 		
 //		progressLoggerTimer.cancel();
+	}
+	
+	protected TermRelation createGraphicalRelation(TerminologyService termino, Term source, Term target, Double similarity) {
+		TermRelation rel = termino.createVariation(VariationType.GRAPHICAL, source, target);
+		rel.setProperty(RelationProperty.SIMILARITY, similarity);
+		watch(source, target, similarity);
+		return rel;
 	}
 	
 	private void watch(Term t1, Term t2, double dist) {

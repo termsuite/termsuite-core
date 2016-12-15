@@ -1,8 +1,14 @@
 package fr.univnantes.termsuite.framework;
 
 import java.util.Collection;
+import java.util.EnumSet;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+
+import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -50,5 +56,64 @@ public class TerminologyService {
 
 	public Stream<Term> terms() {
 		return termino.getTerms().stream();
+	}
+
+	public Stream<TermRelation> relations(Term from, Term to) {
+		return outboundRelations(from)
+						.filter(r-> r.getTo().equals(to));
+	}
+
+	public Stream<TermRelation> outboundRelations(Term source) {
+		return this.termino.getOutboundRelation()
+			.get(source)
+			.stream();
+	}
+
+	public Stream<TermRelation> outboundRelations(Term source, RelationType rType, RelationType... relationTypes) {
+		Set<RelationType> rTypes = EnumSet.of(rType, relationTypes);
+		return outboundRelations(source)
+				.filter(r->rTypes.contains(r.getType()));
+	}
+	
+	@Deprecated
+	public Terminology getTerminology() {
+		return termino;
+	}
+
+	public Stream<TermRelation> variations(Term from, Term to) {
+		return relations(from,to)
+				.filter(r-> r.getType() == RelationType.VARIATION);
+	}
+
+	public synchronized TermRelation createVariation(VariationType variationType, Term from, Term to) {
+		Optional<TermRelation> existing = variations(from, to).findAny();
+		if(!existing.isPresent()) {
+			TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
+			for(VariationType vType:VariationType.values())
+				relation.setProperty(vType.getRelationProperty(), false);
+			relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
+			relation.setProperty(variationType.getRelationProperty(), true);
+			termino.addRelation(relation);
+			return relation;
+		} else
+			return existing.get();
+	}
+
+	public Stream<TermRelation> relations(RelationProperty property, Object value) {
+		return relations()
+				.filter(r->r.isPropertySet(property))
+				.filter(r->Objects.equals(r.get(property), value))
+				;
+	}
+
+	public Stream<TermRelation> variations(String fromKey, String toKey) {
+		return variations(getTerm(fromKey), getTerm(toKey));
+	}
+
+	public Term getTerm(String toKey) {
+		Term to = termino.getTermByGroupingKey(toKey);
+		String MSG_TERM_NOT_FOUND = "No such term with key %s";
+		Preconditions.checkNotNull(to, MSG_TERM_NOT_FOUND, toKey);
+		return to;
 	}
 }

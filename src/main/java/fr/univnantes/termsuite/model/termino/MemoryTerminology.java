@@ -464,4 +464,14 @@ public class MemoryTerminology implements Terminology {
 			return stream.filter(relation -> typeSet.contains(relation.getType()));
 		}
 	}
+	
+	@Override
+	public Multimap<Term, TermRelation> getOutboundRelation() {
+		return outboundVariations;
+	}
+
+	@Override
+	public Multimap<Term, TermRelation> getInboundVariations() {
+		return inboundVariations;
+	}
 }

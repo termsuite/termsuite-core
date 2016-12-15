@@ -89,9 +89,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-P-NAA-A",
 				"M-S-NN",
 				"M-PI-EN-P",
-				"M-R1-NA",
 				"M-I-NA-CE",
-				"S-IEg-NA-A,-CA",
 				"M-I-NA-EC");
 	}
 	
@@ -103,6 +101,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-R2I2-NPN-PNP",
 				"S-I2-NPN-PN,PNC",
 				"S-PID-NA-P",
+				"S-IEg-NA-A,-CA",
 				"S-PID-NAA-P",
 				"M-I2-NA");
 	}
@@ -247,9 +246,8 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMSNNVariations() {
 		assertThat(termino)
-			.hasNVariationsOfType(76, VariationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(38, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
-			.hasSize(13)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: microsystème", "nn: micro système"), 
@@ -257,6 +255,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				   tuple("n: france-allemagne", "nn: france allemagne"), 
 				   tuple("n: schéma-bloc", "nn: schéma bloc")
 			)
+			.hasSize(9)
 			;
 	}
 
@@ -275,6 +274,13 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	}
 
 	@Test
+	public void testInferedVariations() {
+		assertThat(termino)
+			.containsVariation("npnpn: résistance du bobinage de stator", VariationType.INFERENCE, "npna: résistance du bobinage statorique")
+			.containsVariation("naa: machine synchrone classique", VariationType.INFERENCE, "naa: machine asynchrone classique");
+	}
+
+	@Test
 	public void testSyntacticalVariationsWithPrefixes() {
 		assertThat(termino)
 		.asTermVariationsHavingRule("NA-NprefA")
@@ -282,7 +288,6 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		.contains(
 			tuple("na: générateur synchrone", "na: générateur asynchrone"),
 			tuple("na: machine synchrone", "na: machine asynchrone"),
-			tuple("naa: machine synchrone classique", "naa: machine asynchrone classique"),
 			tuple("na: contrôle direct", "na: contrôle indirect"),
 			tuple("na: mode direct", "na: mode indirect"),
 			tuple("na: aspect esthétique", "na: aspect inesthétique"),
@@ -291,7 +296,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			tuple("na: mesure précis", "na: mesure imprécis"),
 			tuple("na: circulation stationnaire", "na: circulation instationnaire")
 		)
-		.hasSize(36)
+		.hasSize(27)
 		;
 		
 	}
@@ -300,10 +305,9 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termino)
 			.asTermVariationsHavingRule("S-R2D-NPN")
-			.hasSize(82)
+			.hasSize(77)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
-					tuple("npnpn: résistance du bobinage de stator", "npna: résistance du bobinage statorique"),
 					tuple("npn: production de électricité", "na: production électrique"),
 					tuple("npn: étude de environnement", "na: étude environnemental"),
 					tuple("npn: génération de électricité", "na: génération électrique")

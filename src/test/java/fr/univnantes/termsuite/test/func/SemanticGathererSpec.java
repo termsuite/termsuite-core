@@ -14,10 +14,9 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.Relations;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
@@ -58,9 +57,8 @@ public class SemanticGathererSpec {
 	public void testVariationsFR() {
 		extract(Lang.FR);
 		List<TermRelation> relations = termindex
-				.getRelations(RelationType.VARIATION)
-				.filter(tv -> tv.isPropertySet(RelationProperty.VARIATION_TYPE))
-				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC)
+				.getRelations()
+				.filter(Relations.IS_SEMANTIC)
 				.collect(Collectors.toList());
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
@@ -72,8 +70,8 @@ public class SemanticGathererSpec {
 			)
 			;
 		
-		assertTrue("Expected number of relations between 2090 and 2100" ,
-				relations.size() > 2090 && relations.size() < 2100);
+		assertTrue("Expected number of relations between 3980 and 3990. Got: " + relations.size(),
+				relations.size() > 3980 && relations.size() < 3990);
 
 	}
 	
@@ -82,10 +80,9 @@ public class SemanticGathererSpec {
 		extract(Lang.EN);
 
 		List<TermRelation> relations = termindex
-				.getRelations(RelationType.VARIATION)
-				.filter(tv -> tv.isPropertySet(RelationProperty.VARIATION_TYPE))
-				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC)
-				.collect(Collectors.toList());
+				.getRelations()
+				.filter(Relations.IS_SEMANTIC)
+			.collect(Collectors.toList());
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
 			.contains(
@@ -96,8 +93,8 @@ public class SemanticGathererSpec {
 			)
 			;
 		
-		assertTrue("Expected number of relations between 900 and 910" ,
-				relations.size() > 900 && relations.size() < 910);
+		assertTrue("Expected number of relations between 2470 and 2490. Got: "  +relations.size() ,
+				relations.size() > 2470 && relations.size() < 2490);
 		
 	}
 

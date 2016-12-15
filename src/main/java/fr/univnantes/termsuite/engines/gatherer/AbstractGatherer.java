@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -83,6 +84,7 @@ public class AbstractGatherer {
 	}
 	
 	public void gather(Terminology termino) {
+		TerminologyService terminoService = new TerminologyService(termino);
 		Stopwatch indexSw = Stopwatch.createStarted();
 		CustomTermIndex index = termino.getCustomIndex(indexName.get());
 		index.cleanSingletonKeys();
@@ -96,7 +98,7 @@ public class AbstractGatherer {
 				Collection<Term> terms = index.getTerms(key);
 	//			if(termPredicate.isPresent())
 	//				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
-				gather(termino, terms, key);
+				gather(terminoService, terms, key);
 			});
 		gatheringSw.stop();
 		
@@ -113,16 +115,16 @@ public class AbstractGatherer {
 				history.get().saveEvent(
 						source.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new variation: " + tv);
+						"Term has a new variation: " + tv + " ("+tv.get(RelationProperty.VARIATION_TYPE)+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+")");
 			if(history.get().isWatched(target.getGroupingKey()))
 				history.get().saveEvent(
 						target.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new variation base: " + tv);
+						"Term has a new variation base: " + tv + " ("+tv.get(RelationProperty.VARIATION_TYPE)+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+")");
 		}
 	}
 
-	protected void gather(Terminology termino, Collection<Term> termClass, String clsName) {
+	protected void gather(TerminologyService termino, Collection<Term> termClass, String clsName) {
 		for(VariantRule rule:variantRules) {
 			Set<Term> sources = termClass.stream()
 				.filter(rule::isSourceAcceptable)
@@ -147,17 +149,16 @@ public class AbstractGatherer {
 					
 					cnt.incrementAndGet();
 					if(groovyService.matchesRule(rule, source, target)) 
-						createVariationRelation(termino, source, target, rule);
+						createVariationRuleRelation(termino, source, target, rule);
 				}
 			}
 		}
 	}
 
-	private void createVariationRelation(Terminology termino, Term source, Term target, VariantRule rule) {
-		TermRelation relation = new TermRelation(relationType, source, target);
+	private void createVariationRuleRelation(TerminologyService terminoService, Term source, Term target, VariantRule rule) {
+		TermRelation relation = terminoService.createVariation(rule.getVariationType(), source, target);
 		relation.setProperty(RelationProperty.VARIATION_RULE, rule.getName());
-		relation.setProperty(RelationProperty.VARIATION_TYPE, rule.getVariationType());
-		termino.addRelation(relation);
 		watch(source, target, relation);
 	}
+
 }

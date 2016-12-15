@@ -106,9 +106,10 @@ public class GroovyService {
 		GroovyTerm s = asGroovyTerm(source);
 		GroovyTerm t = asGroovyTerm(target);
 		try {
-			return (boolean) asGroovyRule(rule).invokeMethod(
+			boolean matches = (boolean) asGroovyRule(rule).invokeMethod(
 				GROOVY_MATCH_METHOD_NAME, 
 				new Object[] { s, t });
+			return matches;
 		} catch(IndexOutOfBoundsException e) {
 			return false;
 		} catch(InvokerInvocationException e) {

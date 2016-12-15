@@ -272,7 +272,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
 				.collect(Collectors.toList());
 		// TODO investigate why the size varies
-		assertTrue("Expected size between 92 and 95, but got: " + msnanVars.size(), msnanVars.size() <= 95 && msnanVars.size() >= 92
+		assertTrue("Expected size between 83 and 89, but got: " + msnanVars.size(), msnanVars.size() <= 89 && msnanVars.size() >= 83
 				);
 	}
 

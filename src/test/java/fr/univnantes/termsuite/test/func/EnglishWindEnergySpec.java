@@ -31,6 +31,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,6 +39,7 @@ import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.Relations;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
@@ -155,10 +157,77 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			;
 	}
 
+
+	
+	@Test
+	public void testInferedVariations() {
+		assertThat(termino)
+			.containsVariation(
+					"nnn: horizontal-axis wind turbine", VariationType.INFERENCE, "annn: horizontal axis wind turbine")
+			.containsVariation(
+				"annn: conventional horizontal-axis wind turbine", VariationType.INFERENCE, "annn: unconventional horizontal-axis wind turbine");
+
+	}
+
+	@Test
+	public void testInferenceOnHorizontalAxis() {
+		Optional<TermRelation> rel1 = new TerminologyService(termino)
+				.variations("nnn: horizontal-axis wind turbine", "annn: horizontal axis wind turbine")
+				.findFirst();
+
+		assertTrue("Relation not found", rel1.isPresent());
+		assertThat(rel1.get().getProperties())
+			.containsEntry(RelationProperty.IS_INFERED, true)
+			.containsEntry(RelationProperty.IS_MORPHOLOGICAL, true)
+			.containsEntry(RelationProperty.IS_DERIVATION, false)
+			.containsEntry(RelationProperty.IS_PREXATION, false)
+			.containsEntry(RelationProperty.IS_SYNTAGMATIC, false)
+			.containsEntry(RelationProperty.IS_GRAPHICAL, false)
+			;
+	}
+
+
+	@Test
+	public void testNumberOfInferedVariations() {
+		TerminologyService service = new TerminologyService(termino);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.collect(Collectors.toSet())).hasSize(509);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.filter(Relations.IS_GRAPHICAL)
+				.collect(Collectors.toSet())).hasSize(0);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.filter(Relations.IS_SEMANTIC)
+				.collect(Collectors.toSet())).hasSize(0);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.filter(Relations.IS_PREFIXATION)
+				.collect(Collectors.toSet())).hasSize(9);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.filter(Relations.IS_DERIVATION)
+				.collect(Collectors.toSet())).hasSize(0);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.filter(Relations.IS_MORPHOLOGICAL)
+				.collect(Collectors.toSet())).hasSize(500);
+		assertThat(service.relations()
+				.filter(Relations.IS_INFERENCE)
+				.filter(Relations.IS_SYNTAGMATIC)
+				.collect(Collectors.toSet())).hasSize(0);
+	}
+
 	@Test
 	public void testMorphologicalVariations() {
-		Stream<TermRelation> variations = new TerminologyService(termino).variations(VariationType.MORPHOLOGICAL);
-		assertThat(variations.collect(Collectors.toList())).hasSize(1240);
+		Stream<TermRelation> variationsTypedMorpho = new TerminologyService(termino)
+				.variations(VariationType.MORPHOLOGICAL);
+		assertThat(variationsTypedMorpho.collect(Collectors.toList())).hasSize(458);
+
+		Stream<TermRelation> variationsTaggedMorpho = new TerminologyService(termino)
+				.relations(RelationProperty.IS_MORPHOLOGICAL, true);
+		assertThat(variationsTaggedMorpho.collect(Collectors.toList())).hasSize(958);
 	}
 
 
@@ -171,8 +240,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.hasCompoundType(CompoundType.NEOCLASSICAL)
 			.hasCompositionSubstrings("electro", "magnetic");
 	}
-
-	
 
 	@Test
 	public void testSWTFlagSet() {
@@ -207,27 +274,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.containsVariation("n: horizontal-axis", VariationType.MORPHOLOGICAL, "an: horizontal axis");
 	}
 	
-	@Test
-	public void testTermInference() {
-		assertThat(termino)
-			.containsTerm("nnn: horizontal-axis wind turbine")
-			.containsTerm("annn: horizontal axis wind turbine")
-			.containsVariation("nnn: horizontal-axis wind turbine", VariationType.MORPHOLOGICAL, "annn: horizontal axis wind turbine")
-			;
-		
-		TermRelation rel = termino.getRelations(
-				termino.getTermByGroupingKey("nnn: horizontal-axis wind turbine"), 
-				termino.getTermByGroupingKey("annn: horizontal axis wind turbine"), 
-				RelationType.VARIATION)
-				.filter(r -> r.get(RelationProperty.VARIATION_TYPE) == VariationType.MORPHOLOGICAL)
-				.findFirst()
-				.get();
-		
-		
-		assertThat(rel.getProperties())
-			.containsEntry(RelationProperty.IS_INFERED, true);
-	}
-
 	@Test
 	public void testTermHydroelectric() {
 		Term term = termino.getTermByGroupingKey("a: hydroelectric");
@@ -308,7 +354,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				   tuple("n: spreadsheet", "nn: spread sheet"), 
 				   tuple("n: gearbox", "nn: gear box")
 			)
-			.hasSize(640)
+			.hasSize(193)
 			;
 	}
 
@@ -331,7 +377,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		.contains(
 				tuple("an: national regulation", "an: international regulation"),
 				tuple("an: finite number", "an: infinite number"),
-				tuple("an: conventional horizontal-axis", "an: unconventional horizontal-axis"),
 				tuple("an: favourable conservation", "an: unfavourable conservation"),
 				tuple("an: national standard", "an: international standard"),
 				tuple("an: transient time", "an: subtransient time"),
@@ -360,10 +405,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("an: national agency", "an: international agency"),
 				tuple("an: limited amount", "an: unlimited amount"),
 				tuple("an: suitable site", "an: unsuitable site"),
-				tuple("an: national institute", "an: international institute"),
-				tuple("annn: conventional horizontal-axis wind turbine", "annn: unconventional horizontal-axis wind turbine")
+				tuple("an: national institute", "an: international institute")
 		)
-		.hasSize(47)
+		.hasSize(33)
 		;
 		
 	}
@@ -395,7 +439,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("nn: industry noise", "an: industrial noise"),
 				tuple("nn: axis direction", "an: axial direction")
 			)
-			.hasSize(20)
+			.hasSize(19)
 		;
 	}
 

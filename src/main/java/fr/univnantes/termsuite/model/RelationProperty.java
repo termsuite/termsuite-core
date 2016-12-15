@@ -29,6 +29,12 @@ public enum RelationProperty implements Property<TermRelation> {
 	NORMALIZED_SOURCE_GAIN("NormalizedSourceGain", "normSrcGain", "normSrcGain", Double.class), 
 	NORMALIZED_AFFIX_SCORE("NormalizedAffixScore", "normAffScore", "normAffScore", Double.class), 
 	IS_INFERED("IsInfered", "isInfered", "isInfered", Boolean.class), 
+	IS_GRAPHICAL("IsGraphical", "isGraph", "isGraph", Boolean.class), 
+	IS_SEMANTIC("IsSemantic", "isSem", "isSem", Boolean.class), 
+	IS_DERIVATION("IsDerivation", "isDeriv", "isDeriv", Boolean.class), 
+	IS_PREXATION("IsPrefixation", "isPref", "isPref", Boolean.class), 
+	IS_SYNTAGMATIC("IsSyntagmatic", "isSyntag", "isSyntag", Boolean.class), 
+	IS_MORPHOLOGICAL("IsMorphological", "isMorph", "isMorph", Boolean.class), 
 	;
 
 	private String propertyName;

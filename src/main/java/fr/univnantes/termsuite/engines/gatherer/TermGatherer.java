@@ -111,13 +111,13 @@ public class TermGatherer {
 		if(gathererOptions.isSemanticGathererEnabled()) {
 			LOGGER.info("Gathering morphological semantic variants");
 			new SemanticGatherer()
-			.setDictionary(dico)
-			.setVariationType(VariationType.SEMANTIC)
-			.setRelationType(RelationType.VARIATION)
-			.setGroovyAdapter(groovyService)
-			.setHistory(history)
-			.setVariantRules(rules.getVariantRules(VariationType.SEMANTIC))	
-			.gather(termino);
+				.setDictionary(dico)
+				.setVariationType(VariationType.SEMANTIC)
+				.setRelationType(RelationType.VARIATION)
+				.setGroovyAdapter(groovyService)
+				.setHistory(history)
+				.setVariantRules(rules.getVariantRules(VariationType.SEMANTIC))	
+				.gather(termino);
 		}
 		
 		

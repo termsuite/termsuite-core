@@ -58,6 +58,7 @@ import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public abstract class WindEnergySpec {
@@ -122,12 +123,16 @@ public abstract class WindEnergySpec {
 		ClearTempFiles.main(new String[0]);
 		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
 		
+		
+		TermHistory history = TermHistory.create("na: option nucléaire");
+		
 		if(!jsonFile.toFile().exists()) {
 			try(FileWriter writer = new FileWriter(jsonFile.toFile())) {
 				LOGGER.info("JSON temp file not found", jsonFile);
 				LOGGER.info("Reprocessing txt files for {}", jsonFile);
 				pipeline = TermSuitePipeline.create(lang.getCode())
 					.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
+					.setHistory(history)
 					.aeWordTokenizer()
 					.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 					.aeTreeTagger()
@@ -137,7 +142,6 @@ public abstract class WindEnergySpec {
 					.aeTermOccAnnotationImporter();
 				
 			}
-			
 		}
 		
 			
@@ -151,6 +155,8 @@ public abstract class WindEnergySpec {
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();
 
+		System.out.println(history);
+		
 		return pipeline.getTerminology();
 	}
 

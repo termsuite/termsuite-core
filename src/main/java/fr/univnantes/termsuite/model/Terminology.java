@@ -26,6 +26,8 @@ import java.util.stream.Stream;
 
 import org.apache.uima.jcas.JCas;
 
+import com.google.common.collect.Multimap;
+
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermSelector;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
@@ -140,5 +142,9 @@ public interface Terminology {
 	public void setSpottedTermsNum(int nbSpottedTerms);
 
 	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types);
+
+	public Multimap<Term, TermRelation> getOutboundRelation();
+
+	public Multimap<Term, TermRelation> getInboundVariations();
 
 }

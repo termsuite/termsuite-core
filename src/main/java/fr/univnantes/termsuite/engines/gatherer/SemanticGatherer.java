@@ -16,6 +16,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -96,6 +97,8 @@ public class SemanticGatherer extends AbstractGatherer {
 	}
 	
 	public void gather(Terminology termino, SynonymicRule rule) {
+		TerminologyService terminoService = new TerminologyService(termino);
+		
 		LOGGER.info("Aligning semantic variations for rule {}", rule.getName());
 		if(termino.getTerms().isEmpty())
 			return;
@@ -152,7 +155,7 @@ public class SemanticGatherer extends AbstractGatherer {
 					
 					if(areDicoSynonyms(a1, a2)) {
 						nbDicoRelationFound.incrementAndGet();
-						createDicoRelation(termino, t1, t2);
+						createDicoVariation(terminoService, t1, t2);
 					}
 					
 					if(a2.getContext() == null) {
@@ -163,13 +166,7 @@ public class SemanticGatherer extends AbstractGatherer {
 						nbAlignments.incrementAndGet();
 						Double value = alignmentScores.getUnchecked(pair);
 						if(value > similarityThreshold) {
-							TermRelation rel = new TermRelation(
-									RelationType.VARIATION,
-									t1,
-									t2);
-							rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
-							rel.setProperty(RelationProperty.SIMILARITY, value);
-							rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
+							TermRelation rel = createDistributionalVariation(terminoService, t1,t2,value);
 							t1Relations.add(rel);
 						}
 					}
@@ -198,20 +195,24 @@ public class SemanticGatherer extends AbstractGatherer {
 				);
 	}
 
+	private TermRelation createDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
+		TermRelation rel = terminoService.createVariation(VariationType.SEMANTIC, t1, t2);
+		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
+		rel.setProperty(RelationProperty.SIMILARITY, value);
+		watch(t1, t2);
+		return rel;
+	}
+
+	private TermRelation createDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
+		TermRelation rel = terminoService.createVariation(VariationType.SEMANTIC, t1, t2);
+		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
+		watch(t1, t2);
+		return rel;
+	}
+
 	private boolean areDicoSynonyms(Term a1, Term a2) {
 		return dico.getValues(a1.getLemma()).contains(a2.getLemma())
 				|| dico.getValues(a2.getLemma()).contains(a1.getLemma());
-	}
-
-	public void createDicoRelation(Terminology termino, Term t1, Term t2) {
-		TermRelation rel = new TermRelation(
-				RelationType.VARIATION,
-				t1,
-				t2);
-		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
-		rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
-		termino.addRelation(rel);
-		watch(t1, t2);
 	}
 
 	private void watch(Term t1, Term t2) {

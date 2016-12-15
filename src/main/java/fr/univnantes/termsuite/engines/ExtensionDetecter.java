@@ -87,12 +87,14 @@ public class ExtensionDetecter {
 
 
 	public void addExtensionRelationIfNotExisting(Terminology termino, Term from, Term to) {
-		if(!termino.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent())
+		if(!termino.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent()) {
 			termino.addRelation(new TermRelation(
 					RelationType.HAS_EXTENSION,
 					from, 
 					to
-				));
+					));
+			watch(from, to);
+		}
 	}
 
 	public void setSize2Extensions(Terminology termino) {
@@ -121,11 +123,9 @@ public class ExtensionDetecter {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
 						addExtensionRelationIfNotExisting(termino, t1, t2);
-						watch(t1, t2);
 
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
 						addExtensionRelationIfNotExisting(termino, t2, t1);
-						watch(t2, t1);
 					}
 				}
 			}

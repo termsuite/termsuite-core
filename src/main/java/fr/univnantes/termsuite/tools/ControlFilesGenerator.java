@@ -38,7 +38,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.RelationComparators;
+import fr.univnantes.termsuite.framework.Relations;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -97,7 +97,7 @@ public class ControlFilesGenerator {
 		 */
 		for(VariationType vType:VariationType.values()) {
 			String pathname = directory.getAbsolutePath() + "/variations-" + vType.getShortName();
-			writeVariations(pathname, termino.variations(vType).sorted(RelationComparators.relFreqHmean()));
+			writeVariations(pathname, termino.variations(vType).sorted(Relations.relFreqHmean()));
 		}
 		
 
