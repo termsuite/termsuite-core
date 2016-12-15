@@ -387,14 +387,6 @@
 #  rule: s.compound && s[0][0]==t[2] && s[0][1]==t[0]
 
 
-# DOES NOT MATCH on Wind Energy
-# énergie électrique - énergie hydroélectrique
-"M-R1-NA":
-  source: N A
-  target: N A
-  rule: t[1].compound && s[0]==t[0] && s[1] == t[1][1]
-
-
 # DOES NOT MATCH
 # turbine bipale - turbine bi- ou tripale
 "M-I-NA-CE":
