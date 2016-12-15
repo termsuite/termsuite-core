@@ -32,11 +32,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -151,6 +153,12 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 					"an: offshore wind", "n: m/s", "n: airfoil", "n: voltage", "n: coefficient"
 					)
 			;
+	}
+
+	@Test
+	public void testMorphologicalVariations() {
+		Stream<TermRelation> variations = new TerminologyService(termino).variations(VariationType.MORPHOLOGICAL);
+		assertThat(variations.collect(Collectors.toList())).hasSize(1240);
 	}
 
 
@@ -300,7 +308,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				   tuple("n: spreadsheet", "nn: spread sheet"), 
 				   tuple("n: gearbox", "nn: gear box")
 			)
-			.hasSize(632)
+			.hasSize(640)
 			;
 	}
 

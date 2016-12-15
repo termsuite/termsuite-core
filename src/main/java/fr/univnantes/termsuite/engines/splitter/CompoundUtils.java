@@ -26,9 +26,14 @@ package fr.univnantes.termsuite.engines.splitter;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
@@ -153,6 +158,20 @@ public class CompoundUtils {
 		String substring = word.getLemma().substring(begin, lastComponent.getEnd());
 		return new Component(begin, lastComponent.getEnd(), substring, lemmaBuilder.toString());
 	}
+	
+	
+	/**
+	 * @see #merge(Word, Iterable)
+	 * 
+	 * @param word
+	 * @param begin
+	 * @param end
+	 * @return
+	 */
+	public static Component merge(Word word, int begin, int end) {
+		return merge(word, word.getComponents().subList(begin, end+1));
+	}
+
 
 	
 	/**
@@ -280,65 +299,78 @@ public class CompoundUtils {
 	
 	/**
 	 * 
-	 * Same as {@link #asContiguousLemmaPairs(Word)} except that component 
-	 * both lemmas and subtrings are concatenated instead of 
-	 * component lemmas only.
+	 * Gives all possible component of a compound word
+	 * at given index.
 	 * 
-	 * E.g.
+	 * Example with word ab|cd|ef|gg 
 	 * 
-	 * ab:aa|cd:cc 
+	 * word[0] can be any of: ab, abcd, or abcdef 
+	 * word[1] can be any of: cd, cdef, cdefgg, ef, efgg, or gg
+	 * word[2] can be any of: ef, efgg, gg
+	 * word[3] can only be: gg 
 	 * 
-	 * returns
 	 * 
-	 * [ab, cd]
-	 * [ab, cc]
-	 * [aa, cd]
-	 * [aa, cc]
+	 * Explanation: 
+	 * 
+	 * word[0] can be:
+	 * 	- aa if word is considered to be composed as ab|cd|ef|gg, 
+	 * 	- abcd if word is considered to be composed as abcd|ef|gg or abcd|efgg 
+	 * 	- abcdef if word is considered to be composed as abcdef|gg 
+	 * 
+	 * idem with word[1], word[2] and word[3]
 	 * 
 	 * @param word
+	 * @param i
 	 * @return
 	 */
-//	public static Set<Pair<String>> asContiguousLemmaSubstringPairs(Word word) {
-//		Set<Pair<String>> pairs = new HashSet<>();
-//		if(word.isCompound()) {
-//			int n = word.getComponents().size();
-//			for(int i=0; i<n-1; i++) {
-//				Component c1 = merge(word, word.getComponents().subList(0, i+1));
-//				Component c2 = merge(word, word.getComponents().subList(i+1, n));
-//				pairs.add(new Pair<String>(c1.getLemma(), c2.getLemma()));
-//				pairs.add(new Pair<String>(c1.getLemma(), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
-//				pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), c2.getLemma()));
-//				pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
-//			}
-//		}
-//		return pairs;
-//	}
-	
-	
-	
-//	public static Set<Pair<String>> asLemmaPairs(Word word) {
-//		Set<Pair<String>> pairs = new HashSet<>();
-//		
-//		for(Pair<Component> pair:innerComponentPairs(word)) 
-//			pairs.add(new Pair<String>(pair.getElement1().getLemma(), pair.getElement2().getLemma()));
-//		
-//		return pairs;
-//	}
-	
-	
-//	public static Set<Pair<String>> asLemmaSubstringPairs(Word word) {
-//		Set<Pair<String>> pairs = new HashSet<>();
-//		
-//		for(Pair<Component> pair:innerComponentPairs(word)) {
-//			Component c1 = pair.getElement1();
-//			Component c2 = pair.getElement2();
-//			pairs.add(new Pair<String>(c1.getLemma(), c2.getLemma()));
-//			pairs.add(new Pair<String>(c1.getLemma(), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
-//			pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), c2.getLemma()));
-//			pairs.add(new Pair<String>(word.getLemma().substring(c1.getBegin(), c1.getEnd()), word.getLemma().substring(c2.getBegin(), c2.getEnd())));
-//		}
-//		
-//		return pairs;
-//	}
+	public static Set<Component> getPossibleComponentsAt(Word word, int i) {
+		if(word.isCompound()) {
+			switch (word.getComponents().size()) {
+			case 0:
+				return ImmutableSet.of();
+			case 1:
+				return i==0 ? ImmutableSet.of(word.getComponents().get(0)) : ImmutableSet.of();
+			case 2:
+				switch(i){
+				case 0: return ImmutableSet.of(word.getComponents().get(0));
+				case 1: return ImmutableSet.of(word.getComponents().get(1));
+				default: return ImmutableSet.of();
+				}
+			case 3:
+				return i < word.getComponents().size() ? 
+						SIZE_3_POSSIBLE_BEGIN_END_AT_INDEX.get(i)
+								.stream()
+								.map(pair -> CompoundUtils.merge(word, pair.getElement1(), pair.getElement2()))
+								.collect(Collectors.toSet()) : 
+							ImmutableSet.of();
+			case 4:
+				return i < word.getComponents().size() ? 
+						SIZE_4_POSSIBLE_BEGIN_END_AT_INDEX.get(i)
+								.stream()
+								.map(pair -> CompoundUtils.merge(word, pair.getElement1(), pair.getElement2()))
+								.collect(Collectors.toSet()) : 
+							ImmutableSet.of();
+			default:
+				return i < word.getComponents().size() ? 
+						ImmutableSet.of(word.getComponents().get(i)) : 
+							ImmutableSet.of();
+			}
+			
+		} else
+			return ImmutableSet.of();
+	}
+
+	private static Map<Integer, List<Pair<Integer>>> SIZE_3_POSSIBLE_BEGIN_END_AT_INDEX = ImmutableMap.of(
+			0, ImmutableList.of(new Pair<Integer>(0, 0), new Pair<Integer>(0, 1)),
+			1, ImmutableList.of(new Pair<Integer>(1, 1), new Pair<Integer>(1, 2), new Pair<Integer>(2, 2)),
+			2, ImmutableList.of(new Pair<Integer>(2, 2))
+		);
+
+	private static Map<Integer, List<Pair<Integer>>> SIZE_4_POSSIBLE_BEGIN_END_AT_INDEX = ImmutableMap.of(
+			0, ImmutableList.of(new Pair<Integer>(0, 0), new Pair<Integer>(0, 1), new Pair<Integer>(0, 2)),
+			1, ImmutableList.of(new Pair<Integer>(1, 1), new Pair<Integer>(1, 2), new Pair<Integer>(1, 3), new Pair<Integer>(2, 2), new Pair<Integer>(2, 3), new Pair<Integer>(3, 3)),
+			2, ImmutableList.of(new Pair<Integer>(2, 2), new Pair<Integer>(2, 3), new Pair<Integer>(3, 3)),
+			3, ImmutableList.of(new Pair<Integer>(3, 3))
+		);
 
 }

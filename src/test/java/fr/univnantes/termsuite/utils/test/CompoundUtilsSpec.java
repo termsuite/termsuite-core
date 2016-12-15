@@ -267,7 +267,7 @@ public class CompoundUtilsSpec {
 	
 	
 	@Test
-	public void testAsLemmaPairs() {
+	public void testInnerContiguousComponentPairs() {
 		assertThat(CompoundUtils.innerContiguousComponentPairs(w_ab))
 			.hasSize(0);
 
@@ -294,6 +294,82 @@ public class CompoundUtilsSpec {
 
 	}
 
+	@Test
+	public void testGetPossibleComponentsAt() {
+		/*
+		 * ab
+		 */
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_ab, 0))
+			.hasSize(0);
+
+		/*
+		 * abcd
+		 */
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcd, 0))
+			.extracting("lemma")
+			.hasSize(1)
+			.contains("aa");
+		
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcd, 1))
+			.extracting("lemma")
+			.hasSize(1)
+			.contains("cc");
+
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcd, 2))
+			.hasSize(0);
+
+		
+		/*
+		 * abcdef
+		 */
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdef, 0))
+			.extracting("lemma")
+			.hasSize(2)
+			.contains("aa", "abcc");
+		
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdef, 1))
+			.extracting("lemma")
+			.hasSize(3)
+			.contains("cc", "cdee", "ee");
+		
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdef, 2))
+			.extracting("lemma")
+			.hasSize(1)
+			.contains("ee");
+
+
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdef, 3))
+			.hasSize(0);
+
+
+		/*
+		 * abcdefgh
+		 */
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdefgh, 0))
+			.extracting("lemma")
+			.hasSize(3)
+			.contains("aa", "abcc", "abcdee");
+		
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdefgh, 1))
+			.extracting("lemma")
+			.hasSize(6)
+			.contains("cc", "cdee", "cdefgg", "ee", "efgg", "gg");
+		
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdefgh, 2))
+			.extracting("lemma")
+			.hasSize(3)
+			.contains("ee", "efgg", "gg");
+
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdefgh, 3))
+			.extracting("lemma")
+			.hasSize(1)
+			.contains("gg");
+
+
+		assertThat(CompoundUtils.getPossibleComponentsAt(w_abcdefgh, 4))
+			.hasSize(0);
+
+	}
 		
 	@Test
 	public void testInnerComponentPairs() {

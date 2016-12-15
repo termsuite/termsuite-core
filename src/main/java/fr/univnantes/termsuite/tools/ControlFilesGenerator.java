@@ -27,16 +27,19 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.RelationComparators;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -44,7 +47,6 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.utils.TerminologyUtils;
 
 /**
  * 
@@ -56,12 +58,11 @@ import fr.univnantes.termsuite.utils.TerminologyUtils;
  */
 public class ControlFilesGenerator {
 	
-	private Terminology termino;
-	
+	private TerminologyService termino;
 	
 	public ControlFilesGenerator(Terminology termino) {
 		super();
-		this.termino = termino;
+		this.termino = new TerminologyService(termino);
 	}
 
 
@@ -75,7 +76,7 @@ public class ControlFilesGenerator {
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
-		termino.getRelations(RelationType.VARIATION).forEach( tv -> {
+		termino.variations().forEach( tv -> {
 			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
 				distinctRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		});
@@ -85,25 +86,33 @@ public class ControlFilesGenerator {
 		 */
 		for(String ruleName:distinctRuleNames) {
 			String pathname = directory.getAbsolutePath() + "/" + getSyntacticRuleFileName(ruleName);
-			writeVariations(pathname, termino.getRelations()
+			writeVariations(pathname, termino.relations()
 					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULE))
 					.filter(r-> r.getPropertyStringValue(RelationProperty.VARIATION_RULE).equals(ruleName))
-					.collect(Collectors.toList())
 				);
 		}
 		
 		/*
+		 * Write variation types
+		 */
+		for(VariationType vType:VariationType.values()) {
+			String pathname = directory.getAbsolutePath() + "/variations-" + vType.getShortName();
+			writeVariations(pathname, termino.variations(vType).sorted(RelationComparators.relFreqHmean()));
+		}
+		
+
+		/*
 		 * Write prefix variations
 		 */
 		String prefixPath = directory.getAbsolutePath() + "/" + getPrefixFileName();
-		writeVariations(prefixPath, TerminologyUtils.selectTermVariations(termino, RelationType.IS_PREFIX_OF));
+		writeVariations(prefixPath, termino.relations(RelationType.IS_PREFIX_OF));
 		
 
 		/*
 		 * Write derivative variations
 		 */
 		String derivativePath = directory.getAbsolutePath() + "/" + getDerivatesFileName();
-		writeVariations(derivativePath, TerminologyUtils.selectTermVariations(termino, RelationType.DERIVES_INTO));
+		writeVariations(derivativePath, termino.relations(RelationType.DERIVES_INTO));
 
 		/*
 		 * Write compounds
@@ -148,7 +157,6 @@ public class ControlFilesGenerator {
 		}
 		writer.flush();
 		writer.close();
-		
 	}
 
 
@@ -167,9 +175,9 @@ public class ControlFilesGenerator {
 		return Joiner.on("|").join(componentStrings);
 	}
 	
-	private void writeVariations(String path, Collection<TermRelation> variations) throws IOException {
+	private void writeVariations(String path, Stream<TermRelation> variations) throws IOException {
 		Writer writer = new FileWriter(path);
-		for(TermRelation tv:variations) {
+		for(TermRelation tv:variations.collect(Collectors.toList())) {
 			writer.append(String.format("%s\t%s\t%s\t%s%n", 
 					tv.getFrom().getGroupingKey(),
 					tv.getTo().getGroupingKey(),
@@ -180,8 +188,4 @@ public class ControlFilesGenerator {
 		writer.flush();
 		writer.close();
 	}
-
-	
-
-
 }

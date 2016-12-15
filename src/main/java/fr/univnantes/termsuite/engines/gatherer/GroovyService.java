@@ -1,5 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.ConcurrentMap;
 
 import org.codehaus.groovy.runtime.InvokerInvocationException;
@@ -8,10 +10,12 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Maps;
 
+import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.Word;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
@@ -24,7 +28,7 @@ public class GroovyService {
 
 	private ConcurrentMap<TermWord, GroovyWord> groovyWords = Maps.newConcurrentMap();
 	private ConcurrentMap<Term, GroovyTerm> groovyTerms = Maps.newConcurrentMap();
-	private ConcurrentMap<Component, GroovyComponent> groovyComponents = Maps.newConcurrentMap();
+	private ConcurrentMap<String, GroovyComponent> groovyComponents = Maps.newConcurrentMap();
 	private ConcurrentMap<VariantRule, GroovyObject> groovyRules = Maps.newConcurrentMap();
 	private GroovyHelper groovyHelper;
 	
@@ -68,10 +72,22 @@ public class GroovyService {
 	}
 
 
-	public GroovyComponent asGroovyComponent(Component component) {
-		if(!this.groovyComponents.containsKey(component))
-			this.groovyComponents.put(component, new GroovyComponent(component));
-		return this.groovyComponents.get(component);
+	private static final String COMPONENT_KEY_FORMAT = "%s-%d";
+	
+	public GroovyComponent asGroovyComponent(Word word, int componentIndex) {
+		String key = String.format(COMPONENT_KEY_FORMAT, word.getLemma(), componentIndex);
+		
+		if(!this.groovyComponents.containsKey(key)) {
+			Set<String> candidateStrings = new HashSet<>();
+			for(Component comp:CompoundUtils.getPossibleComponentsAt(word, componentIndex)) {
+				candidateStrings.add(comp.getLemma());
+				candidateStrings.add(comp.getSubstring());
+			}
+			this.groovyComponents.put(
+					key, 
+					new GroovyComponent(candidateStrings));
+		}
+		return this.groovyComponents.get(key);
 	}
 	
 	public GroovyWord asGroovyWord(TermWord termWord) {
@@ -87,9 +103,9 @@ public class GroovyService {
 	}
 
 	public boolean matchesRule(VariantRule rule, Term source, Term target) {
+		GroovyTerm s = asGroovyTerm(source);
+		GroovyTerm t = asGroovyTerm(target);
 		try {
-			GroovyTerm s = asGroovyTerm(source);
-			GroovyTerm t = asGroovyTerm(target);
 			return (boolean) asGroovyRule(rule).invokeMethod(
 				GROOVY_MATCH_METHOD_NAME, 
 				new Object[] { s, t });

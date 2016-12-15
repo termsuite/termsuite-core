@@ -28,7 +28,6 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
 
-import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.TermWord;
 
@@ -52,8 +51,8 @@ public class GroovyWord {
 		this.stem = w.getWord().getStem();
 		this.syntacticLabel = w.getSyntacticLabel();
 		List<GroovyComponent> aux= new ArrayList<GroovyComponent>(w.getWord().getComponents().size());
-		for(Component c:w.getWord().getComponents()) 
-			aux.add(groovyAdapter.asGroovyComponent(c));
+		for(int i=0; i< w.getWord().getComponents().size(); i++) 
+			aux.add(groovyAdapter.asGroovyComponent(w.getWord(), i));
 		this.components = ImmutableList.copyOf(aux);
 	}
 
@@ -71,7 +70,7 @@ public class GroovyWord {
 		if(obj instanceof GroovyWord)
 			return this.lemma.equals(((GroovyWord)obj).lemma);
 		else if(obj instanceof GroovyComponent)
-			return this.lemma.equals(((GroovyComponent)obj).lemma);
+			return ((GroovyComponent)obj).equals(this);
 		else if(obj instanceof CharSequence)
 			return this.lemma.equals(obj);
 		else return false;

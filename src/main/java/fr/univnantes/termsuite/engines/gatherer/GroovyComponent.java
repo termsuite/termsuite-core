@@ -21,46 +21,43 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.engines.gatherer;
 
+import java.util.Set;
+
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-import fr.univnantes.termsuite.model.Component;
-
 public class GroovyComponent {
-	public String lemma;
-	public String substring;
-	
-	public GroovyComponent(Component a) {
-		this.lemma = a.getLemma();
-		this.substring = a.getSubstring();
+
+	public Set<String> candidateStrings;
+
+	public GroovyComponent(Set<String> candidateStrings) {
+		this.candidateStrings = candidateStrings;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(lemma);
-	}
-	
-	private boolean hasLemma() {
-		return this.lemma != null;
+		return Objects.hashCode(candidateStrings);
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(!hasLemma())
-			return false;
-		else if(obj instanceof GroovyWord)
-			return this.lemma.equals(((GroovyWord)obj).lemma);
+		if(obj instanceof GroovyWord)
+			return this.candidateStrings.contains(((GroovyWord)obj).lemma);
 		else if(obj instanceof GroovyComponent)
-			return this.lemma.equals(((GroovyComponent)obj).lemma);
+			return this.candidateStrings.stream()
+						.filter(s -> ((GroovyComponent)obj).candidateStrings.contains(s))
+						.findAny()
+						.isPresent();
 		else if(obj instanceof CharSequence)
-			return this.lemma.equals(obj);
-		else return false;
+			return this.candidateStrings.contains((CharSequence)obj);
+		else
+			return false;
 	}
 	
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
-				.add("lemma", this.lemma)
+				.add("candidateStrings", this.candidateStrings)
 				.toString()
 				;
 	}
