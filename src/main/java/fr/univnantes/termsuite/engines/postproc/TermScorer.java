@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.engines.postproc;
 
 import java.util.Collection;
 
@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.engines.ExtensionDetecter;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;

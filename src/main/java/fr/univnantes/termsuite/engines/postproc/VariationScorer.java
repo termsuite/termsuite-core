@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.engines.postproc;
 
 import java.util.List;
 import java.util.Set;
@@ -32,6 +32,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.engines.ExtensionDetecter;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;

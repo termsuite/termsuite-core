@@ -125,4 +125,8 @@ public class TerminologyService {
 		Preconditions.checkNotNull(to, MSG_TERM_NOT_FOUND, toKey);
 		return to;
 	}
+
+	public void removeRelation(TermRelation r) {
+		termino.removeRelation(r);
+	}
 }

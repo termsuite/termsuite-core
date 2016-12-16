@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.engines.postproc;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,7 +37,8 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.engines.ExtensionDetecter;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -130,7 +131,10 @@ public class TermPostProcessor {
 		 *  
 		 *  IMPORTANT: must occur after term relation filtering. Otherwise:
 		 */
-		filterTwoOrderVariationPatterns(termino);
+		LOGGER.debug("Filtering two-order relations");
+		long size = termino.getRelations(RelationType.VARIATION).count();
+		filterTwoOrderVariationPatterns(new TerminologyService(termino));
+		LOGGER.debug("Filtered {} two-order relations", size - termino.getRelations(RelationType.VARIATION).count());
 		
 		// Rank variations extensions
 		LOGGER.debug("Ranking term variations");
@@ -149,7 +153,7 @@ public class TermPostProcessor {
 		LOGGER.debug("Post-processing finished in {}", sw);
 	}
 
-	private void filterTwoOrderVariationPatterns(Terminology termino) {
+	private void filterTwoOrderVariationPatterns(TerminologyService terminoService) {
 		LOGGER.debug("Filtering two-order relations");
 		Stopwatch sw = Stopwatch.createStarted();
 
@@ -167,13 +171,13 @@ public class TermPostProcessor {
 		 *  blade passage --> typical rotor blade passage
 		 *  
 		 */
-		filterTwoOrderVariations(termino,
-				r1 -> r1.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
-				r2 -> r2.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC && r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
+		filterTwoOrderVariations(terminoService,
+				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
+				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
 			);
 
 		/*
-		 * Removal pattern n°2: t --extension--> v1 --morph--> v2
+		 * Removal pattern n°2: t --extension--> v1 --morph|deriv|prefix|sem--> v2
 		 * 
 		 * When 
 		 * 
@@ -186,9 +190,12 @@ public class TermPostProcessor {
 		 * wind turbine --> small scale wind turbine
 		 * 
 		 */
-		filterTwoOrderVariations(termino,
-				r1 -> r1.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC  && r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
-				r2 -> r2.get(RelationProperty.VARIATION_TYPE) == VariationType.MORPHOLOGICAL 
+		filterTwoOrderVariations(terminoService,
+				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
+				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_MORPHOLOGICAL)
+						|| r2.getPropertyBooleanValue(RelationProperty.IS_DERIVATION)
+						|| r2.getPropertyBooleanValue(RelationProperty.IS_PREXATION)
+						|| r2.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC)
 			);
 		
 		sw.stop();
@@ -207,23 +214,22 @@ public class TermPostProcessor {
 	 *   baseTerm ----> v2 
 	 * 
 	 */
-	private void filterTwoOrderVariations(Terminology termino, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
-		termino.getTerms().stream()
+	private void filterTwoOrderVariations(TerminologyService terminoService, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
+		terminoService.terms()
 		.sorted(TermProperty.FREQUENCY.getComparator(true))
 		.forEach(term -> {
 			final Map<Term, TermRelation> v1Set = new HashMap<>();
 
-			for(TermRelation rel:termino.getOutboundRelations(term)) {
+			terminoService.outboundRelations(term, RelationType.VARIATION).forEach(rel -> {
 				if(r1.test(rel))
 					v1Set.put(rel.getTo(), rel);
-			}
+			});
 			
 			final Set<TermRelation> order2Rels = new HashSet<>();
 			
 			v1Set.keySet().forEach(variant-> {
-				termino
-					.getOutboundRelations(variant)
-					.stream()
+				terminoService
+					.outboundRelations(variant, RelationType.VARIATION)
 					.filter(r2)
 					.filter(order2Rel -> v1Set.containsKey(order2Rel.getTo()))
 					.forEach(order2Rels::add)
@@ -240,7 +246,7 @@ public class TermPostProcessor {
 					history.saveEvent(r.getFrom().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
 				if(history.isWatched(r.getTo())) 
 					history.saveEvent(r.getTo().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
-				termino.removeRelation(r);
+				terminoService.removeRelation(r);
 			});
 		});
 
@@ -359,7 +365,6 @@ public class TermPostProcessor {
 					return true;
 				}
 			}
-			
 		}
 		return  false;
 	}
