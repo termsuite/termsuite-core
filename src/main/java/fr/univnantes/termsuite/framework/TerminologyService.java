@@ -88,15 +88,24 @@ public class TerminologyService {
 	public synchronized TermRelation createVariation(VariationType variationType, Term from, Term to) {
 		Optional<TermRelation> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {
-			TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
-			for(VariationType vType:VariationType.values())
-				relation.setProperty(vType.getRelationProperty(), false);
-			relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
-			relation.setProperty(variationType.getRelationProperty(), true);
-			termino.addRelation(relation);
+			TermRelation relation = buildVariation(variationType, from, to);
+			addRelation(relation);
 			return relation;
 		} else
 			return existing.get();
+	}
+
+	public synchronized void addRelation(TermRelation relation) {
+		termino.addRelation(relation);
+	}
+
+	public TermRelation buildVariation(VariationType variationType, Term from, Term to) {
+		TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
+		for(VariationType vType:VariationType.values())
+			relation.setProperty(vType.getRelationProperty(), false);
+		relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
+		relation.setProperty(variationType.getRelationProperty(), true);
+		return relation;
 	}
 
 	public Stream<TermRelation> relations(RelationProperty property, Object value) {

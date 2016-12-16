@@ -155,7 +155,8 @@ public class SemanticGatherer extends AbstractGatherer {
 					
 					if(areDicoSynonyms(a1, a2)) {
 						nbDicoRelationFound.incrementAndGet();
-						createDicoVariation(terminoService, t1, t2);
+						TermRelation rel = buildDicoVariation(terminoService, t1, t2);
+						terminoService.addRelation(rel);
 					}
 					
 					if(a2.getContext() == null) {
@@ -166,7 +167,7 @@ public class SemanticGatherer extends AbstractGatherer {
 						nbAlignments.incrementAndGet();
 						Double value = alignmentScores.getUnchecked(pair);
 						if(value > similarityThreshold) {
-							TermRelation rel = createDistributionalVariation(terminoService, t1,t2,value);
+							TermRelation rel = buildDistributionalVariation(terminoService, t1,t2,value);
 							t1Relations.add(rel);
 						}
 					}
@@ -195,18 +196,16 @@ public class SemanticGatherer extends AbstractGatherer {
 				);
 	}
 
-	private TermRelation createDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
-		TermRelation rel = new TermRelation(RelationType.VARIATION, t1, t2);
-		rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
+	private TermRelation buildDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
+		TermRelation rel = terminoService.buildVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 		rel.setProperty(RelationProperty.SIMILARITY, value);
 		watch(t1, t2);
 		return rel;
 	}
 
-	private TermRelation createDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
-		TermRelation rel = new TermRelation(RelationType.VARIATION, t1, t2);
-		rel.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SEMANTIC);
+	private TermRelation buildDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
+		TermRelation rel = terminoService.buildVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
 		watch(t1, t2);
 		return rel;
