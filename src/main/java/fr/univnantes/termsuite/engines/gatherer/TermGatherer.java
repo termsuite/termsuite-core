@@ -8,7 +8,9 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
+import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
@@ -131,6 +133,12 @@ public class TermGatherer {
 			.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
 			.setIsGraphicalVariantProperties(termino);
 		
+		/*
+		 * Set the variant_frequency properties
+		 */
+		new TerminologyService(termino).variations()
+				.forEach(r -> r.setProperty(RelationProperty.VARIANT_BAG_FREQUENCY, r.getTo().getFrequency()));
+
 
 		sw.stop();
 		LOGGER.debug("{} finished in {}", this.getClass().getSimpleName(), sw);

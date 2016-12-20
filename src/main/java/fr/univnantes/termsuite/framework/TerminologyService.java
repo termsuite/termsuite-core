@@ -133,4 +133,13 @@ public class TerminologyService {
 	public void removeRelation(TermRelation r) {
 		termino.removeRelation(r);
 	}
+
+	public Stream<TermRelation> variationsFrom(Term from) {
+		return outboundRelations(from)
+				.filter(r-> r.getType() == RelationType.VARIATION);
+	}
+
+	public void addTerm(Term term) {
+		this.termino.addTerm(term);
+	}
 }

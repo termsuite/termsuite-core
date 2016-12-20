@@ -190,7 +190,7 @@ public class TermPostProcessor {
 		Stopwatch sw = Stopwatch.createStarted();
 
 		/*
-		 * Removal pattern n°1: t --extension--> v1 --extension--> v2
+		 * Merge pattern n°1: t --extension--> v1 --extension--> v2
 		 * 
 		 *  When 
 		 *  
@@ -203,13 +203,13 @@ public class TermPostProcessor {
 		 *  blade passage --> typical rotor blade passage
 		 *  
 		 */
-		filterTwoOrderVariations(terminoService,
+		mergeTwoOrderVariations(terminoService,
 				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
 			);
 
 		/*
-		 * Removal pattern n°2: t --extension--> v1 --morph|deriv|prefix|sem--> v2
+		 * Merge pattern n°2: t --extension--> v1 --morph|deriv|prefix|sem--> v2
 		 * 
 		 * When 
 		 * 
@@ -222,7 +222,7 @@ public class TermPostProcessor {
 		 * wind turbine --> small scale wind turbine
 		 * 
 		 */
-		filterTwoOrderVariations(terminoService,
+		mergeTwoOrderVariations(terminoService,
 				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_MORPHOLOGICAL)
 						|| r2.getPropertyBooleanValue(RelationProperty.IS_DERIVATION)
@@ -238,47 +238,56 @@ public class TermPostProcessor {
 	 * When
 	 * 
 	 *   baseTerm -r1-> v1
-	 *   baseTerm ----> v2
+	 *   baseTerm --rtrans--> v2
 	 *   and v1 -r2-> v2
 	 *   
 	 * Then remove 
 	 *   
-	 *   baseTerm ----> v2 
+	 *   baseTerm --rtrans--> v2 
 	 * 
 	 */
-	private void filterTwoOrderVariations(TerminologyService terminoService, Predicate<TermRelation> r1, Predicate<TermRelation> r2) {
+	private void mergeTwoOrderVariations(TerminologyService terminoService, Predicate<TermRelation> p1, Predicate<TermRelation> p2) {
+		/*
+		 *  t1 --r1--> t2 --r2--> t3
+		 *  t1 --rtrans--> t3
+		 */
+
 		terminoService.terms()
 		.sorted(TermProperty.FREQUENCY.getComparator(true))
-		.forEach(term -> {
-			final Map<Term, TermRelation> v1Set = new HashMap<>();
+		.forEach(t1 -> {
+			final Map<Term, TermRelation> r1Set = new HashMap<>();
 
-			terminoService.outboundRelations(term, RelationType.VARIATION).forEach(rel -> {
-				if(r1.test(rel))
-					v1Set.put(rel.getTo(), rel);
+			terminoService.outboundRelations(t1, RelationType.VARIATION).forEach(r1 -> {
+				if(p1.test(r1))
+					r1Set.put(r1.getTo(), r1);
 			});
 			
-			final Set<TermRelation> order2Rels = new HashSet<>();
+			final Set<TermRelation> rem = new HashSet<>();
 			
-			v1Set.keySet().forEach(variant-> {
+			r1Set.keySet().forEach(t2-> {
 				terminoService
-					.outboundRelations(variant, RelationType.VARIATION)
-					.filter(r2)
-					.filter(order2Rel -> v1Set.containsKey(order2Rel.getTo()))
-					.forEach(order2Rels::add)
+					.outboundRelations(t2, RelationType.VARIATION)
+					.filter(p2)
+					.filter(r2 -> r1Set.containsKey(r2.getTo()))
+					.forEach(r2 -> {
+						Term t3 = r2.getTo();
+						
+						TermRelation rtrans = r1Set.get(t3);
+						if(LOGGER.isTraceEnabled()) {
+							LOGGER.trace("Found order-2 relation in variation set {}-->{}-->{}", t1, t2, t3);
+							LOGGER.trace("Removing {}", rtrans);
+						}
+						if(history.isWatched(t1)) 
+							history.saveEvent(t1.getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));
+						if(history.isWatched(t3)) 
+							history.saveEvent(t3.getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));
+						rem.add(rtrans);
+					})
 				;
 			});
 			
-			order2Rels.forEach(rel -> {
-				TermRelation r = v1Set.get(rel.getTo());
-				if(LOGGER.isTraceEnabled()) {
-					LOGGER.trace("Found order-2 relation in variation set {}-->{}-->{}", term, rel.getFrom(), rel.getTo());
-					LOGGER.trace("Removing {}", r);
-				}
-				if(history.isWatched(r.getFrom())) 
-					history.saveEvent(r.getFrom().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
-				if(history.isWatched(r.getTo())) 
-					history.saveEvent(r.getTo().getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rel, term, rel.getFrom(), rel.getTo()));
-				terminoService.removeRelation(r);
+			rem.forEach(rel -> {
+				terminoService.removeRelation(rel);
 			});
 		});
 

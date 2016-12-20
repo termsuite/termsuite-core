@@ -23,8 +23,10 @@
 
 package fr.univnantes.termsuite.engines.postproc;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -62,20 +64,29 @@ public class VariationScorer {
 
 		TerminologyService terminoService = new TerminologyService(termino);
 		
-		doVariantFrequencies(terminoService);
-		doRelationScores(termino);
+		LOGGER.debug("Computing {}", RelationProperty.STRICTNESS);
+		doStrictnesses(terminoService);
+		
+		LOGGER.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
+		doVariationFrenquencies(terminoService);
+
+		LOGGER.debug("Computing {}", RelationProperty.SOURCE_GAIN);
+		doSourceGains(terminoService);
+		
+		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_SOURCE_GAIN);
 		normalizeSourceGain(termino);
-		doExtensionScores(termino);
+		
+		LOGGER.debug("Computing {}", RelationProperty.EXTENSION_SCORE);
+		scoreExtensions(termino);
+
+		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_EXTENSION_SCORE);
 		normalizeExtensionScores(termino);
+		
+		LOGGER.debug("Computing {}", RelationProperty.VARIANT_SCORE);
 		doVariantScores(termino);
+		
 		sw.stop();
 		LOGGER.debug("Scores computed in {}", sw);
-	}
-
-	private void doVariantFrequencies(TerminologyService terminoService) {
-		terminoService.variations()
-			.forEach(r -> r.setProperty(RelationProperty.VARIANT_FREQUENCY, r.getTo().getFrequency()));
-		
 	}
 
 	private void normalizeSourceGain(Terminology termino) {
@@ -113,21 +124,59 @@ public class VariationScorer {
 		});
 	}
 
-	public void doRelationScores(Terminology termino) {
-		termino.getRelations(RelationType.VARIATION).forEach( relation -> {
-			double sourceGain = Math.log10((double)relation.getTo().getFrequency()/relation.getFrom().getFrequency());
-			relation.setProperty(RelationProperty.SOURCE_GAIN, 
-					sourceGain);
+	
+	private int recursiveDoVariationFrenquencies(TerminologyService termino, TermRelation rel, Set<Term> visitedTerms) {
+		Term term = rel.getTo();
+		if(visitedTerms.contains(term)) {
+			return 0;
+		} else {
+			Set<Term> newVisitedTerms = new HashSet<>();
+			newVisitedTerms.addAll(visitedTerms);
+			newVisitedTerms.add(term);
+			newVisitedTerms.add(rel.getFrom());
+			AtomicInteger sum = new AtomicInteger(term.getFrequency());
+			termino.variationsFrom(term).forEach(v2 -> {
+				if(v2.getPropertyDoubleValue(RelationProperty.STRICTNESS) >= 0.95) {
+					sum.addAndGet(recursiveDoVariationFrenquencies(termino, v2, newVisitedTerms));
+				}
+			});
+			return sum.get();
+		}
+	}
 
-			relation.setProperty(RelationProperty.STRICTNESS, 
-					TermUtils.getStrictness(
-							termino.getOccurrenceStore(), 
-					relation.getTo(), 
-					relation.getFrom()));
+	public void doVariationFrenquencies(TerminologyService termino) {
+		termino.variations().forEach(v1 -> {
+//			if(v1.getTo().getGroupingKey().equals("nnn: horizontal-axis wind turbine")) {
+//				System.out.println("--------------------------------------------");
+//				System.out.println(v1);
+//				termino.variationsFrom(v1.getTo()).forEach(System.out::println);
+//			}
+			v1.setProperty(
+					RelationProperty.VARIANT_BAG_FREQUENCY, 
+					recursiveDoVariationFrenquencies(termino, v1, new HashSet<>()));
 		});
 	}
 
-	public void doExtensionScores(Terminology termino) {
+	public void doStrictnesses(TerminologyService termino) {
+		termino.variations().forEach( relation -> {
+			relation.setProperty(RelationProperty.STRICTNESS, 
+					TermUtils.getStrictness(
+							termino.getTerminology().getOccurrenceStore(), 
+					relation.getTo(), 
+					relation.getFrom()));
+		});
+		
+	}
+	public void doSourceGains(TerminologyService termino) {
+		termino.variations().forEach( relation -> {
+			double sourceGain = Math.log10((double)relation.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
+			relation.setProperty(RelationProperty.SOURCE_GAIN, 
+					sourceGain);
+
+		});
+	}
+
+	public void scoreExtensions(Terminology termino) {
 		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
 			new ExtensionDetecter().detectExtensions(termino);
