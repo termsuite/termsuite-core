@@ -15,7 +15,6 @@ import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
@@ -31,7 +30,6 @@ public class AbstractGatherer {
 	protected Set<VariantRule> variantRules;
 	private GroovyService groovyService;
 	private VariationType variationType;
-	private RelationType relationType;
 	protected AtomicLong cnt = new AtomicLong(0);
 	private Optional<String> indexName = Optional.empty();
 	private boolean dropIndexAtEnd = true;
@@ -44,21 +42,11 @@ public class AbstractGatherer {
 		return this;
 	}
 	
-	AbstractGatherer setRelationType(RelationType relationType) {
-		this.relationType = relationType;
-		return this;
-	}
-
 	AbstractGatherer setIndexName(String indexName, boolean dropIndexAtEnd) {
 		this.indexName = Optional.of(indexName);
 		this.dropIndexAtEnd = dropIndexAtEnd;
 		return this;
 	}
-
-//	AbstractGatherer setTermFilter(Predicate<Term> termPredicate) {
-//		this. termPredicate = Optional.of(termPredicate);
-//		return this;
-//	}
 
 	AbstractGatherer setHistory(TermHistory history) {
 		if(history != null)
@@ -155,10 +143,16 @@ public class AbstractGatherer {
 		}
 	}
 
-	private void createVariationRuleRelation(TerminologyService terminoService, Term source, Term target, VariantRule rule) {
-		TermRelation relation = terminoService.createVariation(rule.getVariationType(), source, target);
-		relation.setProperty(RelationProperty.VARIATION_RULE, rule.getName());
-		watch(source, target, relation);
+	private synchronized void createVariationRuleRelation(TerminologyService terminoService, Term source, Term target, VariantRule rule) {
+		Optional<TermRelation> variation = terminoService.getVariation(source, target);
+				
+		if(!variation.isPresent()){
+			TermRelation relation = terminoService.createVariation(rule.getVariationType(), source, target);
+			relation.setProperty(RelationProperty.IS_GRAPHICAL, false);
+			variation = Optional.of(relation);
+			watch(source, target, relation);
+		}
+		variation.get().setProperty(RelationProperty.VARIATION_RULE, rule.getName());
 	}
 
 }

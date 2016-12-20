@@ -33,6 +33,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.engines.ExtensionDetecter;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;
@@ -59,6 +60,9 @@ public class VariationScorer {
 		LOGGER.info("Computing scores for variations");
 		Stopwatch sw = Stopwatch.createStarted();
 
+		TerminologyService terminoService = new TerminologyService(termino);
+		
+		doVariantFrequencies(terminoService);
 		doRelationScores(termino);
 		normalizeSourceGain(termino);
 		doExtensionScores(termino);
@@ -66,6 +70,12 @@ public class VariationScorer {
 		doVariantScores(termino);
 		sw.stop();
 		LOGGER.debug("Scores computed in {}", sw);
+	}
+
+	private void doVariantFrequencies(TerminologyService terminoService) {
+		terminoService.variations()
+			.forEach(r -> r.setProperty(RelationProperty.VARIANT_FREQUENCY, r.getTo().getFrequency()));
+		
 	}
 
 	private void normalizeSourceGain(Terminology termino) {

@@ -67,7 +67,6 @@ import fr.univnantes.termsuite.api.stream.ConsumerRegistry;
 import fr.univnantes.termsuite.api.stream.DocumentProvider;
 import fr.univnantes.termsuite.api.stream.DocumentStream;
 import fr.univnantes.termsuite.api.stream.StreamingCasConsumer;
-import fr.univnantes.termsuite.engines.ExtensionVariantGatherer;
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
@@ -81,7 +80,7 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
-import fr.univnantes.termsuite.resources.ScorerConfig;
+import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.resources.TermSuitePipelineObserver;
 import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
@@ -115,7 +114,6 @@ import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
 import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
-import fr.univnantes.termsuite.uima.engines.termino.ExtensionVariantGathererAE;
 import fr.univnantes.termsuite.uima.engines.termino.MergerAE;
 import fr.univnantes.termsuite.uima.engines.termino.MorphologicalAnalyzerAE;
 import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
@@ -1819,36 +1817,13 @@ public class TermSuitePipeline {
 	}
 	
 	/**
-	 * Invokes {@link ExtensionVariantGatherer} on current term index.
-	 * 
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 * 
-	 * @see ExtensionVariantGatherer
-	 */
-	public TermSuitePipeline aeExtensionVariantGatherer() {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ExtensionVariantGathererAE.class
-				);
-			
-			ExternalResourceFactory.bindResource(ae, resTermino());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-			return aggregateAndReturn(ae, "Infering variations on term extensions", 1);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-
-	}
-
-	/**
 	 * Transforms the {@link Terminology} into a flat one-n scored model.
 	 * 
 	 * 
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline aeScorer(ScorerConfig scorerConfig)   {
+	public TermSuitePipeline aeScorer(PostProcConfig scorerConfig)   {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 					PostProcessorAE.class					

@@ -35,6 +35,7 @@ public enum RelationProperty implements Property<TermRelation> {
 	IS_PREXATION("IsPrefixation", "isPref", "isPref", Boolean.class), 
 	IS_SYNTAGMATIC("IsSyntagmatic", "isSyntag", "isSyntag", Boolean.class), 
 	IS_MORPHOLOGICAL("IsMorphological", "isMorph", "isMorph", Boolean.class), 
+	VARIANT_FREQUENCY("VariantFrequency", "vFreq", "vFreq", Integer.class), 
 	;
 
 	private String propertyName;

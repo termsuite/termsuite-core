@@ -31,7 +31,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.ScorerConfig;
+import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
 import fr.univnantes.termsuite.utils.FileSystemUtils;
@@ -134,7 +134,7 @@ public class TerminoExtractor {
 	/*
 	 * 
 	 */
-	private Optional<ScorerConfig> scorerConfig = Optional.empty();
+	private Optional<PostProcConfig> scorerConfig = Optional.empty();
 	
 	
 	private boolean semanticAlignerEnabled = false;
@@ -260,7 +260,7 @@ public class TerminoExtractor {
 		return this;
 	}
 
-	public TerminoExtractor configureScoring(ScorerConfig scorerConfig) {
+	public TerminoExtractor configureScoring(PostProcConfig scorerConfig) {
 		this.scorerConfig = Optional.of(scorerConfig);
 		return this;
 	}
@@ -406,9 +406,6 @@ public class TerminoExtractor {
 			pipeline
 				.aeTermVariantGatherer(semanticAlignerEnabled);
 
-		pipeline
-			.aeExtensionVariantGatherer();
-		
 		if(scoringEnabled)
 			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig());
 			

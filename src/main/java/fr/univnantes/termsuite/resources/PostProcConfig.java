@@ -23,27 +23,34 @@
 
 package fr.univnantes.termsuite.resources;
 
-public class ScorerConfig {
+public class PostProcConfig {
 	private double extensionSpecTh = 0.1;
 	private double extensionGainTh = 0.1;
 	private double variantIndependanceTh = 0.5;
 	private double variationScoreTh = 0.25;
 	private double orthographicScoreTh = 0.55;
 	private double termIndependanceTh = 0.10;
+	private int maxNumOfVariants = 15;
 
-	private ScorerConfig() {
+	private PostProcConfig() {
 	}
 
 	public double getExtensionSpecTh() {
 		return extensionSpecTh;
 	}
 
-	public ScorerConfig setExtensionSpecTh(double extensionSpecTh) {
+	public PostProcConfig setMaxNumOfVariants(int maxNumOfVariants) {
+		this.maxNumOfVariants = maxNumOfVariants;
+		return this;
+		
+	}
+	public PostProcConfig setExtensionSpecTh(double extensionSpecTh) {
 		this.extensionSpecTh = extensionSpecTh;
 		return this;
 	}
 	
-	public ScorerConfig noFiltering() {
+	public PostProcConfig noFiltering() {
+		maxNumOfVariants = Integer.MAX_VALUE;
 		extensionSpecTh = -Double.MAX_VALUE;
 		extensionGainTh = -Double.MAX_VALUE;
 		variantIndependanceTh = -Double.MAX_VALUE;
@@ -57,7 +64,7 @@ public class ScorerConfig {
 		return extensionGainTh;
 	}
 
-	public ScorerConfig setExtensionGainTh(double extensionGainTh) {
+	public PostProcConfig setExtensionGainTh(double extensionGainTh) {
 		this.extensionGainTh = extensionGainTh;
 		return this;
 	}
@@ -66,7 +73,7 @@ public class ScorerConfig {
 		return variantIndependanceTh;
 	}
 
-	public ScorerConfig setVariantIndependanceTh(double variantIndependanceTh) {
+	public PostProcConfig setVariantIndependanceTh(double variantIndependanceTh) {
 		this.variantIndependanceTh = variantIndependanceTh;
 		return this;
 	}
@@ -75,7 +82,7 @@ public class ScorerConfig {
 		return variationScoreTh;
 	}
 
-	public ScorerConfig setVariationScoreTh(double variationScoreTh) {
+	public PostProcConfig setVariationScoreTh(double variationScoreTh) {
 		this.variationScoreTh = variationScoreTh;
 		return this;
 	}
@@ -84,7 +91,7 @@ public class ScorerConfig {
 		return orthographicScoreTh;
 	}
 
-	public ScorerConfig setOrthographicScoreTh(double orthographicScoreTh) {
+	public PostProcConfig setOrthographicScoreTh(double orthographicScoreTh) {
 		this.orthographicScoreTh = orthographicScoreTh;
 		return this;
 	}
@@ -93,24 +100,28 @@ public class ScorerConfig {
 		return termIndependanceTh;
 	}
 
-	public ScorerConfig setTermIndependanceTh(double termIndependanceTh) {
+	public PostProcConfig setTermIndependanceTh(double termIndependanceTh) {
 		this.termIndependanceTh = termIndependanceTh;
 		return this;
 	}
 
-	public static ScorerConfig create(double variantIndependenceScoreThreshold, 
+	public static PostProcConfig create(double variantIndependenceScoreThreshold, 
 			double variantExtGainThreshold, 
 			double variantExtSpecThreshold, 
 			double variantScoreThreshold) {
-		ScorerConfig scorerConfig = create();
+		PostProcConfig scorerConfig = create();
 		scorerConfig.setExtensionGainTh(variantExtGainThreshold);
 		scorerConfig.setExtensionSpecTh(variantExtSpecThreshold);
 		scorerConfig.setVariantIndependanceTh(variantIndependenceScoreThreshold);
 		scorerConfig.setVariationScoreTh(variantScoreThreshold);
 		return scorerConfig;
 	}
-	public static ScorerConfig create() {
-		return new ScorerConfig();
+	
+	public static PostProcConfig create() {
+		return new PostProcConfig();
 	}
-
+	
+	public int getMaxNumOfVariants() {
+		return maxNumOfVariants;
+	}
 }

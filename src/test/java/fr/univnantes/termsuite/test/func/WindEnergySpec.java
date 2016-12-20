@@ -151,7 +151,6 @@ public abstract class WindEnergySpec {
 			.aeMorphologicalAnalyzer()
 			.aeExtensionDetector()
 			.aeTermVariantGatherer(false)
-			.aeExtensionVariantGatherer()
 			.aeRanker(TermProperty.SPECIFICITY, true)
 			.run();
 

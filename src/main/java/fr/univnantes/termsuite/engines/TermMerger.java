@@ -6,7 +6,7 @@ import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -23,10 +23,18 @@ public class TermMerger {
 	}
 
 	private void mergeGraphicalVariants(Terminology termino) {
+		LOGGER.info("Merging graphical variations");
 		final MutableInt nbMerged = new MutableInt(0);
 		
 		termino.getRelations(RelationType.VARIATION)
-			.filter(rel -> rel.get(RelationProperty.VARIATION_TYPE) == VariationType.GRAPHICAL)
+			.filter(rel -> rel.isPropertySet(RelationProperty.IS_GRAPHICAL)
+							&& rel.isPropertySet(RelationProperty.IS_PREXATION)
+							&& rel.isPropertySet(RelationProperty.IS_DERIVATION)
+					)
+			.filter(rel -> rel.getPropertyBooleanValue(RelationProperty.IS_GRAPHICAL)
+								&& !rel.getPropertyBooleanValue(RelationProperty.IS_DERIVATION)
+								&& !rel.getPropertyBooleanValue(RelationProperty.IS_PREXATION)
+								)
 			.filter(rel -> rel.getFrom().getFrequency() > rel.getTo().getFrequency())
 			.filter(rel -> rel.getTo().getFrequency() > 0)
 			.filter(rel -> (double)rel.getFrom().getFrequency() / rel.getTo().getFrequency() > MERGING_THRESHOLD)
@@ -45,6 +53,11 @@ public class TermMerger {
 				nbMerged.increment();
 			});
 		
-		LOGGER.debug("Nb merges operated: {}", nbMerged);
+		if(LOGGER.isDebugEnabled()) {
+			LOGGER.debug("Nb merges operated: {}", nbMerged);
+			LOGGER.debug("Number of terms in termino: {}, Number of variations in termino: {}", 
+					termino.getTerms().size(),
+					new TerminologyService(termino).variations().count());
+		}
 	}
 }

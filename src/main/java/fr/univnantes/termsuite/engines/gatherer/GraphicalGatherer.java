@@ -12,6 +12,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class GraphicalGatherer extends AbstractGatherer {
@@ -21,8 +22,6 @@ public class GraphicalGatherer extends AbstractGatherer {
 	
 	public GraphicalGatherer() {
 		super();
-		
-		setRelationType(RelationType.VARIATION);
 		setNbFixedLetters(2);
 	}
 
@@ -104,6 +103,35 @@ public class GraphicalGatherer extends AbstractGatherer {
 						this.getClass(), 
 						"Term has a new graphical variant " + t2 + " (dist="+dist+")");
 		}
+	}
+
+	public void setIsGraphicalVariantProperties(Terminology termino) {
+		termino.getRelations(RelationType.VARIATION)
+		.filter(r -> r.isPropertySet(RelationProperty.IS_GRAPHICAL) 
+				&& !r.getPropertyBooleanValue(RelationProperty.IS_GRAPHICAL))
+		.forEach(r -> {
+			double similarity = distance.computeNormalized(
+					r.getFrom().getLemma(), 
+					r.getTo().getLemma(), 
+					this.similarityThreshold) ;
+			r.setProperty(RelationProperty.IS_GRAPHICAL, similarity >= this.similarityThreshold);
+			
+			if(history.isPresent()) {
+				if(history.get().isWatched(r.getFrom().getGroupingKey())
+						|| history.get().isWatched(r.getTo().getGroupingKey()))
+					history.get().saveEvent(
+							r.getFrom().getGroupingKey(),
+							this.getClass(), 
+							"Variation "+r+" is marked as graphical (dist="+similarity+")");
+					history.get().saveEvent(
+						r.getTo().getGroupingKey(),
+							this.getClass(), 
+							"Variation "+r+" is marked as graphical (dist="+similarity+")");
+			}
+
+		});
+
+		
 	}
 
 }

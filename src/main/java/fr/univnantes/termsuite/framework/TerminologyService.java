@@ -85,6 +85,10 @@ public class TerminologyService {
 				.filter(r-> r.getType() == RelationType.VARIATION);
 	}
 
+	public synchronized Optional<TermRelation> getVariation(Term from, Term to) {
+		return variations(from, to).findAny();
+	}
+
 	public synchronized TermRelation createVariation(VariationType variationType, Term from, Term to) {
 		Optional<TermRelation> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {

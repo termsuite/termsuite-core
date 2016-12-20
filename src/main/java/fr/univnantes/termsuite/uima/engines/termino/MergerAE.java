@@ -43,7 +43,6 @@ import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
  *
  */
 public class MergerAE extends JCasAnnotator_ImplBase {
-	private static final Logger logger = LoggerFactory.getLogger(MergerAE.class);
 	public static final String TASK_NAME = "Merging variants";
 
 	@ExternalResource(key=ObserverResource.OBSERVER, mandatory=true)
@@ -61,7 +60,6 @@ public class MergerAE extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
-		logger.info("Starting " + TASK_NAME);
 		new TermMerger().mergeTerms(terminoResource.getTerminology());
 	}
 

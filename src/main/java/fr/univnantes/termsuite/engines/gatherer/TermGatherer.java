@@ -1,6 +1,5 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
-import java.math.BigInteger;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -10,7 +9,6 @@ import com.google.common.base.Stopwatch;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
@@ -19,14 +17,10 @@ import fr.univnantes.termsuite.utils.TermHistory;
 public class TermGatherer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermGatherer.class);
 
-	private static final int OBSERVING_STEP = 1000;
-
 	private TermHistory history;
 	private YamlRuleSet rules;
 	private GathererOptions gathererOptions = new GathererOptions();
 	
-	private BigInteger totalComparisons = BigInteger.valueOf(0);
-	private int nbComparisons = 0;
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
 	private Optional<MultimapFlatResource> dico = Optional.empty();
@@ -67,7 +61,6 @@ public class TermGatherer {
 			new AbstractGatherer()
 				.setVariationType(VariationType.PREFIXATION)
 				.setIndexName(TermIndexes.PREFIXATION_LEMMAS, true)
-				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(VariationType.PREFIXATION))	
@@ -79,7 +72,6 @@ public class TermGatherer {
 			new AbstractGatherer()
 				.setIndexName(TermIndexes.DERIVATION_LEMMAS, true)
 				.setVariationType(VariationType.DERIVATION)
-				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(VariationType.DERIVATION))	
@@ -91,7 +83,6 @@ public class TermGatherer {
 			new AbstractGatherer()
 				.setIndexName(TermIndexes.ALLCOMP_PAIRS, false)
 				.setVariationType(VariationType.MORPHOLOGICAL)
-				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(VariationType.MORPHOLOGICAL))	
@@ -102,7 +93,6 @@ public class TermGatherer {
 		new AbstractGatherer()
 			.setIndexName(TermIndexes.ALLCOMP_PAIRS, true)
 			.setVariationType(VariationType.SYNTAGMATIC)
-			.setRelationType(RelationType.VARIATION)
 			.setGroovyAdapter(groovyService)
 			.setHistory(history)
 			.setVariantRules(rules.getVariantRules(VariationType.SYNTAGMATIC))	
@@ -113,26 +103,38 @@ public class TermGatherer {
 			new SemanticGatherer()
 				.setDictionary(dico)
 				.setVariationType(VariationType.SEMANTIC)
-				.setRelationType(RelationType.VARIATION)
 				.setGroovyAdapter(groovyService)
 				.setHistory(history)
 				.setVariantRules(rules.getVariantRules(VariationType.SEMANTIC))	
 				.gather(termino);
 		}
 		
+		/*
+		 * Gathers extensions of morpho, derivative, prefix, and semantic variants
+		 */
+		new ExtensionVariantGatherer()
+				.setHistory(history)
+				.gather(termino);
 		
 		if(gathererOptions.isGraphicalGathererEnabled()) {
 			LOGGER.info("Gathering graphical variants");
 			new GraphicalGatherer()
-				.setDistance(new FastDiacriticInsensitiveLevenshtein(false))
-				.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
-				.setNbFixedLetters(termino.getLang().getGraphicalVariantNbPreindexingLetters())
-				.setHistory(history)
-				.gather(termino);
+					.setDistance(new FastDiacriticInsensitiveLevenshtein(false))
+					.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
+					.setNbFixedLetters(termino.getLang().getGraphicalVariantNbPreindexingLetters())
+					.setHistory(history)
+					.gather(termino);
 		}
+		
+		new GraphicalGatherer()
+			.setDistance(new FastDiacriticInsensitiveLevenshtein(false))
+			.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
+			.setIsGraphicalVariantProperties(termino);
+		
 
 		sw.stop();
 		LOGGER.debug("{} finished in {}", this.getClass().getSimpleName(), sw);
 	}
+
 
 }

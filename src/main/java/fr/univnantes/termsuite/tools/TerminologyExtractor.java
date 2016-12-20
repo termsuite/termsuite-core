@@ -75,7 +75,7 @@ import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.ScorerConfig;
+import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.utils.FileUtils;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
@@ -422,7 +422,7 @@ public class TerminologyExtractor {
 			}
 			
 			pipeline.aeExtensionDetector()
-				.aeScorer(ScorerConfig.create())
+				.aeScorer(PostProcConfig.create())
 				.aeRanker(TermProperty.SPECIFICITY, true)
 				.aeMerger()
 				;

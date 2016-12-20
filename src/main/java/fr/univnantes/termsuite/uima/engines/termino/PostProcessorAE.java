@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.postproc.TermPostProcessor;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.ScorerConfig;
+import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;
 import fr.univnantes.termsuite.uima.resources.ObserverResource.SubTaskObserver;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
@@ -58,11 +58,11 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 
 	public static final String SCORER_CONFIG = "ScorerConfig";
 	@ExternalResource(key=SCORER_CONFIG, mandatory=false)
-	protected TermSuiteMemoryUIMAResource<ScorerConfig> scorerConfigResource;
+	protected TermSuiteMemoryUIMAResource<PostProcConfig> scorerConfigResource;
 	
 	private Optional<SubTaskObserver> taskObserver = Optional.empty();
 
-	private Optional<ScorerConfig> scorerConfig = Optional.empty();
+	private Optional<PostProcConfig> scorerConfig = Optional.empty();
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {

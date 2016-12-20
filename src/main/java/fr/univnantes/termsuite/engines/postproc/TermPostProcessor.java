@@ -45,7 +45,7 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.ScorerConfig;
+import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -58,11 +58,11 @@ import fr.univnantes.termsuite.utils.TermHistory;
 public class TermPostProcessor {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermPostProcessor.class);
 
-	private ScorerConfig config;
+	private PostProcConfig config;
 	
 	private TermHistory history;
 	
-	public TermPostProcessor(ScorerConfig config) {
+	public TermPostProcessor(PostProcConfig config) {
 		super();
 		this.config = config;
 	}
@@ -74,50 +74,38 @@ public class TermPostProcessor {
 	
 	public void postprocess(Terminology termino) {
 		LOGGER.info("Post-processing terms and variants");
+		logVariationsAndTerms(termino);
+
 		Stopwatch sw = Stopwatch.createStarted();
 
 		// resets all IS_EXTENSION properies
 		new ExtensionDetecter().setIsExtensionProperty(termino);
 		
+
 		// Score terms 
+		LOGGER.debug("[Post-processing] Scoring terms");
 		new TermScorer().score(termino);
-		
-		// Score variations
-		new VariationScorer().score(termino);
-		
-		
-		
-		// Filter extensions
-		filterExtensionsByThresholds(termino);
-		
-		// Filter relations
-		LOGGER.debug("Filtering variations");
-		Stopwatch variationFilteringSw = Stopwatch.createStarted();
-		Set<TermRelation> remRelations = termino.getRelations(RelationType.VARIATION)
-			.filter(this::filterVariation)
-			.collect(Collectors.toSet());
-		remRelations
-			.stream()
-			.forEach(termino::removeRelation);
-		variationFilteringSw.stop();
-		LOGGER.debug("Filtered {} variations in {}", remRelations.size(), variationFilteringSw);
+		logVariationsAndTerms(termino);
 
 		
-		/*
-		 *  Filter terms with bad orthograph and no independance
-		 *  
-		 *  IMPORTANT: must occur AFTER detection of 2-order extension variations
-		 */
-		LOGGER.debug("Filtering terms");
-		Stopwatch termFilteringSw = Stopwatch.createStarted();
-		Set<Term> remTerms = termino.getTerms().stream()
-			.filter(this::filterTermByThresholds)
-			.collect(Collectors.toSet());
-		remTerms
-			.parallelStream()
-			.forEach(termino::removeTerm);
-		termFilteringSw.stop();
-		LOGGER.debug("Filtered {} terms in {}", remTerms.size(), termFilteringSw);
+		// Score variations
+		LOGGER.debug("[Post-processing] Scoring variations");
+		new VariationScorer().score(termino);
+		logVariationsAndTerms(termino);
+
+		
+		// Filter extensions
+		LOGGER.debug("[Post-processing] Filtering extensions by threshold");
+		filterExtensionsByThresholds(termino);
+		logVariationsAndTerms(termino);
+		
+		
+		
+		// Filter variations
+		LOGGER.debug("[Post-processing] Filtering variations by scores");
+		filterVariationsByScores(termino);
+		logVariationsAndTerms(termino);
+
 		
 		/*
 		 *  Detect 2-order extension variations.
@@ -129,15 +117,43 @@ public class TermPostProcessor {
 		 *  
 		 *  would result in removal of wind turbine --> horizontal axis wind turbine
 		 *  
-		 *  IMPORTANT: must occur after term relation filtering. Otherwise:
+		 *  IMPORTANT: must occur after term variation filtering. Otherwise:
+		 *  				wind turbine --> axis wind turbine --> horizontal axis wind turbine
+		 *  
+		 *  		   will remove "wind turbine --> horizontal axis wind turbine"
 		 */
-		LOGGER.debug("Filtering two-order relations");
-		long size = termino.getRelations(RelationType.VARIATION).count();
-		filterTwoOrderVariationPatterns(new TerminologyService(termino));
-		LOGGER.debug("Filtered {} two-order relations", size - termino.getRelations(RelationType.VARIATION).count());
+		LOGGER.debug("[Post-processing] Merging two-order variations");
+		mergeTwoOrderVariationPatterns(new TerminologyService(termino));
+		logVariationsAndTerms(termino);
+
+		
+		/*
+		 *  Filter terms with bad orthograph and no independance
+		 *  
+		 *  IMPORTANT: must occur AFTER detection of 2-order extension variations
+		 */
+		LOGGER.debug("[Post-processing] Filtering terms by scores");
+		filterTermsByScores(termino);
+		logVariationsAndTerms(termino);
+
 		
 		// Rank variations extensions
 		LOGGER.debug("Ranking term variations");
+		rankVariations(termino);
+		sw.stop();
+		
+		LOGGER.debug("[Post-processing] Post-processing finished in {}", sw);
+	}
+
+	private void logVariationsAndTerms(Terminology termino) {
+		if(LOGGER.isDebugEnabled()) {
+			long var = termino.getRelations(RelationType.VARIATION).count();
+			LOGGER.debug("Number of terms: {}. Number of variations: {}",
+					termino.getTerms().size(), var);
+		}
+	}
+
+	public void rankVariations(Terminology termino) {
 		termino.getTerms().forEach(t-> {
 			final MutableInt vrank = new MutableInt(0);
 			termino.getOutboundRelations(t, RelationType.VARIATION)
@@ -148,13 +164,29 @@ public class TermPostProcessor {
 					rel.setProperty(RelationProperty.VARIATION_RANK, vrank.intValue());
 				});
 		});
-		sw.stop();
-		
-		LOGGER.debug("Post-processing finished in {}", sw);
 	}
 
-	private void filterTwoOrderVariationPatterns(TerminologyService terminoService) {
-		LOGGER.debug("Filtering two-order relations");
+	public Set<Term> filterTermsByScores(Terminology termino) {
+		Set<Term> remTerms = termino.getTerms().stream()
+			.filter(this::filterTermByThresholds)
+			.collect(Collectors.toSet());
+		remTerms
+			.parallelStream()
+			.forEach(termino::removeTerm);
+		return remTerms;
+	}
+
+	public Set<TermRelation> filterVariationsByScores(Terminology termino) {
+		Set<TermRelation> remRelations = termino.getRelations(RelationType.VARIATION)
+			.filter(this::filterVariation)
+			.collect(Collectors.toSet());
+		remRelations
+			.stream()
+			.forEach(termino::removeRelation);
+		return remRelations;
+	}
+
+	private void mergeTwoOrderVariationPatterns(TerminologyService terminoService) {
 		Stopwatch sw = Stopwatch.createStarted();
 
 		/*

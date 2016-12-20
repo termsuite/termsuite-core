@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.engines;
+package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
