@@ -64,11 +64,17 @@ public class GraphicalVariantGathererSpec {
 		manager.register(termino.getName(), termino);
 		TermFactory termFactory = new TermFactory(termino);
 		tetetete = termFactory.create("N:tetetete|tetetete");
+		tetetete.setSpecificity(1d);
 		tetetetx = termFactory.create("N:tetetetx|tetetetx");
+		tetetetx.setSpecificity(2d);
 		teteteteAccent = termFactory.create("N:tétetete|tétetete");
+		teteteteAccent.setSpecificity(3d);
 		abcdefghijklCapped = termFactory.create("N:Abcdefghijkl|Abcdefghijkl");
+		abcdefghijklCapped.setSpecificity(4d);
 		abcdefghijkl = termFactory.create("N:abcdefghijkl|abcdefghijkl");
+		abcdefghijkl.setSpecificity(5d);
 		abcdefghijkx = termFactory.create("N:abcdefghijkx|abcdefghijkx");
+		abcdefghijkx.setSpecificity(6d);
 		return termino;
 	}
 
@@ -82,16 +88,19 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testCaseInsensitive() throws  Exception {
 		makeAE( 1.0d).gather(termino);
-		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(1)
-		.extracting("from")
-		.contains(this.abcdefghijklCapped);
+		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(0)
+			.extracting("from");
+		assertThat(termino.getInboundRelations(this.abcdefghijklCapped)).hasSize(1)
+			.extracting("from")
+			.contains(this.abcdefghijkl);
 		assertThat(termino.getOutboundRelations(this.abcdefghijkl)).hasSize(1);
+		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped)).hasSize(0);
 		
-		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
+		assertThat(termino.getOutboundRelations(this.abcdefghijkl))
 			.hasSize(1)
 			.extracting("to")
-			.contains(this.abcdefghijkl);
-		assertThat(termino.getInboundRelations(this.abcdefghijklCapped)).hasSize(1);
+			.contains(this.abcdefghijklCapped);
+		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(0);
 	}
 
 
@@ -99,26 +108,30 @@ public class GraphicalVariantGathererSpec {
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
 		makeAE( 1.0d).gather(termino);
 		assertThat(termino.getOutboundRelations(this.tetetete))
+			.hasSize(0)
+			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO);
+
+		assertThat(termino.getOutboundRelations(this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
-			.contains(tuple(VariationType.GRAPHICAL, this.teteteteAccent));
-	}
+			.contains(tuple(VariationType.GRAPHICAL, this.tetetete));
+}
 	
 	
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
 		makeAE( 0.9d).gather(termino);
-		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
+		assertThat(termino.getOutboundRelations(this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
-			.contains(this.abcdefghijkl, this.abcdefghijkx);
+			.contains(this.abcdefghijkl, this.abcdefghijklCapped);
 		
-		assertThat(termino.getOutboundRelations(this.tetetete))
+		assertThat(termino.getOutboundRelations(this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(
-					tuple(VariationType.GRAPHICAL, this.teteteteAccent)
+					tuple(VariationType.GRAPHICAL, this.tetetete)
 					);
 	}
 
@@ -127,18 +140,17 @@ public class GraphicalVariantGathererSpec {
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
 		makeAE(0.8d).gather(termino);
 		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
+			.hasSize(0);
+		
+		assertThat(termino.getOutboundRelations(this.abcdefghijkl))
+			.hasSize(1)
+			.extracting("to")
+			.contains(this.abcdefghijklCapped);
+
+		assertThat(termino.getOutboundRelations(this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
-			.contains(this.abcdefghijkl, this.abcdefghijkx);
-		
-		assertThat(termino.getOutboundRelations(this.tetetete))
-			.hasSize(2)
-			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
-			.contains(
-					tuple(VariationType.GRAPHICAL, this.teteteteAccent),
-					tuple(VariationType.GRAPHICAL, this.tetetetx)
-					);
-
+			.contains(this.abcdefghijklCapped, this.abcdefghijkl);
 	}
 
 }

@@ -115,7 +115,6 @@ import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
 import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
-import fr.univnantes.termsuite.uima.engines.termino.MergerAE;
 import fr.univnantes.termsuite.uima.engines.termino.MorphologicalAnalyzerAE;
 import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.PostProcessorAE;
@@ -1805,28 +1804,6 @@ public class TermSuitePipeline {
 
 
 			return aggregateAndReturn(ae, PostProcessorAE.TASK_NAME, 1);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
-	/**
-	 *  Merges the variants (only those who are extensions of the base term) 
-	 *  of a terms by graphical variation.
-	 *  
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aeMerger()   {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					MergerAE.class
-				);
-			
-			ExternalResourceFactory.bindResource(ae, resTermino());
-			ExternalResourceFactory.bindResource(ae, resObserver());
-
-			return aggregateAndReturn(ae, MergerAE.TASK_NAME, 1);
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}

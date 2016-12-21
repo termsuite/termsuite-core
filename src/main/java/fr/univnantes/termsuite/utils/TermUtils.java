@@ -456,4 +456,12 @@ public class TermUtils {
 				RelationType.DERIVES_INTO,
 				RelationType.IS_PREFIX_OF);
 	}
+	
+	public static void setTfIdf(Term term) {
+		term.setTfIdf((double)term.getFrequency()/term.getDocumentFrequency());
+	}
+	
+	public static void setSpecificity(Term term) {
+		term.setSpecificity(Math.log10(1 + term.getFrequencyNorm()/term.getGeneralFrequencyNorm()));
+	}
 }

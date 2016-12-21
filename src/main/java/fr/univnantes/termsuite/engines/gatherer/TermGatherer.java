@@ -133,6 +133,14 @@ public class TermGatherer {
 			.setSimilarityThreshold(gathererOptions.getGraphicalSimilarityThreshold())
 			.setIsGraphicalVariantProperties(termino);
 		
+		
+		/*
+		 * Merging terms
+		 */
+		new TermMerger()
+				.setHistory(history)
+				.mergeTerms(termino);
+		
 		/*
 		 * Set the variant_frequency properties
 		 */

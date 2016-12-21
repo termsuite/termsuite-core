@@ -87,7 +87,7 @@ public class TerminoExtractor {
 	private boolean preprocessed = false;
 	
 	
-	private boolean mergeGraphicalVariants = true;
+//	private boolean mergeGraphicalVariants = true;
 
 	
 	
@@ -271,10 +271,10 @@ public class TerminoExtractor {
 		return this;
 	}
 
-	public TerminoExtractor disableGraphVariantMerging() {
-		this.mergeGraphicalVariants = false;
-		return this;
-	}
+//	public TerminoExtractor disableGraphVariantMerging() {
+//		this.mergeGraphicalVariants = false;
+//		return this;
+//	}
 
 	public TerminoExtractor setTreeTaggerHome(String treeTaggerHome) {
 		this.treeTaggerHome = treeTaggerHome;
@@ -413,8 +413,8 @@ public class TerminoExtractor {
 		pipeline
 			.aeRanker(TermProperty.SPECIFICITY, true);
 
-		if(mergeGraphicalVariants)
-			pipeline.aeMerger();
+//		if(mergeGraphicalVariants)
+//			pipeline;
 
 		if(postFilterConfig.isPresent()) 
 			PipelineUtils.filter(pipeline, postFilterConfig.get());

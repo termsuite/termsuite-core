@@ -424,7 +424,6 @@ public class TerminologyExtractor {
 			pipeline.aeExtensionDetector()
 				.aeScorer(PostProcConfig.create())
 				.aeRanker(TermProperty.SPECIFICITY, true)
-				.aeMerger()
 				;
 			
 			

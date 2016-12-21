@@ -36,6 +36,7 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguage;
 import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSpecificityComputer.class);
@@ -106,8 +107,10 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 				double normalizedTermFrequency = (1000 * termFrequency)/termino.getWordAnnotationsNum();
 				term.setFrequencyNorm(normalizedTermFrequency);
 				term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
-				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
-				term.setTfIdf((double)term.getFrequency()/term.getDocumentFrequency());
+				TermUtils.setSpecificity(term);
+				TermUtils.setTfIdf(term);
+//				term.setSpecificity(Math.log10(1 + normalizedTermFrequency/normalizedGeneralTermFrequency));
+//				term.setTfIdf((double)term.getFrequency()/term.getDocumentFrequency());
 				watch(term);
 			}
 		}
