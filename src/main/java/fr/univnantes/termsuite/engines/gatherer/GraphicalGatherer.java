@@ -68,40 +68,43 @@ public class GraphicalGatherer extends AbstractGatherer {
 			t1 = terms.get(i);
 			for(int j=i+1; j<terms.size();j++) {
 				cnt.incrementAndGet();
-//				if(nbComparisons % OBSERVER_STEP == 0 && taskObserver.isPresent())
-//					taskObserver.get().work(OBSERVER_STEP);
 				t2 = terms.get(j);
 				dist = distance.computeNormalized(t1.getLemma(), t2.getLemma(), this.similarityThreshold);
 				if(dist >= this.similarityThreshold) {
-//					gatheredCnt++;
-					createGraphicalRelation(termino, t1, t2, dist);
-					createGraphicalRelation(termino, t2, t1, dist);
-					watch(t2, t1, dist);
-
+					
+					/*
+					 * Direct the graphical connection according to frequency then specificity
+					 */
+					if(t1.getFrequency() > t2.getFrequency())
+						createGraphicalRelation(termino, t1, t2, dist);
+					else if(t1.getFrequency() == t2.getFrequency() && t1.getSpecificity() > t2.getSpecificity())
+						createGraphicalRelation(termino, t1, t2, dist);
+					else
+						createGraphicalRelation(termino, t2, t1, dist);
 				}
 			}
 		}
-		
-		// log some stats
-//		logger.debug("Graphical gathering {} terms gathered / {} pairs compared", gatheredCnt, nbComparisons);
-		
-//		progressLoggerTimer.cancel();
 	}
 	
-	protected TermRelation createGraphicalRelation(TerminologyService termino, Term source, Term target, Double similarity) {
-		TermRelation rel = termino.createVariation(VariationType.GRAPHICAL, source, target);
+	protected TermRelation createGraphicalRelation(TerminologyService termino, Term from, Term to, Double similarity) {
+		TermRelation rel = termino.createVariation(VariationType.GRAPHICAL, from, to);
 		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
-		watch(source, target, similarity);
+		watch(from, to, similarity);
 		return rel;
 	}
 	
-	private void watch(Term t1, Term t2, double dist) {
+	private void watch(Term from, Term to, double dist) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(t1.getGroupingKey()))
+			if(history.get().isWatched(from.getGroupingKey()))
 				history.get().saveEvent(
-						t1.getGroupingKey(),
+						from.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new graphical variant " + t2 + " (dist="+dist+")");
+						"Term has a new graphical variant " + to + " (dist="+dist+")");
+			if(history.get().isWatched(to.getGroupingKey()))
+				history.get().saveEvent(
+						to.getGroupingKey(),
+						this.getClass(), 
+						"Term has a new graphical base " + from + " (dist="+dist+")");
 		}
 	}
 
@@ -114,7 +117,10 @@ public class GraphicalGatherer extends AbstractGatherer {
 					r.getFrom().getLemma(), 
 					r.getTo().getLemma(), 
 					this.similarityThreshold) ;
-			r.setProperty(RelationProperty.IS_GRAPHICAL, similarity >= this.similarityThreshold);
+			boolean isGraphicalVariant = similarity >= this.similarityThreshold;
+			r.setProperty(RelationProperty.IS_GRAPHICAL, isGraphicalVariant);
+			if(isGraphicalVariant)
+				r.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 			
 			if(history.isPresent()) {
 				if(history.get().isWatched(r.getFrom().getGroupingKey())
