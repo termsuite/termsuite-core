@@ -27,6 +27,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import fr.univnantes.termsuite.engines.ExtensionDetecter;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
@@ -57,7 +58,15 @@ import fr.univnantes.termsuite.utils.TermUtils;
  */
 public class VariationScorer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VariationScorer.class);
-	
+	private static final Predicate<? super TermRelation> NOT_SEMANTIC = v -> 
+			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
+			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
+					|| !v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
+	private static final Predicate<? super TermRelation> SEMANTIC = v -> 
+		v.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC 
+		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
+				&& v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
+
 	public void score(Terminology termino) {
 		LOGGER.info("Computing scores for variations");
 		Stopwatch sw = Stopwatch.createStarted();
@@ -83,7 +92,7 @@ public class VariationScorer {
 		normalizeExtensionScores(termino);
 		
 		LOGGER.debug("Computing {}", RelationProperty.VARIANT_SCORE);
-		doVariantScores(termino);
+		doVariantScores(terminoService);
 		
 		sw.stop();
 		LOGGER.debug("Scores computed in {}", sw);
@@ -113,15 +122,47 @@ public class VariationScorer {
 							normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))));
 	}
 
-	public void doVariantScores(Terminology termino) {
-		termino.getRelations(RelationType.VARIATION).forEach( relation -> {
-			double score = relation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
-							0.91*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
-							0.89 + 0.1*relation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
-			relation.setProperty(
+	public void doVariantScores(TerminologyService termino) {
+		
+		/*
+		 * Non-semantic variations
+		 */
+		termino.variations()
+			.filter(NOT_SEMANTIC)
+			.forEach( variation -> {
+				double score = variation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
+							0.91*variation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
+							0.89 + 0.1*variation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
+				variation.setProperty(
 					RelationProperty.VARIANT_SCORE, 
 					score);
 		});
+		
+		/*
+		 * Semantic variations
+		 */
+		termino.variations()
+			.filter(SEMANTIC)
+			.forEach( variation -> {
+				/*
+				 * The score of a semantic variation is :
+				 *  - 0.75 if the variation is dico
+				 *  - 0.75*similarity otherwise
+				 * 
+				 */
+				
+				double score = 0.75;
+				if(!variation.isPropertySet(RelationProperty.IS_DISTRIBUTIONAL))
+					System.out.println(variation.getProperties());
+				if(variation.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL)) {
+					score *= variation.getPropertyDoubleValue(RelationProperty.SEMANTIC_SIMILARITY);
+				}
+				
+				variation.setProperty(
+					RelationProperty.VARIANT_SCORE, 
+					score);
+			});
+
 	}
 
 	
@@ -135,31 +176,34 @@ public class VariationScorer {
 			newVisitedTerms.add(term);
 			newVisitedTerms.add(rel.getFrom());
 			AtomicInteger sum = new AtomicInteger(term.getFrequency());
-			termino.variationsFrom(term).forEach(v2 -> {
-				if(v2.getPropertyDoubleValue(RelationProperty.STRICTNESS) >= 0.95) {
-					sum.addAndGet(recursiveDoVariationFrenquencies(termino, v2, newVisitedTerms));
-				}
+			termino.variationsFrom(term)
+				// exclude semantic variations, otherwise there are too many variation pathes
+				.filter(NOT_SEMANTIC)
+				.forEach(v2 -> {
+					if(v2.getPropertyDoubleValue(RelationProperty.STRICTNESS) >= 0.95) {
+						sum.addAndGet(recursiveDoVariationFrenquencies(termino, v2, newVisitedTerms));
+					}
 			});
 			return sum.get();
 		}
 	}
 
 	public void doVariationFrenquencies(TerminologyService termino) {
-		termino.variations().forEach(v1 -> {
-//			if(v1.getTo().getGroupingKey().equals("nnn: horizontal-axis wind turbine")) {
-//				System.out.println("--------------------------------------------");
-//				System.out.println(v1);
-//				termino.variationsFrom(v1.getTo()).forEach(System.out::println);
-//			}
-			v1.setProperty(
+		termino.variations()
+			// exclude semantic variations, otherwise there are too many variation pathes
+			.filter(NOT_SEMANTIC)
+			.forEach(v1 -> {
+				v1.setProperty(
 					RelationProperty.VARIANT_BAG_FREQUENCY, 
 					recursiveDoVariationFrenquencies(termino, v1, new HashSet<>()));
 		});
 	}
 
 	public void doStrictnesses(TerminologyService termino) {
-		termino.variations().forEach( relation -> {
-			relation.setProperty(RelationProperty.STRICTNESS, 
+		termino.variations()
+			.filter(NOT_SEMANTIC)
+			.forEach( relation -> {
+				relation.setProperty(RelationProperty.STRICTNESS, 
 					TermUtils.getStrictness(
 							termino.getTerminology().getOccurrenceStore(), 
 					relation.getTo(), 
@@ -168,9 +212,10 @@ public class VariationScorer {
 		
 	}
 	public void doSourceGains(TerminologyService termino) {
-		termino.variations().forEach( relation -> {
-			double sourceGain = Math.log10((double)relation.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
-			relation.setProperty(RelationProperty.SOURCE_GAIN, 
+		termino.variations()
+			.forEach( relation -> {
+				double sourceGain = Math.log10((double)relation.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
+				relation.setProperty(RelationProperty.SOURCE_GAIN, 
 					sourceGain);
 
 		});
@@ -178,8 +223,8 @@ public class VariationScorer {
 
 	public void scoreExtensions(Terminology termino) {
 		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
-			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
-			new ExtensionDetecter().detectExtensions(termino);
+			LOGGER.warn("No {} relation set. Cannot score extensions.", RelationType.HAS_EXTENSION);
+			return;
 		}
 		
 		Term affix;
