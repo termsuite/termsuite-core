@@ -106,6 +106,18 @@ public class ExtensionVariantGatherer {
 									TermRelation inferedRel = terminoService.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
 									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
 									inferedRel.setProperty(type.getRelationProperty(), true);
+									
+									if(type == VariationType.SEMANTIC) {
+										inferedRel.setProperty(
+												RelationProperty.IS_DISTRIBUTIONAL, 
+												relation.get(RelationProperty.IS_DISTRIBUTIONAL));
+										
+										if(relation.isPropertySet(RelationProperty.SEMANTIC_SIMILARITY))
+											inferedRel.setProperty(
+													RelationProperty.SEMANTIC_SIMILARITY, 
+													relation.get(RelationProperty.SEMANTIC_SIMILARITY));
+									}
+									
 									watch(inferedRel, rel1, rel2);
 								}
 							});
