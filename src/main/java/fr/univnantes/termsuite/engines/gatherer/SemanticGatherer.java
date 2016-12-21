@@ -177,7 +177,7 @@ public class SemanticGatherer extends AbstractGatherer {
 				// Add top distrib candidates to termindex
 				t1Relations
 					.stream()
-					.sorted(RelationProperty.SIMILARITY.getComparator(true))
+					.sorted(RelationProperty.SEMANTIC_SIMILARITY.getComparator(true))
 					.limit(this.nbDistributionalCandidates)
 					.forEach(rel -> {
 						nbDistribRelationsFound.incrementAndGet();
@@ -199,7 +199,7 @@ public class SemanticGatherer extends AbstractGatherer {
 	private TermRelation buildDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
 		TermRelation rel = terminoService.buildVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
-		rel.setProperty(RelationProperty.SIMILARITY, value);
+		rel.setProperty(RelationProperty.SEMANTIC_SIMILARITY, value);
 		watch(t1, t2);
 		return rel;
 	}

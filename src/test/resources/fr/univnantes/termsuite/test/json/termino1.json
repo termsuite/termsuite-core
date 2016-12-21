@@ -92,6 +92,6 @@
 	relations: [
 		{from: "n: word1", to: "na: word1 word2", type: "var", props: {vrule: "n-na", vtype: "syn"}},
 		{from: "a: word2", to: "na: word1 word2", type: "var", props: {vrule: "a-na", vtype: "syn"}},
-		{from: "na: word1 word2", to: "n: word1", type: "var", props: {sim: 0.914, vtype: "graph"}}
+		{from: "na: word1 word2", to: "n: word1", type: "var", props: {graphSim: 0.914, vtype: "graph"}}
 	]
 }

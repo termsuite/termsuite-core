@@ -122,7 +122,7 @@ public class JsonTerminologyIOSpec {
 		termino.addRelation(rel1);
 		TermRelation rel2 = new TermRelation(RelationType.VARIATION, term1, term2);
 		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
-		rel2.setProperty(RelationProperty.SIMILARITY, 0.956d);
+		rel2.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, 0.956d);
 		termino.addRelation(rel2);
 		
 		// generate context vectors
@@ -371,10 +371,10 @@ public class JsonTerminologyIOSpec {
 		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(0)).get("props"))
 			.containsEntry("vrule", "variationRule1")
 			.containsEntry("vtype", "syn")
-			.doesNotContainKey("sim");
+			.doesNotContainKey("graphSim");
 
 		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(1)).get("props"))
-			.containsEntry("sim", 0.956)
+			.containsEntry("graphSim", 0.956)
 			.containsEntry("vtype", "graph")
 			.doesNotContainKey("vrule");
 	}

@@ -90,7 +90,7 @@ public class GraphicalGatherer extends AbstractGatherer {
 	
 	protected TermRelation createGraphicalRelation(TerminologyService termino, Term source, Term target, Double similarity) {
 		TermRelation rel = termino.createVariation(VariationType.GRAPHICAL, source, target);
-		rel.setProperty(RelationProperty.SIMILARITY, similarity);
+		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 		watch(source, target, similarity);
 		return rel;
 	}
