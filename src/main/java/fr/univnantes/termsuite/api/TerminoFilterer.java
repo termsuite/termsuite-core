@@ -1,12 +1,13 @@
 package fr.univnantes.termsuite.api;
 
+import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.utils.PipelineUtils;
 
 public class TerminoFilterer {
 
-	private TerminoFilterConfig config = new TerminoFilterConfig();
+	private TerminoFilterOptions config = new TerminoFilterOptions();
 	
 	private Terminology termino;
 	
@@ -16,7 +17,7 @@ public class TerminoFilterer {
 		return terminoFilterer;
 	}
 	
-	public TerminoFilterer configure(TerminoFilterConfig config) {
+	public TerminoFilterer configure(TerminoFilterOptions config) {
 		this.config = config;
 		return this;
 	}

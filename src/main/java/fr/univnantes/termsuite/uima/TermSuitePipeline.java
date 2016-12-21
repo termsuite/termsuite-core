@@ -105,6 +105,7 @@ import fr.univnantes.termsuite.uima.engines.preproc.FixedExpressionSpotter;
 import fr.univnantes.termsuite.uima.engines.preproc.FixedExpressionTermMarker;
 import fr.univnantes.termsuite.uima.engines.preproc.MateLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.preproc.MateLemmatizerTagger;
+import fr.univnantes.termsuite.uima.engines.preproc.MaxSizeThresholdCleaner;
 import fr.univnantes.termsuite.uima.engines.preproc.RegexSpotter;
 import fr.univnantes.termsuite.uima.engines.preproc.StringRegexFilter;
 import fr.univnantes.termsuite.uima.engines.preproc.TermOccAnnotationImporter;
@@ -122,10 +123,7 @@ import fr.univnantes.termsuite.uima.engines.termino.Ranker;
 import fr.univnantes.termsuite.uima.engines.termino.SWTSizeSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.TermGathererAE;
 import fr.univnantes.termsuite.uima.engines.termino.TermSpecificityComputer;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.AbstractTerminologyCleaner;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.MaxSizeThresholdCleaner;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.TerminologyThresholdCleaner;
-import fr.univnantes.termsuite.uima.engines.termino.cleaning.TerminologyTopNCleaner;
+import fr.univnantes.termsuite.uima.engines.termino.TerminologyCleanerAE;
 import fr.univnantes.termsuite.uima.readers.AbstractToTxtSaxHandler;
 import fr.univnantes.termsuite.uima.readers.CollectionDocument;
 import fr.univnantes.termsuite.uima.readers.EmptyCollectionReader;
@@ -1498,7 +1496,6 @@ public class TermSuitePipeline {
 				manager.register(termino.get().getName(), termino.get());
 		}
 		return terminoResourceDesc;
-		
 	}
 	
 	private ExternalResourceDescription pipelineObserverResource;
@@ -1637,10 +1634,16 @@ public class TermSuitePipeline {
 	
 	public TermSuitePipeline aeMaxSizeThresholdCleaner(TermProperty property, int maxSize) {
 		try {
+			if(!this.termino.isPresent())
+				resTermino();
+			String terminoServiceName = String.format("service-%s", this.termino.get().getName());
+			String mutexName = String.format("mutex-%s", this.termino.get().getName());
+			
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				MaxSizeThresholdCleaner.class,
-				AbstractTerminologyCleaner.CLEANING_PROPERTY, property,	
-				MaxSizeThresholdCleaner.MAX_SIZE, maxSize
+				MaxSizeThresholdCleaner.MAX_SIZE, maxSize,
+				MaxSizeThresholdCleaner.CLEANING_MUTEX_NAME, mutexName,
+				MaxSizeThresholdCleaner.TERMINOLOGY_SERVICE_NAME, terminoServiceName
 			);
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
@@ -1652,16 +1655,38 @@ public class TermSuitePipeline {
 	}
 
 	
-	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold, boolean isPeriodic, int cleaningPeriod, int terminoSizeTrigger) {
+	public TermSuitePipeline setKeepVariantsWhileCleaning(boolean keepVariantsWhileCleaning) {
+		this.keepVariantsWhileCleaning = keepVariantsWhileCleaning;
+		return this;
+	}
+	
+
+	public TermSuitePipeline aeTopNCleaner(TermProperty property, int n)  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-				TerminologyThresholdCleaner.class,
-				AbstractTerminologyCleaner.CLEANING_PROPERTY, property,
-				AbstractTerminologyCleaner.NUM_TERMS_CLEANING_TRIGGER, terminoSizeTrigger,
-				AbstractTerminologyCleaner.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
-				TerminologyThresholdCleaner.THRESHOLD, (float)threshold
+					TerminologyCleanerAE.class,
+					TerminologyCleanerAE.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
+					TerminologyCleanerAE.CLEANING_PROPERTY, property,
+					TerminologyCleanerAE.TOP_N, n
+					);
+			ExternalResourceFactory.bindResource(ae, resTermino());
+			ExternalResourceFactory.bindResource(ae, resHistory());
+
+			return aggregateAndReturn(ae, "Cleaning termino. Keepings only top " + n + " terms on property " + property.toString().toLowerCase(), 0);
+		} catch(Exception e) {
+			throw new TermSuitePipelineException(e);
+		}
+
+	}
+	
+	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold) {
+		try {
+			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
+				TerminologyCleanerAE.class,
+				TerminologyCleanerAE.CLEANING_PROPERTY, property,
+				TerminologyCleanerAE.KEEP_VARIANTS, this.keepVariantsWhileCleaning,
+				TerminologyCleanerAE.THRESHOLD, (float)threshold
 			);
-			setPeriodic(isPeriodic, cleaningPeriod, ae);
 			
 			ExternalResourceFactory.bindResource(ae, resTermino());
 			ExternalResourceFactory.bindResource(ae, resHistory());
@@ -1671,74 +1696,8 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-	
-	private void setPeriodic(boolean isPeriodic, int cleaningPeriod,
-			AnalysisEngineDescription ae) {
-		if(isPeriodic)
-			addParameters(ae, 
-					AbstractTerminologyCleaner.PERIODIC_CAS_CLEAN_ON, true,
-					AbstractTerminologyCleaner.CLEANING_PERIOD, cleaningPeriod
-				);
-	}
-	
-	/**
-	 * 
-	 * 
-	 * 
-	 * @param property
-	 * @param threshold
-	 * @param cleaningPeriod
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aeThresholdCleanerPeriodic(TermProperty property, double threshold, int cleaningPeriod)   {
-		return aeThresholdCleaner(property, threshold, true, cleaningPeriod, 0);
-	}
-
-	public TermSuitePipeline aeThresholdCleanerSizeTrigger(TermProperty property, double threshold, int terminoSizeTrigger)   {
-		return aeThresholdCleaner(property, threshold, false, 0, terminoSizeTrigger);
-	}
 
 	
-	public TermSuitePipeline setKeepVariantsWhileCleaning(boolean keepVariantsWhileCleaning) {
-		this.keepVariantsWhileCleaning = keepVariantsWhileCleaning;
-		return this;
-	}
-	
-	public TermSuitePipeline aeThresholdCleaner(TermProperty property, double threshold) {
-		return aeThresholdCleaner(property, threshold, false, 0, 0);
-	}
-
-	public TermSuitePipeline aeTopNCleaner(TermProperty property, int n)  {
-		return aeTopNCleanerPeriodic(property, n, false, 0);
-	}
-	
-	/**
-	 * 
-	 * @param property
-	 * @param n
-	 * @param isPeriodic
-	 * @param cleaningPeriod
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline aeTopNCleanerPeriodic(TermProperty property, int n, boolean isPeriodic, int cleaningPeriod)  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					TerminologyTopNCleaner.class,
-					AbstractTerminologyCleaner.CLEANING_PROPERTY, property,
-					TerminologyTopNCleaner.TOP_N, n
-					);
-			setPeriodic(isPeriodic, cleaningPeriod, ae);
-			ExternalResourceFactory.bindResource(ae, resTermino());
-			ExternalResourceFactory.bindResource(ae, resHistory());
-
-			return aggregateAndReturn(ae, "Cleaning termino. Keepings only top " + n + " terms on property " + property.toString().toLowerCase(), 0);
-		} catch(Exception e) {
-			throw new TermSuitePipelineException(e);
-		}
-	}
-
 	public TermSuitePipeline setGraphicalVariantSimilarityThreshold(double th) {
 		this.graphicalVariantSimilarityThreshold = Optional.of(th);
 		return this;

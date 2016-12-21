@@ -27,8 +27,6 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.TermMerger;
 import fr.univnantes.termsuite.uima.resources.ObserverResource;

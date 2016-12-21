@@ -29,7 +29,6 @@ import org.apache.uima.jcas.JCas;
 import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermSelector;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 
@@ -114,9 +113,6 @@ public interface Terminology {
 	public CustomTermIndex createCustomIndex(String indexName, TermValueProvider termClassProvider);
 	public void dropCustomIndex(String indexName);
 
-	public void deleteMany(TermSelector selector);
-
-	
 	/*
 	 * Occurrences
 	 */

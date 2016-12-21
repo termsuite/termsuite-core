@@ -1,22 +1,22 @@
 package fr.univnantes.termsuite.utils;
 
-import fr.univnantes.termsuite.api.TerminoFilterConfig;
+import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
 
 public class PipelineUtils {
 
-	public static void filter(TermSuitePipeline pipeline, TerminoFilterConfig config) {
+	public static void filter(TermSuitePipeline pipeline, TerminoFilterOptions config) {
 		pipeline.setKeepVariantsWhileCleaning(config.isKeepVariants());
 		switch(config.getFilterType()) {
-		case THRESHHOLD:
+		case THRESHOLD:
 			pipeline.aeThresholdCleaner(
 					config.getFilterProperty(), 
-					(double)config.getThreshhold());
+					config.getThreshold().floatValue());
 			break;
 		case TOP_N:
 			pipeline.aeTopNCleaner(
 					config.getFilterProperty(), 
-					(int)config.getTopN());
+					config.getTopN());
 			break;
 		}
 

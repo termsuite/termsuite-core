@@ -19,25 +19,22 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.uima.engines.termino.cleaning;
+package fr.univnantes.termsuite.uima.engines.preproc;
+
+import java.util.concurrent.Semaphore;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Preconditions;
-
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.FrequencyUnderThreshholdSelector;
-import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
+import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 
 /**
@@ -46,53 +43,54 @@ import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	private static final Logger logger = LoggerFactory.getLogger(MaxSizeThresholdCleaner.class);
 
-	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
-	protected TerminologyResource terminoResource;
-
 	public static final String MAX_SIZE="MaxSize";
 	@ConfigurationParameter(name=MAX_SIZE, mandatory=true)
 	private int maxSize;
 	
-	public static final String CLEANING_PROPERTY="CleaningProperty";
-	@ConfigurationParameter(name=CLEANING_PROPERTY, mandatory=true)
-	protected TermProperty property;
-
 	private static final Float REMOVAL_RATIO_THRESHHOLD = 0.6f;
 	private int currentThreshhold = 2;
 	
+	public static final String TERMINOLOGY_SERVICE_NAME="TerminologyServiceName";
+	@ConfigurationParameter(name=TERMINOLOGY_SERVICE_NAME, mandatory=true)
+	private String terminologyServiceName;
+
+	public static final String CLEANING_MUTEX_NAME="CleaningMutexName";
+	@ConfigurationParameter(name=CLEANING_MUTEX_NAME, mandatory=true)
+	private String mutexName;
+
+	private TerminologyService terminologyService;
+	private Semaphore cleanerMutex;
+
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		Preconditions.checkArgument(property.isNumeric(),
-				"Can only initialize this AE with Integer, Double or Float"
-				);
+		this.terminologyService = (TerminologyService)TermSuiteResourceManager.getInstance().get(terminologyServiceName);
+		this.cleanerMutex = (Semaphore)TermSuiteResourceManager.getInstance().get(mutexName);
 	}
 	
-	protected boolean acceptTerm(Term term) {
-		if(property.getRange().equals(Double.class))
-			return term.getPropertyDoubleValue(property) >= currentThreshhold;
-		else if(property.getRange().equals(Integer.class))
-			return term.getPropertyIntegerValue(property) >= currentThreshhold;
-		else if(property.getRange().equals(Float.class))
-			return term.getPropertyFloatValue(property) >= currentThreshhold;
-		else 
-			throw new IllegalStateException("Should never happen since this has been checked at AE init");
-	}
-
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
-		
-		int sizeBefore = terminoResource.getTerminology().getTerms().size();
-		if(terminoResource.getTerminology().getTerms().size() >= maxSize) {
+		try {
+			cleanerMutex.acquire();
+			cleanIfTooBig();
+			cleanerMutex.release();
+		} catch (InterruptedException e) {
+			throw new AnalysisEngineProcessException(e);
+		}
+	}
+
+	public void cleanIfTooBig() {
+		long sizeBefore = terminologyService.termCount();
+		if(sizeBefore >= maxSize) {
 			logger.debug(
 					"Current term index size = {} (> {}). Start cleaning with th={}", 
 					sizeBefore,
 					maxSize, 
 					currentThreshhold);
 			
-			terminoResource.getTerminology().deleteMany(new FrequencyUnderThreshholdSelector(currentThreshhold));
+			terminologyService.removeAll(t-> t.getFrequency() < currentThreshhold);
 
-			int sizeAfter = terminoResource.getTerminology().getTerms().size();
+			long sizeAfter = terminologyService.termCount();
 			double removalRatio = ((double)(sizeBefore - sizeAfter))/sizeBefore;
 			logger.info(
 					"Cleaned {} terms [before: {}, after: {}, ratio: {}] from term index (maxSize: {}, currentTh: {})", 

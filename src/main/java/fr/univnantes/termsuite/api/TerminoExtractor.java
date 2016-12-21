@@ -25,6 +25,7 @@ import org.apache.uima.resource.ResourceManager;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
@@ -127,8 +128,8 @@ public class TerminoExtractor {
 	/*
 	 * Filter properties
 	 */
-	private Optional<TerminoFilterConfig> postFilterConfig = Optional.empty();
-	private Optional<TerminoFilterConfig> preFilterConfig  = Optional.empty();
+	private Optional<TerminoFilterOptions> postFilterConfig = Optional.empty();
+	private Optional<TerminoFilterOptions> preFilterConfig  = Optional.empty();
 
 	
 	/*
@@ -305,10 +306,10 @@ public class TerminoExtractor {
 	 * @return
 	 * 			this {@link TerminoExtractor} launcher class
 	 * 
-	 * @see  #postFilter(TerminoFilterConfig)
+	 * @see  #postFilter(TerminoFilterOptions)
 	 * 
 	 */
-	public TerminoExtractor preFilter(TerminoFilterConfig filterConfig) {
+	public TerminoExtractor preFilter(TerminoFilterOptions filterConfig) {
 		this.preFilterConfig = Optional.of(filterConfig);
 		return this;
 	}
@@ -341,17 +342,17 @@ public class TerminoExtractor {
 	 * Filters the {@link Terminology} at the end of the pipeline,
 	 * i.e. after the term variant detection phase.
 	 * 
-	 * This filtering is loss-less when configured with {@link TerminoFilterConfig#keepVariants(true)}.
+	 * This filtering is loss-less when configured with {@link TerminoFilterOptions#keepVariants(true)}.
 	 * 
 	 * @param filterConfig
 	 * 			The filtering configuration
 	 * @return
 	 * 			this {@link TerminoExtractor} launcher class
 	 * 
-	 * @see  #preFilter(TerminoFilterConfig)
+	 * @see  #preFilter(TerminoFilterOptions)
 	 * 
 	 */
-	public TerminoExtractor postFilter(TerminoFilterConfig filterConfig) {
+	public TerminoExtractor postFilter(TerminoFilterOptions filterConfig) {
 		this.postFilterConfig = Optional.of(filterConfig);
 		return this;
 	}	
@@ -407,7 +408,7 @@ public class TerminoExtractor {
 				.aeTermVariantGatherer(semanticAlignerEnabled);
 
 		if(scoringEnabled)
-			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : lang.getScorerConfig());
+			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : new PostProcConfig());
 			
 		pipeline
 			.aeRanker(TermProperty.SPECIFICITY, true);

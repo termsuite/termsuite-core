@@ -40,7 +40,6 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
-import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
@@ -181,51 +180,6 @@ public class MemoryTerminology implements Terminology {
 		return term;
 	}
 	
-	private abstract class TermIterator extends AbstractIterator<Term> {
-		protected Term t;
-		protected Iterator<Term> it;
-		
-		private TermIterator() {
-			super();
-			this.it = MemoryTerminology.this.termsByGroupingKey.values().iterator();
-		}
-	}
-	
-	private class SingleMultiWordIterator extends TermIterator {
-		/*
-		 * Single word it if false, multiword if true
-		 */
-		private boolean singleMultiWordToggle;
-		
-		private SingleMultiWordIterator(boolean singleMultiWordToogle) {
-			super();
-			this.singleMultiWordToggle = singleMultiWordToogle;
-		}
-
-
-		@Override
-		protected Term computeNext() {
-			while(it.hasNext()) {
-				if((t = it.next()).isSingleWord() == this.singleMultiWordToggle)
-					return t;
-			}
-			return endOfData();
-		}
-	}
-	
-	private class CompoundIterator extends TermIterator {
-
-		@Override
-		protected Term computeNext() {
-			while(it.hasNext()) {
-				if((t = it.next()).isSingleWord() && t.isCompound())
-					return t;
-			}
-			return endOfData();
-		}
-		
-	}
-
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
 		if(!this.customIndexes.containsKey(indexName))
@@ -370,19 +324,6 @@ public class MemoryTerminology implements Terminology {
 	@Override
 	public OccurrenceStore getOccurrenceStore() {
 		return this.occurrenceStore;
-	}
-
-	@Override
-	public void deleteMany(TermSelector selector) {
-		List<Term> rem = Lists.newArrayList();
-		for(Term t:termsByGroupingKey.values()) {
-			if(selector.select(t))
-				rem.add(t);
-		}
-		for(Term t:rem)
-			removeTermOnly(t);
-		occurrenceStore.deleteMany(selector);
-		
 	}
 
 	@Override

@@ -8,9 +8,10 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.api.Traverser;
 import fr.univnantes.termsuite.api.TsvOptions;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.engines.export.IndexerTSVBuilder;
 
@@ -42,7 +43,7 @@ public class TsvExporter {
 	}
 
 	private void doExport() {
-		
+		TerminologyService service = new TerminologyService(termino);
 		final IndexerTSVBuilder tsv = new IndexerTSVBuilder(
 				writer,
 				Lists.newArrayList(options.properties())
@@ -53,16 +54,17 @@ public class TsvExporter {
 				tsv.writeHeaders();
 				
 			for(Term t:traverser.toList(termino)) {
+				if(t.isPropertySet(TermProperty.FILTERED) && t.getPropertyBooleanValue(TermProperty.FILTERED))
+					continue;
+				
 				tsv.startTerm(termino, t);
 				
 				if(options.isShowVariants())
-					termino.getOutboundRelations(t, RelationType.VARIATION)
-						.stream()
+					service.variationsFrom(t)
 						.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
-						.limit(options.getMaxVariantsPerTerm())
 						.forEach(tv -> {
 							try {
-								boolean hasVariant = !termino.getOutboundRelations(tv.getTo(), RelationType.VARIATION).isEmpty();
+								boolean hasVariant = service.variationsFrom(tv.getTo()).findAny().isPresent();
 								tsv.addVariant(
 										termino, 
 										tv,

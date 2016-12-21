@@ -7,9 +7,9 @@ import java.net.MalformedURLException;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.api.TerminoFilterConfig;
 import fr.univnantes.termsuite.api.TerminoFilterer;
 import fr.univnantes.termsuite.api.TerminologyIO;
+import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
@@ -35,7 +35,7 @@ public class TerminoFiltererSpec {
 			;
 		
 		TerminoFilterer.create(termino1)
-			.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(6))
+			.configure(new TerminoFilterOptions().by(TermProperty.FREQUENCY).keepOverTh(6))
 			.execute();
 
 		assertThat(termino1)
@@ -55,7 +55,7 @@ public class TerminoFiltererSpec {
 		;
 		
 		TerminoFilterer.create(termino1)
-		.configure(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(10))
+		.configure(new TerminoFilterOptions().by(TermProperty.FREQUENCY).keepOverTh(10))
 		.execute();
 		
 		assertThat(termino1)

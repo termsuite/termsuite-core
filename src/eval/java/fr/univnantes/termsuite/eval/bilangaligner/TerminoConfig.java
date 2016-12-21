@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 import com.google.common.base.Charsets;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
-import fr.univnantes.termsuite.api.TerminoFilterConfig;
+import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.eval.TermSuiteEvals;
 import fr.univnantes.termsuite.eval.model.Corpus;
@@ -68,7 +68,7 @@ public class TerminoConfig {
 				.useContextualizer(new ContextualizerOptions().setScope(scope));
 		
 		if(frequencyTh > 1)
-			extractor.preFilter(new TerminoFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(frequencyTh));
+			extractor.preFilter(new TerminoFilterOptions().by(TermProperty.FREQUENCY).keepOverTh(frequencyTh));
 		
 		return extractor;
 	}

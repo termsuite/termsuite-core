@@ -243,4 +243,8 @@ public class Term extends PropertyHolder<TermProperty> implements Comparable<Ter
 	public void setTfIdf(double tfIdf) {
 		setProperty(TermProperty.TF_IDF, tfIdf);
 	}
+
+	public Number getPropertyNumberValue(TermProperty p) {
+		return (Number)get(p);
+	}
 }

@@ -24,57 +24,28 @@
 package fr.univnantes.termsuite.resources;
 
 public class PostProcConfig {
-	private double extensionSpecTh = 0.1;
-	private double extensionGainTh = 0.1;
-	private double variantIndependanceTh = 0.5;
-	private double variationScoreTh = 0.25;
+	private double affixScoreTh = 0.25;
+	private double variationScoreTh = 0.20;
 	private double orthographicScoreTh = 0.55;
 	private double termIndependanceTh = 0.10;
-	private int maxNumOfVariants = 15;
 
-	private PostProcConfig() {
-	}
-
-	public double getExtensionSpecTh() {
-		return extensionSpecTh;
-	}
-
-	public PostProcConfig setMaxNumOfVariants(int maxNumOfVariants) {
-		this.maxNumOfVariants = maxNumOfVariants;
-		return this;
-		
-	}
-	public PostProcConfig setExtensionSpecTh(double extensionSpecTh) {
-		this.extensionSpecTh = extensionSpecTh;
-		return this;
+	public PostProcConfig() {
 	}
 	
 	public PostProcConfig noFiltering() {
-		maxNumOfVariants = Integer.MAX_VALUE;
-		extensionSpecTh = -Double.MAX_VALUE;
-		extensionGainTh = -Double.MAX_VALUE;
-		variantIndependanceTh = -Double.MAX_VALUE;
+		affixScoreTh = -Double.MAX_VALUE;
 		variationScoreTh = -Double.MAX_VALUE;
 		orthographicScoreTh = -Double.MAX_VALUE;
 		termIndependanceTh = -Double.MAX_VALUE;
 		return this;
 	}
 
-	public double getExtensionGainTh() {
-		return extensionGainTh;
+	public double getAffixScoreTh() {
+		return affixScoreTh;
 	}
 
-	public PostProcConfig setExtensionGainTh(double extensionGainTh) {
-		this.extensionGainTh = extensionGainTh;
-		return this;
-	}
-
-	public double getVariantIndependanceTh() {
-		return variantIndependanceTh;
-	}
-
-	public PostProcConfig setVariantIndependanceTh(double variantIndependanceTh) {
-		this.variantIndependanceTh = variantIndependanceTh;
+	public PostProcConfig setAffixScoreTh(double affixScoreTh) {
+		this.affixScoreTh = affixScoreTh;
 		return this;
 	}
 
@@ -105,23 +76,7 @@ public class PostProcConfig {
 		return this;
 	}
 
-	public static PostProcConfig create(double variantIndependenceScoreThreshold, 
-			double variantExtGainThreshold, 
-			double variantExtSpecThreshold, 
-			double variantScoreThreshold) {
-		PostProcConfig scorerConfig = create();
-		scorerConfig.setExtensionGainTh(variantExtGainThreshold);
-		scorerConfig.setExtensionSpecTh(variantExtSpecThreshold);
-		scorerConfig.setVariantIndependanceTh(variantIndependenceScoreThreshold);
-		scorerConfig.setVariationScoreTh(variantScoreThreshold);
-		return scorerConfig;
-	}
-	
 	public static PostProcConfig create() {
 		return new PostProcConfig();
-	}
-	
-	public int getMaxNumOfVariants() {
-		return maxNumOfVariants;
 	}
 }

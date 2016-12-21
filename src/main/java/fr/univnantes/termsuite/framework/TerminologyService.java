@@ -1,5 +1,7 @@
 package fr.univnantes.termsuite.framework;
 
+import static java.util.stream.Collectors.toSet;
+
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Objects;
@@ -134,6 +136,10 @@ public class TerminologyService {
 		termino.removeRelation(r);
 	}
 
+	public void removeTerm(Term r) {
+		termino.removeTerm(r);
+	}
+
 	public Stream<TermRelation> variationsFrom(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.VARIATION);
@@ -141,5 +147,13 @@ public class TerminologyService {
 
 	public void addTerm(Term term) {
 		this.termino.addTerm(term);
+	}
+	
+	public void removeAll(Predicate<Term> predicate) {
+		terms().filter(predicate).collect(toSet()).forEach(this::removeTerm);
+	}
+
+	public long termCount() {
+		return this.termino.getTerms().size();
 	}
 }

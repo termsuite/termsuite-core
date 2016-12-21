@@ -87,7 +87,7 @@ public class PostProcessorAE extends JCasAnnotator_ImplBase {
 				this.terminoResource.getTerminology().getName());
 		Terminology termino = terminoResource.getTerminology();
 		if(!scorerConfig.isPresent())
-			scorerConfig = Optional.of(termino.getLang().getScorerConfig());
+			scorerConfig = Optional.of(new PostProcConfig());
 		new TermPostProcessor(scorerConfig.get())
 			.setHistory(historyResource.getHistory())
 			.postprocess(termino);

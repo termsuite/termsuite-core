@@ -26,18 +26,17 @@ import java.util.NoSuchElementException;
 
 import fr.univnantes.termsuite.LanguageException;
 import fr.univnantes.termsuite.engines.EngineState;
-import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3,PostProcConfig.create(0.5, 0.1,0.1, 0.25), 2, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, PostProcConfig.create(0.5, 0.1,0.1, 0.25), 1, EngineState.ENABLED);
+	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, 1, EngineState.ENABLED),
+	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, 1, EngineState.ENABLED),
+	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, 1, EngineState.ENABLED),
+	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, 2, EngineState.ENABLED),
+	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, 1, EngineState.DISABLED),
+	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, 1, EngineState.ENABLED),
+	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3, 2, EngineState.ENABLED),
+	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, 1, EngineState.ENABLED);
 	
 	private final double compostAlpha;
 	private final double compostBeta;
@@ -52,9 +51,6 @@ public enum Lang {
 	private final int gVariantNbPreindexingLetters;
 	private final EngineState gVariantGatheringState;
 
-	private PostProcConfig scorerConfig;
-
-
     private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
     		double compostAlpha,
     		double compostBeta,
@@ -63,7 +59,6 @@ public enum Lang {
     		double compostCompostThreshold,
     		int compostMinComponentSize,
     		int compostMaxComponentNumber,
-    		PostProcConfig scorefierConfig,
     		int gVariantNbPreindexingLetters,
     		EngineState gVariantGatheringState
     		) {
@@ -77,7 +72,6 @@ public enum Lang {
         this.compostScoreThreshold = compostCompostThreshold;
         this.compostMinComponentSize = compostMinComponentSize;
         this.compostMaxComponentNumber = compostMaxComponentNumber;
-        this.scorerConfig = scorefierConfig;
         this.gVariantNbPreindexingLetters = gVariantNbPreindexingLetters;
         this.gVariantGatheringState = gVariantGatheringState;
     }
@@ -157,10 +151,6 @@ public enum Lang {
 		throw new NoSuchElementException(code);
 	}
 
-	public PostProcConfig getScorerConfig() {
-		return scorerConfig;
-	}
-	
 	public int getCompostMinComponentSize() {
 		return compostMinComponentSize;
 	}
