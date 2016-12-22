@@ -74,7 +74,7 @@ public class TsvExporterSpec {
 			.tsvLineEquals(1, "#","type", "gkey", "f")
 			.tsvLineEquals(2, 1, "T", "t2", 2)
 			.tsvLineEquals(3, 2, "T", "t3", 3)
-			.tsvLineEquals(4, 2, "V[M]", "t1", 1)
+			.tsvLineEquals(4, 2, "V[m]", "t1", 1)
 			.tsvLineEquals(5, 3, "T", "t1", 1)
 			;
 	}
@@ -86,7 +86,7 @@ public class TsvExporterSpec {
 			.hasLineCount(4)
 			.tsvLineEquals(1, 1, "T", "t2", 2)
 			.tsvLineEquals(2, 2, "T", "t3", 3)
-			.tsvLineEquals(3, 2, "V[M]", "t1", 1)
+			.tsvLineEquals(3, 2, "V[m]", "t1", 1)
 			.tsvLineEquals(4, 3, "T", "t1", 1)
 			;
 	}

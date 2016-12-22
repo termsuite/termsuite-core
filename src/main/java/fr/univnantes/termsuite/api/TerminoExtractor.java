@@ -255,10 +255,15 @@ public class TerminoExtractor {
 		return this;
 	}
 
-	public TerminoExtractor enableSemanticAlignment() {
-		this.contextualizerEnabled = true;
-		this.semanticAlignerEnabled  = true;
+	
+	public TerminoExtractor setSemanticAlignerEnabled(boolean semanticAlignerEnabled) {
+		this.semanticAlignerEnabled = semanticAlignerEnabled;
+		if(semanticAlignerEnabled)
+			this.contextualizerEnabled = true;
 		return this;
+	}
+	public TerminoExtractor enableSemanticAlignment() {
+		return setSemanticAlignerEnabled(true);
 	}
 
 	public TerminoExtractor configureScoring(PostProcConfig scorerConfig) {

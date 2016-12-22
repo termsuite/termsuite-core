@@ -64,11 +64,10 @@ public class TsvExporter {
 						.sorted(RelationProperty.VARIANT_SCORE.getComparator(true))
 						.forEach(tv -> {
 							try {
-								boolean hasVariant = service.variationsFrom(tv.getTo()).findAny().isPresent();
 								tsv.addVariant(
-										termino, 
+										service, 
 										tv,
-										options.tagsTermsHavingVariants() && hasVariant);
+										options.tagsTermsHavingVariants());
 							} catch (IOException e) {
 								throw new TermSuiteException(e);
 							}

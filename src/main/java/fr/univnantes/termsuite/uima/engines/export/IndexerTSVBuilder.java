@@ -50,6 +50,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -92,7 +93,6 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 
 	private static final String SPEC_FORMAT = "%.2f";
 	private static final String T_FORMAT = "T";
-	private static final String V_FORMAT = "V[%s]";
 	
 	private Term currentTerm = null;
 	
@@ -103,16 +103,37 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				term, 
 				String.format(T_FORMAT));
 	}
+	
+	private static final VariationType[] VARIANT_TAG_TYPES = new VariationType[]{
+			VariationType.INFERENCE,
+			VariationType.SYNTAGMATIC,
+			VariationType.MORPHOLOGICAL,
+			VariationType.GRAPHICAL,
+			VariationType.SEMANTIC,
+			VariationType.PREFIXATION,
+			VariationType.DERIVATION,
+	};
 
-	public void addVariant(Terminology termino, TermRelation variation, boolean addVariantTag) throws IOException {
+	public void addVariant(TerminologyService termino, TermRelation variation, boolean showVariantTag) throws IOException {
 		Preconditions.checkArgument(variation.getType() == RelationType.VARIATION, "Relation is not a variation: %s", variation);
 		Preconditions.checkArgument(variation.isPropertySet(RelationProperty.VARIATION_TYPE), "Property %s not set for variation %s", RelationProperty.VARIATION_TYPE, variation);
 		List<String> line = Lists.newArrayList();
-		VariationType variationType = (VariationType)variation.get(RelationProperty.VARIATION_TYPE);
-		String typeCol = String.format(V_FORMAT, variationType.getLetter());
-		if(addVariantTag)
-			typeCol = typeCol + "[+]";
-		line.add(typeCol);
+		
+		StringBuilder tagBuilder = new StringBuilder();
+		tagBuilder.append("V[");
+		for(VariationType vType:VARIANT_TAG_TYPES) {
+			if(variation.isPropertySet(RelationProperty.VARIATION_TYPE) 
+					&& variation.get(RelationProperty.VARIATION_TYPE) == vType) {
+				tagBuilder.append(vType.getLetter().toLowerCase());
+			} else if(variation.isPropertySet(vType.getRelationProperty()) 
+					&& variation.getPropertyBooleanValue(vType.getRelationProperty()))
+				tagBuilder.append(vType.getLetter().toLowerCase());
+		}
+		tagBuilder.append("]");
+		if(showVariantTag 
+				&& termino.variationsFrom(variation.getTo()).findAny().isPresent())
+			tagBuilder.append("+");
+		line.add(tagBuilder.toString());
 		for(Property<?> p:properties) {
 			if(p instanceof RelationProperty) {
 				Comparable<?> value = variation.getPropertyValueUnchecked((RelationProperty)p);

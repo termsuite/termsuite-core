@@ -51,10 +51,18 @@ public class VariationExporter {
 			Multimap<Term,TermRelation> acceptedVariations = HashMultimap.create();
 			for(Term t:termino.getTerms()) {
 				for(TermRelation v:termino.getOutboundRelations(t)) {
-					if(this.variationTypes.isEmpty()
-							|| (v.isPropertySet(RelationProperty.VARIATION_TYPE)
-									&& this.variationTypes.contains(v.get(RelationProperty.VARIATION_TYPE))))
+					if(this.variationTypes.isEmpty())
+							acceptedVariations.put(t, v);
+					else {
+						if(variationTypes
+							.stream()
+							.filter(vType -> 
+								v.isPropertySet(vType.getRelationProperty()) && v.getPropertyBooleanValue(vType.getRelationProperty())
+								|| v.isPropertySet(RelationProperty.VARIATION_TYPE) && v.get(RelationProperty.VARIATION_TYPE) == vType
+							).findAny()
+							.isPresent()) 
 						acceptedVariations.put(t, v);
+					}
 				}
 			}
 			
