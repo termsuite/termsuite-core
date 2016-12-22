@@ -93,9 +93,14 @@ public class TermMerger {
 
 	private void watch(TermRelation rel) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(rel.getFrom()) 
-					||history.get().isWatched(rel.getTo()))
+			if(history.get().isWatched(rel.getFrom()) )
 				history.get().saveEvent(rel.getFrom().getGroupingKey(), this.getClass(), String.format(
+						"Merging %s into %s",
+						rel.getTo(),
+						rel.getFrom()
+						));
+			if(history.get().isWatched(rel.getTo()) )
+				history.get().saveEvent(rel.getTo().getGroupingKey(), this.getClass(), String.format(
 						"Merging %s into %s",
 						rel.getTo(),
 						rel.getFrom()
