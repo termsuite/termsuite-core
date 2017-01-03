@@ -124,7 +124,7 @@ public abstract class WindEnergySpec {
 		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
 		
 		
-		TermHistory history = TermHistory.create("na: option nucléaire");
+		TermHistory history = TermHistory.create("n: autoconsommation", "n: consommation");
 		
 		if(!jsonFile.toFile().exists()) {
 			try(FileWriter writer = new FileWriter(jsonFile.toFile())) {

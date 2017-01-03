@@ -1,6 +1,5 @@
-npn: système de distribution	npnpacan: système de distribution de petit et moyen taille	SYNTACTICAL	S-Ed-NPN-PACAN
-npn: ensemble du machine	npnpacan: ensemble du machine de moyen et grand puissance	SYNTACTICAL	S-Ed-NPN-PACAN
-npn: système de engrenage	npnpacan: système de engrenage à 2 ou 3 étage	SYNTACTICAL	S-Ed-NPN-PACAN
-npn: système de stockage	npnpacan: système de stockage à long et court terme	SYNTACTICAL	S-Ed-NPN-PACAN
-npn: système de stockage	npnpacan: système de stockage à court et long terme	SYNTACTICAL	S-Ed-NPN-PACAN
-npn: série de machine	npnpacan: série de machine de petit et moyen puissance	SYNTACTICAL	S-Ed-NPN-PACAN
+npn: système de engrenage	npnpacan: système de engrenage à 2 ou 3 étage	VARIATION	S-Ed-NPN-PACAN
+npn: système de distribution	npnpacan: système de distribution de petit et moyen taille	VARIATION	S-Ed-NPN-PACAN
+npn: série de machine	npnpacan: série de machine de petit et moyen puissance	VARIATION	S-Ed-NPN-PACAN
+npn: système de stockage	npnpacan: système de stockage à long et court terme	VARIATION	S-Ed-NPN-PACAN
+npn: système de stockage	npnpacan: système de stockage à court et long terme	VARIATION	S-Ed-NPN-PACAN

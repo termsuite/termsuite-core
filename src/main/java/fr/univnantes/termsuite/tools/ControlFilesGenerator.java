@@ -28,6 +28,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -86,9 +87,12 @@ public class ControlFilesGenerator {
 		 */
 		for(String ruleName:distinctRuleNames) {
 			String pathname = directory.getAbsolutePath() + "/" + getSyntacticRuleFileName(ruleName);
-			writeVariations(pathname, termino.relations()
+			writeVariations(
+				pathname, 
+				termino.relations()
 					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULE))
-					.filter(r-> r.getPropertyStringValue(RelationProperty.VARIATION_RULE).equals(ruleName))
+					.filter(r-> r.getPropertyStringValue(RelationProperty.VARIATION_RULE).equals(ruleName)),
+				RelationProperty.VARIATION_RULE
 				);
 		}
 		
@@ -97,7 +101,10 @@ public class ControlFilesGenerator {
 		 */
 		for(VariationType vType:VariationType.values()) {
 			String pathname = directory.getAbsolutePath() + "/variations-" + vType.getShortName();
-			writeVariations(pathname, termino.variations(vType).sorted(Relations.relFreqHmean()));
+			writeVariations(
+					pathname, 
+					termino.variations(vType).sorted(Relations.relFreqHmean())
+				);
 		}
 		
 
@@ -105,14 +112,20 @@ public class ControlFilesGenerator {
 		 * Write prefix variations
 		 */
 		String prefixPath = directory.getAbsolutePath() + "/" + getPrefixFileName();
-		writeVariations(prefixPath, termino.relations(RelationType.IS_PREFIX_OF));
+		writeVariations(
+				prefixPath, 
+				termino.relations(RelationType.IS_PREFIX_OF)
+			);
 		
 
 		/*
 		 * Write derivative variations
 		 */
 		String derivativePath = directory.getAbsolutePath() + "/" + getDerivatesFileName();
-		writeVariations(derivativePath, termino.relations(RelationType.DERIVES_INTO));
+		writeVariations(
+				derivativePath, 
+				termino.relations(RelationType.DERIVES_INTO),
+				RelationProperty.DERIVATION_TYPE);
 
 		/*
 		 * Write compounds
@@ -175,15 +188,21 @@ public class ControlFilesGenerator {
 		return Joiner.on("|").join(componentStrings);
 	}
 	
-	private void writeVariations(String path, Stream<TermRelation> variations) throws IOException {
+	private void writeVariations(String path, Stream<TermRelation> variations, RelationProperty... additionalProperties) throws IOException {
 		Writer writer = new FileWriter(path);
 		for(TermRelation tv:variations.collect(Collectors.toList())) {
-			writer.append(String.format("%s\t%s\t%s\t%s%n", 
-					tv.getFrom().getGroupingKey(),
-					tv.getTo().getGroupingKey(),
-					tv.getType(),
-					tv.getPropertyStringValue(RelationProperty.VARIATION_RULE)
-				));
+			writer.append(tv.getFrom().getGroupingKey());
+			writer.append("\t");
+			writer.append(tv.getTo().getGroupingKey());
+			writer.append("\t");
+			writer.append(tv.getType().toString());
+			
+			for(RelationProperty p:additionalProperties) {
+				writer.append("\t");
+				writer.append(tv.isPropertySet(p) ? Objects.toString(tv.get(p)) : "");
+			}
+			
+			writer.append("\n");
 		}
 		writer.flush();
 		writer.close();

@@ -89,13 +89,14 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-P-NAA-A",
 				"M-S-NN",
 				"M-PI-EN-P",
-				"M-I-NA-CE",
-				"M-I-NA-EC");
+				"M-I-NA-CE"
+				);
 	}
 	
 	@Override
 	protected List<String> getSyntacticNotMatchingRules() {
 		return Lists.newArrayList(
+				"M-I-NA-EC",
 				"S-IEg-NPN-PN,-CPN",
 				"S-I-NA-RV",
 				"S-R2I2-NPN-PNP",
@@ -148,11 +149,17 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
-					"n: éolienne", "a: électrique", "n: convertisseur", 
-					"n: générateur", "n: pale", "n: rotor", "n: optimisation", 
-					"npn: vitesse de rotation", "n: réglage", 
-					"npn: système de stockage"
-					)
+					"n: convertisseur", 
+					"n: pale", 
+					"n: rotor", 
+					"n: éolienne", 
+					"n: réglage", 
+					"npn: vitesse du vent", 
+					"n: kw", 
+					"na: turbine éolien", 
+					"n: coefficient", 
+					"n: mw"
+				)
 			;
 	}
 	
@@ -194,11 +201,11 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testTermVitesseDeRotation() {
 		Term term = termino.getTermByGroupingKey("npn: vitesse de rotation");
 		assertThat(term)
-			.hasFrequency(308);
+			.hasFrequency(311);
 		
 		assertThat(termino)
 			.hasNBases(term, 2)
-			.hasNVariationsOfType(term, 24, VariationType.SYNTAGMATIC)
+			.hasNVariationsOfType(term, 22, VariationType.SYNTAGMATIC)
 			.getVariations(term)
 			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
 			.contains(
@@ -212,7 +219,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testTermEolienne() {
 		assertThat(termino.getTermByGroupingKey("n: éolienne"))
-				.hasFrequency(1102)
+				.hasFrequency(1147)
 				.hasGroupingKey("n: éolienne");
 	}
 
@@ -222,10 +229,16 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasSize(10)
 			.extracting("groupingKey")
 			.containsExactly(
-					"n: éolienne", "a: électrique", "n: convertisseur", 
-					"n: générateur", "n: pale", "n: rotor", "n: optimisation", 
-					"npn: vitesse de rotation", "n: réglage", 
-					"npn: système de stockage"
+					"n: convertisseur", 
+					"n: pale", 
+					"n: rotor", 
+					"n: éolienne", 
+					"n: réglage", 
+					"npn: vitesse du vent", 
+					"n: kw", 
+					"na: turbine éolien", 
+					"n: coefficient", 
+					"n: mw"
 				)
 			;
 	}
@@ -246,16 +259,17 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testMSNNVariations() {
 		assertThat(termino)
-			.hasNVariationsOfType(38, VariationType.MORPHOLOGICAL)
+			.hasNVariationsOfType(30, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 				   tuple("n: microsystème", "nn: micro système"), 
-				   tuple("n: transistor-diode", "nn: transistor diode"), 
-				   tuple("n: france-allemagne", "nn: france allemagne"), 
-				   tuple("n: schéma-bloc", "nn: schéma bloc")
+//				   tuple("n: transistor-diode", "nn: transistor diode"), // terms have been merged
+//				   tuple("n: france-allemagne", "nn: france allemagne"), // terms have been merged
+				   tuple("n: schéma-bloc", "nn: schéma bloc"),
+				   tuple("n: micro-turbines", "nn: micro turbine")
 			)
-			.hasSize(9)
+			.hasSize(3)
 			;
 	}
 
@@ -305,7 +319,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termino)
 			.asTermVariationsHavingRule("S-R2D-NPN")
-			.hasSize(77)
+			.hasSize(68)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 					tuple("npn: production de électricité", "na: production électrique"),
