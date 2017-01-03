@@ -610,7 +610,7 @@ public class TermSuitePipeline {
 
 	public TermSuitePipeline watch(String... termKeys) {
 		TermHistory termHistory = (TermHistory)TermSuiteResourceManager.getInstance().get(termHistoryResourceName);
-		termHistory.addWatchedTerms(termKeys);
+		termHistory.addWatchedGroupingKeys(termKeys);
 		return this;
 	}
 

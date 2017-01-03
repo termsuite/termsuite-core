@@ -117,7 +117,7 @@ public class TermSpecificityComputer extends JCasAnnotator_ImplBase {
 	}
 
 	private void watch(Term term) {
-		if(historyResource.getHistory().isWatched(term.getGroupingKey()))
+		if(historyResource.getHistory().isGKeyWatched(term.getGroupingKey()))
 			historyResource.getHistory().saveEvent(
 					term.getGroupingKey(), 
 					this.getClass(), 

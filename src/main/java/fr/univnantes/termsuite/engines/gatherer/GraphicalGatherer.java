@@ -95,12 +95,12 @@ public class GraphicalGatherer extends AbstractGatherer {
 	
 	private void watch(Term from, Term to, double dist) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(from.getGroupingKey()))
+			if(history.get().isGKeyWatched(from.getGroupingKey()))
 				history.get().saveEvent(
 						from.getGroupingKey(),
 						this.getClass(), 
 						"Term has a new graphical variant " + to + " (dist="+dist+")");
-			if(history.get().isWatched(to.getGroupingKey()))
+			if(history.get().isGKeyWatched(to.getGroupingKey()))
 				history.get().saveEvent(
 						to.getGroupingKey(),
 						this.getClass(), 
@@ -123,8 +123,8 @@ public class GraphicalGatherer extends AbstractGatherer {
 				r.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 			
 			if(history.isPresent()) {
-				if(history.get().isWatched(r.getFrom().getGroupingKey())
-						|| history.get().isWatched(r.getTo().getGroupingKey()))
+				if(history.get().isGKeyWatched(r.getFrom().getGroupingKey())
+						|| history.get().isGKeyWatched(r.getTo().getGroupingKey()))
 					history.get().saveEvent(
 							r.getFrom().getGroupingKey(),
 							this.getClass(), 

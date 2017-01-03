@@ -103,7 +103,7 @@ public class RegexSpotter extends TokenRegexAE {
 		 * Do not keep the term if it has too many bad characters
 		 */
 		if(!termFilter.accept(occurrence)) {
-			if(history.isWatched(groupingKey))
+			if(history.isGKeyWatched(groupingKey))
 				history.saveEvent(
 						groupingKey, 
 						RegexSpotter.class, String.format(
@@ -120,7 +120,7 @@ public class RegexSpotter extends TokenRegexAE {
 		WordAnnotation wa = (WordAnnotation)occurrence.getLabelledAnnotations().get(0).getAnnotation();
 		if((occurrence.size() == 1 && stopWordFilter.getFilters().contains(wa.getCoveredText().toLowerCase()))
 				|| (occurrence.size() == 1 && wa.getLemma() != null && stopWordFilter.getFilters().contains(wa.getLemma().toLowerCase()))) {
-			if(history.isWatched(groupingKey))
+			if(history.isGKeyWatched(groupingKey))
 				history.saveEvent(
 						groupingKey, 
 						RegexSpotter.class, String.format(
@@ -132,7 +132,7 @@ public class RegexSpotter extends TokenRegexAE {
 			return;
 		}
 		
-		if(history.isWatched(groupingKey))
+		if(history.isGKeyWatched(groupingKey))
 			history.saveEvent(
 					groupingKey, 
 					RegexSpotter.class, String.format("Term spotted at [%d,%d] in file %s",

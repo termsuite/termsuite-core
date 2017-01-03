@@ -101,13 +101,13 @@ public class SuffixDerivationDetecter {
 
 	private void watch(Term swt, Term baseTerm) {
 		if(history != null) {
-			if(history.isWatched(swt.getGroupingKey())) 
+			if(history.isGKeyWatched(swt.getGroupingKey())) 
 				history.saveEvent(
 						swt.getGroupingKey(), 
 						this.getClass(), 
 						"Term is a derivate of term " + baseTerm);
 			
-			if(history.isWatched(baseTerm.getGroupingKey())) 
+			if(history.isGKeyWatched(baseTerm.getGroupingKey())) 
 				history.saveEvent(
 						baseTerm.getGroupingKey(), 
 						this.getClass(), 

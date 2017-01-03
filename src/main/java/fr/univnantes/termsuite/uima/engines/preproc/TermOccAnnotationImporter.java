@@ -85,7 +85,7 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 	}
 
 	private void watch(String gKey, TermHistory history) {
-		if(history.isWatched(gKey)) {
+		if(history.isGKeyWatched(gKey)) {
 			if(this.terminoResource.getTerminology().getTermByGroupingKey(gKey) == null)
 				history.saveEvent(
 					gKey, 

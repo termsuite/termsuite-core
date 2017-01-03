@@ -99,12 +99,12 @@ public class AbstractGatherer {
 
 	private void watch(Term source, Term target, TermRelation tv) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(source.getGroupingKey()))
+			if(history.get().isGKeyWatched(source.getGroupingKey()))
 				history.get().saveEvent(
 						source.getGroupingKey(),
 						this.getClass(), 
 						"Term has a new variation: " + tv + " ("+tv.get(RelationProperty.VARIATION_TYPE)+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+")");
-			if(history.get().isWatched(target.getGroupingKey()))
+			if(history.get().isGKeyWatched(target.getGroupingKey()))
 				history.get().saveEvent(
 						target.getGroupingKey(),
 						this.getClass(), 

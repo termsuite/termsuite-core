@@ -218,13 +218,13 @@ public class SemanticGatherer extends AbstractGatherer {
 
 	private void watch(Term t1, Term t2) {
 		if(history.isPresent()) {
-			if(this.history.get().isWatched(t1.getGroupingKey()))
+			if(this.history.get().isGKeyWatched(t1.getGroupingKey()))
 				this.history.get().saveEvent(
 						t1.getGroupingKey(),
 						this.getClass(), 
 						"Term has a new semantic variant: " + t2);
 	
-			if(this.history.get().isWatched(t2.getGroupingKey()))
+			if(this.history.get().isGKeyWatched(t2.getGroupingKey()))
 				this.history.get().saveEvent(
 						t2.getGroupingKey(),
 						this.getClass(), 

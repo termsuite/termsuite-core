@@ -75,12 +75,12 @@ public class ManualPrefixSetter {
 
 	private void watch(Term swt, TermRelation tv) {
 		if(history != null) {
-			if(history.isWatched(swt.getGroupingKey()))
+			if(history.isGKeyWatched(swt.getGroupingKey()))
 				history.saveEvent(
 						swt.getGroupingKey(), 
 						this.getClass(), 
 						"Prefix variation of term " + tv.getTo().getGroupingKey() + " removed");
-			if(history.isWatched(tv.getTo().getGroupingKey()))
+			if(history.isGKeyWatched(tv.getTo().getGroupingKey()))
 				history.saveEvent(
 						tv.getTo().getGroupingKey(), 
 						this.getClass(), 

@@ -71,13 +71,13 @@ public class ManualSuffixDerivationDetecter {
 
 	private void watch(TermRelation rem) {
 		if(history != null) {
-			if(history.isWatched(rem.getFrom().getGroupingKey())) {
+			if(history.isGKeyWatched(rem.getFrom().getGroupingKey())) {
 				history.saveEvent(
 					rem.getFrom().getGroupingKey(), 
 					this.getClass(), 
 					"Removing derivation into " + rem.getTo());
 			}
-			if(history.isWatched(rem.getTo().getGroupingKey())) {
+			if(history.isGKeyWatched(rem.getTo().getGroupingKey())) {
 				history.saveEvent(
 					rem.getTo().getGroupingKey(), 
 					this.getClass(), 

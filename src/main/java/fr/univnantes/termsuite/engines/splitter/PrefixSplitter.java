@@ -109,12 +109,12 @@ public class PrefixSplitter {
 
 	private void watch(Term swt, Term target) {
 		if(history != null) {
-			if(history.isWatched(swt.getGroupingKey()))
+			if(history.isGKeyWatched(swt.getGroupingKey()))
 				history.saveEvent(
 						swt.getGroupingKey(), 
 						this.getClass(), 
 						"Term is prefix of term " + target);
-			if(history.isWatched(target.getGroupingKey()))
+			if(history.isGKeyWatched(target.getGroupingKey()))
 				history.saveEvent(
 						target.getGroupingKey(), 
 						this.getClass(), 
