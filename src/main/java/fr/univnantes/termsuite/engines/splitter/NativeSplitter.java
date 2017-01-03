@@ -1,11 +1,16 @@
 package fr.univnantes.termsuite.engines.splitter;
 
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toSet;
+
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -35,6 +40,7 @@ import fr.univnantes.termsuite.resources.CompostIndex;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.utils.IndexingKey;
+import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 public class NativeSplitter {
@@ -52,6 +58,7 @@ public class NativeSplitter {
 	private static IndexingKey<String, String> similarityIndexingKey = TermSuiteUtils.KEY_THREE_FIRST_LETTERS;
 	private CustomTermIndex swtLemmaIndex;
 
+	private Optional<TermHistory> history = Optional.empty(); 
 	
 	private EditDistance distance = new Levenshtein();
 
@@ -60,6 +67,11 @@ public class NativeSplitter {
 		return this;
 	}
 
+	public NativeSplitter setHistory(TermHistory history) {
+		this.history = Optional.ofNullable(history);
+		return this;
+	}
+	
 	public NativeSplitter setOptions(MorphologicalOptions opt) {
 		this.opt = opt;
 		return this;
@@ -109,7 +121,6 @@ public class NativeSplitter {
 	public void split(Terminology termino) {
 		this.termino = termino;
 		LOGGER.info("Starting morphologyical compound detection for termino {}", termino.getName());
-		LOGGER.debug(this.toString());
 		swtLemmaIndex = termino.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex(termino);
 
@@ -130,96 +141,104 @@ public class NativeSplitter {
 
 		
 //		int observingStep = 100;
-		termino.getTerms()
-			.parallelStream()
-			.filter(Term::isSingleWord)
-			.forEach( swt -> {
-				
-			cnt.increment();
-//			if(cnt.longValue()%observingStep == 0) {
-//				observer.work(observingStep);
-//			}
-			
-			/*
-			 * Do not do native morphology splitting 
-			 * if a composition already exists.
-			 */
-			Word word = swt.getWords().get(0).getWord();
-			if(word.isCompound())
-				return;
-			
-			Map<Segmentation, Double> scores = computeScores(word.getLemma());
-			if(scores.size() > 0) {
-
-				List<Segmentation> segmentations = Lists.newArrayList(scores.keySet());
-				
+		Set<Word> words = termino.getTerms()
+				.stream()
+				.filter(Term::isSingleWord)
+				.map(swt -> swt.getWords().get(0).getWord())
 				/*
-				 *  compare segmentations in a deterministic way.
+				 * Do not do native morphology splitting 
+				 * if a composition already exists.
 				 */
-				segmentations.sort(new Comparator<Segmentation>() {
-					@Override
-					public int compare(Segmentation o1, Segmentation o2) {
-						int comp = Double.compare(scores.get(o2), scores.get(o1));
-						if(comp != 0)
-							return comp;
-						comp = Integer.compare(o1.getSegments().size(), o2.getSegments().size());
-						if(comp != 0)
-							return comp;	
-						for(int i = 0; i< o1.getSegments().size(); i++) {
-							comp = Integer.compare(
-								o2.getSegments().get(i).getEnd(), 
-								o1.getSegments().get(i).getEnd()
-							);
+				.filter(word -> !word.isCompound())
+				.collect(toSet());
+
+		LOGGER.debug("Num of words: {}", words.size());
+		LOGGER.debug("Num of compound words before native splitting: {}", words.stream().filter(Word::isCompound).count());
+
+		words
+			.forEach( word -> {
+				
+				cnt.increment();
+				
+				Map<Segmentation, Double> scores = computeScores(word.getLemma());
+				watchScores(word, scores);
+				if(scores.size() > 0) {
+	
+					List<Segmentation> segmentations = Lists.newArrayList(scores.keySet());
+					
+					/*
+					 *  compare segmentations in a deterministic way.
+					 */
+					segmentations.sort(new Comparator<Segmentation>() {
+						@Override
+						public int compare(Segmentation o1, Segmentation o2) {
+							int comp = Double.compare(scores.get(o2), scores.get(o1));
 							if(comp != 0)
 								return comp;
+							comp = Integer.compare(o1.getSegments().size(), o2.getSegments().size());
+							if(comp != 0)
+								return comp;	
+							for(int i = 0; i< o1.getSegments().size(); i++) {
+								comp = Integer.compare(
+									o2.getSegments().get(i).getEnd(), 
+									o1.getSegments().get(i).getEnd()
+								);
+								if(comp != 0)
+									return comp;
+							}
+							return 0;
 						}
-						return 0;
-					}
-				});
-				
-				Segmentation bestSegmentation = segmentations.get(0);
-				
-				// build the word component from segmentation
-				WordBuilder builder = new WordBuilder(word);
-				
-				boolean isNeoclassical = false;
-				for(Segment seg:bestSegmentation.getSegments()) {
-					String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
-					if(lemma == null)
-						builder.addComponent(
-							seg.getBegin(), 
-							seg.getEnd(), 
-							seg.getSubstring()
-						);
-					else
-						builder.addComponent(
+					});
+					
+					Segmentation bestSegmentation = segmentations.get(0);
+					
+					// build the word component from segmentation
+					WordBuilder builder = new WordBuilder(word);
+					
+					boolean isNeoclassical = false;
+					for(Segment seg:bestSegmentation.getSegments()) {
+						String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
+						if(lemma == null)
+							builder.addComponent(
 								seg.getBegin(), 
 								seg.getEnd(), 
-								seg.getSubstring(),
-								lemma
+								seg.getSubstring()
 							);
+						else
+							builder.addComponent(
+									seg.getBegin(), 
+									seg.getEnd(), 
+									seg.getSubstring(),
+									lemma
+								);
+						
+						if(compostIndex.isNeoclassical(seg.getSubstring())) {
+							isNeoclassical = true;
+							builder.setNeoclassicalAffix(seg.getBegin(), seg.getEnd());
+						} 
+					}
+					builder.setCompoundType(isNeoclassical ? CompoundType.NEOCLASSICAL : CompoundType.NATIVE);
+					builder.create();
 					
-					if(compostIndex.isNeoclassical(seg.getSubstring())) {
-						isNeoclassical = true;
-						builder.setNeoclassicalAffix(seg.getBegin(), seg.getEnd());
-					} 
+					watchComposition(word, true);
+					// log the word composition
+					if(LOGGER.isTraceEnabled()) {
+						List<String> componentStrings = Lists.newArrayList();
+						for(Component component:word.getComponents())
+							componentStrings.add(component.toString());
+						LOGGER.trace("{} [{}]", word.getLemma(), Joiner.on(' ').join(componentStrings));
+					}
 				}
-				builder.setCompoundType(isNeoclassical ? CompoundType.NEOCLASSICAL : CompoundType.NATIVE);
-				builder.create();
-				
-				// log the word composition
-				if(LOGGER.isTraceEnabled()) {
-					List<String> componentStrings = Lists.newArrayList();
-					for(Component component:word.getComponents())
-						componentStrings.add(component.toString());
-					LOGGER.trace("{} [{}]", word.getLemma(), Joiner.on(' ').join(componentStrings));
-				}
-			}
-		});
+			});
 
 		//finalize
 		progressLoggerTimer.cancel();
 
+		LOGGER.debug("Num of compound words after native splitting: {}", words.stream().filter(Word::isCompound).count());
+			
+		
+		
+		
 		LOGGER.debug("segment score cache size: {}", segmentScoreEntries.size());
 		LOGGER.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
@@ -229,6 +248,40 @@ public class NativeSplitter {
 		segmentLemmaCache.invalidateAll();
 	}
 	
+	private void watchComposition(Word word, boolean newlyCreated) {
+		if(history.isPresent()) {
+			if(history.get().isLemmaWatched(word.getLemma())) {
+				history.get().saveEventByLemma(
+						word.getLemma(), 
+						NativeSplitter.class, 
+						String.format("%sSegmentation of swt is [%s]%s", 
+								!newlyCreated ? "[word already segmented] " : "",
+								word.getCompoundType().getShortName(),
+								word.getComponents().stream().map(Component::getSubstring).collect(joining("+"))
+							));
+			}
+		}
+	}
+
+	private void watchScores(Word word, Map<Segmentation, Double> scores) {
+		if(history.isPresent()) {
+			if(history.get().isLemmaWatched(word.getLemma())) {
+				String scoreStr = scores.entrySet().stream().sorted(new Comparator<Entry<Segmentation, Double>>() {
+					@Override
+					public int compare(Entry<Segmentation, Double> o1, Entry<Segmentation, Double> o2) {
+						return Double.compare(o2.getValue(), o1.getValue());
+					}
+				}).map(e -> String.format("%s[%.3f]", e.getKey(), e.getValue()))
+				.collect(joining(", "));
+				
+				history.get().saveEventByLemma(
+						word.getLemma(), 
+						NativeSplitter.class, 
+						"Segmentation scores are: " + scoreStr);
+			}
+		}
+	}
+
 	private void buildCompostIndex(Terminology termino) {
 		LOGGER.debug("Building compost index");
 

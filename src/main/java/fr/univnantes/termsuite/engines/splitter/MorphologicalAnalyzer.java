@@ -125,6 +125,7 @@ public class MorphologicalAnalyzer {
 		if(options.isNativeSplittingEnabled()) {
 			new NativeSplitter()
 				.setOptions(options)
+				.setHistory(history)
 				.setInflectionRules(this.inflectionRules.get())
 				.setTransformationRules(this.transformationRules.get())
 				.setLanguageDico(this.languageDico.get())
