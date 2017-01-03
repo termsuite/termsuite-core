@@ -1,6 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -38,7 +39,7 @@ public class TermMerger {
 		LOGGER.info("Merging graphical variations");
 		final MutableInt nbMerged = new MutableInt(0);
 		
-		termino.variations()
+		List<TermRelation> relationsToMerge = termino.variations()
 			.filter(rel -> rel.isPropertySet(RelationProperty.IS_GRAPHICAL)
 							&& rel.isPropertySet(RelationProperty.IS_PREXATION)
 							&& rel.isPropertySet(RelationProperty.IS_DERIVATION)
@@ -63,8 +64,12 @@ public class TermMerger {
 					|| (rel.isPropertySet(RelationProperty.GRAPHICAL_SIMILARITY)
 							&& rel.getPropertyDoubleValue(RelationProperty.GRAPHICAL_SIMILARITY) == 1d)
 					)
-			.collect(Collectors.toList())
-			.forEach(rel -> {
+			.collect(Collectors.toList());
+		
+		
+		LOGGER.debug("Merging {} relations", relationsToMerge.size());
+
+		relationsToMerge.forEach(rel -> {
 				LOGGER.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
 				watch(rel);
 				

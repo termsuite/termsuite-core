@@ -1,6 +1,8 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.google.common.collect.Lists;
@@ -19,6 +21,27 @@ public class GraphicalGatherer extends AbstractGatherer {
 	
 	private EditDistance distance = new FastDiacriticInsensitiveLevenshtein(false);
 	private double similarityThreshold = 1d;
+	
+	/*
+	 * Gives the direction of the graphical relation between two terms.
+	 *  
+	 */
+	private static class GraphicalDirection implements Comparator<Term> {
+		@Override
+		public int compare(Term t1, Term t2) {
+			if(t1.getFrequency() > t2.getFrequency())
+				return -1;
+			else if(t1.getFrequency() < t2.getFrequency())
+				return 1;
+			else if(t1.getSpecificity() > t2.getSpecificity())
+				return -1;
+			else if(t1.getSpecificity() < t2.getSpecificity())
+				return 1;
+			else {
+				return t1.getGroupingKey().compareTo(t2.getGroupingKey());
+			}
+		}
+	}
 	
 	public GraphicalGatherer() {
 		super();
@@ -57,7 +80,7 @@ public class GraphicalGatherer extends AbstractGatherer {
 	
 	@Override
 	protected void gather(TerminologyService termino, Collection<Term> termClass, String clsName) {
-		
+		GraphicalDirection ordering = new GraphicalDirection();
 		List<Term> terms = termClass.getClass().isAssignableFrom(List.class) ? 
 				(List<Term>) termClass
 					: Lists.newArrayList(termClass);
@@ -71,16 +94,10 @@ public class GraphicalGatherer extends AbstractGatherer {
 				t2 = terms.get(j);
 				dist = distance.computeNormalized(t1.getLemma(), t2.getLemma(), this.similarityThreshold);
 				if(dist >= this.similarityThreshold) {
+					List<Term> pair = Lists.newArrayList(t1, t2);
+					Collections.sort(pair, ordering);
+					createGraphicalRelation(termino, pair.get(0), pair.get(1), dist);
 					
-					/*
-					 * Direct the graphical connection according to frequency then specificity
-					 */
-					if(t1.getFrequency() > t2.getFrequency())
-						createGraphicalRelation(termino, t1, t2, dist);
-					else if(t1.getFrequency() == t2.getFrequency() && t1.getSpecificity() > t2.getSpecificity())
-						createGraphicalRelation(termino, t1, t2, dist);
-					else
-						createGraphicalRelation(termino, t2, t1, dist);
 				}
 			}
 		}
