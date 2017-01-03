@@ -142,7 +142,7 @@ public class NativeSplitter {
 		
 //		int observingStep = 100;
 		Set<Word> words = termino.getTerms()
-				.stream()
+				.parallelStream()
 				.filter(Term::isSingleWord)
 				.map(swt -> swt.getWords().get(0).getWord())
 				/*
@@ -156,6 +156,7 @@ public class NativeSplitter {
 		LOGGER.debug("Num of compound words before native splitting: {}", words.stream().filter(Word::isCompound).count());
 
 		words
+			.parallelStream()
 			.forEach( word -> {
 				
 				cnt.increment();
