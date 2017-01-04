@@ -54,6 +54,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.unit.TestUtil;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.TermSuitePipeline;
@@ -124,7 +125,10 @@ public abstract class WindEnergySpec {
 		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
 		
 		
-		TermHistory history = TermHistory.create("n: autoconsommation", "n: consommation");
+		TermHistory history = TermHistory.create();
+		
+		String filePath = "/home/cram-d/tmp/wind-energy-" + lang.getCode();
+		TestUtil.deleteFile(filePath);
 		
 		if(!jsonFile.toFile().exists()) {
 			try(FileWriter writer = new FileWriter(jsonFile.toFile())) {
@@ -132,7 +136,7 @@ public abstract class WindEnergySpec {
 				LOGGER.info("Reprocessing txt files for {}", jsonFile);
 				pipeline = TermSuitePipeline.create(lang.getCode())
 					.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
-//					.setPersistentStore("/home/cram-d/tmp/wind-energy-" + lang.getCode())
+					.setPersistentStore(filePath)
 					.setHistory(history)
 					.aeWordTokenizer()
 					.setTreeTaggerHome(FunctionalTests.getTaggerPath())

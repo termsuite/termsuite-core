@@ -112,11 +112,10 @@ import fr.univnantes.termsuite.uima.engines.preproc.TermOccAnnotationImporter;
 import fr.univnantes.termsuite.uima.engines.preproc.TerminologyBlacklistWordFilterAE;
 import fr.univnantes.termsuite.uima.engines.preproc.TreeTaggerLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
-import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
+import fr.univnantes.termsuite.uima.engines.termino.CorpusWidePropertiesSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
 import fr.univnantes.termsuite.uima.engines.termino.MorphologicalAnalyzerAE;
-import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.PostProcessorAE;
 import fr.univnantes.termsuite.uima.engines.termino.Ranker;
 import fr.univnantes.termsuite.uima.engines.termino.SWTSizeSetterAE;
@@ -1270,8 +1269,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0)
-						.aePilotSetter()
-						.aeDocumentFrequencySetter()
+						.aeCorpusPropertiesSetter()
 						.aeSWTSizeSetter()
 						;
 		} catch (Exception e) {
@@ -1279,32 +1277,19 @@ public class TermSuitePipeline {
 		}
 	}
 
-	private TermSuitePipeline aePilotSetter()  {
+	private TermSuitePipeline aeCorpusPropertiesSetter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					PilotSetterAE.class
+					CorpusWidePropertiesSetterAE.class
 				);
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
-			return aggregateAndReturn(ae, PilotSetterAE.TASK_NAME, 0);
+			return aggregateAndReturn(ae, CorpusWidePropertiesSetterAE.TASK_NAME, 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}		
 	}
 	
-	private TermSuitePipeline aeDocumentFrequencySetter()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					DocumentFrequencySetterAE.class
-				);
-			ExternalResourceFactory.bindResource(ae, resTermino());
-
-			return aggregateAndReturn(ae, DocumentFrequencySetterAE.TASK_NAME, 0);
-		} catch (Exception e) {
-			throw new TermSuitePipelineException(e);
-		}		
-	}
-
 	private TermSuitePipeline aeSWTSizeSetter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(

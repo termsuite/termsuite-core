@@ -30,7 +30,7 @@ import org.apache.uima.jcas.JCas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.DocumentFrequencySetter;
+import fr.univnantes.termsuite.engines.CorpusWidePropertiesSetter;
 import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 
 /**
@@ -38,9 +38,9 @@ import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
  * @
  *
  */
-public class DocumentFrequencySetterAE extends JCasAnnotator_ImplBase {
-	private static final Logger logger = LoggerFactory.getLogger(DocumentFrequencySetterAE.class);
-	public static final String TASK_NAME = "Setting documentFrequencies";
+public class CorpusWidePropertiesSetterAE extends JCasAnnotator_ImplBase {
+	private static final Logger logger = LoggerFactory.getLogger(CorpusWidePropertiesSetterAE.class);
+	public static final String TASK_NAME = "Setting corpus wide properties";
 
 	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
 	private TerminologyResource terminoResource;
@@ -55,6 +55,6 @@ public class DocumentFrequencySetterAE extends JCasAnnotator_ImplBase {
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
 		logger.info("Starting " + TASK_NAME);
-		new DocumentFrequencySetter().set(terminoResource.getTerminology());
+		new CorpusWidePropertiesSetter().set(terminoResource.getTerminology());
 	}
 }
