@@ -78,7 +78,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
+import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.resources.TermSuitePipelineObserver;
@@ -229,7 +229,6 @@ public class TermSuitePipeline {
 	/* JSON */
 	private boolean exportJsonWithOccurrences = true;
 	private boolean exportJsonWithContext = false;
-	private boolean linkMongoStore = false;
 	/* TSV */
 	private String tsvExportProperties = "groupingKey,wr";
 	private boolean tsvWithVariantScores = false;
@@ -385,9 +384,8 @@ public class TermSuitePipeline {
 
 		
 	private void terminates() {
-		if(termino.isPresent() && termino.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
-			((MongoDBOccurrenceStore)termino.get().getOccurrenceStore()).close();
-			
+		if(termino.isPresent()) 
+			termino.get().getOccurrenceStore().close();
 	}
 
 	/**
@@ -927,8 +925,7 @@ public class TermSuitePipeline {
 					JsonExporterAE.class, 
 					JsonExporterAE.TO_FILE_PATH, toFilePath,
 					JsonExporterAE.WITH_OCCURRENCE, exportJsonWithOccurrences,
-					JsonExporterAE.WITH_CONTEXTS, exportJsonWithContext,
-					JsonExporterAE.LINKED_MONGO_STORE, this.linkMongoStore
+					JsonExporterAE.WITH_CONTEXTS, exportJsonWithContext
 				);
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
@@ -2113,16 +2110,16 @@ public class TermSuitePipeline {
 	
 	/**
 	 * 
-	 * Stores occurrences to MongoDB
+	 * Stores occurrences to disk
 	 * 
-	 * @param mongoDBUri
+	 * @param filePath
 	 * 			the mongo db connection uri
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUri) {
+	public TermSuitePipeline setPersistentStore(String filePath) {
 		Preconditions.checkState(this.lang != null, "Language needs to be set on pipeline before occurrence store");
-		this.occurrenceStore = new MongoDBOccurrenceStore(lang, mongoDBUri);
+		this.occurrenceStore = new XodusOccurrenceStore(lang, filePath);
 		return this;
 	}
 
@@ -2217,23 +2214,6 @@ public class TermSuitePipeline {
 			throw new TermSuitePipelineException(e);
 		}
 	}
-
-	/**
-	 * 
-	 * Configures the {@link JsonExporterAE} to not embed the occurrences 
-	 * in the json file, but to link the mongodb occurrence store instead.
-	 * 
-	 * 
-	 * 
-	 * @see #haeJsonExporter(String) 
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline linkMongoStore() {
-		this.linkMongoStore = true;
-		return this;
-	}
-	
 
 	/**
 	 * 

@@ -28,20 +28,14 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import fr.univnantes.termsuite.model.termino.TermSelector;
-
 public interface OccurrenceStore extends Closeable {
-	public static enum Type {MEMORY, MONGODB}
+	public static enum Type {MEMORY, DISK}
 	public static enum State{COLLECTING,INDEXING,INDEXED}
 
 	public Iterator<TermOccurrence> occurrenceIterator(Term term);
 	public Collection<TermOccurrence> getOccurrences(Term term);
 	public Type getStoreType();
 	public void flush();
-	public State getCurrentState();
-	public void makeIndex();
-
-
 	
 	/**
 	 * Returns the path to access the occurrence store if
@@ -59,7 +53,6 @@ public interface OccurrenceStore extends Closeable {
 	 */
 	public void removeTerm(Term t);
 	
-	public void deleteMany(TermSelector selector);
 	void close();
 	public List<Form> getForms(Term term);
 	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText);

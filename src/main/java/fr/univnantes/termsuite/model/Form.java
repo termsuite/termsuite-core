@@ -52,7 +52,8 @@ public class Form implements Comparable<Form> {
 		return count;
 	}
 	
-	public void setCount(int count) {
+	public Form setCount(int count) {
 		this.count = count;
+		return this;
 	}
 }

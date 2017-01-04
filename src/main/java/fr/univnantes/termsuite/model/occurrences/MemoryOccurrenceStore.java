@@ -24,23 +24,15 @@
 package fr.univnantes.termsuite.model.occurrences;
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 
-import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.termino.TermSelector;
 
 public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 
@@ -49,19 +41,6 @@ public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 	}
 
 	private Multimap<Term, TermOccurrence> map = Multimaps.synchronizedMultimap(HashMultimap.create());
-	
-	private Map<Term, Map<String, Form>> forms = new ConcurrentHashMap<>();
-
-	private Form getForm(Term term, String coveredText) {
-		if(!forms.containsKey(term))
-			forms.put(term, new HashMap<>());
-		Map<String, Form> map = forms.get(term);
-		if(!map.containsKey(coveredText))
-			map.put(coveredText, new Form(coveredText));
-		Form form = map.get(coveredText);
-		form.setCount(form.getCount()+1);
-		return form;
-	}
 	
 	@Override
 	public Iterator<TermOccurrence> occurrenceIterator(Term term) {
@@ -89,30 +68,8 @@ public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 	}
 
 	@Override
-	public State getCurrentState() {
-		return State.INDEXED;
-	}
-
-	@Override
-	public void makeIndex() {
-		// nothing to do
-	}
-
-	@Override
 	public void removeTerm(Term t) {
 		map.removeAll(t);
-	}
-
-	@Override
-	public void deleteMany(TermSelector selector) {
-		Term t;
-		for(Iterator<Term> it = map.keySet().iterator(); it.hasNext();) {
-			t = it.next();
-			if(selector.select(t))
-				it.remove();
-		}
-			
-		
 	}
 
 	@Override
@@ -121,20 +78,9 @@ public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 	}
 
 	@Override
-	public List<Form> getForms(Term term) {
-		if(!forms.containsKey(term))
-			return Lists.newArrayList();
-		else {
-			List<Form> list = Lists.newArrayList(forms.get(term).values());
-			Collections.sort(list);
-			return list;
-		}
-	}
-
-	@Override
 	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText) {
 		map.put(term, 
-				new TermOccurrence(term, getForm(term, coveredText), protectedGetDocument(documentUrl), begin, end));
+				new TermOccurrence(term, coveredText, protectedGetDocument(documentUrl), begin, end));
 	}
 
 }

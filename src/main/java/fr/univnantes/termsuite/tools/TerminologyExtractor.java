@@ -134,9 +134,7 @@ public class TerminologyExtractor {
 	private static final String NO_OCCURRENCE = "no-occurrence";
 
 	/** MongoDB parameters **/
-	private static final String MONGODB_STORE = "mongodb-store";
-	private static final String MONGODB_SOFT_LINK = "json-mongodb-soft-link";
-
+	private static final String PERSISTENT_OCC_STORE = "persistent-occ-store";
 	
 	/** ISTEX API Parameter **/
 	private static final String ISTEX_API_URL = "istex-api";
@@ -153,8 +151,7 @@ public class TerminologyExtractor {
 	/*
 	 * The mongo db options
 	 */
-	private Optional<String> mongoStoreDBURL = Optional.empty();
-	private boolean mongoStoreSoftLinked = false;
+	private Optional<String> persistentStorePath = Optional.empty();
 
 	
 	/** Mate tagger parameter **/
@@ -356,8 +353,8 @@ public class TerminologyExtractor {
 			}
 			
 			// mongodb
-			if(mongoStoreDBURL.isPresent())
-				pipeline.setMongoDBOccurrenceStore(mongoStoreDBURL.get());
+			if(persistentStorePath.isPresent())
+				pipeline.setPersistentStore(persistentStorePath.get());
 			
 			// tokenizer
 			pipeline.aeWordTokenizer();
@@ -460,8 +457,6 @@ public class TerminologyExtractor {
 			if(jsonFile.isPresent())  {					
 				pipeline.setExportJsonWithContext(contextualize);
 				pipeline.setExportJsonWithOccurrences(true);
-				if(mongoStoreSoftLinked)
-					pipeline.linkMongoStore();
 				pipeline.haeJsonExporter(jsonFile.get());
 			}
 
@@ -748,16 +743,9 @@ public class TerminologyExtractor {
 
 		options.addOption(
 				null,
-				MONGODB_STORE,
+				PERSISTENT_OCC_STORE,
 				true,
 				"The mongo db url of the database where to store the occurrences");
-
-		options.addOption(
-				null, 
-				MONGODB_SOFT_LINK, 
-				false,
-				"shows variant scores next to the \"V\" label");
-
 
 		return options;
 	}
@@ -924,13 +912,9 @@ public class TerminologyExtractor {
 		if(line.hasOption(MATE))
 			tagger =  Tagger.Mate;
 		
-		if(line.hasOption(MONGODB_STORE))
-			mongoStoreDBURL = Optional.of(line.getOptionValue(MONGODB_STORE));
+		if(line.hasOption(PERSISTENT_OCC_STORE))
+			persistentStorePath = Optional.of(line.getOptionValue(PERSISTENT_OCC_STORE));
 		
-		if(line.hasOption(MONGODB_SOFT_LINK)) {
-			Preconditions.checkArgument(line.hasOption(MONGODB_STORE), "The option %s requires the option %s", MONGODB_SOFT_LINK, MONGODB_STORE);
-			mongoStoreSoftLinked = true;
-		}
 
 	}
 }

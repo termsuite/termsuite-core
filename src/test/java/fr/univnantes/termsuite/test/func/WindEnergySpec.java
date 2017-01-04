@@ -132,6 +132,7 @@ public abstract class WindEnergySpec {
 				LOGGER.info("Reprocessing txt files for {}", jsonFile);
 				pipeline = TermSuitePipeline.create(lang.getCode())
 					.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
+//					.setPersistentStore("/home/cram-d/tmp/wind-energy-" + lang.getCode())
 					.setHistory(history)
 					.aeWordTokenizer()
 					.setTreeTaggerHome(FunctionalTests.getTaggerPath())

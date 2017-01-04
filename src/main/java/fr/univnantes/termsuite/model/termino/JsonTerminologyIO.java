@@ -65,7 +65,7 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
+import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
 
 public class JsonTerminologyIO {
 	
@@ -85,7 +85,8 @@ public class JsonTerminologyIO {
 	 * Occurrence storing options
 	 */
 	private static final String OCCURRENCE_STORAGE_EMBEDDED = "embedded";
-	private static final String OCCURRENCE_STORAGE_MONGODB = "MongoDB";
+	private static final String OCCURRENCE_STORAGE_DISK = "disk";
+	
 	
 	/*
 	 * Json properties
@@ -137,7 +138,7 @@ public class JsonTerminologyIO {
 	private static final String CO_TERM = "co_term";
 	private static final String TOTAL_COOCCURRENCES = "total_cooccs";
 	private static final String OCCURRENCE_STORAGE = "occurrence_storage";
-	private static final String OCCURRENCE_MONGODB_STORE_URI = "occurrence_store_mongodb_uri";
+	private static final String OCCURRENCE_PERSITENT_STORE_PATH = "persistent_store_path";
 
 	private static final String NB_WORD_ANNOTATIONS = "wordsNum";
 	private static final String NB_SPOTTED_TERMS = "spottedTermsNum";
@@ -200,7 +201,7 @@ public class JsonTerminologyIO {
 				String terminoName = null;
 				String corpusID = null;
 				String occurrenceStorage = null;
-				String occurrenceStoreURI = null;
+				String persitentStorePath = null;
 
 				while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 					fieldname = jp.getCurrentName();
@@ -216,17 +217,17 @@ public class JsonTerminologyIO {
 						corpusID = jp.nextTextValue();
 					} else if (OCCURRENCE_STORAGE.equals(fieldname)) {
 						occurrenceStorage = jp.nextTextValue();
-					} else if (OCCURRENCE_MONGODB_STORE_URI.equals(fieldname)) {
-						occurrenceStoreURI = jp.nextTextValue();
+					} else if (OCCURRENCE_PERSITENT_STORE_PATH.equals(fieldname)) {
+						persitentStorePath = jp.nextTextValue();
 					}
 				}
 				Preconditions.checkState(lang != null, "The property meta.lang must be defined");
 				Preconditions.checkState(terminoName != null, "The property meta.name must be defined");
 				
-				if(occurrenceStorage != null && occurrenceStorage.equals(OCCURRENCE_STORAGE_MONGODB)) {
-					Preconditions.checkNotNull(occurrenceStoreURI, "Missing attribute " + OCCURRENCE_MONGODB_STORE_URI);
+				if(occurrenceStorage != null && occurrenceStorage.equals(OCCURRENCE_STORAGE_DISK)) {
+					Preconditions.checkNotNull(persitentStorePath, "Missing attribute " + OCCURRENCE_PERSITENT_STORE_PATH);
 					Preconditions.checkNotNull(lang, "Missing metadata attribute " + LANG);
-					occurrenceStore = new MongoDBOccurrenceStore(lang, occurrenceStoreURI, OccurrenceStore.State.INDEXED);
+					occurrenceStore = new XodusOccurrenceStore(lang, persitentStorePath);
 				} else {
 					Preconditions.checkNotNull(lang, "Missing metadata attribute " + LANG);
 					occurrenceStore = new MemoryOccurrenceStore(lang);
@@ -568,8 +569,8 @@ public class JsonTerminologyIO {
 		
 		jg.writeFieldName(OCCURRENCE_STORAGE);
 		if(options.isMongoDBOccStore()) {
-			jg.writeString(OCCURRENCE_STORAGE_MONGODB);
-			jg.writeFieldName(OCCURRENCE_MONGODB_STORE_URI);
+			jg.writeString(OCCURRENCE_STORAGE_DISK);
+			jg.writeFieldName(OCCURRENCE_PERSITENT_STORE_PATH);
 			jg.writeString(options.getMongoDBOccStore());
 		} else if(options.isEmbeddedOccurrences())
 			jg.writeString(OCCURRENCE_STORAGE_EMBEDDED);
@@ -661,7 +662,7 @@ public class JsonTerminologyIO {
 					jg.writeFieldName(END);
 					jg.writeNumber(termOcc.getEnd());
 					jg.writeFieldName(TEXT);
-					jg.writeString(termOcc.getForm().getText());
+					jg.writeString(termOcc.getCoveredText());
 					jg.writeFieldName(FILE);
 					jg.writeNumber(inputSources.get(termOcc.getSourceDocument().getUrl()));
 					jg.writeEndObject();

@@ -28,7 +28,6 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.DocumentView;
-import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
@@ -58,13 +57,13 @@ public class DocumentViewSpec {
 		this.term2 = Fixtures.term2(); // single word
 		this.term3 = Fixtures.term3();
 		this.doc1 = Fixtures.document1();
-		o1 = new TermOccurrence(term1, new Form("o1"), doc1, 4, 6);
-		o2 = new TermOccurrence(term2, new Form("o2"), doc1, 7, 10);
-		o3 = new TermOccurrence(term2, new Form("o3"), doc1, 10, 18);
-		o4 = new TermOccurrence(term1, new Form("o4"), doc1, 18, 25);
-		o5 = new TermOccurrence(term2, new Form("o5"), doc1, 25, 30);
-		o6 = new TermOccurrence(term3, new Form("o6"), doc1, 30, 35);
-		o7 = new TermOccurrence(term3, new Form("o7"), doc1, 35, 40);
+		o1 = new TermOccurrence(term1, "o1", doc1, 4, 6);
+		o2 = new TermOccurrence(term2, "o2", doc1, 7, 10);
+		o3 = new TermOccurrence(term2, "o3", doc1, 10, 18);
+		o4 = new TermOccurrence(term1, "o4", doc1, 18, 25);
+		o5 = new TermOccurrence(term2, "o5", doc1, 25, 30);
+		o6 = new TermOccurrence(term3, "o6", doc1, 30, 35);
+		o7 = new TermOccurrence(term3, "o7", doc1, 35, 40);
 		
 		documentView = new DocumentView();
 		
@@ -85,19 +84,19 @@ public class DocumentViewSpec {
 	@Test
 	public void testGetOccurrences() {
 		// should order the occurrence list
-		assertThat(documentView.getOccurrences()).extracting("form.text").containsExactly(
+		assertThat(documentView.getOccurrences()).extracting("coveredText").containsExactly(
 			"o1","o2","o3","o4","o5","o6", "o7"
 		);
 	}
 	
 	@Test
 	public void testAddOccurrence() {
-		assertThat(documentView.getOccurrences()).extracting("form.text").containsExactly(
+		assertThat(documentView.getOccurrences()).extracting("coveredText").containsExactly(
 				"o1","o2","o3","o4","o5","o6", "o7"
 			);
 		// Should reorder the occurrence list
-		addOcc(new TermOccurrence(term1, new Form("o8"), doc1, 14, 20));
-		assertThat(documentView.getOccurrences()).extracting("form.text").containsExactly(
+		addOcc(new TermOccurrence(term1, "o8", doc1, 14, 20));
+		assertThat(documentView.getOccurrences()).extracting("coveredText").containsExactly(
 				"o1","o2","o3","o8", "o4","o5","o6", "o7"
 			);
 	}
@@ -105,7 +104,7 @@ public class DocumentViewSpec {
 	@Test
 	public void testGetOccurrenceContextDoNotOverlap1() {
 		assertThat(documentView.getOccurrenceContext(o4, OccurrenceType.SINGLE_WORD, 1)).containsExactly(o3, o5);
-		TermOccurrence o8 = new TermOccurrence(term2, new Form("o8"), doc1, 	20, 28);
+		TermOccurrence o8 = new TermOccurrence(term2, "o8", doc1, 	20, 28);
 		addOcc(o8);
 		// o8 does not overlap with o4 and is returned instead of o5
 		assertThat(documentView.getOccurrenceContext(o4, OccurrenceType.SINGLE_WORD, 1)).containsExactly(o3, o5);
@@ -114,7 +113,7 @@ public class DocumentViewSpec {
 	@Test
 	public void testGetOccurrenceContextDoNotOverlap2() {
 		assertThat(documentView.getOccurrenceContext(o4, OccurrenceType.SINGLE_WORD, 1)).containsExactly(o3, o5);
-		TermOccurrence o8 = new TermOccurrence(term2, new Form("o8"), doc1, 	20, 28);
+		TermOccurrence o8 = new TermOccurrence(term2, "o8", doc1, 	20, 28);
 		addOcc(o8);
 		// o8 overlaps with o4 and is returned instead of o5
 		assertThat(documentView.getOccurrenceContext(o4, OccurrenceType.SINGLE_WORD, 1)).containsExactly(o3, o5);
