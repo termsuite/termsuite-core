@@ -314,7 +314,8 @@ public class TermUtils {
 	}
 	
 	public static boolean isIncludedIn(Term term, Term inTerm) {
-		return getPosition(term, inTerm) != -1;
+		return term.getWords().size() < inTerm.getWords().size()
+				&& getPosition(term, inTerm) != -1;
 	}
 
 	public static boolean isPrefixOf(Term term, Term ofTerm) {

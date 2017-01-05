@@ -99,7 +99,7 @@ public class TermUtilsSpec {
 	
 	@Test
 	public void testIsIncludedIn() {
-		assertTrue(TermUtils.isIncludedIn(energie_eolien, energie_eolien));
+		assertFalse(TermUtils.isIncludedIn(energie_eolien, energie_eolien));
 		assertTrue(TermUtils.isIncludedIn(eolien, energie_eolien));
 		assertTrue(TermUtils.isIncludedIn(energie, energie_eolien));
 		
@@ -110,7 +110,7 @@ public class TermUtilsSpec {
 		assertTrue(TermUtils.isIncludedIn(recouvrement, acces_radioelectrique_de_recouvrement_total));
 		assertTrue(TermUtils.isIncludedIn(recouvrement_total, acces_radioelectrique_de_recouvrement_total));
 		assertTrue(TermUtils.isIncludedIn(total, acces_radioelectrique_de_recouvrement_total));
-		assertTrue(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement_total, acces_radioelectrique_de_recouvrement_total));
+		assertFalse(TermUtils.isIncludedIn(acces_radioelectrique_de_recouvrement_total, acces_radioelectrique_de_recouvrement_total));
 
 		assertFalse(TermUtils.isIncludedIn(total, acces_radioelectrique_de_recouvrement));
 		assertTrue(TermUtils.isIncludedIn(recouvrement, acces_radioelectrique_de_recouvrement));
