@@ -27,9 +27,10 @@ import java.io.Closeable;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public interface OccurrenceStore extends Closeable {
-	public static enum Type {MEMORY, DISK}
+	public static enum Type {MEMORY, DISK, EMPTY}
 	public static enum State{COLLECTING,INDEXING,INDEXED}
 
 	public Iterator<TermOccurrence> occurrenceIterator(Term term);
@@ -59,4 +60,8 @@ public interface OccurrenceStore extends Closeable {
 	
 	public Document getDocument(String url);
 	public Collection<Document> getDocuments();
+	
+	public String getMostFrequentForm(Term t);
+	public Set<Document> getDocuments(Term t);
+	
 }

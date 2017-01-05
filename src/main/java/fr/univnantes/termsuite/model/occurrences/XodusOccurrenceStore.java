@@ -92,12 +92,10 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 
 	@Override
 	public void removeTerm(Term t) {
-		// do nothing
-//		occStore.executeInTransaction(txn -> {
-//			EntityIterator it = txn.find(ENTITY_OCCURRENCE, P_TERM_KEY, t.getGroupingKey()).iterator();
-//			while (it.hasNext()) 
-//				it.next().delete();
-//		});
+		super.removeTerm(t);
+		/*
+		 * Do not remove occ from disk. Too poor performances
+		 */
 	}
 
 	@Override
@@ -116,6 +114,7 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 	
 	@Override
 	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText) {
+		super.addOccurrence(term, documentUrl, begin, end, coveredText);
 		try {
 			transactionMutex.acquire();
 			Entity entity = getTransaction().newEntity(ENTITY_OCCURRENCE);
@@ -124,7 +123,7 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 			entity.setProperty(P_DOCUMENT_URL, protectedGetDocument(documentUrl).getUrl());
 			entity.setProperty(P_TERM_KEY, term.getGroupingKey());
 			if(coveredText != null)
-				entity.setProperty(P_COVERED_TEXT, coveredText);
+				entity.setProperty(P_COVERED_TEXT, toForm(coveredText));
 			transactionMutex.release();
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);

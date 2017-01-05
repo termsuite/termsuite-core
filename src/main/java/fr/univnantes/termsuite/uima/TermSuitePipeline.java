@@ -73,11 +73,13 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.OccurrenceStore.Type;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
@@ -179,13 +181,19 @@ public class TermSuitePipeline {
 	/* ******************************
 	 * MAIN PIPELINE PARAMETERS
 	 */
-	private OccurrenceStore occurrenceStore;
 	private Optional<? extends Terminology> termino = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
 	private AggregateBuilder aggregateBuilder;
 	private String termHistoryResourceName = "PipelineHistory";
+
+
+	/*
+	 * 
+	 */
+	private OccurrenceStore.Type occurrenceStoreType = Type.MEMORY;
+	private Optional<String> peristentOccStorePath = Optional.empty();
 
 	
 	/*
@@ -246,7 +254,6 @@ public class TermSuitePipeline {
 	 */
 	private TermSuitePipeline(String lang, String urlPrefix) {
 		this.lang = Lang.forName(lang);
-		this.occurrenceStore = new MemoryOccurrenceStore(this.lang);
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
 
@@ -1162,8 +1169,6 @@ public class TermSuitePipeline {
 					FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, true
 				);
 			
-			
-
 			ExternalResourceDescription fixedExprRes = ExternalResourceFactory.createExternalResourceDescription(
 					FixedExpressionResource.class, 
 					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
@@ -1545,10 +1550,25 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline emptyTermino(String name) {
-		MemoryTerminology termino = new MemoryTerminology(name, this.lang, this.occurrenceStore);
+		MemoryTerminology termino = new MemoryTerminology(name, this.lang, createOccurrenceStore());
 		LOGGER.info("Creating Terminology {}", termino.getName());
 		this.termino = Optional.of(termino);
 		return this;
+	}
+
+
+	private OccurrenceStore createOccurrenceStore() {
+		Preconditions.checkState(this.lang != null, "Language needs to be set on pipeline before occurrence store");
+		switch(occurrenceStoreType) {
+		case MEMORY:
+			return new MemoryOccurrenceStore(lang);
+		case EMPTY:
+			return new EmptyOccurrenceStore(lang);
+		case DISK:
+			return new XodusOccurrenceStore(lang, this.peristentOccStorePath.get());
+		default:
+			throw new UnsupportedOperationException(occurrenceStoreType.toString());	
+		}
 	}
 
 	
@@ -2107,8 +2127,7 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline setPersistentStore(String filePath) {
-		Preconditions.checkState(this.lang != null, "Language needs to be set on pipeline before occurrence store");
-		this.occurrenceStore = new XodusOccurrenceStore(lang, filePath);
+		peristentOccStorePath = Optional.of(filePath);
 		return this;
 	}
 
@@ -2223,6 +2242,12 @@ public class TermSuitePipeline {
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
+	}
+
+
+	public TermSuitePipeline setEmptyOccurrenceStore() {
+		this.occurrenceStoreType = Type.EMPTY;
+		return this;
 	}
 
 }
