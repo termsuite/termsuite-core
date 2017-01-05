@@ -13,7 +13,6 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import jetbrains.exodus.entitystore.Entity;
-import jetbrains.exodus.entitystore.EntityIterator;
 import jetbrains.exodus.entitystore.PersistentEntityStore;
 import jetbrains.exodus.entitystore.PersistentEntityStores;
 import jetbrains.exodus.entitystore.StoreTransaction;
@@ -93,11 +92,12 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 
 	@Override
 	public void removeTerm(Term t) {
-		occStore.executeInTransaction(txn -> {
-			EntityIterator it = txn.find(ENTITY_OCCURRENCE, P_TERM_KEY, t.getGroupingKey()).iterator();
-			while (it.hasNext()) 
-				it.next().delete();
-		});
+		// do nothing
+//		occStore.executeInTransaction(txn -> {
+//			EntityIterator it = txn.find(ENTITY_OCCURRENCE, P_TERM_KEY, t.getGroupingKey()).iterator();
+//			while (it.hasNext()) 
+//				it.next().delete();
+//		});
 	}
 
 	@Override
