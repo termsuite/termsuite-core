@@ -34,6 +34,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Semaphore;
 
 import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -1617,15 +1618,18 @@ public class TermSuitePipeline {
 		try {
 			if(!this.termino.isPresent())
 				resTermino();
-			String terminoServiceName = String.format("service-%s", this.termino.get().getName());
+//			String terminoServiceName = String.format("service-%s", this.termino.get().getName());
 			String mutexName = String.format("mutex-%s", this.termino.get().getName());
+			if(!TermSuiteResourceManager.getInstance().contains(mutexName))
+				TermSuiteResourceManager.getInstance().register(mutexName, new Semaphore(1));
 			
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				MaxSizeThresholdCleaner.class,
 				MaxSizeThresholdCleaner.MAX_SIZE, maxSize,
-				MaxSizeThresholdCleaner.CLEANING_MUTEX_NAME, mutexName,
-				MaxSizeThresholdCleaner.TERMINOLOGY_SERVICE_NAME, terminoServiceName
+				MaxSizeThresholdCleaner.CLEANING_MUTEX_NAME, mutexName
+//				MaxSizeThresholdCleaner.TERMINOLOGY_SERVICE_NAME, terminoServiceName
 			);
+			
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
 			return aggregateAndReturn(ae, "Cleaning Terminology on property "+property.toString().toLowerCase()+" with maxSize=" + maxSize, 0);
