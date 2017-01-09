@@ -25,7 +25,6 @@ package fr.univnantes.termsuite.model.occurrences;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -45,11 +44,6 @@ public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 
 	private Multimap<Term, TermOccurrence> map = Multimaps.synchronizedMultimap(HashMultimap.create());
 	
-	@Override
-	public Iterator<TermOccurrence> occurrenceIterator(Term term) {
-		return getOccurrences(term).iterator();
-	}
-
 	@Override
 	public Collection<TermOccurrence> getOccurrences(Term term) {
 		return map.get(term);
@@ -104,5 +98,10 @@ public class MemoryOccurrenceStore extends AbstractMemoryOccStore {
 			.max((e1,e2) -> Integer.compare(e1.getValue().intValue(), e2.getValue().intValue()))
 			.map(e -> e.getKey())
 			.orElse(null);
+	}
+
+	@Override
+	public long size() {
+		return map.values().size();
 	}
 }

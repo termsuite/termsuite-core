@@ -162,7 +162,7 @@ public class Contextualizer  {
 	
 	private Iterator<Iterator<TermOccurrence>> contextIterator(Terminology termino, final Term t, final OccurrenceType coTermsType, final int contextSize) {
 		return new AbstractIterator<Iterator<TermOccurrence>>() {
-			private Iterator<TermOccurrence> it = termino.getOccurrenceStore().occurrenceIterator(t);
+			private Iterator<TermOccurrence> it = termino.getOccurrenceStore().getOccurrences(t).iterator();
 			
 			@Override
 			protected Iterator<TermOccurrence> computeNext() {

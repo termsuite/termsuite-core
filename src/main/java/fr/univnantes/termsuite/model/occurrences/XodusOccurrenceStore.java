@@ -3,9 +3,9 @@ package fr.univnantes.termsuite.model.occurrences;
 import static java.util.stream.Collectors.toList;
 
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.Optional;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicLong;
 
 import com.google.common.collect.Lists;
 
@@ -33,11 +33,6 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 		super(lang);
 		this.url = url;
 		occStore = PersistentEntityStores.newInstance(url);
-	}
-
-	@Override
-	public Iterator<TermOccurrence> occurrenceIterator(Term term) {
-		return getOccurrences(term).iterator();
 	}
 
 	@Override
@@ -115,6 +110,7 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 	@Override
 	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText) {
 		super.addOccurrence(term, documentUrl, begin, end, coveredText);
+		nbOccurrences.incrementAndGet();
 		try {
 			transactionMutex.acquire();
 			Entity entity = getTransaction().newEntity(ENTITY_OCCURRENCE);
@@ -129,5 +125,11 @@ public class XodusOccurrenceStore extends AbstractMemoryOccStore {
 			throw new RuntimeException(e);
 		}
 
+	}
+
+	private AtomicLong nbOccurrences = new AtomicLong(0);
+	@Override
+	public long size() {
+		return nbOccurrences.longValue();
 	}
 }

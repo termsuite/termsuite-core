@@ -25,7 +25,6 @@ package fr.univnantes.termsuite.model.occurrences;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
@@ -35,11 +34,6 @@ public class EmptyOccurrenceStore extends AbstractMemoryOccStore {
 
 	public EmptyOccurrenceStore(Lang lang) {
 		super(lang);
-	}
-
-	@Override
-	public Iterator<TermOccurrence> occurrenceIterator(Term term) {
-		return Collections.emptyIterator();
 	}
 
 	@Override
@@ -65,6 +59,11 @@ public class EmptyOccurrenceStore extends AbstractMemoryOccStore {
 	@Override
 	public void close() {
 		// Do nothing
+	}
+
+	@Override
+	public long size() {
+		return 0;
 	}
 
 }

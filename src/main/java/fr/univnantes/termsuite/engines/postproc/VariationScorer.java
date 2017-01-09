@@ -73,8 +73,8 @@ public class VariationScorer {
 
 		TerminologyService terminoService = new TerminologyService(termino);
 		
-		LOGGER.debug("Computing {}", RelationProperty.STRICTNESS);
-		doStrictnesses(terminoService);
+//		LOGGER.debug("Computing {}", RelationProperty.STRICTNESS);
+//		doStrictnesses(terminoService);
 		
 		LOGGER.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
 		doVariationFrenquencies(terminoService);
@@ -180,7 +180,7 @@ public class VariationScorer {
 				// exclude semantic variations, otherwise there are too many variation pathes
 				.filter(NOT_SEMANTIC)
 				.forEach(v2 -> {
-					if(v2.getPropertyDoubleValue(RelationProperty.STRICTNESS) >= 0.95) {
+					if(!v2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)) {
 						sum.addAndGet(recursiveDoVariationFrenquencies(termino, v2, newVisitedTerms));
 					}
 			});
@@ -199,18 +199,18 @@ public class VariationScorer {
 		});
 	}
 
-	public void doStrictnesses(TerminologyService termino) {
-		termino.variations()
-			.filter(NOT_SEMANTIC)
-			.forEach( relation -> {
-				relation.setProperty(RelationProperty.STRICTNESS, 
-					TermUtils.getStrictness(
-							termino.getTerminology().getOccurrenceStore(), 
-					relation.getTo(), 
-					relation.getFrom()));
-		});
-		
-	}
+//	public void doStrictnesses(TerminologyService termino) {
+//		termino.variations()
+//			.filter(NOT_SEMANTIC)
+//			.forEach( relation -> {
+//				relation.setProperty(RelationProperty.STRICTNESS, 
+//					TermUtils.getStrictness(
+//							termino.getTerminology().getOccurrenceStore(), 
+//					relation.getTo(), 
+//					relation.getFrom()));
+//		});
+//		
+//	}
 	public void doSourceGains(TerminologyService termino) {
 		termino.variations()
 			.forEach( relation -> {

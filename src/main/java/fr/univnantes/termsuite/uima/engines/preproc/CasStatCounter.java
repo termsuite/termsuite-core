@@ -25,13 +25,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.uima.UimaContext;
@@ -55,8 +53,6 @@ import com.google.common.collect.Ordering;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.WordAnnotation;
@@ -176,17 +172,13 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 		long nbMorphologicalVariants = 0;
 		long nbGraphicalVariants = 0;
 		long nbSynonymicVariants = 0;
-		AtomicLong nbOccurrences = new AtomicLong(0);
 		Terminology termino = terminoResource.getTerminology();
 		nbMorphologicalVariants = count(termino, VariationType.MORPHOLOGICAL);
 		nbSyntacticVariants = count(termino, VariationType.SYNTAGMATIC);
 		nbGraphicalVariants = count(termino, VariationType.GRAPHICAL);
 		nbSynonymicVariants = count(termino, VariationType.SEMANTIC);
 		
-		for(Term t:termino.getTerms()) {
-			Collection<TermOccurrence> occurrences = termino.getOccurrenceStore().getOccurrences(t);
-			nbOccurrences.addAndGet(occurrences.size());
-		}
+		long nbOccurrences = termino.getOccurrenceStore().size();
 			
 		// graphical variants are bidirectional
 		nbGraphicalVariants/=2;

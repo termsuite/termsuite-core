@@ -25,7 +25,6 @@ package fr.univnantes.termsuite.model;
 
 import java.io.Closeable;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -33,7 +32,6 @@ public interface OccurrenceStore extends Closeable {
 	public static enum Type {MEMORY, DISK, EMPTY}
 	public static enum State{COLLECTING,INDEXING,INDEXED}
 
-	public Iterator<TermOccurrence> occurrenceIterator(Term term);
 	public Collection<TermOccurrence> getOccurrences(Term term);
 	public Type getStoreType();
 	public void flush();
@@ -63,5 +61,12 @@ public interface OccurrenceStore extends Closeable {
 	
 	public String getMostFrequentForm(Term t);
 	public Set<Document> getDocuments(Term t);
+	
+	/**
+	 * The number of occurrences in occurrence store.
+	 * 
+	 * @return
+	 */
+	public long size();
 	
 }

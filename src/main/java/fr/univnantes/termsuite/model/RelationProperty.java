@@ -19,7 +19,7 @@ public enum RelationProperty implements Property<TermRelation> {
 	AFFIX_ORTHOGRAPHIC_SCORE("AffixOrthographicScore", "affOrtho", "affOrtho", Double.class),
 	EXTENSION_SCORE("ExtensionScore", "extScore", "extScore", Double.class),
 	AFFIX_SPEC("AffixSpec", "affSpec", "affSpec", Double.class),
-	STRICTNESS("Strictness", "strictness", "strictness", Double.class),
+//	STRICTNESS("Strictness", "strictness", "strictness", Double.class),
 	HAS_EXTENSION_AFFIX("HasExtensionAffix", "hasExtAffix", "hasExtAffix", Boolean.class),
 	IS_EXTENSION("IsExtension", "isExt", "isExt", Boolean.class), 
 	SOURCE_GAIN("SourceGain", "srcGain", "srcGain", Double.class),
