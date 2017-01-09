@@ -62,7 +62,7 @@ public class TermBuilder {
 		this.termino = termino;
 	}
 
-	public Term createAndAddToIndex() {
+	public Term createAndAddToTerminology() {
 		Preconditions.checkNotNull(this.termino, ERR_NO_TERMINOLOGY_GIVEN);
 
 		Term term = create();

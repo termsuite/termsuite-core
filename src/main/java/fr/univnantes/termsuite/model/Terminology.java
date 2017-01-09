@@ -139,8 +139,8 @@ public interface Terminology {
 
 	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types);
 
-	public Multimap<Term, TermRelation> getOutboundRelation();
+	public Multimap<Term, TermRelation> getOutboundRelations();
 
-	public Multimap<Term, TermRelation> getInboundVariations();
+	public Multimap<Term, TermRelation> getInboundRelations();
 
 }

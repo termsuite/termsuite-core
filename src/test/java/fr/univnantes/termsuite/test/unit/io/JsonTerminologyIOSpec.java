@@ -103,7 +103,7 @@ public class JsonTerminologyIOSpec {
 			.addOccurrence(20, 30, "source3", "coveredText 4")
 			.setSpottingRule("spotRule1")
 			.setSpecificity(1.1)
-			.createAndAddToIndex();
+			.createAndAddToTerminology();
 		String form2 = "coveredText 2";
 		term2 = TermBuilder.start(termino)
 				.setRank(2)
@@ -115,7 +115,7 @@ public class JsonTerminologyIOSpec {
 				.addOccurrence(10, 12, "source1", form2)
 				.addOccurrence(14, 20, "source2", form2)
 				.setSpecificity(2.2)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 		TermRelation rel1 = new TermRelation(RelationType.VARIATION, term1, term2);
 		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");

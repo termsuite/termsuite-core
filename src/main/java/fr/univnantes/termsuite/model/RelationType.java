@@ -31,6 +31,8 @@ public enum RelationType {
 	DERIVES_INTO("D", 4, "deriv", true),
 	IS_PREFIX_OF("P", 5, "pref", true),
 	HAS_EXTENSION("E", 6, "hasext", true), 
+//	HAS_DIRECT_EXTENSION("Ed", 7, "hasdext", true), 
+	
 //	SYNONYMIC("H", 7, "syno", true),
 	;
 	

@@ -381,7 +381,7 @@ public class JsonTerminologyIO {
 					} // end term object
 					try {
 						Preconditions.checkState(currentGroupingKey != null, MSG_NO_GKEY_FOR_TERM);
-						Term t = builder.createAndAddToIndex();
+						Term t = builder.createAndAddToTerminology();
 						t.setProperties(properties);
 					} catch(Exception e) {
 						LOGGER.error("Could not add term "+currentGroupingKey+" to term index",e);
