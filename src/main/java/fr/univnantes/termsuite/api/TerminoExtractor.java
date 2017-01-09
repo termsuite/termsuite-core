@@ -369,6 +369,12 @@ public class TerminoExtractor {
 				TermSuitePipeline.create(termino.get())
 				: TermSuitePipeline.create(lang.getCode());
 		
+				
+		if(this.skipOccurrenceIndexing)
+			pipeline.setEmptyOccurrenceStore();
+		else if(occStorePath.isPresent())
+			pipeline.setPersistentStore(occStorePath.get());
+		
 		if(history.isPresent())
 			pipeline.setHistory(history.get());
 		
@@ -475,6 +481,24 @@ public class TerminoExtractor {
 	
 	public TerminoExtractor setWatcher(TermHistory history) {
 		this.history = Optional.of(history);
+		return this;
+	}
+	
+	
+	private Optional<String> occStorePath = Optional.empty();
+	
+	public TerminoExtractor setPersistentOccurrenceStore(String occStorePath) {
+		this.occStorePath = Optional.ofNullable(occStorePath);
+		return this;
+	}
+
+	private boolean skipOccurrenceIndexing = false;
+	public TerminoExtractor skipOccurrenceIndexing() {
+		return setSkipOccurrenceIndexing(true);
+	}
+
+	public TerminoExtractor setSkipOccurrenceIndexing(boolean b) {
+		this.skipOccurrenceIndexing = b;
 		return this;
 	}
 

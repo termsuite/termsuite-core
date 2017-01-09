@@ -76,7 +76,7 @@ public class TermMerger {
 				OccurrenceStore occStore = termino.getTerminology().getOccurrenceStore();
 				Collection<TermOccurrence> occurrences = occStore.getOccurrences(rel.getTo());
 				for(TermOccurrence o2:occurrences)
-					occStore.addOccurrence(rel.getFrom(), o2.getSourceDocument().getUrl(), o2.getBegin(), o2.getEnd(), o2.getForm().getText());
+					occStore.addOccurrence(rel.getFrom(), o2.getSourceDocument().getUrl(), o2.getBegin(), o2.getEnd(), o2.getCoveredText());
 				rel.getFrom().setFrequency(rel.getFrom().getFrequency() + rel.getTo().getFrequency());
 				rel.getFrom().setFrequencyNorm(rel.getFrom().getFrequencyNorm() + rel.getTo().getFrequencyNorm());
 				rel.getFrom().setGeneralFrequencyNorm(rel.getFrom().getGeneralFrequencyNorm() + rel.getTo().getGeneralFrequencyNorm());

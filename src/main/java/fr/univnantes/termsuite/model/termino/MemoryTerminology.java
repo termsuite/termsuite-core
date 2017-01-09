@@ -167,7 +167,7 @@ public class MemoryTerminology implements Terminology {
 					);
 			}
 			builder.setSpottingRule(annotation.getSpottingRuleName());
-			term = builder.createAndAddToIndex();
+			term = builder.createAndAddToTerminology();
 		}
 		if(keepOccurrence)
 			occurrenceStore.addOccurrence(
@@ -407,12 +407,12 @@ public class MemoryTerminology implements Terminology {
 	}
 	
 	@Override
-	public Multimap<Term, TermRelation> getOutboundRelation() {
+	public Multimap<Term, TermRelation> getOutboundRelations() {
 		return outboundVariations;
 	}
 
 	@Override
-	public Multimap<Term, TermRelation> getInboundVariations() {
+	public Multimap<Term, TermRelation> getInboundRelations() {
 		return inboundVariations;
 	}
 }

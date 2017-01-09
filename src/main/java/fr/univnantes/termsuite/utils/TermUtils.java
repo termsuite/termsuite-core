@@ -40,10 +40,8 @@ import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;
@@ -184,25 +182,6 @@ public class TermUtils {
 		}
 	}
 
-	/**
-	 * Returns the strictness of t1 based on t2, i.e. the ratio of appearance
-	 * in an occurrence that do not overlap with t2. 
-	 * 
-	 * @param t1
-	 * 			the term to analyze
-	 * @param t2
-	 * 			the base term
-	 * @return
-	 * 			fstrict(t1) / f(t1)
-	 */
-	public static double getStrictness(OccurrenceStore store, Term t1, Term t2) {
-		Collection<TermOccurrence> occ1 = Lists.newArrayList(store.getOccurrences(t1));
-		TermOccurrenceUtils.removeOverlaps(store.getOccurrences(t2), occ1);
-		double t1Strict = occ1.size();
-		double t1F = t1.getFrequency();
-		return t1Strict / t1F;
-	}
-	
 	
 	/**
 	 * 
@@ -314,7 +293,8 @@ public class TermUtils {
 	}
 	
 	public static boolean isIncludedIn(Term term, Term inTerm) {
-		return getPosition(term, inTerm) != -1;
+		return term.getWords().size() < inTerm.getWords().size()
+				&& getPosition(term, inTerm) != -1;
 	}
 
 	public static boolean isPrefixOf(Term term, Term ofTerm) {

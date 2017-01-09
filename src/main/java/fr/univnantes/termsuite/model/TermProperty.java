@@ -56,7 +56,8 @@ public enum TermProperty implements Property<Term> {
 	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 
 	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class), 
 	SWT_SIZE("SwtSize", "swtSize", "swtSize", Integer.class), 
-	FILTERED("Filtered", "filtered", "filtered", Boolean.class),
+	FILTERED("Filtered", "filtered", "filtered", Boolean.class), 
+	DEPTH("Depth", "depth", "depth", Integer.class),
 	
 	;
 	

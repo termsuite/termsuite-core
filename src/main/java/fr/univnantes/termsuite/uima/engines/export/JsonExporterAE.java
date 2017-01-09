@@ -34,8 +34,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Preconditions;
-
 import fr.univnantes.termsuite.api.JsonOptions;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Terminology;
@@ -61,24 +59,12 @@ public class JsonExporterAE extends AbstractTerminologyExporter {
 	@ConfigurationParameter(name=WITH_CONTEXTS, mandatory=false, defaultValue="false")
 	private boolean withContexts;
 	
-	public static final String LINKED_MONGO_STORE = "LinkedMongoStore";
-	@ConfigurationParameter(name=LINKED_MONGO_STORE, mandatory=false, defaultValue="false")
-	private boolean linkedMongoStore;
-	
 	private OccurrenceStore occurrenceStore;
 
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
 		occurrenceStore = terminoResource.getTerminology().getOccurrenceStore();
-		if(linkedMongoStore) {
-			Preconditions.checkArgument(
-					occurrenceStore.getStoreType() == OccurrenceStore.Type.MONGODB,
-					"Bad configuration for JSON Exporter %s is true but occurrence store type is %s.",
-					LINKED_MONGO_STORE,
-					occurrenceStore.getStoreType()
-					);
-		}
 	}
 	
 	@Override
@@ -93,8 +79,7 @@ public class JsonExporterAE extends AbstractTerminologyExporter {
 			JsonOptions saveOptions = new JsonOptions();
 			saveOptions.withOccurrences(withOccurrences);
 			saveOptions.withContexts(withContexts);
-			if(linkedMongoStore)
-				saveOptions.mongoDBOccStoreURI(occurrenceStore.getUrl());
+			saveOptions.persistentOccStorePath(occurrenceStore.getUrl());
 			JsonTerminologyIO.save(writer2, this.terminoResource.getTerminology(), saveOptions);
 			fos.flush();
 			fos.close();

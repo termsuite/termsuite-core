@@ -34,6 +34,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Semaphore;
 
 import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -72,13 +73,15 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.OccurrenceStore.Type;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.occurrences.MongoDBOccurrenceStore;
+import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.resources.PostProcConfig;
 import fr.univnantes.termsuite.resources.TermSuitePipelineObserver;
@@ -112,11 +115,10 @@ import fr.univnantes.termsuite.uima.engines.preproc.TermOccAnnotationImporter;
 import fr.univnantes.termsuite.uima.engines.preproc.TerminologyBlacklistWordFilterAE;
 import fr.univnantes.termsuite.uima.engines.preproc.TreeTaggerLemmaFixer;
 import fr.univnantes.termsuite.uima.engines.termino.ContextualizerAE;
-import fr.univnantes.termsuite.uima.engines.termino.DocumentFrequencySetterAE;
+import fr.univnantes.termsuite.uima.engines.termino.CorpusWidePropertiesSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.EvalEngine;
 import fr.univnantes.termsuite.uima.engines.termino.ExtensionDetecterAE;
 import fr.univnantes.termsuite.uima.engines.termino.MorphologicalAnalyzerAE;
-import fr.univnantes.termsuite.uima.engines.termino.PilotSetterAE;
 import fr.univnantes.termsuite.uima.engines.termino.PostProcessorAE;
 import fr.univnantes.termsuite.uima.engines.termino.Ranker;
 import fr.univnantes.termsuite.uima.engines.termino.SWTSizeSetterAE;
@@ -179,13 +181,19 @@ public class TermSuitePipeline {
 	/* ******************************
 	 * MAIN PIPELINE PARAMETERS
 	 */
-	private OccurrenceStore occurrenceStore;
 	private Optional<? extends Terminology> termino = Optional.empty();
 	private Lang lang;
 	private CollectionReaderDescription crDescription;
 	private String pipelineObserverName;
 	private AggregateBuilder aggregateBuilder;
 	private String termHistoryResourceName = "PipelineHistory";
+
+
+	/*
+	 * 
+	 */
+	private OccurrenceStore.Type occurrenceStoreType = Type.MEMORY;
+	private Optional<String> peristentOccStorePath = Optional.empty();
 
 	
 	/*
@@ -229,7 +237,6 @@ public class TermSuitePipeline {
 	/* JSON */
 	private boolean exportJsonWithOccurrences = true;
 	private boolean exportJsonWithContext = false;
-	private boolean linkMongoStore = false;
 	/* TSV */
 	private String tsvExportProperties = "groupingKey,wr";
 	private boolean tsvWithVariantScores = false;
@@ -247,7 +254,6 @@ public class TermSuitePipeline {
 	 */
 	private TermSuitePipeline(String lang, String urlPrefix) {
 		this.lang = Lang.forName(lang);
-		this.occurrenceStore = new MemoryOccurrenceStore(this.lang);
 		this.aggregateBuilder = new AggregateBuilder();
 		this.pipelineObserverName = PipelineObserver.class.getSimpleName() + "-" + Thread.currentThread().getId() + "-" + System.currentTimeMillis();
 
@@ -385,9 +391,8 @@ public class TermSuitePipeline {
 
 		
 	private void terminates() {
-		if(termino.isPresent() && termino.get().getOccurrenceStore() instanceof MongoDBOccurrenceStore) 
-			((MongoDBOccurrenceStore)termino.get().getOccurrenceStore()).close();
-			
+		if(termino.isPresent()) 
+			termino.get().getOccurrenceStore().close();
 	}
 
 	/**
@@ -927,8 +932,7 @@ public class TermSuitePipeline {
 					JsonExporterAE.class, 
 					JsonExporterAE.TO_FILE_PATH, toFilePath,
 					JsonExporterAE.WITH_OCCURRENCE, exportJsonWithOccurrences,
-					JsonExporterAE.WITH_CONTEXTS, exportJsonWithContext,
-					JsonExporterAE.LINKED_MONGO_STORE, this.linkMongoStore
+					JsonExporterAE.WITH_CONTEXTS, exportJsonWithContext
 				);
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
@@ -1165,8 +1169,6 @@ public class TermSuitePipeline {
 					FixedExpressionSpotter.REMOVE_TERM_OCC_ANNOTATIONS_FROM_CAS, true
 				);
 			
-			
-
 			ExternalResourceDescription fixedExprRes = ExternalResourceFactory.createExternalResourceDescription(
 					FixedExpressionResource.class, 
 					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
@@ -1273,8 +1275,7 @@ public class TermSuitePipeline {
 			ExternalResourceFactory.bindResource(ae, resHistory());
 
 			return aggregateAndReturn(ae, "TermOccAnnotation importer", 0)
-						.aePilotSetter()
-						.aeDocumentFrequencySetter()
+						.aeCorpusPropertiesSetter()
 						.aeSWTSizeSetter()
 						;
 		} catch (Exception e) {
@@ -1282,32 +1283,19 @@ public class TermSuitePipeline {
 		}
 	}
 
-	private TermSuitePipeline aePilotSetter()  {
+	private TermSuitePipeline aeCorpusPropertiesSetter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					PilotSetterAE.class
+					CorpusWidePropertiesSetterAE.class
 				);
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
-			return aggregateAndReturn(ae, PilotSetterAE.TASK_NAME, 0);
+			return aggregateAndReturn(ae, CorpusWidePropertiesSetterAE.TASK_NAME, 0);
 		} catch (Exception e) {
 			throw new TermSuitePipelineException(e);
 		}		
 	}
 	
-	private TermSuitePipeline aeDocumentFrequencySetter()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					DocumentFrequencySetterAE.class
-				);
-			ExternalResourceFactory.bindResource(ae, resTermino());
-
-			return aggregateAndReturn(ae, DocumentFrequencySetterAE.TASK_NAME, 0);
-		} catch (Exception e) {
-			throw new TermSuitePipelineException(e);
-		}		
-	}
-
 	private TermSuitePipeline aeSWTSizeSetter()  {
 		try {
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
@@ -1562,10 +1550,25 @@ public class TermSuitePipeline {
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
 	public TermSuitePipeline emptyTermino(String name) {
-		MemoryTerminology termino = new MemoryTerminology(name, this.lang, this.occurrenceStore);
+		MemoryTerminology termino = new MemoryTerminology(name, this.lang, createOccurrenceStore());
 		LOGGER.info("Creating Terminology {}", termino.getName());
 		this.termino = Optional.of(termino);
 		return this;
+	}
+
+
+	private OccurrenceStore createOccurrenceStore() {
+		Preconditions.checkState(this.lang != null, "Language needs to be set on pipeline before occurrence store");
+		switch(occurrenceStoreType) {
+		case MEMORY:
+			return new MemoryOccurrenceStore(lang);
+		case EMPTY:
+			return new EmptyOccurrenceStore(lang);
+		case DISK:
+			return new XodusOccurrenceStore(lang, this.peristentOccStorePath.get());
+		default:
+			throw new UnsupportedOperationException(occurrenceStoreType.toString());	
+		}
 	}
 
 	
@@ -1635,15 +1638,18 @@ public class TermSuitePipeline {
 		try {
 			if(!this.termino.isPresent())
 				resTermino();
-			String terminoServiceName = String.format("service-%s", this.termino.get().getName());
+//			String terminoServiceName = String.format("service-%s", this.termino.get().getName());
 			String mutexName = String.format("mutex-%s", this.termino.get().getName());
+			if(!TermSuiteResourceManager.getInstance().contains(mutexName))
+				TermSuiteResourceManager.getInstance().register(mutexName, new Semaphore(1));
 			
 			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
 				MaxSizeThresholdCleaner.class,
 				MaxSizeThresholdCleaner.MAX_SIZE, maxSize,
-				MaxSizeThresholdCleaner.CLEANING_MUTEX_NAME, mutexName,
-				MaxSizeThresholdCleaner.TERMINOLOGY_SERVICE_NAME, terminoServiceName
+				MaxSizeThresholdCleaner.CLEANING_MUTEX_NAME, mutexName
+//				MaxSizeThresholdCleaner.TERMINOLOGY_SERVICE_NAME, terminoServiceName
 			);
+			
 			ExternalResourceFactory.bindResource(ae, resTermino());
 
 			return aggregateAndReturn(ae, "Cleaning Terminology on property "+property.toString().toLowerCase()+" with maxSize=" + maxSize, 0);
@@ -2113,16 +2119,15 @@ public class TermSuitePipeline {
 	
 	/**
 	 * 
-	 * Stores occurrences to MongoDB
+	 * Stores occurrences to disk
 	 * 
-	 * @param mongoDBUri
+	 * @param filePath
 	 * 			the mongo db connection uri
 	 * @return
 	 * 		This chaining {@link TermSuitePipeline} builder object
 	 */
-	public TermSuitePipeline setMongoDBOccurrenceStore(String mongoDBUri) {
-		Preconditions.checkState(this.lang != null, "Language needs to be set on pipeline before occurrence store");
-		this.occurrenceStore = new MongoDBOccurrenceStore(lang, mongoDBUri);
+	public TermSuitePipeline setPersistentStore(String filePath) {
+		peristentOccStorePath = Optional.of(filePath);
 		return this;
 	}
 
@@ -2220,23 +2225,6 @@ public class TermSuitePipeline {
 
 	/**
 	 * 
-	 * Configures the {@link JsonExporterAE} to not embed the occurrences 
-	 * in the json file, but to link the mongodb occurrence store instead.
-	 * 
-	 * 
-	 * 
-	 * @see #haeJsonExporter(String) 
-	 * @return
-	 * 		This chaining {@link TermSuitePipeline} builder object
-	 */
-	public TermSuitePipeline linkMongoStore() {
-		this.linkMongoStore = true;
-		return this;
-	}
-	
-
-	/**
-	 * 
 	 * Aggregates an AE to the TS pipeline.
 	 * 
 	 * @param ae
@@ -2254,6 +2242,12 @@ public class TermSuitePipeline {
 		} catch(Exception e) {
 			throw new TermSuitePipelineException(e);
 		}
+	}
+
+
+	public TermSuitePipeline setEmptyOccurrenceStore() {
+		this.occurrenceStoreType = Type.EMPTY;
+		return this;
 	}
 
 }

@@ -49,22 +49,22 @@ public class JsonOptions {
 		return withContexts;
 	}
 
-	private Optional<String> mongoDBOccStore = Optional.empty();
+	private Optional<String> persistentOccStorePath = Optional.empty();
 	
-	public JsonOptions mongoDBOccStoreURI(String mongoDBOccStoreURI) {
-		Preconditions.checkNotNull(mongoDBOccStoreURI, "MongoDBUri must not be null");
-		this.mongoDBOccStore = Optional.of(mongoDBOccStoreURI);
+	public JsonOptions persistentOccStorePath(String persistentOccStorePath) {
+		Preconditions.checkNotNull(persistentOccStorePath, "persistentOccStorePath must not be null");
+		this.persistentOccStorePath = Optional.of(persistentOccStorePath);
 		this.embeddedOccurrences = false;
 		return this;
 	}
 	
 	
 	public boolean isMongoDBOccStore() {
-		return this.mongoDBOccStore.isPresent();
+		return this.persistentOccStorePath.isPresent();
 	}
 	
 	public String getMongoDBOccStore() {
-		return mongoDBOccStore.get();
+		return persistentOccStorePath.get();
 	}
 
 }

@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.unit.selectors;
+package fr.univnantes.termsuite.test.unit.models;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

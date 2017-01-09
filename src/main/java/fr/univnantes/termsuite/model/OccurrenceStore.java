@@ -25,23 +25,16 @@ package fr.univnantes.termsuite.model;
 
 import java.io.Closeable;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-
-import fr.univnantes.termsuite.model.termino.TermSelector;
+import java.util.Set;
 
 public interface OccurrenceStore extends Closeable {
-	public static enum Type {MEMORY, MONGODB}
+	public static enum Type {MEMORY, DISK, EMPTY}
 	public static enum State{COLLECTING,INDEXING,INDEXED}
 
-	public Iterator<TermOccurrence> occurrenceIterator(Term term);
 	public Collection<TermOccurrence> getOccurrences(Term term);
 	public Type getStoreType();
 	public void flush();
-	public State getCurrentState();
-	public void makeIndex();
-
-
 	
 	/**
 	 * Returns the path to access the occurrence store if
@@ -59,11 +52,23 @@ public interface OccurrenceStore extends Closeable {
 	 */
 	public void removeTerm(Term t);
 	
-	public void deleteMany(TermSelector selector);
 	void close();
 	public List<Form> getForms(Term term);
 	public void addOccurrence(Term term, String documentUrl, int begin, int end, String coveredText);
 	
 	public Document getDocument(String url);
 	public Collection<Document> getDocuments();
+	
+	public String getMostFrequentForm(Term t);
+	public Set<Document> getDocuments(Term t);
+	
+	/**
+	 * The number of occurrences in occurrence store.
+	 * 
+	 * @return
+	 */
+	public long size();
+	
+	public void log();
+	
 }

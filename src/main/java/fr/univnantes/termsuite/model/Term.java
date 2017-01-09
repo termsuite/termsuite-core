@@ -247,4 +247,12 @@ public class Term extends PropertyHolder<TermProperty> implements Comparable<Ter
 	public Number getPropertyNumberValue(TermProperty p) {
 		return (Number)get(p);
 	}
+
+	public void setDepth(int depth) {
+		setProperty(TermProperty.DEPTH, depth);
+	}
+	
+	public Integer getDepth() {
+		return getPropertyIntegerValue(TermProperty.DEPTH);
+	}
 }

@@ -65,8 +65,23 @@ public class TerminologyService {
 						.filter(r-> r.getTo().equals(to));
 	}
 
+
+	public Stream<TermRelation> inboundRelations(Term target) {
+		return this.termino.getInboundRelations()
+				.get(target)
+				.stream();
+	}
+	
+	public Stream<TermRelation> inboundRelations(Term target, RelationType rType, RelationType... relationTypes) {
+		Set<RelationType> rTypes = EnumSet.of(rType, relationTypes);
+		return inboundRelations(target)
+				.filter(r->rTypes.contains(r.getType()));
+	}
+	
+
+	
 	public Stream<TermRelation> outboundRelations(Term source) {
-		return this.termino.getOutboundRelation()
+		return this.termino.getOutboundRelations()
 			.get(source)
 			.stream();
 	}
@@ -156,4 +171,21 @@ public class TerminologyService {
 	public long termCount() {
 		return this.termino.getTerms().size();
 	}
+
+	public Stream<TermRelation> extensions() {
+		return relations(RelationType.HAS_EXTENSION);
+	}
+	
+	public Stream<TermRelation> extensionBases(Term term) {
+		return inboundRelations(term)
+				.filter(r-> r.getType() == RelationType.HAS_EXTENSION)
+			;
+	}
+	
+
+	public Stream<TermRelation> extensions(Term from) {
+		return outboundRelations(from)
+				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
+	}
+
 }

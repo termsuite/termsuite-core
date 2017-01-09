@@ -221,6 +221,9 @@ dependencies {
 	// Json
 	compile "com.fasterxml.jackson.core:jackson-databind:2.8.2"
 
+	// Xodus
+	compile 'org.jetbrains.xodus:xodus-entity-store:1.0.2'
+	
 	// UIMA
 	/*
 	 * Warning: upgrading to uimafit-core:2.2.0 and uimaj-core:2.9.0
@@ -244,7 +247,7 @@ dependencies {
 	// Guava
 	compile "com.google.guava:guava:19.0"
 	
-	compile "org.mongodb:mongo-java-driver:3.2.2"
+	//compile "org.mongodb:mongo-java-driver:3.2.2"
 			
 	// Snake YAML
 	compile "org.yaml:snakeyaml:1.15"

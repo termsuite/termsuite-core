@@ -21,13 +21,49 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.model.termino;
+package fr.univnantes.termsuite.model.occurrences;
 
+import java.util.Collection;
+import java.util.Collections;
+
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.TermOccurrence;
 
-public interface TermSelector {
+public class EmptyOccurrenceStore extends AbstractMemoryOccStore {
 
-	public boolean select(Term t);
-	public boolean select(Terminology termino, Term t);
+	public EmptyOccurrenceStore(Lang lang) {
+		super(lang);
+	}
+
+	@Override
+	public Collection<TermOccurrence> getOccurrences(Term term) {
+		return Collections.emptyList();
+	}
+
+	@Override
+	public Type getStoreType() {
+		return Type.EMPTY;
+	}
+
+	@Override
+	public void flush() {
+		// Do nothing
+	}
+
+	@Override
+	public String getUrl() {
+		return null;
+	}
+
+	@Override
+	public void close() {
+		// Do nothing
+	}
+
+	@Override
+	public long size() {
+		return 0;
+	}
+
 }

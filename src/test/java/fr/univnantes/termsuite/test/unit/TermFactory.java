@@ -64,7 +64,7 @@ public class TermFactory {
 				stem = matcher.group(3);
 			builder.addWord(lemma, stem, label, label.equals("N") || label.equals("A"));
 		}
-		return builder.createAndAddToIndex();
+		return builder.createAndAddToTerminology();
 	}
 
 	public void addPrefix(Term term1, Term term2) {

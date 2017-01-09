@@ -123,7 +123,7 @@ public class Fixtures {
 					.setGroupingKey("na: énergie éolien")
 					.addWord(word1(), "N", true)
 					.addWord(word2(), "A", true)
-					.createAndAddToIndex();
+					.createAndAddToTerminology();
 	}
 	
 	/**
@@ -134,7 +134,7 @@ public class Fixtures {
 		return TermBuilder.start(termino)
 					.setGroupingKey("a: radioélectrique")
 					.addWord(word4(), "A", true)
-					.createAndAddToIndex();
+					.createAndAddToTerminology();
 	}
 	
 	/**
@@ -148,7 +148,7 @@ public class Fixtures {
 				.addWord(word4(), "A", true)
 				.addWord(word5(), "P")
 				.addWord(word6(), "N", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class Fixtures {
 				.addWord(word5(), "P")
 				.addWord(word6(), "N", true)
 				.addWord(word7(), "A", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 	
 
@@ -176,7 +176,7 @@ public class Fixtures {
 				.setGroupingKey("na: accès radioélectrique")
 				.addWord(word3(), "N", true)
 				.addWord(word4(), "A", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 
 
@@ -188,7 +188,7 @@ public class Fixtures {
 		return TermBuilder.start(termino)
 				.setGroupingKey("a: total")
 				.addWord(word7(), "A", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 	
 	/**
@@ -199,7 +199,7 @@ public class Fixtures {
 		return TermBuilder.start(termino)
 				.setGroupingKey("n: accès")
 				.addWord(word3(), "N", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 	
 	/**
@@ -210,7 +210,7 @@ public class Fixtures {
 		return TermBuilder.start(termino)
 				.setGroupingKey("n: recouvrement")
 				.addWord(word6(), "N", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 
 	/**
@@ -221,7 +221,7 @@ public class Fixtures {
 		return TermBuilder.start(termino)
 				.setGroupingKey("n: énergie")
 				.addWord(word1(), "N", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 
 	/**
@@ -232,7 +232,7 @@ public class Fixtures {
 		return TermBuilder.start(termino)
 				.setGroupingKey("a: éolien")
 				.addWord(word2(), "A", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 
 	/**
@@ -244,7 +244,7 @@ public class Fixtures {
 				.setGroupingKey("na: recouvrement total")
 				.addWord(word6(), "N", true)
 				.addWord(word7(), "A", true)
-				.createAndAddToIndex();
+				.createAndAddToTerminology();
 	}
 
 	public static Term term1() {return term1(emptyTermino());}
@@ -300,13 +300,13 @@ public class Fixtures {
 			.addOccurrence(0, 10, doc.getUrl(), form)
 			.addOccurrence(31, 40, doc.getUrl(), form)
 			.addOccurrence(61, 70, doc.getUrl(), form)
-			.createAndAddToIndex();
+			.createAndAddToTerminology();
 		
 		TermBuilder.start(memoryTermino)
 			.setGroupingKey("a: éolien")
 			.addWord(Fixtures.word2(), "A")
 			.addOccurrence(11, 20, doc.getUrl(), form)
-			.createAndAddToIndex();
+			.createAndAddToTerminology();
 		
 		
 		
@@ -316,7 +316,7 @@ public class Fixtures {
 			.addOccurrence(21, 30, doc.getUrl(), form)
 			.addOccurrence(41, 50, doc.getUrl(), form)
 			.addOccurrence(51, 60, doc.getUrl(), form)
-			.createAndAddToIndex();
+			.createAndAddToTerminology();
 
 		return memoryTermino;
 

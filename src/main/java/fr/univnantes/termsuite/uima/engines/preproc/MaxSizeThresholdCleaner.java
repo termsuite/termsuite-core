@@ -27,6 +27,7 @@ import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
@@ -34,6 +35,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 
@@ -50,22 +52,25 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	private static final Float REMOVAL_RATIO_THRESHHOLD = 0.6f;
 	private int currentThreshhold = 2;
 	
-	public static final String TERMINOLOGY_SERVICE_NAME="TerminologyServiceName";
-	@ConfigurationParameter(name=TERMINOLOGY_SERVICE_NAME, mandatory=true)
-	private String terminologyServiceName;
+//	public static final String TERMINOLOGY_SERVICE_NAME="TerminologyServiceName";
+//	@ConfigurationParameter(name=TERMINOLOGY_SERVICE_NAME, mandatory=true)
+//	private String terminologyServiceName;
 
 	public static final String CLEANING_MUTEX_NAME="CleaningMutexName";
 	@ConfigurationParameter(name=CLEANING_MUTEX_NAME, mandatory=true)
 	private String mutexName;
 
-	private TerminologyService terminologyService;
+	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
+	private TerminologyResource terminoResource;
+
 	private Semaphore cleanerMutex;
 
+	private TerminologyService terminologyService;
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
-		this.terminologyService = (TerminologyService)TermSuiteResourceManager.getInstance().get(terminologyServiceName);
 		this.cleanerMutex = (Semaphore)TermSuiteResourceManager.getInstance().get(mutexName);
+		this.terminologyService = new TerminologyService(terminoResource.getTerminology());
 	}
 	
 	@Override
@@ -80,6 +85,7 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 	}
 
 	public void cleanIfTooBig() {
+		
 		long sizeBefore = terminologyService.termCount();
 		if(sizeBefore >= maxSize) {
 			logger.debug(
@@ -104,7 +110,7 @@ public class MaxSizeThresholdCleaner extends JCasAnnotator_ImplBase {
 					"Removal ratio is: {}. (needs < {} to increase currentTh)", 
 					String.format("%.3f",removalRatio),
 					String.format("%.3f",REMOVAL_RATIO_THRESHHOLD)
-					);
+				);
 			if(removalRatio < REMOVAL_RATIO_THRESHHOLD) {
 				logger.info("Increasing frequency threshhold from {} to {}.",
 						this.currentThreshhold,

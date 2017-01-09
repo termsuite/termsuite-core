@@ -46,12 +46,11 @@ import fr.univnantes.termsuite.test.unit.models.CrossTableSpec;
 import fr.univnantes.termsuite.test.unit.models.DocumentViewSpec;
 import fr.univnantes.termsuite.test.unit.models.MemoryTerminologySpec;
 import fr.univnantes.termsuite.test.unit.models.TermSpec;
+import fr.univnantes.termsuite.test.unit.models.TermValueProvidersSpec;
 import fr.univnantes.termsuite.test.unit.readers.TermsuiteJsonCasSerializerDeserializerSpec;
 import fr.univnantes.termsuite.test.unit.resources.PrefixTreeSpec;
 import fr.univnantes.termsuite.test.unit.resources.SuffixDerivationListSpec;
 import fr.univnantes.termsuite.test.unit.resources.SuffixDerivationSpec;
-import fr.univnantes.termsuite.test.unit.selectors.HasSingleWordSelectorSpec;
-import fr.univnantes.termsuite.test.unit.selectors.TermValueProvidersSpec;
 import fr.univnantes.termsuite.test.unit.tools.TermSuitePipelineSpec;
 import fr.univnantes.termsuite.test.unit.utils.OccurrenceBufferSpec;
 import fr.univnantes.termsuite.test.unit.utils.StringUtilsSpec;
@@ -84,7 +83,6 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	SuffixDerivationExceptionSetterSpec.class,
 	SuffixDerivationSpec.class,
 	TermValueProvidersSpec.class,
-	HasSingleWordSelectorSpec.class,
 	DiacriticInsensitiveLevenshteinSpec.class,
 	GraphicalVariantGathererSpec.class,
 	CrossTableSpec.class, 

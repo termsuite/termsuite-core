@@ -29,6 +29,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.UIMAException;
@@ -144,6 +146,20 @@ public class TestUtil {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
+	}
+
+	public static void deleteFile(String string) {
+		Path p = Paths.get(string);
+		
+		File path = p.toFile();
+		if(!path.exists())
+			return;
+        if (path.isDirectory()){
+            for (File f : path.listFiles()){
+                deleteFile(f.getPath());
+            }
+        }
+        path.delete();
 	}
 
 	

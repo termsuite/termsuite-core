@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -73,7 +74,7 @@ public class ExtensionDetecter {
 		for (String swtGroupingKey : swtIndex.keySet()) {
 			Term swt = termino.getTermByGroupingKey(swtGroupingKey);
 			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
-				if(swt.equals(term))
+				if(swt.equals(term) || term.getWords().size() == 1)
 					continue;
 				else {
 					addExtensionRelationIfNotExisting(termino, swt, term);
@@ -86,8 +87,14 @@ public class ExtensionDetecter {
 	}
 
 
+	private static final String MSG_BAD_EXTENSION = "Bad extension format. Require from.size < to.size. Got from: \"%s\" and to: \"%s\"";
 	public void addExtensionRelationIfNotExisting(Terminology termino, Term from, Term to) {
 		if(!termino.getRelations(from, to, RelationType.HAS_EXTENSION).findAny().isPresent()) {
+			Preconditions.checkArgument(from.getWords().size() < to.getWords().size(), 
+				MSG_BAD_EXTENSION,
+				from, to
+			);
+			
 			termino.addRelation(new TermRelation(
 					RelationType.HAS_EXTENSION,
 					from, 
@@ -98,7 +105,7 @@ public class ExtensionDetecter {
 	}
 
 	public void setSize2Extensions(Terminology termino) {
-		LOGGER.debug("Detecting size-1 extensions");
+		LOGGER.debug("Detecting size-2 (and more) extensions");
 
 		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;
 		CustomTermIndex customIndex = termino.createCustomIndex(

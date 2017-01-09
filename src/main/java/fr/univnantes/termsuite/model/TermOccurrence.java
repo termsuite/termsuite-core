@@ -27,16 +27,16 @@ import com.google.common.collect.ComparisonChain;
 public class TermOccurrence implements Comparable<TermOccurrence> {
 	
 	private Term term;
-	private Form form;
+	private String coveredText;
 	private Document sourceDocument;
 	private int begin;
 	private int end;
 
-	public TermOccurrence(Term term, Form form, Document sourceFile,
+	public TermOccurrence(Term term, String coveredText, Document sourceFile,
 			int begin, int end) {
 		super();
 		this.term = term;
-		this.form = form;
+		this.coveredText = coveredText;
 		this.sourceDocument = sourceFile;
 		this.begin = begin;
 		this.end = end;
@@ -83,11 +83,11 @@ public class TermOccurrence implements Comparable<TermOccurrence> {
 
 	@Override
 	public String toString() {
-		return getForm().getText();
+		return getCoveredText();
 	}
 	
-	public Form getForm() {
-		return form;
+	public String getCoveredText() {
+		return coveredText;
 	}
 	
 	public void setTerm(Term term2) {
