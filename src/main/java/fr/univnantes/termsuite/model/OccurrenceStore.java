@@ -69,4 +69,6 @@ public interface OccurrenceStore extends Closeable {
 	 */
 	public long size();
 	
+	public void log();
+	
 }

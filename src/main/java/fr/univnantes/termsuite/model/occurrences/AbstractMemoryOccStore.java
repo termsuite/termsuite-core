@@ -13,6 +13,9 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Preconditions;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -27,6 +30,8 @@ import fr.univnantes.termsuite.model.TermOccurrence;
 public abstract class AbstractMemoryOccStore  implements OccurrenceStore {
 	private static final String ERR_DOC_DOES_NOT_EXIST = "Document %s does not exists";
 	
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractMemoryOccStore.class);
+	
 	private Lang lang;
 	private Map<String, Document> documents = new ConcurrentHashMap<>();
 	private Map<Term, Set<Document>> documentsByTerm = new ConcurrentHashMap<>();
@@ -37,6 +42,18 @@ public abstract class AbstractMemoryOccStore  implements OccurrenceStore {
 		this.lang = lang;
 	}
 
+	
+	@Override
+	public void log() {
+		if(LOGGER.isDebugEnabled()) {
+			LOGGER.debug(String.format("Nb documents: %d - Nb terms x documents: %d - Nb forms: %d", 
+					documents.size(),
+					documentsByTerm.entrySet().stream().map(e -> (long)e.getValue().size()).reduce(0L, (acc, el) -> acc +  el),
+					forms.entrySet().stream().map(e -> (long)e.getValue().size()).reduce(0L, (acc, el) -> acc +  el)					
+			));
+		}
+	}
+	
 	protected Set<Document> protectedGetDocuments(Term t) {
 		if(!documentsByTerm.containsKey(t))
 			documentsByTerm.put(t, new HashSet<>(4));
@@ -102,7 +119,7 @@ public abstract class AbstractMemoryOccStore  implements OccurrenceStore {
 
 	@Override
 	public void removeTerm(Term t) {
-		documents.remove(t);
+		documentsByTerm.remove(t);
 		forms.remove(t);
 	}
 	

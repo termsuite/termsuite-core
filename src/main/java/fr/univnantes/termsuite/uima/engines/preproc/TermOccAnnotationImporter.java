@@ -22,9 +22,11 @@
 package fr.univnantes.termsuite.uima.engines.preproc;
 
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.AbstractCas;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -94,9 +96,19 @@ public class TermOccAnnotationImporter extends JCasAnnotator_ImplBase {
 		}
 	}
 	
-	
+
+	private AtomicInteger casCount = new AtomicInteger(0);
+	@Override
+	public void process(AbstractCas aCAS) throws AnalysisEngineProcessException {
+		super.process(aCAS);
+		if(casCount.incrementAndGet() % 10 == 0) {
+			this.terminoResource.getTerminology().getOccurrenceStore().log();
+		}
+	}
 	@Override
 	public void collectionProcessComplete() throws AnalysisEngineProcessException {
+		this.terminoResource.getTerminology().getOccurrenceStore().log();
 		new SWTFlagSetter().setSWTFlags(terminoResource.getTerminology());
+		
 	}
 }
