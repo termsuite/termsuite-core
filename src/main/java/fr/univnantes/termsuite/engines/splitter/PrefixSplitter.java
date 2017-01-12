@@ -29,39 +29,28 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
-import fr.univnantes.termsuite.utils.TermHistory;
 
-public class PrefixSplitter {
+public class PrefixSplitter extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrefixSplitter.class);
 
+	@Resource(type=TermSuiteResource.PREFIX_BANK)
 	private PrefixTree prefixTree;
-	private TermHistory history;
+	
 	private boolean checkIfMorphoExtensionInCorpus = true;
-	
-	public PrefixSplitter setCheckIfMorphoExtensionInCorpus(boolean checkIfMorphoExtensionInCorpus) {
-		this.checkIfMorphoExtensionInCorpus = checkIfMorphoExtensionInCorpus;
-		return this;
-	}
-	
-	public PrefixSplitter setPrefixTree(PrefixTree prefixTree) {
-		this.prefixTree = prefixTree;
-		return this;
-	}
-	
-	
-	public PrefixSplitter setHistory(TermHistory history) {
-		this.history = history;
-		return this;
-	}
-	
-	public void splitPrefixes(Terminology termino) {
-		LOGGER.info("Starting prefix splitting for termino {}", termino.getName());
+
+	@Execute
+	public void splitPrefixes(TerminologyService termino) {
+		LOGGER.info("Starting prefix splitting");
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
@@ -104,18 +93,18 @@ public class PrefixSplitter {
 		}
 		LOGGER.debug("Number of words with prefix composition: {} out of {}", 
 				nb, 
-				termino.getWords().size());
+				termino.wordCount());
 	}
 
 	private void watch(Term swt, Term target) {
-		if(history != null) {
-			if(history.isGKeyWatched(swt.getGroupingKey()))
-				history.saveEvent(
+		if(history.isPresent()) {
+			if(history.get().isGKeyWatched(swt.getGroupingKey()))
+				history.get().saveEvent(
 						swt.getGroupingKey(), 
 						this.getClass(), 
 						"Term is prefix of term " + target);
-			if(history.isGKeyWatched(target.getGroupingKey()))
-				history.saveEvent(
+			if(history.get().isGKeyWatched(target.getGroupingKey()))
+				history.get().saveEvent(
 						target.getGroupingKey(), 
 						this.getClass(), 
 						"Term has a new found prefix: " + swt);

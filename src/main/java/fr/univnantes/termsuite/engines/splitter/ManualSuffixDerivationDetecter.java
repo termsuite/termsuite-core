@@ -23,40 +23,36 @@
 
 package fr.univnantes.termsuite.engines.splitter;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.List;
 
 import com.google.common.collect.Lists;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.utils.TermHistory;
+import fr.univnantes.termsuite.uima.TermSuiteResource;
 
-public class ManualSuffixDerivationDetecter {
-	
+public class ManualSuffixDerivationDetecter extends TerminologyEngine {
+
+	@Resource(type=TermSuiteResource.SUFFIX_DERIVATION_EXCEPTIONS)
 	private MultimapFlatResource manualSuffixDerivations;
-	private TermHistory history;
 	
-	public ManualSuffixDerivationDetecter setManualSuffixDerivations(MultimapFlatResource manualSuffixDerivations) {
-		this.manualSuffixDerivations = manualSuffixDerivations;
-		return this;
-	}
-	
-	public ManualSuffixDerivationDetecter setHistory(TermHistory history) {
-		this.history = history;
-		return this;
-	}
-
-	public void detectDerivations(Terminology termino) {
+	@Execute
+	public void detectDerivations(TerminologyService termino) {
 		Term regularForm;
 		for(Term derivateForm:termino.getTerms()) {
 			if(!derivateForm.isSingleWord())
 				continue;
 			List<TermRelation> toRem = Lists.newArrayList();
 			for(String regularFormException:manualSuffixDerivations.getValues(derivateForm.getWords().get(0).getWord().getLemma())) {
-				for(TermRelation tv:termino.getInboundRelations(derivateForm, RelationType.DERIVES_INTO)) {
+				for(TermRelation tv:termino.inboundRelations(derivateForm, RelationType.DERIVES_INTO).collect(toList())) {
 					regularForm = tv.getFrom();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 
 						toRem.add(tv);
@@ -70,15 +66,15 @@ public class ManualSuffixDerivationDetecter {
 	}
 
 	private void watch(TermRelation rem) {
-		if(history != null) {
-			if(history.isGKeyWatched(rem.getFrom().getGroupingKey())) {
-				history.saveEvent(
+		if(history.isPresent()) {
+			if(history.get().isGKeyWatched(rem.getFrom().getGroupingKey())) {
+				history.get().saveEvent(
 					rem.getFrom().getGroupingKey(), 
 					this.getClass(), 
 					"Removing derivation into " + rem.getTo());
 			}
-			if(history.isGKeyWatched(rem.getTo().getGroupingKey())) {
-				history.saveEvent(
+			if(history.get().isGKeyWatched(rem.getTo().getGroupingKey())) {
+				history.get().saveEvent(
 					rem.getTo().getGroupingKey(), 
 					this.getClass(), 
 					"Removed as derivate of " + rem.getFrom());

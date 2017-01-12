@@ -32,6 +32,7 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
@@ -44,6 +45,7 @@ public class GraphicalVariantGathererSpec {
 	
 	
 	private Terminology termino;
+	private TerminologyService terminoService;
 	private Term tetetete;
 	private Term tetetetx;
 	private Term teteteteAccent;
@@ -87,7 +89,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testCaseInsensitive() throws  Exception {
-		makeAE( 1.0d).gather(termino);
+		makeAE( 1.0d).gather(terminoService);
 		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(0)
 			.extracting("from");
 		assertThat(termino.getInboundRelations(this.abcdefghijklCapped)).hasSize(1)
@@ -106,7 +108,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
-		makeAE( 1.0d).gather(termino);
+		makeAE( 1.0d).gather(terminoService);
 		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(0)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO);
@@ -121,7 +123,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
-		makeAE( 0.9d).gather(termino);
+		makeAE( 0.9d).gather(terminoService);
 		assertThat(termino.getOutboundRelations(this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
@@ -138,7 +140,7 @@ public class GraphicalVariantGathererSpec {
 	
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
-		makeAE(0.8d).gather(termino);
+		makeAE(0.8d).gather(terminoService);
 		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(0);
 		

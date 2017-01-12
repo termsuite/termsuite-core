@@ -55,7 +55,7 @@ public class JCasUtils {
 		}
 	}
 	
-	public static void initJCasSDI(JCas jCas, String language, String text, String uri) {
+	public static SourceDocumentInformation initJCasSDI(JCas jCas, String language, String text, String uri) {
 		SourceDocumentInformation sdi;
 		sdi = new SourceDocumentInformation(jCas);
 		sdi.setBegin(0);
@@ -63,6 +63,7 @@ public class JCasUtils {
 		sdi.setEnd(text.length());
 		sdi.setOffsetInSource(0);
 		sdi.addToIndexes();
+		return sdi;
 	}
 
 	public static String getTermSuiteCasFileName(JCas jcas) {

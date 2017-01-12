@@ -38,6 +38,7 @@ import com.google.common.io.Files;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
@@ -69,7 +70,7 @@ public class TermGathererSpec {
 		engine = new TermGatherer()
 			.setRules(YamlRuleSetIO.fromYaml(text));
 		
-		engine.gather(this.termino);
+		engine.gather(new TerminologyService(termino));
 	}
 
 	private void populateTermino(TermFactory termFactory) {

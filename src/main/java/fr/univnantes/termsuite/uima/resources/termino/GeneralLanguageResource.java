@@ -43,7 +43,6 @@ package fr.univnantes.termsuite.uima.resources.termino;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Collection;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -69,9 +68,6 @@ public class GeneralLanguageResource implements GeneralLanguage {
 	 * This field is used as the reference for frequency normalization.
 	 */
 	private int nbCorpusWords = -1;
-	
-	private boolean cumulatedFrequencyMode = false;
-	private int cumulatedFrequency;
 	
 	private Multimap<String, Entry> frequencies;
 	private Set<String> words;
@@ -111,7 +107,6 @@ public class GeneralLanguageResource implements GeneralLanguage {
 	}
 	
 	public GeneralLanguageResource() {
-		this.cumulatedFrequency = 0;
 		this.frequencies = HashMultimap.create();
 	}
 	
@@ -141,7 +136,6 @@ public class GeneralLanguageResource implements GeneralLanguage {
 					if(!key.contains(" "))
 						this.words.add(key);
 					Integer value = Integer.valueOf(items[2].trim());
-					this.cumulatedFrequency += value.intValue();
 					String lemma = key;
 					this.frequencies.put(lemma, new Entry(lemma, items[1], new Integer(value.intValue())));
 				} else {
@@ -156,7 +150,6 @@ public class GeneralLanguageResource implements GeneralLanguage {
 				LOGGER.warn("No such key for in GeneralLanguage resource {}",
 						PARAM_NB_CORPUS_WORDS);
 				LOGGER.warn("Switch to cumulatedFrequency mode");
-				this.cumulatedFrequencyMode = true;
 			}
 		} catch (Exception e) {
 			throw new ResourceInitializationException(e);
@@ -181,27 +174,6 @@ public class GeneralLanguageResource implements GeneralLanguage {
 	@Override
 	public int getNbCorpusWords() {
 		return nbCorpusWords;
-	}
-
-	@Override
-	@Deprecated
-	public double getNormalizedFrequency(String entry) {
-		if(cumulatedFrequencyMode) {
-			Collection<Entry> l = this.frequencies.get(entry.toLowerCase());
-			if (l.isEmpty()) {
-				return 1.0 / this.cumulatedFrequency;
-			} else {
-				double freq = new Double(l.iterator().next().getFrequency()).doubleValue();
-				return freq / this.cumulatedFrequency;
-			}
-		} else 
-			throw new IllegalStateException("Not in cumulatedFrequencyMode. Should call #getFrequency() instead");
-	}
-
-	
-	@Override
-	public boolean isCumulatedFrequencyMode() {
-		return cumulatedFrequencyMode;
 	}
 
 	@Override

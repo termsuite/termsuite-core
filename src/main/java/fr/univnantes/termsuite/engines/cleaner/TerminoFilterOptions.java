@@ -1,7 +1,9 @@
 package fr.univnantes.termsuite.engines.cleaner;
 
+import fr.univnantes.termsuite.framework.ConfigurationObject;
 import fr.univnantes.termsuite.model.TermProperty;
 
+@ConfigurationObject
 public class TerminoFilterOptions {
 
 	public static enum FilterType{THRESHOLD, TOP_N};

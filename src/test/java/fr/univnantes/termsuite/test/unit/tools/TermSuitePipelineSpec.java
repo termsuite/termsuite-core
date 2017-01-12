@@ -28,10 +28,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
 import fr.univnantes.termsuite.tools.TermSuiteCLIUtils;
-import fr.univnantes.termsuite.uima.TermSuitePipeline;
-import fr.univnantes.termsuite.uima.TermSuitePipelineException;
+import fr.univnantes.termsuite.uima.PreparationPipelineException;
 import fr.univnantes.termsuite.uima.TermSuiteResourceException;
 
 public class TermSuitePipelineSpec {
@@ -44,12 +44,12 @@ public class TermSuitePipelineSpec {
 		TermSuiteCLIUtils.disableLogging();
 	}
 	
-	public void runPipeline(TermSuitePipeline pipeline) {
+	public void runPipeline(PreprocessingPipelineBuilder pipeline) {
 		pipeline.aeWordTokenizer().run();
 	}
 	
-	public TermSuitePipeline startPipeline() {
-		return TermSuitePipeline
+	public PreprocessingPipelineBuilder startPipeline() {
+		return PreprocessingPipelineBuilder
 			.create("en")
 			.setInlineString("The texte to analyse.");
 	}
@@ -59,7 +59,7 @@ public class TermSuitePipelineSpec {
 	
 	@Test
 	public void testLoadResourcesFromClasspath() {
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		runPipeline(pipeline);
 		// should not raise exception
 	}
@@ -69,7 +69,7 @@ public class TermSuitePipelineSpec {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("Not a directory");
 
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceDir(DIR_PATH + "ebgeb");
 		runPipeline(pipeline);
 		// should not raise exception
@@ -78,7 +78,7 @@ public class TermSuitePipelineSpec {
 
 	@Test
 	public void testLoadResourcesFromDirectory() {
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceDir(DIR_PATH);
 		runPipeline(pipeline);
 		// should not raise exception
@@ -86,7 +86,7 @@ public class TermSuitePipelineSpec {
 	
 	@Test
 	public void testLoadResourcesFromDirectoryWithMissingTrailingSlash() {
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceDir(DIR_PATH.substring(0, DIR_PATH.length() - 1));
 		runPipeline(pipeline);
 		// should not raise exception
@@ -99,7 +99,7 @@ public class TermSuitePipelineSpec {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("Not a jar");
 		
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceJar(JsonTerminologyIOSpec.jsonFile1);
 		runPipeline(pipeline);
 	}
@@ -110,7 +110,7 @@ public class TermSuitePipelineSpec {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("Not a jar");
 		
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceJar("/ergve/erve/ergred");
 		runPipeline(pipeline);
 		
@@ -121,7 +121,7 @@ public class TermSuitePipelineSpec {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("Not a jar");
 		
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceJar(DIR_PATH);
 		runPipeline(pipeline);
 
@@ -130,14 +130,14 @@ public class TermSuitePipelineSpec {
 
 	@Test
 	public void testLoadResourcesFromEmbeddedResources() {
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		runPipeline(pipeline);
 		// should not raise exception
 	}
 	
 	@Test
 	public void testLoadResourcesFromUrlPrefix() {
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceUrlPrefix(URL);
 		runPipeline(pipeline);
 		// should not raise exception
@@ -147,9 +147,9 @@ public class TermSuitePipelineSpec {
 
 	@Test
 	public void testLoadResourcesFromUrlPrefixBadUrl() {
-		thrown.expect(TermSuitePipelineException.class);
+		thrown.expect(PreparationPipelineException.class);
 		thrown.expectMessage("Bad url");
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceUrlPrefix("prototo:/the/path");
 		runPipeline(pipeline);
 		// should not raise exception
@@ -158,12 +158,12 @@ public class TermSuitePipelineSpec {
 	@Test
 	public void testLoadResourcesFromUrlPrefixPointingToNowhere() {
 		
-		TermSuitePipeline pipeline = startPipeline();
+		PreprocessingPipelineBuilder pipeline = startPipeline();
 		pipeline.setResourceUrlPrefix("file:/pointing/to/nowhere");
 		try {
 			runPipeline(pipeline);
 			fail("Should raise exception");
-		} catch(TermSuitePipelineException e) {
+		} catch(PreparationPipelineException e) {
 			assertThat(e.getCause())
 				.isInstanceOf(TermSuiteResourceException.class)
 				.hasMessageStartingWith("Cannot open stream");

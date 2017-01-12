@@ -48,6 +48,7 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
+import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -57,7 +58,6 @@ import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.TestUtil;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
-import fr.univnantes.termsuite.uima.TermSuitePipeline;
 import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
@@ -120,7 +120,7 @@ public abstract class WindEnergySpec {
 		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
 		manager.clear();
 		
-		TermSuitePipeline pipeline = null;
+		PreprocessingPipelineBuilder pipeline = null;
 		ClearTempFiles.main(new String[0]);
 		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
 		
@@ -134,7 +134,7 @@ public abstract class WindEnergySpec {
 			try(FileWriter writer = new FileWriter(jsonFile.toFile())) {
 				LOGGER.info("JSON temp file not found", jsonFile);
 				LOGGER.info("Reprocessing txt files for {}", jsonFile);
-				pipeline = TermSuitePipeline.create(lang.getCode())
+				pipeline = PreprocessingPipelineBuilder.create(lang.getCode())
 					.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
 //					.setPersistentStore(filePath)
 					.setHistory(history)

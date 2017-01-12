@@ -1,9 +1,11 @@
 package fr.univnantes.termsuite.engines.contextualizer;
 
+import fr.univnantes.termsuite.framework.ConfigurationObject;
 import fr.univnantes.termsuite.metrics.AssociationRate;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.model.OccurrenceType;
 
+@ConfigurationObject
 public class ContextualizerOptions {
 
 	private int scope = 3;

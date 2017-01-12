@@ -28,40 +28,33 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.SuffixDerivation;
+import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
-import fr.univnantes.termsuite.utils.TermHistory;
 
-public class SuffixDerivationDetecter {
+public class SuffixDerivationDetecter extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SuffixDerivationDetecter.class);
 
 	private static final String LEMMA_INDEX = "LemmaIndex";
 
+	@Resource(type=TermSuiteResource.SUFFIX_DERIVATIONS)
 	private SuffixDerivationList suffixDerivationList;
-
-	private TermHistory history;
 	
-	public SuffixDerivationDetecter setHistory(TermHistory history) {
-		this.history = history;
-		return this;
-	}
-
-	public SuffixDerivationDetecter setSuffixDerivationList(SuffixDerivationList suffixDerivationList) {
-		this.suffixDerivationList = suffixDerivationList;
-		return this;
-	}
-	
-	public void detectDerivations(Terminology termino) {
-		LOGGER.info("Detecting suffix derivations for termino {}", termino.getName());
-		CustomTermIndex lemmaIndex = termino.createCustomIndex(
+	@Execute
+	public void detectDerivations(TerminologyService termino) {
+		LOGGER.info("Detecting suffix derivations for termino");
+		CustomTermIndex lemmaIndex = termino.getTerminology().createCustomIndex(
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 		
@@ -92,7 +85,7 @@ public class SuffixDerivationDetecter {
 			}
 		}
 		
-		termino.dropCustomIndex(LEMMA_INDEX);
+		termino.getTerminology().dropCustomIndex(LEMMA_INDEX);
 		
 		LOGGER.debug("Number of derivations found: {} out of {} SWTs", 
 				nbDerivations, 
@@ -100,15 +93,15 @@ public class SuffixDerivationDetecter {
 	}
 
 	private void watch(Term swt, Term baseTerm) {
-		if(history != null) {
-			if(history.isGKeyWatched(swt.getGroupingKey())) 
-				history.saveEvent(
+		if(history.isPresent()) {
+			if(history.get().isGKeyWatched(swt.getGroupingKey())) 
+				history.get().saveEvent(
 						swt.getGroupingKey(), 
 						this.getClass(), 
 						"Term is a derivate of term " + baseTerm);
 			
-			if(history.isGKeyWatched(baseTerm.getGroupingKey())) 
-				history.saveEvent(
+			if(history.get().isGKeyWatched(baseTerm.getGroupingKey())) 
+				history.get().saveEvent(
 						baseTerm.getGroupingKey(), 
 						this.getClass(), 
 						"Term has a new found derivate: " + swt);

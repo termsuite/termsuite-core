@@ -238,7 +238,7 @@ public class JsonTerminologyIO {
 				if(nbWordAnnos != -1)
 					termino.setWordAnnotationsNum(nbWordAnnos);
 				if(nbSpottedTerms != -1)
-					termino.setSpottedTermsNum(nbSpottedTerms);
+					termino.incSpottedTermsNum(nbSpottedTerms);
 				
 				if(options.isMetadataOnly())
 					return termino;

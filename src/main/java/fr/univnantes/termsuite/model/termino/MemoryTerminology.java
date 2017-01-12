@@ -29,12 +29,11 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.apache.uima.cas.FSIterator;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,16 +49,10 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.types.SourceDocumentInformation;
-import fr.univnantes.termsuite.types.TermOccAnnotation;
-import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.TermSuiteUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
@@ -92,8 +85,12 @@ public class MemoryTerminology implements Terminology {
 	private Lang lang;
 	private String corpusId;
 	
-	private int nbWordAnnotations = 0;
-	private int nbSpottedTerms = 0;
+	private AtomicLong nbWordAnnotations = new AtomicLong();
+	private AtomicInteger nbSpottedTerms = new AtomicInteger();
+	
+	public void setNbWordAnnotations(long nbWordAnnotations) {
+		this.nbWordAnnotations.addAndGet(nbWordAnnotations);
+	}
 	
 	public MemoryTerminology(String name, Lang lang, OccurrenceStore occurrenceStore) {
 		this.lang = lang;
@@ -140,46 +137,6 @@ public class MemoryTerminology implements Terminology {
 		return this.wordIndex.get(wordId);
 	}
 
-	private Word addWord(WordAnnotation anno) {
-		String swKey = anno.getLemma();
-		Word word = this.wordIndex.get(swKey);
-		if(word == null) {
-			word = new Word(anno.getLemma(), anno.getStem());
-			this.wordIndex.put(swKey, word);
-		}
-		return word;
-	}
-
-
-	@Override
-	public Term addTermOccurrence(TermOccAnnotation annotation, String fileUrl, boolean keepOccurrence) {
-		this.nbSpottedTerms++;
-		String termGroupingKey = TermSuiteUtils.getGroupingKey(annotation);
-		Term term = this.termsByGroupingKey.get(termGroupingKey);
-		if(term == null) {
-			TermBuilder builder = TermBuilder.start(this);
-			for (int i = 0; i < annotation.getWords().size(); i++) {
-				WordAnnotation wa = annotation.getWords(i);
-				Word w = this.addWord(wa);
-				builder.addWord(
-						w, 
-						annotation.getPattern(i) 
-					);
-			}
-			builder.setSpottingRule(annotation.getSpottingRuleName());
-			term = builder.createAndAddToTerminology();
-		}
-		if(keepOccurrence)
-			occurrenceStore.addOccurrence(
-					term, 
-					fileUrl, 
-					annotation.getBegin(), 
-					annotation.getEnd(), 
-					annotation.getCoveredText());
-		term.setFrequency(term.getFrequency()+1);
-		return term;
-	}
-	
 	@Override
 	public CustomTermIndex getCustomIndex(String indexName) {
 		if(!this.customIndexes.containsKey(indexName))
@@ -210,7 +167,7 @@ public class MemoryTerminology implements Terminology {
 
 	@Override
 	public Collection<Word> getWords() {
-		return Collections.unmodifiableCollection(this.wordIndex.values());
+		return this.wordIndex.values();
 	}
 
 	@Override
@@ -303,22 +260,23 @@ public class MemoryTerminology implements Terminology {
 	}
 
 	@Override
-	public void setWordAnnotationsNum(int nbWordAnnotations) {
-		this.nbWordAnnotations = nbWordAnnotations;
-	}
-
-	@Override
-	public int getWordAnnotationsNum() {
-		return this.nbWordAnnotations;
-	}
-	@Override
-	public int getSpottedTermsNum() {
-		return nbSpottedTerms;
+	public long getWordAnnotationsNum() {
+		return this.nbWordAnnotations.longValue();
 	}
 	
 	@Override
-	public void setSpottedTermsNum(int spottedTermsNum) {
-		this.nbSpottedTerms = spottedTermsNum;
+	public void setWordAnnotationsNum(long nbWordAnnos) {
+		this.nbWordAnnotations = new AtomicLong(nbWordAnnos);
+	}
+	
+	@Override
+	public int getSpottedTermsNum() {
+		return nbSpottedTerms.intValue();
+	}
+	
+	@Override
+	public void incSpottedTermsNum(int spottedTermsNum) {
+		this.nbSpottedTerms.addAndGet(spottedTermsNum);
 	}
 	
 	@Override
@@ -326,20 +284,6 @@ public class MemoryTerminology implements Terminology {
 		return this.occurrenceStore;
 	}
 
-	@Override
-	public void importCas(JCas cas, boolean keepOccurrence) {
-		SourceDocumentInformation sdi = JCasUtils.getSourceDocumentAnnotation(cas).get();
-		FSIterator<Annotation> iterator = cas.getAnnotationIndex().iterator();
-		while(iterator.hasNext()) {
-			Annotation anno = iterator.next();
-			if(anno instanceof WordAnnotation) {
-				this.nbWordAnnotations++;
-			}
-			else if(anno instanceof TermOccAnnotation) {
-				addTermOccurrence((TermOccAnnotation)anno, sdi.getUri(), keepOccurrence);
-			} 
-		}
-	}
 
 	@Override
 	public Stream<TermRelation> getRelations(RelationType... types) {

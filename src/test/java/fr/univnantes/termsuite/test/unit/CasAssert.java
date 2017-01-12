@@ -134,4 +134,17 @@ public class CasAssert extends AbstractAssert<CasAssert, JCas> {
 		return this;
 	}
 
+	public CasAssert containsText(String string) {
+		if(!actual.getDocumentText().contains(string))
+			failWithMessage("Expect document text to contain <%s>. Acutal text is: <%s>", string, actual.getDocumentText());
+		return this;
+	}
+
+	public CasAssert urlEndsWith(String string) {
+		String actualUri = JCasUtils.getSourceDocumentAnnotation(actual).get().getUri();
+		if(!actualUri.endsWith(string))
+			failWithMessage("Expected url <%s> to end with <%s>.", actualUri, string);
+		return this;
+	}
+
 }

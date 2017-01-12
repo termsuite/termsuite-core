@@ -35,6 +35,7 @@ import org.mockito.Mockito;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;
@@ -45,6 +46,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
 public class TermUtilsSpec {
 	
 	private Terminology termino;
+	private TerminologyService terminoService;
 	
 	private Term energie;
 	private Term eolien;
@@ -88,6 +90,7 @@ public class TermUtilsSpec {
 		allTerms.add(radioelectrique);
 		allTerms.add(total);
 		allTerms.add(recouvrement);
+		terminoService = new TerminologyService(termino);
 	}
 
 		
@@ -169,44 +172,44 @@ public class TermUtilsSpec {
 	public void testGetExtensionAffix() {
 		assertEquals(
 				eolien, 
-				TermUtils.getExtensionAffix(termino, energie, energie_eolien)
+				TermUtils.getExtensionAffix(terminoService, energie, energie_eolien)
 				);
 		
 		assertEquals(
 				energie, 
-				TermUtils.getExtensionAffix(termino, eolien, energie_eolien)
+				TermUtils.getExtensionAffix(terminoService, eolien, energie_eolien)
 				);
 
 		
 		assertEquals(
 				acces,
-				TermUtils.getExtensionAffix(termino, radioelectrique, acces_radioelectrique)
+				TermUtils.getExtensionAffix(terminoService, radioelectrique, acces_radioelectrique)
 				);
 
 		assertEquals(
 				radioelectrique,
-				TermUtils.getExtensionAffix(termino, acces, acces_radioelectrique)
+				TermUtils.getExtensionAffix(terminoService, acces, acces_radioelectrique)
 				);
 
 		assertEquals(
 				acces_radioelectrique,
-				TermUtils.getExtensionAffix(termino, recouvrement, acces_radioelectrique_de_recouvrement)
+				TermUtils.getExtensionAffix(terminoService, recouvrement, acces_radioelectrique_de_recouvrement)
 				);
 
 		assertEquals(
 				recouvrement,
-				TermUtils.getExtensionAffix(termino, acces_radioelectrique, acces_radioelectrique_de_recouvrement)
+				TermUtils.getExtensionAffix(terminoService, acces_radioelectrique, acces_radioelectrique_de_recouvrement)
 				);
 
 		assertEquals(
 				recouvrement_total,
-				TermUtils.getExtensionAffix(termino, acces_radioelectrique, acces_radioelectrique_de_recouvrement_total)
+				TermUtils.getExtensionAffix(terminoService, acces_radioelectrique, acces_radioelectrique_de_recouvrement_total)
 				);
 		
 		for(Term t:allTerms)
 			assertEquals(
 					null,
-					TermUtils.getExtensionAffix(termino, t, t)
+					TermUtils.getExtensionAffix(terminoService, t, t)
 				);
 	}
 	
@@ -258,26 +261,26 @@ public class TermUtilsSpec {
 	public void testFindBiggestPrefix() {
 		assertEquals(
 				recouvrement_total,
-				TermUtils.findBiggestPrefix(termino, recouvrement_total.getWords())
+				TermUtils.findBiggestPrefix(terminoService, recouvrement_total.getWords())
 				);
 		
 		assertEquals(
 				recouvrement,
-				TermUtils.findBiggestPrefix(termino, recouvrement.getWords())
+				TermUtils.findBiggestPrefix(terminoService, recouvrement.getWords())
 				);
 		
 		assertEquals(
 				null,
-				TermUtils.findBiggestPrefix(termino, termWords("de", "P"))
+				TermUtils.findBiggestPrefix(terminoService, termWords("de", "P"))
 			);
 		
 		assertEquals(
 				recouvrement_total,
-				TermUtils.findBiggestPrefix(termino, termWords("recouvrement", "N", "total", "A", "de", "P", "pezojc", "U"))
+				TermUtils.findBiggestPrefix(terminoService, termWords("recouvrement", "N", "total", "A", "de", "P", "pezojc", "U"))
 			);
 		assertEquals(
 				null,
-				TermUtils.findBiggestPrefix(termino, termWords("de", "P", "recouvrement", "N", "total", "A", "de", "P", "pezojc", "U"))
+				TermUtils.findBiggestPrefix(terminoService, termWords("de", "P", "recouvrement", "N", "total", "A", "de", "P", "pezojc", "U"))
 			);
 	}
 
@@ -298,32 +301,32 @@ public class TermUtilsSpec {
 	public void testFindBiggestSuffix() {
 		assertEquals(
 				recouvrement_total,
-				TermUtils.findBiggestSuffix(termino, recouvrement_total.getWords())
+				TermUtils.findBiggestSuffix(terminoService, recouvrement_total.getWords())
 				);
 
 		assertEquals(
 				recouvrement,
-				TermUtils.findBiggestSuffix(termino, recouvrement.getWords())
+				TermUtils.findBiggestSuffix(terminoService, recouvrement.getWords())
 				);
 
 		assertEquals(
 				total,
-				TermUtils.findBiggestSuffix(termino, total.getWords())
+				TermUtils.findBiggestSuffix(terminoService, total.getWords())
 				);
 		
 
 		assertEquals(
 				null,
-				TermUtils.findBiggestSuffix(termino, termWords("de", "P"))
+				TermUtils.findBiggestSuffix(terminoService, termWords("de", "P"))
 			);
 		
 		assertEquals(
 				recouvrement_total,
-				TermUtils.findBiggestSuffix(termino, termWords("de", "P", "pezojc", "U", "recouvrement", "N", "total", "A"))
+				TermUtils.findBiggestSuffix(terminoService, termWords("de", "P", "pezojc", "U", "recouvrement", "N", "total", "A"))
 			);
 		assertEquals(
 				null,
-				TermUtils.findBiggestPrefix(termino, termWords("de", "P", "recouvrement", "N", "total", "A", "de", "P"))
+				TermUtils.findBiggestPrefix(terminoService, termWords("de", "P", "recouvrement", "N", "total", "A", "de", "P"))
 			);
 
 	}

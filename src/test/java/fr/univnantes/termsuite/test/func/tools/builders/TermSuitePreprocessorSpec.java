@@ -18,7 +18,7 @@ import org.junit.rules.TemporaryFolder;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.api.TermSuitePreprocessor;
+import fr.univnantes.termsuite.api.Preprocessor;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
@@ -50,7 +50,7 @@ public class TermSuitePreprocessorSpec {
 	
 	@Test
 	public void testFromTxtToJson() {
-		TermSuitePreprocessor
+		Preprocessor
 				.fromTxtCorpus(lang, FunctionalTests.CORPUS1_PATH.toString())
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.toJson(folder.getRoot().getAbsolutePath(), Charset.defaultCharset().name())
@@ -65,7 +65,7 @@ public class TermSuitePreprocessorSpec {
 	
 	@Test
 	public void testFromTxtCorpusExtTxt() {
-		Iterator<JCas> it = TermSuitePreprocessor
+		Iterator<JCas> it = Preprocessor
 				.fromTxtCorpus(lang, FunctionalTests.CORPUS1_PATH.toString())
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 				.stream().iterator();
@@ -89,7 +89,7 @@ public class TermSuitePreprocessorSpec {
 
 	@Test
 	public void testFromTxtCorpusExtTxtAndDocument() {
-		Iterator<JCas> it = TermSuitePreprocessor
+		Iterator<JCas> it = Preprocessor
 				.fromTxtCorpus(
 						lang, 
 						FunctionalTests.CORPUS1_PATH.toString(),
@@ -102,7 +102,7 @@ public class TermSuitePreprocessorSpec {
 
 	@Test
 	public void testFromTxtCorpusExtWildcard() {
-		Iterator<JCas> it = TermSuitePreprocessor
+		Iterator<JCas> it = Preprocessor
 				.fromTxtCorpus(
 						lang, 
 						FunctionalTests.CORPUS1_PATH.toString(),
@@ -114,35 +114,13 @@ public class TermSuitePreprocessorSpec {
 	}
 
 
-	private void assertAllDocuments(Iterator<JCas> it) {
-		JCas cas1 = it.next();
-		JCas cas2 = it.next();
-		JCas cas3 = it.next();
-		assertFalse(it.hasNext());
-
-		Path path1 = Paths.get(
-				System.getProperty("user.dir"), 
-				FunctionalTests.CORPUS1_PATH.toString(), 
-				"file2.document");
-		assertThat(cas1).hasUrl(path1.toString());
-		Path path2 = Paths.get(
-				System.getProperty("user.dir"), 
-				FunctionalTests.CORPUS1_PATH.toString(), 
-				"file1.txt");
-		assertThat(cas2).hasUrl(path2.toString());
-		Path path3 = Paths.get(
-				System.getProperty("user.dir"), 
-				FunctionalTests.CORPUS1_PATH.toString(), 
-				"dir1","file3.txt");
-		assertThat(cas3).hasUrl(path3.toString());
-	}
 
 
 	
 	@Test
 	public void testPreprocessorFromTextString() {
 		
-		Iterator<JCas> iterator = TermSuitePreprocessor
+		Iterator<JCas> iterator = Preprocessor
 			.fromTextString(lang, document1.getText().get())
 			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
 			.stream().iterator();
@@ -155,27 +133,5 @@ public class TermSuitePreprocessorSpec {
 			.containsAnnotation(WordAnnotation.class, 2, 9);
 	}
 	
-
-	@Test
-	public void testPreprocessorFromDocumentStream() {
-		Iterator<JCas> it = TermSuitePreprocessor
-			.fromDocumentStream(lang, documents.stream(), 2)
-			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-			.stream().iterator();
-		
-		JCas cas1 = it.next();
-		JCas cas2 = it.next();
-		
-		assertFalse(it.hasNext());
-		
-		assertThat(cas1)
-			.containsAnnotation(TermOccAnnotation.class, 2, 18)
-			.containsAnnotation(WordAnnotation.class, 2, 9);
-		assertThat(cas2)
-			.containsAnnotation(TermOccAnnotation.class, 13, 33)
-			.containsAnnotation(WordAnnotation.class, 4, 12);
-	}
-
-
 
 }

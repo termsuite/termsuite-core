@@ -44,8 +44,8 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerDeEnSpec;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerFrEnSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TermSuitePreprocessorSpec;
+import fr.univnantes.termsuite.test.func.tools.builders.TerminoCleanerSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoExtractorSpec;
-import fr.univnantes.termsuite.test.func.tools.builders.TerminoFiltererSpec;
 import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteAlignerCLISpec;
 import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 
@@ -55,7 +55,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	EnglishWindEnergySpec.class,
 	GermanWindEnergySpec.class,
 	TermSuitePreprocessorSpec.class,
-	TerminoFiltererSpec.class,
+	TerminoCleanerSpec.class,
 	TermSuiteTerminoCLISpec.class,
 	TermSuiteAlignerCLISpec.class,
 	BilingualAlignerFrEnSpec.class,
@@ -107,11 +107,10 @@ public class FunctionalTests {
 	public static String getDicoPath(Lang source, Lang target) {
 		String dicoFileName = String.format("%s-%s.txt", source.getCode(), target.getCode());
 		return Paths.get(DICO_PATH.toString(), dicoFileName).toString();
-		
 	}
 
-	public static String getTaggerPath() {
-		return (String)getConfigProperty(PROP_TREETAGGER_HOME_PATH);
+	public static Path getTaggerPath() {
+		return Paths.get((String)getConfigProperty(PROP_TREETAGGER_HOME_PATH));
 	}
 	
 	public static List<Term> termsByProperty(Terminology termino, TermProperty termProperty, boolean desc) {

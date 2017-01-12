@@ -28,6 +28,7 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.metrics.MutualInformation;
 import fr.univnantes.termsuite.model.CrossTable;
@@ -38,6 +39,7 @@ import fr.univnantes.termsuite.test.unit.Fixtures;
 public class CrossTableSpec {
 
 	private Terminology termino;
+	private TerminologyService terminoService;
 	private CrossTable crossTable;
 
 	private Term t1;
@@ -48,6 +50,7 @@ public class CrossTableSpec {
 	public void init() {
 
 		this.termino = Fixtures.terminoWithOccurrences();
+		this.terminoService = new TerminologyService(termino);
 		
 		t1 = this.termino.getTermByGroupingKey("n: énergie");
 		t2 = this.termino.getTermByGroupingKey("a: éolien");
@@ -56,7 +59,7 @@ public class CrossTableSpec {
 		// T1 T2 T3 T1 T3 T3 T1
 		new Contextualizer()
 				.setOptions(new ContextualizerOptions().setScope(1))
-				.contextualize(termino);
+				.contextualize(terminoService);
 		
 		this.crossTable = new CrossTable(this.termino);
 	}

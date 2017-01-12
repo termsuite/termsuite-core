@@ -2,7 +2,6 @@ package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -16,49 +15,32 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
+import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.utils.Pair;
-import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class SemanticGatherer extends AbstractGatherer {
+public class SemanticGatherer extends VariationTypeGatherer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SemanticGatherer.class);
-	private Optional<TermHistory> history = Optional.empty();
+
 	private SimilarityDistance distance = new Cosine();
+	
 	private double similarityThreshold = 0.40;
+	
 	private int nbDistributionalCandidates = 5;
+	
+	@Resource(type=TermSuiteResource.SYNONYMS)
 	private MultimapFlatResource dico = new MultimapFlatResource();
 
-	public SemanticGatherer setDistance(SimilarityDistance distance) {
-		this.distance = distance;
-		return this;
-	}
-	
-	public SemanticGatherer setSimilarityThreshold(double similarityThreshold) {
-		this.similarityThreshold = similarityThreshold;
-		return this;
-	}
-	
-	public SemanticGatherer setHistory(TermHistory history) {
-		if(history != null)
-			this.history = Optional.of(history);
-		return this;
-	}
-	
-	public SemanticGatherer setDictionary(Optional<MultimapFlatResource> dico) {
-		this.dico = dico.isPresent() ? dico.get() : new MultimapFlatResource();
-		return this;
-	}
-
-	private AtomicInteger nbAlignments = new AtomicInteger(0);
+	private AtomicInteger nbAlignmentsCounter = new AtomicInteger(0);
 	private Stopwatch indexingSw = Stopwatch.createUnstarted();
 
 	private LoadingCache<Pair<Term>, Double> alignmentScores = CacheBuilder.newBuilder()
@@ -76,10 +58,10 @@ public class SemanticGatherer extends AbstractGatherer {
 			});
 	
 	
-	@Override
-	public void gather(Terminology termino) {
+	@Execute
+	public void gather(TerminologyService termino) {
 		Stopwatch gatherSw = Stopwatch.createStarted();
-		for(VariantRule rule:this.variantRules)
+		for(VariantRule rule:this.variantRules.getVariantRules(VariationType.SEMANTIC))
 			gather(termino, (SynonymicRule)rule);
 		gatherSw.stop();
 		LOGGER.debug("Cumulated indexing time: {}", indexingSw);
@@ -93,14 +75,13 @@ public class SemanticGatherer extends AbstractGatherer {
 		
 		LOGGER.debug("Term gathered in {} - Num of alignments: {}", 
 				gatherSw, 
-				nbAlignments);
+				nbAlignmentsCounter);
 	}
 	
-	public void gather(Terminology termino, SynonymicRule rule) {
-		TerminologyService terminoService = new TerminologyService(termino);
+	public void gather(TerminologyService terminoService, SynonymicRule rule) {
 		
 		LOGGER.info("Aligning semantic variations for rule {}", rule.getName());
-		if(termino.getTerms().isEmpty())
+		if(terminoService.getTerms().isEmpty())
 			return;
 		Preconditions.checkNotNull(rule);
 		
@@ -110,15 +91,15 @@ public class SemanticGatherer extends AbstractGatherer {
 		AtomicInteger nbDicoRelationFound = new AtomicInteger(0);
 		
 		
-		if(!termino.getTerms().stream().filter(t->t.getContext()!= null).findAny().isPresent())
+		if(!terminoService.terms().filter(t->t.getContext()!= null).findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires a contextualized term index");
-		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
+		if(!terminoService.extensions().findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
 		String indexName = "SubSequence"+rule.getName();
 
 		indexingSw.start();
-		CustomTermIndex index = termino.createCustomIndex(indexName, rule.getTermProvider());
+		CustomTermIndex index = terminoService.getTerminology().createCustomIndex(indexName, rule.getTermProvider());
 		indexingSw.stop();
 
 		Stopwatch ruleSw = Stopwatch.createStarted();
@@ -134,7 +115,7 @@ public class SemanticGatherer extends AbstractGatherer {
 			for(int i=0; i<terms.size();i++) {
 				t1 = terms.get(i);
 				String akey1 = TermUtils.toGroupingKey(t1.getWords().get(rule.getSynonymSourceWordIndex()));
-				a1 = termino.getTermByGroupingKey(akey1);
+				a1 = terminoService.getTerm(akey1);
 				if(a1 == null) {
 					continue;
 				} else if(a1.getContext() == null) {
@@ -148,7 +129,7 @@ public class SemanticGatherer extends AbstractGatherer {
 						continue;
 					t2 = terms.get(j);
 					String akey2 = TermUtils.toGroupingKey(t2.getWords().get(rule.getSynonymSourceWordIndex()));
-					a2 = termino.getTermByGroupingKey(akey2);
+					a2 = terminoService.getTerm(akey2);
 					if(a2 == null) {
 						continue;
 					} 
@@ -164,7 +145,7 @@ public class SemanticGatherer extends AbstractGatherer {
 						continue;
 					} else {
 						pair = new Pair<>(a1, a2);
-						nbAlignments.incrementAndGet();
+						nbAlignmentsCounter.incrementAndGet();
 						Double value = alignmentScores.getUnchecked(pair);
 						if(value > similarityThreshold) {
 							TermRelation rel = buildDistributionalVariation(terminoService, t1,t2,value);
@@ -181,14 +162,14 @@ public class SemanticGatherer extends AbstractGatherer {
 					.limit(this.nbDistributionalCandidates)
 					.forEach(rel -> {
 						nbDistribRelationsFound.incrementAndGet();
-						termino.addRelation(rel);
+						terminoService.addRelation(rel);
 						watch(rel.getFrom(), rel.getTo());
 					});
 			}
 		});
 		ruleSw.stop();
 
-		termino.dropCustomIndex(indexName);
+		terminoService.getTerminology().dropCustomIndex(indexName);
 		LOGGER.debug("Semantic alignment finished for rule {} in {}", rule, ruleSw);
 		LOGGER.debug("Nb distributional synonymic relations found: {}. Total dico synonyms: {}", 
 				nbDistribRelationsFound, 

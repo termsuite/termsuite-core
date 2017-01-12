@@ -47,7 +47,8 @@ import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.engines.ExtensionDetecter;
+import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.ExplainedValue;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
@@ -759,7 +760,7 @@ public class BilingualAligner {
 		if(!ensuredExtensionsAreComputed) {
 			if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 				Stopwatch sw = Stopwatch.createStarted();
-				new ExtensionDetecter().detectExtensions(termino);
+				new ExtensionDetecter().detectExtensions(new TerminologyService(termino));
 				sw.stop();
 				LOGGER.info("Term extensions detected in {} [{} terms, {} HAS_EXTENSION relations found]", 
 						sw, 

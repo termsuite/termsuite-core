@@ -48,7 +48,6 @@ public class VariantScorerSpec {
 		TermRelation relation = new TermRelation(RelationType.VARIATION, 
 				terminology.getTermByGroupingKey(from), 
 				terminology.getTermByGroupingKey(to));
-		relation.setProperty(RelationProperty.STRICTNESS, strict ? 1d : 0d);
 		new TerminologyService(terminology)
 				.addRelation(relation);
 	}

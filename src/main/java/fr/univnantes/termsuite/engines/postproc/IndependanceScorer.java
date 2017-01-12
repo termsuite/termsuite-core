@@ -10,7 +10,9 @@ import java.util.function.Predicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.ExtensionDetecter;
+import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -18,7 +20,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import jetbrains.exodus.core.dataStructures.hash.HashSet;
 
-public class IndependanceScorer {
+public class IndependanceScorer extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndependanceScorer.class);
 	
 
@@ -48,13 +50,14 @@ public class IndependanceScorer {
 		}
 	}
 
+	@Execute
 	public void setIndependance(TerminologyService terminology) {
 
 		LOGGER.debug("Checking potential cycles in terminology");
 		checkNoCycleInExtensions(terminology);
 		if(!terminology.extensions().findAny().isPresent()) {
 			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
-			new ExtensionDetecter().detectExtensions(terminology.getTerminology());
+			new ExtensionDetecter().detectExtensions(terminology);
 		}
 
 		

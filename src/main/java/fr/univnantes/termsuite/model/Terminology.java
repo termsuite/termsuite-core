@@ -24,8 +24,6 @@ package fr.univnantes.termsuite.model;
 import java.util.Collection;
 import java.util.stream.Stream;
 
-import org.apache.uima.jcas.JCas;
-
 import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
@@ -113,17 +111,7 @@ public interface Terminology {
 	public CustomTermIndex createCustomIndex(String indexName, TermValueProvider termClassProvider);
 	public void dropCustomIndex(String indexName);
 
-	/*
-	 * Occurrences
-	 */
-	//TODO remove these
-	@Deprecated // Should use import JCas (important for the inner nbWordAnnotation)
-	public Term addTermOccurrence(TermOccAnnotation annotation, String FileUri, boolean keepOccurrenceInTermino);
-
-	public void importCas(JCas cas, boolean keepOccurrenceInTermino);
-
-	public void setWordAnnotationsNum(int nbWordAnnotations);
-	public int getWordAnnotationsNum();
+	public long getWordAnnotationsNum();
 
 	/**
 	 * 
@@ -135,12 +123,14 @@ public interface Terminology {
 	 * 		the method {@link #addTermOccurrence(TermOccAnnotation, String, boolean)}
 	 */
 	public int getSpottedTermsNum();
-	public void setSpottedTermsNum(int nbSpottedTerms);
+	public void incSpottedTermsNum(int nbSpottedTerms);
 
 	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types);
 
 	public Multimap<Term, TermRelation> getOutboundRelations();
 
 	public Multimap<Term, TermRelation> getInboundRelations();
+
+	public void setWordAnnotationsNum(long nbWordAnnos);
 
 }

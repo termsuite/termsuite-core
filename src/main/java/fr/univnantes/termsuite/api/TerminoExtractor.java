@@ -1,7 +1,5 @@
 package fr.univnantes.termsuite.api;
 
-import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.nio.charset.Charset;
@@ -11,33 +9,24 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import org.apache.uima.UIMAException;
-import org.apache.uima.UIMAFramework;
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.impl.XmiCasDeserializer;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.ResourceManager;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.PostProcConfig;
-import fr.univnantes.termsuite.uima.TermSuitePipeline;
+import fr.univnantes.termsuite.resources.PostProcessorOptions;
 import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
 import fr.univnantes.termsuite.utils.FileSystemUtils;
-import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.PipelineUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
@@ -47,7 +36,7 @@ import fr.univnantes.termsuite.utils.TermHistory;
  * 
  * @author Damien Cram
  * 
- * @see TermSuitePreprocessor
+ * @see Preprocessor
  *
  */
 public class TerminoExtractor {
@@ -135,7 +124,7 @@ public class TerminoExtractor {
 	/*
 	 * 
 	 */
-	private Optional<PostProcConfig> scorerConfig = Optional.empty();
+	private Optional<PostProcessorOptions> scorerConfig = Optional.empty();
 	
 	
 	private boolean semanticAlignerEnabled = false;
@@ -266,7 +255,7 @@ public class TerminoExtractor {
 		return setSemanticAlignerEnabled(true);
 	}
 
-	public TerminoExtractor configureScoring(PostProcConfig scorerConfig) {
+	public TerminoExtractor configureScoring(PostProcessorOptions scorerConfig) {
 		this.scorerConfig = Optional.of(scorerConfig);
 		return this;
 	}
@@ -333,7 +322,7 @@ public class TerminoExtractor {
 	 * @return
 	 * 		this {@link TerminoExtractor} launcher class
 	 * 
-	 * @see TermSuitePipeline#aeMaxSizeThresholdCleaner(TermProperty, int)
+	 * @see PreprocessingPipelineBuilder#aeMaxSizeThresholdCleaner(TermProperty, int)
 	 * 
 	 */
 	public TerminoExtractor dynamicMaxSizeFilter(int maxTerminoSize) {
@@ -362,121 +351,6 @@ public class TerminoExtractor {
 		return this;
 	}	
 	
-	public Terminology execute() {
-		Preconditions.checkNotNull(this.lang, "Language cannot be null");
-		
-		TermSuitePipeline pipeline = termino.isPresent() ?
-				TermSuitePipeline.create(termino.get())
-				: TermSuitePipeline.create(lang.getCode());
-		
-				
-		if(this.skipOccurrenceIndexing)
-			pipeline.setEmptyOccurrenceStore();
-		else if(occStorePath.isPresent())
-			pipeline.setPersistentStore(occStorePath.get());
-		
-		if(history.isPresent())
-			pipeline.setHistory(history.get());
-		
-		if(customResourceDir.isPresent())
-			pipeline.setResourceDir(this.customResourceDir.get());
-		
-		if(!termino.isPresent()) {
-			if(!preprocessed) {
-				
-				pipeline.aeWordTokenizer()
-				.setTreeTaggerHome(this.treeTaggerHome)
-				.aeTreeTagger()
-				.aeUrlFilter()
-				.aeStemmer()
-				.aeRegexSpotter();
-				if(nbDocuments != -1)
-					pipeline.aeDocumentLogger(this.nbDocuments);
-			} 
-			pipeline
-				.aeTermOccAnnotationImporter();
-			
-			if(preFilterConfig.isPresent()) 
-				PipelineUtils.filter(pipeline, preFilterConfig.get());
-			
-			if(contextualizerEnabled)
-				pipeline.aeContextualizer(
-						contextualizerOptions.get());
-			
-			
-			if(maxSizeFilter.isPresent())
-				pipeline.aeMaxSizeThresholdCleaner(TermProperty.FREQUENCY, maxSizeFilter.get());
-		}
-		
-		pipeline
-				.aeStopWordsFilter()
-				.aeSpecificityComputer()
-				.aeMorphologicalAnalyzer()
-				.aeExtensionDetector();
-		
-		if(variationDetectionEnabled)
-			pipeline
-				.aeTermVariantGatherer(semanticAlignerEnabled);
-
-		if(scoringEnabled)
-			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : new PostProcConfig());
-			
-		pipeline
-			.aeRanker(TermProperty.SPECIFICITY, true);
-
-//		if(mergeGraphicalVariants)
-//			pipeline;
-
-		if(postFilterConfig.isPresent()) 
-			PipelineUtils.filter(pipeline, postFilterConfig.get());
-		
-	    ResourceManager resMgr = UIMAFramework.newDefaultResourceManager();
-	    
-		try {
-			// Create AAE
-			AnalysisEngineDescription aaeDesc = createEngineDescription(pipeline.createDescription());
-
-			// Instantiate AAE
-			final AnalysisEngine aae = UIMAFramework.produceAnalysisEngine(aaeDesc, resMgr, null);
-			
-			
-			if(!termino.isPresent()) {
-				if(preprocessed) {
-					preprocessedCasStream.forEach(cas -> {
-						try {
-							aae.process(cas);
-						} catch (UIMAException e) {
-							throw new TermSuiteException(e);
-						}				
-					});
-				} else {
-					documentStream.forEach(document -> {
-						JCas cas;
-						try {
-							cas = JCasFactory.createJCas();
-							cas.setDocumentLanguage(document.getLang().getCode());
-							cas.setDocumentText(document.getText().get());
-							JCasUtils.initJCasSDI(
-									cas, 
-									document.getLang().getCode(), 
-									document.getText().get(), 
-									document.getUrl());
-							aae.process(cas);
-						} catch (UIMAException e) {
-							throw new TermSuiteException(e);
-						}
-					});
-				}
-			}
-			
-			aae.collectionProcessComplete();
-		} catch (ResourceInitializationException | AnalysisEngineProcessException e1) {
-			throw new TermSuiteException(e1);
-		}
-
-		return pipeline.getTerminology();
-	}
-
 	private Optional<TermHistory> history = Optional.empty();
 	
 	public TerminoExtractor setWatcher(TermHistory history) {

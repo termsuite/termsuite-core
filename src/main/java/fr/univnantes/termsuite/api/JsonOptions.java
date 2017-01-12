@@ -4,6 +4,9 @@ import java.util.Optional;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.framework.ConfigurationObject;
+
+@ConfigurationObject
 public class JsonOptions {
 
 	private boolean metadataOnly = false;

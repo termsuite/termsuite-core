@@ -42,7 +42,7 @@ import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
  * Created by Simon Meoni on 02/06/16.
  */
 public class TermsuiteJsonCasExporter extends CasExporter {
-    private static final Logger LOGGER = LoggerFactory.getLogger(JsonCasExporter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TermsuiteJsonCasExporter.class);
     public static final String OUTPUT_DIRECTORY = "OutputDirectory";
 
     @Override

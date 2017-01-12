@@ -1,5 +1,8 @@
 package fr.univnantes.termsuite.engines.splitter;
 
+import fr.univnantes.termsuite.framework.ConfigurationObject;
+
+@ConfigurationObject
 public class MorphologicalOptions {
 
 	private double alpha;

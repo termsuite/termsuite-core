@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
@@ -19,11 +20,12 @@ public class ContextualizerSpec {
 	private Term termWithContext3;
 	private Contextualizer contextualizer;
 	private Terminology termino;
-	
+	private TerminologyService terminoService;
 	
 	@Before
 	public void setup() {
 		termino = Fixtures.terminoWithOccurrences();
+		terminoService = new TerminologyService(termino);
 		termWithContext1 = termino.getTermByGroupingKey("n: énergie");
 		termWithContext2 = termino.getTermByGroupingKey("a: éolien");
 		termWithContext3 = termino.getTermByGroupingKey("n: accès");
@@ -32,7 +34,7 @@ public class ContextualizerSpec {
 	
 	@Test
 	public void computeContextVectorScope1() {
-		contextualizer.setOptions(new ContextualizerOptions().setScope(1)).contextualize(termino);
+		contextualizer.setOptions(new ContextualizerOptions().setScope(1)).contextualize(terminoService);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 
@@ -54,7 +56,7 @@ public class ContextualizerSpec {
 
 	@Test
 	public void computeContextVectorScope3() {
-		contextualizer.setOptions(new ContextualizerOptions().setScope(3)).contextualize(termino);
+		contextualizer.setOptions(new ContextualizerOptions().setScope(3)).contextualize(terminoService);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 

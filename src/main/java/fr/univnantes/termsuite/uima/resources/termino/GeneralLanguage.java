@@ -50,9 +50,6 @@ public interface GeneralLanguage extends SharedResourceObject {
 	public static final int NORMALIZATION_WORD_FREQUENCY = 1000000;
 	public static final double NORMALIZED_HAPAX_FREQUENCY = 1d/NORMALIZATION_WORD_FREQUENCY;
 
-	@Deprecated
-	public double getNormalizedFrequency(String entry);
-
 	public boolean findSingleWord(String word);
 
 	public Set<String> getWords();
@@ -60,13 +57,4 @@ public interface GeneralLanguage extends SharedResourceObject {
 	public int getNbCorpusWords();
 
 	public int getFrequency(String lemma, String pattern);
-
-	/**
-	 * Only for old version of GeneralLanguage resources, that do not 
-	 * have a __NB_CORPUS_WORDS__ key.
-	 * 
-	 * @return
-	 */
-	@Deprecated
-	public boolean isCumulatedFrequencyMode();
 }

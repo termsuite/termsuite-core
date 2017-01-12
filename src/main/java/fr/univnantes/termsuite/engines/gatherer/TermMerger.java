@@ -9,16 +9,16 @@ import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class TermMerger {
+public class TermMerger extends TerminologyEngine {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermMerger.class);
 	private static final Double MERGING_THRESHOLD = 2d;
@@ -31,8 +31,8 @@ public class TermMerger {
 		return this;
 	}
 	
-	public void mergeTerms(Terminology termino) {
-		mergeGraphicalVariants(new TerminologyService(termino));
+	public void mergeTerms(TerminologyService termino) {
+		mergeGraphicalVariants(termino);
 	}
 
 	private void mergeGraphicalVariants(TerminologyService termino) {

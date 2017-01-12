@@ -37,7 +37,6 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
-import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -51,12 +50,10 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
 import fr.univnantes.termsuite.utils.JCasUtils;
 
 /**
@@ -86,12 +83,10 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 	private String traceFileName;
 	private Writer fileWriter;
 
-	private static final String TSV_LINE_FORMAT="%d\t%d\t%d\t%d\t%d\n";
+	private static final String TSV_LINE_FORMAT="%d\t%d\t%d\t%d\n";
 	
-	@ExternalResource(key=TerminologyResource.TERMINOLOGY, mandatory=true)
-	private TerminologyResource terminoResource;
-
 	private Stopwatch sw;
+
 	@Override
 	public void initialize(UimaContext context) throws ResourceInitializationException {
 		super.initialize(context);
@@ -139,7 +134,6 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			this.sw.elapsed(TimeUnit.MILLISECONDS),
 			this.docIt,
 			this.cumulatedFileSize,
-			this.terminoResource.getTerminology().getTerms().size(),
 			this.counters.get(WordAnnotation.class.getSimpleName()).intValue()
 		);
 		LOGGER.debug(line);
@@ -168,42 +162,11 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 			Entry<String, MutableInt> mostFrequentAnno = it.next();
 			LOGGER.info("[{}] {}: {} ", statName, mostFrequentAnno.getKey(), mostFrequentAnno.getValue().intValue());
 		}
-		long nbSyntacticVariants = 0;
-		long nbMorphologicalVariants = 0;
-		long nbGraphicalVariants = 0;
-		long nbSynonymicVariants = 0;
-		Terminology termino = terminoResource.getTerminology();
-		nbMorphologicalVariants = count(termino, VariationType.MORPHOLOGICAL);
-		nbSyntacticVariants = count(termino, VariationType.SYNTAGMATIC);
-		nbGraphicalVariants = count(termino, VariationType.GRAPHICAL);
-		nbSynonymicVariants = count(termino, VariationType.SEMANTIC);
-		
-		long nbOccurrences = termino.getOccurrenceStore().size();
-			
-		// graphical variants are bidirectional
-		nbGraphicalVariants/=2;
-		
-		LOGGER.info("[{}] Nb terms:    {} [sw: {}, mw: {}]", statName, 
-				termino.getTerms().size(), 
-				termino.getTerms().stream().filter(t->t.getWords().size() == 1).count(),
-				termino.getTerms().stream().filter(t->t.getWords().size() > 1).count()
-				);
-		LOGGER.info("[{}] Nb words:    {} [compounds: {}]", statName, 
-				termino.getWords().size(), 
-				termino.getWords().stream().filter(w->w.isCompound()).count());
-		LOGGER.info("[{}] Nb occurrences: {}", statName, 
-				nbOccurrences);
-		LOGGER.info("[{}] Nb variants: {} [morph: {}, syntactic: {}, graph: {}, synonyms: {}]", statName, 
-				nbMorphologicalVariants + nbSyntacticVariants + nbGraphicalVariants, 
-				nbMorphologicalVariants, 
-				nbSyntacticVariants, 
-				nbGraphicalVariants,
-				nbSynonymicVariants);
 	}
 
-	public long count(Terminology termino, VariationType type) {
+	public long count(TerminologyService termino, VariationType type) {
 		return termino
-				.getRelations(RelationType.VARIATION)
+				.variations()	
 				.filter(r->r.get(RelationProperty.VARIATION_TYPE) == type)
 				.count();
 	}

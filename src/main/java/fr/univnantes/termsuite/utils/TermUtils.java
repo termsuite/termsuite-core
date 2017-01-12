@@ -37,6 +37,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
@@ -191,8 +192,8 @@ public class TermUtils {
 	 * For example, the term "offshore wind turbine" is an extension of 
 	 * "wind turbine". The extension affix is the term "offshore".
 	 * 
-	 * @param termino
-	 * 			The term index that both terms belong to.
+	 * @param terminologyService
+	 * 			The terminologyService that both terms belong to.
 	 * @param base
 	 * 			The base term
 	 * @param extension
@@ -203,7 +204,7 @@ public class TermUtils {
 	 * @throws IllegalArgumentException if <code>extension</code> id not an 
 	 * 			extension of the term <code>base</code>.
 	 */
-	public static Term getExtensionAffix(Terminology termino, Term base, Term extension) {
+	public static Term getExtensionAffix(TerminologyService terminologyService, Term base, Term extension) {
 		int index = TermUtils.getPosition(base, extension);
 		if(index == -1)
 			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
@@ -232,12 +233,12 @@ public class TermUtils {
 		
 		if(isPrefix) 
 			return findBiggestSuffix(
-					termino, 
+					terminologyService, 
 					extension.getWords().subList(index + base.getWords().size(), extension.getWords().size())
 				);
 		else
 			return findBiggestPrefix(
-					termino, 
+					terminologyService, 
 					extension.getWords().subList(0, index)
 				);
 	}
@@ -246,20 +247,20 @@ public class TermUtils {
 	 * Finds in a {@link Terminology} the biggest prefix of a sequence of
 	 * {@link TermWord}s that exists as a term.
 	 * 
-	 * @param termino
-	 * 			the term index
+	 * @param terminologyService
+	 * 			the terminology service
 	 * @param words
 	 * 			the initial sequence of {@link TermWord}s
 	 * @return
 	 * 			A {@link Term} found in <code>termino</code> that makes the
 	 * 			biggest possible prefix sequence for <code>words</code>.
 	 */
-	public static Term findBiggestPrefix(Terminology termino, List<TermWord> words) {
+	public static Term findBiggestPrefix(TerminologyService terminologyService, List<TermWord> words) {
 		Term t;
 		String gKey;
 		for(int i = words.size(); i > 0 ; i--) {
 			gKey = TermSuiteUtils.getGroupingKey(words.subList(0, i));
-			t = termino.getTermByGroupingKey(gKey);
+			t = terminologyService.getTerm(gKey);
 			if(t!=null)
 				return t;
 		}
@@ -271,8 +272,8 @@ public class TermUtils {
 	 * Finds in a {@link Terminology} the biggest suffix of a sequence of
 	 * {@link TermWord}s that exists as a term.
 	 * 
-	 * @param termino
-	 * 			the term index
+	 * @param terminologyService
+	 * 			the terminologyService
 	 * @param words
 	 * 			the initial sequence of {@link TermWord}s
 	 * @return
@@ -280,12 +281,12 @@ public class TermUtils {
 	 * 			biggest possible suffix sequence for <code>words</code>.
 
 	 */
-	public static Term findBiggestSuffix(Terminology termino, List<TermWord> words) {
+	public static Term findBiggestSuffix(TerminologyService terminologyService, List<TermWord> words) {
 		Term t;
 		String gKey;
 		for(int i = 0; i < words.size() ; i++) {
 			gKey = TermSuiteUtils.getGroupingKey(words.subList(i, words.size()));
-			t = termino.getTermByGroupingKey(gKey);
+			t = terminologyService.getTerm(gKey);
 			if(t!=null)
 				return t;
 		}

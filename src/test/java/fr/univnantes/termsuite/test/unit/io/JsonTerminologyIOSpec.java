@@ -85,7 +85,7 @@ public class JsonTerminologyIOSpec {
 		termino = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 		termino.setCorpusId("ccid");
 		termino.setWordAnnotationsNum(222);
-		termino.setSpottedTermsNum(111);
+		termino.incSpottedTermsNum(111);
 		word1 = new Word("word1", "stem1");
 		word2 = new Word("word2", "stem2");
 		word3 = WordBuilder.start()

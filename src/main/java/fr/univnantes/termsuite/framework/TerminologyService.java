@@ -13,11 +13,16 @@ import java.util.stream.Stream;
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 public class TerminologyService {
 
@@ -188,4 +193,63 @@ public class TerminologyService {
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
 	}
 
+	public double getWordAnnotationsNum() {
+		return 0;
+	}
+
+	private static final String MSG_PATTERN_EMPTY = "Pattern must not be empty";
+	private static final String MSG_LEMMAS_EMPTY = "Words array must not be empty";
+	private static final String MSG_NOT_SAME_LENGTH = "Pattern and words must have same length";
+
+	public Term createOrGetTerm(String[] pattern, Word[] words) {
+		Preconditions.checkArgument(pattern.length > 0, MSG_PATTERN_EMPTY);
+		Preconditions.checkArgument(words.length > 0, MSG_LEMMAS_EMPTY);
+		Preconditions.checkArgument(words.length == pattern.length, MSG_NOT_SAME_LENGTH);
+
+		String termGroupingKey = TermSuiteUtils.getGroupingKey(pattern, words);
+		Term term = this.termino.getTermByGroupingKey(termGroupingKey);
+		if(term == null) {
+			TermBuilder builder = TermBuilder.start();
+			for (int i = 0; i < pattern.length; i++)
+				builder.addWord(words[i], pattern[i].toLowerCase());
+			builder.setFrequency(0);
+			term = builder.create();
+		}
+		this.termino.addTerm(term);
+		return term;
+	}
+
+	public Word createOrGetWord(String lemma, String stem) {
+		if(termino.getWord(lemma) == null)
+			termino.addWord(new Word(lemma, stem));
+		return termino.getWord(lemma);
+	}
+
+	public synchronized void incrementFrequency(Term term) {
+		term.setFrequency(term.getFrequency() + 1);
+	}
+
+	public OccurrenceStore getOccurrenceStore() {
+		return this.termino.getOccurrenceStore();
+	}
+
+	public void incrementWordAnnotationNum(int nbSpottedTerms) {
+		this.termino.incSpottedTermsNum(nbSpottedTerms);
+	}
+
+	public int wordCount() {
+		return this.termino.getWords().size();
+	}
+
+	public Collection<Word> getWords() {
+		return this.termino.getWords();
+	}
+
+	public Stream<TermRelation> extensions(Term from, Term to) {
+		return relations(from, to).filter(r->r.getType() == RelationType.HAS_EXTENSION);
+	}
+
+	public Lang getLang() {
+		return this.termino.getLang();
+	}
 }

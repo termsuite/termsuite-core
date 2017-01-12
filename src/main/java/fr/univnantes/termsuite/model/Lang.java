@@ -26,17 +26,16 @@ import java.util.NoSuchElementException;
 
 import fr.univnantes.termsuite.LanguageException;
 import fr.univnantes.termsuite.engines.EngineState;
-import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, 1, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, 1, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, 1, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, 2, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, 1, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, 1, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3, 2, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, 1, EngineState.ENABLED);
+	FR("french", Locale.FRENCH, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, 1, EngineState.ENABLED),
+	EN("english", Locale.ENGLISH, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, 1, EngineState.ENABLED),
+	ES("spanish", Locale.FRENCH, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, 1, EngineState.ENABLED),
+	DE("german", Locale.GERMAN, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, 2, EngineState.ENABLED),
+	ZH("chinese", Locale.CHINESE, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, 1, EngineState.DISABLED),
+	LV("latvian", Locale.GERMAN,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, 1, EngineState.ENABLED),
+	RU("russian", Locale.JAPAN,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3, 2, EngineState.ENABLED),
+	DA("danish", Locale.GERMAN,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, 1, EngineState.ENABLED);
 	
 	private final double compostAlpha;
 	private final double compostBeta;
@@ -47,11 +46,10 @@ public enum Lang {
 	private final int compostMaxComponentNumber;
 	private final Locale locale;
 	private final String longLang;
-	private final String regexPostProcessingStrategy;
 	private final int gVariantNbPreindexingLetters;
 	private final EngineState gVariantGatheringState;
 
-    private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
+    private Lang(String longLang, Locale locale, 
     		double compostAlpha,
     		double compostBeta,
     		double compostGamma,
@@ -64,7 +62,6 @@ public enum Lang {
     		) {
     	this.locale = locale;
         this.longLang = longLang;
-        this.regexPostProcessingStrategy = regexPostProcessingStrategy;
         this.compostAlpha = compostAlpha;
         this.compostBeta = compostBeta;
         this.compostGamma = compostGamma;
@@ -91,10 +88,6 @@ public enum Lang {
 
 	public String getCode() {
 		return name().toLowerCase();
-	}
-    
-    public String getRegexPostProcessingStrategy() {
-		return regexPostProcessingStrategy;
 	}
     
 	public static void checkLang(String lang) {

@@ -70,13 +70,13 @@ import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceType;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.PostProcConfig;
-import fr.univnantes.termsuite.uima.TermSuitePipeline;
+import fr.univnantes.termsuite.resources.PostProcessorOptions;
 import fr.univnantes.termsuite.utils.FileUtils;
 import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -330,7 +330,7 @@ public class TerminologyExtractor {
 
 			TermSuiteCLIUtils.logCommandLineOptions(line);
 			
-			TermSuitePipeline pipeline = TermSuitePipeline.create(language.getCode());
+			PreprocessingPipelineBuilder pipeline = PreprocessingPipelineBuilder.create(language.getCode());
 			
 			switch(collectionMode) {
 			case INLINE_TEXT:
@@ -419,7 +419,7 @@ public class TerminologyExtractor {
 			}
 			
 			pipeline.aeExtensionDetector()
-				.aeScorer(PostProcConfig.create())
+				.aeScorer(PostProcessorOptions.create())
 				.aeRanker(TermProperty.SPECIFICITY, true)
 				;
 			
@@ -914,7 +914,5 @@ public class TerminologyExtractor {
 		
 		if(line.hasOption(PERSISTENT_OCC_STORE))
 			persistentStorePath = Optional.of(line.getOptionValue(PERSISTENT_OCC_STORE));
-		
-
 	}
 }

@@ -1,7 +1,9 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import fr.univnantes.termsuite.framework.ConfigurationObject;
 import fr.univnantes.termsuite.metrics.EditDistance;
 
+@ConfigurationObject
 public class GathererOptions {
 	private boolean semanticGathererEnabled = false;
 	

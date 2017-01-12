@@ -1,6 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
@@ -8,12 +9,13 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -32,28 +34,28 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class ExtensionVariantGatherer {
+public class ExtensionVariantGatherer extends TerminologyEngine {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionVariantGatherer.class);
 	
 	
-	private TermHistory history;
+	private Optional<TermHistory> history = Optional.empty();
 	
 	public ExtensionVariantGatherer setHistory(TermHistory history) {
-		this.history = history;
+		this.history = Optional.ofNullable(history);
 		return this;
 	}
 	
-	
-	public void gather(Terminology termino) {
-		TerminologyService terminoService = new TerminologyService(termino);
+	@Execute
+	public void gather(TerminologyService terminoService) {
 		
 		LOGGER.debug("Infering variations of term extensions");
-		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
+		if(!terminoService.extensions().findAny().isPresent())
 			LOGGER.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
 		
 		
-		termino.getRelations(RelationType.VARIATION)
+		terminoService
+			.variations()
 			.filter(r -> !r.isPropertySet(RelationProperty.IS_INFERED))
 			.forEach(r-> r.setProperty(RelationProperty.IS_INFERED, false));
 		
@@ -87,13 +89,13 @@ public class ExtensionVariantGatherer {
 				Term m2 = relation.getTo();
 				terminoService.outboundRelations(m1, RelationType.HAS_EXTENSION)
 					.forEach(rel1 -> {
-						Term affix1 = TermUtils.getExtensionAffix(terminoService.getTerminology(), m1, rel1.getTo());
+						Term affix1 = TermUtils.getExtensionAffix(terminoService, m1, rel1.getTo());
 						if(affix1 == null)
 							return;
 						
 						terminoService.outboundRelations(m2, RelationType.HAS_EXTENSION)
 							.forEach(rel2 -> {
-								Term affix2 = TermUtils.getExtensionAffix(terminoService.getTerminology(), m2, rel2.getTo());
+								Term affix2 = TermUtils.getExtensionAffix(terminoService, m2, rel2.getTo());
 								if(affix2 == null)
 									return;
 
@@ -132,12 +134,11 @@ public class ExtensionVariantGatherer {
 
 
 	private void watch(TermRelation inferedRel, TermRelation r1, TermRelation r2) {
-		if(history != null) {
-			if(history.isWatched(inferedRel.getTo()))
-				history.saveEvent(inferedRel.getTo().getGroupingKey(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
-			if(history.isWatched(inferedRel.getFrom()))
-				history.saveEvent(inferedRel.getFrom().getGroupingKey(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
+		if(history.isPresent()) {
+			if(history.get().isWatched(inferedRel.getTo()))
+				history.get().saveEvent(inferedRel.getTo().getGroupingKey(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
+			if(history.get().isWatched(inferedRel.getFrom()))
+				history.get().saveEvent(inferedRel.getFrom().getGroupingKey(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
 		}
-		
 	}
 }

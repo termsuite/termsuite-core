@@ -42,17 +42,11 @@ import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
  *
  */
 public class OccurrenceBuffer implements Iterable<RegexOccurrence> {
-	public static final String NO_CLEANING = "nocleaning";
-	public static final String KEEP_SUFFIXES = "rem-pref";
-	public static final String KEEP_PREFIXES = "rem-suff";
-	private static final String REMOVE_INCLUDED = "remove-included";
 	
 	private LinkedList<RegexOccurrence> occurrences = Lists.newLinkedList();
-	private String cleaningStrategy;
 	
-	public OccurrenceBuffer(String cleaningStrategy) {
+	public OccurrenceBuffer() {
 		super();
-		this.cleaningStrategy = cleaningStrategy;
 	}
 
 	public void bufferize(RegexOccurrence occ) {
@@ -69,39 +63,6 @@ public class OccurrenceBuffer implements Iterable<RegexOccurrence> {
 	
 	public void clear() {
 		this.occurrences.clear();
-	}
-
-	public void cleanBuffer() {
-		if(this.occurrences.isEmpty())
-			return;
-		RegexOccurrence current;
-		for(ListIterator<RegexOccurrence> it = this.occurrences.listIterator(); it.hasNext();) {
-			current = it.next();
-			for(RegexOccurrence other:occurrences) {
-				if(current != other) {
-					if(shouldRemove(current, other)) {
-						it.remove();
-						break;
-					}
-				}
-			}
-		}
-		
-	}
-	
-	private boolean shouldRemove(RegexOccurrence current, RegexOccurrence other) {
-		switch (this.cleaningStrategy) {
-		case KEEP_SUFFIXES:
-			return current.getBegin() >= other.getBegin() && current.getEnd() < other.getEnd();
-		case KEEP_PREFIXES:
-			return current.getBegin() > other.getBegin() && current.getEnd() <= other.getEnd();
-		case REMOVE_INCLUDED:
-			return current.getBegin() >= other.getBegin() && current.getEnd() <= other.getEnd();
-		case NO_CLEANING:
-			return false;
-		default:
-			throw new IllegalStateException("Unkown strategy: " + this.cleaningStrategy);
-		}
 	}
 
 	@Override

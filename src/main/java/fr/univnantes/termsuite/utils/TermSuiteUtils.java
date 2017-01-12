@@ -42,6 +42,7 @@ import com.google.common.collect.Maps;
 import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 
@@ -100,6 +101,17 @@ public class TermSuiteUtils {
 
 	public static String trimInside(String coveredText) {
 		return coveredText.replaceAll(TermSuiteConstants.WHITESPACE_PATTERN_STRING, TermSuiteConstants.WHITESPACE_STRING).trim();
+	}
+	
+	public static String getGroupingKey(String[] pattern, Word[] words) {
+		StringBuilder sb = new StringBuilder();
+		for(String s:pattern)
+			sb.append(s.toLowerCase());
+		sb.append(TermSuiteConstants.COLONS);
+		sb.append(TermSuiteConstants.WHITESPACE);
+		for(Word w:words)
+			sb.append(w.getLemma().toLowerCase());
+		return sb.toString();
 	}
 
 	public static String getGroupingKey(TermOccAnnotation annotation) {

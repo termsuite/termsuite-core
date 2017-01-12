@@ -34,6 +34,7 @@ import org.junit.Test;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.splitter.ManualSuffixDerivationDetecter;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;
@@ -64,7 +65,7 @@ public class SuffixDerivationExceptionSetterSpec {
 		ManualSuffixDerivationDetecter engine = new ManualSuffixDerivationDetecter()
 			.setManualSuffixDerivations(derivationExceptions);
 		populateTermino(new TermFactory(termino));
-		engine.detectDerivations(termino);;
+		engine.detectDerivations(new TerminologyService(termino));
 	}
 
 	private void populateTermino(TermFactory termFactory) {

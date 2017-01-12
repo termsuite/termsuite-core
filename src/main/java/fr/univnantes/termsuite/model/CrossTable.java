@@ -41,12 +41,9 @@
  */
 package fr.univnantes.termsuite.model;
 
-import java.util.Iterator;
 import java.util.Map;
 
 import org.apache.commons.lang3.mutable.MutableDouble;
-
-import com.google.common.collect.Maps;
 
 import fr.univnantes.termsuite.metrics.AssociationRate;
 
@@ -61,15 +58,9 @@ import fr.univnantes.termsuite.metrics.AssociationRate;
  */
 public class CrossTable {
 
-	/**
-	 * The term index of the corpus
-	 */
-    private Terminology termino;
-
     private Map<Term, MutableDouble> aPlusB;
     private Map<Term, MutableDouble> aPlusC;
     private int totalCoOccurrences;
-//    private int totalFrequency;
     
     /**
      * 
@@ -81,57 +72,23 @@ public class CrossTable {
      * @see Term#getContextVector()
      * @throws NullPointerException
      * 			if terms' context vectors are not already computed
-     * @param termino
-     * 			The term index of the corpus
      * @throws NullPointerException
      * 			when the context vectors of term index terms are not
      */
-    public CrossTable(Terminology termino) {
+	public CrossTable(Map<Term, MutableDouble> aPlusB, Map<Term, MutableDouble> aPlusC, int totalCoOccurrences) {
 		super();
-		this.termino = termino;
-		init();
+		this.aPlusB = aPlusB;
+		this.aPlusC = aPlusC;
+		this.totalCoOccurrences = totalCoOccurrences;
 	}
 
-
-	private void init() {
-        this.aPlusB = Maps.newConcurrentMap();
-        this.aPlusC = Maps.newConcurrentMap();
-        this.totalCoOccurrences = 0;
-//        this.totalFrequency = 0;
-        
-        Term term;
-        for (Iterator<Term> it1 = this.termino.getTerms().iterator(); it1.hasNext() ;) {
-            term = it1.next();
-//            this.totalFrequency++;
-            if(term.getContext() == null)
-            	continue;
-        	ContextVector context = term.getContext();
-            for (ContextVector.Entry entry : context.getEntries()) {
-            	this.totalCoOccurrences += entry.getNbCooccs();
-                getScoreFromMap(this.aPlusB, term).add(entry.getNbCooccs());
-                getScoreFromMap(this.aPlusC, entry.getCoTerm()).add(term.getFrequency());
-            }
-        }
-    }
-
-
-    private MutableDouble getScoreFromMap(Map<Term, MutableDouble> aScoreMap, Term key) {
-		if(aScoreMap.get(key) == null)
-			aScoreMap.put(key, new MutableDouble(0));
-		return aScoreMap.get(key);
-	}
-
+    
     /**
      * 
      * Computes coefficients a, b, c and d (available) and computes the association
      * rate based on these coefficients.
      * 
      * These coefficients are made available through the not-thread safe methods <code>#getLastX()</code>.
-     * 
-     * @see #getLastA()
-     * @see #getLastB()
-     * @see #getLastC()
-     * @see #getLastD()
      * 
      * @param rate
      * 			the association rate measure
@@ -153,75 +110,16 @@ public class CrossTable {
 //        int b = x.getFrequency() - a;
     	
          // C = (not(x) & y)
-    	MutableDouble a_plus_c = this.aPlusB.get(y);
+    	MutableDouble a_plus_c = this.aPlusC.get(y);
     	int c = a_plus_c == null ? 0 : a_plus_c.intValue() - a;
 //        int c = y.getFrequency() - a;
          
          // D = (not(x) & not(y))
     	int d = this.totalCoOccurrences -  a - b - c;
-//    	int d = this.totalFrequency - a - b - c;
         
-    	// for DEBUG purpose only
-    	lastA = a;
-    	lastB = b;
-    	lastC = c;
-    	lastD = d;
-    	// END DEBUG
-    	
-    	
     	final double value = rate.getValue(a, b, c, d);
     	
 		return value;
     }
-
-	private int lastA;
-    private int lastB;
-    private int lastC;
-    private int lastD;
-
-    /**
-     * The number of times <code>coTerm</code> id a co-occurrence of <code>term</code>
-     * 
-     * WARNING : not thread safe !
-     * 
-     * @return
-     */
-	public int getLastA() {
-		return lastA;
-	}
-
-    /**
-     * The number of times a co-occurrence of <code>term</code> is not <code>coTerm</code>
-     * 
-     * WARNING : not thread safe !
-     *      
-     * @return
-     */
-	public int getLastB() {
-		return lastB;
-	}
-
-    /**
-     * The number of times <code>coTerm</code> is a co-occurrence of another term 
-     * than <code>term</code>.
-     * 
-     * WARNING : not thread safe !
-     *
-     * @return
-     */
-	public int getLastC() {
-		return lastC;
-	}
-
-    /**
-     * The number of times neither <code>term</code> nor <code>coTerm</code> is a co-occurrence of something else
-     * 
-     * WARNING : not thread safe !
-     * 
-     * @return
-     */
-	public int getLastD() {
-		return lastD;
-	}
 }
     

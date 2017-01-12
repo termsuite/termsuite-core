@@ -14,6 +14,8 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javax.inject.Inject;
+
 import org.apache.commons.lang.mutable.MutableLong;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,77 +27,55 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import fr.univnantes.termsuite.framework.Execute;
+import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.resources.CompostIndex;
+import fr.univnantes.termsuite.uima.TermSuiteResource;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.utils.IndexingKey;
-import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
-public class NativeSplitter {
+public class NativeSplitter extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(NativeSplitter.class);
 
+	@Inject
 	private MorphologicalOptions opt = new MorphologicalOptions();
+
+	@Resource(type=TermSuiteResource.COMPOST_INFLECTION_RULES)
 	private CompostInflectionRules inflectionRules;
+	
+	@Resource(type=TermSuiteResource.COMPOST_TRANSFORMATION_RULES)
 	private CompostInflectionRules transformationRules;
+	
+	@Resource(type=TermSuiteResource.DICO)
 	private SimpleWordSet languageDico;
+
+	@Resource(type=TermSuiteResource.NEOCLASSICAL_PREFIXES)
 	private SimpleWordSet neoclassicalPrefixes;
+	
+	@Resource(type=TermSuiteResource.COMPOST_STOP_LIST)
 	private SimpleWordSet stopList;
-	private Terminology termino;
 
 	private CompostIndex compostIndex;
 	private static IndexingKey<String, String> similarityIndexingKey = TermSuiteUtils.KEY_THREE_FIRST_LETTERS;
 	private CustomTermIndex swtLemmaIndex;
 
-	private Optional<TermHistory> history = Optional.empty(); 
-	
 	private EditDistance distance = new Levenshtein();
 
-	public NativeSplitter setInflectionRules(CompostInflectionRules inflectionRules) {
-		this.inflectionRules = inflectionRules;
-		return this;
-	}
-
-	public NativeSplitter setHistory(TermHistory history) {
-		this.history = Optional.ofNullable(history);
-		return this;
-	}
-	
-	public NativeSplitter setOptions(MorphologicalOptions opt) {
-		this.opt = opt;
-		return this;
-	}
-
-	public NativeSplitter setTransformationRules(CompostInflectionRules transformationRules) {
-		this.transformationRules = transformationRules;
-		return this;
-	}
-
-	public NativeSplitter setLanguageDico(SimpleWordSet languageDico) {
-		this.languageDico = languageDico;
-		return this;
-	}
-
-	public NativeSplitter setNeoclassicalPrefixes(SimpleWordSet neoclassicalPrefixes) {
-		this.neoclassicalPrefixes = neoclassicalPrefixes;
-		return this;
-	}
-
-	public NativeSplitter setStopList(SimpleWordSet stopList) {
-		this.stopList = stopList;
-		return this;
-	}
+	private TerminologyService termino;
 
 	private LoadingCache<String, SegmentScoreEntry> segmentScoreEntries = CacheBuilder.newBuilder()
 				.maximumSize(100000)
@@ -118,11 +98,13 @@ public class NativeSplitter {
 	           });
 
 	
-	public void split(Terminology termino) {
-		this.termino = termino;
-		LOGGER.info("Starting morphologyical compound detection for termino {}", termino.getName());
-		swtLemmaIndex = termino.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
-		buildCompostIndex(termino);
+	@Execute
+	public void split(TerminologyService termino2) {
+		this.termino = termino2;
+		
+		LOGGER.info("Starting morphologyical compound detection for termino");
+		swtLemmaIndex = termino2.getTerminology().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		buildCompostIndex(termino2);
 
 		
 		final MutableLong cnt = new MutableLong(0);
@@ -131,7 +113,7 @@ public class NativeSplitter {
 		progressLoggerTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				int total = termino.getWords().size();
+				int total = termino2.getWords().size();
 				LOGGER.info("Progress: {}% ({} on {})",
 						String.format("%.2f", ((double)cnt.longValue()*100)/total),
 						cnt.longValue(),
@@ -141,7 +123,7 @@ public class NativeSplitter {
 
 		
 //		int observingStep = 100;
-		Set<Word> words = termino.getTerms()
+		Set<Word> words = termino2.getTerms()
 				.parallelStream()
 				.filter(Term::isSingleWord)
 				.map(swt -> swt.getWords().get(0).getWord())
@@ -244,7 +226,7 @@ public class NativeSplitter {
 		LOGGER.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
 		LOGGER.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
-		termino.dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		termino2.getTerminology().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
 	}
@@ -283,7 +265,7 @@ public class NativeSplitter {
 		}
 	}
 
-	private void buildCompostIndex(Terminology termino) {
+	private void buildCompostIndex(TerminologyService termino) {
 		LOGGER.debug("Building compost index");
 
 		compostIndex = new CompostIndex(similarityIndexingKey);
@@ -416,7 +398,7 @@ public class NativeSplitter {
 	public double getMaxSpec() {
 		if(!maxSpec.isPresent()) {
 			Comparator<Term> specComparator = TermProperty.SPECIFICITY.getComparator(false);
-			double wrLog = termino.getTerms().stream().max(specComparator).get().getSpecificity();
+			double wrLog = termino.terms().max(specComparator).get().getSpecificity();
 			maxSpec = Optional.of((double)Math.pow(10, wrLog));
 		}
 		return maxSpec.get();
