@@ -22,6 +22,7 @@ public class Preprocessor {
 	@Inject
 	PreprocessorService preprocessorService;
 	
+	private boolean parallel;
 	private Path taggerPath;
 	private PreparationPipelineOptions options = new PreparationPipelineOptions();
 	private Optional<ResourceOptions> resourceOptions = Optional.empty();
@@ -51,6 +52,11 @@ public class Preprocessor {
 	
 	public Preprocessor setResourceOptions(ResourceOptions resourceOptions) {
 		this.resourceOptions = Optional.of(resourceOptions);
+		return this;
+	}
+	
+	public Preprocessor parallel() {
+		this.parallel = true;
 		return this;
 	}
 	
@@ -90,7 +96,7 @@ public class Preprocessor {
 	}
 
 	public Stream<JCas> asStream(TextCorpus textCorpus) {
-		return preprocessorService.prepare(
+		Stream<JCas> stream = preprocessorService.prepare(
 				textCorpus, 
 				taggerPath, 
 				options, 
@@ -98,5 +104,8 @@ public class Preprocessor {
 				history, 
 				listener, 
 				customAEs.toArray(new AnalysisEngineDescription[customAEs.size()]));
+		if(parallel)
+			stream.parallel();
+		return stream;
 	}
 }

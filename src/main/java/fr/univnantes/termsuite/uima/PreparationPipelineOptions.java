@@ -7,7 +7,7 @@ public class PreparationPipelineOptions {
 	private Tagger tagger = Tagger.TREE_TAGGER;
 
 	private boolean documentLoggingEnabled = true;
-	private boolean fixedExpressionEnabled = true;
+	private boolean fixedExpressionEnabled = false;
 
 	public Tagger getTagger() {
 		return tagger;

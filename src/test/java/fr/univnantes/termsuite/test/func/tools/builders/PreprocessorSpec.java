@@ -7,6 +7,7 @@ import static org.junit.Assert.assertFalse;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Iterator;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.apache.uima.jcas.JCas;
@@ -76,7 +77,19 @@ public class PreprocessorSpec {
 
 	}
 
-	public void assertTermino(Terminology termino) {
+	@Test
+	public void testParallelTerminoOnCorpus1() {
+		IntStream.range(0, 1).forEach(i -> {
+			setup();
+			Terminology termino = TermSuite.preprocessor()
+					.setTaggerPath(FunctionalTests.getTaggerPath())
+					.parallel()
+					.toTerminology(corpus, true);
+			assertTermino(termino);
+		});
+	}
+
+	private void assertTermino(Terminology termino) {
 		assertThat(termino)
 				.containsTerm("n: éolienne", 1)
 				.containsTerm("a: éolien", 2)
