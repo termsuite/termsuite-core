@@ -25,17 +25,16 @@ import java.util.Locale;
 import java.util.NoSuchElementException;
 
 import fr.univnantes.termsuite.LanguageException;
-import fr.univnantes.termsuite.engines.EngineState;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, 1, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, 1, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, 1, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, 2, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, 1, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, 1, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3, 2, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, 1, EngineState.ENABLED);
+	FR("french", Locale.FRENCH, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, 1),
+	EN("english", Locale.ENGLISH, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, 1),
+	ES("spanish", Locale.FRENCH, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, 1),
+	DE("german", Locale.GERMAN, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, 2),
+	ZH("chinese", Locale.CHINESE, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, 1),
+	LV("latvian", Locale.GERMAN,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, 1),
+	RU("russian", Locale.JAPAN,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3, 2),
+	DA("danish", Locale.GERMAN,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, 1);
 	
 	private final double compostAlpha;
 	private final double compostBeta;
@@ -47,7 +46,6 @@ public enum Lang {
 	private final Locale locale;
 	private final String longLang;
 	private final int gVariantNbPreindexingLetters;
-	private final EngineState gVariantGatheringState;
 
     private Lang(String longLang, Locale locale, 
     		double compostAlpha,
@@ -57,8 +55,7 @@ public enum Lang {
     		double compostCompostThreshold,
     		int compostMinComponentSize,
     		int compostMaxComponentNumber,
-    		int gVariantNbPreindexingLetters,
-    		EngineState gVariantGatheringState
+    		int gVariantNbPreindexingLetters
     		) {
     	this.locale = locale;
         this.longLang = longLang;
@@ -70,7 +67,6 @@ public enum Lang {
         this.compostMinComponentSize = compostMinComponentSize;
         this.compostMaxComponentNumber = compostMaxComponentNumber;
         this.gVariantNbPreindexingLetters = gVariantNbPreindexingLetters;
-        this.gVariantGatheringState = gVariantGatheringState;
     }
     
     public String getName() {
@@ -152,7 +148,4 @@ public enum Lang {
 		return gVariantNbPreindexingLetters;
 	}
 	
-	public EngineState getgVariantGatheringState() {
-		return gVariantGatheringState;
-	}
 }

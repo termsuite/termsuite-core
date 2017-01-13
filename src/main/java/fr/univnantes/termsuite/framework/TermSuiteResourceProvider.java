@@ -1,16 +1,13 @@
 package fr.univnantes.termsuite.framework;
 
-import javax.inject.Inject;
+import org.apache.uima.resource.SharedResourceObject;
 
 import com.google.inject.Provider;
 
-public class TermSuiteResourceProvider implements Provider<Object>{
-	
-	@Inject
-	
+public class TermSuiteResourceProvider implements Provider<SharedResourceObject>{
 	
 	@Override
-	public Object get() {
+	public SharedResourceObject get() {
 		return null;
 	}
 }

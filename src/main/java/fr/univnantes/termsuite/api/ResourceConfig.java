@@ -10,7 +10,7 @@ import java.util.Optional;
  * @author Damien Cram
  *
  */
-public class ResourceOptions {
+public class ResourceConfig {
 
 	private Optional<Path> resourceDirectory = Optional.empty(); 
 	private Optional<Path> resourceJar = Optional.empty();
@@ -19,7 +19,7 @@ public class ResourceOptions {
 		return resourceDirectory;
 	}
 
-	public ResourceOptions setResourceDirectory(Path resourceDirectory) {
+	public ResourceConfig setResourceDirectory(Path resourceDirectory) {
 		this.resourceDirectory = Optional.of(resourceDirectory);
 		return this;
 	}
@@ -28,7 +28,7 @@ public class ResourceOptions {
 		return resourceJar;
 	}
 	
-	public ResourceOptions setResourceJar(Path resourceJar) {
+	public ResourceConfig setResourceJar(Path resourceJar) {
 		this.resourceJar = Optional.of(resourceJar);
 		return this;
 	} 

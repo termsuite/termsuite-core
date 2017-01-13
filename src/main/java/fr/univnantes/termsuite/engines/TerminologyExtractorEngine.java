@@ -2,7 +2,7 @@ package fr.univnantes.termsuite.engines;
 
 import javax.inject.Inject;
 
-import fr.univnantes.termsuite.api.TerminologyExtractorConfig;
+import fr.univnantes.termsuite.api.TerminologyExtractorOptions;
 import fr.univnantes.termsuite.engines.cleaner.TerminologyCleaner;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.postproc.TermPostProcessor;
@@ -15,7 +15,7 @@ import fr.univnantes.termsuite.framework.TerminologyPipeline;
 public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
 	
 	@Inject
-	private TerminologyExtractorConfig config;
+	private TerminologyExtractorOptions config;
 	
 	@Override
 	public void configurePipeline(TerminologyPipeline pipeline) {

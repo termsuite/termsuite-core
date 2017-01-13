@@ -3,7 +3,7 @@ package fr.univnantes.termsuite.framework;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.api.TermSuite;
-import fr.univnantes.termsuite.api.TerminologyExtractorConfig;
+import fr.univnantes.termsuite.api.TerminologyExtractorOptions;
 import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
 
 public class TermSuiteFramework {
@@ -19,7 +19,7 @@ public class TermSuiteFramework {
 		engine.init(injector, parameters);
 	}
 
-	public static void runExtractionEngine(TerminologyExtractorConfig config) {
+	public static void runExtractionEngine(TerminologyExtractorOptions config) {
 		runEngine(TerminologyExtractorEngine.class, config);
 	}
 

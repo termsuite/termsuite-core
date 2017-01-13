@@ -25,7 +25,7 @@ public class Preprocessor {
 	private boolean parallel;
 	private Path taggerPath;
 	private PreparationPipelineOptions options = new PreparationPipelineOptions();
-	private Optional<ResourceOptions> resourceOptions = Optional.empty();
+	private Optional<ResourceConfig> resourceOptions = Optional.empty();
 	private Optional<TermHistory> history = Optional.empty();
 	private Optional<PipelineListener> listener = Optional.empty();
 	private List<AnalysisEngineDescription> customAEs = new ArrayList<>();
@@ -50,7 +50,7 @@ public class Preprocessor {
 		return this;
 	}
 	
-	public Preprocessor setResourceOptions(ResourceOptions resourceOptions) {
+	public Preprocessor setResourceOptions(ResourceConfig resourceOptions) {
 		this.resourceOptions = Optional.of(resourceOptions);
 		return this;
 	}
@@ -79,16 +79,16 @@ public class Preprocessor {
 		return termino;
 	}
 	
-	public PreparedCorpus toPreparedCorpusJSON(TextCorpus textCorpus, Path jsonDir) {
-		final PreparedCorpus targetCorpus = new PreparedCorpus(textCorpus.getLang(), jsonDir, PreparedCorpus.JSON_PATTERN, PreparedCorpus.JSON_EXTENSION);
+	public PreprocessedCorpus toPreparedCorpusJSON(TextCorpus textCorpus, Path jsonDir) {
+		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), jsonDir, PreprocessedCorpus.JSON_PATTERN, PreprocessedCorpus.JSON_EXTENSION);
 		
 		asStream(textCorpus)
 			.forEach(cas -> preprocessorService.consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
 		return targetCorpus;
 	}
 
-	public PreparedCorpus toPreparedCorpusXMI(TextCorpus textCorpus, Path xmiDir) {
-		final PreparedCorpus targetCorpus = new PreparedCorpus(textCorpus.getLang(), xmiDir, PreparedCorpus.XMI_PATTERN, PreparedCorpus.XMI_EXTENSION);
+	public PreprocessedCorpus toPreparedCorpusXMI(TextCorpus textCorpus, Path xmiDir) {
+		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), xmiDir, PreprocessedCorpus.XMI_PATTERN, PreprocessedCorpus.XMI_EXTENSION);
 		
 		asStream(textCorpus)
 			.forEach(cas -> preprocessorService.consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));

@@ -21,6 +21,11 @@ public class TermSuite {
 		return new MemoryTerminology(name, lang, store);
 	}
 
+	public static TerminoExtractor terminoExtractor() {
+		Injector injector = Guice.createInjector(new TermSuiteModule());
+		return injector.getInstance(TerminoExtractor.class);
+	}
+
 	public static Preprocessor preprocessor() {
 		return injector().getInstance(Preprocessor.class);
 	}

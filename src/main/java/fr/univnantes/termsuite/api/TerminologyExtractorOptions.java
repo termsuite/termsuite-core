@@ -1,6 +1,7 @@
 package fr.univnantes.termsuite.api;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
+import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.postproc.TermRankingOptions;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalOptions;
@@ -8,7 +9,10 @@ import fr.univnantes.termsuite.framework.ConfigurationObject;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 
 @ConfigurationObject
-public class TerminologyExtractorConfig {
+public class TerminologyExtractorOptions {
+
+	private boolean contextualizerEnabled = false;
+	private ContextualizerOptions contextualizerOptions = new ContextualizerOptions();
 
 	private boolean preFilterEnabled = false;
 	private TerminoFilterOptions preFilterConfig = new TerminoFilterOptions();
@@ -31,7 +35,7 @@ public class TerminologyExtractorConfig {
 		return preFilterEnabled;
 	}
 
-	public TerminologyExtractorConfig setPreFilterEnabled(boolean preFilterEnabled) {
+	public TerminologyExtractorOptions setPreFilterEnabled(boolean preFilterEnabled) {
 		this.preFilterEnabled = preFilterEnabled;
 		return this;
 	}
@@ -40,7 +44,7 @@ public class TerminologyExtractorConfig {
 		return preFilterConfig;
 	}
 
-	public TerminologyExtractorConfig setPreFilterConfig(TerminoFilterOptions preFilterConfig) {
+	public TerminologyExtractorOptions setPreFilterConfig(TerminoFilterOptions preFilterConfig) {
 		this.preFilterConfig = preFilterConfig;
 		return this;
 	}
@@ -49,7 +53,7 @@ public class TerminologyExtractorConfig {
 		return postFilterEnabled;
 	}
 
-	public TerminologyExtractorConfig setPostFilterEnabled(boolean postFilterEnabled) {
+	public TerminologyExtractorOptions setPostFilterEnabled(boolean postFilterEnabled) {
 		this.postFilterEnabled = postFilterEnabled;
 		return this;
 	}
@@ -58,7 +62,7 @@ public class TerminologyExtractorConfig {
 		return postFilterConfig;
 	}
 
-	public TerminologyExtractorConfig setPostFilterConfig(TerminoFilterOptions postFilterConfig) {
+	public TerminologyExtractorOptions setPostFilterConfig(TerminoFilterOptions postFilterConfig) {
 		this.postFilterConfig = postFilterConfig;
 		return this;
 	}
@@ -67,7 +71,7 @@ public class TerminologyExtractorConfig {
 		return postProcessorEnabled;
 	}
 
-	public TerminologyExtractorConfig setPostProcessorEnabled(boolean postProcessorEnabled) {
+	public TerminologyExtractorOptions setPostProcessorEnabled(boolean postProcessorEnabled) {
 		this.postProcessorEnabled = postProcessorEnabled;
 		return this;
 	}
@@ -76,7 +80,7 @@ public class TerminologyExtractorConfig {
 		return postProcessorConfig;
 	}
 
-	public TerminologyExtractorConfig setPostProcessorConfig(PostProcessorOptions postProcessorConfig) {
+	public TerminologyExtractorOptions setPostProcessorConfig(PostProcessorOptions postProcessorConfig) {
 		this.postProcessorConfig = postProcessorConfig;
 		return this;
 	}
@@ -85,7 +89,7 @@ public class TerminologyExtractorConfig {
 		return gathererEnabled;
 	}
 
-	public TerminologyExtractorConfig setGathererEnabled(boolean gathererEnabled) {
+	public TerminologyExtractorOptions setGathererEnabled(boolean gathererEnabled) {
 		this.gathererEnabled = gathererEnabled;
 		return this;
 	}
@@ -94,7 +98,7 @@ public class TerminologyExtractorConfig {
 		return gathererConfig;
 	}
 
-	public TerminologyExtractorConfig setGathererConfig(GathererOptions gathererConfig) {
+	public TerminologyExtractorOptions setGathererConfig(GathererOptions gathererConfig) {
 		this.gathererConfig = gathererConfig;
 		return this;
 	}
@@ -103,7 +107,7 @@ public class TerminologyExtractorConfig {
 		return rankingConfig;
 	}
 
-	public TerminologyExtractorConfig setRankingConfig(TermRankingOptions rankingConfig) {
+	public TerminologyExtractorOptions setRankingConfig(TermRankingOptions rankingConfig) {
 		this.rankingConfig = rankingConfig;
 		return this;
 	}
