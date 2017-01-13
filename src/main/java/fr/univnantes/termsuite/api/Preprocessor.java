@@ -69,7 +69,7 @@ public class Preprocessor {
 	public Terminology toTerminology(TextCorpus textCorpus, boolean withOccurrences) {
 		String name = preprocessorService.generateTerminologyName(textCorpus);
 		Terminology termino = TermSuite.createTerminology(textCorpus.getLang(), name, withOccurrences);
-		preprocessorService.consumeToTerminology(asStream(textCorpus), termino, -1);
+		preprocessorService.consumeToTerminology(asStream(textCorpus), termino);
 		return termino;
 	}
 	

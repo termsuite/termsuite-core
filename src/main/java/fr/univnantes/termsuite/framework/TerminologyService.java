@@ -7,11 +7,13 @@ import java.util.EnumSet;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.Semaphore;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -201,22 +203,32 @@ public class TerminologyService {
 	private static final String MSG_LEMMAS_EMPTY = "Words array must not be empty";
 	private static final String MSG_NOT_SAME_LENGTH = "Pattern and words must have same length";
 
+	
+	private Semaphore addTermMutex = new Semaphore(1);
+	
 	public Term createOrGetTerm(String[] pattern, Word[] words) {
 		Preconditions.checkArgument(pattern.length > 0, MSG_PATTERN_EMPTY);
 		Preconditions.checkArgument(words.length > 0, MSG_LEMMAS_EMPTY);
 		Preconditions.checkArgument(words.length == pattern.length, MSG_NOT_SAME_LENGTH);
 
 		String termGroupingKey = TermSuiteUtils.getGroupingKey(pattern, words);
-		Term term = this.termino.getTermByGroupingKey(termGroupingKey);
-		if(term == null) {
-			TermBuilder builder = TermBuilder.start();
-			for (int i = 0; i < pattern.length; i++)
-				builder.addWord(words[i], pattern[i].toLowerCase());
-			builder.setFrequency(0);
-			term = builder.create();
+	
+		try {
+			addTermMutex.acquire();
+			Term term = this.termino.getTermByGroupingKey(termGroupingKey);
+			if(term == null) {
+				TermBuilder builder = TermBuilder.start();
+				for (int i = 0; i < pattern.length; i++)
+					builder.addWord(words[i], pattern[i].toLowerCase());
+				builder.setFrequency(0);
+				term = builder.create();
+				this.termino.addTerm(term);
+			}
+			addTermMutex.release();
+			return term;
+		} catch (InterruptedException e) {
+			throw new TermSuiteException(e);
 		}
-		this.termino.addTerm(term);
-		return term;
 	}
 
 	public Word createOrGetWord(String lemma, String stem) {

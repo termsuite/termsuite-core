@@ -18,6 +18,7 @@ import org.junit.rules.TemporaryFolder;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.TextCorpus;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
@@ -64,7 +65,36 @@ public class PreprocessorSpec {
 		
 		assertAllDocuments(stream);
 	}
-	
+
+	@Test
+	public void testTerminoOnCorpus1() {
+		Terminology termino = TermSuite.preprocessor()
+				.setTaggerPath(FunctionalTests.getTaggerPath())
+				.toTerminology(corpus, true);
+		
+		assertTermino(termino);
+
+	}
+
+	public void assertTermino(Terminology termino) {
+		assertThat(termino)
+				.containsTerm("n: éolienne", 1)
+				.containsTerm("a: éolien", 2)
+				.containsTerm("n: énergie", 5)
+				.containsTerm("na: énergie éolien", 2)
+				.containsTerm("npn: énergie de demain", 1)
+				.containsTerm("npn: énergie du futur", 1)
+				.containsTerm("n: futur", 1)
+				.containsTerm("n: demain", 1)
+				.hasNTerms(8);
+
+		assertThat(termino.getWords())
+				.extracting("lemma")
+				.containsOnly("éolienne", "éolien", "énergie", "demain", "futur", "de", "du")
+				.hasSize(7);
+	}
+
+		
 	private void assertAllDocuments(Stream<JCas> stream) {
 		Iterator<JCas> it = stream.iterator();
 		JCas cas1 = it.next();

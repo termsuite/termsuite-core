@@ -2,7 +2,6 @@ package fr.univnantes.termsuite.framework.service;
 
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -185,12 +184,15 @@ public class PreprocessorServiceImpl implements PreprocessorService {
 		toXMIPath(targetDocumentPath, cas);
 	}
 
-	/* (non-Javadoc)
-	 * @see fr.univnantes.termsuite.framework.service.PreprocessorService#consumeToTerminology(java.util.stream.Stream, fr.univnantes.termsuite.model.Terminology, int)
-	 */
+	@Override
+	public void consumeToTerminology(Stream<JCas> cases, Terminology terminology) {
+		final TermOccAnnotationImporter importer = new TermOccAnnotationImporter(terminology);
+		cases.forEach(cas -> importer.importCas(cas));
+	}
+
 	@Override
 	public void consumeToTerminology(Stream<JCas> cases, Terminology terminology, int maxSize) {
-		final TermOccAnnotationImporter importer = new TermOccAnnotationImporter(maxSize, terminology);
+		final TermOccAnnotationImporter importer = new TermOccAnnotationImporter(terminology, maxSize);
 		cases.forEach(cas -> importer.importCas(cas));
 	}
 

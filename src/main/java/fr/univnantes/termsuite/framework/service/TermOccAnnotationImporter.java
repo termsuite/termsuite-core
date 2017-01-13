@@ -54,13 +54,17 @@ public class TermOccAnnotationImporter {
 	
 	private int currentThreshold = 2;
 	private Optional<TermHistory> history = Optional.empty();
-	private int maxSize = -1;
+	private Optional<Integer> maxSize = Optional.empty();
 	private TerminologyService terminoService;
 	private Semaphore cleanerMutex = new Semaphore(1);
 
-	public TermOccAnnotationImporter(int maxSize, Terminology termino) {
+	public TermOccAnnotationImporter(Terminology termino, int maxSize) {
+		this(termino);
+		this.maxSize = Optional.of(maxSize);
+	}
+
+	public TermOccAnnotationImporter(Terminology termino) {
 		super();
-		this.maxSize = maxSize;
 		this.terminoService = new TerminologyService(termino);
 	}
 
@@ -111,38 +115,41 @@ public class TermOccAnnotationImporter {
 	}
 	
 	public void cleanIfTooBig() {
+		if(maxSize.isPresent()) {
+			// max size filtering is activated
 		
-		long sizeBefore = terminoService.termCount();
-		if(sizeBefore >= maxSize) {
-			logger.debug(
-					"Current term index size = {} (> {}). Start cleaning with th={}", 
-					sizeBefore,
-					maxSize, 
-					currentThreshold);
-			
-			terminoService.removeAll(t-> t.getFrequency() < currentThreshold);
-
-			long sizeAfter = terminoService.termCount();
-			double removalRatio = ((double)(sizeBefore - sizeAfter))/sizeBefore;
-			logger.info(
-					"Cleaned {} terms [before: {}, after: {}, ratio: {}] from term index (maxSize: {}, currentTh: {})", 
-					sizeBefore - sizeAfter,
-					sizeBefore,
-					sizeAfter,
-					String.format("%.3f",removalRatio),
-					maxSize, 
-					currentThreshold);
-			logger.debug(
-					"Removal ratio is: {}. (needs < {} to increase currentTh)", 
-					String.format("%.3f",removalRatio),
-					String.format("%.3f",REMOVAL_RATIO_THRESHHOLD)
-				);
-			if(removalRatio < REMOVAL_RATIO_THRESHHOLD) {
-				logger.info("Increasing frequency threshhold from {} to {}.",
-						this.currentThreshold,
-						this.currentThreshold+1
-						);
-				this.currentThreshold++;
+			long sizeBefore = terminoService.termCount();
+			if(sizeBefore >= maxSize.get()) {
+				logger.debug(
+						"Current term index size = {} (> {}). Start cleaning with th={}", 
+						sizeBefore,
+						maxSize.get(), 
+						currentThreshold);
+				
+				terminoService.removeAll(t-> t.getFrequency() < currentThreshold);
+	
+				long sizeAfter = terminoService.termCount();
+				double removalRatio = ((double)(sizeBefore - sizeAfter))/sizeBefore;
+				logger.info(
+						"Cleaned {} terms [before: {}, after: {}, ratio: {}] from term index (maxSize: {}, currentTh: {})", 
+						sizeBefore - sizeAfter,
+						sizeBefore,
+						sizeAfter,
+						String.format("%.3f",removalRatio),
+						maxSize.get(), 
+						currentThreshold);
+				logger.debug(
+						"Removal ratio is: {}. (needs < {} to increase currentTh)", 
+						String.format("%.3f",removalRatio),
+						String.format("%.3f",REMOVAL_RATIO_THRESHHOLD)
+					);
+				if(removalRatio < REMOVAL_RATIO_THRESHHOLD) {
+					logger.info("Increasing frequency threshhold from {} to {}.",
+							this.currentThreshold,
+							this.currentThreshold+1
+							);
+					this.currentThreshold++;
+				}
 			}
 		}
 	}

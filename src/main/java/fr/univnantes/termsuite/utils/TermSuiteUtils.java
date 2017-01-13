@@ -109,8 +109,11 @@ public class TermSuiteUtils {
 			sb.append(s.toLowerCase());
 		sb.append(TermSuiteConstants.COLONS);
 		sb.append(TermSuiteConstants.WHITESPACE);
-		for(Word w:words)
-			sb.append(w.getLemma().toLowerCase());
+		for(int i=0; i<words.length;i++) {
+			if(i>0)
+				sb.append(TermSuiteConstants.WHITESPACE);
+			sb.append(words[i].getLemma().toLowerCase());
+		}
 		return sb.toString();
 	}
 

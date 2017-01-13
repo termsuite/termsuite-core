@@ -39,4 +39,6 @@ public interface PreprocessorService {
 
 	String generateTerminologyName(TextCorpus textCorpus);
 
+	void consumeToTerminology(Stream<JCas> cases, Terminology terminology);
+
 }
