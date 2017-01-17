@@ -6,9 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -32,8 +30,8 @@ import fr.univnantes.termsuite.model.TermRelation;
  */
 public class TwoOrderVariationMerger extends TerminologyEngine {
 
-	@Execute
-	public void mergeTwoOrderVariationPatterns(TerminologyService terminoService) {
+	@Override
+	public void execute() {
 
 		/*
 		 * Merge pattern n°1: t --extension--> v1 --extension--> v2
@@ -49,7 +47,7 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 		 *  blade passage --> typical rotor blade passage
 		 *  
 		 */
-		mergeTwoOrderVariations(terminoService,
+		mergeTwoOrderVariations(
 				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
 			);
@@ -68,7 +66,7 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 		 * wind turbine --> small scale wind turbine
 		 * 
 		 */
-		mergeTwoOrderVariations(terminoService,
+		mergeTwoOrderVariations(
 				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_MORPHOLOGICAL)
 						|| r2.getPropertyBooleanValue(RelationProperty.IS_DERIVATION)
@@ -77,7 +75,7 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 			);
 		
 		
-		TermPostProcessor.logVariationsAndTerms(terminoService);
+		TermPostProcessor.logVariationsAndTerms(terminology);
 	}
 
 	
@@ -93,18 +91,18 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 	 *   baseTerm --rtrans--> v2 
 	 * 
 	 */
-	private void mergeTwoOrderVariations(TerminologyService terminoService, Predicate<TermRelation> p1, Predicate<TermRelation> p2) {
+	private void mergeTwoOrderVariations(Predicate<TermRelation> p1, Predicate<TermRelation> p2) {
 		/*
 		 *  t1 --r1--> t2 --r2--> t3
 		 *  t1 --rtrans--> t3
 		 */
 
-		terminoService.terms()
+		terminology.terms()
 		.sorted(TermProperty.FREQUENCY.getComparator(true))
 		.forEach(t1 -> {
 			final Map<Term, TermRelation> r1Set = new HashMap<>();
 
-			terminoService.outboundRelations(t1, RelationType.VARIATION).forEach(r1 -> {
+			terminology.outboundRelations(t1, RelationType.VARIATION).forEach(r1 -> {
 				if(p1.test(r1))
 					r1Set.put(r1.getTo(), r1);
 			});
@@ -112,7 +110,7 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 			final Set<TermRelation> rem = new HashSet<>();
 			
 			r1Set.keySet().forEach(t2-> {
-				terminoService
+				terminology
 					.outboundRelations(t2, RelationType.VARIATION)
 					.filter(p2)
 					.filter(r2 -> r1Set.containsKey(r2.getTo()))
@@ -131,7 +129,7 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 			});
 			
 			rem.forEach(rel -> {
-				terminoService.removeRelation(rel);
+				terminology.removeRelation(rel);
 			});
 		});
 

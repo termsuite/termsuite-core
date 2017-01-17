@@ -15,7 +15,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.Cosine;
@@ -24,7 +23,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -37,7 +36,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 	
 	private int nbDistributionalCandidates = 5;
 	
-	@Resource(type=TermSuiteResource.SYNONYMS)
+	@Resource(type=ResourceType.SYNONYMS)
 	private MultimapFlatResource dico = new MultimapFlatResource();
 
 	private AtomicInteger nbAlignmentsCounter = new AtomicInteger(0);
@@ -58,11 +57,11 @@ public class SemanticGatherer extends VariationTypeGatherer {
 			});
 	
 	
-	@Execute
-	public void gather(TerminologyService termino) {
+	@Override
+	public void execute() {
 		Stopwatch gatherSw = Stopwatch.createStarted();
 		for(VariantRule rule:this.variantRules.getVariantRules(VariationType.SEMANTIC))
-			gather(termino, (SynonymicRule)rule);
+			gather((SynonymicRule)rule);
 		gatherSw.stop();
 		LOGGER.debug("Cumulated indexing time: {}", indexingSw);
 		
@@ -78,10 +77,10 @@ public class SemanticGatherer extends VariationTypeGatherer {
 				nbAlignmentsCounter);
 	}
 	
-	public void gather(TerminologyService terminoService, SynonymicRule rule) {
+	public void gather(SynonymicRule rule) {
 		
 		LOGGER.info("Aligning semantic variations for rule {}", rule.getName());
-		if(terminoService.getTerms().isEmpty())
+		if(terminology.getTerms().isEmpty())
 			return;
 		Preconditions.checkNotNull(rule);
 		
@@ -91,15 +90,15 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		AtomicInteger nbDicoRelationFound = new AtomicInteger(0);
 		
 		
-		if(!terminoService.terms().filter(t->t.getContext()!= null).findAny().isPresent())
+		if(!terminology.terms().filter(t->t.getContext()!= null).findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires a contextualized term index");
-		if(!terminoService.extensions().findAny().isPresent())
+		if(!terminology.extensions().findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
 		String indexName = "SubSequence"+rule.getName();
 
 		indexingSw.start();
-		CustomTermIndex index = terminoService.getTerminology().createCustomIndex(indexName, rule.getTermProvider());
+		CustomTermIndex index = terminology.getTerminology().createCustomIndex(indexName, rule.getTermProvider());
 		indexingSw.stop();
 
 		Stopwatch ruleSw = Stopwatch.createStarted();
@@ -115,7 +114,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 			for(int i=0; i<terms.size();i++) {
 				t1 = terms.get(i);
 				String akey1 = TermUtils.toGroupingKey(t1.getWords().get(rule.getSynonymSourceWordIndex()));
-				a1 = terminoService.getTerm(akey1);
+				a1 = terminology.getTerm(akey1);
 				if(a1 == null) {
 					continue;
 				} else if(a1.getContext() == null) {
@@ -129,15 +128,15 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						continue;
 					t2 = terms.get(j);
 					String akey2 = TermUtils.toGroupingKey(t2.getWords().get(rule.getSynonymSourceWordIndex()));
-					a2 = terminoService.getTerm(akey2);
+					a2 = terminology.getTerm(akey2);
 					if(a2 == null) {
 						continue;
 					} 
 					
 					if(areDicoSynonyms(a1, a2)) {
 						nbDicoRelationFound.incrementAndGet();
-						TermRelation rel = buildDicoVariation(terminoService, t1, t2);
-						terminoService.addRelation(rel);
+						TermRelation rel = buildDicoVariation(terminology, t1, t2);
+						terminology.addRelation(rel);
 					}
 					
 					if(a2.getContext() == null) {
@@ -148,7 +147,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						nbAlignmentsCounter.incrementAndGet();
 						Double value = alignmentScores.getUnchecked(pair);
 						if(value > similarityThreshold) {
-							TermRelation rel = buildDistributionalVariation(terminoService, t1,t2,value);
+							TermRelation rel = buildDistributionalVariation(terminology, t1,t2,value);
 							t1Relations.add(rel);
 						}
 					}
@@ -162,14 +161,14 @@ public class SemanticGatherer extends VariationTypeGatherer {
 					.limit(this.nbDistributionalCandidates)
 					.forEach(rel -> {
 						nbDistribRelationsFound.incrementAndGet();
-						terminoService.addRelation(rel);
+						terminology.addRelation(rel);
 						watch(rel.getFrom(), rel.getTo());
 					});
 			}
 		});
 		ruleSw.stop();
 
-		terminoService.getTerminology().dropCustomIndex(indexName);
+		terminology.getTerminology().dropCustomIndex(indexName);
 		LOGGER.debug("Semantic alignment finished for rule {} in {}", rule, ruleSw);
 		LOGGER.debug("Nb distributional synonymic relations found: {}. Total dico synonyms: {}", 
 				nbDistribRelationsFound, 

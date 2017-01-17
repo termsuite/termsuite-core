@@ -36,7 +36,6 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
@@ -69,28 +68,28 @@ public class VariationScorer extends TerminologyEngine {
 		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
 				&& v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
 
-	@Execute
-	public void score(TerminologyService termino) {
+	@Override
+	public void execute() {
 		LOGGER.info("Computing scores for variations");
 		Stopwatch sw = Stopwatch.createStarted();
 
 		LOGGER.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
-		doVariationFrenquencies(termino);
+		doVariationFrenquencies(terminology);
 
 		LOGGER.debug("Computing {}", RelationProperty.SOURCE_GAIN);
-		doSourceGains(termino);
+		doSourceGains(terminology);
 		
 		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_SOURCE_GAIN);
-		normalizeSourceGain(termino);
+		normalizeSourceGain(terminology);
 		
 		LOGGER.debug("Computing {}", RelationProperty.EXTENSION_SCORE);
-		scoreExtensions(termino);
+		scoreExtensions(terminology);
 
 		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_EXTENSION_SCORE);
-		normalizeExtensionScores(termino);
+		normalizeExtensionScores(terminology);
 		
 		LOGGER.debug("Computing {}", RelationProperty.VARIANT_SCORE);
-		doVariantScores(termino);
+		doVariantScores(terminology);
 		
 		sw.stop();
 		LOGGER.debug("Scores computed in {}", sw);
@@ -107,9 +106,15 @@ public class VariationScorer extends TerminologyEngine {
 	}
 
 	private void normalizeExtensionScores(TerminologyService termino) {
+		Predicate<? super TermRelation> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
+		if(!termino.relations().filter(extensionSet).findFirst().isPresent()) {
+			getLogger().warn("Found no relation with property {} set.", extensionSet);
+			return;
+		}
+			
 		final Normalizer normalizer = new MinMaxNormalizer(termino
 				.relations()
-				.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
+				.filter(extensionSet)
 				.map(r -> r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))
 				.collect(Collectors.toList()));
 		

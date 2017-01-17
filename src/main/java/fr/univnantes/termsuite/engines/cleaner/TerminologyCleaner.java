@@ -6,11 +6,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -27,6 +28,8 @@ public class TerminologyCleaner extends TerminologyEngine {
 	
 	private Optional<TermHistory> history = Optional.empty();
 	
+	@Inject TerminologyService termino;
+	
 	public TerminologyCleaner setHistory(Optional<TermHistory> history) {
 		this.history = history;
 		return this;
@@ -37,8 +40,7 @@ public class TerminologyCleaner extends TerminologyEngine {
 		return this;
 	}
 	
-	@Execute
-	public void clean(TerminologyService termino) {
+	public void execute() {
 		LOGGER.info("Cleaning terminology");
 		
 		long termcount = 0;

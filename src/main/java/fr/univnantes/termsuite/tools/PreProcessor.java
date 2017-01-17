@@ -32,7 +32,7 @@ import fr.univnantes.lina.uima.models.TreeTaggerParameter;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.StringUtils;
 import uima.sandbox.lexer.engines.Lexer;
 import uima.sandbox.lexer.resources.SegmentBank;
@@ -96,7 +96,7 @@ public class PreProcessor {
 				);
 		
 			URL jarURI = new URL("jar:"+resourceJar.toUri()+"!/");
-			String segmentBankURI = TermSuiteResource.SEGMENT_BANK.fromUrlPrefix(jarURI, lang).toString();
+			String segmentBankURI = ResourceType.SEGMENT_BANK.fromUrlPrefix(jarURI, lang).toString();
 
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class, 
@@ -119,7 +119,7 @@ public class PreProcessor {
 						TreeTaggerWrapper.PARAM_TT_HOME_DIRECTORY, treeTaggerHome
 					);
 				
-				URL taggerConfigURI = TermSuiteResource.TREETAGGER_CONFIG.fromUrlPrefix(jarURI, lang, Tagger.TREE_TAGGER);
+				URL taggerConfigURI = ResourceType.TREETAGGER_CONFIG.fromUrlPrefix(jarURI, lang, Tagger.TREE_TAGGER);
 				ExternalResourceFactory.createDependencyAndBind(
 						taggerAe,
 						TreeTaggerParameter.KEY_TT_PARAMETER, 

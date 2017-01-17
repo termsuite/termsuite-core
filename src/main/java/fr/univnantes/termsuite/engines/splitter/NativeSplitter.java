@@ -27,10 +27,8 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.model.Component;
@@ -42,7 +40,7 @@ import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.resources.CompostIndex;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.utils.IndexingKey;
@@ -54,19 +52,19 @@ public class NativeSplitter extends TerminologyEngine {
 	@Inject
 	private MorphologicalOptions opt = new MorphologicalOptions();
 
-	@Resource(type=TermSuiteResource.COMPOST_INFLECTION_RULES)
+	@Resource(type=ResourceType.COMPOST_INFLECTION_RULES)
 	private CompostInflectionRules inflectionRules;
 	
-	@Resource(type=TermSuiteResource.COMPOST_TRANSFORMATION_RULES)
+	@Resource(type=ResourceType.COMPOST_TRANSFORMATION_RULES)
 	private CompostInflectionRules transformationRules;
 	
-	@Resource(type=TermSuiteResource.DICO)
+	@Resource(type=ResourceType.DICO)
 	private SimpleWordSet languageDico;
 
-	@Resource(type=TermSuiteResource.NEOCLASSICAL_PREFIXES)
+	@Resource(type=ResourceType.NEOCLASSICAL_PREFIXES)
 	private SimpleWordSet neoclassicalPrefixes;
 	
-	@Resource(type=TermSuiteResource.COMPOST_STOP_LIST)
+	@Resource(type=ResourceType.COMPOST_STOP_LIST)
 	private SimpleWordSet stopList;
 
 	private CompostIndex compostIndex;
@@ -75,7 +73,6 @@ public class NativeSplitter extends TerminologyEngine {
 
 	private EditDistance distance = new Levenshtein();
 
-	private TerminologyService termino;
 
 	private LoadingCache<String, SegmentScoreEntry> segmentScoreEntries = CacheBuilder.newBuilder()
 				.maximumSize(100000)
@@ -98,13 +95,11 @@ public class NativeSplitter extends TerminologyEngine {
 	           });
 
 	
-	@Execute
-	public void split(TerminologyService termino2) {
-		this.termino = termino2;
-		
+	@Override
+	public void execute() {
 		LOGGER.info("Starting morphologyical compound detection for termino");
-		swtLemmaIndex = termino2.getTerminology().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
-		buildCompostIndex(termino2);
+		swtLemmaIndex = terminology.getTerminology().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		buildCompostIndex();
 
 		
 		final MutableLong cnt = new MutableLong(0);
@@ -113,7 +108,7 @@ public class NativeSplitter extends TerminologyEngine {
 		progressLoggerTimer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				int total = termino2.getWords().size();
+				int total = terminology.getWords().size();
 				LOGGER.info("Progress: {}% ({} on {})",
 						String.format("%.2f", ((double)cnt.longValue()*100)/total),
 						cnt.longValue(),
@@ -123,7 +118,7 @@ public class NativeSplitter extends TerminologyEngine {
 
 		
 //		int observingStep = 100;
-		Set<Word> words = termino2.getTerms()
+		Set<Word> words = terminology.getTerms()
 				.parallelStream()
 				.filter(Term::isSingleWord)
 				.map(swt -> swt.getWords().get(0).getWord())
@@ -226,7 +221,7 @@ public class NativeSplitter extends TerminologyEngine {
 		LOGGER.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
 		LOGGER.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
-		termino2.getTerminology().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		terminology.getTerminology().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
 	}
@@ -265,7 +260,7 @@ public class NativeSplitter extends TerminologyEngine {
 		}
 	}
 
-	private void buildCompostIndex(TerminologyService termino) {
+	private void buildCompostIndex() {
 		LOGGER.debug("Building compost index");
 
 		compostIndex = new CompostIndex(similarityIndexingKey);
@@ -273,7 +268,7 @@ public class NativeSplitter extends TerminologyEngine {
 			compostIndex.addDicoWord(word);
 		for(String word:neoclassicalPrefixes.getElements())
 			compostIndex.addNeoclassicalPrefix(word);
-		for(Word w:termino.getWords())
+		for(Word w:terminology.getWords())
 			compostIndex.addInCorpus(w.getLemma());
 		LOGGER.debug("Compost index size: " + compostIndex.size());
 	}
@@ -398,7 +393,7 @@ public class NativeSplitter extends TerminologyEngine {
 	public double getMaxSpec() {
 		if(!maxSpec.isPresent()) {
 			Comparator<Term> specComparator = TermProperty.SPECIFICITY.getComparator(false);
-			double wrLog = termino.terms().max(specComparator).get().getSpecificity();
+			double wrLog = terminology.terms().max(specComparator).get().getSpecificity();
 			maxSpec = Optional.of((double)Math.pow(10, wrLog));
 		}
 		return maxSpec.get();

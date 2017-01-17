@@ -29,7 +29,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyPipeline;
 import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
@@ -47,15 +46,15 @@ public class TermPostProcessor extends AggregateTerminologyEngine {
 	private PostProcessorOptions config;
 
 	@Override
-	public void configurePipeline(TerminologyPipeline pipeline) {
-		pipeline.pipeEngine(IndependanceScorer.class);
-		pipeline.pipeEngine(OrthographicScorer.class);
-		pipeline.pipeEngine(VariationScorer.class);
-		pipeline.pipeEngine(ThresholdExtensionFilterer.class);
-		pipeline.pipeEngine(VariationFiltererByScore.class, config);
-		pipeline.pipeEngine(TwoOrderVariationMerger.class);
-		pipeline.pipeEngine(TermFiltererByScore.class, config);
-		pipeline.pipeEngine(VariationRanker.class);
+	public void configure() {
+		pipe(IndependanceScorer.class);
+		pipe(OrthographicScorer.class);
+		pipe(VariationScorer.class);
+		pipe(ThresholdExtensionFilterer.class);
+		pipe(VariationFiltererByScore.class, config);
+		pipe(TwoOrderVariationMerger.class);
+		pipe(TermFiltererByScore.class, config);
+		pipe(VariationRanker.class);
 	}
 
 	static void logVariationsAndTerms(TerminologyService termino) {

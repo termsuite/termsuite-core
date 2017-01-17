@@ -4,7 +4,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -18,13 +17,13 @@ import fr.univnantes.termsuite.utils.TermUtils;
  */
 public class SWTSizeSetter extends TerminologyEngine {
 	
-	
-	public void setSWTNumber(TerminologyService termino) {
-		Set<String> swts = termino.terms()
+	@Override
+	public void execute() {
+		Set<String> swts = terminology.terms()
 				.filter(t -> t.getWords().size() == 1)
 				.map(Term::getGroupingKey)
 				.collect(Collectors.toSet());
-		for(Term t:termino.getTerms()) {
+		for(Term t:terminology.getTerms()) {
 			long cnt = t.getWords()
 				.stream()
 				.filter( tw -> swts.contains(TermUtils.toGroupingKey(tw)))

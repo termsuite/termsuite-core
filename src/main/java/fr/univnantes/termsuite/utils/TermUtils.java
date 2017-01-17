@@ -49,7 +49,7 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.TermSuiteResourceException;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 
@@ -343,7 +343,7 @@ public class TermUtils {
 	 * @return
 	 */
 	public static int getGeneralFrequency(Lang l, Term t) {
-		String resName = TermSuiteResource.GENERAL_LANGUAGE.getPath(l);
+		String resName = ResourceType.GENERAL_LANGUAGE.getPath(l);
 		GeneralLanguageResource generalLanguage = new GeneralLanguageResource();
 		try {
 			generalLanguage.load(TermUtils.class.getClassLoader().getResourceAsStream(resName));

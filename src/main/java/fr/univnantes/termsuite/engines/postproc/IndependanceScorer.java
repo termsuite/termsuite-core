@@ -10,11 +10,7 @@ import java.util.function.Predicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -23,21 +19,21 @@ import jetbrains.exodus.core.dataStructures.hash.HashSet;
 public class IndependanceScorer extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndependanceScorer.class);
 	
-
-	public Set<Term> getExtensions(TerminologyService terminology, Term from) {
+	
+	public Set<Term> getExtensions(Term from) {
 		Set<Term> extensions = new HashSet<>();
 		
 		terminology
 			.extensions(from)
 			.forEach(rel -> {
 				extensions.add(rel.getTo());
-				extensions.addAll(getExtensions(terminology, rel.getTo()));
+				extensions.addAll(getExtensions(rel.getTo()));
 			});
 		
 		return extensions;
 	}
 
-	public void checkNoCycleInExtensions(TerminologyService terminology) {
+	private void checkNoCycleInExtensions() {
 		Predicate<TermRelation> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
 		if(terminology.extensions().filter(badExtension).findFirst().isPresent()) {
 			terminology.extensions()
@@ -50,16 +46,10 @@ public class IndependanceScorer extends TerminologyEngine {
 		}
 	}
 
-	@Execute
-	public void setIndependance(TerminologyService terminology) {
-
-		LOGGER.debug("Checking potential cycles in terminology");
-		checkNoCycleInExtensions(terminology);
-		if(!terminology.extensions().findAny().isPresent()) {
-			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
-			new ExtensionDetecter().detectExtensions(terminology);
-		}
-
+	@Override
+	public void execute() {
+		
+		checkNoCycleInExtensions();
 		
 		/*
 		 * 1. Init independant frequency
@@ -76,7 +66,7 @@ public class IndependanceScorer extends TerminologyEngine {
 		 * 2. Compute depths
 		 */
 		LOGGER.debug("Computing DEPTH property for all terms");
-		final AtomicInteger depth = setDepths(terminology);
+		final AtomicInteger depth = setDepths();
 		LOGGER.debug("Depth of terminology is {}", depth.intValue());
 		
 		
@@ -91,7 +81,7 @@ public class IndependanceScorer extends TerminologyEngine {
 				.filter(t -> t.getDepth() == depth.intValue())
 				.forEach(t -> {
 					final int frequency = t.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
-					getBases(terminology, t)
+					getBases(t)
 						.forEach(base -> {
 							int baseFrequency = base.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
 							baseFrequency -= frequency;
@@ -116,7 +106,7 @@ public class IndependanceScorer extends TerminologyEngine {
 
 	}
 
-	public AtomicInteger setDepths(TerminologyService terminology) {
+	public AtomicInteger setDepths() {
 		terminology
 			.terms()
 			.filter(t -> t.isSingleWord())
@@ -156,14 +146,14 @@ public class IndependanceScorer extends TerminologyEngine {
 		return currentDepth;
 	}
 	
-	public Set<Term> getBases(TerminologyService termino, Term term) {
+	public Set<Term> getBases(Term term) {
 		Set<Term> allBases = new java.util.HashSet<>(); 
 		
-		termino
+		terminology
 			.extensionBases(term)
 			.forEach(rel -> {
 				allBases.add(rel.getFrom());
-				allBases.addAll(getBases(termino, rel.getFrom()));
+				allBases.addAll(getBases(rel.getFrom()));
 			});
 		
 		return allBases;

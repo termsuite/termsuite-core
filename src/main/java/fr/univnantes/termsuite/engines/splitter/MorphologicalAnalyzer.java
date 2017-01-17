@@ -3,7 +3,6 @@ package fr.univnantes.termsuite.engines.splitter;
 import javax.inject.Inject;
 
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyPipeline;
 
 public class MorphologicalAnalyzer extends AggregateTerminologyEngine {
 
@@ -11,20 +10,20 @@ public class MorphologicalAnalyzer extends AggregateTerminologyEngine {
 	private MorphologicalOptions options;
 
 	@Override
-	public void configurePipeline(TerminologyPipeline pipeline) {
+	public void configure() {
 		if(options.isPrefixSplitterEnabled()) {
-			pipeline.pipeEngine(PrefixSplitter.class);
-			pipeline.pipeEngine(ManualPrefixSetter.class);
+			pipe(PrefixSplitter.class);
+			pipe(ManualPrefixSetter.class);
 		}
 		
-		pipeline.pipeEngine(ManualSplitter.class);
+		pipe(ManualSplitter.class);
 		
 		if(options.isDerivationDetecterEnabled()) {
-			pipeline.pipeEngine(SuffixDerivationDetecter.class);
-			pipeline.pipeEngine(ManualSuffixDerivationDetecter.class);
+			pipe(SuffixDerivationDetecter.class);
+			pipe(ManualSuffixDerivationDetecter.class);
 		}
 		
 		if(options.isNativeSplittingEnabled()) 
-			pipeline.pipeEngine(NativeSplitter.class, options);
+			pipe(NativeSplitter.class, options);
 	}
 }

@@ -5,9 +5,7 @@ import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -18,16 +16,16 @@ public class VariationFiltererByScore extends TerminologyEngine {
 	@Inject
 	private PostProcessorOptions config;
 
-	@Execute
-	public void filterVariations(TerminologyService termino) {
-		Set<TermRelation> remRelations = termino.variations()
+	@Override
+	public void execute() {
+		Set<TermRelation> remRelations = terminology.variations()
 				.filter(this::filterVariation)
 				.collect(Collectors.toSet());
 		remRelations
 			.stream()
-			.forEach(termino::removeRelation);
+			.forEach(terminology::removeRelation);
 		
-		TermPostProcessor.logVariationsAndTerms(termino);
+		TermPostProcessor.logVariationsAndTerms(terminology);
 	}
 
 	private boolean filterVariation(TermRelation relation) {

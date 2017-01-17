@@ -37,6 +37,7 @@ import org.junit.runners.Suite;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.api.TextCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -77,6 +78,8 @@ public class FunctionalTests {
 	public static final String CORPUS_WE_PATH="fr/univnantes/termsuite/test/corpus/we/";
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
+	public static final TextCorpus CORPUS1 = new TextCorpus(Lang.FR, CORPUS1_PATH);
+
 
 	private static Object getConfigProperty( String propName) {
 		InputStream is = FunctionalTests.class.getClassLoader().getResourceAsStream(FUNCTION_TESTS_CONFIG);
@@ -91,12 +94,16 @@ public class FunctionalTests {
 		}
 	}
 
+	public static TextCorpus getCorpusWE(Lang lang) {
+		return new TextCorpus(lang, getCorpusWEPath(lang));
+	}
+	
 	public static String getCorpusWEShortPath(Lang lang) {
 		return "src/test/resources/" + CORPUS_WESHORT_PATH + lang.getName().toLowerCase() + "/txt/";
 	}
 
-	public static String getCorpusWEPath(Lang lang) {
-		return "src/test/resources/" + CORPUS_WE_PATH + lang.getName().toLowerCase() + "/txt/";
+	public static Path getCorpusWEPath(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_WE_PATH, lang.getName().toLowerCase(), "txt");
 	}
 
 	public static String getTerminoWEShortPath(Lang lang) {

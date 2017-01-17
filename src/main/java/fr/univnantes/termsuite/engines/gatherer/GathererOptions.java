@@ -25,6 +25,13 @@ public class GathererOptions {
 
 	private Class<? extends EditDistance> graphicalEditDistance;
 
+	private int graphicalNbPrefixLetters = 2;
+
+	
+	public void setGraphicalNbPrefixLetters(int graphicalNbPrefixLetters) {
+		this.graphicalNbPrefixLetters = graphicalNbPrefixLetters;
+	}
+	
 	public boolean isSemanticGathererEnabled() {
 		return semanticGathererEnabled;
 	}
@@ -104,5 +111,9 @@ public class GathererOptions {
 	
 	public Class<? extends EditDistance> getGraphicalEditDistance() {
 		return graphicalEditDistance;
+	}
+
+	public int getGraphicalNbPrefixLetters() {
+		return graphicalNbPrefixLetters ;
 	}
 }

@@ -10,7 +10,6 @@ import fr.univnantes.termsuite.engines.postproc.TermRanker;
 import fr.univnantes.termsuite.engines.prepare.Preparator;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalAnalyzer;
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyPipeline;
 
 public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
 	
@@ -18,25 +17,24 @@ public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
 	private TerminologyExtractorOptions config;
 	
 	@Override
-	public void configurePipeline(TerminologyPipeline pipeline) {
-		pipeline.pipeEngine(Preparator.class);
+	public void configure() {
+		pipe(Preparator.class);
 		
 		if(config.isPreFilterEnabled()) 
-			pipeline.pipeEngine(TerminologyCleaner.class, config.getPreFilterConfig());
-		
+			pipe(TerminologyCleaner.class, config.getPreFilterConfig());
 
 		if(config.isMorphologicalAnalysisEnabled()) 
-			pipeline.pipeEngine(MorphologicalAnalyzer.class, config.getMorphologicalConfig());
+			pipe(MorphologicalAnalyzer.class, config.getMorphologicalConfig());
 		
 		if(config.isGathererEnabled()) 
-			pipeline.pipeEngine(TermGatherer.class, config.getGathererConfig());
+			pipe(TermGatherer.class, config.getGathererConfig());
 
 		if(config.isPostProcessorEnabled())
-			pipeline.pipeEngine(TermPostProcessor.class, config.getPostProcessorConfig());
+			pipe(TermPostProcessor.class, config.getPostProcessorConfig());
 		
 		if(config.isPostFilterEnabled()) 
-			pipeline.pipeEngine(TerminologyCleaner.class, config.getPostFilterConfig());
+			pipe(TerminologyCleaner.class, config.getPostFilterConfig());
 	
-		pipeline.pipeEngine(TermRanker.class, this.config.getRankingConfig());
+		pipe(TermRanker.class, this.config.getRankingConfig());
 	}
 }

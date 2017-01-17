@@ -8,9 +8,7 @@ import javax.inject.Inject;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 
 public class TermRanker extends TerminologyEngine {
@@ -18,16 +16,15 @@ public class TermRanker extends TerminologyEngine {
 	@Inject
 	private TermRankingOptions config = new TermRankingOptions();
 	
-	@Execute
-	public void rank(TerminologyService service) {
-		List<Term> ranked = Lists.newArrayList(service.getTerms());
+	@Override
+	public void execute() {
+		List<Term> ranked = Lists.newArrayList(terminology.getTerms());
 		Comparator<Term> comparator = config.getRankingProperty().getComparator(config.isDesc());
 		Collections.sort(ranked, comparator);
 		for(int index = 0; index < ranked.size(); index++) {
 			ranked.get(index).setRank(index + 1);
 			watch(ranked, index);
 		}
-
 	}
 
 	private void watch(List<Term> ranked, int index) {

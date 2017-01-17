@@ -29,7 +29,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
@@ -48,19 +47,17 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
+import fr.univnantes.termsuite.api.TermSuite;
+import fr.univnantes.termsuite.api.TerminologyExtractorOptions;
 import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermSuiteCollection;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
-import fr.univnantes.termsuite.test.unit.TestUtil;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.TermHistory;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public abstract class WindEnergySpec {
 
@@ -117,56 +114,26 @@ public abstract class WindEnergySpec {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
 
 	protected static Terminology runPipeline(Lang lang) throws IOException {
-		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		manager.clear();
-		
 		PreprocessingPipelineBuilder pipeline = null;
 		ClearTempFiles.main(new String[0]);
 		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
 		
-		
 		TermHistory history = TermHistory.create();
 		
-		String filePath = "/home/cram-d/tmp/wind-energy-" + lang.getCode();
-		TestUtil.deleteFile(filePath);
+		Terminology terminology = TermSuite.preprocessor()
+			.setTaggerPath(FunctionalTests.getTaggerPath())
+			.toTerminology(FunctionalTests.getCorpusWE(lang), true);
 		
-		if(!jsonFile.toFile().exists()) {
-			try(FileWriter writer = new FileWriter(jsonFile.toFile())) {
-				LOGGER.info("JSON temp file not found", jsonFile);
-				LOGGER.info("Reprocessing txt files for {}", jsonFile);
-				pipeline = PreprocessingPipelineBuilder.create(lang.getCode())
-					.setCollection(TermSuiteCollection.TXT, FunctionalTests.getCorpusWEPath(lang), "UTF-8")
-//					.setPersistentStore(filePath)
-					.setHistory(history)
-					.aeWordTokenizer()
-					.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-					.aeTreeTagger()
-					.aeUrlFilter()
-					.aeStemmer()
-					.aeRegexSpotter()
-					.aeTermOccAnnotationImporter();
-				
-			}
-		}
+		TermSuite.terminoExtractor()
+					.setOptions(new TerminologyExtractorOptions().setPostProcessorEnabled(false))
+					.execute(terminology);
 		
-			
-		pipeline
-			.aeStopWordsFilter()
-			.aeSpecificityComputer()
-			.aeMorphologicalAnalyzer()
-			.aeExtensionDetector()
-			.aeTermVariantGatherer(false)
-			.aeRanker(TermProperty.SPECIFICITY, true)
-			.run();
-
-		System.out.println(history);
-		
-		return pipeline.getTerminology();
+		return terminology;
 	}
 
 	@Test
 	public void weControlSyntacticMatchingRules() {
-		try(InputStream openStream = TermSuiteResource.VARIANTS.fromClasspath(lang).openStream()) {
+		try(InputStream openStream = ResourceType.VARIANTS.fromClasspath(lang).openStream()) {
 			@SuppressWarnings("unchecked")
 			Set<String> ruleNames = (Set<String>) ((Map<?, ?>)new Yaml().load(openStream)).keySet();
 			

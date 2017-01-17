@@ -34,7 +34,8 @@ public class ContextualizerSpec {
 	
 	@Test
 	public void computeContextVectorScope1() {
-		contextualizer.setOptions(new ContextualizerOptions().setScope(1)).contextualize(terminoService);
+		ContextualizerOptions options = new ContextualizerOptions().setScope(1);
+		contextualizer.setOptions(options).contextualize(terminoService);
 		
 		// T1 T2 T3 T1 T3 T3 T1
 

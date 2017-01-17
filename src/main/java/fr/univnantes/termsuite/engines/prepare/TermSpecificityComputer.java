@@ -23,13 +23,16 @@ package fr.univnantes.termsuite.engines.prepare;
 
 import java.util.Optional;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguage;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -37,22 +40,25 @@ import fr.univnantes.termsuite.utils.TermUtils;
 public class TermSpecificityComputer extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSpecificityComputer.class);
 
+	@Resource(type=ResourceType.GENERAL_LANGUAGE)
 	private GeneralLanguage generalLanguage;
 	
+	@Inject
 	private Optional<TermHistory> history = Optional.empty();
 	
-	public void run(TerminologyService terminologyService) {
+	@Override
+	public void execute() {
 		LOGGER.info("Computing specificities");
 		
-		if(terminologyService.getTerms().isEmpty())
+		if(terminology.getTerms().isEmpty())
 			return;
 		
 		//		double maxWR = 0.0;
-		for(Term term:terminologyService.getTerms()) {
+		for(Term term:terminology.getTerms()) {
 			double generalTermFrequency = (double)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
 			double normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
 			double termFrequency = term.getFrequency();
-			double normalizedTermFrequency = (1000 * termFrequency)/terminologyService.getWordAnnotationsNum();
+			double normalizedTermFrequency = (1000 * termFrequency)/terminology.getWordAnnotationsNum();
 			term.setFrequencyNorm(normalizedTermFrequency);
 			term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
 			TermUtils.setSpecificity(term);

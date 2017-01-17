@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 
 import com.google.inject.BindingAnnotation;
 
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 
 @BindingAnnotation @Target({ FIELD }) @Retention(RUNTIME)
 public @interface Resource {
-	TermSuiteResource type();
+	ResourceType type();
 }

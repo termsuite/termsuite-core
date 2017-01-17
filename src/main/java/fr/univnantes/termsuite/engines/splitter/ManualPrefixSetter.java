@@ -30,37 +30,35 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 
 public class ManualPrefixSetter extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ManualPrefixSetter.class);
 	
-	@Resource(type=TermSuiteResource.PREFIX_EXCEPTIONS)
+	@Resource(type=ResourceType.PREFIX_EXCEPTIONS)
 	private ManualSegmentationResource prefixExceptions;
 
 	
-	@Execute
-	public void setPrefixes(TerminologyService termino)  {
+	@Override
+	public void execute()  {
 		Segmentation segmentation;
-		for(Term swt:termino.getTerms()) {
+		for(Term swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			Word word = swt.getWords().get(0).getWord();
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					List<TermRelation> outboundRels = termino.outboundRelations(swt, RelationType.IS_PREFIX_OF).collect(toList());
+					List<TermRelation> outboundRels = terminology.outboundRelations(swt, RelationType.IS_PREFIX_OF).collect(toList());
 					for(TermRelation tv:outboundRels) {
-						termino.removeRelation(tv);
+						terminology.removeRelation(tv);
 						watch(swt, tv);
 					}
 				} else {

@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentMap;
 
+import javax.inject.Inject;
+
 import org.codehaus.groovy.runtime.InvokerInvocationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +34,7 @@ public class GroovyService {
 	private ConcurrentMap<VariantRule, GroovyObject> groovyRules = Maps.newConcurrentMap();
 	private GroovyHelper groovyHelper;
 	
+	@Inject
 	public GroovyService(Terminology termino) {
 		super();
 		this.groovyHelper = new GroovyHelper();

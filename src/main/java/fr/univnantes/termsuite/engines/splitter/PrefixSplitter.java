@@ -29,39 +29,37 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 
 public class PrefixSplitter extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PrefixSplitter.class);
 
-	@Resource(type=TermSuiteResource.PREFIX_BANK)
+	@Resource(type=ResourceType.PREFIX_BANK)
 	private PrefixTree prefixTree;
 	
 	private boolean checkIfMorphoExtensionInCorpus = true;
 
-	@Execute
-	public void splitPrefixes(TerminologyService termino) {
+	@Override
+	public void execute() {
 		LOGGER.info("Starting prefix splitting");
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
-		for(Term swt:termino.getTerms()) {
+		for(Term swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			else {
 				lemmaIndex.put(swt.getLemma(), swt);
 			}
 		}
-		for(Term swt:termino.getTerms()) {
+		for(Term swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 
@@ -80,7 +78,7 @@ public class PrefixSplitter extends TerminologyEngine {
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
 							watch(swt, target);
-							termino.addRelation(new TermRelation(
+							terminology.addRelation(new TermRelation(
 									RelationType.IS_PREFIX_OF,
 									swt, 
 									target
@@ -93,7 +91,7 @@ public class PrefixSplitter extends TerminologyEngine {
 		}
 		LOGGER.debug("Number of words with prefix composition: {} out of {}", 
 				nb, 
-				termino.wordCount());
+				terminology.wordCount());
 	}
 
 	private void watch(Term swt, Term target) {

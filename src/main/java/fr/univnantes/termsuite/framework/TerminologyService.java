@@ -11,6 +11,8 @@ import java.util.concurrent.Semaphore;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+import javax.inject.Inject;
+
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
@@ -28,13 +30,15 @@ import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 public class TerminologyService {
 
+	@Inject
 	private Terminology termino;
 
+	@Inject
 	public TerminologyService(Terminology termino) {
 		super();
 		this.termino = termino;
 	}
-	
+
 	public Stream<TermRelation> variations() {
 		return termino.getRelations(RelationType.VARIATION);
 	}

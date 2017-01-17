@@ -3,7 +3,6 @@ package fr.univnantes.termsuite.engines.prepare;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 
 /**
  * 
@@ -13,25 +12,13 @@ import fr.univnantes.termsuite.model.Terminology;
  *
  */
 public class CorpusWidePropertiesSetter extends TerminologyEngine {
-	public void set(Terminology index) {
-		for(Term t:index.getTerms()) {
-//			Multiset<String> texts = HashMultiset.create();
-//			Set<String> documentUrls = new HashSet<>();
-//			for(TermOccurrence occurrence : index.getOccurrenceStore().getOccurrences(t)) {
-//				texts.add(occurrence.getCoveredText());
-//				documentUrls.add(occurrence.getSourceDocument().getUrl());
-//			}
-//			String pilot = null;
-//			int maxCount = -1;
-//			for(String distinctText:texts.elementSet()) {
-//				if(texts.count(distinctText) > maxCount) {
-//					maxCount = texts.count(distinctText);
-//					pilot = distinctText;
-//				}
-//			}
-			String pilot = index.getOccurrenceStore().getMostFrequentForm(t);
+	
+	@Override
+	public void execute() {
+		for(Term t:terminology.getTerms()) {
+			String pilot = terminology.getOccurrenceStore().getMostFrequentForm(t);
 			t.setPilot(pilot == null ? t.getGroupingKey() : pilot);
-			t.setDocumentFrequency(index.getOccurrenceStore().getDocuments(t).size());
+			t.setDocumentFrequency(terminology.getOccurrenceStore().getDocuments(t).size());
 		}
 	}
 }

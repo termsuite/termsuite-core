@@ -23,23 +23,21 @@
 
 package fr.univnantes.termsuite.engines.splitter;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 
 public class ManualSplitter  extends TerminologyEngine {
 	
-	@Resource(type=TermSuiteResource.MANUAL_COMPOSITIONS)
+	@Resource(type=ResourceType.MANUAL_COMPOSITIONS)
 	private ManualSegmentationResource manualCompositions;
 	
-	@Execute
-	public void split(TerminologyService termino) {
+	@Override
+	public void execute() {
 		Segmentation segmentation;
-		for(Word word:termino.getWords()) {
+		for(Word word:terminology.getWords()) {
 			segmentation = manualCompositions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1)

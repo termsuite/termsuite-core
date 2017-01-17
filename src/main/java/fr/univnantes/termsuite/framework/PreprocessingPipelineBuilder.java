@@ -62,7 +62,7 @@ import fr.univnantes.termsuite.uima.PipelineListenerAE;
 import fr.univnantes.termsuite.uima.PipelineResourceMgrs;
 import fr.univnantes.termsuite.uima.PreparationPipelineException;
 import fr.univnantes.termsuite.uima.PreparationPipelineOptions;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.engines.preproc.CasStatCounter;
 import fr.univnantes.termsuite.uima.engines.preproc.FixedExpressionSpotter;
 import fr.univnantes.termsuite.uima.engines.preproc.MateLemmaFixer;
@@ -261,7 +261,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class,
-					getResUrl(TermSuiteResource.SEGMENT_BANK)
+					getResUrl(ResourceType.SEGMENT_BANK)
 				);
 			
 
@@ -296,7 +296,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription ttParam = ExternalResourceFactory.createExternalResourceDescription(
 					TreeTaggerParameter.class,
-					getResUrl(TermSuiteResource.TREETAGGER_CONFIG, Tagger.TREE_TAGGER)
+					getResUrl(ResourceType.TREETAGGER_CONFIG, Tagger.TREE_TAGGER)
 				);
 			
 			ExternalResourceFactory.bindResource(
@@ -315,7 +315,7 @@ public class PreprocessingPipelineBuilder {
 	/*
 	 * Builds the resource url for this pipeline
 	 */
-	private URL getResUrl(TermSuiteResource tsResource, Tagger tagger) {
+	private URL getResUrl(ResourceType tsResource, Tagger tagger) {
 		if(!resourceUrlPrefix.isPresent())
 			return tsResource.fromClasspath(lang, tagger);
 		else
@@ -327,7 +327,7 @@ public class PreprocessingPipelineBuilder {
 	/*
 	 * Builds the resource url for this pipeline	 * 
 	 */
-	private URL getResUrl(TermSuiteResource tsResource) {
+	private URL getResUrl(ResourceType tsResource) {
 		if(!resourceUrlPrefix.isPresent()) {
 			URL fromClasspath = tsResource.fromClasspath(lang);
 			return fromClasspath;
@@ -410,46 +410,46 @@ public class PreprocessingPipelineBuilder {
 	private PreprocessingPipelineBuilder caseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:case", 
-				getResUrl(TermSuiteResource.TAGGER_CASE_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_CASE_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder categoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:category", 
-				getResUrl(TermSuiteResource.TAGGER_CATEGORY_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_CATEGORY_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder tenseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:tense", 
-				getResUrl(TermSuiteResource.TAGGER_TENSE_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_TENSE_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder subCategoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:subCategory", 
-				getResUrl(TermSuiteResource.TAGGER_SUBCATEGORY_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_SUBCATEGORY_MAPPING, tagger));
 	}
 
 	
 	private PreprocessingPipelineBuilder moodNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:mood", 
-				getResUrl(TermSuiteResource.TAGGER_MOOD_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_MOOD_MAPPING, tagger));
 	}
 
 	
 	private PreprocessingPipelineBuilder numberNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:number", 
-				getResUrl(TermSuiteResource.TAGGER_NUMBER_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_NUMBER_MAPPING, tagger));
 	}
 
 	
 	private PreprocessingPipelineBuilder genderNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:gender", 
-				getResUrl(TermSuiteResource.TAGGER_GENDER_MAPPING, tagger));
+				getResUrl(ResourceType.TAGGER_GENDER_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder mateNormalizer()  {
@@ -568,7 +568,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription fixedExprRes = ExternalResourceFactory.createExternalResourceDescription(
 					FixedExpressionResource.class, 
-					getResUrl(TermSuiteResource.FIXED_EXPRESSIONS));
+					getResUrl(ResourceType.FIXED_EXPRESSIONS));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
@@ -604,7 +604,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription mwtRules = ExternalResourceFactory.createExternalResourceDescription(
 					RegexListResource.class, 
-					getResUrl(TermSuiteResource.MWT_RULES));
+					getResUrl(ResourceType.MWT_RULES));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
@@ -614,7 +614,7 @@ public class PreprocessingPipelineBuilder {
 
 			ExternalResourceDescription allowedCharsRes = ExternalResourceFactory.createExternalResourceDescription(
 					CharacterFootprintTermFilter.class, 
-					getResUrl(TermSuiteResource.ALLOWED_CHARS));
+					getResUrl(ResourceType.ALLOWED_CHARS));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
@@ -624,7 +624,7 @@ public class PreprocessingPipelineBuilder {
 
 			ExternalResourceDescription stopWordsRes = ExternalResourceFactory.createExternalResourceDescription(
 					DefaultFilterResource.class, 
-					getResUrl(TermSuiteResource.STOP_WORDS_FILTER));
+					getResUrl(ResourceType.STOP_WORDS_FILTER));
 			
 			ExternalResourceFactory.bindResource(
 					ae,

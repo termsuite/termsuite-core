@@ -39,7 +39,6 @@ import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class GraphicalVariantGathererSpec {
 	
@@ -60,10 +59,7 @@ public class GraphicalVariantGathererSpec {
 	
 	
 	private Terminology termino() {
-		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		manager.clear();
 		Terminology termino = Fixtures.emptyTermino();
-		manager.register(termino.getName(), termino);
 		TermFactory termFactory = new TermFactory(termino);
 		tetetete = termFactory.create("N:tetetete|tetetete");
 		tetetete.setSpecificity(1d);

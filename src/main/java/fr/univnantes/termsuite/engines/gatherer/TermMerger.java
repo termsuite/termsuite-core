@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermOccurrence;
@@ -25,21 +24,17 @@ public class TermMerger extends TerminologyEngine {
 
 	private Optional<TermHistory> history = Optional.empty();
 
-	
 	public TermMerger setHistory(TermHistory history) {
 		this.history = Optional.ofNullable(history);
 		return this;
 	}
-	
-	public void mergeTerms(TerminologyService termino) {
-		mergeGraphicalVariants(termino);
-	}
 
-	private void mergeGraphicalVariants(TerminologyService termino) {
+	@Override
+	public void execute() {
 		LOGGER.info("Merging graphical variations");
 		final MutableInt nbMerged = new MutableInt(0);
 		
-		List<TermRelation> relationsToMerge = termino.variations()
+		List<TermRelation> relationsToMerge = terminology.variations()
 			.filter(rel -> rel.isPropertySet(RelationProperty.IS_GRAPHICAL)
 							&& rel.isPropertySet(RelationProperty.IS_PREXATION)
 							&& rel.isPropertySet(RelationProperty.IS_DERIVATION)
@@ -73,7 +68,7 @@ public class TermMerger extends TerminologyEngine {
 				LOGGER.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
 				watch(rel);
 				
-				OccurrenceStore occStore = termino.getTerminology().getOccurrenceStore();
+				OccurrenceStore occStore = terminology.getTerminology().getOccurrenceStore();
 				Collection<TermOccurrence> occurrences = occStore.getOccurrences(rel.getTo());
 				for(TermOccurrence o2:occurrences)
 					occStore.addOccurrence(rel.getFrom(), o2.getSourceDocument().getUrl(), o2.getBegin(), o2.getEnd(), o2.getCoveredText());
@@ -83,7 +78,7 @@ public class TermMerger extends TerminologyEngine {
 				TermUtils.setSpecificity(rel.getFrom());
 				TermUtils.setTfIdf(rel.getFrom());
 
-				termino.removeTerm(rel.getTo());
+				terminology.removeTerm(rel.getTo());
 				
 				nbMerged.increment();
 			});
@@ -91,8 +86,8 @@ public class TermMerger extends TerminologyEngine {
 		if(LOGGER.isDebugEnabled()) {
 			LOGGER.debug("Nb merges operated: {}", nbMerged);
 			LOGGER.debug("Number of terms in termino: {}, Number of variations in termino: {}", 
-					termino.termCount(),
-					termino.variations().count());
+					terminology.termCount(),
+					terminology.variations().count());
 		}
 	}
 

@@ -4,15 +4,13 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import javax.inject.Inject;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.framework.Execute;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -21,13 +19,15 @@ import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
-public class GraphicalGatherer extends VariationTypeGatherer {
+public class GraphicalGatherer extends TerminologyEngine {
 	
 	private EditDistance distance = new FastDiacriticInsensitiveLevenshtein(false);
 	
 	@Inject
 	private GathererOptions options;
 	
+	protected String indexName;
+
 	/*
 	 * Gives the direction of the graphical relation between two terms.
 	 *  
@@ -49,51 +49,45 @@ public class GraphicalGatherer extends VariationTypeGatherer {
 		}
 	}
 	
-	public GraphicalGatherer() {
-		super();
-		setNbFixedLetters(2);
-		this.dropIndexAtEnd = true;
-	}
-
-	
-	public GraphicalGatherer setNbFixedLetters(int nbFixedLetters) {
-		switch(nbFixedLetters){
+	private GraphicalGatherer setNbFixedLetters() {
+		switch(options.getGraphicalNbPrefixLetters()){
 		case 1:
-			this.indexName = Optional.of(TermIndexes.FIRST_LETTERS_1);
+			this.indexName = TermIndexes.FIRST_LETTERS_1;
 			break;
 		case 2:
-			this.indexName = Optional.of(TermIndexes.FIRST_LETTERS_2);
+			this.indexName = TermIndexes.FIRST_LETTERS_2;
 			break;
 		case 3:
-			this.indexName = Optional.of(TermIndexes.FIRST_LETTERS_3);
+			this.indexName = TermIndexes.FIRST_LETTERS_3;
 			break;
 		case 4:
-			this.indexName = Optional.of(TermIndexes.FIRST_LETTERS_4);
+			this.indexName = TermIndexes.FIRST_LETTERS_4;
 			break;
 		default:
-			throw new IllegalArgumentException("Bad value for number of letters for a n-first-letters index: " + nbFixedLetters);
+			throw new IllegalArgumentException("Bad value for number of letters for a n-first-letters index: " + options.getGraphicalNbPrefixLetters());
 		}
 		return this;
 	}
 
-	@Execute
-	private void gather(TerminologyService termino) {
+	@Override
+	public void execute() {
 		getLogger().info("Gathering graphical variants");
+		setNbFixedLetters();
 		AtomicLong comparisonCounter = new AtomicLong(0);
-		CustomTermIndex index = termino.getTerminology().getCustomIndex(indexName.get());
+		CustomTermIndex index = terminology.getTerminology().getCustomIndex(indexName);
 		index.cleanSingletonKeys();
 		index.keySet().stream()
 			.parallel()
 			.forEach(key -> {
 				Collection<Term> terms = index.getTerms(key);
-				gather(termino, terms, key, comparisonCounter);
+				gather(terms, key, comparisonCounter);
 			});
-		termino.getTerminology().dropCustomIndex(indexName.get());
-		setIsGraphicalVariantProperties(termino);
+		terminology.getTerminology().dropCustomIndex(indexName);
+		setIsGraphicalVariantProperties();
 		getLogger().debug("Number of graphical comparison computed: {}", comparisonCounter.longValue());
 	}
 	
-	protected void gather(TerminologyService termino, Collection<Term> termClass, String clsName, AtomicLong comparisonCounter) {
+	protected void gather(Collection<Term> termClass, String clsName, AtomicLong comparisonCounter) {
 		GraphicalDirection ordering = new GraphicalDirection();
 		List<Term> terms = termClass.getClass().isAssignableFrom(List.class) ? 
 				(List<Term>) termClass
@@ -110,15 +104,15 @@ public class GraphicalGatherer extends VariationTypeGatherer {
 				if(dist >= this.options.getGraphicalSimilarityThreshold()) {
 					List<Term> pair = Lists.newArrayList(t1, t2);
 					Collections.sort(pair, ordering);
-					createGraphicalRelation(termino, pair.get(0), pair.get(1), dist);
+					createGraphicalRelation(pair.get(0), pair.get(1), dist);
 					
 				}
 			}
 		}
 	}
 	
-	protected TermRelation createGraphicalRelation(TerminologyService termino, Term from, Term to, Double similarity) {
-		TermRelation rel = termino.createVariation(VariationType.GRAPHICAL, from, to);
+	protected TermRelation createGraphicalRelation(Term from, Term to, Double similarity) {
+		TermRelation rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
 		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 		watch(from, to, similarity);
 		return rel;
@@ -139,8 +133,8 @@ public class GraphicalGatherer extends VariationTypeGatherer {
 		}
 	}
 
-	private void setIsGraphicalVariantProperties(TerminologyService termino) {
-		termino.variations()
+	private void setIsGraphicalVariantProperties() {
+		terminology.variations()
 		.filter(r -> r.isPropertySet(RelationProperty.IS_GRAPHICAL) 
 				&& !r.getPropertyBooleanValue(RelationProperty.IS_GRAPHICAL))
 		.forEach(r -> {

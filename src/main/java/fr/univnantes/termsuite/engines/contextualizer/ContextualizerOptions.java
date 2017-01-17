@@ -9,7 +9,7 @@ import fr.univnantes.termsuite.model.OccurrenceType;
 public class ContextualizerOptions {
 
 	private int scope = 3;
-	private int minimumCooccFrequencyThreshold = 1;
+	private int minimumCooccFrequencyThreshold = 2;
 	private OccurrenceType coTermType = OccurrenceType.SINGLE_WORD;
 	private Class<? extends AssociationRate> associationRate = LogLikelihood.class;
 

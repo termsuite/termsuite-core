@@ -5,9 +5,7 @@ import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
@@ -18,16 +16,16 @@ public class TermFiltererByScore extends TerminologyEngine {
 	@Inject
 	private PostProcessorOptions config;
 
-	@Execute
-	public void filterTermsByScores(TerminologyService termino) {
-		Set<Term> remTerms = termino.getTerms().stream()
+	@Override
+	public void execute() {
+		Set<Term> remTerms = terminology.getTerms().stream()
 			.filter(this::filterTermByThresholds)
 			.collect(Collectors.toSet());
 		remTerms
 			.parallelStream()
-			.forEach(termino::removeTerm);
+			.forEach(terminology::removeTerm);
 		
-		TermPostProcessor.logVariationsAndTerms(termino);
+		TermPostProcessor.logVariationsAndTerms(terminology);
 	}
 
 	private boolean filterTermByThresholds(Term term) {

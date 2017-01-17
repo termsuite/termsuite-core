@@ -28,10 +28,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.framework.Execute;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -40,7 +38,7 @@ import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.SuffixDerivation;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 
 public class SuffixDerivationDetecter extends TerminologyEngine {
@@ -48,19 +46,19 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 
 	private static final String LEMMA_INDEX = "LemmaIndex";
 
-	@Resource(type=TermSuiteResource.SUFFIX_DERIVATIONS)
+	@Resource(type=ResourceType.SUFFIX_DERIVATIONS)
 	private SuffixDerivationList suffixDerivationList;
 	
-	@Execute
-	public void detectDerivations(TerminologyService termino) {
+	@Override
+	public void execute() {
 		LOGGER.info("Detecting suffix derivations for termino");
-		CustomTermIndex lemmaIndex = termino.getTerminology().createCustomIndex(
+		CustomTermIndex lemmaIndex = terminology.getTerminology().createCustomIndex(
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 		
 		int nbDerivations = 0, nbSwt = 0;
 		TermWord candidateDerivateTermWord, baseTermWord;
-		for(Term swt:termino.getTerms()) {
+		for(Term swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			nbSwt++;
@@ -77,7 +75,7 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
 							TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, baseTerm, swt);
 							relation.setProperty(RelationProperty.DERIVATION_TYPE, suffixDerivation.getType());
-							termino.addRelation(relation);
+							terminology.addRelation(relation);
 							watch(swt, baseTerm);
 						}
 					}
@@ -85,7 +83,7 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 			}
 		}
 		
-		termino.getTerminology().dropCustomIndex(LEMMA_INDEX);
+		terminology.getTerminology().dropCustomIndex(LEMMA_INDEX);
 		
 		LOGGER.debug("Number of derivations found: {} out of {} SWTs", 
 				nbDerivations, 

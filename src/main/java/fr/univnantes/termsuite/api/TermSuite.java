@@ -3,7 +3,9 @@ package fr.univnantes.termsuite.api;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.framework.EngineDescription;
 import fr.univnantes.termsuite.framework.TermSuiteModule;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Terminology;
@@ -22,8 +24,7 @@ public class TermSuite {
 	}
 
 	public static TerminoExtractor terminoExtractor() {
-		Injector injector = Guice.createInjector(new TermSuiteModule());
-		return injector.getInstance(TerminoExtractor.class);
+		return new TerminoExtractor();
 	}
 
 	public static Preprocessor preprocessor() {
@@ -38,5 +39,11 @@ public class TermSuite {
 		OccurrenceStore store = new XodusOccurrenceStore(lang, storeUrl);
 		return new MemoryTerminology(name, lang, store);
 
+	}
+
+	public static EngineDescription createEngineDescription(
+			Class<? extends TerminologyEngine> engineClass,
+			Object... parameters) {
+		return new EngineDescription(engineClass, parameters);
 	}
 }

@@ -35,10 +35,26 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.lina.uima.models.TreeTaggerParameter;
+import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
+import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
+import fr.univnantes.termsuite.uima.resources.preproc.CharacterFootprintTermFilter;
+import fr.univnantes.termsuite.uima.resources.preproc.FixedExpressionResource;
+import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
+import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
+import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
+import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
+import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
+import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 import fr.univnantes.termsuite.utils.URLUtils;
+import uima.sandbox.filter.resources.DefaultFilterResource;
+import uima.sandbox.lexer.resources.SegmentBankResource;
+import uima.sandbox.mapper.resources.Mapping;
+import uima.sandbox.mapper.resources.MappingResource;
 
 /**
  * 
@@ -47,47 +63,49 @@ import fr.univnantes.termsuite.utils.URLUtils;
  * @author Damien Cram
  *
  */
-public enum TermSuiteResource {
-	GENERAL_LANGUAGE("[LANG_SHORT]/[LANG]-general-language.txt", "", ""),
-	SYNONYMS("[LANG_SHORT]/[LANG]-synonyms.txt", "", ""),
-	PREFIX_BANK("[LANG_SHORT]/morphology/[LANG]-prefix-bank.txt", "", ""),
-	PREFIX_EXCEPTIONS("[LANG_SHORT]/morphology/[LANG]-prefix-exceptions.txt", "", ""),
-	MANUAL_COMPOSITIONS("[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),
-	ROOT_BANK("[LANG_SHORT]/morphology/[LANG]-root-bank.txt", "", ""),
-	ALLOWED_CHARS("[LANG_SHORT]/[LANG]-allowed-chars.txt", "", ""),
-	SUFFIX_DERIVATIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivation-bank.txt", "", ""),
-	SUFFIX_DERIVATION_EXCEPTIONS("[LANG_SHORT]/morphology/[LANG]-suffix-derivation-exceptions.txt", "", ""),
-	COMPOST_INFLECTION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-inflection-rules.txt", "", ""),
-	COMPOST_STOP_LIST("[LANG_SHORT]/morphology/[LANG]-compost-stop-list.txt", "", ""),
-	COMPOST_TRANSFORMATION_RULES("[LANG_SHORT]/morphology/[LANG]-compost-transformation-rules.txt", "", ""),
-	DICO("[LANG_SHORT]/[LANG]-dico.txt", "", ""),
-	FIXED_EXPRESSIONS("[LANG_SHORT]/[LANG]-fixed-expressions.txt", "", ""),
-	TAGGER_CASE_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-case-mapping.xml", "", ""),
-	TAGGER_CATEGORY_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-category-mapping.xml", "", ""),
-	TAGGER_GENDER_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-gender-mapping.xml", "", ""),
-	TAGGER_MOOD_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-mood-mapping.xml", "", ""),
-	TAGGER_NUMBER_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-number-mapping.xml", "", ""),
-	TAGGER_SUBCATEGORY_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-subcategory-mapping.xml", "", ""),
-	TAGGER_TENSE_MAPPING("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-tense-mapping.xml", "", ""),
-	MWT_RULES("[LANG_SHORT]/[LANG]-multi-word-rule-system.regex", "", ""),
-	NEOCLASSICAL_PREFIXES("[LANG_SHORT]/morphology/[LANG]-neoclassical-prefixes.txt", "", ""),
-	SEGMENT_BANK("[LANG_SHORT]/[LANG]-segment-bank.xml", "", ""),
-	STOP_WORDS_FILTER("[LANG_SHORT]/[LANG]-stop-word-filter.xml", "", ""),
-	TREETAGGER_CONFIG("[LANG_SHORT]/tagging/[TAGGER]/[LANG]-treetagger.xml", "", ""),
-	VARIANTS("[LANG_SHORT]/[LANG]-variants.yaml", "", ""), 
+public enum ResourceType {
+	GENERAL_LANGUAGE(GeneralLanguageResource.class, "[LANG_SHORT]/[LANG]-general-language.txt", "", ""),
+	SYNONYMS(MultimapFlatResource.class, "[LANG_SHORT]/[LANG]-synonyms.txt", "", ""),
+	PREFIX_BANK(PrefixTree.class, "[LANG_SHORT]/morphology/[LANG]-prefix-bank.txt", "", ""),
+	PREFIX_EXCEPTIONS(ManualSegmentationResource.class, "[LANG_SHORT]/morphology/[LANG]-prefix-exceptions.txt", "", ""),
+	MANUAL_COMPOSITIONS(ManualSegmentationResource.class, "[LANG_SHORT]/morphology/[LANG]-manual-composition.txt", "", ""),
+	@Deprecated 
+	ROOT_BANK(Object.class, "[LANG_SHORT]/morphology/[LANG]-root-bank.txt", "", ""),
+	ALLOWED_CHARS(CharacterFootprintTermFilter.class, "[LANG_SHORT]/[LANG]-allowed-chars.txt", "", ""),
+	SUFFIX_DERIVATIONS(SuffixDerivationList.class, "[LANG_SHORT]/morphology/[LANG]-suffix-derivation-bank.txt", "", ""),
+	SUFFIX_DERIVATION_EXCEPTIONS(MultimapFlatResource.class, "[LANG_SHORT]/morphology/[LANG]-suffix-derivation-exceptions.txt", "", ""),
+	COMPOST_INFLECTION_RULES(CompostInflectionRules.class, "[LANG_SHORT]/morphology/[LANG]-compost-inflection-rules.txt", "", ""),
+	COMPOST_STOP_LIST(SimpleWordSet.class, "[LANG_SHORT]/morphology/[LANG]-compost-stop-list.txt", "", ""),
+	COMPOST_TRANSFORMATION_RULES(CompostInflectionRules.class, "[LANG_SHORT]/morphology/[LANG]-compost-transformation-rules.txt", "", ""),
+	DICO(SimpleWordSet.class, "[LANG_SHORT]/[LANG]-dico.txt", "", ""),
+	FIXED_EXPRESSIONS(FixedExpressionResource.class, "[LANG_SHORT]/[LANG]-fixed-expressions.txt", "", ""),
+	TAGGER_CASE_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-case-mapping.xml", "", ""),
+	TAGGER_CATEGORY_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-category-mapping.xml", "", ""),
+	TAGGER_GENDER_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-gender-mapping.xml", "", ""),
+	TAGGER_MOOD_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-mood-mapping.xml", "", ""),
+	TAGGER_NUMBER_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-number-mapping.xml", "", ""),
+	TAGGER_SUBCATEGORY_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-subcategory-mapping.xml", "", ""),
+	TAGGER_TENSE_MAPPING(MappingResource.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-[TAGGER_SHORT]-tense-mapping.xml", "", ""),
+	MWT_RULES(RegexListResource.class, "[LANG_SHORT]/[LANG]-multi-word-rule-system.regex", "", ""),
+	NEOCLASSICAL_PREFIXES(SimpleWordSet.class, "[LANG_SHORT]/morphology/[LANG]-neoclassical-prefixes.txt", "", ""),
+	SEGMENT_BANK(SegmentBankResource.class, "[LANG_SHORT]/[LANG]-segment-bank.xml", "", ""),
+	STOP_WORDS_FILTER(DefaultFilterResource.class, "[LANG_SHORT]/[LANG]-stop-word-filter.xml", "", ""),
+	TREETAGGER_CONFIG(TreeTaggerParameter.class, "[LANG_SHORT]/tagging/[TAGGER]/[LANG]-treetagger.xml", "", ""),
+	VARIANTS(YamlRuleSet.class, "[LANG_SHORT]/[LANG]-variants.yaml", "", ""), 
 	;
 	
 	private static final String MSG_ERR_RESOURCE_NOT_FOUND = "Resource %s does not exist for resource %s (resolved URL is %s)";
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteResource.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ResourceType.class);
 
-	
+	private Class<?> resourceClass;
 	private String pathPattern;
 	private String title;
 	private String description;
 
 	
-	private TermSuiteResource(String pathPattern, String title, String description) {
+	private ResourceType(Class<?> resourceClass, String pathPattern, String title, String description) {
+		this.resourceClass = resourceClass;
 		this.pathPattern = pathPattern;
 		this.title = title;
 		this.description = description;
@@ -127,7 +145,7 @@ public enum TermSuiteResource {
 	private static RelativePathResolver resolver = null;
 	private static RelativePathResolver getResolver() {
 		if(resolver == null)
-			resolver = new RelativePathResolver_impl(TermSuiteResource.class.getClassLoader()); 
+			resolver = new RelativePathResolver_impl(ResourceType.class.getClassLoader()); 
 		return resolver;
 	}
 	
@@ -207,15 +225,19 @@ public enum TermSuiteResource {
 	} 
 	
 	
-	public static final TermSuiteResource forFileName(String fileName) {
+	public static final ResourceType forFileName(String fileName) {
 		for(Lang l:Lang.values()) {
 			for(Tagger t:Tagger.values()) {
-				for(TermSuiteResource r:TermSuiteResource.values())
+				for(ResourceType r:ResourceType.values())
 					if(r.getPath(l, t).equals(fileName))
 						return r;
 			}
 		}
 		return null;
+	}
+
+	public Class<?> getResourceClass() {
+		return resourceClass;
 	}
 	
 	
