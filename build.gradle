@@ -219,7 +219,8 @@ dependencies {
 	compile "ch.qos.logback:logback-classic:1.1.7"
 
 	// Json
-	compile "com.fasterxml.jackson.core:jackson-databind:2.8.2"
+	compile "com.fasterxml.jackson.core:jackson-databind:2.8.6"
+	compile "com.fasterxml.jackson.core:jackson-annotations:2.8.6"
 
 	// Xodus
 	compile 'org.jetbrains.xodus:xodus-entity-store:1.0.2'

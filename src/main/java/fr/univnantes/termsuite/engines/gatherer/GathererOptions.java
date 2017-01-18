@@ -1,39 +1,27 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
-import fr.univnantes.termsuite.framework.ConfigurationObject;
-import fr.univnantes.termsuite.metrics.EditDistance;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@ConfigurationObject
-public class GathererOptions {
-	private boolean semanticGathererEnabled = false;
+public class GathererOptions  {
+	@JsonProperty("semantic-enabled")
+	private boolean semanticEnabled = false;
 	
-	private boolean derivationGathererEnabled = true;
+	@JsonProperty("graphical-enabled")
+	private boolean graphicalEnabled = true;
 	
-	private boolean prefixationGathererEnabled = true;
-	
-	private boolean morphologicalGathererEnabled = true;
+	@JsonProperty("similarity-th")
+	private double graphicalSimilarityThreshold = 1d;
 
-	private boolean graphicalGathererEnabled = true;
-	
 	// gathering is polynomial within a class
+	@JsonProperty("max-class-size")
 	private int maxClassSize = 2000;
 	
 	// 10 millions
+	@JsonProperty("max-num-comparisons")
 	private int maxNumberOfComparisons = 1000000;
 	
-	private double graphicalSimilarityThreshold = 1d;
-
-	private Class<? extends EditDistance> graphicalEditDistance;
-
-	private int graphicalNbPrefixLetters = 2;
-
-	
-	public void setGraphicalNbPrefixLetters(int graphicalNbPrefixLetters) {
-		this.graphicalNbPrefixLetters = graphicalNbPrefixLetters;
-	}
-	
-	public boolean isSemanticGathererEnabled() {
-		return semanticGathererEnabled;
+	public boolean isSemanticEnabled() {
+		return semanticEnabled;
 	}
 
 	public GathererOptions setGraphicalSimilarityThreshold(double graphicalSimilarityThreshold) {
@@ -45,35 +33,8 @@ public class GathererOptions {
 		return graphicalSimilarityThreshold;
 	}
 	
-	public GathererOptions setSemanticGathererEnabled(boolean semanticGathererEnabled) {
-		this.semanticGathererEnabled = semanticGathererEnabled;
-		return this;
-	}
-
-	public boolean isDerivationGathererEnabled() {
-		return derivationGathererEnabled;
-	}
-
-	public GathererOptions setDerivationGathererEnabled(boolean derivationGathererEnabled) {
-		this.derivationGathererEnabled = derivationGathererEnabled;
-		return this;
-	}
-
-	public boolean isPrefixationGathererEnabled() {
-		return prefixationGathererEnabled;
-	}
-
-	public GathererOptions setPrefixationGathererEnabled(boolean prefixationGathererEnabled) {
-		this.prefixationGathererEnabled = prefixationGathererEnabled;
-		return this;
-	}
-
-	public boolean isMorphologicalGathererEnabled() {
-		return morphologicalGathererEnabled;
-	}
-
-	public GathererOptions setMorphologicalGathererEnabled(boolean morphologicalGathererEnabled) {
-		this.morphologicalGathererEnabled = morphologicalGathererEnabled;
+	public GathererOptions setSemanticEnabled(boolean semanticGathererEnabled) {
+		this.semanticEnabled = semanticGathererEnabled;
 		return this;
 	}
 
@@ -95,25 +56,12 @@ public class GathererOptions {
 		return this;
 	}
 	
-	public GathererOptions setGraphicalGathererEnabled(boolean graphicalGathererEnabled) {
-		this.graphicalGathererEnabled = graphicalGathererEnabled;
+	public GathererOptions setGraphicalEnabled(boolean graphicalGathererEnabled) {
+		this.graphicalEnabled = graphicalGathererEnabled;
 		return this;
 	}
 	
-	public boolean isGraphicalGathererEnabled() {
-		return graphicalGathererEnabled;
-	}
-	
-	public GathererOptions setGraphicalEditDistance(Class<? extends EditDistance> editDistance) {
-		this.graphicalEditDistance = editDistance;
-		return this;
-	}
-	
-	public Class<? extends EditDistance> getGraphicalEditDistance() {
-		return graphicalEditDistance;
-	}
-
-	public int getGraphicalNbPrefixLetters() {
-		return graphicalNbPrefixLetters ;
+	public boolean isGraphicalEnabled() {
+		return graphicalEnabled;
 	}
 }

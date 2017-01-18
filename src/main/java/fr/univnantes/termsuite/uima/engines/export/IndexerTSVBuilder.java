@@ -50,7 +50,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;

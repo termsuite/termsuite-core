@@ -9,8 +9,6 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
 
-import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
-
 public abstract class AggregateTerminologyEngine extends TerminologyEngine {
 
 	public abstract void configure();

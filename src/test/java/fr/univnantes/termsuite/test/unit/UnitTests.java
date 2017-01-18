@@ -24,7 +24,9 @@ package fr.univnantes.termsuite.test.unit;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import fr.univnantes.termsuite.api.ExtractorConfigIO;
 import fr.univnantes.termsuite.test.termino.export.TsvExporterSpec;
+import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
 import fr.univnantes.termsuite.test.unit.api.TraverserSpec;
 import fr.univnantes.termsuite.test.unit.engines.ContextualizerSpec;
 import fr.univnantes.termsuite.test.unit.engines.FixedExpressionSpotterSpec;
@@ -94,6 +96,7 @@ import fr.univnantes.termsuite.utils.test.CompoundUtilsSpec;
 	LevenshteinSpec.class,
 	FastDiacriticInsensitiveLevenshteinSpec.class,
 	MemoryTerminologySpec.class,
+	ExtractorConfigIOSpec.class,
 	TermSuitePipelineSpec.class
 //	TeiCollectionReaderSpec.class,
 	})

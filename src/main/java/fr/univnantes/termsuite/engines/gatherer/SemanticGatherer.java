@@ -16,7 +16,7 @@ import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;

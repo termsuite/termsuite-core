@@ -1,21 +1,34 @@
 package fr.univnantes.termsuite.engines.cleaner;
 
-import fr.univnantes.termsuite.framework.ConfigurationObject;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import fr.univnantes.termsuite.model.TermProperty;
 
-@ConfigurationObject
-public class TerminoFilterOptions {
-
+public class TerminoFilterOptions  {
 	public static enum FilterType{THRESHOLD, TOP_N};
-	private FilterType filterType = FilterType.THRESHOLD;
-	private TermProperty filterProperty = TermProperty.FREQUENCY;
-	private int topN = 500;
-	private Number threshold = 2.0;
-	private boolean keepVariants = false;
-	private int maxNumberOfVariants = 25;
 
-	public int getMaxNumberOfVariants() {
-		return maxNumberOfVariants;
+	private boolean enabled;
+	
+	@JsonProperty("type")
+	private FilterType filterType = FilterType.THRESHOLD;
+	
+	@JsonProperty("property")
+	private TermProperty filterProperty = TermProperty.FREQUENCY;
+
+	@JsonProperty("top-n")
+	private int topN = 500;
+
+	@JsonProperty("threshold")
+	private Number threshold = 2.0;
+	
+	@JsonProperty("keep-variants")
+	private boolean keepVariants = false;
+	
+	@JsonProperty("max-variant-num")
+	private int maxVariantNum = 25;
+
+	public int getMaxVariantNum() {
+		return maxVariantNum;
 	}
 	
 	public TerminoFilterOptions() {
@@ -33,8 +46,8 @@ public class TerminoFilterOptions {
 		return this;
 	}
 	
-	public TerminoFilterOptions setMaxNumberOfVariants(int maxNumberOfVariants) {
-		this.maxNumberOfVariants = maxNumberOfVariants;
+	public TerminoFilterOptions setMaxVariantNum(int maxNumberOfVariants) {
+		this.maxVariantNum = maxNumberOfVariants;
 		return this;
 	}
 	
@@ -76,5 +89,13 @@ public class TerminoFilterOptions {
 	public TerminoFilterOptions setKeepVariants(boolean keepVariants) {
 		this.keepVariants = keepVariants;
 		return this;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+	
+	public boolean isEnabled() {
+		return enabled;
 	}
 }

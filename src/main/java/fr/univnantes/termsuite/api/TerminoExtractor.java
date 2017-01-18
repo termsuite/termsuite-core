@@ -21,7 +21,7 @@ import fr.univnantes.termsuite.model.Terminology;
  */
 public class TerminoExtractor {
 	
-	private TerminologyExtractorOptions options = new TerminologyExtractorOptions();
+	private ExtractorOptions options = new ExtractorOptions();
 	private ResourceConfig resourceConfig = new ResourceConfig();
 	
 	public TerminoExtractor setResourceConfig(ResourceConfig resourceConfig) {
@@ -29,7 +29,7 @@ public class TerminoExtractor {
 		return this;
 	}
 	
-	public TerminoExtractor setOptions(TerminologyExtractorOptions options) {
+	public TerminoExtractor setOptions(ExtractorOptions options) {
 		this.options = options;
 		return this;
 	}

@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -83,7 +83,7 @@ public class TerminologyCleaner extends TerminologyEngine {
 	}
 	private void cleanVariations(TerminologyService termino) {
 		termino.variations()
-			.filter(variation -> variation.getPropertyIntegerValue(RelationProperty.VARIATION_RANK) > options.getMaxNumberOfVariants())
+			.filter(variation -> variation.getPropertyIntegerValue(RelationProperty.VARIATION_RANK) > options.getMaxVariantNum())
 			.collect(toSet())
 			.forEach(termino::removeRelation);
 

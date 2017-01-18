@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.postproc.IndependanceScorer;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;

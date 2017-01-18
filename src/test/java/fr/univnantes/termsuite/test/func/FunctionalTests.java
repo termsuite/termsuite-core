@@ -67,11 +67,18 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 public class FunctionalTests {
 	
 
-	public static final Path TERMINOLOGY_1=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "json", "termino1.json");
-	public static final Path CORPUS2_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "corpus", "corpus2");
-	public static final Path CORPUS1_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "corpus", "corpus1");
-	public static final Path TERMINO_WESHORT_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "termino");
-	public static final Path DICO_PATH=Paths.get("src", "test", "resources", "fr", "univnantes", "termsuite", "test", "dico");
+	public static final Path TEST_RESOURCES = Paths.get("src", "test", "resources");
+	public static final Path PACKAGE_TEST = TEST_RESOURCES.resolve(Paths.get( "fr", "univnantes", "termsuite", "test"));
+	public static final Path PACKAGE_JSON = PACKAGE_TEST.resolve(Paths.get( "json"));
+	public static final Path PACKAGE_CORPUS = PACKAGE_TEST.resolve(Paths.get( "corpus"));
+	public static final Path PACKAGE_TERMINO = PACKAGE_TEST.resolve(Paths.get( "termino"));
+
+	public static final Path EXTRACTOR_CONFIG_1=PACKAGE_JSON.resolve(Paths.get("extractor-config1.json"));
+	public static final Path TERMINOLOGY_1=PACKAGE_JSON.resolve(Paths.get("termino1.json"));
+	public static final Path CORPUS1_PATH=PACKAGE_CORPUS.resolve(Paths.get("corpus1"));
+	public static final Path CORPUS2_PATH=PACKAGE_CORPUS.resolve(Paths.get("corpus2"));
+	public static final Path TERMINO_WESHORT_PATH=PACKAGE_TEST.resolve(Paths.get("termino"));
+	public static final Path DICO_PATH=PACKAGE_TEST.resolve(Paths.get("dico"));
 
 			
 	public static final String CORPUS_WESHORT_PATH="fr/univnantes/termsuite/test/corpus/weshort/";
@@ -79,7 +86,6 @@ public class FunctionalTests {
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
 	public static final TextCorpus CORPUS1 = new TextCorpus(Lang.FR, CORPUS1_PATH);
-
 
 	private static Object getConfigProperty( String propName) {
 		InputStream is = FunctionalTests.class.getClassLoader().getResourceAsStream(FUNCTION_TESTS_CONFIG);
@@ -126,7 +132,6 @@ public class FunctionalTests {
 		return terms;
 	}
 
-
 	public static Path getTestsOutputFile(String relativePath) {
 		return getFunctionalTestsOutputDir().resolve(relativePath);
 	}
@@ -144,11 +149,9 @@ public class FunctionalTests {
 		return createIfNotExist(path);
 	}
 		
-	
 	private static Path createIfNotExist(Path path) {
 		if(!path.toFile().exists())
 			path.toFile().mkdirs();
 		return path;
 	}
-
 }

@@ -13,30 +13,27 @@ public class TermGatherer extends AggregateTerminologyEngine {
 	@Override
 	public void configure() {
 		
-		if(gathererOptions.isPrefixationGathererEnabled()) 
-			pipe(VariationTypeGatherer.class, 
-					VariationType.PREFIXATION, 
-					TermIndexes.PREFIXATION_LEMMAS, 
-					true);
-		
-		if(gathererOptions.isDerivationGathererEnabled()) 
-			pipe(VariationTypeGatherer.class, 
-					VariationType.DERIVATION, 
-					TermIndexes.DERIVATION_LEMMAS, 
-					true);
-		
-		if(gathererOptions.isMorphologicalGathererEnabled()) 
-			pipe(VariationTypeGatherer.class, 
-					VariationType.MORPHOLOGICAL, 
-					TermIndexes.ALLCOMP_PAIRS, 
-					false);
+		pipe(VariationTypeGatherer.class, 
+				VariationType.PREFIXATION, 
+				TermIndexes.PREFIXATION_LEMMAS, 
+				true);
+	
+		pipe(VariationTypeGatherer.class, 
+				VariationType.DERIVATION, 
+				TermIndexes.DERIVATION_LEMMAS, 
+				true);
+	
+		pipe(VariationTypeGatherer.class, 
+				VariationType.MORPHOLOGICAL, 
+				TermIndexes.ALLCOMP_PAIRS, 
+				false);
 			
 		pipe(VariationTypeGatherer.class, 
 				VariationType.SYNTAGMATIC, 
 				TermIndexes.ALLCOMP_PAIRS, 
 				true);
 
-		if(gathererOptions.isSemanticGathererEnabled()) 
+		if(gathererOptions.isSemanticEnabled()) 
 			pipe(SemanticGatherer.class, 
 					VariationType.SEMANTIC);
 		
@@ -45,7 +42,7 @@ public class TermGatherer extends AggregateTerminologyEngine {
 		 */
 		pipe(ExtensionVariantGatherer.class);
 		
-		if(gathererOptions.isGraphicalGathererEnabled()) 
+		if(gathererOptions.isGraphicalEnabled()) 
 			pipe(GraphicalGatherer.class, gathererOptions);
 		
 		

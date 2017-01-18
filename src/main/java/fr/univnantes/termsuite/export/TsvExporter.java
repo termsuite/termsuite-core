@@ -8,7 +8,7 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.api.Traverser;
 import fr.univnantes.termsuite.api.TsvOptions;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;

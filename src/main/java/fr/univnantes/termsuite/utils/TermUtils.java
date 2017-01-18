@@ -37,7 +37,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;

@@ -34,7 +34,7 @@ import org.junit.Test;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.splitter.ManualSuffixDerivationDetecter;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;

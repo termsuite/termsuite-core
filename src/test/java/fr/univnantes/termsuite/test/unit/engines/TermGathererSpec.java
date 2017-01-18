@@ -38,7 +38,7 @@ import com.google.common.io.Files;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.termino.MemoryTerminology;

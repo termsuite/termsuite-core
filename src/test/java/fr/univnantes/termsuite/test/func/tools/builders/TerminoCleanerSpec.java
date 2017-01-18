@@ -10,7 +10,7 @@ import org.junit.Test;
 import fr.univnantes.termsuite.api.TerminologyIO;
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.engines.cleaner.TerminologyCleaner;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;

@@ -53,7 +53,6 @@ import fr.univnantes.termsuite.utils.TermSuiteConstants;
 import fr.univnantes.termsuite.utils.URLUtils;
 import uima.sandbox.filter.resources.DefaultFilterResource;
 import uima.sandbox.lexer.resources.SegmentBankResource;
-import uima.sandbox.mapper.resources.Mapping;
 import uima.sandbox.mapper.resources.MappingResource;
 
 /**

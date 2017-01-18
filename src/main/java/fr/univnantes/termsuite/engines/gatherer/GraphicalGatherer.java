@@ -26,7 +26,7 @@ public class GraphicalGatherer extends TerminologyEngine {
 	@Inject
 	private GathererOptions options;
 	
-	protected String indexName;
+	protected String indexName = TermIndexes.FIRST_LETTERS_2;
 
 	/*
 	 * Gives the direction of the graphical relation between two terms.
@@ -49,30 +49,9 @@ public class GraphicalGatherer extends TerminologyEngine {
 		}
 	}
 	
-	private GraphicalGatherer setNbFixedLetters() {
-		switch(options.getGraphicalNbPrefixLetters()){
-		case 1:
-			this.indexName = TermIndexes.FIRST_LETTERS_1;
-			break;
-		case 2:
-			this.indexName = TermIndexes.FIRST_LETTERS_2;
-			break;
-		case 3:
-			this.indexName = TermIndexes.FIRST_LETTERS_3;
-			break;
-		case 4:
-			this.indexName = TermIndexes.FIRST_LETTERS_4;
-			break;
-		default:
-			throw new IllegalArgumentException("Bad value for number of letters for a n-first-letters index: " + options.getGraphicalNbPrefixLetters());
-		}
-		return this;
-	}
-
 	@Override
 	public void execute() {
 		getLogger().info("Gathering graphical variants");
-		setNbFixedLetters();
 		AtomicLong comparisonCounter = new AtomicLong(0);
 		CustomTermIndex index = terminology.getTerminology().getCustomIndex(indexName);
 		index.cleanSingletonKeys();

@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.framework;
+package fr.univnantes.termsuite.framework.service;
 
 import static java.util.stream.Collectors.toSet;
 

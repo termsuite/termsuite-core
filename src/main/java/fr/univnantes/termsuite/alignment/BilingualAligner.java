@@ -48,7 +48,7 @@ import com.google.common.primitives.Ints;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.ExplainedValue;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;

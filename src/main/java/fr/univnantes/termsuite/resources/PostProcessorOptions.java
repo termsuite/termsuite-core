@@ -23,10 +23,23 @@
 
 package fr.univnantes.termsuite.resources;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PostProcessorOptions {
+	
+	@JsonProperty("enabled")
+	private boolean enabled = true;
+	
+	@JsonProperty("affix-score-th")
 	private double affixScoreTh = 0.25;
+	
+	@JsonProperty("variation-score-th")
 	private double variationScoreTh = 0.20;
+	
+	@JsonProperty("orthographic-score-th")
 	private double orthographicScoreTh = 0.55;
+	
+	@JsonProperty("term-independance-th")
 	private double termIndependanceTh = 0.10;
 
 	public PostProcessorOptions() {
@@ -76,7 +89,12 @@ public class PostProcessorOptions {
 		return this;
 	}
 
-	public static PostProcessorOptions create() {
-		return new PostProcessorOptions();
+	public boolean isEnabled() {
+		return enabled;
+	}
+	
+	public PostProcessorOptions setEnabled(boolean enabled) {
+		this.enabled = enabled;
+		return this;
 	}
 }

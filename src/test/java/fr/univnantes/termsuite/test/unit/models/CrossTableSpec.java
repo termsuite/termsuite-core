@@ -28,7 +28,7 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.LogLikelihood;
 import fr.univnantes.termsuite.metrics.MutualInformation;
 import fr.univnantes.termsuite.model.CrossTable;

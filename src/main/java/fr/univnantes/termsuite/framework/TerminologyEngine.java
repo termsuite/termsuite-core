@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public abstract class TerminologyEngine {

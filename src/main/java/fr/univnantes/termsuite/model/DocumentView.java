@@ -41,29 +41,27 @@ public class DocumentView {
 	 * @return
 	 * 			an iterator over the occurrences
 	 */
-	public Iterator<TermOccurrence> getOccurrenceContext(final TermOccurrence occurrence, final OccurrenceType coTermsType, final int contextSize) {
+	public Iterator<TermOccurrence> getOccurrenceContext(final TermOccurrence occurrence, final int contextSize) {
 		computeOccurrences();
 		return Iterators.concat(
-				new LeftContextIterator(coTermsType, occurrence, contextSize),
-				new RightContextIterator(coTermsType, occurrence, contextSize)
+				new LeftContextIterator(occurrence, contextSize),
+				new RightContextIterator(occurrence, contextSize)
 			);
 	}
 	
 	private abstract class DirectionalContextIterator extends AbstractIterator<TermOccurrence> {
 		protected TermOccurrence occurrence;
 		private int radius;
-		private OccurrenceType occType;
 
 		protected int index;
 		private int returnedOccCnt = 0;
 		private TermOccurrence current;
 		
-		private DirectionalContextIterator(OccurrenceType occType, TermOccurrence occurrence, int radius) {
+		private DirectionalContextIterator(TermOccurrence occurrence, int radius) {
 			super();
 			this.occurrence = occurrence;
 			this.radius = radius;
 			this.index = DocumentView.this.occurrenceIndexes.get(occurrence);
-			this.occType = occType;
 			moveCursor();
 		}
 
@@ -86,14 +84,7 @@ public class DocumentView {
 		private boolean keepOccurrence(TermOccurrence o) {
 			if(overlap(o))
 				return false;
-			switch (occType) {
-			case ALL:
-				return true;
-			case SINGLE_WORD:
-				return o.getTerm().isSingleWord();
-			default:
-				throw new IllegalStateException();
-			}
+			return o.getTerm().isSingleWord();
 		}
 
 		protected abstract boolean overlap(TermOccurrence o);
@@ -105,8 +96,8 @@ public class DocumentView {
 	 * single-word neighbour term occurrences in the document.
 	 */
 	private class LeftContextIterator extends DirectionalContextIterator {
-		private LeftContextIterator(OccurrenceType occType, TermOccurrence occurrence, int radius) {
-			super(occType, occurrence, radius);
+		private LeftContextIterator(TermOccurrence occurrence, int radius) {
+			super(occurrence, radius);
 		}
 		@Override
 		protected void moveCursor() {
@@ -123,8 +114,8 @@ public class DocumentView {
 	 * single-word neighbour term occurrences in the document.
 	 */
 	private class RightContextIterator extends DirectionalContextIterator {
-		private RightContextIterator(OccurrenceType occType, TermOccurrence occurrence, int radius) {
-			super(occType, occurrence, radius);
+		private RightContextIterator(TermOccurrence occurrence, int radius) {
+			super(occurrence, radius);
 		}
 		@Override
 		protected void moveCursor() {
@@ -174,7 +165,7 @@ public class DocumentView {
 		this.occurrencesDirty = true;
 	}
 	
-	public Iterator<TermOccurrence> contextIterator(TermOccurrence o, OccurrenceType coTermsType, int contextSize) {
-		return getOccurrenceContext(o, coTermsType, contextSize);
+	public Iterator<TermOccurrence> contextIterator(TermOccurrence o, int contextSize) {
+		return getOccurrenceContext(o, contextSize);
 	}
 }

@@ -29,7 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 

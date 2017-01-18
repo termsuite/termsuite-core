@@ -32,7 +32,7 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;

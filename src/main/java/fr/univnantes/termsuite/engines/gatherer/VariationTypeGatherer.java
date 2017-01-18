@@ -14,7 +14,7 @@ import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -43,6 +43,8 @@ public class VariationTypeGatherer extends TerminologyEngine {
 	@Override
 	public void execute() {
 		LOGGER.info("Gathering {} variants", variationType.name().toLowerCase());
+		if(variantRules.getVariantRules().isEmpty())
+			return;
 
 		AtomicLong cnt = new AtomicLong(0);
 		Stopwatch indexSw = Stopwatch.createStarted();

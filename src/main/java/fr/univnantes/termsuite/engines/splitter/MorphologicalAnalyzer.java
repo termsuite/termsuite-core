@@ -18,7 +18,7 @@ public class MorphologicalAnalyzer extends AggregateTerminologyEngine {
 		
 		pipe(ManualSplitter.class);
 		
-		if(options.isDerivationDetecterEnabled()) {
+		if(options.isDerivativesDetecterEnabled()) {
 			pipe(SuffixDerivationDetecter.class);
 			pipe(ManualSuffixDerivationDetecter.class);
 		}

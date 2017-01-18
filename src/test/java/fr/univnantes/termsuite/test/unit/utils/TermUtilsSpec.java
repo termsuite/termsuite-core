@@ -35,7 +35,7 @@ import org.mockito.Mockito;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;

@@ -4,11 +4,9 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.framework.ConfigurationObject;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.TermProperty;
 
-@ConfigurationObject
 public class TsvOptions {
 	
 	private Property<?>[] properties = new Property<?>[] {TermProperty.GROUPING_KEY, TermProperty.FREQUENCY};

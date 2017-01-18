@@ -7,13 +7,13 @@ import javax.inject.Singleton;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.TypeLiteral;
-import com.google.inject.matcher.Matcher;
 import com.google.inject.matcher.Matchers;
 import com.google.inject.spi.TypeEncounter;
 import com.google.inject.spi.TypeListener;
 
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.engines.gatherer.GroovyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Terminology;
@@ -48,7 +48,6 @@ public class ExtractorModule extends AbstractModule {
 		bind(ResourceConfig.class).toInstance(resourceConfig);
 		bind(FilterResource.class).to(DefaultFilterResource.class);
 		bind(Terminology.class).toInstance(terminology);
-		bind(ExtractorPipelineLifecycle.class).in(Singleton.class);
 		bind(OccurrenceStore.class).toInstance(terminology.getOccurrenceStore());
 		bind(TerminologyService.class).in(Singleton.class);
 		bind(GroovyService.class).in(Singleton.class);

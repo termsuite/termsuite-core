@@ -37,7 +37,7 @@ import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;

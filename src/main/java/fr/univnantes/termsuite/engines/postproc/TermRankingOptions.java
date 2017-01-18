@@ -1,12 +1,15 @@
 package fr.univnantes.termsuite.engines.postproc;
 
-import fr.univnantes.termsuite.framework.ConfigurationObject;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import fr.univnantes.termsuite.model.TermProperty;
 
-@ConfigurationObject
 public class TermRankingOptions {
 
+	@JsonProperty("property")
 	private TermProperty rankingProperty = TermProperty.SPECIFICITY;
+
+	@JsonProperty("is-descending")
 	private boolean desc = true;
 	
 	public TermProperty getRankingProperty() {
@@ -25,7 +28,4 @@ public class TermRankingOptions {
 		this.desc = desc;
 		return this;
 	}
-	
-	
-	
 }
