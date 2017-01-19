@@ -21,8 +21,6 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.framework;
 
-import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -51,6 +49,7 @@ import fr.univnantes.lina.uima.models.ChineseSegmentResource;
 import fr.univnantes.lina.uima.models.TreeTaggerParameter;
 import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
+import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
@@ -75,7 +74,6 @@ import fr.univnantes.termsuite.uima.resources.preproc.CharacterFootprintTermFilt
 import fr.univnantes.termsuite.uima.resources.preproc.FixedExpressionResource;
 import fr.univnantes.termsuite.uima.resources.preproc.MateLemmatizerModel;
 import fr.univnantes.termsuite.uima.resources.preproc.MateTaggerModel;
-import fr.univnantes.termsuite.utils.FileUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 import uima.sandbox.filter.resources.DefaultFilterResource;
 import uima.sandbox.lexer.engines.Lexer;
@@ -102,13 +100,13 @@ public class PreprocessingPipelineBuilder {
 	 * MAIN PIPELINE PARAMETERS
 	 */
 	private Lang lang;
-	private Optional<URL> resourceUrlPrefix = Optional.empty();
 	private PreparationPipelineOptions options = new PreparationPipelineOptions();
 	private Optional<Long> nbDocuments = Optional.empty();
 	private Optional<Long> corpusSize = Optional.empty();
 	private List<AnalysisEngineDescription> customAEs = new ArrayList<>();
 	private Path taggerPath;
 	private List<PipelineListener> userPipelineListeners = new ArrayList<>();
+	private ResourceConfig resourceConfig = new ResourceConfig();
 
 	
 	/* *******************
@@ -202,51 +200,6 @@ public class PreprocessingPipelineBuilder {
 		
 	}
 	
-	/**
-	 * Invoke this method if TermSuite resources are accessible via 
-	 * a "file:/path/to/res/" url, i.e. they can be found locally.
-	 * 
-	 * @param resourceDir
-	 * @return
-	 */
-	public PreprocessingPipelineBuilder setResourceDir(String resourceDir) {
-		Preconditions.checkArgument(new File(resourceDir).isDirectory(), 
-				"Not a directory: %s", resourceDir);
-		
-		if(!resourceDir.endsWith(File.separator))
-			resourceDir = resourceDir + File.separator;
-//		TermSuiteUtils.addToClasspath(resourceDir);
-		try {
-			this.resourceUrlPrefix = Optional.of(new URL("file:" + resourceDir));
-			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
-		} catch (MalformedURLException e) {
-			throw new PreparationPipelineException(e);
-		}
-		return this;
-	}
-	
-	public PreprocessingPipelineBuilder setResourceJar(String resourceJar) {
-		Preconditions.checkArgument(FileUtils.isJar(resourceJar), 
-				"Not a jar file: %s", resourceJar);
-		try {
-			this.resourceUrlPrefix = Optional.of(new URL("jar:file:"+resourceJar+"!/"));
-			LOGGER.info("Resource URL prefix is: {}", this.resourceUrlPrefix.get());
-		} catch (MalformedURLException e) {
-			throw new PreparationPipelineException(e);
-		}
-		return this;		
-	}
-
-	
-//	public PreparationPipelineBuilder setResourceUrlPrefix(String urlPrefix) {
-//		try {
-//			this.resourceUrlPrefix = Optional.of(new URL(urlPrefix));
-//		} catch (MalformedURLException e) {
-//			throw new PreparationPipelineException("Bad url: " + urlPrefix, e);
-//		}
-//		return this;
-//	}
-
 
 	public PreprocessingPipelineBuilder setHistory(TermHistory history) {
 		PipelineResourceMgrs.getResourceMgr(pipelineId).register(TermHistory.class, history);
@@ -262,7 +215,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription	segmentBank = ExternalResourceFactory.createExternalResourceDescription(
 					SegmentBankResource.class,
-					getResUrl(ResourceType.SEGMENT_BANK)
+					getResourceURL(ResourceType.SEGMENT_BANK)
 				);
 			
 
@@ -297,7 +250,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription ttParam = ExternalResourceFactory.createExternalResourceDescription(
 					TreeTaggerParameter.class,
-					getResUrl(ResourceType.TREETAGGER_CONFIG, Tagger.TREE_TAGGER)
+					getResourceURL(ResourceType.TREETAGGER_CONFIG, Tagger.TREE_TAGGER)
 				);
 			
 			ExternalResourceFactory.bindResource(
@@ -313,30 +266,27 @@ public class PreprocessingPipelineBuilder {
 	}
 
 
-	/*
-	 * Builds the resource url for this pipeline
-	 */
-	private URL getResUrl(ResourceType tsResource, Tagger tagger) {
-		if(!resourceUrlPrefix.isPresent())
-			return tsResource.fromClasspath(lang, tagger);
-		else
-			return tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang, tagger);		
-		
-	}
 
 
-	/*
-	 * Builds the resource url for this pipeline	 * 
-	 */
-	private URL getResUrl(ResourceType tsResource) {
-		if(!resourceUrlPrefix.isPresent()) {
-			URL fromClasspath = tsResource.fromClasspath(lang);
-			return fromClasspath;
-		} else {
-			URL fromUrlPrefix = tsResource.fromUrlPrefix(this.resourceUrlPrefix.get(), lang);
-			return fromUrlPrefix;
-		}		
+	
+	public PreprocessingPipelineBuilder setResourceConfig(ResourceConfig resourceConfig) {
+		this.resourceConfig = resourceConfig;
+		return this;
 	}
+	
+	public URL getResourceURL(ResourceType resourceType) {
+		return getResourceURL(resourceType, null);
+	}
+	
+	public URL getResourceURL(ResourceType resourceType, Tagger tagger) {
+		for(URL urlPrefix:resourceConfig.getURLPrefixes()) {
+			URL candidateURL = resourceType.fromUrlPrefix(urlPrefix, lang, tagger);
+			if(TermSuiteResourceManager.resourceExists(resourceType, urlPrefix, candidateURL))
+				return candidateURL;
+		}
+		return resourceType.fromClasspath(lang, tagger);
+	}
+
 
 	public PreprocessingPipelineBuilder setMateModelPath(String path) {
 		Preconditions.checkArgument(Files.exists(Paths.get(path)), "Directory %s does not exist", path);
@@ -411,46 +361,46 @@ public class PreprocessingPipelineBuilder {
 	private PreprocessingPipelineBuilder caseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:case", 
-				getResUrl(ResourceType.TAGGER_CASE_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_CASE_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder categoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:category", 
-				getResUrl(ResourceType.TAGGER_CATEGORY_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_CATEGORY_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder tenseNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:tense", 
-				getResUrl(ResourceType.TAGGER_TENSE_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_TENSE_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder subCategoryNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:subCategory", 
-				getResUrl(ResourceType.TAGGER_SUBCATEGORY_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_SUBCATEGORY_MAPPING, tagger));
 	}
 
 	
 	private PreprocessingPipelineBuilder moodNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:mood", 
-				getResUrl(ResourceType.TAGGER_MOOD_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_MOOD_MAPPING, tagger));
 	}
 
 	
 	private PreprocessingPipelineBuilder numberNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:number", 
-				getResUrl(ResourceType.TAGGER_NUMBER_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_NUMBER_MAPPING, tagger));
 	}
 
 	
 	private PreprocessingPipelineBuilder genderNormalizer(Tagger tagger)  {
 		return subNormalizer(
 				"fr.univnantes.termsuite.types.WordAnnotation:gender", 
-				getResUrl(ResourceType.TAGGER_GENDER_MAPPING, tagger));
+				getResourceURL(ResourceType.TAGGER_GENDER_MAPPING, tagger));
 	}
 
 	private PreprocessingPipelineBuilder mateNormalizer()  {
@@ -569,7 +519,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription fixedExprRes = ExternalResourceFactory.createExternalResourceDescription(
 					FixedExpressionResource.class, 
-					getResUrl(ResourceType.FIXED_EXPRESSIONS));
+					getResourceURL(ResourceType.FIXED_EXPRESSIONS));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
@@ -605,7 +555,7 @@ public class PreprocessingPipelineBuilder {
 			
 			ExternalResourceDescription mwtRules = ExternalResourceFactory.createExternalResourceDescription(
 					RegexListResource.class, 
-					getResUrl(ResourceType.MWT_RULES));
+					getResourceURL(ResourceType.MWT_RULES));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
@@ -615,7 +565,7 @@ public class PreprocessingPipelineBuilder {
 
 			ExternalResourceDescription allowedCharsRes = ExternalResourceFactory.createExternalResourceDescription(
 					CharacterFootprintTermFilter.class, 
-					getResUrl(ResourceType.ALLOWED_CHARS));
+					getResourceURL(ResourceType.ALLOWED_CHARS));
 			
 			ExternalResourceFactory.bindResource(
 					ae,
@@ -625,7 +575,7 @@ public class PreprocessingPipelineBuilder {
 
 			ExternalResourceDescription stopWordsRes = ExternalResourceFactory.createExternalResourceDescription(
 					DefaultFilterResource.class, 
-					getResUrl(ResourceType.STOP_WORDS_FILTER));
+					getResourceURL(ResourceType.STOP_WORDS_FILTER));
 			
 			ExternalResourceFactory.bindResource(
 					ae,

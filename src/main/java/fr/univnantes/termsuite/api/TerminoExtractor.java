@@ -5,9 +5,11 @@ import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
 import fr.univnantes.termsuite.framework.EngineDescription;
-import fr.univnantes.termsuite.framework.EngineParameterModule;
+import fr.univnantes.termsuite.framework.ExtractorLifeCycle;
 import fr.univnantes.termsuite.framework.ExtractorModule;
+import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
  * 
@@ -21,7 +23,8 @@ import fr.univnantes.termsuite.model.Terminology;
  */
 public class TerminoExtractor {
 	
-	private ExtractorOptions options = new ExtractorOptions();
+	private TermHistory history = null;
+	private ExtractorOptions options;
 	private ResourceConfig resourceConfig = new ResourceConfig();
 	
 	public TerminoExtractor setResourceConfig(ResourceConfig resourceConfig) {
@@ -29,18 +32,33 @@ public class TerminoExtractor {
 		return this;
 	}
 	
+	public TerminoExtractor watch(String termKey) {
+		if(this.history == null) {
+			this.history = new TermHistory();
+		}
+		this.history.addWatchedGroupingKeys(termKey);
+		return this;
+	}
+
+	public TerminoExtractor setHistory(TermHistory history) {
+		this.history = history;
+		return this;
+	}
+
 	public TerminoExtractor setOptions(ExtractorOptions options) {
 		this.options = options;
 		return this;
 	}
 	
 	public void execute(Terminology terminology) {
-		ExtractorModule extractorModule = new ExtractorModule(terminology, resourceConfig);
-		Injector injector = Guice.createInjector(extractorModule);
-		EngineDescription description = TermSuite.createEngineDescription(TerminologyExtractorEngine.class, options);
-		Injector engineInjector = injector.createChildInjector(new EngineParameterModule(description));
-		TerminologyExtractorEngine engine = engineInjector.getInstance(TerminologyExtractorEngine.class);
-		engine.initialize(extractorModule);
+		if(options == null)
+			options = TermSuite.getDefaultExtractorConfig(terminology.getLang());
+		ExtractorModule extractorModule = new ExtractorModule(terminology, resourceConfig, history);
+		Injector injector = Guice.createInjector(
+				extractorModule);
+		EngineDescription engineDescription = TermSuite.createEngineDescription(TerminologyExtractorEngine.class, options);
+		ExtractorLifeCycle lifeCycle = new ExtractorLifeCycle(injector);
+		TerminologyEngine engine = lifeCycle.create(engineDescription);
 		engine.execute();
 	}
 }

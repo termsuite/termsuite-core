@@ -9,7 +9,7 @@ public class GathererOptions  {
 	@JsonProperty("graphical-enabled")
 	private boolean graphicalEnabled = true;
 	
-	@JsonProperty("similarity-th")
+	@JsonProperty("graphical-similarity-th")
 	private double graphicalSimilarityThreshold = 1d;
 
 	// gathering is polynomial within a class

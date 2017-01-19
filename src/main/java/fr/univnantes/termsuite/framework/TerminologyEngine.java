@@ -3,16 +3,22 @@ package fr.univnantes.termsuite.framework;
 import java.util.Optional;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public abstract class TerminologyEngine {
+
+	
+	/*
+	 * Injected at engine initialization
+	 */
+	@Named("engineName")
+	private String engineName;
 
 	protected Optional<TermHistory> history = Optional.empty();
 	
@@ -27,13 +33,15 @@ public abstract class TerminologyEngine {
 		return logger;
 	}
 	
-	public void configure(Object... parameters) {
-		
-	}
-
-	public void init(Injector injector, Object... parameters) {
-		
+	public abstract void execute();
+	
+	public String getEngineName() {
+		return engineName;
 	}
 	
-	public abstract void execute();
+	
+	
+	
+	
+	
 }

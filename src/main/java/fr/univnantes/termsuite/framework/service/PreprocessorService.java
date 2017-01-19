@@ -52,7 +52,7 @@ public class PreprocessorService {
 
 	public Stream<JCas> prepare(TextCorpus textCorpus, 
 			Path taggerPath, PreparationPipelineOptions options, 
-			Optional<ResourceConfig> resourceOpts, 
+			Optional<ResourceConfig> resourceConfig, 
 			Optional<TermHistory> termHistory, 
 			Optional<PipelineListener> listener, AnalysisEngineDescription... customAEs) {
 		
@@ -74,12 +74,8 @@ public class PreprocessorService {
 		for(AnalysisEngineDescription customAE:customAEs) 
 			builder.addCustomAE(customAE);
 		
-		if(resourceOpts.isPresent()) {
-			if(resourceOpts.get().getResourceDirectory().isPresent())
-				builder.setResourceDir(resourceOpts.get().getResourceDirectory().get().toString());
-	
-			else if(resourceOpts.get().getResourceJar().isPresent())
-				builder.setResourceJar(resourceOpts.get().getResourceJar().get().toString());
+		if(resourceConfig.isPresent()) {
+			builder.setResourceConfig(resourceConfig.get());
 		}
 
 		if(termHistory.isPresent())

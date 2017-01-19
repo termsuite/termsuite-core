@@ -47,8 +47,8 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
-import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.ExtractorOptions;
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
@@ -124,7 +124,7 @@ public abstract class WindEnergySpec {
 			.setTaggerPath(FunctionalTests.getTaggerPath())
 			.toTerminology(FunctionalTests.getCorpusWE(lang), true);
 		
-		ExtractorOptions extractorOptions = new ExtractorOptions();
+		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
 		extractorOptions.getPostProcessorConfig().setEnabled(false);
 		TermSuite.terminoExtractor()
 					.setOptions(extractorOptions)

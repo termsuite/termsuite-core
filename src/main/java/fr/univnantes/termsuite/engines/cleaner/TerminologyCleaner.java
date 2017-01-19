@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -24,9 +25,8 @@ public class TerminologyCleaner extends TerminologyEngine {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(TerminologyCleaner.class);
 
-	private TerminoFilterOptions options = new TerminoFilterOptions();
-	
-	private Optional<TermHistory> history = Optional.empty();
+	@Parameter
+	private TerminoFilterOptions options;
 	
 	@Inject TerminologyService termino;
 	

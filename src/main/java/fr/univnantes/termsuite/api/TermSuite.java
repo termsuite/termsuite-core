@@ -4,8 +4,10 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.framework.EngineDescription;
+import fr.univnantes.termsuite.framework.LanguageModule;
 import fr.univnantes.termsuite.framework.TermSuiteModule;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.framework.service.LanguageService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Terminology;
@@ -27,6 +29,15 @@ public class TermSuite {
 		return new TerminoExtractor();
 	}
 
+
+	public static ExtractorOptions getDefaultExtractorConfig(Lang lang) {
+		return getLanguageService().getDefaultExtractorConfig(lang);
+	}
+	
+	public static LanguageService getLanguageService() {
+		return Guice.createInjector(new LanguageModule()).getInstance(LanguageService.class);
+	}
+	
 	public static Preprocessor preprocessor() {
 		return injector().getInstance(Preprocessor.class);
 	}
@@ -44,6 +55,6 @@ public class TermSuite {
 	public static EngineDescription createEngineDescription(
 			Class<? extends TerminologyEngine> engineClass,
 			Object... parameters) {
-		return new EngineDescription(engineClass, parameters);
+		return new EngineDescription(engineClass.getSimpleName(), engineClass, parameters);
 	}
 }

@@ -14,8 +14,6 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javax.inject.Inject;
-
 import org.apache.commons.lang.mutable.MutableLong;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +25,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.metrics.EditDistance;
@@ -49,8 +48,8 @@ import fr.univnantes.termsuite.utils.TermSuiteUtils;
 public class NativeSplitter extends TerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(NativeSplitter.class);
 
-	@Inject
-	private MorphologicalOptions opt = new MorphologicalOptions();
+	@Parameter
+	private MorphologicalOptions opt;
 
 	@Resource(type=ResourceType.COMPOST_INFLECTION_RULES)
 	private CompostInflectionRules inflectionRules;

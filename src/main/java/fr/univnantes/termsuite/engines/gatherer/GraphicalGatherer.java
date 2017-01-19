@@ -6,10 +6,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import javax.inject.Inject;
-
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
@@ -23,7 +22,7 @@ public class GraphicalGatherer extends TerminologyEngine {
 	
 	private EditDistance distance = new FastDiacriticInsensitiveLevenshtein(false);
 	
-	@Inject
+	@Parameter
 	private GathererOptions options;
 	
 	protected String indexName = TermIndexes.FIRST_LETTERS_2;

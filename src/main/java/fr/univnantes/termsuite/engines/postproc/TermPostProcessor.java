@@ -23,12 +23,11 @@
 
 package fr.univnantes.termsuite.engines.postproc;
 
-import javax.inject.Inject;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
@@ -42,7 +41,7 @@ import fr.univnantes.termsuite.resources.PostProcessorOptions;
 public class TermPostProcessor extends AggregateTerminologyEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermPostProcessor.class);
 
-	@Inject
+	@Parameter
 	private PostProcessorOptions config;
 
 	@Override

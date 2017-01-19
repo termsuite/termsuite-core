@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 import com.google.inject.Inject;
 
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
@@ -30,14 +31,14 @@ public class VariationTypeGatherer extends TerminologyEngine {
 	
 	@Resource(type=ResourceType.VARIANTS)
 	protected YamlRuleSet variantRules;
-	
-	@Inject
+
+	@Parameter
 	private VariationType variationType;
 	
-	@Inject
+	@Parameter
 	protected String indexName ;
 	
-	@Inject(optional=true)
+	@Parameter(optional= true)
 	protected boolean dropIndexAtEnd = true;
 
 	@Override

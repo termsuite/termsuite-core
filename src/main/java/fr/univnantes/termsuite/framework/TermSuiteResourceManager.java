@@ -1,12 +1,16 @@
 package fr.univnantes.termsuite.framework;
 
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Semaphore;
 
 import org.apache.uima.resource.SharedResourceObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
@@ -16,6 +20,8 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public class TermSuiteResourceManager {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteResourceManager.class);
 	
 	private Lang lang;
 	private ResourceConfig config;
@@ -77,6 +83,26 @@ public class TermSuiteResourceManager {
 	}
 
 	public URL getResourceURL(ResourceType resourceType) {
+		for(URL urlPrefix:config.getURLPrefixes()) {
+			URL candidateURL = resourceType.fromUrlPrefix(urlPrefix, lang);
+			if(resourceExists(resourceType, urlPrefix, candidateURL))
+				return candidateURL;
+		}
 		return resourceType.fromClasspath(lang);
 	}
+
+	public static boolean resourceExists(ResourceType resourceType, URL urlPrefix, URL candidateURL) {
+		try {
+			URLConnection conn = candidateURL.openConnection();
+			// resource exists
+			conn.connect();
+			LOGGER.info("Found resource {} at {}", resourceType, candidateURL);
+			return true;
+		} catch(IOException e) {
+			LOGGER.trace("Did not find resource {} at url {}", resourceType, urlPrefix);
+			return false;
+		}
+	}
+	
+	
 }

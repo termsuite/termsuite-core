@@ -16,22 +16,22 @@
   },
   "morphology" : {
     "enabled" : true,
-    "alpha" : 0.1,
-    "beta" : 0.2,
-    "gamma" : 0.3,
-    "delta" : 0.4,
+    "alpha" : 0.5,
+    "beta" : 0.1,
+    "gamma" : 0.1,
+    "delta" : 0.3,
     "prefix-splitter-enabled" : true,
     "derivatives-detector-enabled" : true,
     "native-splitter-enabled" : true,
-    "min-component-size" : 0,
-    "max-component-num" : 0,
-    "score-th" : 0.0,
-    "segment-similarity-th" : 0.0
+    "min-component-size" : 3,
+    "max-component-num" : 3,
+    "score-th" : 0.7,
+    "segment-similarity-th" : 1.0
   },
   "gatherer" : {
     "semantic-enabled" : false,
     "graphical-enabled" : true,
-    "graphical-similarity-th" : 1.0,
+    "graphical-similarity-th" : 0.89,
     "max-class-size" : 2000,
     "max-num-comparisons" : 1000000
   },
@@ -45,9 +45,9 @@
     "enabled" : false,
     "type" : "TOP_N",
     "property" : "SPECIFICITY",
-    "top-n" : 156,
+    "top-n" : 500,
     "threshold" : 2.0,
-    "keep-variants" : false,
+    "keep-variants" : true,
     "max-variant-num" : 25
   },
   "ranking" : {

@@ -28,8 +28,6 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.apache.uima.resource.RelativePathResolver;
-import org.apache.uima.resource.impl.RelativePathResolver_impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +47,6 @@ import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
-import fr.univnantes.termsuite.utils.TermSuiteConstants;
 import fr.univnantes.termsuite.utils.URLUtils;
 import uima.sandbox.filter.resources.DefaultFilterResource;
 import uima.sandbox.lexer.resources.SegmentBankResource;
@@ -93,9 +90,8 @@ public enum ResourceType {
 	VARIANTS(YamlRuleSet.class, "[LANG_SHORT]/[LANG]-variants.yaml", "", ""), 
 	;
 	
-	private static final String MSG_ERR_RESOURCE_NOT_FOUND = "Resource %s does not exist for resource %s (resolved URL is %s)";
-	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ResourceType.class);
+	public static final String DEFAULT_RESOURCE_URL_PREFIX = "/fr/univnantes/termsuite/resources/";
 
 	private Class<?> resourceClass;
 	private String pathPattern;
@@ -141,20 +137,13 @@ public enum ResourceType {
 		}
 	}
 	
-	private static RelativePathResolver resolver = null;
-	private static RelativePathResolver getResolver() {
-		if(resolver == null)
-			resolver = new RelativePathResolver_impl(ResourceType.class.getClassLoader()); 
-		return resolver;
-	}
-	
 	public URL fromClasspath(Lang lang) {
 		URL url = fromClassPathUnchecked(lang);
 		return checkUrl(url);
 	}
 
 	public URL fromClassPathUnchecked(Lang lang) {
-		String classpathPath = TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang);
+		String classpathPath = DEFAULT_RESOURCE_URL_PREFIX + getPath(lang);
 		URL url = getClass().getResource(classpathPath);
 		return url;
 	}
@@ -175,7 +164,7 @@ public enum ResourceType {
 	}
 
 	public URL fromClassPathUnchecked(Lang lang, Tagger tagger) {
-		String classpathPath =TermSuiteConstants.DEFAULT_RESOURCE_URL_PREFIX + getPath(lang, tagger);
+		String classpathPath =DEFAULT_RESOURCE_URL_PREFIX + getPath(lang, tagger);
 		URL url = getClass().getResource(classpathPath);
 		return url;
 	}

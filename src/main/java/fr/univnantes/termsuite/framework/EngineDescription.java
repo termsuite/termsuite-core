@@ -1,24 +1,50 @@
 package fr.univnantes.termsuite.framework;
 
 import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+import com.google.common.base.Preconditions;
 
 public class EngineDescription {
+	private String engineName;
 	private Class<? extends TerminologyEngine> engineClass;
-	private Object[] parameters;
-	public EngineDescription(Class<? extends TerminologyEngine> engineClass, Object... parameters) {
+	private Map<Class<?>, Object> parameters;
+	
+	public EngineDescription(String name, Class<? extends TerminologyEngine> engineClass, Object... parameters) {
 		super();
+		checkEngineParameters(parameters);
+		this.engineName = name;
 		this.engineClass = engineClass;
-		this.parameters = parameters;
+		this.parameters = new HashMap<>();
+		for(Object o:parameters)
+			this.parameters.put(o.getClass(), o);
+	}
+
+	
+	
+	public void checkEngineParameters(Object... parameters) {
+		List<Class<?>> classesList = Arrays.stream(parameters).map(Object::getClass).collect(toList());
+		Preconditions.checkArgument(
+				classesList.size() == new HashSet<>(classesList).size(),
+				"All engine parameters must be of the same type. Got: %s", classesList);
 	}
 	
-	public Object[] getParameters() {
+	public Map<Class<?>, Object> getParameters() {
 		return parameters;
 	}
 	
 	public Class<? extends TerminologyEngine> getEngineClass() {
 		return engineClass;
+	}
+	
+	public String getEngineName() {
+		return engineName;
 	}
 	
 	@Override
@@ -29,14 +55,5 @@ public class EngineDescription {
 					.map(o-> String.format("%s=%s", o.getClass().getSimpleName(), o)
 							).collect(joining(", ")));
 	}
-	
-	public <T> EngineDescription bind(Class<T> cls, T instance) {
-		return this;
-	}
-
-	public EngineDescription bindNamed(String name, Object instance) {
-		return this;
-	}
-
 }
 

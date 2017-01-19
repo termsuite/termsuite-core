@@ -24,7 +24,6 @@ package fr.univnantes.termsuite.test.unit;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import fr.univnantes.termsuite.api.ExtractorConfigIO;
 import fr.univnantes.termsuite.test.termino.export.TsvExporterSpec;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
 import fr.univnantes.termsuite.test.unit.api.TraverserSpec;

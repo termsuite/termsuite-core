@@ -26,8 +26,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import javax.inject.Inject;
-
 import org.apache.commons.lang3.mutable.MutableDouble;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,6 +35,7 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Maps;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.AssociationRate;
@@ -61,7 +60,7 @@ public class Contextualizer extends TerminologyEngine {
 	
 	private Map<Document, DocumentView> documentViews;
 	
-	@Inject 
+	@Parameter
 	private ContextualizerOptions options;
 
 	public Contextualizer() {

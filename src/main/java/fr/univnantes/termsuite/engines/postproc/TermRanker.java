@@ -4,17 +4,16 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import javax.inject.Inject;
-
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 
 public class TermRanker extends TerminologyEngine {
 	
-	@Inject
-	private TermRankingOptions config = new TermRankingOptions();
+	@Parameter
+	private TermRankingOptions config;
 	
 	@Override
 	public void execute() {

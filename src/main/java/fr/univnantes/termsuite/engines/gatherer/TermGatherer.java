@@ -1,14 +1,13 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
-import javax.inject.Inject;
-
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class TermGatherer extends AggregateTerminologyEngine {
 
-	@Inject
-	private GathererOptions gathererOptions = new GathererOptions();
+	@Parameter
+	private GathererOptions gathererOptions;
 	
 	@Override
 	public void configure() {

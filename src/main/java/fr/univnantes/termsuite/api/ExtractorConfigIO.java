@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.api;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.nio.file.Path;
 
@@ -11,9 +12,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ExtractorConfigIO {
 
+	public static ExtractorOptions fromJson(InputStream stream) throws IOException {
+		return new ObjectMapper().readValue(stream, ExtractorOptions.class);
+	}
+	
 	public static ExtractorOptions fromJson(Path path) throws IOException {
-		ObjectMapper mapper = new ObjectMapper();
-		return mapper.readValue(path.toFile(), ExtractorOptions.class);
+		return new ObjectMapper().readValue(path.toFile(), ExtractorOptions.class);
 	}
 
 	public static void toJson(ExtractorOptions options, Path path) throws IOException {

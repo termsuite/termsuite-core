@@ -1,12 +1,11 @@
 package fr.univnantes.termsuite.engines.splitter;
 
-import javax.inject.Inject;
-
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.Parameter;
 
 public class MorphologicalAnalyzer extends AggregateTerminologyEngine {
 
-	@Inject
+	@Parameter
 	private MorphologicalOptions options;
 
 	@Override

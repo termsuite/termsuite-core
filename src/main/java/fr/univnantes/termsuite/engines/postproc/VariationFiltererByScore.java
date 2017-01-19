@@ -3,8 +3,7 @@ package fr.univnantes.termsuite.engines.postproc;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.inject.Inject;
-
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
@@ -13,7 +12,7 @@ import fr.univnantes.termsuite.resources.PostProcessorOptions;
 
 public class VariationFiltererByScore extends TerminologyEngine {
 
-	@Inject
+	@Parameter
 	private PostProcessorOptions config;
 
 	@Override

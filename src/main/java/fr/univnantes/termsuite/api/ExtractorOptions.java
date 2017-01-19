@@ -33,6 +33,11 @@ public class ExtractorOptions {
 	private TermRankingOptions rankingConfig = new TermRankingOptions();
 
 
+	
+	private ExtractorOptions() {
+		super();
+	}
+
 	public TerminoFilterOptions getPreFilterConfig() {
 		return preFilterConfig;
 	}
