@@ -90,7 +90,7 @@ public class TermSuiteResourceManager {
 
 	public URL getResourceURL(ResourceType resourceType) {
 		for(URL urlPrefix:config.getURLPrefixes()) {
-			URL candidateURL = resourceType.fromUrlPrefix(urlPrefix, lang);
+			URL candidateURL = resourceType.fromUrlPrefixUnchecked(urlPrefix, lang);
 			if(resourceExists(resourceType, urlPrefix, candidateURL))
 				return candidateURL;
 		}

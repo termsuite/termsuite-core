@@ -25,7 +25,11 @@ public class ResourceConfig {
 	
 	
 	public ResourceConfig addResourcePrefix(URL resourcePrefix) {
-		urlPrefixes.add(resourcePrefix);
+		try {
+			urlPrefixes.add(new URL(withEndingSlash(resourcePrefix.toString())));
+		} catch (MalformedURLException e) {
+			throw new TermSuiteException(e);
+		}
 		return this;
 	}
 
@@ -36,21 +40,24 @@ public class ResourceConfig {
 		Preconditions.checkArgument(
 				path.toFile().isDirectory(),
 				"Not a directory: %s", path);
-		String pathStr = path.endsWith(File.separator) ? "" : File.separator;
 		try {
-			URL urlPrefix = new URL("file:" + pathStr);
+			URL urlPrefix = new URL("file:" + withEndingSlash(path.toString()));
 			urlPrefixes.add(urlPrefix);
 		} catch (MalformedURLException e) {
 			throw new TermSuiteException(e);
 		}
 		return this;
 	}
+
+	public String withEndingSlash(String path) {
+		return path.toString() + (path.endsWith(File.separator) ? "" : File.separator);
+	}
 	
 	
 	public ResourceConfig addJar(Path path) {
 		Preconditions.checkArgument(
 				FileUtils.isJar(path.toString()),
-				"Not a jar: %s", path);
+				"Not a jar: %s (No META-INF/MANIFEST.MF found)", path);
 		try {
 			URL urlPrefix = new URL(String.format("jar:file:%s!/", path));
 			urlPrefixes.add(urlPrefix);

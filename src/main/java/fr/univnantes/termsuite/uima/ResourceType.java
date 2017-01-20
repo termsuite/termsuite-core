@@ -170,10 +170,13 @@ public enum ResourceType {
 	}
 
 	public URL fromUrlPrefix(URL prefix, Lang lang) {
-		URL url = resolve(prefix, lang, null);
-		return checkUrl(url);
+		return checkUrl(fromUrlPrefixUnchecked(prefix, lang));
 	}
 
+	public URL fromUrlPrefixUnchecked(URL prefix, Lang lang) {
+		URL url = resolve(prefix, lang, null);
+		return url;
+	}
 	
 	public URL fromUrlPrefix(URL prefix, Lang lang, Tagger tagger) {
 		URL url = resolve(prefix, lang, tagger);

@@ -197,7 +197,7 @@ public class Aligner {
 	}
 	
 	private Term readSourceTerm(String term) {
-		for(Term t:sourceTermino.get().getTerms()) {
+		for(Term t:sourceTermino.get().getTerms().values()) {
 			if(t.getGroupingKey().equals(term)
 					|| t.getPilot().equals(term)
 					|| t.getLemma().equals(term)

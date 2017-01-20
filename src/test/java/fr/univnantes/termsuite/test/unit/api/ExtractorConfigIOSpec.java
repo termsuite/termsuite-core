@@ -30,7 +30,7 @@ public class ExtractorConfigIOSpec {
 		assertThat(json)
 			.contains("\"property\" : \"SPECIFICITY\"")
 			.contains("\"top-n\" : 156")
-			.contains("\"association-rate\" : \"fr.univnantes.termsuite.metrics.MutualInformation\"")
+			.contains("\"association-rate\" : \"fr.univnantes.termsuite.engines.contextualizer.MutualInformation\"")
 			;
 	}
 	

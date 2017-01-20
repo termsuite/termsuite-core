@@ -34,6 +34,8 @@ import fr.univnantes.termsuite.framework.modules.ExtractorModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
+import fr.univnantes.termsuite.test.unit.api.PreprocessorSpec;
+import fr.univnantes.termsuite.test.unit.api.ResourceConfigSpec;
 import fr.univnantes.termsuite.test.unit.api.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.unit.api.TraverserSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpec;
@@ -49,7 +51,7 @@ import fr.univnantes.termsuite.test.unit.engines.postproc.VariantScorerSpec;
 import fr.univnantes.termsuite.test.unit.engines.splitter.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.engines.splitter.SuffixDerivationExceptionSetterSpec;
 import fr.univnantes.termsuite.test.unit.export.TsvExporterSpec;
-import fr.univnantes.termsuite.test.unit.framework.PreprocessingPipelineBuilderSpec;
+import fr.univnantes.termsuite.test.unit.framework.TermSuiteResourceManagerSpec;
 import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
 import fr.univnantes.termsuite.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
@@ -82,6 +84,8 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	ExtractorConfigIOSpec.class,
 	TerminoExtractorSpec.class,
 	TraverserSpec.class,
+	PreprocessorSpec.class,
+	ResourceConfigSpec.class,
 	
 	/*
 	 * Engines
@@ -103,7 +107,7 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	/*
 	 * Framework
 	 */
-	PreprocessingPipelineBuilderSpec.class,
+	TermSuiteResourceManagerSpec.class,
 
 	/*
 	 * IO
