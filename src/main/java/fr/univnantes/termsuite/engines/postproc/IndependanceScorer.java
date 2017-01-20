@@ -33,7 +33,7 @@ public class IndependanceScorer extends TerminologyEngine {
 		return extensions;
 	}
 
-	private void checkNoCycleInExtensions() {
+	public void checkNoCycleInExtensions() {
 		Predicate<TermRelation> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
 		if(terminology.extensions().filter(badExtension).findFirst().isPresent()) {
 			terminology.extensions()

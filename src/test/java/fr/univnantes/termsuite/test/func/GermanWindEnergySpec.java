@@ -182,7 +182,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermWindenergie() {
-		assertThat(termino.getTermByGroupingKey("n: windenergie"))
+		assertThat(termino.getTerms().get("n: windenergie"))
 				.hasFrequency(588)
 				.hasGroupingKey("n: windenergie")
 				.isCompound()
@@ -194,7 +194,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermSelbstverständlich() {
-		assertThat(termino.getTermByGroupingKey("a: selbstverständlich"))
+		assertThat(termino.getTerms().get("a: selbstverständlich"))
 		.hasFrequency(3)
 		.hasGroupingKey("a: selbstverständlich")
 		.isCompound()
@@ -207,7 +207,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHochwert() {
-		Term term = termino.getTermByGroupingKey("a: hochwert");
+		Term term = termino.getTerms().get("a: hochwert");
 		
 		assertThat(term)
 			.isCompound()
@@ -220,7 +220,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermElektromagnetisch() {
-		Term term = termino.getTermByGroupingKey("a: elektromagnetisch");
+		Term term = termino.getTerms().get("a: elektromagnetisch");
 		
 		assertThat(term)
 			.isCompound()
@@ -231,7 +231,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermWasserkraftwerke() {
-		Term term = termino.getTermByGroupingKey("a: wasserkraftwerke");
+		Term term = termino.getTerms().get("a: wasserkraftwerke");
 		
 		assertThat(term)
 			.isCompound()
@@ -244,7 +244,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHydrothermale() {
-		Term term = termino.getTermByGroupingKey("a: hydrothermale");
+		Term term = termino.getTerms().get("a: hydrothermale");
 		
 		assertThat(term)
 			.isCompound()

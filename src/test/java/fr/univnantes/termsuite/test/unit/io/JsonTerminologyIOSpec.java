@@ -156,10 +156,10 @@ public class JsonTerminologyIOSpec {
 		
 		assertEquals(111, termino2.getSpottedTermsNum());
 		assertEquals(222, termino2.getWordAnnotationsNum());
-		assertThat(termino2.getTerms()).hasSameElementsAs(termino.getTerms());
+		assertThat(termino2.getTerms().values()).hasSameElementsAs(termino.getTerms().values());
 		assertThat(termino2.getWords()).hasSameElementsAs(termino.getWords());
-		for(Term t:termino.getTerms()) {
-			Term t2 = termino2.getTermByGroupingKey(t.getGroupingKey());
+		for(Term t:termino.getTerms().values()) {
+			Term t2 = termino2.getTerms().get(t.getGroupingKey());
 			assertThat(termino2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(termino.getOccurrenceStore().getOccurrences(t));
 			assertThat(termino2.getOutboundRelations(t2)).hasSameElementsAs(termino.getOutboundRelations(t));
 			assertThat(termino2.getInboundRelations(t2)).hasSameElementsAs(termino.getInboundRelations(t));
@@ -222,22 +222,22 @@ public class JsonTerminologyIOSpec {
 		assertEquals(456, termino.getSpottedTermsNum());
 
 		// test term rank
-		assertThat(termino.getTerms()).hasSize(3)
+		assertThat(termino.getTerms().values()).hasSize(3)
 		.extracting("rank")
 		.containsOnly(1, 2, 3)
 		;
 
 		
 		// test terms
-		assertThat(termino.getTerms()).hasSize(3)
+		assertThat(termino.getTerms().values()).hasSize(3)
 			.extracting("groupingKey")
 			.containsOnly("na: word1 word2", "n: word1", "a: word2")
 			;
 		
 		// test terms
-		Term t1 = termino.getTermByGroupingKey("na: word1 word2");
-		Term t2 = termino.getTermByGroupingKey("n: word1");
-		Term t3 = termino.getTermByGroupingKey("a: word2");
+		Term t1 = termino.getTerms().get("na: word1 word2");
+		Term t2 = termino.getTerms().get("n: word1");
+		Term t3 = termino.getTerms().get("a: word2");
 		assertThat(t1.getSpecificity()).isCloseTo(0.321d, offset(0.000001d));
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));

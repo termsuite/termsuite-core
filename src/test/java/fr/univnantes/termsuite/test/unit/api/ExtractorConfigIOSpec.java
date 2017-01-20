@@ -9,9 +9,11 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.api.ExtractorConfigIO;
 import fr.univnantes.termsuite.api.ExtractorOptions;
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
-import fr.univnantes.termsuite.metrics.LogLikelihood;
-import fr.univnantes.termsuite.metrics.MutualInformation;
+import fr.univnantes.termsuite.engines.contextualizer.LogLikelihood;
+import fr.univnantes.termsuite.engines.contextualizer.MutualInformation;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
@@ -20,7 +22,7 @@ public class ExtractorConfigIOSpec {
 	
 	@Test
 	public void testToJson() {
-		ExtractorOptions opts = new ExtractorOptions();
+		ExtractorOptions opts = TermSuite.getDefaultExtractorConfig(Lang.EN);
 		opts.getContextualizerOptions().setAssociationRate(MutualInformation.class);
 		opts.getPreFilterConfig().by(TermProperty.SPECIFICITY).keepTopN(156);
 		String json = ExtractorConfigIO.toJson(opts);

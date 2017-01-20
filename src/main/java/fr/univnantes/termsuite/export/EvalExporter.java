@@ -26,7 +26,7 @@ public class EvalExporter {
 
 	private void doExport() {
 		try {
-			for(Term t: termino.getTerms()) {
+			for(Term t: termino.getTerms().values()) {
 				if(this.withVariants) {
 					for (TermRelation v : termino.getOutboundRelations(t))
 							writer.write(v.getTo().getGroupingKey() + "#");

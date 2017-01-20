@@ -25,6 +25,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -75,7 +76,7 @@ public class MemoryTerminology implements Terminology {
 	 * this level of index. They me be indexed from their base-term
 	 * instead. 
 	 */
-	private ConcurrentMap<String, Term> termsByGroupingKey = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, Term> terms = new ConcurrentHashMap<>();
 	private ConcurrentMap<String, CustomTermIndex> customIndexes = new ConcurrentHashMap<>();
 	private ConcurrentMap<String, Word> wordIndex = new ConcurrentHashMap<>();
 	private Multimap<Term, TermRelation> outboundVariations = Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
@@ -98,19 +99,20 @@ public class MemoryTerminology implements Terminology {
 		this.occurrenceStore = occurrenceStore;
 	}
 	
+	
 	@Override
 	public void addTerm(Term term) {
 		Preconditions.checkArgument(
-				!this.termsByGroupingKey.containsKey(term.getGroupingKey()));
+				!this.terms.containsKey(term.getGroupingKey()));
 
-		this.termsByGroupingKey.put(term.getGroupingKey(), term);
+		this.terms.put(term.getGroupingKey(), term);
 		for(CustomTermIndex index:this.customIndexes.values())
 			index.indexTerm(this, term);
 		for(TermWord tw:term.getWords()) {
 			privateAddWord(tw.getWord(), false);
 			if(!tw.isSwt())
 				// try to set swt manually
-				tw.setSwt(termsByGroupingKey.containsKey(TermUtils.toGroupingKey(tw)));
+				tw.setSwt(terms.containsKey(TermUtils.toGroupingKey(tw)));
 		}
 	}
 
@@ -128,8 +130,8 @@ public class MemoryTerminology implements Terminology {
 	}
 
 	@Override
-	public Collection<Term> getTerms() {
-		return Collections.unmodifiableCollection(this.termsByGroupingKey.values());
+	public Map<String, Term> getTerms() {
+		return this.terms;
 	}
 
 	@Override
@@ -154,7 +156,7 @@ public class MemoryTerminology implements Terminology {
 		this.customIndexes.put(indexName, customIndex);
 
 		LOGGER.debug("Indexing {} terms to index {}", this.getTerms().size(), indexName);
-		this.getTerms().parallelStream().forEach(t->{
+		this.getTerms().values().parallelStream().forEach(t->{
 			customIndex.indexTerm(this, t);
 		}); 
 		return customIndex;
@@ -170,15 +172,11 @@ public class MemoryTerminology implements Terminology {
 		return this.wordIndex.values();
 	}
 
-	@Override
-	public Term getTermByGroupingKey(String groupingKey) {
-		return this.termsByGroupingKey.get(groupingKey);
-	}
 	
 	@Override
 	public void cleanOrphanWords() {
 		Set<String> usedWordLemmas = Sets.newHashSet();
-		for(Term t:getTerms()) {
+		for(Term t:getTerms().values()) {
 			for(TermWord tw:t.getWords())
 				usedWordLemmas.add(tw.getWord().getLemma());
 		}
@@ -198,7 +196,7 @@ public class MemoryTerminology implements Terminology {
 	}
 
 	private void removeTermOnly(Term t) {
-		termsByGroupingKey.remove(t.getGroupingKey());
+		terms.remove(t.getGroupingKey());
 		
 		// remove from custom indexes
 		for(CustomTermIndex customIndex:customIndexes.values())
@@ -219,7 +217,7 @@ public class MemoryTerminology implements Terminology {
 		 * 
 		 */
 		if(t.getContext() != null) {
-			for(Term o:termsByGroupingKey.values()) {
+			for(Term o:terms.values()) {
 				if(o.getContext() != null)
 					o.getContext().removeCoTerm(t);
 			}
@@ -240,7 +238,7 @@ public class MemoryTerminology implements Terminology {
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this).addValue(name)
-				.add("terms", this.termsByGroupingKey.size())
+				.add("terms", this.terms.size())
 				.toString();
 	}
 	

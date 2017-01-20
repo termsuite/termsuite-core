@@ -233,7 +233,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermElectromagnec() {
-		Term term = termino.getTermByGroupingKey("a: electromagnetic");
+		Term term = termino.getTerms().get("a: electromagnetic");
 		
 		assertThat(term)
 			.isCompound()
@@ -243,7 +243,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testSWTFlagSet() {
-		Term term = termino.getTermByGroupingKey("npn: power of wind");
+		Term term = termino.getTerms().get("npn: power of wind");
 		assertTrue(term.getWords().get(0).isSwt());
 		assertFalse(term.getWords().get(1).isSwt());
 		assertTrue(term.getWords().get(2).isSwt());
@@ -251,8 +251,8 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHorizontalAxis() {
-		Term morph = termino.getTermByGroupingKey("n: horizontal-axis");
-		Term syntag = termino.getTermByGroupingKey("an: horizontal axis");
+		Term morph = termino.getTerms().get("n: horizontal-axis");
+		Term syntag = termino.getTerms().get("an: horizontal axis");
 
 		assertThat(morph)
 			.isCompound();
@@ -276,7 +276,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermHydroelectric() {
-		Term term = termino.getTermByGroupingKey("a: hydroelectric");
+		Term term = termino.getTerms().get("a: hydroelectric");
 		
 		assertThat(term)
 			.isCompound()
@@ -303,7 +303,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testTermHighSpeed() {
-		Term term = termino.getTermByGroupingKey("a: high-speed");
+		Term term = termino.getTerms().get("a: high-speed");
 		assertThat(term)
 			.hasFrequency(6);
 		
@@ -325,7 +325,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testWindTurbine() {
-		assertThat(termino.getTermByGroupingKey("nn: wind turbine"))
+		assertThat(termino.getTerms().get("nn: wind turbine"))
 				.hasFrequency(1852)
 				.hasGroupingKey("nn: wind turbine");
 	}

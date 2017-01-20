@@ -82,7 +82,7 @@ public class TermFactory {
 	private void termsExist(Term... terms) {
 		for(Term t:terms)
 			Preconditions.checkArgument(
-					this.termino.getTermByGroupingKey(t.getGroupingKey()) != null,
+					this.termino.getTerms().containsKey(t.getGroupingKey()),
 					"Term %s does not exists in term index",
 					t.getGroupingKey());
 	}
@@ -119,6 +119,6 @@ public class TermFactory {
 	}
 
 	public void setProperty(TermProperty p, Comparable<?> value) {
-		this.termino.getTerms().stream().forEach(t-> t.setProperty(p, value));
+		this.termino.getTerms().values().stream().forEach(t-> t.setProperty(p, value));
 	}
 }

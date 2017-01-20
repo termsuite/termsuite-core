@@ -49,7 +49,7 @@ public class VariationExporter {
 	public void doExport() {
 		try {
 			Multimap<Term,TermRelation> acceptedVariations = HashMultimap.create();
-			for(Term t:termino.getTerms()) {
+			for(Term t:termino.getTerms().values()) {
 				for(TermRelation v:termino.getOutboundRelations(t)) {
 					if(this.variationTypes.isEmpty())
 							acceptedVariations.put(t, v);

@@ -12,7 +12,7 @@
     "enabled" : false,
     "scope" : 3,
     "coocc-frequency-th" : 2,
-    "association-rate" : "fr.univnantes.termsuite.metrics.LogLikelihood"
+    "association-rate" : "fr.univnantes.termsuite.engines.contextualizer.LogLikelihood"
   },
   "morphology" : {
     "enabled" : true,

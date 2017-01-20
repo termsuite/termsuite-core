@@ -34,26 +34,14 @@ import java.nio.file.Paths;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.uima.UIMAException;
-import org.apache.uima.analysis_component.AnalysisComponent;
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ExternalResourceDescription;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.mockito.Mockito;
 
-import com.google.common.collect.ObjectArrays;
-
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
-import fr.univnantes.termsuite.uima.resources.termino.TerminologyResource;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TestUtil {
-
 	
 	public static RegexOccurrence createOccurrence(int begin, int end, String lemma) {
 		RegexOccurrence o = Mockito.mock(RegexOccurrence.class);
@@ -116,28 +104,6 @@ public class TestUtil {
 		InputStream is = TestUtil.class.getClassLoader().getResourceAsStream(file);
 		return is;
 	}
-	
-	public static AnalysisEngine createAE(Terminology termino, Class<? extends AnalysisComponent> cls, Object... config) {
-		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		manager.clear();
-
-		ExternalResourceDescription terminoResourceDesc = ExternalResourceFactory.createExternalResourceDescription(
-				TerminologyResource.class, 
-				termino.getName());
-		
-		
-		manager.register(termino.getName(), termino);
-		
-		Object[] config2 = ObjectArrays.concat(config, new Object[]{
-				TerminologyResource.TERMINOLOGY, terminoResourceDesc
-		}, Object.class);
-		try {
-			return AnalysisEngineFactory.createEngine(cls, config2);
-		} catch (ResourceInitializationException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
 	
 	public static JCas createJCas() {
 		try {

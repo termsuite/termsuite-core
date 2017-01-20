@@ -8,6 +8,7 @@ import com.google.common.base.Preconditions;
 import com.google.inject.MembersInjector;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public class ResourceInjector<T> implements MembersInjector<T> {

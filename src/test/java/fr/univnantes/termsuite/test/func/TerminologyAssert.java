@@ -67,7 +67,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	}
 
 	public TerminologyAssert containsTerm(String expectedTerm, int frequency) {
-		for(Term t:actual.getTerms()) {
+		for(Term t:actual.getTerms().values()) {
 			if(t.getGroupingKey().equals(expectedTerm)) {
 				if(t.getFrequency() != frequency)
 					failWithMessage("Expected frequency for term %s was <%s>, but actually is: <%s>.",
@@ -82,7 +82,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	}
 	
 	public TerminologyAssert containsTerm(String expectedTerm) {
-		for(Term t:actual.getTerms()) {
+		for(Term t:actual.getTerms().values()) {
 			if(t.getGroupingKey().equals(expectedTerm))
 				return this;
 		}
@@ -92,7 +92,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	}
 	
 	public TerminologyAssert doesNotContainTerm(String expectedTerm) {
-		for(Term t:actual.getTerms()) {
+		for(Term t:actual.getTerms().values()) {
 			if(t.getGroupingKey().equals(expectedTerm)) {
 				failWithMessage("Expected term <%s> to be absent from term index, but is actually present.", expectedTerm);
 				return this;
@@ -107,7 +107,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
-		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
+		Term baseTerm = actual.getTerms().get(baseGroupingKey);
 		for(TermRelation tv:actual.getOutboundRelations(baseTerm, relation)) {
 			if(tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
@@ -127,7 +127,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 		
-		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
+		Term baseTerm = actual.getTerms().get(baseGroupingKey);
 		for(TermRelation tv:actual.getOutboundRelations(baseTerm, RelationType.VARIATION)) {
 			if(tv.isPropertySet(RelationProperty.VARIATION_TYPE)
 					&& tv.get(RelationProperty.VARIATION_TYPE) == type
@@ -147,7 +147,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(fromKey))
 			return this;
 		
-		Term baseTerm = actual.getTermByGroupingKey(fromKey);
+		Term baseTerm = actual.getTerms().get(fromKey);
 		for(TermRelation tv:actual.getOutboundRelations(baseTerm, types))
 			return this;
 		
@@ -163,7 +163,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(toKey))
 			return this;
 		
-		Term term = actual.getTermByGroupingKey(toKey);
+		Term term = actual.getTerms().get(toKey);
 		for(TermRelation tv:actual.getInboundRelations(term, types))
 			return this;
 		
@@ -177,7 +177,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	private boolean failToFindTerms(String... groupingKeys) {
 		boolean failed = false;
 		for(String gKey:groupingKeys) {
-			if(actual.getTermByGroupingKey(gKey) == null) {
+			if(actual.getTerms().get(gKey) == null) {
 				failed = true;
 				failWithMessage("Could not find term <%s> in termino", gKey);
 			}
@@ -189,7 +189,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
-		Term baseTerm = actual.getTermByGroupingKey(baseGroupingKey);
+		Term baseTerm = actual.getTerms().get(baseGroupingKey);
 		for(TermRelation tv:actual.getOutboundRelations(baseTerm, RelationType.VARIATION)) {
 			if(tv.get(RelationProperty.VARIATION_TYPE) == type
 					&& tv.isPropertySet(p)
@@ -336,7 +336,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 
 	public TerminologyAssert hasExpectedCompounds(Path diffFileIfFail, Tuple... expectedTuples) {
 		CompoundTupleExtractor compoundTupleExtractor = new CompoundTupleExtractor();
-		Set<Tuple> actualTuples = actual.getTerms().stream()
+		Set<Tuple> actualTuples = actual.getTerms().values().stream()
 			.filter(Term::isCompound)
 			.map(compoundTupleExtractor::extract)
 			.collect(Collectors.toSet());
@@ -434,7 +434,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(fromKey))
 			return this;
 
-		long actualCnt = actual.getOutboundRelations(actual.getTermByGroupingKey(fromKey), types).size();
+		long actualCnt = actual.getOutboundRelations(actual.getTerms().get(fromKey), types).size();
 		if(actualCnt != expected) {
 			failWithMessage("Expected <%s> relations%s from term %s. Got <%s>", 
 					expected,
@@ -450,7 +450,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		if(failToFindTerms(toKey))
 			return this;
 
-		long actualCnt = actual.getInboundRelations(actual.getTermByGroupingKey(toKey), types).size();
+		long actualCnt = actual.getInboundRelations(actual.getTerms().get(toKey), types).size();
 		if(actualCnt != expected) {
 			failWithMessage("Expected <%s> relations%s to term %s. Got <%s>", 
 					expected,

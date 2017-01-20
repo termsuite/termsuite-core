@@ -425,8 +425,8 @@ public class JsonTerminologyIO {
 					
 					Preconditions.checkNotNull(base, MSG_EXPECT_PROP_FOR_VAR, FROM);
 					Preconditions.checkNotNull(variant, MSG_EXPECT_PROP_FOR_VAR, TO);
-					b = termino.getTermByGroupingKey(base);
-					v = termino.getTermByGroupingKey(variant);
+					b = termino.getTerms().get(base);
+					v = termino.getTerms().get(variant);
 					if(b != null && v != null) {
 						
 						RelationType vType = RelationType.fromShortName(relationType);
@@ -463,10 +463,10 @@ public class JsonTerminologyIO {
 			ContextVector contextVector;
 			for(String groupingKey:contextVectors.keySet()) {
 				currentTempVecList = contextVectors.get(groupingKey);
-				term = termino.getTermByGroupingKey(groupingKey);
+				term = termino.getTerms().get(groupingKey);
 				contextVector = new ContextVector(term);
 				for(TempVecEntry tempVecEntry:currentTempVecList) {
-					coTerm = termino.getTermByGroupingKey(tempVecEntry.getTermGroupingKey());
+					coTerm = termino.getTerms().get(tempVecEntry.getTermGroupingKey());
 					contextVector.addEntry(coTerm, tempVecEntry.getNbCooccs(), tempVecEntry.getAssocRate());
 				}
 				if(!contextVector.getEntries().isEmpty())
@@ -632,7 +632,7 @@ public class JsonTerminologyIO {
 		
 		jg.writeFieldName(TERMS);
 		jg.writeStartArray();
-		for(Term t:termino.getTerms()) {
+		for(Term t:termino.getTerms().values()) {
 			jg.writeStartObject();
 			jg.writeFieldName(PROPERTIES);
 			jg.writeStartObject();

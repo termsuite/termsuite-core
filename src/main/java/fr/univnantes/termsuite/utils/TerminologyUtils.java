@@ -54,7 +54,7 @@ public class TerminologyUtils {
 
 	public static Collection<Term> selectCompounds(Terminology termino) {
 		Set<Term> compounds = Sets.newHashSet();
-		for(Term t:termino.getTerms())
+		for(Term t:termino.getTerms().values())
 			if(t.isSingleWord() && t.isCompound())
 				compounds.add(t);
 		return compounds;

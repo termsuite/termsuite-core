@@ -3,8 +3,8 @@ package fr.univnantes.termsuite.test.unit.api;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.startsWith;
 
-import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 
-import com.google.common.collect.Lists;
+import com.google.common.collect.ImmutableMap;
 
 import fr.univnantes.termsuite.api.Traverser;
 import fr.univnantes.termsuite.model.Term;
@@ -21,7 +21,7 @@ import fr.univnantes.termsuite.test.unit.TermFactory;
 
 public class TraverserSpec {
 	Terminology termino;
-	Collection<Term> terms;
+	Map<String, Term> terms;
 	Term term1, term2, term3;
 	
 	@Before
@@ -30,10 +30,10 @@ public class TraverserSpec {
 		term1 = TermFactory.termMock("t1", 1, 3, 0.8);
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
-		terms = Lists.newArrayList(
-				term1,
-				term2,
-				term3
+		terms = ImmutableMap.of(
+				"t1", term1,
+				"t2", term2,
+				"t3", term3
 			);
 		Mockito.when(termino.getTerms()).thenReturn(terms);
 	}

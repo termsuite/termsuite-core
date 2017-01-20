@@ -47,7 +47,7 @@ public class VariantEvalExporter {
 		try {
 			int rank = 0;
 			int variantCnt = 0;
-			for(Term t:termino.getTerms()) {
+			for(Term t:termino.getTerms().values()) {
 				if(!termino.getOutboundRelations(t).isEmpty())
 					continue;
 				printBase(++rank, t);

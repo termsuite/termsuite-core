@@ -85,7 +85,7 @@ public class TermValueProviders {
 		public Collection<String> getClasses(Terminology termino, Term term) {
 			List<String> swtGroupingKeys = Lists.newArrayListWithCapacity(term.getWords().size());
 			for(TermWord tw:term.getWords()) {
-				if(termino.getTermByGroupingKey(TermUtils.toGroupingKey(tw)) != null) 
+				if(termino.getTerms().get(TermUtils.toGroupingKey(tw)) != null) 
 					swtGroupingKeys.add(tw.toGroupingKey());
 			}
 			return swtGroupingKeys;
@@ -208,7 +208,7 @@ public class TermValueProviders {
 	private static Collection<String> toRelationPairs(Terminology termino, Term term, RelationType relType) {
 		Set<TermRelation> prefixations = new HashSet<>();
 		for(TermWord tw:term.getWords()) {
-			Term t =termino.getTermByGroupingKey(TermUtils.toGroupingKey(tw));
+			Term t =termino.getTerms().get(TermUtils.toGroupingKey(tw));
 			if(t!=null) {
 				prefixations.addAll(termino.getInboundRelations(t, relType));
 				prefixations.addAll(termino.getOutboundRelations(t, relType));

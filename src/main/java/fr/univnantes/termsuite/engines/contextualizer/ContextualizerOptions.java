@@ -2,9 +2,6 @@ package fr.univnantes.termsuite.engines.contextualizer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import fr.univnantes.termsuite.metrics.AssociationRate;
-import fr.univnantes.termsuite.metrics.LogLikelihood;
-
 public class ContextualizerOptions  {
 
 	private boolean enabled = false;

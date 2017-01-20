@@ -76,7 +76,7 @@ public class TermUtils {
 	}
 		
 	public static void showIndex(Terminology index, PrintStream stream, Optional<Pattern> watchExpression) {
-		for(Term term:index.getTerms()) {
+		for(Term term:index.getTerms().values()) {
 			if(!watchExpression.isPresent()
 					|| (watchExpression.isPresent() && watchExpression.get().matcher(term.getGroupingKey()).find())
 					) {
@@ -91,7 +91,7 @@ public class TermUtils {
 
 	public static void showCompounds(Terminology index, PrintStream out, int threshhold) {
 		List<Term> terms = Lists.newArrayList();
-		for(Term term:index.getTerms()) {
+		for(Term term:index.getTerms().values()) {
 			if(term.isCompound() && term.getFrequency() >= threshhold)
 				terms.add(term);
 		}
@@ -121,7 +121,7 @@ public class TermUtils {
 	public static List<Term> getSingleWordTerms(Terminology termino, Term term) {
 		List<Term> terms = Lists.newArrayList();
 		for(TermWord tw:term.getWords()) {
-			Term swt = termino.getTermByGroupingKey(toGroupingKey(tw));
+			Term swt = termino.getTerms().get(toGroupingKey(tw));
 			if(swt != null)
 				terms.add(swt);
 		}
@@ -256,13 +256,11 @@ public class TermUtils {
 	 * 			biggest possible prefix sequence for <code>words</code>.
 	 */
 	public static Term findBiggestPrefix(TerminologyService terminologyService, List<TermWord> words) {
-		Term t;
 		String gKey;
 		for(int i = words.size(); i > 0 ; i--) {
 			gKey = TermSuiteUtils.getGroupingKey(words.subList(0, i));
-			t = terminologyService.getTerm(gKey);
-			if(t!=null)
-				return t;
+			if(terminologyService.containsTerm(gKey))
+				return terminologyService.getTerm(gKey);
 		}
 		return null;
 	}
@@ -282,13 +280,11 @@ public class TermUtils {
 
 	 */
 	public static Term findBiggestSuffix(TerminologyService terminologyService, List<TermWord> words) {
-		Term t;
 		String gKey;
 		for(int i = 0; i < words.size() ; i++) {
 			gKey = TermSuiteUtils.getGroupingKey(words.subList(i, words.size()));
-			t = terminologyService.getTerm(gKey);
-			if(t!=null)
-				return t;
+			if(terminologyService.containsTerm(gKey))
+				return terminologyService.getTerm(gKey);
 		}
 		return null;
 	}

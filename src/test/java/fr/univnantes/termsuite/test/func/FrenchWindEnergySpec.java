@@ -165,7 +165,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void testCheckTerms() {
-		assertThat(termino.getTerms())
+		assertThat(termino.getTerms().values())
 			.extracting("groupingKey")
 			.contains(
 					"n: tourbillon"
@@ -176,7 +176,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermHydroelectrique() {
-		Term term = termino.getTermByGroupingKey("a: hydroélectrique");
+		Term term = termino.getTerms().get("a: hydroélectrique");
 		
 		assertThat(term)
 			.isCompound()
@@ -189,7 +189,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermElectromagnetique() {
-		Term term = termino.getTermByGroupingKey("a: électromagnétique");
+		Term term = termino.getTerms().get("a: électromagnétique");
 		
 		assertThat(term)
 			.isCompound()
@@ -199,7 +199,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermVitesseDeRotation() {
-		Term term = termino.getTermByGroupingKey("npn: vitesse de rotation");
+		Term term = termino.getTerms().get("npn: vitesse de rotation");
 		assertThat(term)
 			.hasFrequency(311);
 		
@@ -218,7 +218,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testTermEolienne() {
-		assertThat(termino.getTermByGroupingKey("n: éolienne"))
+		assertThat(termino.getTerms().get("n: éolienne"))
 				.hasFrequency(1147)
 				.hasGroupingKey("n: éolienne");
 	}

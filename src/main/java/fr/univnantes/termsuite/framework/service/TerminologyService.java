@@ -64,11 +64,11 @@ public class TerminologyService {
 	}
 
 	public Collection<Term> getTerms() {
-		return termino.getTerms();
+		return termino.getTerms().values();
 	}
 
 	public Stream<Term> terms() {
-		return termino.getTerms().stream();
+		return termino.getTerms().values().stream();
 	}
 
 	public Stream<TermRelation> relations(Term from, Term to) {
@@ -151,9 +151,9 @@ public class TerminologyService {
 		return variations(getTerm(fromKey), getTerm(toKey));
 	}
 
+	private static final String MSG_TERM_NOT_FOUND = "No such term with key %s";
 	public Term getTerm(String toKey) {
-		Term to = termino.getTermByGroupingKey(toKey);
-		String MSG_TERM_NOT_FOUND = "No such term with key %s";
+		Term to = termino.getTerms().get(toKey);
 		Preconditions.checkNotNull(to, MSG_TERM_NOT_FOUND, toKey);
 		return to;
 	}
@@ -219,7 +219,7 @@ public class TerminologyService {
 	
 		try {
 			addTermMutex.acquire();
-			Term term = this.termino.getTermByGroupingKey(termGroupingKey);
+			Term term = this.termino.getTerms().get(termGroupingKey);
 			if(term == null) {
 				TermBuilder builder = TermBuilder.start();
 				for (int i = 0; i < pattern.length; i++)
@@ -267,5 +267,9 @@ public class TerminologyService {
 
 	public Lang getLang() {
 		return this.termino.getLang();
+	}
+
+	public boolean containsTerm(String gKey) {
+		return this.termino.getTerms().containsKey(gKey);
 	}
 }

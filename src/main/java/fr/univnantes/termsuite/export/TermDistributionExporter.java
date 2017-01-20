@@ -39,7 +39,7 @@ public class TermDistributionExporter {
 			writer.write(termProperties.stream().map(TermProperty::getShortName).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
-			for(Term t: termino.getTerms()) {
+			for(Term t: termino.getTerms().values()) {
 				if(!selector.test(t))
 					continue;
 				

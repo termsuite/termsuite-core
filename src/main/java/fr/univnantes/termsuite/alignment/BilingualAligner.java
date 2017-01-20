@@ -46,9 +46,9 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
-import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.metrics.ExplainedValue;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
@@ -265,7 +265,7 @@ public class BilingualAligner {
 		 */
 		Map<Term, Term> targetCandidatesBySWTExtension = Maps.newHashMap();
 		Set<Term> targetCandidatesHavingSameAffix = Sets.newHashSet();
-		for(Term targetCandidate:targetTermino.getTerms()) {
+		for(Term targetCandidate:targetTermino.getTerms().values()) {
 			Word targetCompound = targetCandidate.getWords().get(0).getWord();
 			if(targetCandidate.isCompound() && targetCompound.getCompoundType() == CompoundType.NEOCLASSICAL) {
 				String targetNeoclassicalAffixString = WordUtils.getComponentSubstring(targetCompound, targetCompound.getNeoclassicalAffix());
@@ -368,7 +368,7 @@ public class BilingualAligner {
 		ExplainedValue v;
 		int nbVectorsNotComputed = 0;
 		int nbVectorsComputed = 0;
-		for(Term targetTerm:targetTermino.getTerms().stream().filter(t->t.getWords().size()==1).collect(Collectors.toList())) {
+		for(Term targetTerm:targetTermino.getTerms().values().stream().filter(t->t.getWords().size()==1).collect(Collectors.toList())) {
 			if(targetTerm.getFrequency() < minCandidateFrequency)
 				continue;
 			if(targetTerm.getContext() != null) {
@@ -760,7 +760,8 @@ public class BilingualAligner {
 		if(!ensuredExtensionsAreComputed) {
 			if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 				Stopwatch sw = Stopwatch.createStarted();
-				new ExtensionDetecter().detectExtensions(new TerminologyService(termino));
+				ExtensionDetecter extensionDetector = TermSuite.createEngine(ExtensionDetecter.class, termino);
+				extensionDetector.execute();
 				sw.stop();
 				LOGGER.info("Term extensions detected in {} [{} terms, {} HAS_EXTENSION relations found]", 
 						sw, 
@@ -827,10 +828,7 @@ public class BilingualAligner {
 		if(sum > 0d) 
 			for(TranslationCandidate cand:candidates)
 				cand.setScore(cand.getScore()/sum);
-			
 	}
-
-
 
 	public BilingualDictionary getDico() {
 		return this.dico;

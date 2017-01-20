@@ -42,7 +42,7 @@ public class CompoundExporter {
 		try {
 			Multimap<Word,Term> terms = HashMultimap.create();
 			Set<Word> compounds = Sets.newHashSet();
-			for(Term t:termino.getTerms()) {
+			for(Term t:termino.getTerms().values()) {
 				Word w = t.getWords().get(0).getWord();
 				if(t.getWords().size() == 1 && w.isCompound()) {
 					compounds.add(w);

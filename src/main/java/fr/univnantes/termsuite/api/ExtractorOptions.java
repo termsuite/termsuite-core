@@ -33,7 +33,9 @@ public class ExtractorOptions {
 	private TermRankingOptions rankingConfig = new TermRankingOptions();
 
 
-	
+	/*
+	 * Ensure it is only instanciated through default JSON config in classpath
+	 */
 	private ExtractorOptions() {
 		super();
 	}

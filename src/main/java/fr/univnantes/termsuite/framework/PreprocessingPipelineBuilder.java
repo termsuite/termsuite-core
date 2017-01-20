@@ -50,6 +50,7 @@ import fr.univnantes.lina.uima.models.TreeTaggerParameter;
 import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
 import fr.univnantes.termsuite.api.ResourceConfig;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;

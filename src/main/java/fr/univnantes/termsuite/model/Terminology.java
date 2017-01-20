@@ -22,6 +22,7 @@
 package fr.univnantes.termsuite.model;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.stream.Stream;
 
 import com.google.common.collect.Multimap;
@@ -59,10 +60,9 @@ public interface Terminology {
 	/*
 	 * Terms
 	 */
-	public Term getTermByGroupingKey(String groupingKey);
 	public void removeTerm(Term t);
 	public void addTerm(Term term);
-	public Collection<Term> getTerms();
+	public Map<String, Term> getTerms();
 
 	/*
 	 * Words

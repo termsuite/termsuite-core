@@ -21,7 +21,6 @@ public class TerminoCleanerSpec {
 	Terminology termino1;
 	@Before
 	public void setup() throws MalformedURLException {
-		TermSuiteResourceManager.getInstance().clear();
 		termino1 = TerminologyIO.fromJson(FunctionalTests.TERMINOLOGY_1.toUri().toURL());
 	}
 	

@@ -124,7 +124,7 @@ public class Traverser {
 	}
 
 	public List<Term> toList(Terminology termino) {
-		List<Term> terms = Lists.newArrayList(termino.getTerms());
+		List<Term> terms = Lists.newArrayList(termino.getTerms().values());
 		Collections.sort(terms, toComparator());
 		return terms;
 	}

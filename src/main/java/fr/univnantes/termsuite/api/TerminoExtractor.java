@@ -1,13 +1,16 @@
 package fr.univnantes.termsuite.api;
 
+import java.util.Optional;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
 import fr.univnantes.termsuite.framework.EngineDescription;
-import fr.univnantes.termsuite.framework.ExtractorLifeCycle;
-import fr.univnantes.termsuite.framework.ExtractorModule;
+import fr.univnantes.termsuite.framework.EngineFactory;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.framework.modules.ExtractorModule;
+import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -23,25 +26,25 @@ import fr.univnantes.termsuite.utils.TermHistory;
  */
 public class TerminoExtractor {
 	
-	private TermHistory history = null;
+	private Optional<TermHistory> history = Optional.empty();
 	private ExtractorOptions options;
-	private ResourceConfig resourceConfig = new ResourceConfig();
+	private Optional<ResourceConfig> resourceConfig = Optional.empty();
 	
 	public TerminoExtractor setResourceConfig(ResourceConfig resourceConfig) {
-		this.resourceConfig = resourceConfig;
+		this.resourceConfig = Optional.of(resourceConfig);
 		return this;
 	}
 	
 	public TerminoExtractor watch(String termKey) {
-		if(this.history == null) {
-			this.history = new TermHistory();
+		if(!this.history.isPresent()) {
+			this.history = Optional.of(new TermHistory());
 		}
-		this.history.addWatchedGroupingKeys(termKey);
+		this.history.get().addWatchedGroupingKeys(termKey);
 		return this;
 	}
 
 	public TerminoExtractor setHistory(TermHistory history) {
-		this.history = history;
+		this.history = Optional.of(history);
 		return this;
 	}
 
@@ -53,11 +56,12 @@ public class TerminoExtractor {
 	public void execute(Terminology terminology) {
 		if(options == null)
 			options = TermSuite.getDefaultExtractorConfig(terminology.getLang());
-		ExtractorModule extractorModule = new ExtractorModule(terminology, resourceConfig, history);
 		Injector injector = Guice.createInjector(
-				extractorModule);
+				new ResourceModule(resourceConfig.orElse(null)),
+				new ExtractorModule(terminology, history.orElse(null))
+				);
 		EngineDescription engineDescription = TermSuite.createEngineDescription(TerminologyExtractorEngine.class, options);
-		ExtractorLifeCycle lifeCycle = new ExtractorLifeCycle(injector);
+		EngineFactory lifeCycle = new EngineFactory(injector);
 		TerminologyEngine engine = lifeCycle.create(engineDescription);
 		engine.execute();
 	}
