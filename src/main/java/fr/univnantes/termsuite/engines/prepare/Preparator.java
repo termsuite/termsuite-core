@@ -12,5 +12,6 @@ public class Preparator extends AggregateTerminologyEngine {
 		pipe(CorpusWidePropertiesSetter.class);
 		pipe(TermSpecificityComputer.class);
 		pipe(ExtensionDetecter.class);
+		pipe("Set IS_EXTENSION after Preparator", IsExtensionPropertySetter.class);
 	}
 }

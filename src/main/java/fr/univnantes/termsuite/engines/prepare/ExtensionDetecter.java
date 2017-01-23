@@ -10,7 +10,6 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -42,29 +41,9 @@ public class ExtensionDetecter extends TerminologyEngine {
 		
 		setSize1Extensions();
 		setSize2Extensions();
-		setIsExtensionProperty();
 		LOGGER.debug("Extensions detected in {}", sw);
 
 	}
-
-	public void setIsExtensionProperty() {
-		terminology
-			.relations()
-			.forEach(relation -> {
-				if(relation.getType() == RelationType.HAS_EXTENSION)
-					relation.setProperty(RelationProperty.IS_EXTENSION, true);
-				else {
-					boolean isExtension = terminology
-						.extensions(relation.getFrom(), relation.getTo())
-						.findAny().isPresent();
-					relation.setProperty(
-							RelationProperty.IS_EXTENSION,
-							isExtension);
-				}
-			});
-		
-	}
-
 
 	public void setSize1Extensions() {
 		CustomTermIndex swtIndex = terminology.getTerminology().createCustomIndex(

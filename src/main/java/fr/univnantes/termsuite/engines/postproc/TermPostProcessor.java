@@ -26,6 +26,7 @@ package fr.univnantes.termsuite.engines.postproc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.engines.prepare.IsExtensionPropertySetter;
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
@@ -46,6 +47,7 @@ public class TermPostProcessor extends AggregateTerminologyEngine {
 
 	@Override
 	public void configure() {
+		pipe("Set IS_EXTENSION before post-processor", IsExtensionPropertySetter.class);
 		pipe(IndependanceScorer.class);
 		pipe(OrthographicScorer.class);
 		pipe(VariationScorer.class);
