@@ -97,7 +97,7 @@ a: macroscopique	neo	macro:macro|scopique:scopique
 n: monopole	neo	mono:mono|pole:pole
 n: projet	neo	pro:pro|jet:jet
 a: non-fossiles	neo	non:non|fossiles:fossile
-n: contrepartie	neo	contre:contre|partie:parti
+n: contrepartie	neo	contre:contre|partie:partie
 a: photographique	neo	photo:photo|graphique:graphique
 n: kilowatt	neo	kilo:kilo|watt:watt
 a: secondaire	nat	second:second|aire:air
@@ -115,7 +115,6 @@ n: bibliographie	neo	biblio:biblio|graphie:graphie
 a: multi-variable	neo	multi:multi|variable:variable
 n: provision	neo	pro:pro|vision:vision
 a: mono-pale	neo	mono:mono|pale:pale
-n: supercondensateur	neo	super:super|condensateur:condensateur
 n: schéma-bloc	nat	schéma:schéma|bloc:bloc
 n: contre-pouvoir	neo	contre:contre|pouvoir:pouvoir
 a: couvert	nat	cou:cou|vert:vert
@@ -151,7 +150,6 @@ a: minimal	neo	mini:mini|mal:mal
 a: biologique	neo	bio:bio|logique:logique
 n: écologue	neo	éco:éco|logue:logue
 n: hydrogène	neo	hydro:eau|gène:gène
-a: électro-magnétiques	neo	électro:électro|magnétiques:magnétique
 n: jean-michel	nat	jean:jean|michel:michel
 n: sous-fréquence	neo	sous:sous|fréquence:fréquence
 n: audiovisuel	neo	audio:audio|visuel:visuel
@@ -253,7 +251,6 @@ a: idéologique	neo	idéo:idée|logique:logique
 a: transfrontaliers	neo	trans:trans|frontaliers:frontalier
 n: demi-journée	nat	demi:demi|journée:journée
 n: ouest-sud-ouest	nat	ouest:ouest|sud:sud|ouest:ouest
-n: géomorphologie	neo	géo:géo|morpho:morpho|logie:logie
 n: photomontage	neo	photo:photo|montage:montage
 n: marsavril	nat	mars:mars|avril:avril
 a: économique	neo	éco:éco|nomique:nom
@@ -314,8 +311,8 @@ n: sous-système	neo	sous:sous|système:système
 a: excédentaire	nat	excédent:excédent|aire:air
 n: radioactivité	neo	radio:radio|activité:activité
 n: micro-turbines	neo	micro:micro|turbines:turbine
-n: biodiesel	neo	bio:bio|diesel:diesel
 a: multipolaire	neo	multi:multi|polaire:polaire
+n: biodiesel	neo	bio:bio|diesel:diesel
 a: uniforme	neo	uni:uni|forme:forme
 a: hydrothermal	neo	hydro:eau|thermal:thermal
 n: contraire	neo	contr:contr|aire:air

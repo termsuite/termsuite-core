@@ -36,7 +36,6 @@ import fr.univnantes.termsuite.utils.TermSuiteUtils;
 public class TermBuilder {
 	private static final Logger LOGGER  = LoggerFactory.getLogger(TermBuilder.class);
 	private static final String ERR_NO_TERMINOLOGY_GIVEN = "No terminology given.";
-	private static final String ERR_FREQ_AND_NUM_OCC_MUST_MATCH = "Cannot build a term with frequency %d and %d occurrences";
 
 	private Terminology termino;
 	

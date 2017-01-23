@@ -129,7 +129,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.contains(tuple("hydroélectrique", "eau"))
 			.contains(tuple("antinucléaire", "anti"))
 			.contains(tuple("aéroélastique", "air"))
-			.hasSize(363);
+			.hasSize(362);
 	}
 
 	
@@ -319,7 +319,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termino)
 			.asTermVariationsHavingRule("S-R2D-NPN")
-			.hasSize(68)
+			.hasSize(69)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 					tuple("npn: production de électricité", "na: production électrique"),

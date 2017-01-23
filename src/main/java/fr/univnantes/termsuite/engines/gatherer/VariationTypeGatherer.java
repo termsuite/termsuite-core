@@ -59,8 +59,6 @@ public class VariationTypeGatherer extends TerminologyEngine {
 			.parallel()
 			.forEach(key -> {
 				Collection<Term> terms = index.getTerms(key);
-	//			if(termPredicate.isPresent())
-	//				terms = terms.stream().filter(termPredicate.get()).collect(Collectors.toSet());
 				gather(terminology, groovyService, terms, key, cnt);
 			});
 		gatheringSw.stop();

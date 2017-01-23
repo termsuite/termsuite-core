@@ -127,7 +127,7 @@ public class FunctionalTests {
 	}
 	
 	public static List<Term> termsByProperty(Terminology termino, TermProperty termProperty, boolean desc) {
-		List<Term> terms = Lists.newArrayList(termino.getTerms());
+		List<Term> terms = Lists.newArrayList(termino.getTerms().values());
 		Collections.sort(terms, termProperty.getComparator(desc));
 		return terms;
 	}

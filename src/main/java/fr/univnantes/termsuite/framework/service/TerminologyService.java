@@ -223,7 +223,7 @@ public class TerminologyService {
 			if(term == null) {
 				TermBuilder builder = TermBuilder.start();
 				for (int i = 0; i < pattern.length; i++)
-					builder.addWord(words[i], pattern[i].toLowerCase());
+					builder.addWord(words[i], pattern[i]);
 				builder.setFrequency(0);
 				term = builder.create();
 				this.termino.addTerm(term);

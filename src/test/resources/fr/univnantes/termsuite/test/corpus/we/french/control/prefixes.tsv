@@ -83,7 +83,6 @@ a: arot	n: rot	IS_PREFIX_OF
 n: provision	n: vision	IS_PREFIX_OF
 a: incapable	a: capable	IS_PREFIX_OF
 a: imperméable	a: perméable	IS_PREFIX_OF
-n: supercondensateur	n: condensateur	IS_PREFIX_OF
 n: inflexion	n: flexion	IS_PREFIX_OF
 a: inactif	a: actif	IS_PREFIX_OF
 a: imprévisible	a: prévisible	IS_PREFIX_OF

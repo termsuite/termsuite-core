@@ -91,17 +91,6 @@ public class VariantRule {
 		targetSizes = targetPatterns.stream().map(p -> p.split(" ").length).collect(Collectors.toSet());
 	}
 
-//	public List<String> getIndexingKeys(List<String> allPossiblePatterns) {
-//		List<String> keys = Lists.newArrayList();
-//		List<String> left = ImmutableList.copyOf(sourcePatterns.isEmpty() ? allPossiblePatterns : sourcePatterns);
-//		List<String> right = ImmutableList.copyOf(targetPatterns.isEmpty() ? allPossiblePatterns : targetPatterns);
-//		for(String l:left) {
-//			for(String r:right) 
-//				keys.add(l+"x"+r);
-//		}
-//		return keys;
-//	}
-
 	public String getName() {
 		return name;
 	}
