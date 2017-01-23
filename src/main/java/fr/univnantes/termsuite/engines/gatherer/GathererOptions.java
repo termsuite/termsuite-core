@@ -19,7 +19,10 @@ public class GathererOptions  {
 	// 10 millions
 	@JsonProperty("max-num-comparisons")
 	private int maxNumberOfComparisons = 1000000;
-	
+
+	@JsonProperty("merger-enabled")
+	private boolean mergerEnabled = true;
+
 	public boolean isSemanticEnabled() {
 		return semanticEnabled;
 	}
@@ -63,5 +66,14 @@ public class GathererOptions  {
 	
 	public boolean isGraphicalEnabled() {
 		return graphicalEnabled;
+	}
+
+	public GathererOptions setMergerEnabled(boolean mergerEnabled) {
+		this.mergerEnabled = mergerEnabled;
+		return this;
+	}
+	
+	public boolean isTermMergerEnabled() {
+		return this.mergerEnabled;
 	}
 }

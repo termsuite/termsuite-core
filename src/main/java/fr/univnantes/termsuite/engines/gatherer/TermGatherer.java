@@ -48,6 +48,7 @@ public class TermGatherer extends AggregateTerminologyEngine {
 		/*
 		 * Merging terms
 		 */
-		pipe(TermMerger.class);
+		if(gathererOptions.isTermMergerEnabled()) 
+			pipe(TermMerger.class);
 	}
 }

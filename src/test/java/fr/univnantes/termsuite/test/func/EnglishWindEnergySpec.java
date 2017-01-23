@@ -182,7 +182,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.containsEntry(RelationProperty.IS_DERIVATION, false)
 			.containsEntry(RelationProperty.IS_PREXATION, false)
 			.containsEntry(RelationProperty.IS_SYNTAGMATIC, false)
-			.containsEntry(RelationProperty.IS_GRAPHICAL, false)
+			.containsEntry(RelationProperty.IS_GRAPHICAL, true)
 			;
 	}
 
@@ -192,11 +192,11 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		TerminologyService service = new TerminologyService(termino);
 		assertThat(service.relations()
 				.filter(Relations.IS_INFERENCE)
-				.collect(Collectors.toSet())).hasSize(509);
+				.collect(Collectors.toSet())).hasSize(510);
 		assertThat(service.relations()
 				.filter(Relations.IS_INFERENCE)
 				.filter(Relations.IS_GRAPHICAL)
-				.collect(Collectors.toSet())).hasSize(0);
+				.collect(Collectors.toSet())).hasSize(176);
 		assertThat(service.relations()
 				.filter(Relations.IS_INFERENCE)
 				.filter(Relations.IS_SEMANTIC)
@@ -208,7 +208,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(Relations.IS_INFERENCE)
 				.filter(Relations.IS_DERIVATION)
-				.collect(Collectors.toSet())).hasSize(0);
+				.collect(Collectors.toSet())).hasSize(1);
 		assertThat(service.relations()
 				.filter(Relations.IS_INFERENCE)
 				.filter(Relations.IS_MORPHOLOGICAL)
@@ -308,8 +308,8 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.hasFrequency(6);
 		
 		assertThat(termino)
-			.hasNBases(term, 1) // a: highspeed
-			.hasAtLeastNBasesOfType(term, 1, VariationType.GRAPHICAL)
+			.hasNBases(term, 0) // a: highspeed
+			.hasAtLeastNBasesOfType(term, 0, VariationType.GRAPHICAL)
 			.hasNVariationsOfType(term, 4, VariationType.MORPHOLOGICAL)
 			.hasNVariationsOfType(term, 0, VariationType.SYNTAGMATIC)
 			.hasNVariationsOfType(term, 0, VariationType.SEMANTIC)

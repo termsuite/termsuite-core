@@ -31,7 +31,7 @@
   "gatherer" : {
     "semantic-enabled" : false,
     "graphical-enabled" : true,
-    "graphical-similarity-th" : 0.9,
+    "graphical-similarity-th" : 0.88,
     "max-class-size" : 2000,
     "max-num-comparisons" : 1000000
   },

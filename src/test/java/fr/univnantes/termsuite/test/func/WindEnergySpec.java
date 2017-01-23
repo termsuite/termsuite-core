@@ -126,6 +126,7 @@ public abstract class WindEnergySpec {
 		
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
 		extractorOptions.getPostProcessorConfig().setEnabled(false);
+		extractorOptions.getGathererConfig().setMergerEnabled(false);
 		TermSuite.terminoExtractor()
 					.setOptions(extractorOptions)
 					.execute(terminology);
