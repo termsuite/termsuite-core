@@ -21,7 +21,6 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.test.unit.framework;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.fail;
 
 import java.net.MalformedURLException;
 import java.nio.file.Path;
@@ -36,18 +35,12 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.api.ResourceConfig;
-import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
-import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.framework.modules.LangModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
-import fr.univnantes.termsuite.tools.TermSuiteCLIUtils;
-import fr.univnantes.termsuite.uima.PreparationPipelineException;
 import fr.univnantes.termsuite.uima.ResourceType;
-import fr.univnantes.termsuite.uima.TermSuiteResourceException;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
 
 public class TermSuiteResourceManagerSpec {

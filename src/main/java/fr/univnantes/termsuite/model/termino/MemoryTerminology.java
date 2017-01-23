@@ -22,7 +22,6 @@
 package fr.univnantes.termsuite.model.termino;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +29,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -87,11 +85,7 @@ public class MemoryTerminology implements Terminology {
 	private String corpusId;
 	
 	private AtomicLong nbWordAnnotations = new AtomicLong();
-	private AtomicInteger nbSpottedTerms = new AtomicInteger();
-	
-	public void setNbWordAnnotations(long nbWordAnnotations) {
-		this.nbWordAnnotations.addAndGet(nbWordAnnotations);
-	}
+	private AtomicLong nbSpottedTerms = new AtomicLong();
 	
 	public MemoryTerminology(String name, Lang lang, OccurrenceStore occurrenceStore) {
 		this.lang = lang;
@@ -268,13 +262,8 @@ public class MemoryTerminology implements Terminology {
 	}
 	
 	@Override
-	public int getSpottedTermsNum() {
-		return nbSpottedTerms.intValue();
-	}
-	
-	@Override
-	public void incSpottedTermsNum(int spottedTermsNum) {
-		this.nbSpottedTerms.addAndGet(spottedTermsNum);
+	public void incWordAnnotationsNum(int spottedTermsNum) {
+		this.nbWordAnnotations.addAndGet(spottedTermsNum);
 	}
 	
 	@Override
@@ -356,5 +345,23 @@ public class MemoryTerminology implements Terminology {
 	@Override
 	public Multimap<Term, TermRelation> getInboundRelations() {
 		return inboundVariations;
+	}
+
+
+	@Override
+	public long getSpottedTermsNum() {
+		return this.nbSpottedTerms.get();
+	}
+
+
+	@Override
+	public void setSpottedTermsNum(long spottedTermsNum) {
+		this.nbSpottedTerms.set(spottedTermsNum);
+	}
+
+
+	@Override
+	public void incSpottedTermsNum(int nbSpottedTerms) {
+		this.nbSpottedTerms.addAndGet(nbSpottedTerms);
 	}
 }

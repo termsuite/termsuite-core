@@ -200,7 +200,7 @@ public class TerminologyService {
 	}
 
 	public double getWordAnnotationsNum() {
-		return 0;
+		return termino.getWordAnnotationsNum();
 	}
 
 	private static final String MSG_PATTERN_EMPTY = "Pattern must not be empty";
@@ -249,7 +249,11 @@ public class TerminologyService {
 		return this.termino.getOccurrenceStore();
 	}
 
-	public void incrementWordAnnotationNum(int nbSpottedTerms) {
+	public void incrementWordAnnotationNum(int nbWordAnnotations) {
+		this.termino.incWordAnnotationsNum(nbWordAnnotations);
+	}
+
+	public void incrementSpottedTermsNum(int nbSpottedTerms) {
 		this.termino.incSpottedTermsNum(nbSpottedTerms);
 	}
 
@@ -272,4 +276,5 @@ public class TerminologyService {
 	public boolean containsTerm(String gKey) {
 		return this.termino.getTerms().containsKey(gKey);
 	}
+
 }

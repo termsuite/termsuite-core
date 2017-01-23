@@ -32,6 +32,6 @@ public class TerminoExtractorSpec {
 			.containsTerm("n: énergie");
 		
 		Term t = terminology.getTerms().get("n: énergie");
-		assertEquals(2d, t.getSpecificity(), 0.0001d);
+		assertEquals(7.218164d, t.getSpecificity(), 0.0001d);
 	}
 }

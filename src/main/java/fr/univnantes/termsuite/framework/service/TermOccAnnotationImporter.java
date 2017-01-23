@@ -108,6 +108,8 @@ public class TermOccAnnotationImporter {
 					toa.getCoveredText());
 		}
 		
+		FSIterator<Annotation> termIt = jCas.getAnnotationIndex(TermOccAnnotation.type).iterator();
+		terminoService.incrementSpottedTermsNum(Iterators.size(termIt));
 		FSIterator<Annotation> wordIt = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
 		terminoService.incrementWordAnnotationNum(Iterators.size(wordIt));
 		terminoService.getOccurrenceStore().flush();

@@ -29,7 +29,6 @@ import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.model.termino.TermValueProvider;
-import fr.univnantes.termsuite.types.TermOccAnnotation;
 
 public interface Terminology {
 	
@@ -112,18 +111,12 @@ public interface Terminology {
 	public void dropCustomIndex(String indexName);
 
 	public long getWordAnnotationsNum();
-
-	/**
-	 * 
-	 * The number of terms added to this termino by invoking
-	 * {@link Terminology#addTermOccurrence(TermOccAnnotation, String, boolean)}
-	 * 
-	 * @return
-	 * 		The number of spotted terms, 0 if none has been added through
-	 * 		the method {@link #addTermOccurrence(TermOccAnnotation, String, boolean)}
-	 */
-	public int getSpottedTermsNum();
+	public void setWordAnnotationsNum(long nbWordAnnos);
+	public void incWordAnnotationsNum(int nbWordNums);
+	public long getSpottedTermsNum();
+	public void setSpottedTermsNum(long spottedTermsNum);
 	public void incSpottedTermsNum(int nbSpottedTerms);
+
 
 	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types);
 
@@ -131,6 +124,7 @@ public interface Terminology {
 
 	public Multimap<Term, TermRelation> getInboundRelations();
 
-	public void setWordAnnotationsNum(long nbWordAnnos);
+
+
 
 }
