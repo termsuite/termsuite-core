@@ -31,9 +31,13 @@
   "gatherer" : {
     "semantic-enabled" : false,
     "graphical-enabled" : true,
+    "merger-enabled": false,
     "graphical-similarity-th" : 1.0,
     "max-class-size" : 2000,
-    "max-num-comparisons" : 1000000
+    "max-num-comparisons" : 1000000,
+    "semantic-similarity-th" : 0.3,
+    "semantic-nb-candidates" : 5,
+    "semantic-similarity-distance" : "fr.univnantes.termsuite.metrics.Cosine"
   },
   "post-processor" : {
     "affix-score-th" : 0.25,
