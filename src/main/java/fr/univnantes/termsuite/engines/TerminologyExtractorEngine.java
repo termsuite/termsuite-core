@@ -1,7 +1,11 @@
 package fr.univnantes.termsuite.engines;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.engines.cleaner.TerminologyCleaner;
+import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.postproc.TermPostProcessor;
 import fr.univnantes.termsuite.engines.postproc.TermRanker;
@@ -12,18 +16,28 @@ import fr.univnantes.termsuite.framework.Parameter;
 
 public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
 	
+	private static final Logger LOGGER = LoggerFactory.getLogger(TerminologyExtractorEngine.class);
+	
 	@Parameter
 	private ExtractorOptions config;
 	
 	@Override
 	public void configure() {
+		if(config.getGathererConfig().isSemanticEnabled()
+				&& !config.getContextualizerOptions().isEnabled()) 
+			LOGGER.warn("Distributional alignment disabled for semantic aligner, because contextualizer is disabled.");
+
 		pipe(Preparator.class);
+		
+		if(config.getContextualizerOptions().isEnabled())
+			pipe(Contextualizer.class, config.getContextualizerOptions());
 		
 		if(config.getPreFilterConfig().isEnabled()) 
 			pipe("Pre-gathering filter", TerminologyCleaner.class, config.getPreFilterConfig());
 
 		if(config.getMorphologicalConfig().isEnabled()) 
 			pipe(MorphologicalAnalyzer.class, config.getMorphologicalConfig());
+
 		
 		pipe(TermGatherer.class, config.getGathererConfig());
 

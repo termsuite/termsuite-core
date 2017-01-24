@@ -35,7 +35,8 @@ public class VariationTypeGatherer extends TerminologyEngine {
 	@Parameter
 	private VariationType variationType;
 	
-	@Parameter
+	
+	@Parameter(optional = true) // optional for SemanticGatherer
 	protected String indexName ;
 	
 	@Parameter(optional= true)

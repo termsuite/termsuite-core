@@ -2,6 +2,9 @@ package fr.univnantes.termsuite.engines.gatherer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import fr.univnantes.termsuite.metrics.Cosine;
+import fr.univnantes.termsuite.metrics.SimilarityDistance;
+
 public class GathererOptions  {
 	@JsonProperty("semantic-enabled")
 	private boolean semanticEnabled = false;
@@ -23,6 +26,15 @@ public class GathererOptions  {
 	@JsonProperty("merger-enabled")
 	private boolean mergerEnabled = true;
 
+	@JsonProperty("semantic-similarity-th")
+	private double semanticSimilarityThreshold = 0.3;
+	
+	@JsonProperty("semantic-nb-candidates")
+	private int semanticNbCandidates = 5;
+
+	@JsonProperty("semantic-similarity-distance")
+	private Class<? extends SimilarityDistance> semanticSimilarityDistance = Cosine.class;
+	
 	public boolean isSemanticEnabled() {
 		return semanticEnabled;
 	}
@@ -76,4 +88,38 @@ public class GathererOptions  {
 	public boolean isTermMergerEnabled() {
 		return this.mergerEnabled;
 	}
+
+	public double getSemanticSimilarityThreshold() {
+		return semanticSimilarityThreshold;
+	}
+
+	public GathererOptions setSemanticSimilarityThreshold(double semanticSimilarityThreshold) {
+		this.semanticSimilarityThreshold = semanticSimilarityThreshold;
+		return this;
+	}
+
+	public int getSemanticNbCandidates() {
+		return semanticNbCandidates;
+	}
+
+	public GathererOptions setSemanticNbCandidates(int semanticNbCandidates) {
+		this.semanticNbCandidates = semanticNbCandidates;
+		return this;
+	}
+
+	public Class<? extends SimilarityDistance> getSemanticSimilarityDistance() {
+		return semanticSimilarityDistance;
+	}
+
+	public GathererOptions setSemanticSimilarityDistance(Class<? extends SimilarityDistance> semanticSimilarityDistance) {
+		this.semanticSimilarityDistance = semanticSimilarityDistance;
+		return this;
+	}
+
+	public boolean isMergerEnabled() {
+		return mergerEnabled;
+	}
+	
+	
+	
 }

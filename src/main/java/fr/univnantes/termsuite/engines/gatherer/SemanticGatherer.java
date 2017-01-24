@@ -15,9 +15,10 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
@@ -30,11 +31,8 @@ import fr.univnantes.termsuite.utils.TermUtils;
 public class SemanticGatherer extends VariationTypeGatherer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SemanticGatherer.class);
 
-	private SimilarityDistance distance = new Cosine();
-	
-	private double similarityThreshold = 0.40;
-	
-	private int nbDistributionalCandidates = 5;
+	@Parameter
+	private GathererOptions options;
 	
 	@Resource(type=ResourceType.SYNONYMS)
 	private MultimapFlatResource dico = new MultimapFlatResource();
@@ -42,6 +40,8 @@ public class SemanticGatherer extends VariationTypeGatherer {
 	private AtomicInteger nbAlignmentsCounter = new AtomicInteger(0);
 	private Stopwatch indexingSw = Stopwatch.createUnstarted();
 
+	private SimilarityDistance distance;
+	
 	private LoadingCache<Pair<Term>, Double> alignmentScores = CacheBuilder.newBuilder()
 			.initialCapacity(10000)
 			.maximumSize(100000)
@@ -59,6 +59,11 @@ public class SemanticGatherer extends VariationTypeGatherer {
 	
 	@Override
 	public void execute() {
+		try {
+			distance = options.getSemanticSimilarityDistance().newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			throw new TermSuiteException(e);
+		}
 		Stopwatch gatherSw = Stopwatch.createStarted();
 		for(VariantRule rule:this.variantRules.getVariantRules(VariationType.SEMANTIC))
 			gather((SynonymicRule)rule);
@@ -114,10 +119,12 @@ public class SemanticGatherer extends VariationTypeGatherer {
 			for(int i=0; i<terms.size();i++) {
 				t1 = terms.get(i);
 				String akey1 = TermUtils.toGroupingKey(t1.getWords().get(rule.getSynonymSourceWordIndex()));
-				a1 = terminology.getTerm(akey1);
-				if(a1 == null) {
+				if(!terminology.containsTerm(akey1)) 
 					continue;
-				} else if(a1.getContext() == null) {
+				else
+					a1 = terminology.getTerm(akey1);
+
+				if(a1.getContext() == null) {
 					LOGGER.warn("No context vector set for term {}", a1);
 					continue;
 				}
@@ -128,10 +135,10 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						continue;
 					t2 = terms.get(j);
 					String akey2 = TermUtils.toGroupingKey(t2.getWords().get(rule.getSynonymSourceWordIndex()));
-					a2 = terminology.getTerm(akey2);
-					if(a2 == null) {
+					if(!terminology.containsTerm(akey2)) 
 						continue;
-					} 
+					else
+						a2 = terminology.getTerm(akey2);
 					
 					if(areDicoSynonyms(a1, a2)) {
 						nbDicoRelationFound.incrementAndGet();
@@ -146,7 +153,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						pair = new Pair<>(a1, a2);
 						nbAlignmentsCounter.incrementAndGet();
 						Double value = alignmentScores.getUnchecked(pair);
-						if(value > similarityThreshold) {
+						if(value > options.getSemanticSimilarityThreshold()) {
 							TermRelation rel = buildDistributionalVariation(terminology, t1,t2,value);
 							t1Relations.add(rel);
 						}
@@ -158,7 +165,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 				t1Relations
 					.stream()
 					.sorted(RelationProperty.SEMANTIC_SIMILARITY.getComparator(true))
-					.limit(this.nbDistributionalCandidates)
+					.limit(this.options.getSemanticNbCandidates())
 					.forEach(rel -> {
 						nbDistribRelationsFound.incrementAndGet();
 						terminology.addRelation(rel);

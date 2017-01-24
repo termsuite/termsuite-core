@@ -33,8 +33,9 @@ public class TermGatherer extends AggregateTerminologyEngine {
 				true);
 
 		if(gathererOptions.isSemanticEnabled()) 
-			pipe(SemanticGatherer.class, 
-					VariationType.SEMANTIC);
+			pipe(SemanticGatherer.class
+					, gathererOptions
+					, VariationType.SEMANTIC);
 		
 		/*
 		 * Gathers extensions of morpho, derivative, prefix, and semantic variants

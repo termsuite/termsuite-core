@@ -14,7 +14,6 @@ import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TerminoCleanerSpec {
 

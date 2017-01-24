@@ -9,37 +9,39 @@ import java.util.stream.Collectors;
 
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
-import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.api.TerminoExtractor;
-import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.api.ExtractorOptions;
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.framework.Relations;
+import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class SemanticGathererSpec {
 
 	private static Terminology termindex;
-	
-	@Before
-	public void setup() {
-		TermSuiteResourceManager manager = TermSuiteResourceManager.getInstance();
-		manager.clear();
-	}
 
 	public static void extract(Lang lang) {
-		ContextualizerOptions opt = new ContextualizerOptions()
-				.setMinimumCooccFrequencyThreshold(2);
-		termindex = TerminoExtractor
-			.fromTxtCorpus(lang, FunctionalTests.getCorpusWEPath(lang), "**/*.txt")
-			.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-			.useContextualizer(opt)
-			.enableSemanticAlignment()
-			.execute();
+		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
+		extractorOptions.getGathererConfig().setSemanticEnabled(true);
+		extractorOptions.getGathererConfig().setMergerEnabled(false);
+		extractorOptions.getGathererConfig().setSemanticNbCandidates(5);
+		extractorOptions.getGathererConfig().setSemanticSimilarityDistance(Cosine.class);
+		extractorOptions.getGathererConfig().setSemanticSimilarityThreshold(0.3);
+		extractorOptions.getContextualizerOptions().setEnabled(true);
+		extractorOptions.getContextualizerOptions().setMinimumCooccFrequencyThreshold(2);
+		
+		
+		termindex = TermSuite.preprocessor()
+				.setTaggerPath(FunctionalTests.getTaggerPath())
+				.toTerminology(FunctionalTests.getCorpusWE(lang), true);
+			
+			TermSuite.terminoExtractor()
+						.setOptions(extractorOptions)
+						.execute(termindex);
 	}
 	
 	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR = new Extractor<TermRelation, Tuple>() {
@@ -60,19 +62,17 @@ public class SemanticGathererSpec {
 				.getRelations()
 				.filter(Relations.IS_SEMANTIC)
 				.collect(Collectors.toList());
+		assertTrue("Expected number of relations between 3800 and 3900. Got: " + relations.size(),
+				relations.size() > 3800 && relations.size() < 3900);
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
 			.contains(
-					tuple("na: courant continu", false, "na: courant constant"),
+					tuple("na: lieu éloigner", false, "na: emplacement éloigner"),
 					tuple("na: coût global", false, "na: coût total"),
 					tuple("npn: cadre de étude", true, "npn: cadre de projet"),
 					tuple("na: batterie rechargeable", true, "na: batterie électrochimique")
 			)
 			;
-		
-		assertTrue("Expected number of relations between 3980 and 3990. Got: " + relations.size(),
-				relations.size() > 3980 && relations.size() < 3990);
-
 	}
 	
 	@Test
@@ -93,8 +93,8 @@ public class SemanticGathererSpec {
 			)
 			;
 		
-		assertTrue("Expected number of relations between 2470 and 2490. Got: "  +relations.size() ,
-				relations.size() > 2470 && relations.size() < 2490);
+		assertTrue("Expected number of relations between 2470 and 2500. Got: "  +relations.size() ,
+				relations.size() > 2470 && relations.size() < 2500);
 		
 	}
 

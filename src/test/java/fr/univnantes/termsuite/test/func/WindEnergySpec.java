@@ -31,7 +31,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -39,8 +38,6 @@ import java.util.Set;
 import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
 
 import com.google.common.cache.CacheBuilder;
@@ -49,7 +46,6 @@ import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
-import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Terminology;
@@ -57,7 +53,6 @@ import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.ResourceType;
-import fr.univnantes.termsuite.utils.TermHistory;
 
 public abstract class WindEnergySpec {
 
@@ -111,15 +106,8 @@ public abstract class WindEnergySpec {
 		this.termino = TERMINOLOGY_CACHE.getUnchecked(lang);
 	}
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
-
 	protected static Terminology runPipeline(Lang lang) throws IOException {
-		PreprocessingPipelineBuilder pipeline = null;
 		ClearTempFiles.main(new String[0]);
-		Path jsonFile = FunctionalTests.getTestTmpDir().resolve("spotted-we-" + lang.getCode() + ".json");
-		
-		TermHistory history = TermHistory.create();
-		
 		Terminology terminology = TermSuite.preprocessor()
 			.setTaggerPath(FunctionalTests.getTaggerPath())
 			.toTerminology(FunctionalTests.getCorpusWE(lang), true);
