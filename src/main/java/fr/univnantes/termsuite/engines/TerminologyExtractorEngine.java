@@ -1,7 +1,6 @@
 package fr.univnantes.termsuite.engines;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.engines.cleaner.TerminologyCleaner;
@@ -12,11 +11,12 @@ import fr.univnantes.termsuite.engines.postproc.TermRanker;
 import fr.univnantes.termsuite.engines.prepare.Preparator;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalAnalyzer;
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 
 public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(TerminologyExtractorEngine.class);
+	@InjectLogger Logger logger;
 	
 	@Parameter
 	private ExtractorOptions config;
@@ -25,7 +25,7 @@ public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
 	public void configure() {
 		if(config.getGathererConfig().isSemanticEnabled()
 				&& !config.getContextualizerOptions().isEnabled()) 
-			LOGGER.warn("Distributional alignment disabled for semantic aligner, because contextualizer is disabled.");
+			logger.warn("Distributional alignment disabled for semantic aligner, because contextualizer is disabled.");
 
 		pipe(Preparator.class);
 		

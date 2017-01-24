@@ -24,7 +24,6 @@
 package fr.univnantes.termsuite.engines.postproc;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.prepare.IsExtensionPropertySetter;
 import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
@@ -40,7 +39,6 @@ import fr.univnantes.termsuite.resources.PostProcessorOptions;
  *
  */
 public class TermPostProcessor extends AggregateTerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TermPostProcessor.class);
 
 	@Parameter
 	private PostProcessorOptions config;
@@ -58,10 +56,10 @@ public class TermPostProcessor extends AggregateTerminologyEngine {
 		pipe(VariationRanker.class);
 	}
 
-	static void logVariationsAndTerms(TerminologyService termino) {
-		if(LOGGER.isDebugEnabled()) {
+	static void logVariationsAndTerms(Logger logger, TerminologyService termino) {
+		if(logger.isDebugEnabled()) {
 			long var = termino.variations().count();
-			LOGGER.debug("Number of terms: {}. Number of variations: {}",
+			logger.debug("Number of terms: {}. Number of variations: {}",
 					termino.getTerms().size(), var);
 		}
 	}

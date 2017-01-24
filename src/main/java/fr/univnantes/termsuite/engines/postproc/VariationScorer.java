@@ -31,11 +31,11 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
@@ -57,7 +57,6 @@ import fr.univnantes.termsuite.utils.TermUtils;
  *
  */
 public class VariationScorer extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(VariationScorer.class);
 	private static final Predicate<? super TermRelation> NOT_SEMANTIC = v -> 
 			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
 			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
@@ -67,31 +66,33 @@ public class VariationScorer extends TerminologyEngine {
 		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
 				&& v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
 
+	@InjectLogger Logger logger;
+
 	@Override
 	public void execute() {
-		LOGGER.info("Computing scores for variations");
+		logger.info("Computing scores for variations");
 		Stopwatch sw = Stopwatch.createStarted();
 
-		LOGGER.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
+		logger.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
 		doVariationFrenquencies();
 
-		LOGGER.debug("Computing {}", RelationProperty.SOURCE_GAIN);
+		logger.debug("Computing {}", RelationProperty.SOURCE_GAIN);
 		doSourceGains();
 		
-		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_SOURCE_GAIN);
+		logger.debug("Computing {}", RelationProperty.NORMALIZED_SOURCE_GAIN);
 		normalizeSourceGain();
 		
-		LOGGER.debug("Computing {}", RelationProperty.EXTENSION_SCORE);
+		logger.debug("Computing {}", RelationProperty.EXTENSION_SCORE);
 		scoreExtensions();
 
-		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_EXTENSION_SCORE);
+		logger.debug("Computing {}", RelationProperty.NORMALIZED_EXTENSION_SCORE);
 		normalizeExtensionScores();
 		
-		LOGGER.debug("Computing {}", RelationProperty.VARIANT_SCORE);
+		logger.debug("Computing {}", RelationProperty.VARIANT_SCORE);
 		doVariantScores();
 		
 		sw.stop();
-		LOGGER.debug("Scores computed in {}", sw);
+		logger.debug("Scores computed in {}", sw);
 	}
 
 	private void normalizeSourceGain() {
@@ -107,7 +108,7 @@ public class VariationScorer extends TerminologyEngine {
 	private void normalizeExtensionScores() {
 		Predicate<? super TermRelation> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
 		if(!terminology.relations().filter(extensionSet).findFirst().isPresent()) {
-			getLogger().warn("Found no relation with property {} set.", extensionSet);
+			logger.warn("Found no relation with property {} set.", extensionSet);
 			return;
 		}
 			
@@ -217,7 +218,7 @@ public class VariationScorer extends TerminologyEngine {
 
 	public void scoreExtensions() {
 		if(!terminology.extensions().findAny().isPresent()) {
-			LOGGER.warn("No {} relation set. Cannot score extensions.", RelationType.HAS_EXTENSION);
+			logger.warn("No {} relation set. Cannot score extensions.", RelationType.HAS_EXTENSION);
 			return;
 		}
 		

@@ -5,10 +5,10 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -33,8 +33,8 @@ import fr.univnantes.termsuite.utils.TermUtils;
  *
  */
 public class ExtensionVariantGatherer extends TerminologyEngine {
+	@InjectLogger Logger logger;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionVariantGatherer.class);
 	
 	private Optional<TermHistory> history = Optional.empty();
 	
@@ -46,9 +46,9 @@ public class ExtensionVariantGatherer extends TerminologyEngine {
 	@Override
 	public void execute() {
 		
-		LOGGER.debug("Infering variations of term extensions");
+		logger.debug("Infering variations of term extensions");
 		if(!terminology.extensions().findAny().isPresent())
-			LOGGER.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
+			logger.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
 		
 		
 		terminology
@@ -69,7 +69,7 @@ public class ExtensionVariantGatherer extends TerminologyEngine {
 		inferVariations(VariationType.PREFIXATION);
 		inferVariations(VariationType.SEMANTIC);
 		sw.stop();
-		LOGGER.debug("Infered variations of term extensions gathered in {}", sw);
+		logger.debug("Infered variations of term extensions gathered in {}", sw);
 	}
 
 
@@ -99,8 +99,8 @@ public class ExtensionVariantGatherer extends TerminologyEngine {
 								if(Objects.equals(affix1, affix2)) {
 									cnt.incrementAndGet();
 									
-									if(LOGGER.isTraceEnabled()) 
-										LOGGER.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
+									if(logger.isTraceEnabled()) 
+										logger.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
 									
 									TermRelation inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
 									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
@@ -124,7 +124,7 @@ public class ExtensionVariantGatherer extends TerminologyEngine {
 			});
 		
 		sw.stop();
-		LOGGER.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
+		logger.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
 	}
 
 	private void watch(TermRelation inferedRel, TermRelation r1, TermRelation r2) {

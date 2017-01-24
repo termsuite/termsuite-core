@@ -16,7 +16,6 @@ import java.util.TimerTask;
 
 import org.apache.commons.lang.mutable.MutableLong;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Joiner;
 import com.google.common.cache.CacheBuilder;
@@ -25,6 +24,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
@@ -46,7 +46,7 @@ import fr.univnantes.termsuite.utils.IndexingKey;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 public class NativeSplitter extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(NativeSplitter.class);
+	@InjectLogger Logger logger;
 
 	@Parameter
 	private MorphologicalOptions opt;
@@ -96,7 +96,7 @@ public class NativeSplitter extends TerminologyEngine {
 	
 	@Override
 	public void execute() {
-		LOGGER.info("Starting morphologyical compound detection for termino");
+		logger.info("Starting morphologyical compound detection for termino");
 		swtLemmaIndex = terminology.getTerminology().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex();
 
@@ -108,7 +108,7 @@ public class NativeSplitter extends TerminologyEngine {
 			@Override
 			public void run() {
 				int total = terminology.getWords().size();
-				LOGGER.info("Progress: {}% ({} on {})",
+				logger.info("Progress: {}% ({} on {})",
 						String.format("%.2f", ((double)cnt.longValue()*100)/total),
 						cnt.longValue(),
 						total);
@@ -128,8 +128,8 @@ public class NativeSplitter extends TerminologyEngine {
 				.filter(word -> !word.isCompound())
 				.collect(toSet());
 
-		LOGGER.debug("Num of words: {}", words.size());
-		LOGGER.debug("Num of compound words before native splitting: {}", words.stream().filter(Word::isCompound).count());
+		logger.debug("Num of words: {}", words.size());
+		logger.debug("Num of compound words before native splitting: {}", words.stream().filter(Word::isCompound).count());
 
 		words
 			.parallelStream()
@@ -199,11 +199,11 @@ public class NativeSplitter extends TerminologyEngine {
 					
 					watchComposition(word, true);
 					// log the word composition
-					if(LOGGER.isTraceEnabled()) {
+					if(logger.isTraceEnabled()) {
 						List<String> componentStrings = Lists.newArrayList();
 						for(Component component:word.getComponents())
 							componentStrings.add(component.toString());
-						LOGGER.trace("{} [{}]", word.getLemma(), Joiner.on(' ').join(componentStrings));
+						logger.trace("{} [{}]", word.getLemma(), Joiner.on(' ').join(componentStrings));
 					}
 				}
 			});
@@ -211,15 +211,15 @@ public class NativeSplitter extends TerminologyEngine {
 		//finalize
 		progressLoggerTimer.cancel();
 
-		LOGGER.debug("Num of compound words after native splitting: {}", words.stream().filter(Word::isCompound).count());
+		logger.debug("Num of compound words after native splitting: {}", words.stream().filter(Word::isCompound).count());
 			
 		
 		
 		
-		LOGGER.debug("segment score cache size: {}", segmentScoreEntries.size());
-		LOGGER.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
-		LOGGER.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
-		LOGGER.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
+		logger.debug("segment score cache size: {}", segmentScoreEntries.size());
+		logger.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
+		logger.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
+		logger.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
 		terminology.getTerminology().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
@@ -260,7 +260,7 @@ public class NativeSplitter extends TerminologyEngine {
 	}
 
 	private void buildCompostIndex() {
-		LOGGER.debug("Building compost index");
+		logger.debug("Building compost index");
 
 		compostIndex = new CompostIndex(similarityIndexingKey);
 		for(String word:languageDico.getElements())
@@ -269,7 +269,7 @@ public class NativeSplitter extends TerminologyEngine {
 			compostIndex.addNeoclassicalPrefix(word);
 		for(Word w:terminology.getWords())
 			compostIndex.addInCorpus(w.getLemma());
-		LOGGER.debug("Compost index size: " + compostIndex.size());
+		logger.debug("Compost index size: " + compostIndex.size());
 	}
 
 	/*
@@ -375,8 +375,8 @@ public class NativeSplitter extends TerminologyEngine {
 			inCorpus = closestEntry.isInNeoClassicalPrefix() ? 1 : 0;
 		}
 		double score = this.opt.getAlpha() * indexSimilarity + this.opt.getBeta() * inDico + this.opt.getGamma() * inCorpus + this.opt.getDelta() * dataCorpus;
-		if(LOGGER.isTraceEnabled()) {
-			LOGGER.trace("Score for {} is {} [alpha: {} beta: {} gamma: {} delta: {}]", 
+		if(logger.isTraceEnabled()) {
+			logger.trace("Score for {} is {} [alpha: {} beta: {} gamma: {} delta: {}]", 
 					segment, 
 					score,
 					indexSimilarity,

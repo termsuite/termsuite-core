@@ -8,8 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -17,9 +17,8 @@ import fr.univnantes.termsuite.model.TermRelation;
 import jetbrains.exodus.core.dataStructures.hash.HashSet;
 
 public class IndependanceScorer extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(IndependanceScorer.class);
-	
-	
+	@InjectLogger Logger logger;
+
 	public Set<Term> getExtensions(Term from) {
 		Set<Term> extensions = new HashSet<>();
 		
@@ -40,7 +39,7 @@ public class IndependanceScorer extends TerminologyEngine {
 				.filter(badExtension)
 				.limit(10)
 				.forEach(extension -> {
-					LOGGER.warn("Bad relation found: {}", extension);
+					logger.warn("Bad relation found: {}", extension);
 				});
 			throw new IllegalStateException("Terminology contains potential extension cycles");
 		}
@@ -54,7 +53,7 @@ public class IndependanceScorer extends TerminologyEngine {
 		/*
 		 * 1. Init independant frequency
 		 */
-		LOGGER.debug("Init INDEPENDANT_FREQUENCY for all terms");
+		logger.debug("Init INDEPENDANT_FREQUENCY for all terms");
 		terminology
 			.terms()
 			.forEach(t-> t.setProperty(
@@ -65,15 +64,15 @@ public class IndependanceScorer extends TerminologyEngine {
 		/*
 		 * 2. Compute depths
 		 */
-		LOGGER.debug("Computing DEPTH property for all terms");
+		logger.debug("Computing DEPTH property for all terms");
 		final AtomicInteger depth = setDepths();
-		LOGGER.debug("Depth of terminology is {}", depth.intValue());
+		logger.debug("Depth of terminology is {}", depth.intValue());
 		
 		
 		/*
 		 * 3. Score INDEPENDANT_FREQUENCY
 		 */
-		LOGGER.debug("Computing INDEPENDANT_FREQUENCY by  for all terms");
+		logger.debug("Computing INDEPENDANT_FREQUENCY by  for all terms");
 		do {
 			terminology
 				.terms()
@@ -95,7 +94,7 @@ public class IndependanceScorer extends TerminologyEngine {
 		/*
 		 * 4. Score INDEPENDANCE
 		 */
-		LOGGER.debug("Computing INDEPENDANCE for all terms");
+		logger.debug("Computing INDEPENDANCE for all terms");
 		terminology.terms()
 			.forEach(t -> {
 				double iFreq = (double)t.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
@@ -136,7 +135,7 @@ public class IndependanceScorer extends TerminologyEngine {
 			.collect(toSet());
 		
 		if(!noDepthTerms.isEmpty()) {
-			LOGGER.warn(
+			logger.warn(
 					String.format("Property %s not set for %d terms. Example: %s", 
 							TermProperty.DEPTH, 
 							noDepthTerms.size(),

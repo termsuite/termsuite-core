@@ -8,11 +8,11 @@ import javax.inject.Inject;
 
 import org.codehaus.groovy.runtime.InvokerInvocationException;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Maps;
 
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
@@ -22,8 +22,8 @@ import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 
 public class GroovyService {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(GroovyService.class);
+	@InjectLogger Logger logger;
+
 	private static final String GROOVY_MATCH_METHOD_NAME = "match";
 	private static final String GROOVY_SET_HELPER_METHOD_NAME = "setHelper";
 	private static int CLASS_NUM = 0;
@@ -116,10 +116,10 @@ public class GroovyService {
 		} catch(IndexOutOfBoundsException e) {
 			return false;
 		} catch(InvokerInvocationException e) {
-			LOGGER.error("An error occurred in groovy variant rule", e);
+			logger.error("An error occurred in groovy variant rule", e);
 			throw new RuntimeException(e);
 		} catch(Exception e) {
-			LOGGER.warn("The variant rule {} throwed an exception: {}", rule.getName(), e.getClass());
+			logger.warn("The variant rule {} throwed an exception: {}", rule.getName(), e.getClass());
 			return false;
 		}
 	}

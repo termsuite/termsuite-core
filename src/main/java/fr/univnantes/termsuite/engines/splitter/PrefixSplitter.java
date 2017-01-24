@@ -24,11 +24,11 @@
 package fr.univnantes.termsuite.engines.splitter;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationType;
@@ -39,7 +39,7 @@ import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 
 public class PrefixSplitter extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(PrefixSplitter.class);
+	@InjectLogger Logger logger;
 
 	@Resource(type=ResourceType.PREFIX_BANK)
 	private PrefixTree prefixTree;
@@ -48,7 +48,7 @@ public class PrefixSplitter extends TerminologyEngine {
 
 	@Override
 	public void execute() {
-		LOGGER.info("Starting prefix splitting");
+		logger.info("Starting prefix splitting");
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
@@ -68,12 +68,12 @@ public class PrefixSplitter extends TerminologyEngine {
 			pref = prefixTree.getPrefix(lemma);
 			if(pref != null && pref.length() < lemma.length()) {
 				prefixExtension = lemma.substring(pref.length(),lemma.length());
-				if(LOGGER.isTraceEnabled())
-					LOGGER.trace("Found prefix: {} for word {}", pref, lemma);
+				if(logger.isTraceEnabled())
+					logger.trace("Found prefix: {} for word {}", pref, lemma);
 				if(checkIfMorphoExtensionInCorpus) {
 					if(!lemmaIndex.containsKey(prefixExtension)) {
-						if(LOGGER.isTraceEnabled())
-							LOGGER.trace("Prefix extension: {} for word {} is not found in corpus. Aborting composition for this word.", prefixExtension, lemma);
+						if(logger.isTraceEnabled())
+							logger.trace("Prefix extension: {} for word {} is not found in corpus. Aborting composition for this word.", prefixExtension, lemma);
 						continue;
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
@@ -89,7 +89,7 @@ public class PrefixSplitter extends TerminologyEngine {
 				nb++;
 			}
 		}
-		LOGGER.debug("Number of words with prefix composition: {} out of {}", 
+		logger.debug("Number of words with prefix composition: {} out of {}", 
 				nb, 
 				terminology.wordCount());
 	}

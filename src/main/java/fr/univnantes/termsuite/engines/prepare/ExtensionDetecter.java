@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -20,8 +20,8 @@ import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class ExtensionDetecter extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionDetecter.class);
 	private static final int WARNING_CRITICAL_SIZE = 10000;
+	@InjectLogger Logger logger;
 
 	private Optional<TermHistory> history = Optional.empty();
 	
@@ -33,7 +33,7 @@ public class ExtensionDetecter extends TerminologyEngine {
 	
 	@Override
 	public void execute() {
-		LOGGER.info("Detecting extensions on terminology");
+		logger.info("Detecting extensions on terminology");
 		if(terminology.getTerms().isEmpty())
 			return;
 
@@ -41,7 +41,7 @@ public class ExtensionDetecter extends TerminologyEngine {
 		
 		setSize1Extensions();
 		setSize2Extensions();
-		LOGGER.debug("Extensions detected in {}", sw);
+		logger.debug("Extensions detected in {}", sw);
 
 	}
 
@@ -50,7 +50,7 @@ public class ExtensionDetecter extends TerminologyEngine {
 				TermIndexes.SWT_GROUPING_KEYS,
 				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
 		
-		LOGGER.debug("Detecting size-1 extensions");
+		logger.debug("Detecting size-1 extensions");
 		for (String swtGroupingKey : swtIndex.keySet()) {
 			Term swt = terminology.getTerm(swtGroupingKey);
 			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
@@ -86,16 +86,16 @@ public class ExtensionDetecter extends TerminologyEngine {
 	}
 
 	public void setSize2Extensions() {
-		LOGGER.debug("Detecting size-2 (and more) extensions");
+		logger.debug("Detecting size-2 (and more) extensions");
 
 		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;
 		CustomTermIndex customIndex = terminology.getTerminology().createCustomIndex(
 				gatheringKey,
 				TermValueProviders.get(gatheringKey));
-		LOGGER.debug("Rule-based gathering over {} classes", customIndex.size());
+		logger.debug("Rule-based gathering over {} classes", customIndex.size());
 
 		// clean singleton classes
-		LOGGER.debug("Cleaning singleton keys");
+		logger.debug("Cleaning singleton keys");
 		customIndex.cleanSingletonKeys();
 
 		// clean biggest classes

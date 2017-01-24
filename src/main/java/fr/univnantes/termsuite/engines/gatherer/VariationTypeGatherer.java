@@ -7,11 +7,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 import com.google.inject.Inject;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
@@ -23,12 +23,12 @@ import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public class VariationTypeGatherer extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(VariationTypeGatherer.class);
 	
 	private static final int DEFAULT_MAX_CLASS_COMPLEXITY = 1000000;
 
 	@Inject GroovyService groovyService;
-	
+	@InjectLogger Logger logger;
+
 	@Resource(type=ResourceType.VARIANTS)
 	protected YamlRuleSet variantRules;
 
@@ -44,7 +44,7 @@ public class VariationTypeGatherer extends TerminologyEngine {
 
 	@Override
 	public void execute() {
-		LOGGER.info("Gathering {} variants", variationType.name().toLowerCase());
+		logger.info("Gathering {} variants", variationType.name().toLowerCase());
 		if(variantRules.getVariantRules().isEmpty())
 			return;
 
@@ -52,7 +52,7 @@ public class VariationTypeGatherer extends TerminologyEngine {
 		Stopwatch indexSw = Stopwatch.createStarted();
 		CustomTermIndex index = terminology.getTerminology().getCustomIndex(indexName);
 		index.cleanSingletonKeys();
-		LOGGER.debug("Term grouped in classes in {}", indexSw);
+		logger.debug("Term grouped in classes in {}", indexSw);
 
 		indexSw.stop();
 		Stopwatch gatheringSw = Stopwatch.createStarted();
@@ -67,7 +67,7 @@ public class VariationTypeGatherer extends TerminologyEngine {
 		if(dropIndexAtEnd)
 			terminology.getTerminology().dropCustomIndex(indexName);
 		
-		LOGGER.debug("Term gathered in {} - Num of comparisons: {}", gatheringSw, cnt);
+		logger.debug("Term gathered in {} - Num of comparisons: {}", gatheringSw, cnt);
 	}
 	
 
@@ -104,7 +104,7 @@ public class VariationTypeGatherer extends TerminologyEngine {
 			
 			long complexity = sources.size() * targets.size();
 			if(complexity > DEFAULT_MAX_CLASS_COMPLEXITY)
-				LOGGER.debug("Skipping term class {} because complexity is too high. Complexity: {}. Max: {}", clsName, complexity, DEFAULT_MAX_CLASS_COMPLEXITY);
+				logger.debug("Skipping term class {} because complexity is too high. Complexity: {}. Max: {}", clsName, complexity, DEFAULT_MAX_CLASS_COMPLEXITY);
 			
 			for(Term source:sources) {
 				for(Term target:targets) {

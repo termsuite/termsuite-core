@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -18,8 +18,8 @@ import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermMerger extends TerminologyEngine {
+	@InjectLogger Logger logger;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(TermMerger.class);
 	private static final Double MERGING_THRESHOLD = 2d;
 
 	private Optional<TermHistory> history = Optional.empty();
@@ -31,7 +31,7 @@ public class TermMerger extends TerminologyEngine {
 
 	@Override
 	public void execute() {
-		LOGGER.info("Merging graphical variations");
+		logger.info("Merging graphical variations");
 		final MutableInt nbMerged = new MutableInt(0);
 		
 		List<TermRelation> relationsToMerge = terminology.variations()
@@ -62,10 +62,10 @@ public class TermMerger extends TerminologyEngine {
 			.collect(Collectors.toList());
 		
 		
-		LOGGER.debug("Merging {} relations", relationsToMerge.size());
+		logger.debug("Merging {} relations", relationsToMerge.size());
 
 		relationsToMerge.forEach(rel -> {
-				LOGGER.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
+				logger.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
 				watch(rel);
 				
 				OccurrenceStore occStore = terminology.getTerminology().getOccurrenceStore();
@@ -83,9 +83,9 @@ public class TermMerger extends TerminologyEngine {
 				nbMerged.increment();
 			});
 		
-		if(LOGGER.isDebugEnabled()) {
-			LOGGER.debug("Nb merges operated: {}", nbMerged);
-			LOGGER.debug("Number of terms in termino: {}, Number of variations in termino: {}", 
+		if(logger.isDebugEnabled()) {
+			logger.debug("Nb merges operated: {}", nbMerged);
+			logger.debug("Number of terms in termino: {}, Number of variations in termino: {}", 
 					terminology.termCount(),
 					terminology.variations().count());
 		}

@@ -26,8 +26,8 @@ import java.util.Optional;
 import javax.inject.Inject;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
@@ -38,7 +38,7 @@ import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermSpecificityComputer extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(TermSpecificityComputer.class);
+	@InjectLogger Logger logger;
 
 	@Resource(type=ResourceType.GENERAL_LANGUAGE)
 	private GeneralLanguage generalLanguage;
@@ -48,7 +48,7 @@ public class TermSpecificityComputer extends TerminologyEngine {
 	
 	@Override
 	public void execute() {
-		LOGGER.info("Computing specificities");
+		logger.info("Computing specificities");
 		
 		if(terminology.getTerms().isEmpty())
 			return;

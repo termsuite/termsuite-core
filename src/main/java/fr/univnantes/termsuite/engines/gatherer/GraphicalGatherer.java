@@ -6,8 +6,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.slf4j.Logger;
+
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.metrics.EditDistance;
@@ -21,6 +24,8 @@ import fr.univnantes.termsuite.model.termino.TermIndexes;
 public class GraphicalGatherer extends TerminologyEngine {
 	
 	private EditDistance distance = new FastDiacriticInsensitiveLevenshtein(false);
+	
+	@InjectLogger Logger logger;
 	
 	@Parameter
 	private GathererOptions options;
@@ -50,7 +55,7 @@ public class GraphicalGatherer extends TerminologyEngine {
 	
 	@Override
 	public void execute() {
-		getLogger().info("Gathering graphical variants");
+		logger.info("Gathering graphical variants");
 		AtomicLong comparisonCounter = new AtomicLong(0);
 		CustomTermIndex index = terminology.getTerminology().getCustomIndex(indexName);
 		index.cleanSingletonKeys();
@@ -62,7 +67,7 @@ public class GraphicalGatherer extends TerminologyEngine {
 			});
 		terminology.getTerminology().dropCustomIndex(indexName);
 		setIsGraphicalVariantProperties();
-		getLogger().debug("Number of graphical comparison computed: {}", comparisonCounter.longValue());
+		logger.debug("Number of graphical comparison computed: {}", comparisonCounter.longValue());
 	}
 	
 	protected void gather(Collection<Term> termClass, String clsName, AtomicLong comparisonCounter) {

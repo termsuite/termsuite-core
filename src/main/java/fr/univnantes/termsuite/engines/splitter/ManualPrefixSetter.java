@@ -28,8 +28,8 @@ import static java.util.stream.Collectors.toList;
 import java.util.List;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationType;
@@ -40,8 +40,8 @@ import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 
 public class ManualPrefixSetter extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(ManualPrefixSetter.class);
-	
+	@InjectLogger Logger logger;
+
 	@Resource(type=ResourceType.PREFIX_EXCEPTIONS)
 	private ManualSegmentationResource prefixExceptions;
 
@@ -62,7 +62,7 @@ public class ManualPrefixSetter extends TerminologyEngine {
 						watch(swt, tv);
 					}
 				} else {
-					LOGGER.warn("Ignoring prefix exception {}->{} since non-expty prefix exceptions are not allowed.",
+					logger.warn("Ignoring prefix exception {}->{} since non-expty prefix exceptions are not allowed.",
 							word.getLemma(),
 							segmentation);
 				}

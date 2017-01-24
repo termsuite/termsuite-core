@@ -3,6 +3,9 @@ package fr.univnantes.termsuite.engines.postproc;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -11,6 +14,8 @@ import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 
 public class VariationFiltererByScore extends TerminologyEngine {
+
+	@InjectLogger Logger logger;
 
 	@Parameter
 	private PostProcessorOptions config;
@@ -24,7 +29,7 @@ public class VariationFiltererByScore extends TerminologyEngine {
 			.stream()
 			.forEach(terminology::removeRelation);
 		
-		TermPostProcessor.logVariationsAndTerms(terminology);
+		TermPostProcessor.logVariationsAndTerms(logger, terminology);
 	}
 
 	private boolean filterVariation(TermRelation relation) {

@@ -27,7 +27,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.Iterators;
@@ -35,6 +34,7 @@ import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.AtomicDouble;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.ContextVector;
@@ -52,8 +52,8 @@ import fr.univnantes.termsuite.utils.IteratorUtils;
  *
  */
 public class Contextualizer extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Contextualizer.class);
-	
+	@InjectLogger Logger logger;
+
 	@Parameter
 	private ContextualizerOptions options;
 
@@ -70,13 +70,13 @@ public class Contextualizer extends TerminologyEngine {
 			return;
 		
 		// 0- drop all context vectors
-		LOGGER.debug("0 - Drop all context vectors");
+		logger.debug("0 - Drop all context vectors");
 		for(Term t:terminology.getTerms())
 			t.setContext(null);
 		
 		
 		// 1- index all occurrences in source documents
-		LOGGER.debug("1 - Create occurrence index");
+		logger.debug("1 - Create occurrence index");
 		computeDocumentViews();
 		
 		
@@ -85,27 +85,27 @@ public class Contextualizer extends TerminologyEngine {
 		
 		
 		// 3- Normalize context vectors
-		LOGGER.debug("3 - Normalizing context vectors");
-		LOGGER.debug("3a - Generating the cross table");
+		logger.debug("3 - Normalizing context vectors");
+		logger.debug("3a - Generating the cross table");
 		CrossTable crossTable = computeCrossTable();
-		LOGGER.debug("3b - Normalizing {} context vectors", total);
+		logger.debug("3b - Normalizing {} context vectors", total);
 		String traceMsg = "[Progress: {} / {}] Normalizing term {}";
 		int progress = 0;
 		for(Term t:IteratorUtils.toIterable(getTermIterator())) {
 			++progress;
 			if(progress%500 == 0)
-				LOGGER.trace(traceMsg, progress, total, t);
+				logger.trace(traceMsg, progress, total, t);
 			toAssocRateVector(t, crossTable, rate, true);
 		}
 		
 		// 4- Clean occurrence indexes in source documents
-		LOGGER.debug("4 - Clear occurrence index");
+		logger.debug("4 - Clear occurrence index");
 		documentViews = null;
 	}
 
 	public long setContexts() {
 		long total = terminology.terms().filter(t->t.getWords().size()==1).count();
-		LOGGER.debug("2 - Create context vectors. (number of contexts to compute: {})", 
+		logger.debug("2 - Create context vectors. (number of contexts to compute: {})", 
 				total);
 		Iterator<Term> iterator = getTermIterator();
 		for(Term t:IteratorUtils.toIterable(iterator)) {

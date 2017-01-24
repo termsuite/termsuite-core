@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
+import org.slf4j.Logger;
+
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -29,6 +32,8 @@ import fr.univnantes.termsuite.model.TermRelation;
  *  		   will remove "wind turbine --> horizontal axis wind turbine"
  */
 public class TwoOrderVariationMerger extends TerminologyEngine {
+
+	@InjectLogger Logger logger;
 
 	@Override
 	public void execute() {
@@ -75,7 +80,7 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 			);
 		
 		
-		TermPostProcessor.logVariationsAndTerms(terminology);
+		TermPostProcessor.logVariationsAndTerms(logger, terminology);
 	}
 
 	
@@ -118,9 +123,9 @@ public class TwoOrderVariationMerger extends TerminologyEngine {
 						Term t3 = r2.getTo();
 						
 						TermRelation rtrans = r1Set.get(t3);
-						if(getLogger().isTraceEnabled()) {
-							getLogger().trace("Found order-2 relation in variation set {}-->{}-->{}", t1, t2, t3);
-							getLogger().trace("Removing {}", rtrans);
+						if(logger.isTraceEnabled()) {
+							logger.trace("Found order-2 relation in variation set {}-->{}-->{}", t1, t2, t3);
+							logger.trace("Removing {}", rtrans);
 						}
 						watchRemoval(t1, t2, t3, rtrans);
 						rem.add(rtrans);

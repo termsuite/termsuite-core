@@ -6,7 +6,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
@@ -16,6 +15,7 @@ import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
@@ -29,7 +29,7 @@ import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class SemanticGatherer extends VariationTypeGatherer {
-	private static final Logger LOGGER = LoggerFactory.getLogger(SemanticGatherer.class);
+	@InjectLogger Logger logger;
 
 	@Parameter
 	private GathererOptions options;
@@ -68,23 +68,23 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		for(VariantRule rule:this.variantRules.getVariantRules(VariationType.SEMANTIC))
 			gather((SynonymicRule)rule);
 		gatherSw.stop();
-		LOGGER.debug("Cumulated indexing time: {}", indexingSw);
+		logger.debug("Cumulated indexing time: {}", indexingSw);
 		
-		LOGGER.debug("Alignment cache stats: {}", alignmentScores.stats()); 
-		LOGGER.debug("Alignment cache hit rate: {} - load penalty: {}", 
+		logger.debug("Alignment cache stats: {}", alignmentScores.stats()); 
+		logger.debug("Alignment cache hit rate: {} - load penalty: {}", 
 				alignmentScores.stats().hitRate(),
 				alignmentScores.stats().averageLoadPenalty()
 				);
 		alignmentScores.invalidateAll();
 		
-		LOGGER.debug("Term gathered in {} - Num of alignments: {}", 
+		logger.debug("Term gathered in {} - Num of alignments: {}", 
 				gatherSw, 
 				nbAlignmentsCounter);
 	}
 	
 	public void gather(SynonymicRule rule) {
 		
-		LOGGER.info("Aligning semantic variations for rule {}", rule.getName());
+		logger.info("Aligning semantic variations for rule {}", rule.getName());
 		if(terminology.getTerms().isEmpty())
 			return;
 		Preconditions.checkNotNull(rule);
@@ -125,7 +125,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 					a1 = terminology.getTerm(akey1);
 
 				if(a1.getContext() == null) {
-					LOGGER.warn("No context vector set for term {}", a1);
+					logger.warn("No context vector set for term {}", a1);
 					continue;
 				}
 				t1Relations = new ArrayList<>();
@@ -147,7 +147,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 					}
 					
 					if(a2.getContext() == null) {
-						LOGGER.warn("No context vector set for term {}", a1);
+						logger.warn("No context vector set for term {}", a1);
 						continue;
 					} else {
 						pair = new Pair<>(a1, a2);
@@ -176,8 +176,8 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		ruleSw.stop();
 
 		terminology.getTerminology().dropCustomIndex(indexName);
-		LOGGER.debug("Semantic alignment finished for rule {} in {}", rule, ruleSw);
-		LOGGER.debug("Nb distributional synonymic relations found: {}. Total dico synonyms: {}", 
+		logger.debug("Semantic alignment finished for rule {} in {}", rule, ruleSw);
+		logger.debug("Nb distributional synonymic relations found: {}. Total dico synonyms: {}", 
 				nbDistribRelationsFound, 
 				nbDicoRelationFound
 				);

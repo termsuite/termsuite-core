@@ -26,8 +26,8 @@ package fr.univnantes.termsuite.engines.splitter;
 import java.util.List;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -42,7 +42,7 @@ import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 
 public class SuffixDerivationDetecter extends TerminologyEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(SuffixDerivationDetecter.class);
+	@InjectLogger Logger logger;
 
 	private static final String LEMMA_INDEX = "LemmaIndex";
 
@@ -51,7 +51,7 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 	
 	@Override
 	public void execute() {
-		LOGGER.info("Detecting suffix derivations for termino");
+		logger.info("Detecting suffix derivations for termino");
 		CustomTermIndex lemmaIndex = terminology.getTerminology().createCustomIndex(
 				LEMMA_INDEX, 
 				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
@@ -71,8 +71,8 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 					for(Term baseTerm:baseTerms) {
 						if(baseTerm.getWords().get(0).equals(baseTermWord)) {
 							nbDerivations++;
-							if(LOGGER.isTraceEnabled())
-								LOGGER.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
+							if(logger.isTraceEnabled())
+								logger.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
 							TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, baseTerm, swt);
 							relation.setProperty(RelationProperty.DERIVATION_TYPE, suffixDerivation.getType());
 							terminology.addRelation(relation);
@@ -85,7 +85,7 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 		
 		terminology.getTerminology().dropCustomIndex(LEMMA_INDEX);
 		
-		LOGGER.debug("Number of derivations found: {} out of {} SWTs", 
+		logger.debug("Number of derivations found: {} out of {} SWTs", 
 				nbDerivations, 
 				nbSwt);
 	}

@@ -9,9 +9,9 @@ import java.util.stream.Stream;
 import javax.inject.Inject;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
+import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
@@ -22,8 +22,7 @@ import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class TerminologyCleaner extends TerminologyEngine {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(TerminologyCleaner.class);
+	@InjectLogger Logger logger;
 
 	@Parameter
 	private TerminoFilterOptions options;
@@ -41,11 +40,11 @@ public class TerminologyCleaner extends TerminologyEngine {
 	}
 	
 	public void execute() {
-		LOGGER.info("Cleaning terminology");
+		logger.info("Cleaning terminology");
 		
 		long termcount = 0;
 		long relcount = 0;
-		if(LOGGER.isDebugEnabled()) {
+		if(logger.isDebugEnabled()) {
 			termcount = termino.termCount();
 			relcount = termino.variations().count();
 		}
@@ -54,12 +53,12 @@ public class TerminologyCleaner extends TerminologyEngine {
 		cleanVariations(termino);
 		cleanFilteredTerms(termino);
 		
-		if(LOGGER.isDebugEnabled()) {
+		if(logger.isDebugEnabled()) {
 			long termcountAfter = termino.termCount();
 			long relcountAfter = termino.variations().count();
-			LOGGER.debug("Finished terminology cleaning.");
-			LOGGER.debug("At end of filtering - Number of terms: {} (num of filtered terms: {})", termcountAfter, termcount-termcountAfter);
-			LOGGER.debug("At end of filtering - Number of variations: {} (num of filtered variations: {})", relcountAfter, relcount-relcountAfter);
+			logger.debug("Finished terminology cleaning.");
+			logger.debug("At end of filtering - Number of terms: {} (num of filtered terms: {})", termcountAfter, termcount-termcountAfter);
+			logger.debug("At end of filtering - Number of variations: {} (num of filtered variations: {})", relcountAfter, relcount-relcountAfter);
 		}
 	}
 
