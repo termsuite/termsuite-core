@@ -48,7 +48,7 @@ public class TermSuiteFactory {
 		Injector injector = Guice.createInjector(
 				new ResourceModule(config),
 				new ExtractorModule(terminology, history)
-				);
+			);
 		return injector;
 	}
 
@@ -60,4 +60,13 @@ public class TermSuiteFactory {
 			return new SimpleEngineRunner(description, injector, parent);
 	}
 
+	public static Pipeline createPipeline(Class<? extends Engine> engineClass, Terminology terminology,
+			ResourceConfig resourceConfig, TermHistory history, Object... parameters) {
+		EngineDescription description = new EngineDescription(engineClass.getSimpleName(), engineClass, parameters);
+		Injector injector = createExtractorInjector(terminology, resourceConfig, history);
+		EngineRunner runner = createEngineRunner(description, injector, null);
+		Pipeline pipeline = injector.getInstance(Pipeline.class);
+		pipeline.setRunner(runner);
+		return pipeline;
+	}
 }

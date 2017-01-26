@@ -38,6 +38,8 @@ import java.util.Set;
 import org.assertj.core.util.Lists;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
 
 import com.google.common.cache.CacheBuilder;
@@ -46,6 +48,7 @@ import com.google.common.cache.LoadingCache;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
+import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Terminology;
@@ -56,6 +59,8 @@ import fr.univnantes.termsuite.uima.ResourceType;
 
 public abstract class WindEnergySpec {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
+	
 	protected Terminology termino = null;
 	protected Lang lang;
 	protected List<String> notTestedRules = Lists.newArrayList();
@@ -115,10 +120,11 @@ public abstract class WindEnergySpec {
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
 		extractorOptions.getPostProcessorConfig().setEnabled(false);
 		extractorOptions.getGathererConfig().setMergerEnabled(false);
-		TermSuite.terminoExtractor()
+		PipelineStats stats = TermSuite.terminoExtractor()
 					.setOptions(extractorOptions)
 					.execute(terminology);
-		
+		LOGGER.info("Pipeline finished in {} ms", stats.getTotalTime());
+		LOGGER.info("Total indexing time: {} ms", stats.getIndexingTime());
 		return terminology;
 	}
 

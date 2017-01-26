@@ -3,8 +3,9 @@ package fr.univnantes.termsuite.api;
 import java.util.Optional;
 
 import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
+import fr.univnantes.termsuite.framework.Pipeline;
+import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -47,17 +48,16 @@ public class TerminoExtractor {
 		return this;
 	}
 	
-	public void execute(Terminology terminology) {
+	public PipelineStats execute(Terminology terminology) {
 		if(options == null)
 			options = TermSuite.getDefaultExtractorConfig(terminology.getLang());
-		EngineRunner runner = TermSuiteFactory.createEngineRunner(
+		Pipeline pipeline = TermSuiteFactory.createPipeline(
 				TerminologyExtractorEngine.class, 
 				terminology,
 				resourceConfig.orElse(null),
 				history.orElse(null),
 				options
 				);
-		runner.configure();
-		runner.run();
+		return pipeline.run();
 	}
 }

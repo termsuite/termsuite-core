@@ -10,6 +10,7 @@ import com.google.inject.Injector;
 import fr.univnantes.termsuite.framework.EngineDescription;
 import fr.univnantes.termsuite.framework.EngineInjector;
 import fr.univnantes.termsuite.framework.Index;
+import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TermSuiteResource;
 import fr.univnantes.termsuite.framework.service.IndexService;
@@ -32,6 +33,8 @@ public abstract class EngineRunner {
 
 	protected EngineInjector engineInjector;
 
+	protected PipelineStats stats;
+	
 	public EngineRunner(EngineDescription description, Injector injector, EngineRunner parent) {
 		super();
 		this.description = description;
@@ -40,6 +43,7 @@ public abstract class EngineRunner {
 		this.injector = injector;
 		this.engineInjector = new EngineInjector(description.getEngineClass(), injector);
 		this.parent = Optional.ofNullable(parent);
+		this.stats = injector.getInstance(PipelineStats.class);
 	}
 
 	public void configure() {

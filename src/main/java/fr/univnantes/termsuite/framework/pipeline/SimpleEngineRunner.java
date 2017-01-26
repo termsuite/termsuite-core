@@ -1,7 +1,5 @@
 package fr.univnantes.termsuite.framework.pipeline;
 
-import java.lang.reflect.Field;
-
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.SimpleEngine;

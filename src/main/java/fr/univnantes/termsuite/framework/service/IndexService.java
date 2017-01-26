@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentMap;
 import org.slf4j.Logger;
 
 import com.google.common.base.Preconditions;
+import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
 import com.google.inject.Inject;
 
@@ -26,6 +27,8 @@ public class IndexService {
 	@Inject
 	Terminology terminology;
 	
+	private Stopwatch indexingSW = Stopwatch.createUnstarted();
+
 	private ConcurrentMap<TermIndexType, TermIndex> termIndexes = new ConcurrentHashMap<>();
 
 	public void addTerm(Term term) {
@@ -43,16 +46,19 @@ public class IndexService {
 		Preconditions.checkArgument(!termIndexes.containsKey(indexType),
 				"TermIndex %s already created", indexType);
 		logger.debug("Creating TermIndex {}", indexType);
+		indexingSW.start();
 		TermIndex termIndex;
 		try {
 			termIndex = new TermIndex(indexType.getProviderClass().newInstance());
 		} catch (InstantiationException | IllegalAccessException e) {
+			indexingSW.stop();
 			throw new TermSuiteException(e);
 		}
 		this.termIndexes.put(indexType, termIndex);
 
 		for(Term t:this.terminology.getTerms().values()) 
 			termIndex.addToIndex(this.terminology, t);
+		indexingSW.stop();
 		return termIndex;
 	}
 
@@ -66,6 +72,9 @@ public class IndexService {
 			termIndex.removeTerm(this.terminology, term);
 	}
 
+	public Stopwatch getIndexingTime() {
+		return indexingSW;
+	}
 	
 	public void cleanEntriesByMaxSize(TermIndexType termIndexType, int maxSize) {
 		TermIndex termIndex = checkIndexCreated(termIndexType);
