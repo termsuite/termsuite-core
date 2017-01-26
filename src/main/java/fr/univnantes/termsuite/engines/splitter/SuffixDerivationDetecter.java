@@ -53,8 +53,6 @@ public class SuffixDerivationDetecter extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Detecting suffix derivations for termino");
-		
 		int nbDerivations = 0, nbSwt = 0;
 		TermWord candidateDerivateTermWord, baseTermWord;
 		for(Term swt:terminology.getTerms()) {

@@ -98,10 +98,8 @@ public class NativeSplitter extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Starting morphologyical compound detection for termino");
 		buildCompostIndex();
 
-		
 		final MutableLong cnt = new MutableLong(0);
 		
 		Timer progressLoggerTimer = new Timer("Morphosyntactic splitter AE");
@@ -211,17 +209,14 @@ public class NativeSplitter extends SimpleEngine {
 		//finalize
 		progressLoggerTimer.cancel();
 
-		logger.debug("Num of compound words after native splitting: {}", words.stream().filter(Word::isCompound).count());
 			
-		
-		
-		
 		logger.debug("segment score cache size: {}", segmentScoreEntries.size());
 		logger.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		logger.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
 		logger.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
+		logger.debug("Num of compound words after native splitting: {}", words.stream().filter(Word::isCompound).count());
 	}
 	
 	private void watchComposition(Word word, boolean newlyCreated) {

@@ -32,8 +32,6 @@ import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 
-import com.google.common.base.Stopwatch;
-
 import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.InjectLogger;
@@ -70,8 +68,6 @@ public class VariationScorer extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		logger.info("Computing scores for variations");
-		Stopwatch sw = Stopwatch.createStarted();
 
 		logger.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
 		doVariationFrenquencies();
@@ -90,9 +86,6 @@ public class VariationScorer extends SimpleEngine {
 		
 		logger.debug("Computing {}", RelationProperty.VARIANT_SCORE);
 		doVariantScores();
-		
-		sw.stop();
-		logger.debug("Scores computed in {}", sw);
 	}
 
 	private void normalizeSourceGain() {

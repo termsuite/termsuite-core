@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.slf4j.Logger;
 
 import com.google.common.base.Preconditions;
-import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.Index;
@@ -40,16 +39,10 @@ public class ExtensionDetecter extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Detecting extensions on terminology");
 		if(terminology.getTerms().isEmpty())
 			return;
-
-		Stopwatch sw = Stopwatch.createStarted();
-		
 		setSize1Extensions();
 		setSize2Extensions();
-		logger.debug("Extensions detected in {}", sw);
-
 	}
 
 	

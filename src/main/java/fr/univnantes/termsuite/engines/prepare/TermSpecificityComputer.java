@@ -48,8 +48,6 @@ public class TermSpecificityComputer extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Computing specificities");
-		
 		if(terminology.getTerms().isEmpty())
 			return;
 		

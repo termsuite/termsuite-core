@@ -48,18 +48,14 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		
-		logger.debug("Infering variations of term extensions");
 		if(!terminology.extensions().findAny().isPresent())
 			logger.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
-		
 		
 		terminology
 			.variations()
 			.filter(r -> !r.isPropertySet(RelationProperty.IS_INFERED))
 			.forEach(r-> r.setProperty(RelationProperty.IS_INFERED, false));
 		
-		Stopwatch sw = Stopwatch.createStarted();
 		/*
 		 * Infer variations for all types but VariationType.SYNTAGMATIC
 		 * and VariationType.GRAPHICAL as:
@@ -71,8 +67,6 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 		inferVariations(VariationType.DERIVATION);
 		inferVariations(VariationType.PREFIXATION);
 		inferVariations(VariationType.SEMANTIC);
-		sw.stop();
-		logger.debug("Infered variations of term extensions gathered in {}", sw);
 	}
 
 

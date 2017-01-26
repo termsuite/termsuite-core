@@ -36,7 +36,6 @@ public class TermMerger extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		logger.info("Merging graphical variations");
 		final MutableInt nbMerged = new MutableInt(0);
 		
 		List<TermRelation> relationsToMerge = terminology.variations()

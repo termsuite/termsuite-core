@@ -58,7 +58,6 @@ public class GraphicalGatherer extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Gathering graphical variants");
 		AtomicLong comparisonCounter = new AtomicLong(0);
 		letterIndex.keySet().stream()
 			.parallel()

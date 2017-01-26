@@ -48,7 +48,6 @@ public class PrefixSplitter extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		logger.info("Starting prefix splitting");
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;

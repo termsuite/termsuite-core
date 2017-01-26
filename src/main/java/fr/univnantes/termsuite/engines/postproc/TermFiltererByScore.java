@@ -65,7 +65,4 @@ public class TermFiltererByScore extends SimpleEngine {
 							StringUtils.getOrthographicScore(term.getLemma()),
 							this.config.getOrthographicScoreTh()));
 	}
-
-
-
 }

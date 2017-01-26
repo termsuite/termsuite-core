@@ -41,8 +41,6 @@ public class TerminologyCleaner extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Cleaning terminology");
-		
 		long termcount = 0;
 		long relcount = 0;
 		if(logger.isDebugEnabled()) {
@@ -57,7 +55,6 @@ public class TerminologyCleaner extends SimpleEngine {
 		if(logger.isDebugEnabled()) {
 			long termcountAfter = termino.termCount();
 			long relcountAfter = termino.variations().count();
-			logger.debug("Finished terminology cleaning.");
 			logger.debug("At end of filtering - Number of terms: {} (num of filtered terms: {})", termcountAfter, termcount-termcountAfter);
 			logger.debug("At end of filtering - Number of variations: {} (num of filtered variations: {})", relcountAfter, relcount-relcountAfter);
 		}

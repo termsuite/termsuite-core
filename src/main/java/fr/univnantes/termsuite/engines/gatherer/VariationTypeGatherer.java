@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 
-import com.google.common.base.Stopwatch;
 import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.SimpleEngine;
@@ -37,12 +36,10 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		logger.info("Gathering {} variants", variationType.name().toLowerCase());
 		if(variantRules.getVariantRules().isEmpty())
 			return;
 
 		AtomicLong cnt = new AtomicLong(0);
-		Stopwatch gatheringSw = Stopwatch.createStarted();
 		TermIndex termIndex = getTermIndex();
 		
 		termIndex.keySet().stream()
@@ -52,9 +49,8 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 				if(terms.size() > 1)
 					gather(terminology, groovyService, terms, key, cnt);
 			});
-		gatheringSw.stop();
 		
-		logger.debug("Term gathered in {} - Num of comparisons: {}", gatheringSw, cnt);
+		logger.debug("Num of comparisons: {}", cnt);
 	}
 	
 
