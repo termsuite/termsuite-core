@@ -11,18 +11,18 @@ import org.slf4j.Logger;
 import com.google.common.base.Stopwatch;
 import com.google.inject.Inject;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.uima.ResourceType;
 
-public class VariationTypeGatherer extends TerminologyEngine {
+public abstract class VariationTypeGatherer extends SimpleEngine {
 	
 	private static final int DEFAULT_MAX_CLASS_COMPLEXITY = 1000000;
 
@@ -35,13 +35,6 @@ public class VariationTypeGatherer extends TerminologyEngine {
 	@Parameter
 	private VariationType variationType;
 	
-	
-	@Parameter(optional = true) // optional for SemanticGatherer
-	protected String indexName ;
-	
-	@Parameter(optional= true)
-	protected boolean dropIndexAtEnd = true;
-
 	@Override
 	public void execute() {
 		logger.info("Gathering {} variants", variationType.name().toLowerCase());
@@ -49,23 +42,17 @@ public class VariationTypeGatherer extends TerminologyEngine {
 			return;
 
 		AtomicLong cnt = new AtomicLong(0);
-		Stopwatch indexSw = Stopwatch.createStarted();
-		CustomTermIndex index = terminology.getTerminology().getCustomIndex(indexName);
-		index.cleanSingletonKeys();
-		logger.debug("Term grouped in classes in {}", indexSw);
-
-		indexSw.stop();
 		Stopwatch gatheringSw = Stopwatch.createStarted();
-		index.keySet().stream()
+		TermIndex termIndex = getTermIndex();
+		
+		termIndex.keySet().stream()
 			.parallel()
 			.forEach(key -> {
-				Collection<Term> terms = index.getTerms(key);
-				gather(terminology, groovyService, terms, key, cnt);
+				Collection<Term> terms = termIndex.getTerms(key);
+				if(terms.size() > 1)
+					gather(terminology, groovyService, terms, key, cnt);
 			});
 		gatheringSw.stop();
-		
-		if(dropIndexAtEnd)
-			terminology.getTerminology().dropCustomIndex(indexName);
 		
 		logger.debug("Term gathered in {} - Num of comparisons: {}", gatheringSw, cnt);
 	}
@@ -131,4 +118,5 @@ public class VariationTypeGatherer extends TerminologyEngine {
 		variation.get().setProperty(RelationProperty.VARIATION_RULE, rule.getName());
 	}
 
+	protected abstract TermIndex getTermIndex();
 }

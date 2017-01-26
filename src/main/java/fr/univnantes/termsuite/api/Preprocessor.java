@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
 
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.service.PreprocessorService;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.uima.PipelineListener;
@@ -67,14 +68,14 @@ public class Preprocessor {
 	
 	public Terminology toPersistentTerminology(TextCorpus textCorpus, String storeUrl) {
 		String name = preprocessorService.generateTerminologyName(textCorpus);
-		Terminology termino = TermSuite.createPersitentTerminology(storeUrl, textCorpus.getLang(), name);
+		Terminology termino = TermSuiteFactory.createPersitentTerminology(storeUrl, textCorpus.getLang(), name);
 		preprocessorService.consumeToTerminology(asStream(textCorpus), termino, -1);
 		return termino;
 	}
 
 	public Terminology toTerminology(TextCorpus textCorpus, boolean withOccurrences) {
 		String name = preprocessorService.generateTerminologyName(textCorpus);
-		Terminology termino = TermSuite.createTerminology(textCorpus.getLang(), name, withOccurrences);
+		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name, withOccurrences);
 		preprocessorService.consumeToTerminology(asStream(textCorpus), termino);
 		return termino;
 	}

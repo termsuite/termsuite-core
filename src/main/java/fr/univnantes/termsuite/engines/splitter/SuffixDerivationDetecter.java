@@ -27,34 +27,33 @@ import java.util.List;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.SuffixDerivation;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 
-public class SuffixDerivationDetecter extends TerminologyEngine {
+public class SuffixDerivationDetecter extends SimpleEngine {
 	@InjectLogger Logger logger;
-
-	private static final String LEMMA_INDEX = "LemmaIndex";
 
 	@Resource(type=ResourceType.SUFFIX_DERIVATIONS)
 	private SuffixDerivationList suffixDerivationList;
 	
+	@Index(type=TermIndexType.SWT_LEMMAS_SWT_TERMS_ONLY)
+	TermIndex lemmaIndex;
+	
 	@Override
 	public void execute() {
 		logger.info("Detecting suffix derivations for termino");
-		CustomTermIndex lemmaIndex = terminology.getTerminology().createCustomIndex(
-				LEMMA_INDEX, 
-				TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER);
 		
 		int nbDerivations = 0, nbSwt = 0;
 		TermWord candidateDerivateTermWord, baseTermWord;
@@ -82,8 +81,6 @@ public class SuffixDerivationDetecter extends TerminologyEngine {
 				}
 			}
 		}
-		
-		terminology.getTerminology().dropCustomIndex(LEMMA_INDEX);
 		
 		logger.debug("Number of derivations found: {} out of {} SWTs", 
 				nbDerivations, 

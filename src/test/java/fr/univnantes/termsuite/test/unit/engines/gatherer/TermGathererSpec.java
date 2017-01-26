@@ -41,10 +41,11 @@ import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
+import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
+import fr.univnantes.termsuite.index.MemoryTerminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
@@ -64,7 +65,7 @@ public class TermGathererSpec {
 	private Term geothermie_hydraulique_solaire;
 	private Term geothermie_hydraulique;
 	
-	private TermGatherer engine;
+	private EngineRunner gatherer;
 	private GathererOptions options;
 	
 	private static final String VARIANT_RULE_SET = "src/test/resources/fr/univnantes/termsuite/test/resources/variant-rules.yaml";
@@ -75,12 +76,13 @@ public class TermGathererSpec {
 		this.termino = Fixtures.termino();
 		populateTermino(new TermFactory(termino));
 		YamlRuleSet yamlRuleSet = YamlRuleSetIO.fromYaml(text);
-		engine = UnitTests.createEngine(
+		gatherer = UnitTests.createEngineRunner(
 				termino, 
 				TermGatherer.class, 
 				UnitTests.mockResourceModule().bind(ResourceType.VARIANTS, yamlRuleSet),
 				options);
-		engine.execute();
+		gatherer.configure();
+		gatherer.run();
 	}
 
 	private void populateTermino(TermFactory termFactory) {

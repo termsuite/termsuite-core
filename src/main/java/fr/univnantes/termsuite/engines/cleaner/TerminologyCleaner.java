@@ -10,10 +10,10 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
@@ -21,7 +21,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermHistory;
 
-public class TerminologyCleaner extends TerminologyEngine {
+public class TerminologyCleaner extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	@Parameter
@@ -39,6 +39,7 @@ public class TerminologyCleaner extends TerminologyEngine {
 		return this;
 	}
 	
+	@Override
 	public void execute() {
 		logger.info("Cleaning terminology");
 		

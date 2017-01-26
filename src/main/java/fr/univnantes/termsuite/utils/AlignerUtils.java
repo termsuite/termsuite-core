@@ -35,13 +35,13 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 
 public class AlignerUtils {
@@ -81,7 +81,7 @@ public class AlignerUtils {
 	public static ContextVector translateVector(ContextVector sourceVector, 
 			BilingualDictionary dictionary, int translationStrategy, Terminology targetTermino) {
 		ContextVector targetVector = new ContextVector();
-		CustomTermIndex swtLemmaIndex = targetTermino.getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
+		TermIndex swtLemmaIndex = targetTermino.getCustomIndex(TermIndexType.WORD_LEMMAS);
 		
 		for(ContextVector.Entry entry:sourceVector.getEntries()) {
 			Set<Term> translations = Sets.newHashSet();
@@ -296,8 +296,8 @@ public class AlignerUtils {
 
 	public static Set<Term> getSwtSetFromComponent(Terminology termino, Component c) {
 		Set<Term> terms = new HashSet<>();
-		terms.addAll(termino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getLemma()));
-		terms.addAll(termino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(c.getSubstring()));
+		terms.addAll(termino.getCustomIndex(TermIndexType.LEMMA_LOWER_CASE).getTerms(c.getLemma()));
+		terms.addAll(termino.getCustomIndex(TermIndexType.LEMMA_LOWER_CASE).getTerms(c.getSubstring()));
 		return terms;
 	}
 

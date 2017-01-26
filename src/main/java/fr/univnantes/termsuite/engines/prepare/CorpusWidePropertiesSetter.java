@@ -1,6 +1,6 @@
 package fr.univnantes.termsuite.engines.prepare;
 
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 
@@ -11,7 +11,7 @@ import fr.univnantes.termsuite.model.TermProperty;
  * @author Damien Cram
  *
  */
-public class CorpusWidePropertiesSetter extends TerminologyEngine {
+public class CorpusWidePropertiesSetter extends SimpleEngine {
 	
 	@Override
 	public void execute() {

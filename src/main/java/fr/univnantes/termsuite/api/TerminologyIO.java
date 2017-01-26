@@ -10,8 +10,8 @@ import java.nio.file.Paths;
 
 import com.google.common.base.Charsets;
 
+import fr.univnantes.termsuite.index.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 public class TerminologyIO {
 	

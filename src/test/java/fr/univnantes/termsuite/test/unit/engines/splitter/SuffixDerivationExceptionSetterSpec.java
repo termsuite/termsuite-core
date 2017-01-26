@@ -34,9 +34,10 @@ import org.junit.Test;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.splitter.ManualSuffixDerivationDetecter;
+import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
+import fr.univnantes.termsuite.index.MemoryTerminology;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
@@ -64,13 +65,13 @@ public class SuffixDerivationExceptionSetterSpec {
 		MultimapFlatResource derivationExceptions = new MultimapFlatResource();
 		derivationExceptions.load(dataReosurce);
 		populateTermino(new TermFactory(termino));
-		ManualSuffixDerivationDetecter engine = UnitTests.createEngine(
+		EngineRunner engine = UnitTests.createEngineRunner(
 				termino, 
 				ManualSuffixDerivationDetecter.class, 
 				UnitTests.mockResourceModule().bind(
 						ResourceType.SUFFIX_DERIVATION_EXCEPTIONS, derivationExceptions));
 		
-		engine.execute();
+		engine.run();
 	}
 
 	private void populateTermino(TermFactory termFactory) {

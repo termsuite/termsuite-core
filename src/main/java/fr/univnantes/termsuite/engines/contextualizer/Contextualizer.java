@@ -33,10 +33,10 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.AtomicDouble;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.ContextVector.Entry;
 import fr.univnantes.termsuite.model.Document;
@@ -51,7 +51,7 @@ import fr.univnantes.termsuite.utils.IteratorUtils;
  * @author Damien Cram
  *
  */
-public class Contextualizer extends TerminologyEngine {
+public class Contextualizer extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	@Parameter

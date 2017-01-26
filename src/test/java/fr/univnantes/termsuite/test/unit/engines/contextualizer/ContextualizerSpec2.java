@@ -43,6 +43,7 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.contextualizer.CrossTable;
 import fr.univnantes.termsuite.engines.contextualizer.LogLikelihood;
 import fr.univnantes.termsuite.engines.contextualizer.MutualInformation;
+import fr.univnantes.termsuite.index.MemoryTerminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
@@ -51,7 +52,6 @@ import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class ContextualizerSpec2 {
@@ -88,7 +88,7 @@ public class ContextualizerSpec2 {
 		ContextualizerOptions options = TermSuite.getDefaultExtractorConfig(Lang.FR).getContextualizerOptions();
 		options.setMinimumCooccFrequencyThreshold(1);
 		options.setScope(1);
-		contextualizer = UnitTests.createEngine(
+		contextualizer = UnitTests.createSimpleEngine(
 				termino, 
 				Contextualizer.class, 
 				options);

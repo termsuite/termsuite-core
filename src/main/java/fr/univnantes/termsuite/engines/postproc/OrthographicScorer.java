@@ -1,12 +1,12 @@
 package fr.univnantes.termsuite.engines.postproc;
 
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
-public class OrthographicScorer extends TerminologyEngine {
+public class OrthographicScorer extends SimpleEngine {
 	
 	@Override
 	public void execute() {

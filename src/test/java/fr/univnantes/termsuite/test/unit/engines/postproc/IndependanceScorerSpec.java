@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.postproc.IndependanceScorer;
+import fr.univnantes.termsuite.index.MemoryTerminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -16,7 +17,6 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class IndependanceScorerSpec {
@@ -47,7 +47,6 @@ public class IndependanceScorerSpec {
 	 */
 	@Before
 	public void setup() {
-		scorer = new IndependanceScorer();
 		terminology = new MemoryTerminology(
 				"Tata", 
 				Lang.FR, 
@@ -70,7 +69,7 @@ public class IndependanceScorerSpec {
 		xa_xat = addExtension(t_xa, t_xat);
 		at_xat = addExtension(t_at, t_xat);
 		
-		scorer = UnitTests.createEngine(terminology, IndependanceScorer.class);
+		scorer = UnitTests.createSimpleEngine(terminology, IndependanceScorer.class);
 	}
 	
 	private  TermRelation addExtension(Term t1, Term t2) {

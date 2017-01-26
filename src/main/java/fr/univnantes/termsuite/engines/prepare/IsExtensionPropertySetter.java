@@ -1,10 +1,10 @@
 package fr.univnantes.termsuite.engines.prepare;
 
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 
-public class IsExtensionPropertySetter extends TerminologyEngine {
+public class IsExtensionPropertySetter extends SimpleEngine {
 
 	@Override
 	public void execute() {

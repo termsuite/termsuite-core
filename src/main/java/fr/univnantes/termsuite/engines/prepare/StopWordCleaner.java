@@ -4,13 +4,13 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.uima.ResourceType;
 import uima.sandbox.filter.resources.FilterResource;
 
-public class StopWordCleaner extends TerminologyEngine {
+public class StopWordCleaner extends SimpleEngine {
 
 	@Resource(type=ResourceType.STOP_WORDS_FILTER)
 	private FilterResource filter;

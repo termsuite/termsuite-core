@@ -1,10 +1,9 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
-import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.AggregateEngine;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
 
-public class TermGatherer extends AggregateTerminologyEngine {
+public class TermGatherer extends AggregateEngine {
 
 	@Parameter
 	private GathererOptions gathererOptions;
@@ -12,25 +11,21 @@ public class TermGatherer extends AggregateTerminologyEngine {
 	@Override
 	public void configure() {
 		
-		pipe(VariationTypeGatherer.class, 
-				VariationType.PREFIXATION, 
-				TermIndexes.PREFIXATION_LEMMAS, 
-				true);
+		pipe("PrefixationGatherer", 
+				PrefixationGatherer.class, 
+				VariationType.PREFIXATION);
 	
-		pipe(VariationTypeGatherer.class, 
-				VariationType.DERIVATION, 
-				TermIndexes.DERIVATION_LEMMAS, 
-				true);
+		pipe("DerivationGatherer", 
+				DerivationGatherer.class, 
+				VariationType.DERIVATION);
 	
-		pipe(VariationTypeGatherer.class, 
-				VariationType.MORPHOLOGICAL, 
-				TermIndexes.ALLCOMP_PAIRS, 
-				false);
+		pipe("MorphologicalGatherer", 
+				MorphologicalGatherer.class, 
+				VariationType.MORPHOLOGICAL);
 			
-		pipe(VariationTypeGatherer.class, 
-				VariationType.SYNTAGMATIC, 
-				TermIndexes.ALLCOMP_PAIRS, 
-				true);
+		pipe("SyntagmaticGatherer", 
+				SyntagmaticGatherer.class, 
+				VariationType.SYNTAGMATIC);
 
 		if(gathererOptions.isSemanticEnabled()) 
 			pipe(SemanticGatherer.class

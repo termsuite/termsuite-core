@@ -152,10 +152,14 @@ public class TerminologyService {
 	}
 
 	private static final String MSG_TERM_NOT_FOUND = "No such term with key %s";
-	public Term getTerm(String toKey) {
-		Term to = termino.getTerms().get(toKey);
-		Preconditions.checkNotNull(to, MSG_TERM_NOT_FOUND, toKey);
-		return to;
+	public Term getTerm(String termKey) {
+		Term term = getTermUnchecked(termKey);
+		Preconditions.checkNotNull(term, MSG_TERM_NOT_FOUND, termKey);
+		return term;
+	}
+
+	public Term getTermUnchecked(String termKey) {
+		return termino.getTerms().get(termKey);
 	}
 
 	public void removeRelation(TermRelation r) {

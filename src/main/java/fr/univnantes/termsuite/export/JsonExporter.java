@@ -5,8 +5,8 @@ import java.io.Writer;
 
 import fr.univnantes.termsuite.api.JsonOptions;
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.index.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 public class JsonExporter {
 

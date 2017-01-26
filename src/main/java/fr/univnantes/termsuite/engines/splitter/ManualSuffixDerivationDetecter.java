@@ -30,14 +30,14 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.uima.ResourceType;
 
-public class ManualSuffixDerivationDetecter extends TerminologyEngine {
+public class ManualSuffixDerivationDetecter extends SimpleEngine {
 
 	@Resource(type=ResourceType.SUFFIX_DERIVATION_EXCEPTIONS)
 	private MultimapFlatResource manualSuffixDerivations;

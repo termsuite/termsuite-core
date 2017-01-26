@@ -41,6 +41,8 @@ import org.junit.Test;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.Relations;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -49,7 +51,6 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
@@ -250,7 +251,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	}
 
 	@Test
-	public void testTermHorizontalAxis() {
+	public void testTermHorizontalAxis() throws InstantiationException, IllegalAccessException {
 		Term morph = termino.getTerms().get("n: horizontal-axis");
 		Term syntag = termino.getTerms().get("an: horizontal axis");
 
@@ -264,10 +265,11 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 					tuple("axis", 11,15)
 				);
 
-		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termino, morph))
+		TermIndexValueProvider allCompProvider = TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance();
+		assertThat(allCompProvider.getClasses(termino, morph))
 			.containsExactly("axis+horizontal");
 
-		assertThat(TermValueProviders.ALLCOMP_PAIRS.getClasses(termino, syntag))
+		assertThat(TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance().getClasses(termino, syntag))
 			.contains("axis+horizontal");
 		
 		assertThat(termino)

@@ -28,10 +28,14 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 
-import fr.univnantes.termsuite.framework.EngineFactory;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.framework.Engine;
+import fr.univnantes.termsuite.framework.EngineDescription;
+import fr.univnantes.termsuite.framework.EngineInjector;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.modules.ExtractorModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
+import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
 import fr.univnantes.termsuite.test.unit.api.PreprocessorSpec;
@@ -172,17 +176,18 @@ public class UnitTests {
 		return new MockResourceModule();
 	}
 
-	public static <T extends TerminologyEngine> T createEngine(Terminology terminology, Class<T> cls, Object... parameters) {
-		return createEngine(terminology, cls, new ResourceModule(), parameters);
+	public static  EngineRunner createEngineRunner(Terminology terminology, Class<? extends Engine> cls, Object... parameters) {
+		return createEngineRunner(terminology, cls, new ResourceModule(), parameters);
 	}
 
-	public static <T extends TerminologyEngine> T createEngine(Terminology terminology, Class<T> cls,
+	public static  EngineRunner createEngineRunner(Terminology terminology, Class<? extends Engine> cls,
 			Module resourceModule, Object... parameters) {
-		return createEngine(cls, extractorInjector(terminology, resourceModule), parameters);
+		return createEngineRunner(cls, extractorInjector(terminology, resourceModule), parameters);
 	}
 
-	public static <T extends TerminologyEngine> T createEngine(Class<T> cls, Injector injector, Object... parameters) {
-		return new EngineFactory(injector).create(cls, parameters);
+	public static  EngineRunner createEngineRunner(Class<? extends Engine> cls, Injector injector, Object... parameters) {
+		EngineDescription description = new EngineDescription(cls.getSimpleName(), cls, parameters);
+		return TermSuiteFactory.createEngineRunner(description, injector, null);
 	}
 
 	public static Injector extractorInjector(Terminology terminology) {
@@ -193,6 +198,27 @@ public class UnitTests {
 	public static Injector extractorInjector(Terminology terminology, Module resourceModule) {
 		Injector injector = Guice.createInjector(resourceModule, new ExtractorModule(terminology));
 		return injector;
+	}
+
+	public static <T extends SimpleEngine> T createSimpleEngine(Terminology terminology, Class<T> cls, Object... parameters) {
+		Injector guiceInjector = TermSuiteFactory.createExtractorInjector(terminology, null, null);
+		EngineInjector engineInjector = new EngineInjector(cls, guiceInjector);
+		
+		T engine;
+		try {
+			engine = guiceInjector.getInstance(cls);
+			EngineDescription description = new EngineDescription(cls.getSimpleName(), cls, parameters);
+			engineInjector.injectName(engine, cls.getSimpleName());
+			engineInjector.injectParameters(engine, description.getParameters());
+			engineInjector.injectResources(engine);
+			engineInjector.injectIndexes(engine);
+
+			return engine;
+			
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		
 	}
 
 }

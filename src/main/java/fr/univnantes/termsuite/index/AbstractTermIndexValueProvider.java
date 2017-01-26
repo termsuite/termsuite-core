@@ -19,22 +19,34 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.model.termino;
+package fr.univnantes.termsuite.index;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.utils.TermUtils;
 
-/**
- * 
- * The root class of any object that can get values
- * from a term.
- * 
- * @author Damien Cram
- *
- */
-public interface TermValueProvider {
-	public String getName();
-	public Collection<String> getClasses(Terminology termino, Term term);
+public abstract class AbstractTermIndexValueProvider implements TermIndexValueProvider {
+	private static final String PAIR_FORMAT = "%s+%s";
+
+	protected static Collection<String> toRelationPairs(Terminology termino, Term term, RelationType relType) {
+		Set<TermRelation> prefixations = new HashSet<>();
+		for(TermWord tw:term.getWords()) {
+			Term t =termino.getTerms().get(TermUtils.toGroupingKey(tw));
+			if(t!=null) {
+				prefixations.addAll(termino.getInboundRelations(t, relType));
+				prefixations.addAll(termino.getOutboundRelations(t, relType));
+			}
+		}
+		return prefixations.stream()
+				.map(rel -> String.format(PAIR_FORMAT, rel.getFrom().getLemma(), rel.getTo().getLemma()))
+				.collect(Collectors.toSet());
+	}
 }

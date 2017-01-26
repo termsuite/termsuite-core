@@ -26,7 +26,7 @@ package fr.univnantes.termsuite.engines.postproc;
 import org.slf4j.Logger;
 
 import fr.univnantes.termsuite.engines.prepare.IsExtensionPropertySetter;
-import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.AggregateEngine;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Terminology;
@@ -38,7 +38,7 @@ import fr.univnantes.termsuite.resources.PostProcessorOptions;
  * @author Damien Cram
  *
  */
-public class TermPostProcessor extends AggregateTerminologyEngine {
+public class TermPostProcessor extends AggregateEngine {
 
 	@Parameter
 	private PostProcessorOptions config;

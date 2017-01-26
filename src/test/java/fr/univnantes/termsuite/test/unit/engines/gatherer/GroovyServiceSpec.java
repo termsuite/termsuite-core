@@ -8,11 +8,11 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.GroovyService;
 import fr.univnantes.termsuite.engines.gatherer.VariantRule;
+import fr.univnantes.termsuite.index.MemoryTerminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;

@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.inject.Inject;
+
 import org.apache.commons.lang.mutable.MutableInt;
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermOccurrence;
@@ -17,9 +19,12 @@ import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class TermMerger extends TerminologyEngine {
+public class TermMerger extends SimpleEngine {
 	@InjectLogger Logger logger;
 
+	@Inject
+	OccurrenceStore occStore;
+	
 	private static final Double MERGING_THRESHOLD = 2d;
 
 	private Optional<TermHistory> history = Optional.empty();
@@ -68,7 +73,6 @@ public class TermMerger extends TerminologyEngine {
 				logger.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
 				watch(rel);
 				
-				OccurrenceStore occStore = terminology.getTerminology().getOccurrenceStore();
 				Collection<TermOccurrence> occurrences = occStore.getOccurrences(rel.getTo());
 				for(TermOccurrence o2:occurrences)
 					occStore.addOccurrence(rel.getFrom(), o2.getSourceDocument().getUrl(), o2.getBegin(), o2.getEnd(), o2.getCoveredText());

@@ -31,7 +31,7 @@ public class ContextualizerSpec {
 		termWithContext1 = termino.getTerms().get("n: énergie");
 		termWithContext2 = termino.getTerms().get("a: éolien");
 		termWithContext3 = termino.getTerms().get("n: accès");
-		contextualizer = UnitTests.createEngine(termino, Contextualizer.class, options);
+		contextualizer = UnitTests.createSimpleEngine(termino, Contextualizer.class, options);
 	}
 	
 	@Test

@@ -29,9 +29,9 @@ import java.util.List;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -39,7 +39,7 @@ import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 
-public class ManualPrefixSetter extends TerminologyEngine {
+public class ManualPrefixSetter extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	@Resource(type=ResourceType.PREFIX_EXCEPTIONS)

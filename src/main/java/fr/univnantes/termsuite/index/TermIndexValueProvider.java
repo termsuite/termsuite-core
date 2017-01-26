@@ -19,25 +19,21 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.model.termino;
+package fr.univnantes.termsuite.index;
 
 import java.util.Collection;
-
-import com.google.common.collect.ImmutableList;
 
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
 
-public abstract class TermSingleValueProvider extends AbstractTermValueProvider {
-	
-	TermSingleValueProvider(String name) {
-		super(name);
-	}
-
-	@Override
-	public Collection<String> getClasses(Terminology termino, Term term) {
-		return ImmutableList.of(getClass(termino, term));
-	}
-
-	public abstract String getClass(Terminology termino, Term term);
+/**
+ * 
+ * The root class of any object that can get values
+ * from a term.
+ * 
+ * @author Damien Cram
+ *
+ */
+public interface TermIndexValueProvider {
+	public Collection<String> getClasses(Terminology termino, Term term);
 }

@@ -28,9 +28,9 @@ import org.slf4j.Logger;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
@@ -38,7 +38,7 @@ import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 
-public class PrefixSplitter extends TerminologyEngine {
+public class PrefixSplitter extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	@Resource(type=ResourceType.PREFIX_BANK)

@@ -6,14 +6,14 @@ import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.TermValueProvider;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
 public class SynonymicRule extends VariantRule {
 	private int synonymSourceWordIndex = -1;
-	private TermValueProvider equalityProvider;
+	private TermIndexValueProvider equalityProvider;
 	private LinkedList<Integer> eqIndices = Lists.newLinkedList();
 	
 	public SynonymicRule(String ruleName) {
@@ -28,7 +28,7 @@ public class SynonymicRule extends VariantRule {
 		return equalityProvider.getClasses(null, t).iterator().next();
 	}
 
-	public TermValueProvider getTermProvider() {
+	public TermIndexValueProvider getTermProvider() {
 		return equalityProvider;
 	}
 	
@@ -46,12 +46,7 @@ public class SynonymicRule extends VariantRule {
 	}
 
 	public void initEqualityProvider(LinkedList<Integer> eqIndices) {
-		this.equalityProvider = new TermValueProvider() {
-			@Override
-			public String getName() {
-				return "SubStringProvider";
-			}
-			
+		this.equalityProvider = new TermIndexValueProvider() {
 			@Override
 			public Collection<String> getClasses(Terminology termino, Term term) {
 				if(eqIndices.getLast() < term.getWords().size()) {

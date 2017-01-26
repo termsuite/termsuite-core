@@ -39,7 +39,6 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 

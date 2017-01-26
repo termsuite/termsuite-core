@@ -10,11 +10,11 @@ import fr.univnantes.termsuite.engines.postproc.TermPostProcessor;
 import fr.univnantes.termsuite.engines.postproc.TermRanker;
 import fr.univnantes.termsuite.engines.prepare.Preparator;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalAnalyzer;
-import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.AggregateEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 
-public class TerminologyExtractorEngine extends AggregateTerminologyEngine {
+public class TerminologyExtractorEngine extends AggregateEngine {
 	
 	@InjectLogger Logger logger;
 	

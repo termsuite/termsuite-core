@@ -34,9 +34,9 @@ import org.slf4j.Logger;
 
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;
@@ -56,7 +56,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class VariationScorer extends TerminologyEngine {
+public class VariationScorer extends SimpleEngine {
 	private static final Predicate<? super TermRelation> NOT_SEMANTIC = v -> 
 			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
 			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
@@ -156,8 +156,6 @@ public class VariationScorer extends TerminologyEngine {
 				 */
 				
 				double score = 0.75;
-				if(!variation.isPropertySet(RelationProperty.IS_DISTRIBUTIONAL))
-					System.out.println(variation.getProperties());
 				if(variation.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL)) {
 					score *= variation.getPropertyDoubleValue(RelationProperty.SEMANTIC_SIMILARITY);
 				}

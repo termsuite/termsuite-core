@@ -27,6 +27,7 @@ import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
 import static fr.univnantes.termsuite.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,6 +36,9 @@ import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -263,9 +267,31 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	}
 
 	@Test
+	public void testMicroSysteme() throws InstantiationException, IllegalAccessException {
+		Term term1 = termino.getTerms().get("n: microsystème");
+		assertNotNull(term1);
+		Term term2 = termino.getTerms().get("nn: micro système");
+		assertNotNull(term2);
+		TermIndexValueProvider provider = TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance();
+		assertThat(provider.getClasses(termino, term2))
+			.containsOnly("micro+système");
+		assertThat(provider.getClasses(termino, term1))
+			.containsOnly("micro+système");
+		TermIndex termIndex = new TermIndex(provider);
+		termIndex.addToIndex(termino, term1);
+		termIndex.addToIndex(termino, term2);
+		assertThat(termIndex.getClasses().keySet())
+			.containsOnly("micro+système");
+		assertThat(termIndex.getTerms("micro+système"))
+			.contains(term1)
+			.contains(term2)
+			;
+		
+	}
+
+	@Test
 	public void testMSNNVariations() {
 		assertThat(termino)
-			.hasNVariationsOfType(38, VariationType.MORPHOLOGICAL)
 			.asTermVariationsHavingRule("M-S-NN")
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
@@ -277,9 +303,17 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			)
 			.hasSize(9)
 			;
+		
+	}
+	
+	@Test
+	public void testNbMorphologicalVariations() {
+		assertThat(termino)
+			.hasNVariationsOfType(38, VariationType.MORPHOLOGICAL);
 	}
 
-		   
+
+
 	
 	@Test
 	public void testSyntacticalVariations() {

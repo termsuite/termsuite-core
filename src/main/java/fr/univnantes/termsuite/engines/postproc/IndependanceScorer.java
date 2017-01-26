@@ -9,14 +9,14 @@ import java.util.function.Predicate;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import jetbrains.exodus.core.dataStructures.hash.HashSet;
 
-public class IndependanceScorer extends TerminologyEngine {
+public class IndependanceScorer extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	public Set<Term> getExtensions(Term from) {

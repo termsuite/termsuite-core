@@ -28,16 +28,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.google.common.collect.Lists;
-
+import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
-import fr.univnantes.termsuite.model.termino.TermValueProvider;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 
 public class TermValueProvidersSpec {
@@ -74,13 +72,13 @@ public class TermValueProvidersSpec {
 
 	
 	@Test
-	public void testWordHorizontalAxis() {
+	public void testWordHorizontalAxis() throws InstantiationException, IllegalAccessException {
 		TermFactory fac = new TermFactory(termino);
 		Term horizontalAxisMorp = fac.create("N:horizontal-axis|horizontal-axis");
 		Term horizontalAxisSyntag = fac.create("A:horizontal|horizontal", "N:axis|axis");
 		fac.wordComposition(CompoundType.NATIVE, "horizontal-axis", "horizon|horizon", "tal|t", "axis|axis");
 		fac.wordComposition(CompoundType.NATIVE, "horizontal", "horizon|horizon", "tal|t");
-		TermValueProvider provider = TermValueProviders.ALLCOMP_PAIRS;
+		TermIndexValueProvider provider = TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance();
 
 		assertThat(provider.getClasses(termino, horizontalAxisMorp))
 			.hasSize(8)
@@ -99,8 +97,8 @@ public class TermValueProvidersSpec {
 	}
 
 	@Test
-	public void testPrefixationLemmas() {
-		TermValueProvider provider = TermValueProviders.PREFIXATION_LEMMAS;
+	public void testPrefixationLemmas() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.PREFIXATION_LEMMAS.getProviderClass().newInstance();
 		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("asynchrone+synchrone");
@@ -120,8 +118,8 @@ public class TermValueProvidersSpec {
 
 	
 	@Test
-	public void testDerivationLemmas() {
-		TermValueProvider provider = TermValueProviders.DERIVATION_LEMMAS;
+	public void testDerivationLemmas() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.DERIVATION_LEMMAS.getProviderClass().newInstance();
 		assertThat(provider.getClasses(termino, this.machine_statorique))
 			.contains("stator+statorique")
 			.hasSize(1);
@@ -134,8 +132,8 @@ public class TermValueProvidersSpec {
 	}
 
 	@Test
-	public void testAllCompLemmaSubstringPairsProvider() {
-		TermValueProvider provider = TermValueProviders.ALLCOMP_PAIRS;
+	public void testAllCompLemmaSubstringPairsProvider() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance();
 		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("machine+synchrone");
@@ -163,8 +161,8 @@ public class TermValueProvidersSpec {
 	}
 
 	@Test
-	public void testWordLemmaStemProvider() {
-		TermValueProvider provider = TermValueProviders.WORD_LEMMA_STEM_PROVIDER;
+	public void testWordLemmaStemProvider() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.WORD_COUPLE_LEMMA_STEM.getProviderClass().newInstance();
 		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("machine+synchro");
@@ -191,8 +189,8 @@ public class TermValueProvidersSpec {
 	}
 
 	@Test
-	public void testTermLemmaLowerCaseProvider() {
-		TermValueProvider provider = TermValueProviders.TERM_LEMMA_LOWER_CASE_PROVIDER;
+	public void testTermLemmaLowerCaseProvider() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.LEMMA_LOWER_CASE.getProviderClass().newInstance();
 		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(1)
 			.contains("machine synchrone");
@@ -219,44 +217,8 @@ public class TermValueProvidersSpec {
 	}
 
 	@Test
-	public void testWordNoClassProvider() {
-		TermValueProvider provider = TermValueProviders.TERM_NOCLASS_PROVIDER;
-		for(Term t:Lists.newArrayList(machine_synchrone, synchrone, asynchrone, machine_statorique, machine_de_stator, statorique, stator, machine_synchrone_de_stator, hommegrenouille, hommegrenouille_de_stator, term11))
-			assertThat(provider.getClasses(termino, t))
-				.hasSize(1)
-				.contains("noclass");
-	}
-
-	@Test
-	public void testSingleWordLemmaProvider() {
-		TermValueProvider provider = TermValueProviders.TERM_SINGLE_WORD_LEMMA_PROVIDER;
-		assertThat(provider.getClasses(termino, machine_synchrone))
-			.hasSize(0);
-		assertThat(provider.getClasses(termino, synchrone))
-			.hasSize(1).contains("synchrone");
-		assertThat(provider.getClasses(termino, asynchrone))
-			.hasSize(1).contains("asynchrone");
-		assertThat(provider.getClasses(termino, machine_statorique))
-			.hasSize(0);
-		assertThat(provider.getClasses(termino, machine_de_stator))
-			.hasSize(0);
-		assertThat(provider.getClasses(termino, statorique))
-			.hasSize(1).contains("statorique");
-		assertThat(provider.getClasses(termino, stator))
-			.hasSize(1).contains("stator");
-		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
-			.hasSize(0);
-		assertThat(provider.getClasses(termino, hommegrenouille))
-			.hasSize(1).contains("homme-grenouille");
-		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
-			.hasSize(0);
-		assertThat(provider.getClasses(termino, aveccapitale))
-			.hasSize(1).contains("Aveccapitale");
-	}
-
-	@Test
-	public void testWordLemmaProvider() {
-		TermValueProvider provider = TermValueProviders.WORD_LEMMA_PROVIDER;
+	public void testSingleWordLemmaProvider() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.SWT_LEMMAS.getProviderClass().newInstance();
 		assertThat(provider.getClasses(termino, machine_synchrone))
 			.hasSize(2)
 			.contains("machine", "synchrone");
@@ -278,6 +240,63 @@ public class TermValueProvidersSpec {
 			.hasSize(1).contains("homme-grenouille");
 		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
 			.hasSize(2).contains("homme-grenouille", "stator");
+		assertThat(provider.getClasses(termino, aveccapitale))
+			.hasSize(1).contains("aveccapitale");
+	}
+	
+	
+	@Test
+	public void testSingleWordLemmaSwtOnlyProvider() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.SWT_LEMMAS_SWT_TERMS_ONLY.getProviderClass().newInstance();
+		assertThat(provider.getClasses(termino, machine_synchrone))
+			.hasSize(0);
+		assertThat(provider.getClasses(termino, synchrone))
+			.hasSize(1).contains("synchrone");
+		assertThat(provider.getClasses(termino, asynchrone))
+			.hasSize(1).contains("asynchrone");
+		assertThat(provider.getClasses(termino, machine_statorique))
+			.hasSize(0);
+		assertThat(provider.getClasses(termino, machine_de_stator))
+			.hasSize(0);
+		assertThat(provider.getClasses(termino, statorique))
+			.hasSize(1).contains("statorique");
+		assertThat(provider.getClasses(termino, stator))
+			.hasSize(1).contains("stator");
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
+			.hasSize(0);
+		assertThat(provider.getClasses(termino, hommegrenouille))
+			.hasSize(1).contains("homme-grenouille");
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
+			.hasSize(0);
+		assertThat(provider.getClasses(termino, aveccapitale))
+			.hasSize(1).contains("aveccapitale");
+	}
+
+
+	@Test
+	public void testWordLemmaProvider() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.WORD_LEMMAS.getProviderClass().newInstance();
+		assertThat(provider.getClasses(termino, machine_synchrone))
+			.hasSize(2)
+			.contains("machine", "synchrone");
+		assertThat(provider.getClasses(termino, synchrone))
+			.hasSize(1).contains("synchrone");
+		assertThat(provider.getClasses(termino, asynchrone))
+			.hasSize(1).contains("asynchrone");
+		assertThat(provider.getClasses(termino, machine_statorique))
+			.hasSize(2).contains("machine", "statorique");
+		assertThat(provider.getClasses(termino, machine_de_stator))
+			.hasSize(3).contains("machine",  "de", "stator");
+		assertThat(provider.getClasses(termino, statorique))
+			.hasSize(1).contains("statorique");
+		assertThat(provider.getClasses(termino, stator))
+			.hasSize(1).contains("stator");
+		assertThat(provider.getClasses(termino, machine_synchrone_de_stator))
+			.hasSize(4).contains("machine", "synchrone", "stator");
+		assertThat(provider.getClasses(termino, hommegrenouille))
+			.hasSize(1).contains("homme-grenouille");
+		assertThat(provider.getClasses(termino, hommegrenouille_de_stator))
+			.hasSize(3).contains("homme-grenouille", "stator");
 		assertThat(provider.getClasses(termino, aveccapitale))
 			.hasSize(1).contains("aveccapitale");
 	}

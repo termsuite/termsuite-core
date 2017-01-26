@@ -6,11 +6,11 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 
-public class TermRanker extends TerminologyEngine {
+public class TermRanker extends SimpleEngine {
 	
 	@Parameter
 	private TermRankingOptions config;

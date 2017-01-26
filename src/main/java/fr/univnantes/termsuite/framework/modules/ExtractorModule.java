@@ -17,6 +17,8 @@ import com.google.inject.spi.TypeEncounter;
 import com.google.inject.spi.TypeListener;
 
 import fr.univnantes.termsuite.engines.gatherer.GroovyService;
+import fr.univnantes.termsuite.framework.service.IndexService;
+import fr.univnantes.termsuite.framework.service.PipelineService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -48,6 +50,8 @@ public class ExtractorModule extends AbstractModule {
 		bind(Lang.class).toInstance(terminology.getLang());
 		bind(OccurrenceStore.class).toInstance(terminology.getOccurrenceStore());
 		bind(TerminologyService.class).in(Singleton.class);
+		bind(PipelineService.class).in(Singleton.class);
+		bind(IndexService.class).in(Singleton.class);
 		bind(GroovyService.class).in(Singleton.class);
 	    bindListener(Matchers.any(), new Slf4JTypeListener());
 	}

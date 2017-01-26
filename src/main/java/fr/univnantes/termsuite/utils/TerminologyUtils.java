@@ -33,14 +33,13 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class TerminologyUtils {
 
@@ -71,7 +70,7 @@ public class TerminologyUtils {
 	 * @param component
 	 * @return
 	 */
-	public static Collection<Term> getMorphologicalExtensionsAsTerms(Terminology termino, Term compound, Component component) {
+	public static Collection<Term> getMorphologicalExtensionsAsTerms(TermIndex lemmaLowerCaseIndex, Term compound, Component component) {
 		Preconditions.checkArgument(compound.isSingleWord());
 		Preconditions.checkArgument(compound.isCompound());
 		Preconditions.checkArgument(compound.getWords().get(0).getWord().getComponents().contains(component));
@@ -97,12 +96,9 @@ public class TerminologyUtils {
 			possibleExtensionLemmas.add(lemma);
 		}
 		
-		
 		List<Term> extensionTerms = Lists.newArrayList();
-		CustomTermIndex lemmaIndex = termino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
 		for(String s:possibleExtensionLemmas)
-			extensionTerms.addAll(lemmaIndex.getTerms(s.toLowerCase()));
-
+			extensionTerms.addAll(lemmaLowerCaseIndex.getTerms(s.toLowerCase()));
 		
 		return extensionTerms;
 	}

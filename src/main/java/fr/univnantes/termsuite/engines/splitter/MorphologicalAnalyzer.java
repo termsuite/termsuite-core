@@ -1,9 +1,9 @@
 package fr.univnantes.termsuite.engines.splitter;
 
-import fr.univnantes.termsuite.framework.AggregateTerminologyEngine;
+import fr.univnantes.termsuite.framework.AggregateEngine;
 import fr.univnantes.termsuite.framework.Parameter;
 
-public class MorphologicalAnalyzer extends AggregateTerminologyEngine {
+public class MorphologicalAnalyzer extends AggregateEngine {
 
 	@Parameter
 	private MorphologicalOptions options;

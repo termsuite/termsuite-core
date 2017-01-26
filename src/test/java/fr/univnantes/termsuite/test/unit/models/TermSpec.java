@@ -30,14 +30,13 @@ import org.junit.Test;
 import com.google.common.collect.ImmutableList;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
-import fr.univnantes.termsuite.model.termino.TermValueProvider;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 
@@ -68,8 +67,8 @@ public class TermSpec {
 	}
 	
 	@Test
-	public void testGetLemmaStemKeys() {
-		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_COUPLE_LEMMA_STEM);
+	public void testGetLemmaStemKeys() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.WORD_COUPLE_LEMMA_STEM.getProviderClass().newInstance();
 		Assert.assertEquals(
 				ImmutableList.of("energie+eol"),
 				provider.getClasses(termino, term1));
@@ -134,8 +133,8 @@ public class TermSpec {
 	}
 		
 	@Test
-	public void testGetLemmaKeys() {
-		TermValueProvider provider = TermValueProviders.get(TermIndexes.WORD_LEMMA);
+	public void testGetLemmaKeys() throws InstantiationException, IllegalAccessException {
+		TermIndexValueProvider provider = TermIndexType.WORD_LEMMAS.getProviderClass().newInstance();
 		
 		assertThat(provider.getClasses(termino, term1))
 			.hasSize(2)
@@ -146,7 +145,7 @@ public class TermSpec {
 			.contains("radioélectrique");
 	
 		assertThat(provider.getClasses(termino, term3))
-			.hasSize(3)
+			.hasSize(4)
 			.contains("accès", "radioélectrique", "recouvrement");
 	}
 

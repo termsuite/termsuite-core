@@ -49,6 +49,8 @@ import com.google.common.primitives.Ints;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.ExplainedValue;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
@@ -61,9 +63,6 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 import fr.univnantes.termsuite.utils.AlignerUtils;
 import fr.univnantes.termsuite.utils.StringUtils;
@@ -133,8 +132,8 @@ public class BilingualAligner {
 	 * @return
 	 */
 	public BilingualAligner addTranslation(String sourceLemma, String targetLemma) {
-		CustomTermIndex sourceLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.WORD_LEMMA);
-		CustomTermIndex targetLemmaIndex = targetTermino.getCustomIndex(TermIndexes.WORD_LEMMA);
+		TermIndex sourceLemmaIndex = sourceTermino.getCustomIndex(TermIndexType.WORD_LEMMAS);
+		TermIndex targetLemmaIndex = targetTermino.getCustomIndex(TermIndexType.WORD_LEMMAS);
 		if(sourceLemmaIndex.getTerms(sourceLemma).isEmpty()) 
 			throw new TermSuiteException("No term found in source termino with lemma: " + sourceLemma);
 		else if(targetLemmaIndex.getTerms(targetLemma).isEmpty()) 
@@ -405,7 +404,7 @@ public class BilingualAligner {
 		if(terms.size() == 1) {
 			return alignSize2(terms.get(0), nbCandidates, minCandidateFrequency, allowDistributionalAlignment);			
 		} else if(terms.size() == 2) {
-			CustomTermIndex lemmaLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.ALLCOMP_PAIRS);
+			TermIndex lemmaLemmaIndex = sourceTermino.getCustomIndex(TermIndexType.ALLCOMP_PAIRS);
 			String indexingKey = TermUtils.getLemmaLemmaKey(terms.get(0), terms.get(1));
 					
 			Optional<Term> recursiveTerm = lemmaLemmaIndex.getTerms(indexingKey).stream().max(TermProperty.FREQUENCY.getComparator(false));
@@ -577,7 +576,7 @@ public class BilingualAligner {
 					targetTermino);
 	
 			for(String candidateLemma:dico.getTranslations(sourceTerm.getLemma())) {
-				List<Term> terms = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE).getTerms(candidateLemma);
+				List<Term> terms = targetTermino.getCustomIndex(TermIndexType.LEMMA_LOWER_CASE).getTerms(candidateLemma);
 				for (Term candidateTerm : terms) {
 					if (candidateTerm.getContext() != null) {
 						TranslationCandidate candidate = new TranslationCandidate(
@@ -678,7 +677,7 @@ public class BilingualAligner {
 				/*
 				 * 1- create candidate combine terms
 				 */
-				CustomTermIndex index = targetTermino.getCustomIndex(TermIndexes.ALLCOMP_PAIRS);
+				TermIndex index = targetTermino.getCustomIndex(TermIndexType.ALLCOMP_PAIRS);
 				List<Term> candidateCombinedTerms = index.getTerms(candidate1.getTerm().getLemma() + "+" + candidate2.getTerm().getLemma());
 				candidateCombinedTerms.addAll(index.getTerms(candidate2.getTerm().getLemma() + "+" + candidate1.getTerm().getLemma()));
 				if(candidateCombinedTerms.isEmpty())

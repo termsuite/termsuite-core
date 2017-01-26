@@ -8,20 +8,27 @@ import org.slf4j.Logger;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class ExtensionDetecter extends TerminologyEngine {
+public class ExtensionDetecter extends SimpleEngine {
 	private static final int WARNING_CRITICAL_SIZE = 10000;
+	
 	@InjectLogger Logger logger;
+
+	@Index(type=TermIndexType.SWT_GROUPING_KEYS)
+	TermIndex swtIndex;
+	
+	@Index(type=TermIndexType.ALLCOMP_PAIRS)
+	TermIndex allCompPairsIndex;
 
 	private Optional<TermHistory> history = Optional.empty();
 	
@@ -45,10 +52,9 @@ public class ExtensionDetecter extends TerminologyEngine {
 
 	}
 
+	
+	
 	public void setSize1Extensions() {
-		CustomTermIndex swtIndex = terminology.getTerminology().createCustomIndex(
-				TermIndexes.SWT_GROUPING_KEYS,
-				TermValueProviders.get(TermIndexes.SWT_GROUPING_KEYS));
 		
 		logger.debug("Detecting size-1 extensions");
 		for (String swtGroupingKey : swtIndex.keySet()) {
@@ -61,9 +67,6 @@ public class ExtensionDetecter extends TerminologyEngine {
 				}
 			}
 		}
-		
-		
-		terminology.getTerminology().dropCustomIndex(TermIndexes.SWT_GROUPING_KEYS);
 	}
 
 
@@ -84,27 +87,20 @@ public class ExtensionDetecter extends TerminologyEngine {
 			watch(from, to);
 		}
 	}
-
+	
 	public void setSize2Extensions() {
 		logger.debug("Detecting size-2 (and more) extensions");
 
-		String gatheringKey = TermIndexes.ALLCOMP_PAIRS;
-		CustomTermIndex customIndex = terminology.getTerminology().createCustomIndex(
-				gatheringKey,
-				TermValueProviders.get(gatheringKey));
-		logger.debug("Rule-based gathering over {} classes", customIndex.size());
+		logger.debug("Rule-based gathering over {} classes", allCompPairsIndex.size());
 
-		// clean singleton classes
-		logger.debug("Cleaning singleton keys");
-		customIndex.cleanSingletonKeys();
-
-		// clean biggest classes
-		customIndex.dropBiggerEntries(WARNING_CRITICAL_SIZE, true);
-		
 		Term t1;
 		Term t2;
-		for (String cls : customIndex.keySet()) {
-			List<Term> list = customIndex.getTerms(cls);
+		for (String cls : allCompPairsIndex.keySet()) {
+			List<Term> list = allCompPairsIndex.getTerms(cls);
+			if(list.size() <= 1)
+				continue;
+			if(list.size() >= WARNING_CRITICAL_SIZE)
+				continue;
 			for(int i = 0; i< list.size(); i++) {
 				t1 = list.get(i);
 				for(int j = i+1; j< list.size(); j++) {
@@ -118,8 +114,6 @@ public class ExtensionDetecter extends TerminologyEngine {
 				}
 			}
 		}
-		//finalize
-		terminology.getTerminology().dropCustomIndex(gatheringKey);
 	}
 
 	private void watch(Term t1, Term t2) {

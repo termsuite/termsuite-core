@@ -1,15 +1,18 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import static java.util.stream.Collectors.toSet;
+
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
 
 import com.google.common.base.Stopwatch;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -32,7 +35,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class ExtensionVariantGatherer extends TerminologyEngine {
+public class ExtensionVariantGatherer extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	
@@ -84,43 +87,44 @@ public class ExtensionVariantGatherer extends TerminologyEngine {
 			.forEach(relation -> {
 				Term m1 = relation.getFrom();
 				Term m2 = relation.getTo();
-				terminology.outboundRelations(m1, RelationType.HAS_EXTENSION)
-					.forEach(rel1 -> {
-						Term affix1 = TermUtils.getExtensionAffix(terminology, m1, rel1.getTo());
-						if(affix1 == null)
-							return;
-						
-						terminology.outboundRelations(m2, RelationType.HAS_EXTENSION)
-							.forEach(rel2 -> {
-								Term affix2 = TermUtils.getExtensionAffix(terminology, m2, rel2.getTo());
-								if(affix2 == null)
-									return;
+				
+				Set<TermRelation> m1Extensions = terminology.extensions(m1).collect(toSet());
+				for(TermRelation rel1:m1Extensions) {
+					Term affix1 = TermUtils.getExtensionAffix(terminology, m1, rel1.getTo());
+					if(affix1 == null)
+						continue;
+					
+					Set<TermRelation> m2extensions = terminology.extensions(m2).collect(toSet());
+					for(TermRelation rel2:m2extensions) {
+							Term affix2 = TermUtils.getExtensionAffix(terminology, m2, rel2.getTo());
+							if(affix2 == null)
+								continue;
 
-								if(Objects.equals(affix1, affix2)) {
-									cnt.incrementAndGet();
+							if(Objects.equals(affix1, affix2)) {
+								cnt.incrementAndGet();
+								
+								if(logger.isTraceEnabled()) 
+									logger.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
+								
+								TermRelation inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
+								inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
+								inferedRel.setProperty(type.getRelationProperty(), true);
+								
+								if(type == VariationType.SEMANTIC) {
+									inferedRel.setProperty(
+											RelationProperty.IS_DISTRIBUTIONAL, 
+											relation.get(RelationProperty.IS_DISTRIBUTIONAL));
 									
-									if(logger.isTraceEnabled()) 
-										logger.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
-									
-									TermRelation inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
-									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
-									inferedRel.setProperty(type.getRelationProperty(), true);
-									
-									if(type == VariationType.SEMANTIC) {
+									if(relation.isPropertySet(RelationProperty.SEMANTIC_SIMILARITY))
 										inferedRel.setProperty(
-												RelationProperty.IS_DISTRIBUTIONAL, 
-												relation.get(RelationProperty.IS_DISTRIBUTIONAL));
-										
-										if(relation.isPropertySet(RelationProperty.SEMANTIC_SIMILARITY))
-											inferedRel.setProperty(
-													RelationProperty.SEMANTIC_SIMILARITY, 
-													relation.get(RelationProperty.SEMANTIC_SIMILARITY));
-									}
-									
-									watch(inferedRel, rel1, rel2);
+												RelationProperty.SEMANTIC_SIMILARITY, 
+												relation.get(RelationProperty.SEMANTIC_SIMILARITY));
 								}
-							});
-						});
+								
+								watch(inferedRel, rel1, rel2);
+							}
+						}
+					}
 			});
 		
 		sw.stop();

@@ -36,8 +36,6 @@ import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.factory.ExternalResourceFactory;
 import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
@@ -94,7 +92,6 @@ public class PreprocessingPipelineBuilder {
 	private final String pipelineId = UUID.randomUUID().toString();
 
 	/* The Logger */
-	private static final Logger LOGGER = LoggerFactory.getLogger(PreprocessingPipelineBuilder.class);
 	private AggregateBuilder aggregateBuilder;
 	
 	/* ******************************

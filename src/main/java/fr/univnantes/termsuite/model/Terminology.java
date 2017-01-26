@@ -27,9 +27,6 @@ import java.util.stream.Stream;
 
 import com.google.common.collect.Multimap;
 
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermValueProvider;
-
 public interface Terminology {
 	
 	/*
@@ -103,13 +100,6 @@ public interface Terminology {
 	public void removeRelation(TermRelation relation);
 
 	
-	/*
-	 * Custom indexes
-	 */
-	public CustomTermIndex getCustomIndex(String indexName);
-	public CustomTermIndex createCustomIndex(String indexName, TermValueProvider termClassProvider);
-	public void dropCustomIndex(String indexName);
-
 	public long getWordAnnotationsNum();
 	public void setWordAnnotationsNum(long nbWordAnnos);
 	public void incWordAnnotationsNum(int nbWordNums);

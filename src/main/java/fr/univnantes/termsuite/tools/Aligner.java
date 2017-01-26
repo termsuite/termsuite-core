@@ -68,12 +68,12 @@ import fr.univnantes.termsuite.alignment.BilingualAligner;
 import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
 import fr.univnantes.termsuite.api.JsonOptions;
+import fr.univnantes.termsuite.index.JsonTerminologyIO;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.JsonTerminologyIO;
 
 /**
  * Command line interface for the Terminology extraction (Spotter+Indexer) engines.

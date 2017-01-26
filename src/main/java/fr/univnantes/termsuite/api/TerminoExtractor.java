@@ -2,15 +2,9 @@ package fr.univnantes.termsuite.api;
 
 import java.util.Optional;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-
 import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
-import fr.univnantes.termsuite.framework.EngineDescription;
-import fr.univnantes.termsuite.framework.EngineFactory;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
-import fr.univnantes.termsuite.framework.modules.ExtractorModule;
-import fr.univnantes.termsuite.framework.modules.ResourceModule;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -56,13 +50,14 @@ public class TerminoExtractor {
 	public void execute(Terminology terminology) {
 		if(options == null)
 			options = TermSuite.getDefaultExtractorConfig(terminology.getLang());
-		Injector injector = Guice.createInjector(
-				new ResourceModule(resourceConfig.orElse(null)),
-				new ExtractorModule(terminology, history.orElse(null))
+		EngineRunner runner = TermSuiteFactory.createEngineRunner(
+				TerminologyExtractorEngine.class, 
+				terminology,
+				resourceConfig.orElse(null),
+				history.orElse(null),
+				options
 				);
-		EngineDescription engineDescription = TermSuite.createEngineDescription(TerminologyExtractorEngine.class, options);
-		EngineFactory lifeCycle = new EngineFactory(injector);
-		TerminologyEngine engine = lifeCycle.create(engineDescription);
-		engine.execute();
+		runner.configure();
+		runner.run();
 	}
 }

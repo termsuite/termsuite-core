@@ -5,10 +5,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.google.inject.Injector;
-
 import fr.univnantes.termsuite.engines.postproc.VariationScorer;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.MemoryTerminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
@@ -16,7 +15,6 @@ import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.termino.MemoryTerminology;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class VariantScorerSpec {
@@ -31,9 +29,8 @@ public class VariantScorerSpec {
 	public void setup() {
 		terminology = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
 		populate();
-		Injector injector = UnitTests.extractorInjector(terminology);
-		scorer = UnitTests.createEngine(VariationScorer.class, injector);
-		service = injector.getInstance(TerminologyService.class);
+		scorer = UnitTests.createSimpleEngine(terminology, VariationScorer.class);
+		service = new TerminologyService(terminology);
 	}
 
 	public void populate() {

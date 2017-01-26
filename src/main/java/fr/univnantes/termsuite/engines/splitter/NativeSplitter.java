@@ -24,10 +24,13 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.model.Component;
@@ -36,8 +39,6 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
 import fr.univnantes.termsuite.resources.CompostIndex;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
@@ -45,7 +46,7 @@ import fr.univnantes.termsuite.uima.resources.termino.CompostInflectionRules;
 import fr.univnantes.termsuite.utils.IndexingKey;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
-public class NativeSplitter extends TerminologyEngine {
+public class NativeSplitter extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	@Parameter
@@ -68,10 +69,11 @@ public class NativeSplitter extends TerminologyEngine {
 
 	private CompostIndex compostIndex;
 	private static IndexingKey<String, String> similarityIndexingKey = TermSuiteUtils.KEY_THREE_FIRST_LETTERS;
-	private CustomTermIndex swtLemmaIndex;
+
+	@Index(type=TermIndexType.SWT_LEMMAS_SWT_TERMS_ONLY)
+	private TermIndex swtLemmaIndex;
 
 	private EditDistance distance = new Levenshtein();
-
 
 	private LoadingCache<String, SegmentScoreEntry> segmentScoreEntries = CacheBuilder.newBuilder()
 				.maximumSize(100000)
@@ -97,7 +99,6 @@ public class NativeSplitter extends TerminologyEngine {
 	@Override
 	public void execute() {
 		logger.info("Starting morphologyical compound detection for termino");
-		swtLemmaIndex = terminology.getTerminology().getCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		buildCompostIndex();
 
 		
@@ -134,7 +135,6 @@ public class NativeSplitter extends TerminologyEngine {
 		words
 			.parallelStream()
 			.forEach( word -> {
-				
 				cnt.increment();
 				
 				Map<Segmentation, Double> scores = computeScores(word.getLemma());
@@ -220,7 +220,6 @@ public class NativeSplitter extends TerminologyEngine {
 		logger.debug("segment score hit count: " + segmentScoreEntries.stats().hitCount());
 		logger.debug("segment score hit rate: " + segmentScoreEntries.stats().hitRate());
 		logger.debug("segment score eviction count: " + segmentScoreEntries.stats().evictionCount());
-		terminology.getTerminology().dropCustomIndex(TermIndexes.SINGLE_WORD_LEMMA);
 		segmentScoreEntries.invalidateAll();
 		segmentLemmaCache.invalidateAll();
 	}

@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.model.termino;
+package fr.univnantes.termsuite.index;
 
 import java.io.IOException;
 import java.io.Reader;

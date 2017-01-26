@@ -19,21 +19,21 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.model.termino;
+package fr.univnantes.termsuite.index;
 
 import java.util.Iterator;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.TreeMultimap;
 
-public class CustomIndexStats {
+public class TermIndexStats {
 	private Multimap<Integer,String> sizeCounters;
-	private CustomTermIndex customIndex;
+	private TermIndex customIndex;
 	private int biggestSize = 0;
 
-	public CustomIndexStats(CustomTermIndex customIndex) {
+	public TermIndexStats(TermIndex termIndex) {
 		super();
-		this.customIndex = customIndex;
+		this.customIndex = termIndex;
 		compute();
 	}
 	

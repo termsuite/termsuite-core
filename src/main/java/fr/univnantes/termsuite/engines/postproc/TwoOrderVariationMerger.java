@@ -8,8 +8,8 @@ import java.util.function.Predicate;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -31,7 +31,7 @@ import fr.univnantes.termsuite.model.TermRelation;
  *  
  *  		   will remove "wind turbine --> horizontal axis wind turbine"
  */
-public class TwoOrderVariationMerger extends TerminologyEngine {
+public class TwoOrderVariationMerger extends SimpleEngine {
 
 	@InjectLogger Logger logger;
 

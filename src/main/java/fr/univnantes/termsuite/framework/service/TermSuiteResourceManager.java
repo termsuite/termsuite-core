@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Semaphore;
@@ -34,6 +36,9 @@ public class TermSuiteResourceManager {
 	private Lang lang;
 
 	private Map<ResourceType, Object> loadedResources = new ConcurrentHashMap<>();
+
+	private Map<ResourceType, List<String>> requestingEngines = new ConcurrentHashMap<>();
+
 	private Semaphore resourceMutex = new Semaphore(1);
 	
 	public TermSuiteResourceManager() {
@@ -109,6 +114,24 @@ public class TermSuiteResourceManager {
 			return false;
 		}
 	}
-	
-	
+
+	public void registerResource(String engineName, ResourceType resourceType) {
+			if(!this.requestingEngines.containsKey(resourceType))
+				this.requestingEngines.put(resourceType, new ArrayList<>());
+			Preconditions.checkArgument(!this.requestingEngines.get(resourceType).contains(engineName), 
+					"Resource %s is already registered for engine %s", resourceType, engineName);
+			this.requestingEngines.get(resourceType).add(engineName);
+	}
+
+	public void release(String engineName) {
+		for(ResourceType resourceType:requestingEngines.keySet()) {
+			if(requestingEngines.get(resourceType).contains(engineName)) {
+				requestingEngines.remove(engineName);
+				if(requestingEngines.isEmpty()) {
+					LOGGER.debug("Releasing Resource {}", resourceType);
+					this.requestingEngines.remove(resourceType);
+				}
+			}
+		}
+	}
 }

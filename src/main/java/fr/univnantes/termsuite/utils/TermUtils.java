@@ -38,6 +38,7 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
@@ -47,8 +48,6 @@ import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.TermSuiteResourceException;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
@@ -107,7 +106,7 @@ public class TermUtils {
 	 * over each compound and try to find a matching swt for each compound.
 	 * 
 	 * This method creates an index on Terminology based on key
-	 * {@link TermIndexes#SINGLE_WORD_LEMMA}.
+	 * {@link TermIndexType#SWT_LEMMAS}.
 	 * 
 	 * @param termino
 	 * 			The {@link Terminology} in which single word terms must be found.

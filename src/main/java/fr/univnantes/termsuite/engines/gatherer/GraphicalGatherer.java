@@ -10,18 +10,19 @@ import org.slf4j.Logger;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
 
-public class GraphicalGatherer extends TerminologyEngine {
+public class GraphicalGatherer extends SimpleEngine {
 	
 	private EditDistance distance = new FastDiacriticInsensitiveLevenshtein(false);
 	
@@ -30,8 +31,10 @@ public class GraphicalGatherer extends TerminologyEngine {
 	@Parameter
 	private GathererOptions options;
 	
-	protected String indexName = TermIndexes.FIRST_LETTERS_2;
-
+	@Index(type=TermIndexType.FIRST_LETTERS_2)
+	TermIndex letterIndex;
+	
+	
 	/*
 	 * Gives the direction of the graphical relation between two terms.
 	 *  
@@ -57,15 +60,12 @@ public class GraphicalGatherer extends TerminologyEngine {
 	public void execute() {
 		logger.info("Gathering graphical variants");
 		AtomicLong comparisonCounter = new AtomicLong(0);
-		CustomTermIndex index = terminology.getTerminology().getCustomIndex(indexName);
-		index.cleanSingletonKeys();
-		index.keySet().stream()
+		letterIndex.keySet().stream()
 			.parallel()
 			.forEach(key -> {
-				Collection<Term> terms = index.getTerms(key);
+				Collection<Term> terms = letterIndex.getTerms(key);
 				gather(terms, key, comparisonCounter);
 			});
-		terminology.getTerminology().dropCustomIndex(indexName);
 		setIsGraphicalVariantProperties();
 		logger.debug("Number of graphical comparison computed: {}", comparisonCounter.longValue());
 	}

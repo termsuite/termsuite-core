@@ -5,15 +5,15 @@ import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 import fr.univnantes.termsuite.utils.StringUtils;
 
-public class TermFiltererByScore extends TerminologyEngine {
+public class TermFiltererByScore extends SimpleEngine {
 	
 	@InjectLogger Logger logger;
 	

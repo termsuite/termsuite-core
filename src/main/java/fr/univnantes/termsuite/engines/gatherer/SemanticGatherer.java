@@ -19,11 +19,11 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -100,10 +100,8 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		if(!terminology.extensions().findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
-		String indexName = "SubSequence"+rule.getName();
-
 		indexingSw.start();
-		CustomTermIndex index = terminology.getTerminology().createCustomIndex(indexName, rule.getTermProvider());
+		TermIndex index = new TermIndex(rule.getTermProvider());
 		indexingSw.stop();
 
 		Stopwatch ruleSw = Stopwatch.createStarted();
@@ -175,7 +173,6 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		});
 		ruleSw.stop();
 
-		terminology.getTerminology().dropCustomIndex(indexName);
 		logger.debug("Semantic alignment finished for rule {} in {}", rule, ruleSw);
 		logger.debug("Nb distributional synonymic relations found: {}. Total dico synonyms: {}", 
 				nbDistribRelationsFound, 
@@ -217,5 +214,10 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						this.getClass(), 
 						"Term has a new semantic variant " + t1);
 		}
+	}
+
+	@Override
+	protected TermIndex getTermIndex() {
+		throw new UnsupportedOperationException("Should never be called");
 	}
 }

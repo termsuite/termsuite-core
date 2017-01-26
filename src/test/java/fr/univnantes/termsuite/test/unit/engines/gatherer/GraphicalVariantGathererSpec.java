@@ -34,6 +34,7 @@ import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Terminology;
@@ -80,14 +81,14 @@ public class GraphicalVariantGathererSpec {
 	}
 
 
-	private GraphicalGatherer makeAE(double similarityThreashhold) throws Exception {
+	private EngineRunner makeAE(double similarityThreashhold) throws Exception {
 		options.setGraphicalSimilarityThreshold(similarityThreashhold);
-		return UnitTests.createEngine(termino, GraphicalGatherer.class, options);
+		return UnitTests.createEngineRunner(termino, GraphicalGatherer.class, options);
 	}
 
 	@Test
 	public void testCaseInsensitive() throws  Exception {
-		makeAE( 1.0d).execute();
+		makeAE( 1.0d).run();
 
 		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(0)
 			.extracting("from");
@@ -107,7 +108,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
-		makeAE( 1.0d).execute();
+		makeAE( 1.0d).run();
 		assertThat(termino.getOutboundRelations(this.tetetete))
 			.hasSize(0)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO);
@@ -122,7 +123,7 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
-		makeAE( 0.9d).execute();
+		makeAE( 0.9d).run();
 		assertThat(termino.getOutboundRelations(this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
@@ -139,7 +140,7 @@ public class GraphicalVariantGathererSpec {
 	
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
-		makeAE(0.8d).execute();
+		makeAE(0.8d).run();
 		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
 			.hasSize(0);
 		

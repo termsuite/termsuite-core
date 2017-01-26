@@ -27,9 +27,9 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.uima.ResourceType;
@@ -37,7 +37,7 @@ import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguage;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
-public class TermSpecificityComputer extends TerminologyEngine {
+public class TermSpecificityComputer extends SimpleEngine {
 	@InjectLogger Logger logger;
 
 	@Resource(type=ResourceType.GENERAL_LANGUAGE)

@@ -23,13 +23,13 @@
 
 package fr.univnantes.termsuite.engines.splitter;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
 
-public class ManualSplitter  extends TerminologyEngine {
+public class ManualSplitter  extends SimpleEngine {
 	
 	@Resource(type=ResourceType.MANUAL_COMPOSITIONS)
 	private ManualSegmentationResource manualCompositions;

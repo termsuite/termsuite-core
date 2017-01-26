@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.model.termino;
+package fr.univnantes.termsuite.index;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -32,9 +32,6 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
@@ -61,9 +58,6 @@ import fr.univnantes.termsuite.utils.TermUtils;
  *
  */
 public class MemoryTerminology implements Terminology {
-	private static final Logger LOGGER = LoggerFactory.getLogger(MemoryTerminology.class);
-	private static final String MSG_NO_SUCH_PROVIDER = "No such value provider: %s";
-
 	/**
 	 * The occurrence store 
 	 */
@@ -75,7 +69,6 @@ public class MemoryTerminology implements Terminology {
 	 * instead. 
 	 */
 	private ConcurrentMap<String, Term> terms = new ConcurrentHashMap<>();
-	private ConcurrentMap<String, CustomTermIndex> customIndexes = new ConcurrentHashMap<>();
 	private ConcurrentMap<String, Word> wordIndex = new ConcurrentHashMap<>();
 	private Multimap<Term, TermRelation> outboundVariations = Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
 	private Multimap<Term, TermRelation> inboundVariations =  Multimaps.synchronizedListMultimap(LinkedListMultimap.create());
@@ -100,8 +93,6 @@ public class MemoryTerminology implements Terminology {
 				!this.terms.containsKey(term.getGroupingKey()));
 
 		this.terms.put(term.getGroupingKey(), term);
-		for(CustomTermIndex index:this.customIndexes.values())
-			index.indexTerm(this, term);
 		for(TermWord tw:term.getWords()) {
 			privateAddWord(tw.getWord(), false);
 			if(!tw.isSwt())
@@ -134,38 +125,9 @@ public class MemoryTerminology implements Terminology {
 	}
 
 	@Override
-	public CustomTermIndex getCustomIndex(String indexName) {
-		if(!this.customIndexes.containsKey(indexName))
-			createCustomIndex(indexName, TermValueProviders.get(indexName, this.lang.getLocale()));
-		return this.customIndexes.get(indexName);
-	}
-
-	@Override
-	public CustomTermIndex createCustomIndex(String indexName,
-			TermValueProvider valueProvider) {
-		Preconditions.checkArgument(valueProvider != null, 
-				MSG_NO_SUCH_PROVIDER,
-				indexName);
-		CustomTermIndexImpl customIndex = new CustomTermIndexImpl(valueProvider);
-		this.customIndexes.put(indexName, customIndex);
-
-		LOGGER.debug("Indexing {} terms to index {}", this.getTerms().size(), indexName);
-		this.getTerms().values().parallelStream().forEach(t->{
-			customIndex.indexTerm(this, t);
-		}); 
-		return customIndex;
-	}
-
-	@Override
-	public void dropCustomIndex(String indexName) {
-		this.customIndexes.remove(indexName);
-	}
-
-	@Override
 	public Collection<Word> getWords() {
 		return this.wordIndex.values();
 	}
-
 	
 	@Override
 	public void cleanOrphanWords() {
@@ -191,10 +153,6 @@ public class MemoryTerminology implements Terminology {
 
 	private void removeTermOnly(Term t) {
 		terms.remove(t.getGroupingKey());
-		
-		// remove from custom indexes
-		for(CustomTermIndex customIndex:customIndexes.values())
-			customIndex.removeTerm(this, t);
 		
 		// remove from variants
 		List<TermRelation> toRem = Lists.newLinkedList();
@@ -347,18 +305,15 @@ public class MemoryTerminology implements Terminology {
 		return inboundVariations;
 	}
 
-
 	@Override
 	public long getSpottedTermsNum() {
 		return this.nbSpottedTerms.get();
 	}
 
-
 	@Override
 	public void setSpottedTermsNum(long spottedTermsNum) {
 		this.nbSpottedTerms.set(spottedTermsNum);
 	}
-
 
 	@Override
 	public void incSpottedTermsNum(int nbSpottedTerms) {

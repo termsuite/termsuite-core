@@ -7,13 +7,13 @@ import org.slf4j.Logger;
 
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.framework.TerminologyEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
 
-public class ThresholdExtensionFilterer extends TerminologyEngine {
+public class ThresholdExtensionFilterer extends SimpleEngine {
 
 	@InjectLogger Logger logger;
 

@@ -3,7 +3,7 @@ package fr.univnantes.termsuite.engines.prepare;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -15,7 +15,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class SWTSizeSetter extends TerminologyEngine {
+public class SWTSizeSetter extends SimpleEngine {
 	
 	@Override
 	public void execute() {

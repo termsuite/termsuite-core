@@ -2,11 +2,11 @@ package fr.univnantes.termsuite.engines.postproc;
 
 import org.apache.commons.lang.mutable.MutableInt;
 
-import fr.univnantes.termsuite.framework.TerminologyEngine;
+import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 
-public class VariationRanker extends TerminologyEngine {
+public class VariationRanker extends SimpleEngine {
 
 	@Override
 	public void execute() {
