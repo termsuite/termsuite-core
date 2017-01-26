@@ -19,7 +19,7 @@ public class SimpleEngineRunner extends EngineRunner {
 	}
 
 	@Override
-	public void run() {
+	public EngineStats run() {
 
 		SimpleEngine engine = (SimpleEngine)injector.getInstance(description.getEngineClass());
 		engineInjector.injectName(engine, description.getEngineName());
@@ -36,5 +36,7 @@ public class SimpleEngineRunner extends EngineRunner {
 
 		releaseResources();
 		dropIndexes();
+		
+		return new EngineStats(description.getEngineName(), sw.elapsed(TimeUnit.MILLISECONDS));
 	}
 }

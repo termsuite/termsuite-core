@@ -2,10 +2,12 @@ package fr.univnantes.termsuite.framework.pipeline;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Stopwatch;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.framework.AggregateEngine;
@@ -39,10 +41,19 @@ public class AggregateEngineRunner extends EngineRunner {
 	}
 	
 	@Override
-	public void run() {
+	public EngineStats run() {
 		LOGGER.info("Running Aggregate Engine {}", description.getEngineName());
+		Stopwatch sw = Stopwatch.createStarted();
+		List<EngineStats> childStats = new ArrayList<>();
 		for(EngineRunner child:children) {
-			child.run();
+			childStats.add(child.run());
 		}
+		sw.stop();
+		
+		return new EngineStats(
+				description.getEngineName(), 
+				sw.elapsed(TimeUnit.MILLISECONDS),
+				childStats
+			);
 	}
 }

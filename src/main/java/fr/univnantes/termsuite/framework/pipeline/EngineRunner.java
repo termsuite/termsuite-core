@@ -20,7 +20,7 @@ import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public abstract class EngineRunner {
-
+	
 	protected Optional<EngineRunner> parent = Optional.empty();
 	
 	protected EngineDescription description;
@@ -54,7 +54,7 @@ public abstract class EngineRunner {
 		}
 	}
 
-	public abstract void run();
+	public abstract EngineStats run();
 	
 	protected void releaseResources() {
 		resourceMgr.release(description.getEngineName());

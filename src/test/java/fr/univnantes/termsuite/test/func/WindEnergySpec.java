@@ -125,6 +125,7 @@ public abstract class WindEnergySpec {
 					.execute(terminology);
 		LOGGER.info("Pipeline finished in {} ms", stats.getTotalTime());
 		LOGGER.info("Total indexing time: {} ms", stats.getIndexingTime());
+		LOGGER.info("Engine Stats: \n{}", stats.getEngineStats());
 		return terminology;
 	}
 
