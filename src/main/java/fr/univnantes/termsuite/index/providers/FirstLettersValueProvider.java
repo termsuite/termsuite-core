@@ -4,15 +4,14 @@ import java.util.Collection;
 
 import com.google.common.collect.ImmutableList;
 
-import fr.univnantes.termsuite.index.AbstractTermIndexValueProvider;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
-public class FirstLettersValueProvider extends AbstractTermIndexValueProvider {
+public class FirstLettersValueProvider implements TermIndexValueProvider {
 	
 	private int nbLetters;
 	
@@ -21,7 +20,7 @@ public class FirstLettersValueProvider extends AbstractTermIndexValueProvider {
 	}
 
 	@Override
-	public Collection<String> getClasses(Terminology termino, Term term) {
+	public Collection<String> getClasses(Term term) {
 		if(term.getWords().size() == 1) {
 			Word word = term.getWords().get(0).getWord();
 			if(word.getLemma().length() < 5)

@@ -23,6 +23,7 @@
 
 package fr.univnantes.termsuite.test.func;
 
+import static java.util.stream.Collectors.toSet;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
@@ -31,6 +32,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -45,13 +47,12 @@ import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
-import fr.univnantes.termsuite.utils.TerminologyUtils;
 
 public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Terminology> {
 
@@ -108,8 +109,8 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 			return this;
 		
 		Term baseTerm = actual.getTerms().get(baseGroupingKey);
-		for(TermRelation tv:actual.getOutboundRelations(baseTerm, relation)) {
-			if(tv.getTo().getGroupingKey().equals(variantGroupingKey))
+		for(TermRelation tv:actual.getOutboundRelations().get(baseTerm)) {
+			if(tv.getType() == relation && tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
 		
@@ -128,8 +129,9 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 			return this;
 		
 		Term baseTerm = actual.getTerms().get(baseGroupingKey);
-		for(TermRelation tv:actual.getOutboundRelations(baseTerm, RelationType.VARIATION)) {
-			if(tv.isPropertySet(RelationProperty.VARIATION_TYPE)
+		for(TermRelation tv:actual.getOutboundRelations().get(baseTerm)) {
+			if(tv.getType() == RelationType.VARIATION 
+					&& tv.isPropertySet(RelationProperty.VARIATION_TYPE)
 					&& tv.get(RelationProperty.VARIATION_TYPE) == type
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
@@ -143,13 +145,16 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 	
-	public TerminologyAssert containsRelationFrom(String fromKey, RelationType... types) {
+	public TerminologyAssert containsRelationFrom(String fromKey, RelationType type, RelationType... types) {
 		if(failToFindTerms(fromKey))
 			return this;
 		
 		Term baseTerm = actual.getTerms().get(fromKey);
-		for(TermRelation tv:actual.getOutboundRelations(baseTerm, types))
-			return this;
+		Set<RelationType> types2 = types(type, types);
+		for(TermRelation tv:actual.getOutboundRelations().get(baseTerm)) {
+			if(types2.contains(tv))
+				return this;
+		}
 		
 		failWithMessage("No relation found from term <%s>%s", 
 				fromKey,
@@ -159,21 +164,6 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	}
 
 	
-	public TerminologyAssert containsRelationTo(String toKey, RelationType... types) {
-		if(failToFindTerms(toKey))
-			return this;
-		
-		Term term = actual.getTerms().get(toKey);
-		for(TermRelation tv:actual.getInboundRelations(term, types))
-			return this;
-		
-		failWithMessage("No relation found to term <%s>%s", 
-				toKey,
-				types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types))
-				);
-		return this;
-	}
-
 	private boolean failToFindTerms(String... groupingKeys) {
 		boolean failed = false;
 		for(String gKey:groupingKeys) {
@@ -190,8 +180,9 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 			return this;
 
 		Term baseTerm = actual.getTerms().get(baseGroupingKey);
-		for(TermRelation tv:actual.getOutboundRelations(baseTerm, RelationType.VARIATION)) {
-			if(tv.get(RelationProperty.VARIATION_TYPE) == type
+		for(TermRelation tv:actual.getOutboundRelations().get(baseTerm)) {
+			if(tv.getType() == RelationType.VARIATION
+					&& tv.get(RelationProperty.VARIATION_TYPE) == type
 					&& tv.isPropertySet(p)
 					&& java.util.Objects.equals(tv.getPropertyStringValue(p), expectedValue) 
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
@@ -209,7 +200,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 
 
 	private Collection<TermRelation> getVariations() {
-		return actual.getRelations().collect(Collectors.toSet());
+		return actual.getOutboundRelations().values();
 	}
 
 	public TerminologyAssert hasNVariationsOfType(int expected, VariationType type) {
@@ -236,28 +227,39 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return assertThat(variations);
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariations(RelationType... variations) {
+	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> asTermVariations(RelationType ralType, RelationType... ralTypes) {
+		EnumSet<RelationType> accepted = EnumSet.of(ralType, ralTypes);
+		Set<TermRelation> relations = actual.getOutboundRelations().values().stream()
+				.filter(r-> accepted.contains(r.getType()))
+				.collect(toSet());
 		return assertThat(
-				TerminologyUtils.selectTermVariations(actual, variations));
+				relations);
 	}
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends Term>, Term> asCompoundList() {
-		return assertThat(
-				TerminologyUtils.selectCompounds(actual));
+		Set<Term> comouponds = actual.getTerms().values().stream()
+			.filter(t-> t.getWords().size() == 1 && t.getWords().get(0).getWord().isCompound())
+			.collect(toSet());
+		return assertThat(comouponds);
 	}
 
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
-		for(TermRelation tv:TerminologyUtils.selectTermVariations(actual, RelationType.VARIATION)) 
+		for(TermRelation tv:actual.getOutboundRelations().values().stream().filter(r->r.getType() == RelationType.VARIATION).collect(toSet())) 
 			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
 				matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
 		return assertThat(matchingRuleNames);
 	}
 
 	
-	public TerminologyAssert hasAtLeastNVariationsOfType(Term base, int atLeastN, RelationType... vType) {
+	public TerminologyAssert hasAtLeastNRelationsOfType(Term base, int atLeastN, RelationType vType, RelationType... vTypes) {
 		isNotNull();
-		int actualSize = actual.getOutboundRelations(base, vType).size();
+		EnumSet<RelationType> accepted = EnumSet.of(vType, vTypes);
+		Set<TermRelation> relations = actual.getOutboundRelations().get(base).stream()
+				.filter(r-> accepted.contains(r.getType()))
+				.collect(toSet());
+
+		int actualSize = relations.size();
 		if (actualSize < atLeastN)
 			failWithMessage(
 					"Expected to find at least <%s> variations of type <%s> for term <%s>, but actually found <%s>",
@@ -268,8 +270,9 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	public TerminologyAssert hasNVariationsOfType(Term base, int n, VariationType... vTypes) {
 		isNotNull();
 		Set<VariationType> vTypesSet = new HashSet<>(Arrays.asList(vTypes));
-		int actualSize = (int)actual.getOutboundRelations(base, RelationType.VARIATION)
+		int actualSize = (int)actual.getOutboundRelations().get(base)
 				.stream()
+				.filter(r -> r.getType() == RelationType.VARIATION)
 				.filter(r -> 
 					r.isPropertySet(RelationProperty.VARIATION_TYPE)	
 						&& vTypesSet.contains(r.get(RelationProperty.VARIATION_TYPE)))
@@ -280,52 +283,12 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 
-	public TerminologyAssert hasAtLeastNBasesOfType(Term variant, int atLeastN, VariationType... vTypes) {
-		isNotNull();
-		
-		Set<VariationType> vTypesSet = new HashSet<>(Arrays.asList(vTypes));
-		int actualSize = (int)actual.getInboundRelations(variant, RelationType.VARIATION)
-				.stream()
-				.filter(r -> 
-					r.isPropertySet(RelationProperty.VARIATION_TYPE)	
-					&& vTypesSet.contains(r.get(RelationProperty.VARIATION_TYPE)))
-				.count();
-		if (actualSize < atLeastN)
-			failWithMessage("Expected to find at least <%s> bases <%s> for term <%s>, but actually found <%s>",
-					atLeastN,
-					(vTypes.length == 1 ? "of type " : "of any of these types ") + Joiner.on(" ").join(vTypes),
-					variant, actualSize);
-		return this;
-	}
-	
 	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getVariations(Term base) {
-		return assertThat(actual.getOutboundRelations(base));
-	}
-	
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getVariationsOfType(Term base, RelationType... types) {
-		return assertThat(actual.getOutboundRelations(base, types));
-	}
-
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBases(Term variant) {
-		return assertThat(actual.getInboundRelations(variant));
-	}
-	
-	public AbstractIterableAssert<?, ? extends Iterable<? extends TermRelation>, TermRelation> getBasesOfType(Term variant, RelationType... types) {
-		return assertThat(actual.getInboundRelations(variant, types));
-	}
-
-	public TerminologyAssert hasNBases(Term variant, int expectedNumberOfBases) {
-		Collection<TermRelation> bases = actual.getInboundRelations(variant);
-		if(bases.size() != expectedNumberOfBases)
-			failWithMessage("Expected <%s> bases but got <%s> (<%s>)", 
-					expectedNumberOfBases,
-					bases.size(),
-					bases);
-		return this;
+		return assertThat(actual.getOutboundRelations().get(base));
 	}
 	
 	public TerminologyAssert hasNVariations(Term base, int expectedNumberOfVariations) {
-		Collection<TermRelation> variants = actual.getOutboundRelations(base);
+		Collection<TermRelation> variants = actual.getOutboundRelations().get(base);
 		if(variants.size() != expectedNumberOfVariations)
 			failWithMessage("Expected <%s> variations but got <%s> (<%s>)", 
 					expectedNumberOfVariations,
@@ -417,9 +380,25 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		}
 	}
 
+	private Set<RelationType> types(RelationType type, RelationType... types) {
+		return EnumSet.of(type, types);
+	}
 
-	public TerminologyAssert hasNRelations(int expected, RelationType... types) {
-		long actualCnt = actual.getRelations(types).count();
+	
+	public TerminologyAssert hasNRelations(int expected) {
+		long actualCnt = actual.getOutboundRelations().values().size();
+		if(actualCnt != expected) {
+			failWithMessage("Expected <%s> relations. Got <%s>", 
+					expected,
+					actualCnt
+				);
+		}
+		return this;
+	}
+
+	
+	public TerminologyAssert hasNRelations(int expected, RelationType type, RelationType... types) {
+		long actualCnt = actual.getOutboundRelations().values().stream().filter(r->types(type, types).contains(r)).count();
 		if(actualCnt != expected) {
 			failWithMessage("Expected <%s> relations%s. Got <%s>", 
 					expected,
@@ -430,11 +409,12 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 
-	public TerminologyAssert hasNRelationsFrom(int expected, String fromKey, RelationType... types) {
+	public TerminologyAssert hasNRelationsFrom(int expected, String fromKey, RelationType type, RelationType... types) {
 		if(failToFindTerms(fromKey))
 			return this;
 
-		long actualCnt = actual.getOutboundRelations(actual.getTerms().get(fromKey), types).size();
+		Term term = actual.getTerms().get(fromKey);
+		long actualCnt = actual.getOutboundRelations().get(term).stream().filter(r->types(type, types).contains(r)).count();
 		if(actualCnt != expected) {
 			failWithMessage("Expected <%s> relations%s from term %s. Got <%s>", 
 					expected,
@@ -445,17 +425,17 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		}
 		return this;
 	}
-
-	public TerminologyAssert hasNRelationsTo(int expected, String toKey, RelationType... types) {
-		if(failToFindTerms(toKey))
+	
+	public TerminologyAssert hasNRelationsFrom(int expected, String fromKey) {
+		if(failToFindTerms(fromKey))
 			return this;
 
-		long actualCnt = actual.getInboundRelations(actual.getTerms().get(toKey), types).size();
+		Term term = actual.getTerms().get(fromKey);
+		long actualCnt = actual.getOutboundRelations().get(term).size();
 		if(actualCnt != expected) {
-			failWithMessage("Expected <%s> relations%s to term %s. Got <%s>", 
+			failWithMessage("Expected <%s> relations from term %s. Got <%s>", 
 					expected,
-					types.length == 0 ? "" : (" with types " + Joiner.on(", ").join(types)),
-					toKey,
+					fromKey,
 					actualCnt
 				);
 		}

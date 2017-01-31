@@ -43,15 +43,15 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.contextualizer.CrossTable;
 import fr.univnantes.termsuite.engines.contextualizer.LogLikelihood;
 import fr.univnantes.termsuite.engines.contextualizer.MutualInformation;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class ContextualizerSpec2 {
@@ -67,8 +67,9 @@ public class ContextualizerSpec2 {
 	@Before
 	public void init() {
 
-		occurrenceStore = new MemoryOccurrenceStore(Lang.FR);
-		this.termino = new MemoryTerminology("e", Lang.FR, occurrenceStore);
+		IndexedCorpus corpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		occurrenceStore = corpus.getOccurrenceStore();
+		this.termino = corpus.getTerminology();
 		
 		t1 = addTerm("T1");
 		addOcc(t1, 0, 10);
@@ -89,7 +90,7 @@ public class ContextualizerSpec2 {
 		options.setMinimumCooccFrequencyThreshold(1);
 		options.setScope(1);
 		contextualizer = UnitTests.createSimpleEngine(
-				termino, 
+				corpus, 
 				Contextualizer.class, 
 				options);
 		
@@ -104,8 +105,8 @@ public class ContextualizerSpec2 {
 
 	public Term addTerm(String gKey) {
 		Word word = new Word(gKey, gKey);
-		Term term = TermBuilder.start().setGroupingKey(gKey).addWord(word, "N", true).create();
-		termino.addTerm(term);
+		Term term = new TermBuilder().setGroupingKey(gKey).addWord(word, "N", true).create();
+		UnitTests.addTerm(termino, term);
 		return term;
 	}
 	

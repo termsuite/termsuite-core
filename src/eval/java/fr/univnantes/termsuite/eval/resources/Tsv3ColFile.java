@@ -17,9 +17,9 @@ import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.index.CustomTermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class Tsv3ColFile {
 

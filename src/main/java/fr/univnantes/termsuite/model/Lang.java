@@ -24,7 +24,7 @@ package fr.univnantes.termsuite.model;
 import java.util.Locale;
 import java.util.NoSuchElementException;
 
-import fr.univnantes.termsuite.LanguageException;
+import fr.univnantes.termsuite.framework.LanguageException;
 
 public enum Lang {
 	FR("french", Locale.FRENCH),

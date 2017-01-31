@@ -11,9 +11,16 @@ import javax.inject.Inject;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.modules.ImportModule;
 import fr.univnantes.termsuite.framework.service.PreprocessorService;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.framework.service.TermOccAnnotationImporter;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.PreparationPipelineOptions;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -22,7 +29,7 @@ public class Preprocessor {
 	
 	@Inject
 	PreprocessorService preprocessorService;
-	
+
 	private boolean parallel;
 	private Path taggerPath;
 	private PreparationPipelineOptions options = new PreparationPipelineOptions();
@@ -66,18 +73,25 @@ public class Preprocessor {
 		return this;
 	}
 	
-	public Terminology toPersistentTerminology(TextCorpus textCorpus, String storeUrl) {
-		String name = preprocessorService.generateTerminologyName(textCorpus);
-		Terminology termino = TermSuiteFactory.createPersitentTerminology(storeUrl, textCorpus.getLang(), name);
-		preprocessorService.consumeToTerminology(asStream(textCorpus), termino, -1);
-		return termino;
+	public IndexedCorpus toPersistentIndexedCorpus(TextCorpus textCorpus, String storeUrl, int maxSize) {
+		OccurrenceStore store = TermSuiteFactory.createPersitentOccurrenceStore(storeUrl, textCorpus.getLang());
+		return consumeToIndexedCorpus(textCorpus, maxSize, store);
 	}
 
-	public Terminology toTerminology(TextCorpus textCorpus, boolean withOccurrences) {
+	public IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, int maxSize) {
+		OccurrenceStore occurrenceStore = TermSuiteFactory.createMemoryOccurrenceStore(textCorpus.getLang());
+		return  consumeToIndexedCorpus(textCorpus, maxSize, occurrenceStore);
+	}
+
+	public IndexedCorpus consumeToIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
 		String name = preprocessorService.generateTerminologyName(textCorpus);
-		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name, withOccurrences);
-		preprocessorService.consumeToTerminology(asStream(textCorpus), termino);
-		return termino;
+		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
+		OccurrenceStore store = occurrenceStore;
+		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(termino, store);
+		Injector injector = Guice.createInjector(new ImportModule(indexedCorpus, maxSize));
+		TermOccAnnotationImporter importer = injector.getInstance(TermOccAnnotationImporter.class);
+		asStream(textCorpus).forEach(importer::importCas);
+		return indexedCorpus;
 	}
 	
 	public PreprocessedCorpus toPreparedCorpusJSON(TextCorpus textCorpus, Path jsonDir) {

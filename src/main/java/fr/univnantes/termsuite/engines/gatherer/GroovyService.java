@@ -16,7 +16,6 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
@@ -32,15 +31,10 @@ public class GroovyService {
 	private ConcurrentMap<Term, GroovyTerm> groovyTerms = Maps.newConcurrentMap();
 	private ConcurrentMap<String, GroovyComponent> groovyComponents = Maps.newConcurrentMap();
 	private ConcurrentMap<VariantRule, GroovyObject> groovyRules = Maps.newConcurrentMap();
-	private GroovyHelper groovyHelper;
 	
 	@Inject
-	public GroovyService(Terminology termino) {
-		super();
-		this.groovyHelper = new GroovyHelper();
-		this.groovyHelper.setTerminology(termino);
-	}
-
+	private GroovyHelper groovyHelper;
+	
 	public GroovyTerm asGroovyTerm(Term term) {
 		if(!this.groovyTerms.containsKey(term))
 			this.groovyTerms.put(term, new GroovyTerm(term, this));

@@ -52,6 +52,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class EnglishWindEnergySpec extends WindEnergySpec {
 	
@@ -172,7 +173,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testInferenceOnHorizontalAxis() {
-		Optional<TermRelation> rel1 = new TerminologyService(termino)
+		Optional<TermRelation> rel1 = UnitTests.getTerminologyService(corpus)
 				.variations("nnn: horizontal-axis wind turbine", "annn: horizontal axis wind turbine")
 				.findFirst();
 
@@ -190,7 +191,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testNumberOfInferedVariations() {
-		TerminologyService service = new TerminologyService(termino);
+		TerminologyService service = UnitTests.getTerminologyService(corpus);
 		assertThat(service.relations()
 				.filter(Relations.IS_INFERENCE)
 				.collect(Collectors.toSet())).hasSize(510);
@@ -222,11 +223,11 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testMorphologicalVariations() {
-		Stream<TermRelation> variationsTypedMorpho = new TerminologyService(termino)
+		Stream<TermRelation> variationsTypedMorpho = UnitTests.getTerminologyService(corpus)
 				.variations(VariationType.MORPHOLOGICAL);
 		assertThat(variationsTypedMorpho.collect(Collectors.toList())).hasSize(458);
 
-		Stream<TermRelation> variationsTaggedMorpho = new TerminologyService(termino)
+		Stream<TermRelation> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
 				.relations(RelationProperty.IS_MORPHOLOGICAL, true);
 		assertThat(variationsTaggedMorpho.collect(Collectors.toList())).hasSize(958);
 	}
@@ -266,10 +267,10 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				);
 
 		TermIndexValueProvider allCompProvider = TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance();
-		assertThat(allCompProvider.getClasses(termino, morph))
+		assertThat(allCompProvider.getClasses(morph))
 			.containsExactly("axis+horizontal");
 
-		assertThat(TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance().getClasses(termino, syntag))
+		assertThat(TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance().getClasses(syntag))
 			.contains("axis+horizontal");
 		
 		assertThat(termino)
@@ -290,7 +291,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void weNeoclassicalCompounds() {
-		List<Word> neoclassicals = termino.getWords().stream()
+		List<Word> neoclassicals = termino.getWords().values().stream()
 			.filter(Word::isCompound)
 			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
 		
@@ -310,8 +311,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.hasFrequency(6);
 		
 		assertThat(termino)
-			.hasNBases(term, 0) // a: highspeed
-			.hasAtLeastNBasesOfType(term, 0, VariationType.GRAPHICAL)
 			.hasNVariationsOfType(term, 4, VariationType.MORPHOLOGICAL)
 			.hasNVariationsOfType(term, 0, VariationType.SYNTAGMATIC)
 			.hasNVariationsOfType(term, 0, VariationType.SEMANTIC)

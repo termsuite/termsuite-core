@@ -31,6 +31,7 @@ import org.assertj.core.util.Lists;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -39,8 +40,8 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.WordBuilder;
 
 public class TermFactory {
 	private Terminology termino;
@@ -62,21 +63,27 @@ public class TermFactory {
 			String stem = lemma;
 			if(matcher.groupCount() == 3)
 				stem = matcher.group(3);
+			if(!termino.getWords().containsKey(lemma)) {
+				Word word = WordBuilder.start(termino).setLemma(lemma).setStem(stem).create();
+				termino.getWords().put(lemma, word);
+			}
 			builder.addWord(lemma, stem, label, label.equals("N") || label.equals("A"));
 		}
-		return builder.createAndAddToTerminology();
+		Term term = builder.create();
+		termino.getTerms().put(term.getGroupingKey(), term);
+		return term;
 	}
 
 	public void addPrefix(Term term1, Term term2) {
 		termsExist(term1, term2);
-		termino.addRelation(new TermRelation(RelationType.IS_PREFIX_OF, term1, term2));
+		termino.getOutboundRelations().put(term1, new TermRelation(RelationType.IS_PREFIX_OF, term1, term2));
 	}
 
 	public void addDerivesInto(String type, Term term1, Term term2) {
 		termsExist(term1, term2);
 		TermRelation relation = new TermRelation(RelationType.DERIVES_INTO, term1, term2);
 		relation.setProperty(RelationProperty.DERIVATION_TYPE, type);
-		termino.addRelation(relation);
+		termino.getOutboundRelations().put(term1, relation);
 	}
 
 	private void termsExist(Term... terms) {
@@ -88,7 +95,7 @@ public class TermFactory {
 	}
 
 	public void wordComposition(CompoundType type, String wordLemma, String... componentSpecs) {
-		Word word = this.termino.getWord(wordLemma);
+		Word word = this.termino.getWords().get(wordLemma);
 		Preconditions.checkArgument(
 				word != null,
 				"No such word: %s", wordLemma);
@@ -109,7 +116,7 @@ public class TermFactory {
 	}
 	
 	public static Term termMock(String groupingKey, int freq, int rank, double specificity) {
-		Term term = TermBuilder.start()
+		Term term = new TermBuilder()
 						.setGroupingKey(groupingKey, true)
 						.setFrequency(freq)
 						.setRank(rank)

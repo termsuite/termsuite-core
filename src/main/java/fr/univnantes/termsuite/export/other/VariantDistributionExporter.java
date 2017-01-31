@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.other;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -7,33 +7,29 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
+import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 
-public class VariantDistributionExporter {
+public class VariantDistributionExporter implements TerminologyExporter {
 	
-	private Terminology termino;
+	@Inject
+	private TerminologyService termino;
+	
+	@Inject
 	private Writer writer;
+	
+	@Inject
 	private Predicate<TermRelation> selector;
 	
+	@Inject
 	private List<RelationProperty> termProperties = Lists.newArrayList();
 	
-	private VariantDistributionExporter(Terminology termino, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
-		super();
-		this.termino = termino;
-		this.writer = writer;
-		this.selector = selector;
-		this.termProperties = Lists.newArrayList(properties);
-	}
-
-	public static void export(Terminology termino, Writer writer, Predicate<TermRelation> selector, RelationProperty... properties) {
-		new VariantDistributionExporter(termino, writer, selector, properties).doExport();
-	}
-
-	private void doExport() {
+	public void export() {
 		try {
 			writer.write("type");
 			writer.write("\t");
@@ -44,7 +40,7 @@ public class VariantDistributionExporter {
 			writer.write(termProperties.stream().map(RelationProperty::getShortName).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
-			termino.getRelations()
+			termino.relations()
 				.filter(selector)
 				.forEach( relation -> {
 				try {

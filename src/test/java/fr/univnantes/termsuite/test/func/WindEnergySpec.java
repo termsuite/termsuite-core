@@ -49,10 +49,12 @@ import com.google.common.cache.LoadingCache;
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.framework.PipelineStats;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.ResourceType;
@@ -61,6 +63,7 @@ public abstract class WindEnergySpec {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(WindEnergySpec.class);
 	
+	protected IndexedCorpus corpus = null;
 	protected Terminology termino = null;
 	protected Lang lang;
 	protected List<String> notTestedRules = Lists.newArrayList();
@@ -92,41 +95,42 @@ public abstract class WindEnergySpec {
 			syntacticMatchingRules.add(rule);		
 	}
 	
-	private static final LoadingCache<Lang, Terminology> TERMINOLOGY_CACHE = CacheBuilder.newBuilder()
+	private static final LoadingCache<Lang, IndexedCorpus> TERMINOLOGY_CACHE = CacheBuilder.newBuilder()
 				.maximumSize(1)
-				.build(new CacheLoader<Lang, Terminology>() {
+				.build(new CacheLoader<Lang, IndexedCorpus>() {
 					@Override
-					public Terminology load(Lang lang) throws Exception {
-						Terminology termino = runPipeline(lang);
+					public IndexedCorpus load(Lang lang) throws Exception {
+						IndexedCorpus corpus = runPipeline(lang);
 						File controlDir = FunctionalTests.getFunctionalTestsControlDir().resolve("we-" + lang.getCode()).toFile();
 						controlDir.mkdirs();
-						new ControlFilesGenerator(termino).generate(controlDir);
-						return termino;
+						new ControlFilesGenerator(UnitTests.getTerminologyService(corpus)).generate(controlDir);
+						return corpus;
 					}
 				});
 	
 	
 	@Before
 	public void setup() {
-		this.termino = TERMINOLOGY_CACHE.getUnchecked(lang);
+		this.corpus = TERMINOLOGY_CACHE.getUnchecked(lang);
+		this.termino = this.corpus.getTerminology();
 	}
 	
-	protected static Terminology runPipeline(Lang lang) throws IOException {
+	protected static IndexedCorpus runPipeline(Lang lang) throws IOException {
 		ClearTempFiles.main(new String[0]);
-		Terminology terminology = TermSuite.preprocessor()
+		IndexedCorpus corpus = TermSuite.preprocessor()
 			.setTaggerPath(FunctionalTests.getTaggerPath())
-			.toTerminology(FunctionalTests.getCorpusWE(lang), true);
+			.toIndexedCorpus(FunctionalTests.getCorpusWE(lang), 5000000);
 		
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
 		extractorOptions.getPostProcessorConfig().setEnabled(false);
 		extractorOptions.getGathererConfig().setMergerEnabled(false);
 		PipelineStats stats = TermSuite.terminoExtractor()
 					.setOptions(extractorOptions)
-					.execute(terminology);
+					.execute(corpus);
 		LOGGER.info("Pipeline finished in {} ms", stats.getTotalTime());
 		LOGGER.info("Total indexing time: {} ms", stats.getIndexingTime());
 		LOGGER.info("Engine Stats: \n{}", stats.getEngineStats());
-		return terminology;
+		return corpus;
 	}
 
 	@Test

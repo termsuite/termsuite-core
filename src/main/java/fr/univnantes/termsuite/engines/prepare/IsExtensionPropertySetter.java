@@ -1,6 +1,6 @@
 package fr.univnantes.termsuite.engines.prepare;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 

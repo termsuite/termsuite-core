@@ -24,7 +24,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
@@ -38,7 +38,6 @@ import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.resources.CompostIndex;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.SimpleWordSet;
@@ -168,32 +167,28 @@ public class NativeSplitter extends SimpleEngine {
 					Segmentation bestSegmentation = segmentations.get(0);
 					
 					// build the word component from segmentation
-					WordBuilder builder = new WordBuilder(word);
 					
 					boolean isNeoclassical = false;
 					for(Segment seg:bestSegmentation.getSegments()) {
 						String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
-						if(lemma == null)
-							builder.addComponent(
-								seg.getBegin(), 
-								seg.getEnd(), 
-								seg.getSubstring()
-							);
-						else
-							builder.addComponent(
+						Component component;
+						if(lemma == null) {
+							component = new Component(
+									seg.getBegin(), 
+									seg.getEnd(), 
+									seg.getSubstring());
+						} else
+							component = new Component(
 									seg.getBegin(), 
 									seg.getEnd(), 
 									seg.getSubstring(),
-									lemma
-								);
-						
-						if(compostIndex.isNeoclassical(seg.getSubstring())) {
-							isNeoclassical = true;
-							builder.setNeoclassicalAffix(seg.getBegin(), seg.getEnd());
-						} 
+									lemma);
+						word.getComponents().add(component);
+						if(compostIndex.isNeoclassical(seg.getSubstring())) 
+							component.setNeoclassical();
+						word.getComponents().add(component);
 					}
-					builder.setCompoundType(isNeoclassical ? CompoundType.NEOCLASSICAL : CompoundType.NATIVE);
-					builder.create();
+					word.setCompoundType(isNeoclassical ? CompoundType.NEOCLASSICAL : CompoundType.NATIVE);
 					
 					watchComposition(word, true);
 					// log the word composition

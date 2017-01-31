@@ -32,9 +32,10 @@ import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;
@@ -44,7 +45,6 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 

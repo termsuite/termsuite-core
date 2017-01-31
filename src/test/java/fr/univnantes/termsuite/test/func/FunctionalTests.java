@@ -38,10 +38,10 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TextCorpus;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerDeEnSpec;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerFrEnSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TermSuitePreprocessorSpec;

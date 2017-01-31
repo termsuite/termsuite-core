@@ -22,6 +22,7 @@
 package fr.univnantes.termsuite.model;
 
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
@@ -32,6 +33,8 @@ public class TermWord {
 	
 	TermWord(Word word, String label, boolean isSwt) {
 		super();
+		Preconditions.checkNotNull(word);
+		Preconditions.checkNotNull(label);
 		this.word = word;
 		this.syntacticlabel = label;
 		this.swt = isSwt;

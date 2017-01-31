@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 
 import org.slf4j.Logger;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;

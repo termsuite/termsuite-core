@@ -8,7 +8,6 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
 public class SynonymicRule extends VariantRule {
@@ -25,7 +24,7 @@ public class SynonymicRule extends VariantRule {
 	}
 	
 	public String getIndexingKey(Term t) {
-		return equalityProvider.getClasses(null, t).iterator().next();
+		return equalityProvider.getClasses(t).iterator().next();
 	}
 
 	public TermIndexValueProvider getTermProvider() {
@@ -48,7 +47,7 @@ public class SynonymicRule extends VariantRule {
 	public void initEqualityProvider(LinkedList<Integer> eqIndices) {
 		this.equalityProvider = new TermIndexValueProvider() {
 			@Override
-			public Collection<String> getClasses(Terminology termino, Term term) {
+			public Collection<String> getClasses(Term term) {
 				if(eqIndices.getLast() < term.getWords().size()) {
 					return Lists.newArrayList(term.getWords().subList(
 							eqIndices.getFirst(), 

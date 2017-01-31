@@ -41,12 +41,12 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.Relations;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 
 /**
@@ -61,11 +61,10 @@ public class ControlFilesGenerator {
 	
 	private TerminologyService termino;
 	
-	public ControlFilesGenerator(Terminology termino) {
+	public ControlFilesGenerator(TerminologyService termino) {
 		super();
-		this.termino = new TerminologyService(termino);
+		this.termino = termino;
 	}
-
 
 	/**
 	 * 

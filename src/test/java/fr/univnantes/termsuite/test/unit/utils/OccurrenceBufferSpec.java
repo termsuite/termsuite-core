@@ -30,7 +30,7 @@ import org.junit.Test;
 
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 import fr.univnantes.termsuite.test.unit.TestUtil;
-import fr.univnantes.termsuite.utils.OccurrenceBuffer;
+import fr.univnantes.termsuite.uima.engines.preproc.OccurrenceBuffer;
 
 public class OccurrenceBufferSpec {
 

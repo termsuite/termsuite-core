@@ -24,7 +24,6 @@ package fr.univnantes.termsuite.index;
 import java.util.Collection;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 
 /**
  * 
@@ -35,5 +34,5 @@ import fr.univnantes.termsuite.model.Terminology;
  *
  */
 public interface TermIndexValueProvider {
-	public Collection<String> getClasses(Terminology termino, Term term);
+	public Collection<String> getClasses(Term term);
 }

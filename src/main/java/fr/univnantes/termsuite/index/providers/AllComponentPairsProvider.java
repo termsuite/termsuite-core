@@ -7,11 +7,10 @@ import java.util.Set;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
-import fr.univnantes.termsuite.index.AbstractTermIndexValueProvider;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.CollectionUtils;
 import fr.univnantes.termsuite.utils.Pair;
@@ -33,10 +32,10 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  * 
  */
-public class AllComponentPairsProvider extends AbstractTermIndexValueProvider {
+public class AllComponentPairsProvider implements TermIndexValueProvider {
 
 	@Override
-	public Collection<String> getClasses(Terminology termino, Term term) {
+	public Collection<String> getClasses(Term term) {
 		Set<Pair<Component>> componentPairs = Sets.newHashSet();
 		Set<Word> significantWords = Sets.newHashSetWithExpectedSize(term.getWords().size());
 		

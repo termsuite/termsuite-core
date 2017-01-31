@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.other;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -17,9 +17,9 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 
 public class CompoundExporter {

@@ -26,6 +26,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 
 import com.google.common.collect.AbstractIterator;
@@ -33,13 +35,14 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.AtomicDouble;
 
-import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.ContextVector.Entry;
 import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.utils.IteratorUtils;
@@ -54,6 +57,9 @@ import fr.univnantes.termsuite.utils.IteratorUtils;
 public class Contextualizer extends SimpleEngine {
 	@InjectLogger Logger logger;
 
+	@Inject
+	private OccurrenceStore occurrenceStore;
+	
 	@Parameter
 	private ContextualizerOptions options;
 
@@ -117,10 +123,10 @@ public class Contextualizer extends SimpleEngine {
 
 	public void computeDocumentViews() {
 		documentViews = new HashMap<>();
-		for(Document document:terminology.getOccurrenceStore().getDocuments()) 
+		for(Document document:occurrenceStore.getDocuments()) 
 			documentViews.put(document, new DocumentView());
 		for(Term term:terminology.getTerms())
-			for(TermOccurrence occ:terminology.getOccurrenceStore().getOccurrences(term))
+			for(TermOccurrence occ:occurrenceStore.getOccurrences(term))
 				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
 	}
 
@@ -226,7 +232,7 @@ public class Contextualizer extends SimpleEngine {
 	
 	public Iterator<Iterator<TermOccurrence>> contextIterator(final Term t, final int contextSize) {
 		return new AbstractIterator<Iterator<TermOccurrence>>() {
-			private Iterator<TermOccurrence> it = terminology.getOccurrenceStore().getOccurrences(t).iterator();
+			private Iterator<TermOccurrence> it = occurrenceStore.getOccurrences(t).iterator();
 			
 			@Override
 			protected Iterator<TermOccurrence> computeNext() {

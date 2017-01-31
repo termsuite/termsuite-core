@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.other;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -11,25 +11,33 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
+import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariantRule;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
+import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
-public class VariationRuleExamplesExporter {
+public class VariationRuleExamplesExporter implements TerminologyExporter {
 
-	private Terminology termino;
+	@Inject
+	private TerminologyService termino;
+
+	@Inject
 	private Writer writer;
+
+	@Inject
 	private YamlRuleSet yamlVariantRules;
 
+	@Inject
+	private OccurrenceStore occStore;
 	
 	class TermPair implements Comparable<TermPair> {
 		Term source;
@@ -47,23 +55,13 @@ public class VariationRuleExamplesExporter {
 		}
 	}
 
-
-	private VariationRuleExamplesExporter(Terminology termino, Writer writer, YamlRuleSet yamlVariantRules) {
-		this.termino = termino;
-		this.writer = writer;
-		this.yamlVariantRules = yamlVariantRules;
-	}
-
-	public static void export(Terminology termino, Writer writer, YamlRuleSet yamlVariantRules) {
-		new VariationRuleExamplesExporter(termino, writer, yamlVariantRules).doExport();
-	}
-
-	private void doExport() {
+	public void export() {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
-		for (Term t : termino.getTerms().values()) {
-			for (TermRelation v : termino.getOutboundRelations(t, RelationType.VARIATION))
+		for (Term t : termino.getTerms()) {
+			termino.outboundRelations(t, RelationType.VARIATION).forEach(v -> {
 				pairs.put(v.getPropertyStringValue(RelationProperty.VARIATION_RULE), new TermPair(t, v.getTo()));
+			});
 		}
 
 		// gets all variant rules (event size-0) and sorts them
@@ -107,7 +105,6 @@ public class VariationRuleExamplesExporter {
 				int nbStrictOccs = 0;
 				List<String> lines = Lists.newArrayList();
 				for (TermPair pair : sortedPairs) {
-					OccurrenceStore occStore = termino.getOccurrenceStore();
 					List<TermOccurrence> targetStrictOccurrences = Lists.newLinkedList(occStore.getOccurrences(pair.target));
 					TermOccurrenceUtils.removeOverlaps(occStore.getOccurrences(pair.source), targetStrictOccurrences);
 					nbOverlappingOccs += pair.target.getFrequency();

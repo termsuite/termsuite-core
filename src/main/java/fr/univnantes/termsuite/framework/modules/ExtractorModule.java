@@ -21,23 +21,24 @@ import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.PipelineService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
 import uima.sandbox.filter.resources.DefaultFilterResource;
 import uima.sandbox.filter.resources.FilterResource;
 
 public class ExtractorModule extends AbstractModule {
-	private Terminology terminology;
+	private IndexedCorpus indexedterminology;
 	private Optional<TermHistory> history = Optional.empty();
-
-	public ExtractorModule(Terminology terminology) {
+	
+	public ExtractorModule(IndexedCorpus terminology) {
 		Preconditions.checkNotNull(terminology, "Terminology cannot be null");
-		this.terminology = terminology;
+		this.indexedterminology = terminology;
 	}
 
-	public ExtractorModule(Terminology terminology,
+	public ExtractorModule(IndexedCorpus terminology, 
 			TermHistory history) {
 		this(terminology);
 		this.history = Optional.ofNullable(history);
@@ -47,9 +48,10 @@ public class ExtractorModule extends AbstractModule {
 	protected void configure() {
 		bind(new TypeLiteral<Optional<TermHistory>>(){}).toInstance(history);
 		bind(FilterResource.class).to(DefaultFilterResource.class);
-		bind(Terminology.class).toInstance(terminology);
-		bind(Lang.class).toInstance(terminology.getLang());
-		bind(OccurrenceStore.class).toInstance(terminology.getOccurrenceStore());
+		bind(Terminology.class).toInstance(indexedterminology.getTerminology());
+		bind(IndexedCorpus.class).toInstance(indexedterminology);
+		bind(Lang.class).toInstance(indexedterminology.getTerminology().getLang());
+		bind(OccurrenceStore.class).toInstance(indexedterminology.getOccurrenceStore());
 		bind(TerminologyService.class).in(Singleton.class);
 		bind(PipelineService.class).in(Singleton.class);
 		bind(IndexService.class).in(Singleton.class);
@@ -76,22 +78,22 @@ public class ExtractorModule extends AbstractModule {
 	    }
 	
 	private static class Slf4JMembersInjector<T> implements MembersInjector<T> {
-		    private final Field field;
-		    private final Logger logger;
+	    private final Field field;
+	    private final Logger logger;
 
-		    Slf4JMembersInjector(Field field) {
-		      this.field = field;
-		      this.logger = LoggerFactory.getLogger(field.getDeclaringClass());
-		      field.setAccessible(true);
-		    }
+	    Slf4JMembersInjector(Field field) {
+	      this.field = field;
+	      this.logger = LoggerFactory.getLogger(field.getDeclaringClass());
+	      field.setAccessible(true);
+	    }
 
-		    public void injectMembers(T t) {
-		      try {
-		        field.set(t, logger);
-		      } catch (IllegalAccessException e) {
-		        throw new RuntimeException(e);
-		      }
-		    }
-		  }	
+	    public void injectMembers(T t) {
+	      try {
+	        field.set(t, logger);
+	      } catch (IllegalAccessException e) {
+	        throw new RuntimeException(e);
+	      }
+	    }
+	  }	
 	
 }

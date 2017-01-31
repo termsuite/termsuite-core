@@ -35,12 +35,16 @@ import org.mockito.Mockito;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermUtilsSpec {
@@ -65,7 +69,8 @@ public class TermUtilsSpec {
 	
 	@Before
 	public void setUp() {
-		termino = Fixtures.termino();
+		IndexedCorpus corpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		termino = corpus.getTerminology();
 		energie = Fixtures.term10(termino);
 		eolien = Fixtures.term11(termino);
 		energie_eolien = Fixtures.term1(termino);
@@ -90,7 +95,7 @@ public class TermUtilsSpec {
 		allTerms.add(radioelectrique);
 		allTerms.add(total);
 		allTerms.add(recouvrement);
-		terminoService = new TerminologyService(termino);
+		terminoService = UnitTests.getTerminologyService(corpus);
 	}
 
 		

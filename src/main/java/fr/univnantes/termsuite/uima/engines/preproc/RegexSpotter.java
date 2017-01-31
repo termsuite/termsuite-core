@@ -43,7 +43,6 @@ import fr.univnantes.termsuite.resources.TrueFilter;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;

@@ -16,8 +16,8 @@ import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class IndexService {
 
@@ -33,7 +33,7 @@ public class IndexService {
 
 	public void addTerm(Term term) {
 		for(TermIndex termIndex:termIndexes.values())
-			termIndex.addToIndex(terminology, term);
+			termIndex.addToIndex(term);
 	}
 
 	public TermIndex getIndex(TermIndexType indexType) {
@@ -57,7 +57,7 @@ public class IndexService {
 		this.termIndexes.put(indexType, termIndex);
 
 		for(Term t:this.terminology.getTerms().values()) 
-			termIndex.addToIndex(this.terminology, t);
+			termIndex.addToIndex(t);
 		indexingSW.stop();
 		return termIndex;
 	}
@@ -69,7 +69,7 @@ public class IndexService {
 	
 	public void removeTerm(Term term) {
 		for(TermIndex termIndex:termIndexes.values())
-			termIndex.removeTerm(this.terminology, term);
+			termIndex.removeTerm(term);
 	}
 
 	public Stopwatch getIndexingTime() {

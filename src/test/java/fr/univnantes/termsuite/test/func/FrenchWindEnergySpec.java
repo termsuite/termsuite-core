@@ -127,7 +127,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	
 	@Test
 	public void weNeoclassicalCompounds() {
-		List<Word> neoclassicals = termino.getWords().stream()
+		List<Word> neoclassicals = termino.getWords().values().stream()
 			.filter(Word::isCompound)
 			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
 		
@@ -192,7 +192,6 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasFrequency(308);
 		
 		assertThat(termino)
-			.hasNBases(term, 2)
 			.hasNVariationsOfType(term, 24, VariationType.SYNTAGMATIC)
 			.getVariations(term)
 			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
@@ -273,13 +272,13 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		Term term2 = termino.getTerms().get("nn: micro système");
 		assertNotNull(term2);
 		TermIndexValueProvider provider = TermIndexType.ALLCOMP_PAIRS.getProviderClass().newInstance();
-		assertThat(provider.getClasses(termino, term2))
+		assertThat(provider.getClasses(term2))
 			.containsOnly("micro+système");
-		assertThat(provider.getClasses(termino, term1))
+		assertThat(provider.getClasses(term1))
 			.containsOnly("micro+système");
 		TermIndex termIndex = new TermIndex(provider);
-		termIndex.addToIndex(termino, term1);
-		termIndex.addToIndex(termino, term2);
+		termIndex.addToIndex(term1);
+		termIndex.addToIndex(term2);
 		assertThat(termIndex.getClasses().keySet())
 			.containsOnly("micro+système");
 		assertThat(termIndex.getTerms("micro+système"))

@@ -21,14 +21,20 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.test.unit;
 
+import static java.util.stream.Collectors.toSet;
+
+import java.lang.reflect.Field;
+import java.util.Set;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import com.google.common.base.Preconditions;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Engine;
 import fr.univnantes.termsuite.framework.EngineDescription;
 import fr.univnantes.termsuite.framework.EngineInjector;
@@ -36,12 +42,18 @@ import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.modules.ExtractorModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
 import fr.univnantes.termsuite.test.unit.api.PreprocessorSpec;
 import fr.univnantes.termsuite.test.unit.api.ResourceConfigSpec;
 import fr.univnantes.termsuite.test.unit.api.TerminoExtractorSpec;
-import fr.univnantes.termsuite.test.unit.api.TraverserSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSynonymicSpec;
 import fr.univnantes.termsuite.test.unit.engines.contextualizer.ContextualizerSpec;
@@ -49,13 +61,15 @@ import fr.univnantes.termsuite.test.unit.engines.contextualizer.ContextualizerSp
 import fr.univnantes.termsuite.test.unit.engines.contextualizer.DocumentViewSpec;
 import fr.univnantes.termsuite.test.unit.engines.gatherer.GraphicalVariantGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.gatherer.GroovyServiceSpec;
+import fr.univnantes.termsuite.test.unit.engines.gatherer.RelationPairsBasedGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.gatherer.TermGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.postproc.IndependanceScorerSpec;
 import fr.univnantes.termsuite.test.unit.engines.postproc.VariantScorerSpec;
 import fr.univnantes.termsuite.test.unit.engines.splitter.SegmentationSpec;
-import fr.univnantes.termsuite.test.unit.engines.splitter.SuffixDerivationExceptionSetterSpec;
+import fr.univnantes.termsuite.test.unit.engines.splitter.ManualSuffixDerivationDetecterSpec;
 import fr.univnantes.termsuite.test.unit.export.TsvExporterSpec;
 import fr.univnantes.termsuite.test.unit.framework.TermSuiteResourceManagerSpec;
+import fr.univnantes.termsuite.test.unit.framework.service.TerminologyServiceSpec;
 import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
 import fr.univnantes.termsuite.test.unit.metrics.DiacriticInsensitiveLevenshteinSpec;
@@ -63,8 +77,6 @@ import fr.univnantes.termsuite.test.unit.metrics.FastDiacriticInsensitiveLevensh
 import fr.univnantes.termsuite.test.unit.metrics.LevenshteinSpec;
 import fr.univnantes.termsuite.test.unit.metrics.SimilarityDistanceSpec;
 import fr.univnantes.termsuite.test.unit.models.ContextVectorSpec;
-import fr.univnantes.termsuite.test.unit.models.MemoryTerminologySpec;
-import fr.univnantes.termsuite.test.unit.models.TermSpec;
 import fr.univnantes.termsuite.test.unit.models.TermValueProvidersSpec;
 import fr.univnantes.termsuite.test.unit.readers.TermsuiteJsonCasSerializerDeserializerSpec;
 import fr.univnantes.termsuite.test.unit.resources.PrefixTreeSpec;
@@ -87,7 +99,6 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	 */
 	ExtractorConfigIOSpec.class,
 	TerminoExtractorSpec.class,
-	TraverserSpec.class,
 	PreprocessorSpec.class,
 	ResourceConfigSpec.class,
 	
@@ -100,18 +111,21 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	GraphicalVariantGathererSpec.class,
 	GroovyServiceSpec.class, 
 	TermGathererSpec.class,
+	RelationPairsBasedGathererSpec.class,
 	IndependanceScorerSpec.class,
 	VariantScorerSpec.class,
 	SegmentationSpec.class, 
-	SuffixDerivationExceptionSetterSpec.class,
+	ManualSuffixDerivationDetecterSpec.class,
 	YamlRuleSetIOSpec.class,
 	YamlRuleSetIOSynonymicSpec.class,
+	
 
 	
 	/*
 	 * Framework
 	 */
 	TermSuiteResourceManagerSpec.class,
+	TerminologyServiceSpec.class,
 
 	/*
 	 * IO
@@ -136,8 +150,6 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	 * Models
 	 */
 	ContextVectorSpec.class,
-	MemoryTerminologySpec.class,
-	TermSpec.class,
 	TermValueProvidersSpec.class,
 
 	/*
@@ -176,13 +188,9 @@ public class UnitTests {
 		return new MockResourceModule();
 	}
 
-	public static  EngineRunner createEngineRunner(Terminology terminology, Class<? extends Engine> cls, Object... parameters) {
-		return createEngineRunner(terminology, cls, new ResourceModule(), parameters);
-	}
-
-	public static  EngineRunner createEngineRunner(Terminology terminology, Class<? extends Engine> cls,
+	public static  EngineRunner createEngineRunner(IndexedCorpus corpus, Class<? extends Engine> cls,
 			Module resourceModule, Object... parameters) {
-		return createEngineRunner(cls, extractorInjector(terminology, resourceModule), parameters);
+		return createEngineRunner(cls, extractorInjector(corpus, resourceModule), parameters);
 	}
 
 	public static  EngineRunner createEngineRunner(Class<? extends Engine> cls, Injector injector, Object... parameters) {
@@ -190,18 +198,23 @@ public class UnitTests {
 		return TermSuiteFactory.createEngineRunner(description, injector, null);
 	}
 
-	public static Injector extractorInjector(Terminology terminology) {
-		Injector injector = Guice.createInjector(new ResourceModule(), new ExtractorModule(terminology));
+	public static Injector extractorInjector(IndexedCorpus corpus) {
+		return extractorInjector(corpus, new ResourceModule());
+	}
+
+	public static Injector extractorInjector(IndexedCorpus corpus, ResourceModule resourceModule) {
+		Injector injector = Guice.createInjector(resourceModule, new ExtractorModule(corpus));
 		return injector;
 	}
 
-	public static Injector extractorInjector(Terminology terminology, Module resourceModule) {
-		Injector injector = Guice.createInjector(resourceModule, new ExtractorModule(terminology));
+	public static Injector extractorInjector(IndexedCorpus corpus, Module resourceModule) {
+		Injector injector = Guice.createInjector(resourceModule, new ExtractorModule(corpus));
 		return injector;
 	}
 
-	public static <T extends SimpleEngine> T createSimpleEngine(Terminology terminology, Class<T> cls, Object... parameters) {
-		Injector guiceInjector = TermSuiteFactory.createExtractorInjector(terminology, null, null);
+
+	public static <T extends SimpleEngine> T createSimpleEngine(IndexedCorpus corpus, Class<T> cls, Object... parameters) {
+		Injector guiceInjector = TermSuiteFactory.createExtractorInjector(corpus, null, null);
 		EngineInjector engineInjector = new EngineInjector(cls, guiceInjector);
 		
 		T engine;
@@ -219,6 +232,56 @@ public class UnitTests {
 			throw new RuntimeException(e);
 		}
 		
+	}
+
+	public static Term addTerm(Terminology terminology, Term term) {
+		Preconditions.checkArgument(!terminology.getTerms().containsKey(term.getGroupingKey()), "Term %s already in termino", term);
+		Set<Word> words = term.getWords().stream().map(TermWord::getWord).collect(toSet());
+		for(Word word:words)
+			if(!terminology.getWords().containsKey(word.getLemma()))
+				terminology.getWords().put(word.getLemma(), word);
+		terminology.getTerms().put(term.getGroupingKey(), term);
+		return term;
+		
+	}
+	public static Term addTerm(Terminology terminology, String gKey) {
+		Term term = new TermBuilder().setGroupingKey(gKey).create();
+		terminology.getTerms().put(gKey, term);
+		return term;
+	}
+
+	public static void addRelation(Terminology terminology, TermRelation r) {
+		terminology.getOutboundRelations().put(r.getFrom(), r);
+	}
+
+	public static TerminologyService getTerminologyService(IndexedCorpus corpus) {
+		return extractorInjector(corpus).getInstance(TerminologyService.class);
+	}
+
+	public static Term createTerm(String gKey) {
+		return new TermBuilder().setGroupingKey(gKey).create();
+	}
+
+	public static void setField(Object instance, String fieldName, Object value) {
+		try {
+			
+			Class<? extends Object> cls = instance.getClass();
+			while(cls != null) {
+				for(Field field:cls.getDeclaredFields()) {
+					if(field.getName().equals(fieldName)) {
+						field.setAccessible(true);
+						field.set(instance, value);
+						return;
+					}
+				}
+				cls = cls.getSuperclass();
+			}
+			throw new RuntimeException(String.format("No such field %s for class %s", fieldName, instance.getClass().getName()));
+
+			
+		} catch(Exception e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 }

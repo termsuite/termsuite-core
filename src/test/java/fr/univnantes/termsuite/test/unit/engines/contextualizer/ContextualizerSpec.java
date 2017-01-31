@@ -9,30 +9,63 @@ import org.junit.Test;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class ContextualizerSpec {
 
-	private Term termWithContext1;
-	private Term termWithContext2;
-	private Term termWithContext3;
+	private Word w1, w2, w3;
+	private Term t1, t2, t3;
 	private Contextualizer contextualizer;
-	private Terminology termino;
+	private OccurrenceStore store;
 	private ContextualizerOptions options;
 	
 	@Before
 	public void setup() {
 		options = TermSuite.getDefaultExtractorConfig(Lang.EN).getContextualizerOptions();
-		termino = Fixtures.terminoWithOccurrences();
-		termWithContext1 = termino.getTerms().get("n: énergie");
-		termWithContext2 = termino.getTerms().get("a: éolien");
-		termWithContext3 = termino.getTerms().get("n: accès");
-		contextualizer = UnitTests.createSimpleEngine(termino, Contextualizer.class, options);
+		IndexedCorpus corpus = terminoWithOccurrences();
+		contextualizer = UnitTests.createSimpleEngine(corpus, Contextualizer.class, options);
 	}
+	
+	
+	public IndexedCorpus terminoWithOccurrences() {
+		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		Terminology memoryTermino = indexedCorpus.getTerminology();
+		store = indexedCorpus.getOccurrenceStore();
+		
+		String form = "blabla";
+		
+		w1 = new Word("w1", "w1");
+		w2 = new Word("w2", "w2");
+		w3 = new Word("w3", "w3");
+		
+		t1 = TermBuilder.start(memoryTermino).setGroupingKey("t1").addWord(w1, "N").create();
+		UnitTests.addTerm(memoryTermino, t1);
+		store.addOccurrence(t1, "url", 0, 10, form);
+		store.addOccurrence(t1, "url", 31, 40, form);
+		store.addOccurrence(t1, "url", 61, 70, form);
+		
+		t2 = TermBuilder.start(memoryTermino).setGroupingKey("t2").addWord(w2, "A").create();
+		UnitTests.addTerm(memoryTermino, t2);
+		store.addOccurrence(t2, "url", 11, 20, form);
+		
+		t3 = TermBuilder.start(memoryTermino).setGroupingKey("t3").addWord(w3, "N").create();
+		UnitTests.addTerm(memoryTermino, t3);
+		store.addOccurrence(t3, "url", 21, 30, form);
+		store.addOccurrence(t3, "url", 41, 50, form);
+		store.addOccurrence(t3, "url", 51, 60, form);
+	
+		return indexedCorpus;
+	
+	}
+
 	
 	@Test
 	public void computeContextVectorScope1() {
@@ -41,21 +74,25 @@ public class ContextualizerSpec {
 		contextualizer.execute();
 		
 		// T1 T2 T3 T1 T3 T3 T1
-
-		assertThat(termWithContext1.getContext().getEntries())
-			.hasSize(2)
+		assertThat(t3.getContext().getEntries())
 			.extracting("coTerm.groupingKey", "nbCooccs")
-			.contains(tuple("a: éolien", 1), tuple("n: accès", 3));
-
-		assertThat(termWithContext2.getContext().getEntries())
+			.contains(tuple("t1", 3), tuple("t2", 1))
 			.hasSize(2)
-			.extracting("coTerm.groupingKey", "nbCooccs")
-			.contains(tuple("n: énergie", 1), tuple("n: accès", 1));
+			;
 
-		assertThat(termWithContext3.getContext().getEntries())
-			.hasSize(2)
+		assertThat(t2.getContext().getEntries())
 			.extracting("coTerm.groupingKey", "nbCooccs")
-			.contains(tuple("n: énergie", 3), tuple("a: éolien", 1));
+			.contains(tuple("t1", 1), tuple("t3", 1))
+			.hasSize(2)
+			;
+		
+		assertThat(t1.getContext().getEntries())
+			.extracting("coTerm.groupingKey", "nbCooccs")
+			.contains(tuple("t2", 1), tuple("t3", 3))
+			.hasSize(2)
+			;
+
+
 	}
 
 	@Test
@@ -65,19 +102,19 @@ public class ContextualizerSpec {
 
 		// T1 T2 T3 T1 T3 T3 T1
 
-		assertThat(termWithContext1.getContext().getEntries())
+		assertThat(t1.getContext().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs")
-			.contains(tuple("a: éolien", 2), tuple("n: accès", 6));
+			.contains(tuple("t2", 2), tuple("t3", 6));
 	
-		assertThat(termWithContext2.getContext().getEntries())
+		assertThat(t2.getContext().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs")
-			.contains(tuple("n: énergie", 2), tuple("n: accès", 2));
+			.contains(tuple("t1", 2), tuple("t3", 2));
 	
-		assertThat(termWithContext3.getContext().getEntries())
+		assertThat(t3.getContext().getEntries())
 			.hasSize(2)
 			.extracting("coTerm.groupingKey", "nbCooccs")
-			.contains(tuple("n: énergie", 6), tuple("a: éolien", 2));
+			.contains(tuple("t1", 6), tuple("t2", 2));
 	}
 }

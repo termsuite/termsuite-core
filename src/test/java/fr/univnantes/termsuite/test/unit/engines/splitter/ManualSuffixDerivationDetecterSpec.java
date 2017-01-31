@@ -34,20 +34,22 @@ import org.junit.Test;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.splitter.ManualSuffixDerivationDetecter;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.uima.ResourceType;
 import io.codearte.catchexception.shade.mockito.Mockito;
 
-public class SuffixDerivationExceptionSetterSpec {
+public class ManualSuffixDerivationDetecterSpec {
 	
-	private MemoryTerminology termino;
+	private Terminology termino;
 
 	private Term ferme_n;
 	private Term ferme_a;
@@ -58,7 +60,8 @@ public class SuffixDerivationExceptionSetterSpec {
 	
 	@Before
 	public void set() throws Exception {
-		this.termino = Fixtures.termino();
+		IndexedCorpus corpus = TermSuiteFactory.createIndexedCorpus(Lang.EN, "");
+		this.termino = corpus.getTerminology();
 		DataResource dataReosurce = Mockito.mock(DataResource.class);
 		Mockito.when(dataReosurce.getInputStream())
 			.thenReturn(new FileInputStream("src/test/resources/fr/univnantes/termsuite/test/resources/suffix-derivation-exceptions.txt"));
@@ -66,7 +69,7 @@ public class SuffixDerivationExceptionSetterSpec {
 		derivationExceptions.load(dataReosurce);
 		populateTermino(new TermFactory(termino));
 		EngineRunner engine = UnitTests.createEngineRunner(
-				termino, 
+				corpus, 
 				ManualSuffixDerivationDetecter.class, 
 				UnitTests.mockResourceModule().bind(
 						ResourceType.SUFFIX_DERIVATION_EXCEPTIONS, derivationExceptions));
@@ -87,13 +90,17 @@ public class SuffixDerivationExceptionSetterSpec {
 		termFactory.addDerivesInto("N N", this.pays, this.paysVraiDerive);
 	}
 
-
 	@Test
 	public void testProcessCollectionComplete() {
-		assertThat(termino.getOutboundRelations(this.pays))
+		assertThat(termino.getOutboundRelations().get(ferme_a)).hasSize(0);
+		assertThat(termino.getOutboundRelations().get(ferme_n)).hasSize(0);
+		assertThat(termino.getOutboundRelations().get(this.pays))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
-			.contains(tuple(this.pays, RelationType.DERIVES_INTO, paysVraiDerive));
-		assertThat(termino.getOutboundRelations(ferme_a)).hasSize(0);
+			.contains(tuple(this.pays, RelationType.DERIVES_INTO, paysVraiDerive))
+			/*
+			 * Should not detect pays->paysage because it is an exception
+			 */
+			;
 	}
 }

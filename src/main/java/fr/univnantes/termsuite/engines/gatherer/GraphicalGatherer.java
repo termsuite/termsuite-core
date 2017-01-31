@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
@@ -20,6 +20,7 @@ import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 
 public class GraphicalGatherer extends SimpleEngine {
@@ -42,17 +43,19 @@ public class GraphicalGatherer extends SimpleEngine {
 	private static class GraphicalDirection implements Comparator<Term> {
 		@Override
 		public int compare(Term t1, Term t2) {
-			if(t1.getFrequency() > t2.getFrequency())
-				return -1;
-			else if(t1.getFrequency() < t2.getFrequency())
-				return 1;
-			else if(t1.getSpecificity() > t2.getSpecificity())
-				return -1;
-			else if(t1.getSpecificity() < t2.getSpecificity())
-				return 1;
-			else {
-				return t1.getGroupingKey().compareTo(t2.getGroupingKey());
+			if(t1.isPropertySet(TermProperty.FREQUENCY) && t2.isPropertySet(TermProperty.FREQUENCY)) {
+				if(t1.getFrequency() > t2.getFrequency())
+					return -1;
+				else if(t1.getFrequency() < t2.getFrequency())
+					return 1;
+			} 
+			if(t1.isPropertySet(TermProperty.SPECIFICITY) && t2.isPropertySet(TermProperty.SPECIFICITY)) {
+				if(t1.getSpecificity() > t2.getSpecificity())
+					return -1;
+				else if(t1.getSpecificity() < t2.getSpecificity())
+					return 1;
 			}
+			return t1.getGroupingKey().compareTo(t2.getGroupingKey());
 		}
 	}
 	
@@ -91,6 +94,7 @@ public class GraphicalGatherer extends SimpleEngine {
 				}
 			}
 		}
+		System.out.println("");
 	}
 	
 	protected TermRelation createGraphicalRelation(Term from, Term to, Double similarity) {

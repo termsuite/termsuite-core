@@ -25,8 +25,8 @@ import fr.univnantes.termsuite.eval.bilangaligner.RunTrace;
 import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.exceptions.DictionaryNotFoundException;
 import fr.univnantes.termsuite.eval.model.Corpus;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class BilingualAlignementEvalRunner {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);

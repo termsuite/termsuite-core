@@ -31,14 +31,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.api.TermSuite;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -47,6 +48,7 @@ public class GraphicalVariantGathererSpec {
 	
 	
 	private GathererOptions options;
+	private IndexedCorpus corpus;
 	private Terminology termino;
 	private Term tetetete;
 	private Term tetetetx;
@@ -57,13 +59,9 @@ public class GraphicalVariantGathererSpec {
 	
 	@Before
 	public void setup() {
-		this.termino = termino();
-	}
-	
-	
-	private Terminology termino() {
 		options = TermSuite.getDefaultExtractorConfig(Lang.EN).getGathererConfig();
-		Terminology termino = Fixtures.emptyTermino();
+		corpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		termino = corpus.getTerminology();
 		TermFactory termFactory = new TermFactory(termino);
 		tetetete = termFactory.create("N:tetetete|tetetete");
 		tetetete.setSpecificity(1d);
@@ -77,43 +75,36 @@ public class GraphicalVariantGathererSpec {
 		abcdefghijkl.setSpecificity(5d);
 		abcdefghijkx = termFactory.create("N:abcdefghijkx|abcdefghijkx");
 		abcdefghijkx.setSpecificity(6d);
-		return termino;
 	}
 
 
-	private EngineRunner makeAE(double similarityThreashhold) throws Exception {
+	private SimpleEngine makeAE(double similarityThreashhold) throws Exception {
 		options.setGraphicalSimilarityThreshold(similarityThreashhold);
-		return UnitTests.createEngineRunner(termino, GraphicalGatherer.class, options);
+		return UnitTests.createSimpleEngine(corpus, GraphicalGatherer.class, options);
 	}
 
 	@Test
 	public void testCaseInsensitive() throws  Exception {
-		makeAE( 1.0d).run();
+		makeAE( 1.0d).execute();
 
-		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(0)
-			.extracting("from");
-		assertThat(termino.getInboundRelations(this.abcdefghijklCapped)).hasSize(1)
-			.extracting("from")
-			.contains(this.abcdefghijkl);
-		assertThat(termino.getOutboundRelations(this.abcdefghijkl)).hasSize(1);
-		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped)).hasSize(0);
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijkl)).hasSize(1);
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijklCapped)).hasSize(0);
 		
-		assertThat(termino.getOutboundRelations(this.abcdefghijkl))
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijkl))
 			.hasSize(1)
 			.extracting("to")
 			.contains(this.abcdefghijklCapped);
-		assertThat(termino.getInboundRelations(this.abcdefghijkl)).hasSize(0);
 	}
 
 
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
-		makeAE( 1.0d).run();
-		assertThat(termino.getOutboundRelations(this.tetetete))
+		makeAE( 1.0d).execute();
+		assertThat(termino.getOutboundRelations().get(this.tetetete))
 			.hasSize(0)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO);
 
-		assertThat(termino.getOutboundRelations(this.teteteteAccent))
+		assertThat(termino.getOutboundRelations().get(this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(tuple(VariationType.GRAPHICAL, this.tetetete));
@@ -123,13 +114,13 @@ public class GraphicalVariantGathererSpec {
 
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
-		makeAE( 0.9d).run();
-		assertThat(termino.getOutboundRelations(this.abcdefghijkx))
+		makeAE( 0.9d).execute();
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
 			.contains(this.abcdefghijkl, this.abcdefghijklCapped);
 		
-		assertThat(termino.getOutboundRelations(this.teteteteAccent))
+		assertThat(termino.getOutboundRelations().get(this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(
@@ -140,16 +131,16 @@ public class GraphicalVariantGathererSpec {
 	
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
-		makeAE(0.8d).run();
-		assertThat(termino.getOutboundRelations(this.abcdefghijklCapped))
+		makeAE(0.8d).execute();
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijklCapped))
 			.hasSize(0);
 		
-		assertThat(termino.getOutboundRelations(this.abcdefghijkl))
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijkl))
 			.hasSize(1)
 			.extracting("to")
 			.contains(this.abcdefghijklCapped);
 
-		assertThat(termino.getOutboundRelations(this.abcdefghijkx))
+		assertThat(termino.getOutboundRelations().get(this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
 			.contains(this.abcdefghijklCapped, this.abcdefghijkl);

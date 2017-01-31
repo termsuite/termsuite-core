@@ -39,6 +39,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 import org.junit.Before;
@@ -49,29 +50,31 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
-import fr.univnantes.termsuite.api.JsonOptions;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.export.json.JsonOptions;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.JsonTerminologyIO;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
-import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.test.unit.TestUtil;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 
 @SuppressWarnings("unchecked")
 public class JsonTerminologyIOSpec {
 	public static final String jsonFile1 = "fr/univnantes/termsuite/test/json/termino1.json";
 	
-	private Terminology termino;
+	private IndexedCorpus indexedCorpus;
 	private Term term1;
 	private Term term2;
 	private Word word1;
@@ -82,13 +85,16 @@ public class JsonTerminologyIOSpec {
 	
 	@Before
 	public void initTermino() {
-		termino = new MemoryTerminology("Titi va voir Toto", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
+		indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR,"Titi va voir Toto");
+		Terminology termino = indexedCorpus.getTerminology();
+		OccurrenceStore store = indexedCorpus.getOccurrenceStore();
+		
 		termino.setCorpusId("ccid");
-		termino.setWordAnnotationsNum(222);
-		termino.incSpottedTermsNum(111);
+		termino.setNbWordAnnotations(new AtomicLong(222));
+		termino.setNbSpottedTerms(new AtomicLong(111));
 		word1 = new Word("word1", "stem1");
 		word2 = new Word("word2", "stem2");
-		word3 = WordBuilder.start()
+		word3 = new WordBuilder()
 				.setLemma("word3")
 				.setStem("stem3")
 				.addComponent(0, 2,"wop")
@@ -97,33 +103,37 @@ public class JsonTerminologyIOSpec {
 				.create();
 		term1 = TermBuilder.start(termino)
 			.setRank(1)
+			.setFrequency(2)
 			.addWord(word1, "L1", true)
 			.addWord(word2, "L2", true)
-			.addOccurrence(10, 12, "source2", "coveredText 3")
-			.addOccurrence(20, 30, "source3", "coveredText 4")
 			.setSpottingRule("spotRule1")
 			.setSpecificity(1.1)
-			.createAndAddToTerminology();
+			.create();
+		store.addOccurrence(term1, "source2", 10, 12, "coveredText 3");
+		store.addOccurrence(term1, "source3", 20, 30, "coveredText 4");
+		UnitTests.addTerm(termino, term1);
 		String form2 = "coveredText 2";
 		term2 = TermBuilder.start(termino)
-				.setRank(2)
+				.setRank(3)
+				.setFrequency(2)
 				.addWord(word1, "L1", true)
 				.addWord(word2, "L2", false)
 				.addWord(word3, "L3", true)
 				.setSpottingRule("spotRule1")
-				.addOccurrence(0, 2, "source2", "coveredText 1")
-				.addOccurrence(10, 12, "source1", form2)
-				.addOccurrence(14, 20, "source2", form2)
 				.setSpecificity(2.2)
-				.createAndAddToTerminology();
+				.create();
+		store.addOccurrence(term2, "source2", 0, 2, "coveredText 1");
+		store.addOccurrence(term2, "source1", 10, 12, form2);
+		store.addOccurrence(term2, "source2", 14, 20, form2);
+		UnitTests.addTerm(termino, term2);
 		TermRelation rel1 = new TermRelation(RelationType.VARIATION, term1, term2);
 		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
-		termino.addRelation(rel1);
+		UnitTests.addRelation(termino, rel1);
 		TermRelation rel2 = new TermRelation(RelationType.VARIATION, term1, term2);
 		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
 		rel2.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, 0.956d);
-		termino.addRelation(rel2);
+		UnitTests.addRelation(termino, rel2);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -138,31 +148,32 @@ public class JsonTerminologyIOSpec {
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
-		termino.removeRelation(termino.getOutboundRelations(term1, RelationType.VARIATION).iterator().next());
+		Terminology termino = indexedCorpus.getTerminology();
+		TermRelation rel = termino.getOutboundRelations().get(term1).iterator().next();
+		termino.getOutboundRelations().remove(term1, rel);
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
 		JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
 	}
 
-
-
 	@Test
 	public void testSaveLoadReturn() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		Terminology termino2 = JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
+		IndexedCorpus indexCorpus2 = JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
+		Terminology termino2 = indexCorpus2.getTerminology();
 		
-		assertEquals(111, termino2.getSpottedTermsNum());
-		assertEquals(222, termino2.getWordAnnotationsNum());
+		Terminology termino = indexedCorpus.getTerminology();
+		assertEquals(111, termino2.getNbSpottedTerms().intValue());
+		assertEquals(222, termino2.getNbWordAnnotations().intValue());
 		assertThat(termino2.getTerms().values()).hasSameElementsAs(termino.getTerms().values());
-		assertThat(termino2.getWords()).hasSameElementsAs(termino.getWords());
+		assertThat(termino2.getWords().values()).hasSameElementsAs(termino.getWords().values());
 		for(Term t:termino.getTerms().values()) {
 			Term t2 = termino2.getTerms().get(t.getGroupingKey());
-			assertThat(termino2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(termino.getOccurrenceStore().getOccurrences(t));
-			assertThat(termino2.getOutboundRelations(t2)).hasSameElementsAs(termino.getOutboundRelations(t));
-			assertThat(termino2.getInboundRelations(t2)).hasSameElementsAs(termino.getInboundRelations(t));
+			assertThat(indexCorpus2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(indexedCorpus.getOccurrenceStore().getOccurrences(t));
+			assertThat(termino2.getOutboundRelations().get(t2)).hasSameElementsAs(termino.getOutboundRelations().get(t));
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
 			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
@@ -183,8 +194,8 @@ public class JsonTerminologyIOSpec {
 			}
 
 		}
-		for(Word w:termino.getWords()) {
-			Word w2 = termino2.getWord(w.getLemma());
+		for(Word w:termino.getWords().values()) {
+			Word w2 = termino2.getWords().get(w.getLemma());
 			assertThat(w2.getStem()).isEqualTo(w.getStem());
 			assertThat(w2.isCompound()).isEqualTo(w.isCompound());
 			assertThat(w2.getCompoundType()).isEqualTo(w.getCompoundType());
@@ -195,7 +206,7 @@ public class JsonTerminologyIOSpec {
 	@Test
 	public void testExportTerminoToJsonWithoutOccurrences() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(false));
+		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(false));
 		ObjectMapper mapper = new ObjectMapper();
 		Map<String,Object> map = mapper.readValue(writer.toString(), 
 			    new TypeReference<HashMap<String,Object>>(){});
@@ -213,54 +224,50 @@ public class JsonTerminologyIOSpec {
 
 	@Test
 	public void testLoadJsonTermino() throws IOException {
-		Terminology termino = JsonTerminologyIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
+		IndexedCorpus indexedCorpus2 = JsonTerminologyIO.load(new StringReader(json1), new JsonOptions().withOccurrences(true));
 		
-		assertEquals("Toto va à la plage", termino.getName());
-		assertEquals("Toto va à la montagne", termino.getCorpusId());
-		assertEquals(Lang.EN, termino.getLang());
-		assertEquals(123, termino.getWordAnnotationsNum());
-		assertEquals(456, termino.getSpottedTermsNum());
+		Terminology termino2 = indexedCorpus2.getTerminology();
+		assertEquals("Toto va à la plage", termino2.getName());
+		assertEquals("Toto va à la montagne", termino2.getCorpusId());
+		assertEquals(Lang.EN, termino2.getLang());
+		assertEquals(123, termino2.getNbWordAnnotations().intValue());
+		assertEquals(456, termino2.getNbSpottedTerms().intValue());
 
 		// test term rank
-		assertThat(termino.getTerms().values()).hasSize(3)
+		assertThat(termino2.getTerms().values()).hasSize(3)
 		.extracting("rank")
 		.containsOnly(1, 2, 3)
 		;
-
 		
 		// test terms
-		assertThat(termino.getTerms().values()).hasSize(3)
+		assertThat(termino2.getTerms().values()).hasSize(3)
 			.extracting("groupingKey")
 			.containsOnly("na: word1 word2", "n: word1", "a: word2")
 			;
 		
 		// test terms
-		Term t1 = termino.getTerms().get("na: word1 word2");
-		Term t2 = termino.getTerms().get("n: word1");
-		Term t3 = termino.getTerms().get("a: word2");
+		Term t1 = termino2.getTerms().get("na: word1 word2");
+		Term t2 = termino2.getTerms().get("n: word1");
+		Term t3 = termino2.getTerms().get("a: word2");
 		assertThat(t1.getSpecificity()).isCloseTo(0.321d, offset(0.000001d));
 		assertThat(t1.getFrequencyNorm()).isCloseTo(0.123d, offset(0.000001d));
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
-		assertThat(termino
-				.getOutboundRelations(t1, RelationType.VARIATION)
+		assertThat(termino2
+				.getOutboundRelations().get(t1) // variations only
 				.stream()
 				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.GRAPHICAL)
 				.collect(Collectors.toList())
 				).extracting("to").containsOnly(t2);
-		assertThat(termino.getOutboundRelations(t1, RelationType.VARIATION)
+		assertThat(termino2.getOutboundRelations().get(t1)// variations only
 				.stream()
 				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC)
 				.collect(Collectors.toList())
 				).hasSize(0);
-		assertThat(termino.getInboundRelations(t1))
-			.hasSize(2)
-			.extracting("from")
-			.containsOnly(t2, t3);	
 		
 		
 		// test words
-		assertThat(termino.getWords()).hasSize(2)
+		assertThat(termino2.getWords().values()).hasSize(2)
 			.extracting("lemma", "stem")
 			.containsOnly(
 					tuple("word1", "stem1"), 
@@ -269,7 +276,7 @@ public class JsonTerminologyIOSpec {
 		
 		// test word composition
 		
-		Iterator<Word> iterator = termino.getWords().iterator();
+		Iterator<Word> iterator = termino2.getWords().values().iterator();
 		Word w1 = iterator.next();
 		assertFalse(w1.isCompound());
 		assertThat(w1.getComponents()).hasSize(0);
@@ -281,7 +288,6 @@ public class JsonTerminologyIOSpec {
 					tuple("wor", 0, 3), 
 					tuple("d3", 3, 5)
 			);
-
 		
 		assertThat(t1.getContext().getEntries())
 			.hasSize(2)
@@ -296,12 +302,20 @@ public class JsonTerminologyIOSpec {
 	@Test
 	public void testExportTerminoToJsonWithOccurrencesAndContext() throws IOException {
 		StringWriter writer = new StringWriter();
-		JsonTerminologyIO.save(writer, termino, new JsonOptions().withContexts(true).withOccurrences(true));
+		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(true));
 		ObjectMapper mapper = new ObjectMapper();
 //		System.out.println(writer.toString());
-		Map<String,Object> map = mapper.readValue(writer.toString(), 
+		String string = writer.toString();
+		System.out.println(string);
+		Map<String,Object> map = mapper.readValue(string, 
 			    new TypeReference<HashMap<String,Object>>(){});
-		assertThat(map.keySet()).hasSize(5).containsOnly("metadata", "words", "terms", "relations", "input_sources");
+		assertThat(map.keySet()).hasSize(6).containsOnly(
+				"metadata", 
+				"words", 
+				"terms", 
+				"relations", 
+				"input_sources",
+				"occurrences");
 		
 
 		// test metadata
@@ -338,10 +352,6 @@ public class JsonTerminologyIOSpec {
 		assertThat(props.get("rank")).isEqualTo(1);
 		assertThat(props.get("spec")).isEqualTo(1.1);
 		assertThat((List<?>)t1.get("words")).extracting("lemma", "syn", "swt").containsOnly(tuple("word1", "L1", true), tuple("word2", "L2", true));
-		assertThat((List<?>)t1.get("occurrences")).hasSize(2).extracting("begin", "end", "file", "text").containsOnly(
-				tuple(10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),
-				tuple(20, 30, Integer.parseInt(sources.inverse().get("source3")), "coveredText 4")
-				);
 		final Map<?,?> t1Ctxt = (Map<?,?>)t1.get("context");
 		assertEquals(21, t1Ctxt.get("total_cooccs"));
 		assertThat((List<?>)t1Ctxt.get("cooccs"))
@@ -351,11 +361,6 @@ public class JsonTerminologyIOSpec {
 		
 
 		LinkedHashMap<?,?> t2 = (LinkedHashMap<?,?>)termList.get(1);
-		assertThat((List<?>)t2.get("occurrences")).hasSize(3).extracting("begin", "end", "file", "text").containsOnly(
-				tuple(0, 2, Integer.parseInt(sources.inverse().get("source2")), "coveredText 1"),
-				tuple(10, 12, Integer.parseInt(sources.inverse().get("source1")), "coveredText 2"),
-				tuple(14, 20, Integer.parseInt(sources.inverse().get("source2")), "coveredText 2")
-			);
 		assertThat((List<?>)t2.get("words")).extracting("lemma", "syn").containsOnly(tuple("word1", "L1"), tuple("word2", "L2"), tuple("word3", "L3"));
 
 		
@@ -377,5 +382,19 @@ public class JsonTerminologyIOSpec {
 			.containsEntry("graphSim", 0.956)
 			.containsEntry("vtype", "graph")
 			.doesNotContainKey("vrule");
+		
+		
+		
+		List<?> occurrences = (List<?>)map.get("occurrences");
+
+		
+		assertThat(occurrences).hasSize(5).extracting("tid", "begin", "end", "file", "text")
+			.containsOnly(
+				tuple("l1l2l3: word1 word2 word3", 0, 2, Integer.parseInt(sources.inverse().get("source2")), "coveredText 1"),
+				tuple("l1l2l3: word1 word2 word3",10, 12, Integer.parseInt(sources.inverse().get("source1")), "coveredText 2"),
+				tuple("l1l2l3: word1 word2 word3",14, 20, Integer.parseInt(sources.inverse().get("source2")), "coveredText 2"),
+				tuple("l1l2: word1 word2",10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),
+				tuple("l1l2: word1 word2",20, 30, Integer.parseInt(sources.inverse().get("source3")), "coveredText 4")
+				);
 	}
 }

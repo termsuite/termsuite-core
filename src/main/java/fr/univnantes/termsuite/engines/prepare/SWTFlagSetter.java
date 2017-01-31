@@ -3,7 +3,7 @@ package fr.univnantes.termsuite.engines.prepare;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.utils.TermUtils;

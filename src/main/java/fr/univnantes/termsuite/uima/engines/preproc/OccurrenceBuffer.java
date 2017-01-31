@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.utils;
+package fr.univnantes.termsuite.uima.engines.preproc;
 
 import java.util.Collection;
 import java.util.Collections;

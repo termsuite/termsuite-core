@@ -18,8 +18,8 @@ import org.junit.rules.TemporaryFolder;
 
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.TextCorpus;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;

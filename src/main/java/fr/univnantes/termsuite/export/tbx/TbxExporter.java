@@ -1,4 +1,6 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.tbx;
+
+import static java.util.stream.Collectors.toSet;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -10,6 +12,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import javax.inject.Inject;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -27,18 +30,18 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.api.Traverser;
+import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Form;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 
-public class TbxExporter {
+public class TbxExporter implements TerminologyExporter {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TbxExporter.class);
-	
 	
 	/** Prints float out numbers */
 	private static final NumberFormat NUMBER_FORMATTER = NumberFormat.getNumberInstance(Locale.US);
@@ -52,39 +55,35 @@ public class TbxExporter {
 
 	/** Prefix used in langset ids */
 	private static final String TIG_ID_PREFIX = "term-";
-
 	
 	/* The tbx document */
-	private Document document;
+	private Document tbxDocument;
 
-	private Terminology termino;
-	
-	private Traverser traverser;
+	@Inject
+	private TerminologyService termino;
 
+	@Inject
+	private OccurrenceStore occurrenceStore;
+
+	@Inject
 	private Writer writer;
 	
-	private TbxExporter(Terminology termino, Writer writer, Traverser traverser) {
+	public void export() {
 		NUMBER_FORMATTER.setMaximumFractionDigits(4);
 		NUMBER_FORMATTER.setMinimumFractionDigits(4);
 		NUMBER_FORMATTER.setRoundingMode(RoundingMode.UP);
 		NUMBER_FORMATTER.setGroupingUsed(false);
-		this.writer = writer;
-		this.termino = termino;
-		this.traverser = traverser;
-	}
-
-	private void doExport() {
 		try {
 			prepareTBXDocument();
 			
 			try {
-				for(Term t: traverser.toList(termino)) {
+				for(Term t: termino.getTerms()) {
 					addTermEntry(t, false);
-					for(TermRelation v:termino.getOutboundRelations(t))
-						addTermEntry(v.getTo(), true);
+					termino.outboundRelations(t).forEach(v->
+						addTermEntry(v.getTo(), true));
 				}
 				exportTBXDocument();
-			} catch (TransformerException | IOException e) {
+			} catch (TransformerException e) {
 				LOGGER.error("An error occurred when exporting term index to file");
 				throw new TermSuiteException(e);
 			}
@@ -94,13 +93,6 @@ public class TbxExporter {
 		}
 	}
 
-	public static void export(Terminology termino, Writer writer) {
-		export(termino, writer, Traverser.create());
-	}
-
-	public static void export(Terminology termino, Writer writer, Traverser traverser) {
-		new TbxExporter(termino, writer, traverser).doExport();
-	}
 	
 	/**
      * Prepare the TBX document that will contain the terms.
@@ -108,36 +100,36 @@ public class TbxExporter {
 	private void prepareTBXDocument() throws ParserConfigurationException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
-		this.document = builder.newDocument();
+		this.tbxDocument = builder.newDocument();
 
-		Element martif = document.createElement("martif");
+		Element martif = tbxDocument.createElement("martif");
 		martif.setAttribute("type", "TBX");
-		document.appendChild(martif);
+		tbxDocument.appendChild(martif);
 
-		Element header = document.createElement("martifHeader");
+		Element header = tbxDocument.createElement("martifHeader");
 		martif.appendChild(header);
 
-		Element fileDesc = document.createElement("fileDesc");
+		Element fileDesc = tbxDocument.createElement("fileDesc");
 		header.appendChild(fileDesc);
 
-		Element encodingDesc = document.createElement("encodingDesc");
+		Element encodingDesc = tbxDocument.createElement("encodingDesc");
 		header.appendChild(encodingDesc);
 
-		Element encodingP = document.createElement("p");
+		Element encodingP = tbxDocument.createElement("p");
 		encodingP.setAttribute("type", "XCSURI");
 		encodingP.setTextContent("http://ttc-project.googlecode.com/files/ttctbx.xcs");
 		encodingDesc.appendChild(encodingP);
 
-		Element sourceDesc = document.createElement("sourceDesc");
-		Element p = document.createElement("p");
+		Element sourceDesc = tbxDocument.createElement("sourceDesc");
+		Element p = tbxDocument.createElement("p");
 //		p.setTextContent(workingDir.getAbsolutePath());
 		sourceDesc.appendChild(p);
 		fileDesc.appendChild(sourceDesc);
 
-		Element text = document.createElement("text");
+		Element text = tbxDocument.createElement("text");
 		martif.appendChild(text);
 
-        Element body = document.createElement("body");
+        Element body = tbxDocument.createElement("body");
 		text.appendChild(body);
     }
 
@@ -165,7 +157,7 @@ public class TbxExporter {
 		} // Ignore
 
         // Actually persist the file
-		DOMSource source = new DOMSource(document);
+		DOMSource source = new DOMSource(tbxDocument);
 		StreamResult result = new StreamResult(this.writer);
 		transformer.transform(source, result);
 	}
@@ -189,38 +181,37 @@ public class TbxExporter {
      * @param isVariant
      * @throws IOException
      */
-	private void addTermEntry(Term term, boolean isVariant)
-			throws IOException {
+	private void addTermEntry(Term term, boolean isVariant) {
 		String langsetId = LANGSET_ID_PREFIX + getId(term);
-        Node body = document.getElementsByTagName("body").item(0);
+        Node body = tbxDocument.getElementsByTagName("body").item(0);
 
-		Element termEntry = document.createElement("termEntry");
+		Element termEntry = tbxDocument.createElement("termEntry");
 		termEntry.setAttribute("xml:id",
 				TERMENTRY_ID_PREFIX + getId(term));
 		body.appendChild(termEntry);
-		Element langSet = document.createElement("langSet");
+		Element langSet = tbxDocument.createElement("langSet");
 		langSet.setAttribute("xml:id", langsetId);
 		langSet.setAttribute("xml:lang", this.termino.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (TermRelation variation : termino.getInboundRelations(term)) 
+		for (TermRelation variation : termino.inboundRelations(term).collect(toSet())) 
 			this.addTermBase(langSet, variation.getFrom().getGroupingKey(), null);
 
-		for (TermRelation variation : termino.getOutboundRelations(term)) {
+		for (TermRelation variation : termino.outboundRelations(term).collect(toSet())) {
 			this.addTermVariant(langSet, String.format("langset-%d", getId(variation.getTo())),
 					variation.getTo().getGroupingKey());
 		}
-		Collection<TermOccurrence> allOccurrences = termino.getOccurrenceStore().getOccurrences(term);
+		Collection<TermOccurrence> allOccurrences = occurrenceStore.getOccurrences(term);
 		this.addDescrip(langSet, langSet, "nbOccurrences", allOccurrences.size());
 
-		Element tig = document.createElement("tig");
+		Element tig = tbxDocument.createElement("tig");
 		tig.setAttribute("xml:id", TIG_ID_PREFIX + getId(term));
 		langSet.appendChild(tig);
-		Element termElmt = document.createElement("term");
+		Element termElmt = tbxDocument.createElement("term");
 		termElmt.setTextContent(term.getGroupingKey());
 		tig.appendChild(termElmt);
 
-		List<Form> forms = termino.getOccurrenceStore().getForms(term);
+		List<Form> forms = occurrenceStore.getForms(term);
 		addNote(langSet, tig, "termPilot", term.getPilot());
 
 		this.addNote(langSet, tig, "termType", isVariant ? "variant" : "termEntry");
@@ -246,14 +237,14 @@ public class TbxExporter {
 	
 	private void addDescrip(Element lang, Element element,
 			String type, Object value) {
-		Element descrip = document.createElement("descrip");
+		Element descrip = tbxDocument.createElement("descrip");
 		element.appendChild(descrip);
 		descrip.setAttribute("type", type);
 		descrip.setTextContent(value.toString());
 	}
 
 	private void addTermBase(Element lang, String target, Object value) {
-		Element descrip = document.createElement("descrip");
+		Element descrip = tbxDocument.createElement("descrip");
 		lang.appendChild(descrip);
 		descrip.setAttribute("type", "termBase");
 		descrip.setAttribute("target", "#"+target);
@@ -264,7 +255,7 @@ public class TbxExporter {
 
 	private void addTermVariant(Element lang, String target,
 			Object value) {
-		Element descrip = document.createElement("descrip");
+		Element descrip = tbxDocument.createElement("descrip");
 		lang.appendChild(descrip);
 		descrip.setAttribute("type", "termVariant");
 		descrip.setAttribute("target", "#"+target);
@@ -275,7 +266,7 @@ public class TbxExporter {
 
 	private void addNote(Element lang, Element element,
 			String type, Object value) {
-		Element termNote = document.createElement("termNote");
+		Element termNote = tbxDocument.createElement("termNote");
 		element.appendChild(termNote);
 		termNote.setAttribute("type", type);
 		termNote.setTextContent(value.toString());
@@ -285,7 +276,7 @@ public class TbxExporter {
 		StringBuilder sb = new StringBuilder("[");
 
 		int i = 0;
-		for (Form form:termino.getOccurrenceStore().getForms(term)) {
+		for (Form form:occurrenceStore.getForms(term)) {
 			if (i > 0)
 				sb.append(", ");
 			sb.append("{term=\"").append(form);

@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.model.Term;
 

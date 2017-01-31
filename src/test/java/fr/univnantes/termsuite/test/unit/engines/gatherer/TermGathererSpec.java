@@ -41,19 +41,20 @@ import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public class TermGathererSpec {
-	private MemoryTerminology termino;
+	private Terminology termino;
 	private Term machine_synchrone;
 	private Term machine_asynchrone;
 	private Term synchrone;
@@ -73,11 +74,12 @@ public class TermGathererSpec {
 	public void set() throws Exception {
 		options = TermSuite.getDefaultExtractorConfig(Lang.EN).getGathererConfig();
 		String text = Files.toString(new File(VARIANT_RULE_SET), Charsets.UTF_8);
-		this.termino = Fixtures.termino();
+		IndexedCorpus corpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		this.termino = corpus.getTerminology();
 		populateTermino(new TermFactory(termino));
 		YamlRuleSet yamlRuleSet = YamlRuleSetIO.fromYaml(text);
 		gatherer = UnitTests.createEngineRunner(
-				termino, 
+				corpus, 
 				TermGatherer.class, 
 				UnitTests.mockResourceModule().bind(ResourceType.VARIANTS, yamlRuleSet),
 				options);
@@ -111,34 +113,34 @@ public class TermGathererSpec {
 	
 	@Test
 	public void testProcessDefault() throws AnalysisEngineProcessException{
-		assertThat(termino.getOutboundRelations(this.geothermie_hydraulique))
+		assertThat(termino.getOutboundRelations().get(this.geothermie_hydraulique))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_FROM_TYPE_TO)
 			.contains(tuple(this.geothermie_hydraulique, VariationType.SYNTAGMATIC, this.geothermie_hydraulique_solaire));
 		
-		assertThat(termino.getOutboundRelations(this.geothermie_hydraulique_solaire))
+		assertThat(termino.getOutboundRelations().get(this.geothermie_hydraulique_solaire))
 			.hasSize(0);
 	}
 
 	
 	@Test
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
-		assertThat(termino.getOutboundRelations(this.machine_synchrone))
+		assertThat(termino.getOutboundRelations().get(this.machine_synchrone))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
 			.contains(tuple(VariationType.PREFIXATION, "NA-NprefA", this.machine_asynchrone));
 		
-		assertThat(termino.getOutboundRelations(this.machine_asynchrone))
+		assertThat(termino.getOutboundRelations().get(this.machine_asynchrone))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
-		assertThat(termino.getOutboundRelations(this.phase_du_stator))
+		assertThat(termino.getOutboundRelations().get(this.phase_du_stator))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
 			.contains(tuple(VariationType.DERIVATION, "S-R2D-NPN", this.phase_statorique));
-		assertThat(termino.getOutboundRelations(this.phase_statorique))
+		assertThat(termino.getOutboundRelations().get(this.phase_statorique))
 			.hasSize(0);
 		
 	}

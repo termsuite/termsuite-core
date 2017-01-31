@@ -12,15 +12,15 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
-import fr.univnantes.termsuite.api.JsonOptions;
-import fr.univnantes.termsuite.api.TerminologyIO;
+import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.eval.model.LangPair;
+import fr.univnantes.termsuite.export.json.JsonOptions;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TermSuiteEvals {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);
@@ -95,7 +95,7 @@ public class TermSuiteEvals {
 			TermSuiteResourceManager.getInstance().clear();
 			Terminology termino = config.toExtractor(lang, corpus).execute();
 			try(FileWriter writer = new FileWriter(path.toFile())){
-				TerminologyIO.toJson(termino, writer, new JsonOptions().withOccurrences(false).withContexts(true));
+				IndexedCorpusIO.toJson(termino, writer, new JsonOptions().withOccurrences(false).withContexts(true));
 			} catch (IOException e) {
 				LOGGER.error("Could not create terminology {}", getTerminologyFileName(lang, corpus, config));
 				throw new RuntimeException(e);
@@ -103,7 +103,7 @@ public class TermSuiteEvals {
 		} else
 			LOGGER.info("Terminology {} found in cache", getTerminologyFileName(lang, corpus, config));
 
-		return TerminologyIO.fromJson(path);
+		return IndexedCorpusIO.fromJson(path);
 	}
 	
 	

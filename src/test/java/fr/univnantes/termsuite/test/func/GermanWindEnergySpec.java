@@ -165,7 +165,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void weNeoclassicalCompounds() {
-		List<Word> neoclassicals = termino.getWords().stream()
+		List<Word> neoclassicals = termino.getWords().values().stream()
 			.filter(Word::isCompound)
 			.filter(w -> w.getCompoundType() == CompoundType.NEOCLASSICAL).collect(Collectors.toList());
 		
@@ -268,7 +268,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
-		List<TermRelation> msnanVars = termino.getRelations()
+		List<TermRelation> msnanVars = termino.getOutboundRelations().values().stream()
 				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
 				.collect(Collectors.toList());
 		// TODO investigate why the size varies

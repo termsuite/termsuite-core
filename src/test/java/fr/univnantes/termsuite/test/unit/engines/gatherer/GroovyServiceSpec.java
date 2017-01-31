@@ -6,14 +6,17 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.engines.gatherer.GroovyHelper;
 import fr.univnantes.termsuite.engines.gatherer.GroovyService;
 import fr.univnantes.termsuite.engines.gatherer.VariantRule;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;
 
@@ -29,17 +32,16 @@ public class GroovyServiceSpec {
 	private Term term3;
 	
 	private Terminology tIndex;
-
+	private IndexedCorpus indexedCorpus;
 	
 	@Before
 	public void initRules() {
-		term1 = Fixtures.term1();
-		term2 = Fixtures.term2();
-		term3 = Fixtures.term3();
-		Terminology tIndex = new MemoryTerminology("tata", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
-		tIndex.addTerm(term1);
-		tIndex.addTerm(term2);
-		tIndex.addTerm(term3);
+		indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "tata");
+		tIndex = indexedCorpus.getTerminology();
+		
+		term1 = Fixtures.term1(tIndex);
+		term2 = Fixtures.term2(tIndex);
+		term3 = Fixtures.term3(tIndex);
 	}
 	
 	@Test
@@ -49,10 +51,20 @@ public class GroovyServiceSpec {
 		Assert.assertFalse(expr("s[0] == t[1]", term1, term2));
 	}
 
+	
 	private boolean expr(String expr, Term t1, Term t2) {
 		VariantRule rule = new VariantRule("Titi");
 		rule.setExpression(expr);
-		return new GroovyService(this.tIndex).matchesRule(rule, t1, t2);
+		GroovyService groovyService = new GroovyService();
+		TerminologyService terminoService = UnitTests.getTerminologyService(indexedCorpus);
+		GroovyHelper helper = new GroovyHelper();
+		try {
+			UnitTests.setField(helper, "termino", terminoService);
+			UnitTests.setField(groovyService, "groovyHelper", helper);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		return groovyService.matchesRule(rule, t1, t2);
 	}
 
 	@Test

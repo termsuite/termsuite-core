@@ -1,6 +1,6 @@
 package fr.univnantes.termsuite.engines.postproc;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.StringUtils;

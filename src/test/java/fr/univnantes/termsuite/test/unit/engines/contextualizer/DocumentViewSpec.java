@@ -27,7 +27,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.contextualizer.DocumentView;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.test.unit.Fixtures;
@@ -52,9 +55,10 @@ public class DocumentViewSpec {
 	
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		this.term1 = Fixtures.term1(); 
-		this.term2 = Fixtures.term2(); // single word
-		this.term3 = Fixtures.term3();
+		Terminology termino = TermSuiteFactory.createIndexedCorpus(Lang.FR, "").getTerminology();
+		this.term1 = Fixtures.term1(termino);
+		this.term2 = Fixtures.term2(termino);
+		this.term3 = Fixtures.term3(termino);
 		this.doc1 = Fixtures.document1();
 		o1 = new TermOccurrence(term1, "o1", doc1, 4, 6);
 		o2 = new TermOccurrence(term2, "o2", doc1, 7, 10);

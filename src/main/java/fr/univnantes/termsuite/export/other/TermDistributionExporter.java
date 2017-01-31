@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.other;
 
 import java.io.Writer;
 import java.util.List;
@@ -8,11 +8,12 @@ import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 
-public class TermDistributionExporter {
+public class TermDistributionExporter implements TerminologyExporter {
 	
 	private Terminology termino;
 	private Writer writer;
@@ -28,11 +29,7 @@ public class TermDistributionExporter {
 		this.termProperties = Lists.newArrayList(properties);
 	}
 
-	public static void export(Terminology termino, Writer writer, Predicate<Term> selector, TermProperty... properties) {
-		new TermDistributionExporter(termino, writer, selector, properties).doExport();
-	}
-
-	private void doExport() {
+	public void export() {
 		try {
 			writer.write("term");
 			writer.write("\t");

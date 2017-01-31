@@ -9,10 +9,10 @@ import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.AggregateEngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.SimpleEngineRunner;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
@@ -20,21 +20,25 @@ import fr.univnantes.termsuite.utils.TermHistory;
 
 public class TermSuiteFactory {
 
-	public static Terminology createTerminology(Lang lang, String name, boolean withOccurrences) {
-		OccurrenceStore store = withOccurrences ? 
-				new MemoryOccurrenceStore(lang)
-				: new EmptyOccurrenceStore(lang);
-				return new MemoryTerminology(name, lang, store);
+	public static Terminology createTerminology(Lang lang, String name) {
+		return new Terminology(name, lang);
 	}
 
-	public static Terminology createPersitentTerminology(String storeUrl, Lang lang, String name) {
-		OccurrenceStore store = new XodusOccurrenceStore(lang, storeUrl);
-		return new MemoryTerminology(name, lang, store);
+	public static OccurrenceStore createEmptyOccurrenceStore(Lang lang) {
+		return new EmptyOccurrenceStore(lang);
+	}
+
+	public static OccurrenceStore createMemoryOccurrenceStore(Lang lang) {
+		return new MemoryOccurrenceStore(lang);
+	}
+
+	public static OccurrenceStore createPersitentOccurrenceStore(String storeUrl, Lang lang) {
+		return new XodusOccurrenceStore(lang, storeUrl);
 	}
 	
 	public static EngineRunner createEngineRunner(
 			Class<? extends Engine> engineClass, 
-			Terminology terminology, 
+			IndexedCorpus terminology, 
 			ResourceConfig config, 
 			TermHistory history, 
 			Object... parameters) {
@@ -43,7 +47,9 @@ public class TermSuiteFactory {
 		return createEngineRunner(description, injector, null);
 	}
 
-	public static Injector createExtractorInjector(Terminology terminology, ResourceConfig config,
+	public static Injector createExtractorInjector(
+			IndexedCorpus terminology, 
+			ResourceConfig config,
 			TermHistory history) {
 		Injector injector = Guice.createInjector(
 				new ResourceModule(config),
@@ -60,7 +66,7 @@ public class TermSuiteFactory {
 			return new SimpleEngineRunner(description, injector, parent);
 	}
 
-	public static Pipeline createPipeline(Class<? extends Engine> engineClass, Terminology terminology,
+	public static Pipeline createPipeline(Class<? extends Engine> engineClass, IndexedCorpus terminology,
 			ResourceConfig resourceConfig, TermHistory history, Object... parameters) {
 		EngineDescription description = new EngineDescription(engineClass.getSimpleName(), engineClass, parameters);
 		Injector injector = createExtractorInjector(terminology, resourceConfig, history);
@@ -68,5 +74,13 @@ public class TermSuiteFactory {
 		Pipeline pipeline = injector.getInstance(Pipeline.class);
 		pipeline.setRunner(runner);
 		return pipeline;
+	}
+
+	public static IndexedCorpus createIndexedCorpus(Terminology termino, OccurrenceStore store) {
+		return new IndexedCorpus(termino, store);
+	}
+
+	public static IndexedCorpus createIndexedCorpus(Lang lang, String name) {
+		return createIndexedCorpus(createTerminology(lang, name), createMemoryOccurrenceStore(lang));
 	}
 }

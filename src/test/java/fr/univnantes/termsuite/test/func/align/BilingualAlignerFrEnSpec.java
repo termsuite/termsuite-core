@@ -14,11 +14,11 @@ import fr.univnantes.termsuite.alignment.AlignmentMethod;
 import fr.univnantes.termsuite.alignment.BilingualAligner;
 import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.api.TerminologyIO;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
 public class BilingualAlignerFrEnSpec {
@@ -29,8 +29,8 @@ public class BilingualAlignerFrEnSpec {
 	
 	@Before
 	public void setup() {
-		frTermino = TerminologyIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.FR));
-		enTermino = TerminologyIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.EN));
+		frTermino = IndexedCorpusIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.FR));
+		enTermino = IndexedCorpusIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.EN));
 		aligner = TermSuiteAlignerBuilder.start()
 				.setSourceTerminology(frTermino)
 				.setTargetTerminology(enTermino)

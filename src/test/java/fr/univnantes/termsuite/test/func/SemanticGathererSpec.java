@@ -15,14 +15,14 @@ import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.framework.Relations;
 import fr.univnantes.termsuite.metrics.Cosine;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class SemanticGathererSpec {
 
-	private static Terminology termindex;
+	private static IndexedCorpus corpus;
 
 	public static void extract(Lang lang) {
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
@@ -35,13 +35,13 @@ public class SemanticGathererSpec {
 		extractorOptions.getContextualizerOptions().setMinimumCooccFrequencyThreshold(2);
 		
 		
-		termindex = TermSuite.preprocessor()
+		corpus = TermSuite.preprocessor()
 				.setTaggerPath(FunctionalTests.getTaggerPath())
-				.toTerminology(FunctionalTests.getCorpusWE(lang), true);
+				.toIndexedCorpus(FunctionalTests.getCorpusWE(lang), 5000000);
 			
 			TermSuite.terminoExtractor()
 						.setOptions(extractorOptions)
-						.execute(termindex);
+						.execute(corpus);
 	}
 	
 	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR = new Extractor<TermRelation, Tuple>() {
@@ -58,8 +58,8 @@ public class SemanticGathererSpec {
 	@Test
 	public void testVariationsFR() {
 		extract(Lang.FR);
-		List<TermRelation> relations = termindex
-				.getRelations()
+		List<TermRelation> relations = corpus.getTerminology()
+				.getOutboundRelations().values().stream()
 				.filter(Relations.IS_SEMANTIC)
 				.collect(Collectors.toList());
 		assertTrue("Expected number of relations between 3800 and 3900. Got: " + relations.size(),
@@ -79,8 +79,8 @@ public class SemanticGathererSpec {
 	public void testVariationsEN() {
 		extract(Lang.EN);
 
-		List<TermRelation> relations = termindex
-				.getRelations()
+		List<TermRelation> relations = corpus.getTerminology()
+				.getOutboundRelations().values().stream()
 				.filter(Relations.IS_SEMANTIC)
 			.collect(Collectors.toList());
 		assertThat(relations)

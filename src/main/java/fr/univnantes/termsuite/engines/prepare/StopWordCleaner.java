@@ -4,7 +4,7 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.uima.ResourceType;

@@ -10,7 +10,7 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;

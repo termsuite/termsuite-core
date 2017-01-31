@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Stopwatch;
 import com.google.inject.Injector;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.EngineDescription;
 
 public class SimpleEngineRunner extends EngineRunner {

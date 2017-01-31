@@ -30,10 +30,10 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
 
 

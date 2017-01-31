@@ -181,7 +181,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 	}
 
 	private TermRelation buildDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
-		TermRelation rel = terminoService.buildVariation(VariationType.SEMANTIC, t1, t2);
+		TermRelation rel = terminoService.addVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 		rel.setProperty(RelationProperty.SEMANTIC_SIMILARITY, value);
 		watch(t1, t2);
@@ -189,7 +189,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 	}
 
 	private TermRelation buildDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
-		TermRelation rel = terminoService.buildVariation(VariationType.SEMANTIC, t1, t2);
+		TermRelation rel = terminoService.addVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
 		watch(t1, t2);
 		return rel;

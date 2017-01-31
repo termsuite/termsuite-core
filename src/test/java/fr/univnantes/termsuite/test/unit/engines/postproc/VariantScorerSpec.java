@@ -6,15 +6,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.postproc.VariationScorer;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class VariantScorerSpec {
@@ -23,14 +23,15 @@ public class VariantScorerSpec {
 	TerminologyService service;
 	Terminology terminology;
 	VariationScorer scorer;	
-	
+	IndexedCorpus indexedCorpus;
 	
 	@Before
 	public void setup() {
-		terminology = new MemoryTerminology("", Lang.FR, new MemoryOccurrenceStore(Lang.FR));
+		indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		service = UnitTests.getTerminologyService(indexedCorpus);
+		terminology = indexedCorpus.getTerminology();
 		populate();
-		scorer = UnitTests.createSimpleEngine(terminology, VariationScorer.class);
-		service = new TerminologyService(terminology);
+		scorer = UnitTests.createSimpleEngine(indexedCorpus, VariationScorer.class);
 	}
 
 	public void populate() {
@@ -54,13 +55,12 @@ public class VariantScorerSpec {
 				terminology.getTerms().get(from), 
 				terminology.getTerms().get(to));
 		relation.setProperty(RelationProperty.IS_EXTENSION, !isExtension);
-		new TerminologyService(terminology)
+		service
 				.addRelation(relation);
 	}
 
 	private void addTerm(String groupingKey, int freq) {
-		new TerminologyService(terminology)
-				.addTerm(TermBuilder.start()
+		service.addTerm(new TermBuilder()
 						.setGroupingKey(groupingKey)
 						.setFrequency(freq)
 						.create());
@@ -84,7 +84,7 @@ public class VariantScorerSpec {
 	
 	@Test
 	public void testVARIANT_FREQUENCY_handleCycles() {
-		TerminologyService service = new TerminologyService(terminology);
+		service = UnitTests.getTerminologyService(indexedCorpus);
 		scorer.doVariationFrenquencies();
 		TermRelation relation1 = service.variations("t3", "t2").findFirst().get();
 		assertThat(relation1.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))

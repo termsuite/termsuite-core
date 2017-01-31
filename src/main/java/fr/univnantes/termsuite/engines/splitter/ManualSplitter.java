@@ -23,7 +23,7 @@
 
 package fr.univnantes.termsuite.engines.splitter;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;

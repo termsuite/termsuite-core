@@ -28,7 +28,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Map.Entry;
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -43,12 +44,14 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import fr.univnantes.termsuite.api.JsonOptions;
 import fr.univnantes.termsuite.engines.gatherer.PropertyValue;
+import fr.univnantes.termsuite.export.json.JsonOptions;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Property;
@@ -61,11 +64,8 @@ import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
-import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
-import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
 
 public class JsonTerminologyIO {
 	
@@ -80,6 +80,9 @@ public class JsonTerminologyIO {
 	private static final String MSG_NO_GROUPING_KEY_SET = "No GROUPING_KEY set for term";
 	private static final String MSG_NO_FILE_SOURCE_WITH_ID = "No file source with id: %s";
 	private static final String MSG_NO_GKEY_FOR_TERM = "No grouping found for current term.";
+	private static final String MSG_WORD_NOT_FOUND = "No such word: %s";
+	private static final String MSG_NO_SUCH_TERM_IN_TERMINO = "No such term in terminology: %s";
+
 
 	/*
 	 * Occurrence storing options
@@ -99,9 +102,6 @@ public class JsonTerminologyIO {
 	private static final String TERM_OCCURRENCES = "occurrences";
 	private static final String TERM_CONTEXT = "context";
 	
-	
-	@Deprecated
-	private static final String TERM_VARIATIONS = "variations";
 	private static final String TERM_RELATIONS = "relations";
 	private static final String METADATA = "metadata";
 	private static final String LANG = "lang";
@@ -114,6 +114,7 @@ public class JsonTerminologyIO {
 	private static final String COMPOUND_NEOCLASSICAL_AFFIX = "neoAffix";
 	private static final String COMPONENTS = "components";
 	private static final String BEGIN = "begin";
+	private static final String TERM_ID = "tid";
 	private static final String END = "end";
 	private static final String TERMS = "terms";
 	private static final String SYN = "syn";
@@ -121,12 +122,8 @@ public class JsonTerminologyIO {
 	private static final String PROPERTIES = "props";
 	private static final String IS_SWT = "swt";
 	
-	@Deprecated
-	private static final String BASE = "base";
 	private static final String FROM = "from";
 	
-	@Deprecated
-	private static final String VARIANT = "variant";
 	private static final String TO = "to";
 
 	private static final String TEXT = "text";
@@ -142,6 +139,7 @@ public class JsonTerminologyIO {
 
 	private static final String NB_WORD_ANNOTATIONS = "wordsNum";
 	private static final String NB_SPOTTED_TERMS = "spottedTermsNum";
+
 	
 	
 	/**
@@ -154,8 +152,10 @@ public class JsonTerminologyIO {
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
-	public static Terminology load(Reader reader, JsonOptions options) throws JsonParseException, IOException {
+	public static IndexedCorpus load(Reader reader, JsonOptions options) throws JsonParseException, IOException {
 		Terminology termino = null;
+		OccurrenceStore occurrenceStore = null;
+		IndexedCorpus indexedCorpus = null;
 		JsonFactory jsonFactory = new JsonFactory(); 
 		JsonParser jp = jsonFactory.createParser(reader); // or Stream, Reader
 		jp.enable(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES);
@@ -185,8 +185,6 @@ public class JsonTerminologyIO {
 		
 		Map<String, List<TempVecEntry>> contextVectors = Maps.newHashMap();
 		
-		
-		OccurrenceStore occurrenceStore = null;
 		
 		// useful var for debug
 		JsonToken tok;
@@ -227,26 +225,27 @@ public class JsonTerminologyIO {
 				if(occurrenceStorage != null && occurrenceStorage.equals(OCCURRENCE_STORAGE_DISK)) {
 					Preconditions.checkNotNull(persitentStorePath, "Missing attribute " + OCCURRENCE_PERSITENT_STORE_PATH);
 					Preconditions.checkNotNull(lang, "Missing metadata attribute " + LANG);
-					occurrenceStore = new XodusOccurrenceStore(lang, persitentStorePath);
+					occurrenceStore = TermSuiteFactory.createPersitentOccurrenceStore(persitentStorePath, lang);
 				} else {
 					Preconditions.checkNotNull(lang, "Missing metadata attribute " + LANG);
-					occurrenceStore = new MemoryOccurrenceStore(lang);
+					occurrenceStore = TermSuiteFactory.createMemoryOccurrenceStore(lang);
 				}
-				termino = new MemoryTerminology(terminoName, lang, occurrenceStore);
+				termino = TermSuiteFactory.createTerminology(lang, terminoName);
 				if(corpusID != null)
 					termino.setCorpusId(corpusID);
 				if(nbWordAnnos != -1)
-					termino.setWordAnnotationsNum(nbWordAnnos);
+					termino.setNbWordAnnotations(new AtomicLong(nbWordAnnos));
 				if(nbSpottedTerms != -1)
-					termino.setSpottedTermsNum(nbSpottedTerms);
+					termino.setNbSpottedTerms(new AtomicLong(nbSpottedTerms));
 				
-				if(options.isMetadataOnly())
-					return termino;
+				indexedCorpus = new IndexedCorpus(termino, occurrenceStore);
+				if(options.isMetadataOnly()) 
+					return indexedCorpus;
 
 			} else if (TERM_WORDS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-					WordBuilder wordBuilder = WordBuilder.start();
+					WordBuilder wordBuilder = WordBuilder.start(termino);
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
 						if (LEMMA.equals(fieldname)) 
@@ -274,12 +273,8 @@ public class JsonTerminologyIO {
 							}
 						}
 					}
-					try {
-						termino.addWord(wordBuilder.create());
-					} catch(Exception e) {
-						LOGGER.error("Could not add word "+wordBuilder.getLemma()+" to termino",e);
-						LOGGER.warn("Error ignored, trying to continue the loading of termino");
-					}
+					Word word = wordBuilder.create();
+					termino.getWords().put(word.getLemma(), word);
 				}
 			} else if (TERMS.equals(fieldname)) {
 				jp.nextToken();
@@ -308,42 +303,11 @@ public class JsonTerminologyIO {
 									else if (SYN.equals(fieldname)) 
 										syntacticLabel = jp.nextTextValue();
 								}
-								Preconditions.checkArgument(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
-								Preconditions.checkArgument(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
-								builder.addWord(termino.getWord(wordLemma), syntacticLabel, isSWT);
+								Preconditions.checkState(wordLemma != null, MSG_EXPECT_PROP_FOR_TERM_WORD, LEMMA);
+								Preconditions.checkState(termino.getWords().containsKey(wordLemma), MSG_WORD_NOT_FOUND, wordLemma);
+								Preconditions.checkState(syntacticLabel != null, MSG_EXPECT_PROP_FOR_TERM_WORD, SYN);
+								builder.addWord(termino.getWords().get(wordLemma), syntacticLabel, isSWT);
 							}
-						} else if (TERM_OCCURRENCES.equals(fieldname)) {
-							tok = jp.nextToken();
-							if(tok == JsonToken.START_ARRAY) {
-								
-								while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
-									begin = -1;
-									end = -1;
-									fileSource = -1;
-									text = null;
-									while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
-										fieldname = jp.getCurrentName();
-										if (BEGIN.equals(fieldname)) 
-											begin = jp.nextIntValue(-1);
-										else if (TEXT.equals(fieldname)) 
-											text = jp.nextTextValue();
-										else if (END.equals(fieldname)) 
-											end = jp.nextIntValue(-1);
-										else if (FILE.equals(fieldname)) {
-											fileSource = jp.nextIntValue(-1);
-										}
-									}
-									
-									Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
-									Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
-									Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
-									Preconditions.checkNotNull(inputSources.get(fileSource), MSG_NO_FILE_SOURCE_WITH_ID, fileSource);
-									Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
-									if(occurrenceStore.getStoreType() == OccurrenceStore.Type.MEMORY)
-										builder.addOccurrence(begin, end, inputSources.get(fileSource), text);
-								} 
-							}
-							// end occurrences
 						} else if (TERM_CONTEXT.equals(fieldname)) {
 							@SuppressWarnings("unused")
 							int totalCooccs = 0;
@@ -375,18 +339,16 @@ public class JsonTerminologyIO {
 										currentContextVector.add(entry);
 									}
 								}
-							}
-						} //end if fieldname
+							} 
+						} else
+							throw new IllegalStateException("Unexpected field name for term: " + fieldname);
+						//end if fieldname
 							 
 					} // end term object
-					try {
-						Preconditions.checkState(currentGroupingKey != null, MSG_NO_GKEY_FOR_TERM);
-						Term t = builder.createAndAddToTerminology();
-						t.setProperties(properties);
-					} catch(Exception e) {
-						LOGGER.error("Could not add term "+currentGroupingKey+" to term index",e);
-						LOGGER.warn("Error ignored, trying ton continue the loading of termino");
-					}
+					Preconditions.checkState(currentGroupingKey != null, MSG_NO_GKEY_FOR_TERM);
+					Term t = builder.create();
+					t.setProperties(properties);
+					termino.getTerms().put(t.getGroupingKey(), t);
 
 					if(options.isWithContexts())
 						contextVectors.put(currentGroupingKey, currentContextVector);
@@ -404,7 +366,7 @@ public class JsonTerminologyIO {
 						throw new IllegalArgumentException("Bad format for input source key: " + id);
 					} 
 				}
-			} else if (TERM_VARIATIONS.equals(fieldname) || TERM_RELATIONS.equals(fieldname)) {
+			} else if (TERM_RELATIONS.equals(fieldname)) {
 				jp.nextToken();
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
 					base = null;
@@ -413,9 +375,9 @@ public class JsonTerminologyIO {
 					Map<RelationProperty,Comparable<?>> properties = new HashMap<>();
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
-						if (BASE.equals(fieldname) || FROM.equals(fieldname)) 
+						if (FROM.equals(fieldname)) 
 							base = jp.nextTextValue();
-						else if (VARIANT.equals(fieldname) || TO.equals(fieldname)) 
+						else if (TO.equals(fieldname)) 
 							variant = jp.nextTextValue();
 						else if (RELATION_TYPE.equals(fieldname)) 
 							relationType = jp.nextTextValue();
@@ -436,7 +398,7 @@ public class JsonTerminologyIO {
 								b, 
 								v);
 						tv.setProperties(properties);
-						termino.addRelation(tv);
+						termino.getOutboundRelations().put(tv.getFrom(), tv);
 					} else {
 						if(b==null)
 							LOGGER.warn("Could not build variant because term \"{}\" was not found.", base);
@@ -448,6 +410,44 @@ public class JsonTerminologyIO {
 //					Preconditions.checkNotNull(v, MSG_TERM_DOES_NOT_EXIST, variant);
 					
 				} // end syntactic variations array
+			} else if (TERM_OCCURRENCES.equals(fieldname)) {
+				tok = jp.nextToken();
+				if(tok == JsonToken.START_ARRAY) {
+					String tid;
+					while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) {
+						tid = null;
+						begin = -1;
+						end = -1;
+						fileSource = -1;
+						text = null;
+						while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
+							fieldname = jp.getCurrentName();
+							if (BEGIN.equals(fieldname)) 
+								begin = jp.nextIntValue(-1);
+							else if (TEXT.equals(fieldname)) 
+								text = jp.nextTextValue();
+							else if (END.equals(fieldname)) 
+								end = jp.nextIntValue(-1);
+							else if (TERM_ID.equals(fieldname)) 
+								tid = jp.nextTextValue();
+							else if (FILE.equals(fieldname)) {
+								fileSource = jp.nextIntValue(-1);
+							}
+						}
+						
+						Preconditions.checkArgument(begin != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, BEGIN);
+						Preconditions.checkArgument(end != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, END);
+						Preconditions.checkArgument(fileSource != -1, MSG_EXPECT_PROP_FOR_OCCURRENCE, FILE);
+						String documentUrl = inputSources.get(fileSource);
+						Preconditions.checkNotNull(documentUrl, MSG_NO_FILE_SOURCE_WITH_ID, fileSource);
+						Preconditions.checkNotNull(text, MSG_EXPECT_PROP_FOR_OCCURRENCE, TEXT);
+						Term term = termino.getTerms().get(tid);
+						Preconditions.checkNotNull(term, MSG_NO_SUCH_TERM_IN_TERMINO, tid);
+						indexedCorpus.getOccurrenceStore().addOccurrence(term, documentUrl, begin, end, text);
+					} 
+				}
+				// end occurrences
+
 			}
 		}
 		jp.close();
@@ -474,7 +474,7 @@ public class JsonTerminologyIO {
 			}
 		}
 
-		return termino;
+		return indexedCorpus;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -548,23 +548,23 @@ public class JsonTerminologyIO {
 				valueToken));
 	}
 
-	public static void save(Writer writer, Terminology termino, JsonOptions options) throws IOException {
+	public static void save(Writer writer, IndexedCorpus indexCorpus, JsonOptions options) throws IOException {
 		JsonFactory jsonFactory = new JsonFactory(); // or, for data binding, org.codehaus.jackson.mapper.MappingJsonFactory 
 //		jsonFactory.configure(f, state)
 		JsonGenerator jg = jsonFactory.createGenerator(writer); // or Stream, Reader
 		jg.useDefaultPrettyPrinter();
-		
+		Terminology terminology = indexCorpus.getTerminology();
 		jg.writeStartObject();
 
 		jg.writeFieldName(METADATA);
 		jg.writeStartObject();
 		jg.writeFieldName(NAME);
-		jg.writeString(termino.getName());
+		jg.writeString(terminology.getName());
 		jg.writeFieldName(LANG);
-		jg.writeString(termino.getLang().getCode());
-		if(termino.getCorpusId() != null) {
+		jg.writeString(terminology.getLang().getCode());
+		if(terminology.getCorpusId() != null) {
 			jg.writeFieldName(CORPUS_ID);
-			jg.writeString(termino.getCorpusId());
+			jg.writeString(terminology.getCorpusId());
 		}
 		
 		jg.writeFieldName(OCCURRENCE_STORAGE);
@@ -578,16 +578,16 @@ public class JsonTerminologyIO {
 			throw new IllegalStateException("Unknown storage mode");
 
 		jg.writeFieldName(NB_WORD_ANNOTATIONS);
-		jg.writeNumber(termino.getWordAnnotationsNum());
+		jg.writeNumber(terminology.getNbWordAnnotations().longValue());
 		jg.writeFieldName(NB_SPOTTED_TERMS);
-		jg.writeNumber(termino.getSpottedTermsNum());
+		jg.writeNumber(terminology.getNbSpottedTerms().longValue());
 
 		jg.writeEndObject();
 		
 		jg.writeFieldName(INPUT_SOURCES);
 		int idCnt = 0;
 		Map<String, Integer> inputSources = Maps.newTreeMap();
-		for(Document d:termino.getOccurrenceStore().getDocuments())
+		for(Document d:indexCorpus.getOccurrenceStore().getDocuments())
 			if(!inputSources.containsKey(d.getUrl()))
 				inputSources.put(d.getUrl(), ++idCnt);
 		jg.writeStartObject();
@@ -599,7 +599,7 @@ public class JsonTerminologyIO {
 		
 		jg.writeFieldName(TERM_WORDS);
 		jg.writeStartArray();
-		for(Word w:termino.getWords()) {
+		for(Word w:terminology.getWords().values()) {
 			jg.writeStartObject();
 			jg.writeFieldName(LEMMA);
 			jg.writeString(w.getLemma());
@@ -632,7 +632,7 @@ public class JsonTerminologyIO {
 		
 		jg.writeFieldName(TERMS);
 		jg.writeStartArray();
-		for(Term t:termino.getTerms().values()) {
+		for(Term t:terminology.getTerms().values()) {
 			jg.writeStartObject();
 			jg.writeFieldName(PROPERTIES);
 			jg.writeStartObject();
@@ -652,23 +652,6 @@ public class JsonTerminologyIO {
 			}
 			jg.writeEndArray();
 			
-			if(options.withOccurrences() && options.isEmbeddedOccurrences()) {
-				jg.writeFieldName(TERM_OCCURRENCES);
-				jg.writeStartArray();
-				for(TermOccurrence termOcc:termino.getOccurrenceStore().getOccurrences(t)) {
-					jg.writeStartObject();
-					jg.writeFieldName(BEGIN);
-					jg.writeNumber(termOcc.getBegin());
-					jg.writeFieldName(END);
-					jg.writeNumber(termOcc.getEnd());
-					jg.writeFieldName(TEXT);
-					jg.writeString(termOcc.getCoveredText());
-					jg.writeFieldName(FILE);
-					jg.writeNumber(inputSources.get(termOcc.getSourceDocument().getUrl()));
-					jg.writeEndObject();
-				}
-				jg.writeEndArray();
-			}
 			
 			if(options.isWithContexts() && t.getContext() != null) {
 				jg.writeFieldName(TERM_CONTEXT);
@@ -701,22 +684,52 @@ public class JsonTerminologyIO {
 		/* Variants */
 		jg.writeFieldName(TERM_RELATIONS);
 		jg.writeStartArray();
-		for(TermRelation relation:termino.getRelations().collect(Collectors.toList())) {
+		for(Entry<Term, TermRelation> entry:terminology.getOutboundRelations().entries()) {
 			jg.writeStartObject();
 			jg.writeFieldName(FROM);
-			jg.writeString(relation.getFrom().getGroupingKey());
+			jg.writeString(entry.getValue().getFrom().getGroupingKey());
 			jg.writeFieldName(TO);
-			jg.writeString(relation.getTo().getGroupingKey());
+			jg.writeString(entry.getValue().getTo().getGroupingKey());
 			jg.writeFieldName(RELATION_TYPE);
-			jg.writeString(relation.getType().getShortName());
+			jg.writeString(entry.getValue().getType().getShortName());
 			jg.writeFieldName(PROPERTIES);
 			jg.writeStartObject();
-			writeProperties(jg, relation);
+			writeProperties(jg, entry.getValue());
 			jg.writeEndObject();
 			jg.writeEndObject();
 		}
 		jg.writeEndArray();
 		
+		
+		
+		jg.writeFieldName(TERM_OCCURRENCES);
+		jg.writeStartArray();
+		if(options.withOccurrences() && options.isEmbeddedOccurrences()) {
+			for(Term t:indexCorpus.getTerminology().getTerms().values()) {
+				for(TermOccurrence o:indexCorpus.getOccurrenceStore().getOccurrences(t)) {
+					jg.writeStartObject();
+					jg.writeFieldName(TERM_ID);
+					jg.writeString(t.getGroupingKey());
+					
+					jg.writeFieldName(BEGIN);
+					jg.writeNumber(o.getBegin());
+					
+					jg.writeFieldName(END);
+					jg.writeNumber(o.getEnd());
+					
+					jg.writeFieldName(FILE);
+					jg.writeNumber(inputSources.get(o.getSourceDocument().getUrl()));
+					
+					jg.writeFieldName(TEXT);
+					jg.writeString(o.getCoveredText());
+
+					jg.writeEndObject();
+				}
+				
+			}
+		}
+		jg.writeEndArray();
+
 		jg.writeEndObject();
 		jg.close();
 	}

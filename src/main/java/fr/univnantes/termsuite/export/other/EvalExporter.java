@@ -1,11 +1,11 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.other;
 
 import java.io.Writer;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class EvalExporter {
 	
@@ -28,8 +28,8 @@ public class EvalExporter {
 		try {
 			for(Term t: termino.getTerms().values()) {
 				if(this.withVariants) {
-					for (TermRelation v : termino.getOutboundRelations(t))
-							writer.write(v.getTo().getGroupingKey() + "#");
+					for (TermRelation v : termino.getOutboundRelations().get(t))
+						writer.write(v.getTo().getGroupingKey() + "#");
 				}
 				writer.write(t.getGroupingKey());
 				writer.write("\t");

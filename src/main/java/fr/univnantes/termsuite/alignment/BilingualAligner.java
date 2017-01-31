@@ -26,12 +26,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import javax.inject.Named;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,12 +48,16 @@ import com.google.common.collect.MinMaxPriorityQueue;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
+import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.prepare.ExtensionDetecter;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.ExplainedValue;
 import fr.univnantes.termsuite.metrics.Levenshtein;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
@@ -61,10 +68,8 @@ import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
-import fr.univnantes.termsuite.utils.AlignerUtils;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 import fr.univnantes.termsuite.utils.TerminologyUtils;
@@ -93,31 +98,23 @@ public class BilingualAligner {
 	 */
 	public static final double DICO_CANDIDATE_BONUS_FACTOR = 30;
 
+	@Inject
 	private BilingualDictionary dico;
-	private Terminology sourceTermino;
-	private Terminology targetTermino;
-
-	private SimilarityDistance distance;
 	
+	@Inject
+	@Named("source")
+	private TerminologyService sourceTermino;
+
+	@Inject
+	@Named("target")
+	private TerminologyService targetTermino;
+
+	@Inject(optional=true)
+	private SimilarityDistance distance = new Cosine();
+	
+	@Inject(optional=true)
 	private Map<Term, Term> manualDico = new HashMap<>();
 	
-	public BilingualAligner(BilingualDictionary dico, Terminology sourceTermino, Terminology targetTermino, SimilarityDistance distance) {
-		super();
-		this.dico = dico;
-		this.targetTermino = targetTermino;
-		this.sourceTermino = sourceTermino;
-		this.distance = distance;
-	}
-	
-	/**
-	 * Overrides the default distance measure.
-	 * 
-	 * @param distance
-	 * 			an object implementing the similarity distance
-	 */
-	public void setDistance(SimilarityDistance distance) {
-		this.distance = distance;
-	}
 	
 	public BilingualAligner addTranslation(Term sourceTerm, Term targetTerm) {
 		manualDico.put(sourceTerm, targetTerm);
@@ -264,7 +261,7 @@ public class BilingualAligner {
 		 */
 		Map<Term, Term> targetCandidatesBySWTExtension = Maps.newHashMap();
 		Set<Term> targetCandidatesHavingSameAffix = Sets.newHashSet();
-		for(Term targetCandidate:targetTermino.getTerms().values()) {
+		for(Term targetCandidate:targetTermino.getTerms()) {
 			Word targetCompound = targetCandidate.getWords().get(0).getWord();
 			if(targetCandidate.isCompound() && targetCompound.getCompoundType() == CompoundType.NEOCLASSICAL) {
 				String targetNeoclassicalAffixString = WordUtils.getComponentSubstring(targetCompound, targetCompound.getNeoclassicalAffix());
@@ -294,7 +291,7 @@ public class BilingualAligner {
 		/*
 		 * 3. try recursive alignment on neoclassical extensions
 		 */
-		Collection<Term> possibleSourceExtensions = TerminologyUtils.getMorphologicalExtensionsAsTerms(
+		Collection<Term> possibleSourceExtensions = getMorphologicalExtensionsAsTerms(
 				sourceTermino, 
 				sourceTerm, 
 				sourceNeoclassicalAffix);
@@ -323,6 +320,50 @@ public class BilingualAligner {
 		return sortTruncateNormalizeAndMerge(targetTermino, nbCandidates, candidates);
 	}
 
+	/**
+	 * E.g. Given the compound [hydro|électricité] and the component [hydro], the method should return the 
+	 * term [électricité]
+	 * 
+	 * 
+	 * @param termino
+	 * @param compound
+	 * @param component
+	 * @return
+	 */
+	public Collection<Term> getMorphologicalExtensionsAsTerms(TermIndex lemmaLowerCaseIndex, Term compound, Component component) {
+		Preconditions.checkArgument(compound.isSingleWord());
+		Preconditions.checkArgument(compound.isCompound());
+		Preconditions.checkArgument(compound.getWords().get(0).getWord().getComponents().contains(component));
+		
+		Word compoundWord = compound.getWords().get(0).getWord();
+		LinkedList<Component> extensionComponents = Lists.newLinkedList(compoundWord.getComponents());
+		extensionComponents.remove(component);
+		
+		if(!(component.getBegin() == 0 || component.getEnd() == compound.getLemma().length()))
+			return Lists.newArrayList();
+
+		
+		Set<String> possibleExtensionLemmas = Sets.newHashSet();
+		possibleExtensionLemmas.add(compound.getLemma().substring(
+				extensionComponents.getFirst().getBegin(), 
+				extensionComponents.getLast().getEnd()));
+			
+		if(extensionComponents.size() > 1) {
+			LinkedList<Component> allButLast = Lists.newLinkedList(extensionComponents);
+			Component last = allButLast.removeLast();
+			String lemma = compound.getLemma().substring(allButLast.getFirst().getBegin(), last.getBegin())
+						+ last.getLemma();
+			possibleExtensionLemmas.add(lemma);
+		}
+		
+		List<Term> extensionTerms = Lists.newArrayList();
+		for(String s:possibleExtensionLemmas)
+			extensionTerms.addAll(lemmaLowerCaseIndex.getTerms(s.toLowerCase()));
+		
+		return extensionTerms;
+	}
+
+	
 	private static final Levenshtein LEVENSHTEIN = new Levenshtein();
 
 	public List<TranslationCandidate> alignGraphically(AlignmentMethod method, Term sourceTerm, int nbCandidates, Collection<Term> targetTerms) {
@@ -512,7 +553,7 @@ public class BilingualAligner {
 		return sortTruncateNormalizeAndMerge(targetTermino, nbCandidates, mergedCandidates);
 	}
 
-	private List<TranslationCandidate> sortTruncateNormalizeAndMerge(Terminology termino, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
+	private List<TranslationCandidate> sortTruncateNormalizeAndMerge(TerminologyService termino, int nbCandidates, Collection<TranslationCandidate> candidatesCandidates) {
 		List<TranslationCandidate> list = Lists.newArrayList();
 		
 		/*
@@ -543,7 +584,7 @@ public class BilingualAligner {
 	/*
 	 * Filter candidates by specificity
 	 */
-	private void applySpecificityBonus(Terminology termino, List<TranslationCandidate> list) {
+	private void applySpecificityBonus(Terminology  termino, List<TranslationCandidate> list) {
 		Iterator<TranslationCandidate> it = list.iterator();
 		TranslationCandidate c;
 		while (it.hasNext()) {
@@ -755,7 +796,7 @@ public class BilingualAligner {
 
 
 	private boolean ensuredExtensionsAreComputed = false;
-	private void ensureHasExtensionRelationsComputred(Terminology termino) {
+	private void ensureHasExtensionRelationsComputred(TerminologyService termino) {
 		if(!ensuredExtensionsAreComputed) {
 			if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
 				Stopwatch sw = Stopwatch.createStarted();

@@ -8,15 +8,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.postproc.IndependanceScorer;
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class IndependanceScorerSpec {
@@ -47,10 +47,8 @@ public class IndependanceScorerSpec {
 	 */
 	@Before
 	public void setup() {
-		terminology = new MemoryTerminology(
-				"Tata", 
-				Lang.FR, 
-				new EmptyOccurrenceStore(Lang.FR));
+		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
+		terminology = indexedCorpus.getTerminology();
 
 		t_a = addTerm("a", 10);
 		t_ab = addTerm("ab", 3);
@@ -69,12 +67,12 @@ public class IndependanceScorerSpec {
 		xa_xat = addExtension(t_xa, t_xat);
 		at_xat = addExtension(t_at, t_xat);
 		
-		scorer = UnitTests.createSimpleEngine(terminology, IndependanceScorer.class);
+		scorer = UnitTests.createSimpleEngine(indexedCorpus, IndependanceScorer.class);
 	}
 	
 	private  TermRelation addExtension(Term t1, Term t2) {
 		TermRelation termRelation = new TermRelation(RelationType.HAS_EXTENSION, t1, t2);
-		terminology.addRelation(termRelation);
+		UnitTests.addRelation(terminology, termRelation);
 		return termRelation;
 	}
 
@@ -91,8 +89,9 @@ public class IndependanceScorerSpec {
 		for(char c:gKey.toCharArray())
 			builder.addWord(Character.toString(c), Character.toString(c), "Label", true);
 				
-		return builder.
-			createAndAddToTerminology();
+		Term term = builder.create();
+		UnitTests.addTerm(terminology, term);
+		return term;
 	}
 	
 	@Test

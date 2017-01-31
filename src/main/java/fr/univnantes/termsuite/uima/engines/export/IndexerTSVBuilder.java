@@ -57,7 +57,6 @@ import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -87,8 +86,8 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @return The new id
 	 * @throws IOException
 	 */
-	public void addTerm(Terminology termino, Term term) throws IOException {
-		startTerm(termino, term);
+	public void addTerm(Term term) throws IOException {
+		startTerm(term);
 	}
 
 	private static final String SPEC_FORMAT = "%.2f";
@@ -96,10 +95,9 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	
 	private Term currentTerm = null;
 	
-	public void startTerm(Terminology termino, Term term) throws IOException {
+	public void startTerm(Term term) throws IOException {
 		this.currentTerm = term;
 		appendTerm(
-				termino, 
 				term, 
 				String.format(T_FORMAT));
 	}
@@ -149,7 +147,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				line.toArray(new String[line.size()]));
 	}
 
-	private void appendTerm(Terminology termino, Term t, String termType) throws IOException {
+	private void appendTerm(Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
 		for(Property<?> p:properties) {

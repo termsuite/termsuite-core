@@ -8,17 +8,15 @@ import java.util.Map;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.index.AbstractTermIndexValueProvider;
+import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
-public class WordLemmaStemProvider extends AbstractTermIndexValueProvider {
+public class WordLemmaStemProvider implements TermIndexValueProvider {
 
-	
 	@Override
-	public Collection<String> getClasses(Terminology termino, Term term) {
+	public Collection<String> getClasses(Term term) {
 		List<String> lemmas = Lists.newArrayListWithCapacity(term.getWords().size());
 		
 		Map<String, String> stems = new HashMap<String, String>();
@@ -46,8 +44,6 @@ public class WordLemmaStemProvider extends AbstractTermIndexValueProvider {
 			}
 		}
 		
-
 		return keys;
 	}
-
 }

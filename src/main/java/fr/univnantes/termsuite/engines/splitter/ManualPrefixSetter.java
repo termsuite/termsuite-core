@@ -29,7 +29,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.RelationType;

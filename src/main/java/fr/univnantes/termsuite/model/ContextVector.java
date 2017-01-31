@@ -32,6 +32,7 @@ import org.apache.commons.lang3.mutable.MutableInt;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
@@ -90,6 +91,7 @@ public class ContextVector {
 	}
 
 	public void addEntry(Term coTerm, int nbCooccs, double assocRate) {
+		Preconditions.checkNotNull(coTerm);
 		Term termToAdd = coTerm;
 		
 		if(entries.containsKey(termToAdd))

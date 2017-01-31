@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite;
+package fr.univnantes.termsuite.framework;
 
 public class LanguageException extends RuntimeException {
 

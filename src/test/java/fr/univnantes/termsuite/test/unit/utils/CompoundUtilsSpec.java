@@ -49,7 +49,7 @@ public class CompoundUtilsSpec {
 	
 	@Before
 	public void setUp() {
-		w_abcdefgh = WordBuilder.start()
+		w_abcdefgh = new WordBuilder()
 				.setLemma("abcdefgg")
 				.addComponent(0, 2, "ab", "aa")
 				.addComponent(2, 4, "cd", "cc")
@@ -61,17 +61,17 @@ public class CompoundUtilsSpec {
 		ef = w_abcdefgh.getComponents().get(2);
 		gh = w_abcdefgh.getComponents().get(3);
 		
-		w_ab = WordBuilder.start()
+		w_ab = new WordBuilder()
 				.setLemma("aa")
 				.addComponent(0, 2, "aa", "aa")
 				.create();
-		w_abcd = WordBuilder.start()
+		w_abcd = new WordBuilder()
 				.setLemma("abcc")
 				.addComponent(0, 2, "ab", "aa")
 				.addComponent(2, 4, "cc", "cc")
 				.create();
 
-		w_abcdef = WordBuilder.start()
+		w_abcdef = new WordBuilder()
 				.setLemma("abcdee")
 				.addComponent(0, 2, "ab", "aa")
 				.addComponent(2, 4, "cd", "cc")
@@ -143,7 +143,7 @@ public class CompoundUtilsSpec {
 	
 	@Test
 	public void testHorizontalAxis() {
-		Word horizontalAxis = WordBuilder.start()
+		Word horizontalAxis = new WordBuilder()
 				.setLemma("horizontal-axis")
 				.addComponent(0, 7, "horizon", "horizon")
 				.addComponent(7, 10, "tal", "t")
@@ -178,7 +178,7 @@ public class CompoundUtilsSpec {
 	
 	@Test
 	public void testMergeWithNonConsecutiveComponents() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("homme-grenouille")
 				.addComponent(0, 5, "homme")
 				.addComponent(6, 16, "grenouille")

@@ -2,8 +2,13 @@ package fr.univnantes.termsuite.framework.service;
 
 import static java.util.stream.Collectors.toSet;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.EnumSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -14,33 +19,79 @@ import java.util.stream.Stream;
 import javax.inject.Inject;
 
 import com.google.common.base.Preconditions;
+import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
+import com.google.common.collect.Sets;
 
-import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermBuilder;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.utils.TermSuiteUtils;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TerminologyService {
+	
+	private static final String MSG_TERM_NOT_FOUND = "No such term with key %s";
 
 	@Inject
 	private Terminology termino;
 
 	@Inject
-	public TerminologyService(Terminology termino) {
-		super();
-		this.termino = termino;
+	OccurrenceStore occurrenceStore;
+	
+	@Inject
+	private IndexService indexService;
+
+	private Multimap<Term, TermRelation> inboundVariations =  null;
+	
+	private Semaphore relationMutex = new Semaphore(1);
+	private Semaphore inboundMutex = new Semaphore(1);
+
+	
+	private Multimap<Term, TermRelation> getInboundRelations() {
+		inboundMutex.acquireUninterruptibly();
+		if(inboundVariations == null) {
+			LinkedListMultimap<Term, TermRelation> map = LinkedListMultimap.create();
+			this.termino.getOutboundRelations().values().forEach(r-> {
+				map.put(r.getTo(), r);
+			});
+			inboundVariations = Multimaps.synchronizedListMultimap(map);
+		}
+		inboundMutex.release();
+		return inboundVariations;
+	}
+	
+	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types) {
+		Stream<TermRelation> stream = this.termino.getOutboundRelations().get(from)
+					.stream()
+					.filter(relation -> relation.getTo().equals(to));
+		
+		if(types.length == 0)
+			return stream;
+		else if(types.length == 0)
+			return stream.filter(relation -> relation.getType() == types[0]);
+		else {
+			Set<RelationType> typeSet = Sets.newHashSet(types);
+			return stream.filter(relation -> typeSet.contains(relation.getType()));
+		}
 	}
 
+	
+	public Stream<TermRelation> relations() {
+		return termino.getOutboundRelations().values().stream();
+	}
+	
 	public Stream<TermRelation> variations() {
-		return termino.getRelations(RelationType.VARIATION);
+		return relations().filter(r -> r.getType() == RelationType.VARIATION);
 	}
 	
 	public Stream<TermRelation> variations(VariationType type) {
@@ -59,8 +110,10 @@ public class TerminologyService {
 		};
 	}
 
-	public Stream<TermRelation> relations(RelationType... types) {
-		return termino.getRelations(types);
+	public Stream<TermRelation> relations(RelationType type, RelationType... types) {
+		EnumSet<RelationType> typeSet = EnumSet.of(type, types);
+		return relations()
+				.filter(r -> typeSet.contains(r.getType()));
 	}
 
 	public Collection<Term> getTerms() {
@@ -78,7 +131,7 @@ public class TerminologyService {
 
 
 	public Stream<TermRelation> inboundRelations(Term target) {
-		return this.termino.getInboundRelations()
+		return this.getInboundRelations()
 				.get(target)
 				.stream();
 	}
@@ -89,11 +142,8 @@ public class TerminologyService {
 				.filter(r->rTypes.contains(r.getType()));
 	}
 	
-
-	
 	public Stream<TermRelation> outboundRelations(Term source) {
-		return this.termino.getOutboundRelations()
-			.get(source)
+		return this.termino.getOutboundRelations().get(source)
 			.stream();
 	}
 
@@ -103,11 +153,6 @@ public class TerminologyService {
 				.filter(r->rTypes.contains(r.getType()));
 	}
 	
-	@Deprecated
-	public Terminology getTerminology() {
-		return termino;
-	}
-
 	public Stream<TermRelation> variations(Term from, Term to) {
 		return relations(from,to)
 				.filter(r-> r.getType() == RelationType.VARIATION);
@@ -117,27 +162,22 @@ public class TerminologyService {
 		return variations(from, to).findAny();
 	}
 
-	public synchronized TermRelation createVariation(VariationType variationType, Term from, Term to) {
+	public TermRelation createVariation(VariationType variationType, Term from, Term to) {
+		relationMutex.acquireUninterruptibly();
+		TermRelation r;
 		Optional<TermRelation> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {
-			TermRelation relation = buildVariation(variationType, from, to);
-			addRelation(relation);
-			return relation;
+			TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
+			for(VariationType vType:VariationType.values())
+				relation.setProperty(vType.getRelationProperty(), false);
+			relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
+			relation.setProperty(variationType.getRelationProperty(), true);
+			privateAddRelation(relation);
+			r = relation;
 		} else
-			return existing.get();
-	}
-
-	public synchronized void addRelation(TermRelation relation) {
-		termino.addRelation(relation);
-	}
-
-	public TermRelation buildVariation(VariationType variationType, Term from, Term to) {
-		TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
-		for(VariationType vType:VariationType.values())
-			relation.setProperty(vType.getRelationProperty(), false);
-		relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
-		relation.setProperty(variationType.getRelationProperty(), true);
-		return relation;
+			r = existing.get();
+		relationMutex.release();
+		return r;
 	}
 
 	public Stream<TermRelation> relations(RelationProperty property, Object value) {
@@ -151,7 +191,6 @@ public class TerminologyService {
 		return variations(getTerm(fromKey), getTerm(toKey));
 	}
 
-	private static final String MSG_TERM_NOT_FOUND = "No such term with key %s";
 	public Term getTerm(String termKey) {
 		Term term = getTermUnchecked(termKey);
 		Preconditions.checkNotNull(term, MSG_TERM_NOT_FOUND, termKey);
@@ -162,23 +201,11 @@ public class TerminologyService {
 		return termino.getTerms().get(termKey);
 	}
 
-	public void removeRelation(TermRelation r) {
-		termino.removeRelation(r);
-	}
-
-	public void removeTerm(Term r) {
-		termino.removeTerm(r);
-	}
-
 	public Stream<TermRelation> variationsFrom(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.VARIATION);
 	}
 
-	public void addTerm(Term term) {
-		this.termino.addTerm(term);
-	}
-	
 	public void removeAll(Predicate<Term> predicate) {
 		terms().filter(predicate).collect(toSet()).forEach(this::removeTerm);
 	}
@@ -197,68 +224,21 @@ public class TerminologyService {
 			;
 	}
 	
+	public Word getWord(String lemma) {
+		return this.termino.getWords().get(lemma);
+	}
 
 	public Stream<TermRelation> extensions(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
 	}
 
-	public double getWordAnnotationsNum() {
-		return termino.getWordAnnotationsNum();
+	public long getWordAnnotationsNum() {
+		return termino.getNbWordAnnotations().longValue();
 	}
 
-	private static final String MSG_PATTERN_EMPTY = "Pattern must not be empty";
-	private static final String MSG_LEMMAS_EMPTY = "Words array must not be empty";
-	private static final String MSG_NOT_SAME_LENGTH = "Pattern and words must have same length";
-
-	
-	private Semaphore addTermMutex = new Semaphore(1);
-	
-	public Term createOrGetTerm(String[] pattern, Word[] words) {
-		Preconditions.checkArgument(pattern.length > 0, MSG_PATTERN_EMPTY);
-		Preconditions.checkArgument(words.length > 0, MSG_LEMMAS_EMPTY);
-		Preconditions.checkArgument(words.length == pattern.length, MSG_NOT_SAME_LENGTH);
-
-		String termGroupingKey = TermSuiteUtils.getGroupingKey(pattern, words);
-	
-		try {
-			addTermMutex.acquire();
-			Term term = this.termino.getTerms().get(termGroupingKey);
-			if(term == null) {
-				TermBuilder builder = TermBuilder.start();
-				for (int i = 0; i < pattern.length; i++)
-					builder.addWord(words[i], pattern[i]);
-				builder.setFrequency(0);
-				term = builder.create();
-				this.termino.addTerm(term);
-			}
-			addTermMutex.release();
-			return term;
-		} catch (InterruptedException e) {
-			throw new TermSuiteException(e);
-		}
-	}
-
-	public Word createOrGetWord(String lemma, String stem) {
-		if(termino.getWord(lemma) == null)
-			termino.addWord(new Word(lemma, stem));
-		return termino.getWord(lemma);
-	}
-
-	public synchronized void incrementFrequency(Term term) {
-		term.setFrequency(term.getFrequency() + 1);
-	}
-
-	public OccurrenceStore getOccurrenceStore() {
-		return this.termino.getOccurrenceStore();
-	}
-
-	public void incrementWordAnnotationNum(int nbWordAnnotations) {
-		this.termino.incWordAnnotationsNum(nbWordAnnotations);
-	}
-
-	public void incrementSpottedTermsNum(int nbSpottedTerms) {
-		this.termino.incSpottedTermsNum(nbSpottedTerms);
+	public boolean containsWord(String lemma) {
+		return this.termino.getWords().containsKey(lemma);
 	}
 
 	public int wordCount() {
@@ -266,7 +246,7 @@ public class TerminologyService {
 	}
 
 	public Collection<Word> getWords() {
-		return this.termino.getWords();
+		return this.termino.getWords().values();
 	}
 
 	public Stream<TermRelation> extensions(Term from, Term to) {
@@ -280,5 +260,115 @@ public class TerminologyService {
 	public boolean containsTerm(String gKey) {
 		return this.termino.getTerms().containsKey(gKey);
 	}
+	
+	public void addTerm(Term term) {
+		Preconditions.checkArgument(
+				!containsTerm(term.getGroupingKey()));
+		this.termino.getTerms().put(term.getGroupingKey(), term);
+		for(TermWord tw:term.getWords()) {
+			privateAddWord(tw.getWord(), false);
+			if(!tw.isSwt())
+				// try to set swt manually
+				tw.setSwt(this.termino.getTerms().containsKey(TermUtils.toGroupingKey(tw)));
+		}
+		indexService.addTerm(term);
+	}
 
+	public void addWord(Word word) {
+		privateAddWord(word, true);
+	}
+
+	private void privateAddWord(Word word, boolean failIfAlredyPresent) {
+		if(failIfAlredyPresent)
+			Preconditions.checkArgument(
+				!this.termino.getWords().containsKey(word.getLemma()));
+		this.termino.getWords().put(word.getLemma(), word);
+	}
+	
+	public void cleanOrphanWords() {
+		Set<String> usedWordLemmas = Sets.newHashSet();
+		for(Term t:getTerms()) {
+			for(TermWord tw:t.getWords())
+				usedWordLemmas.add(tw.getWord().getLemma());
+		}
+		Iterator<Entry<String, Word>> it = this.termino.getWords().entrySet().iterator();
+		Entry<String, Word> entry;
+		while (it.hasNext()) {
+			entry = it.next();
+			if(!usedWordLemmas.contains(entry.getValue().getLemma()))
+				it.remove();
+		}
+	}
+	
+	public void removeTerm(Term t) {
+		
+		this.termino.getTerms().remove(t.getGroupingKey());
+		// remove from variants
+		List<TermRelation> toRem = Lists.newLinkedList();
+		toRem.addAll(this.termino.getOutboundRelations().get(t));
+		toRem.addAll(this.getInboundRelations().get(t));
+		toRem.forEach(this::removeRelation);
+		
+		/*
+		 * Removes from context vectors.
+		 * 
+		 * We assumes that if this term has a context vector 
+		 * then all others terms may have this term as co-term,
+		 * thus they must be checked from removal.
+		 * 
+		 */
+		if(t.getContext() != null) {
+			for(Term o:this.termino.getTerms().values()) {
+				if(o.getContext() != null)
+					o.getContext().removeCoTerm(t);
+			}
+		}
+		indexService.removeTerm(t);
+		occurrenceStore.removeTerm(t);
+	}
+
+	
+	public void incrementWordAnnotationNum(int nbWordAnnotations) {
+		this.termino.getNbWordAnnotations().addAndGet(nbWordAnnotations);
+	}
+
+	public void incrementSpottedTermsNum(int nbSpottedTerms) {
+		this.termino.getNbSpottedTerms().addAndGet(nbSpottedTerms);
+	}
+
+	public void addRelation(TermRelation termVariation) {
+		relationMutex.acquireUninterruptibly();
+		privateAddRelation(termVariation);
+		relationMutex.release();
+	}
+
+	
+	/*
+	 * Must be invoked under mutex
+	 */
+	private void privateAddRelation(TermRelation termVariation) {
+		/*
+		 * Do not delete: First synchronize inbound with outbound
+		 */
+		this.getInboundRelations();
+		
+		/*
+		 * Then add the relation in both
+		 */
+		this.termino.getOutboundRelations().put(termVariation.getFrom(), termVariation);
+		this.getInboundRelations().put(termVariation.getTo(), termVariation);
+	}
+
+	public void removeRelation(TermRelation variation) {
+		relationMutex.acquireUninterruptibly();
+		this.termino.getOutboundRelations().remove(variation.getFrom(), variation);
+		this.getInboundRelations().remove(variation.getTo(), variation);
+		relationMutex.release();
+	}
+
+	public List<Term> getTermsBy(TermProperty property, boolean desc) {
+		List<Term> terms = new ArrayList<>(this.termino.getTerms().values());
+		Collections.sort(terms, property.getComparator(desc));
+		return terms;
+	}
 }

@@ -21,15 +21,13 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.test.unit;
 
-import fr.univnantes.termsuite.index.MemoryTerminology;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
-import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 
 public class Fixtures {
 
@@ -37,7 +35,7 @@ public class Fixtures {
 	 * énergie
 	 */
 	public static Word word1() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("énergie")
 				.setStem("énerg")
 				.create();
@@ -48,7 +46,7 @@ public class Fixtures {
 	 * éolien
 	 */
 	public static Word word2() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("éolien")
 				.setStem("éol")
 				.create();
@@ -59,7 +57,7 @@ public class Fixtures {
 	 * accès
 	 */
 	public static Word word3() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("accès")
 				.setStem("acc")
 				.create();
@@ -70,7 +68,7 @@ public class Fixtures {
 	 * radioélectrique (compound)
 	 */
 	public static Word word4() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("radioélectrique")
 				.setStem("radioélectriq")
 				.addComponent(0, 5, "radio")
@@ -83,7 +81,7 @@ public class Fixtures {
 	 * de
 	 */
 	public static Word word5() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("de")
 				.setStem("de")
 				.create();
@@ -94,7 +92,7 @@ public class Fixtures {
 	 * recouvrement
 	 */
 	public static Word word6() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("recouvrement")
 				.setStem("recouvr")
 				.create();
@@ -106,7 +104,7 @@ public class Fixtures {
 	 * total
 	 */
 	public static Word word7() {
-		Word w = WordBuilder.start()
+		Word w = new WordBuilder()
 				.setLemma("total")
 				.setStem("total")
 				.create();
@@ -119,11 +117,12 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term1(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term = TermBuilder.start(termino)
 					.setGroupingKey("na: énergie éolien")
 					.addWord(word1(), "N", true)
 					.addWord(word2(), "A", true)
-					.createAndAddToTerminology();
+					.create();
+		return addTerm(termino, term);
 	}
 	
 	/**
@@ -131,10 +130,11 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term2(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 					.setGroupingKey("a: radioélectrique")
 					.addWord(word4(), "A", true)
-					.createAndAddToTerminology();
+					.create();
+		return addTerm(termino, term);
 	}
 	
 	/**
@@ -142,13 +142,14 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term3(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("napn: accès radioélectrique de recouvrement")
 				.addWord(word3(), "N", true)
 				.addWord(word4(), "A", true)
 				.addWord(word5(), "P")
 				.addWord(word6(), "N", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 
 	/**
@@ -156,14 +157,15 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term4(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("napna: accès radioélectrique de recouvrement total")
 				.addWord(word3(), "N", true)
 				.addWord(word4(), "A", true)
 				.addWord(word5(), "P")
 				.addWord(word6(), "N", true)
 				.addWord(word7(), "A", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 	
 
@@ -172,11 +174,12 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term5(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("na: accès radioélectrique")
 				.addWord(word3(), "N", true)
 				.addWord(word4(), "A", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 
 
@@ -185,10 +188,11 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term7(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("a: total")
 				.addWord(word7(), "A", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 	
 	/**
@@ -196,10 +200,11 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term8(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("n: accès")
 				.addWord(word3(), "N", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 	
 	/**
@@ -207,10 +212,11 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term9(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("n: recouvrement")
 				.addWord(word6(), "N", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 
 	/**
@@ -218,10 +224,16 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term10(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("n: énergie")
 				.addWord(word1(), "N", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
+	}
+
+	public static Term addTerm(Terminology termino, Term term) {
+		UnitTests.addTerm(termino, term);
+		return term;
 	}
 
 	/**
@@ -229,10 +241,11 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term11(Terminology termino) {
-		return TermBuilder.start(termino)
+		Term term =  TermBuilder.start(termino)
 				.setGroupingKey("a: éolien")
 				.addWord(word2(), "A", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 
 	/**
@@ -240,24 +253,26 @@ public class Fixtures {
 	 * @return
 	 */
 	public static Term term12(Terminology termino) {
-		return TermBuilder.start(termino)
+		
+		Term term = TermBuilder.start(termino)
 				.setGroupingKey("na: recouvrement total")
 				.addWord(word6(), "N", true)
 				.addWord(word7(), "A", true)
-				.createAndAddToTerminology();
+				.create();
+		return addTerm(termino, term);
 	}
 
-	public static Term term1() {return term1(emptyTermino());}
-	public static Term term2() {return term2(emptyTermino());}
-	public static Term term3() {return term3(emptyTermino());}
-	public static Term term4() {return term4(emptyTermino());}
-	public static Term term5() {return term5(emptyTermino());}
-	public static Term term7() {return term7(emptyTermino());}
-	public static Term term8() {return term8(emptyTermino());}
-	public static Term term9() {return term9(emptyTermino());}
-	public static Term term10() {return term10(emptyTermino());}
-	public static Term term11() {return term11(emptyTermino());}
-	public static Term term12() {return term12(emptyTermino());}
+//	public static Term term1() {return term1(emptyTermino());}
+//	public static Term term2() {return term2(emptyTermino());}
+//	public static Term term3() {return term3(emptyTermino());}
+//	public static Term term4() {return term4(emptyTermino());}
+//	public static Term term5() {return term5(emptyTermino());}
+//	public static Term term7() {return term7(emptyTermino());}
+//	public static Term term8() {return term8(emptyTermino());}
+//	public static Term term9() {return term9(emptyTermino());}
+//	public static Term term10() {return term10(emptyTermino());}
+//	public static Term term11() {return term11(emptyTermino());}
+//	public static Term term12() {return term12(emptyTermino());}
 	
 	/**
 	 * @return
@@ -272,53 +287,10 @@ public class Fixtures {
 	public static Document document2() {
 		return new Document(Lang.EN, "url2");
 	}
-	
-	public static MemoryTerminology emptyTermino() {
-		return new MemoryTerminology("EmptyTermino", Lang.EN, new MemoryOccurrenceStore(Lang.FR));
-	}
-
+//	
+//	public static Terminology emptyTermino() {
+//		return new Terminology("EmptyTermino", Lang.EN);
+//	}
+//
 		
-	public static MemoryTerminology termino() {
-		MemoryTerminology memoryTermino = new MemoryTerminology("Termino", Lang.EN, new MemoryOccurrenceStore(Lang.FR));
-//		term1(memoryTermino);
-//		term2(memoryTermino);
-//		term3(memoryTermino);
-//		term4(memoryTermino);
-//		term5(memoryTermino);
-		return memoryTermino;
-	}
-	
-	public static MemoryTerminology terminoWithOccurrences() {
-		MemoryTerminology memoryTermino = new MemoryTerminology("TerminoWithOccurrences", Lang.EN, new MemoryOccurrenceStore(Lang.FR));
-		final Document doc = document1();
-		
-		
-		String form = "blabla";
-		TermBuilder.start(memoryTermino)
-			.setGroupingKey("n: énergie")
-			.addWord(Fixtures.word1(), "N")
-			.addOccurrence(0, 10, doc.getUrl(), form)
-			.addOccurrence(31, 40, doc.getUrl(), form)
-			.addOccurrence(61, 70, doc.getUrl(), form)
-			.createAndAddToTerminology();
-		
-		TermBuilder.start(memoryTermino)
-			.setGroupingKey("a: éolien")
-			.addWord(Fixtures.word2(), "A")
-			.addOccurrence(11, 20, doc.getUrl(), form)
-			.createAndAddToTerminology();
-		
-		
-		
-		TermBuilder.start(memoryTermino)
-			.setGroupingKey("n: accès")
-			.addWord(Fixtures.word3(), "N")
-			.addOccurrence(21, 30, doc.getUrl(), form)
-			.addOccurrence(41, 50, doc.getUrl(), form)
-			.addOccurrence(51, 60, doc.getUrl(), form)
-			.createAndAddToTerminology();
-
-		return memoryTermino;
-
-	}
 }

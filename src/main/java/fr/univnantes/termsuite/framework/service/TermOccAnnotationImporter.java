@@ -25,59 +25,91 @@ import java.util.Optional;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.inject.Inject;
+
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterators;
+import com.google.inject.name.Named;
 
-import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 /**
  * Imports all {@link TermOccAnnotation} to a {@link Terminology}.
  */
 public class TermOccAnnotationImporter {
-	private static final Logger logger = LoggerFactory.getLogger(TermOccAnnotationImporter.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(TermOccAnnotationImporter.class);
+	private static final String MSG_PATTERN_EMPTY = "Pattern must not be empty";
+	private static final String MSG_LEMMAS_EMPTY = "Words array must not be empty";
+	private static final String MSG_NOT_SAME_LENGTH = "Pattern and words must have same length";
+
 	private static final Float REMOVAL_RATIO_THRESHHOLD = 0.6f;
 	
 	private int currentThreshold = 2;
-	private Optional<TermHistory> history = Optional.empty();
-	private Optional<Integer> maxSize = Optional.empty();
-	private TerminologyService terminoService;
-	private Semaphore cleanerMutex = new Semaphore(1);
+	
+	@Inject
+	private OccurrenceStore occurrenceStore;
 
-	public TermOccAnnotationImporter(Terminology termino, int maxSize) {
-		this(termino);
-		this.maxSize = Optional.of(maxSize);
-	}
+	@Inject
+	private TerminologyService  terminoService;
+	
+	@Inject
+	@Named("maxSize")
+	private int maxSize;
 
-	public TermOccAnnotationImporter(Terminology termino) {
-		super();
-		this.terminoService = new TerminologyService(termino);
-	}
+	private AtomicInteger casCount = new AtomicInteger(0);
 
+	private Semaphore mutex = new Semaphore(1);
+	
 	public void importCas(JCas jCas)  {
+		mutex.acquireUninterruptibly();
 		importToTerminology(jCas);
-		try {
-			cleanerMutex.acquire();
-			cleanIfTooBig();
-			cleanerMutex.release();
-		} catch (InterruptedException e) {
-			throw new TermSuiteException("", e);
+		cleanIfTooBig();
+		int incrementAndGet = casCount.incrementAndGet();
+		mutex.release();
+		if(incrementAndGet % 10 == 0)
+			this.occurrenceStore.log();
+	}
+
+	private Term createOrGetTerm(String[] pattern, Word[] words) {
+		Preconditions.checkArgument(pattern.length > 0, MSG_PATTERN_EMPTY);
+		Preconditions.checkArgument(words.length > 0, MSG_LEMMAS_EMPTY);
+		Preconditions.checkArgument(words.length == pattern.length, MSG_NOT_SAME_LENGTH);
+
+		String termGroupingKey = TermSuiteUtils.getGroupingKey(pattern, words);
+	
+		Term term;
+		if(this.terminoService.containsTerm(termGroupingKey)) {
+			term = this.terminoService.getTerm(termGroupingKey);
+		} else {
+			TermBuilder builder = new TermBuilder();
+			for (int i = 0; i < pattern.length; i++)
+				builder.addWord(words[i], pattern[i]);
+			builder.setFrequency(0);
+			term = builder.create();
+			this.terminoService.addTerm(term);
 		}
-		if(casCount.incrementAndGet() % 10 == 0)
-			this.terminoService.getOccurrenceStore().log();
+		return term;
+	}
+
+	private synchronized Word createOrGetWord(String lemma, String stem) {
+		if(!this.terminoService.containsWord(lemma))
+			this.terminoService.addWord(new Word(lemma, stem));
+		return this.terminoService.getWord(lemma);
 	}
 
 	public void importToTerminology(JCas jCas) {
@@ -88,19 +120,27 @@ public class TermOccAnnotationImporter {
 		while(it.hasNext()) {
 			toa = (TermOccAnnotation) it.next();
 			String gKey = TermSuiteUtils.getGroupingKey(toa);
-			watchTermImportation(gKey);
 			
-			Word[] words = new Word[toa.getWords().size()];
-			for (int i = 0; i < toa.getWords().size(); i++) {
-				WordAnnotation wa = toa.getWords(i);
-				words[i]= terminoService.createOrGetWord(wa.getLemma(), wa.getStem());
+			Term term;
+			if(terminoService.containsTerm(gKey))
+				term = terminoService.getTerm(gKey);
+			else {
+				Word[] words = new Word[toa.getWords().size()];
+				for (int i = 0; i < toa.getWords().size(); i++) {
+					WordAnnotation wa = toa.getWords(i);
+					if(this.terminoService.containsWord(wa.getLemma()))
+						words[i] = this.terminoService.getWord(wa.getLemma());
+					else
+						words[i]= createOrGetWord(wa.getLemma(), wa.getStem());
+				}
+
+				term = createOrGetTerm(
+						toa.getPattern().toStringArray(), words);
+				term.setSpottingRule(toa.getSpottingRuleName());
 			}
 
-			Term term = terminoService.createOrGetTerm(
-					toa.getPattern().toStringArray(), words);
-			term.setSpottingRule(toa.getSpottingRuleName());
-			terminoService.incrementFrequency(term);
-			terminoService.getOccurrenceStore().addOccurrence(
+			term.setFrequency(term.getFrequency() + 1);
+			occurrenceStore.addOccurrence(
 					term,
 					currentFileURI, 
 					toa.getBegin(),
@@ -112,40 +152,40 @@ public class TermOccAnnotationImporter {
 		terminoService.incrementSpottedTermsNum(Iterators.size(termIt));
 		FSIterator<Annotation> wordIt = jCas.getAnnotationIndex(WordAnnotation.type).iterator();
 		terminoService.incrementWordAnnotationNum(Iterators.size(wordIt));
-		terminoService.getOccurrenceStore().flush();
+		occurrenceStore.flush();
 	}
 	
 	public void cleanIfTooBig() {
-		if(maxSize.isPresent()) {
+		if(maxSize != -1) {
 			// max size filtering is activated
 		
 			long sizeBefore = terminoService.termCount();
-			if(sizeBefore >= maxSize.get()) {
-				logger.debug(
+			if(sizeBefore >= maxSize) {
+				LOGGER.debug(
 						"Current term index size = {} (> {}). Start cleaning with th={}", 
 						sizeBefore,
-						maxSize.get(), 
+						maxSize, 
 						currentThreshold);
 				
 				terminoService.removeAll(t-> t.getFrequency() < currentThreshold);
 	
 				long sizeAfter = terminoService.termCount();
 				double removalRatio = ((double)(sizeBefore - sizeAfter))/sizeBefore;
-				logger.info(
+				LOGGER.info(
 						"Cleaned {} terms [before: {}, after: {}, ratio: {}] from term index (maxSize: {}, currentTh: {})", 
 						sizeBefore - sizeAfter,
 						sizeBefore,
 						sizeAfter,
 						String.format("%.3f",removalRatio),
-						maxSize.get(), 
+						maxSize, 
 						currentThreshold);
-				logger.debug(
+				LOGGER.debug(
 						"Removal ratio is: {}. (needs < {} to increase currentTh)", 
 						String.format("%.3f",removalRatio),
 						String.format("%.3f",REMOVAL_RATIO_THRESHHOLD)
 					);
 				if(removalRatio < REMOVAL_RATIO_THRESHHOLD) {
-					logger.info("Increasing frequency threshhold from {} to {}.",
+					LOGGER.info("Increasing frequency threshhold from {} to {}.",
 							this.currentThreshold,
 							this.currentThreshold+1
 							);
@@ -154,21 +194,4 @@ public class TermOccAnnotationImporter {
 			}
 		}
 	}
-
-
-	private void watchTermImportation(String gKey) {
-		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(gKey)) {
-				if(this.terminoService.getTerm(gKey) == null)
-					history.get().saveEvent(
-							gKey, 
-							this.getClass(), 
-							"Term added to Terminology");
-			}
-		}
-	}
-	
-
-	private AtomicInteger casCount = new AtomicInteger(0);
-
 }

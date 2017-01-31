@@ -20,15 +20,15 @@ import org.junit.runners.MethodSorters;
 
 import com.google.common.base.Splitter;
 
-import fr.univnantes.termsuite.api.TerminologyIO;
+import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.tools.TerminologyExtractor;
 import fr.univnantes.termsuite.utils.FileUtils;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TermSuiteTerminoCLISpec {
@@ -68,7 +68,7 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(tbxPath.toFile()).exists();
 		assertThat(tbxPath.toFile()).exists();
 		
-		Terminology termindex = TerminologyIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
 		assertThat(termindex).containsTerm("nn: wind energy").hasNTerms(843);
 		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
 	}
@@ -114,7 +114,7 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = TerminologyIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
 			.containsVariation("nn: wind energy", VariationType.SYNTAGMATIC, "ann: offshore wind energy")
@@ -136,7 +136,7 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = TerminologyIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
 		assertThat(termindex).containsTerm("nn: wind turbine").hasNTerms(100);
 	}
 
@@ -159,7 +159,7 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = TerminologyIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
 		assertThat(termindex).containsTerm("nn: wind energy");
 //		assertNotNull(termindex.getTermByGroupingKey("n: wind").getContext());
 		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
@@ -181,7 +181,7 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = TerminologyIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
 		assertThat(termindex).containsTerm("nn: wind energy");
 //		assertNotNull(termindex.getTermByGroupingKey("n: wind").getContext());
 		assertNotNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());

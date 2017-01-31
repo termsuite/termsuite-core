@@ -30,7 +30,7 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -45,11 +45,14 @@ public class ManualSuffixDerivationDetecter extends SimpleEngine {
 	@Override
 	public void execute() {
 		Term regularForm;
+		String lemma;
+		List<TermRelation> toRem;
 		for(Term derivateForm:terminology.getTerms()) {
 			if(!derivateForm.isSingleWord())
 				continue;
-			List<TermRelation> toRem = Lists.newArrayList();
-			for(String regularFormException:manualSuffixDerivations.getValues(derivateForm.getWords().get(0).getWord().getLemma())) {
+			toRem = Lists.newArrayList();
+			lemma = derivateForm.getWords().get(0).getWord().getLemma();
+			for(String regularFormException:manualSuffixDerivations.getValues(lemma)) {
 				for(TermRelation tv:terminology.inboundRelations(derivateForm, RelationType.DERIVES_INTO).collect(toList())) {
 					regularForm = tv.getFrom();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 

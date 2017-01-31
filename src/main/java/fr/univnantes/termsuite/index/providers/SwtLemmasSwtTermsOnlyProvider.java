@@ -1,20 +1,18 @@
-package fr.univnantes.termsuite.index;
+package fr.univnantes.termsuite.index.providers;
 
 import java.util.Collection;
 import java.util.Collections;
 
-import fr.univnantes.termsuite.index.providers.SwtLemmasProvider;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class SwtLemmasSwtTermsOnlyProvider extends SwtLemmasProvider {
 
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public Collection<String> getClasses(Terminology termino, Term term) {
+	public Collection<String> getClasses(Term term) {
 		if(term.isSingleWord())
-			return super.getClasses(termino, term);
+			return super.getClasses(term);
 		else
 			return Collections.EMPTY_SET;
 	}

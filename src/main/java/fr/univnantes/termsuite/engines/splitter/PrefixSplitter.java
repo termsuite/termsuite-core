@@ -28,7 +28,7 @@ import org.slf4j.Logger;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.RelationType;

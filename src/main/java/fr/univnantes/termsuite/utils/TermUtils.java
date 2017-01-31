@@ -21,16 +21,11 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.utils;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
@@ -39,14 +34,12 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.TermSuiteResourceException;
@@ -55,7 +48,6 @@ import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 public class TermUtils {
 
 	private static final String MSG_NOT_AN_EXTENSION = "Term '%s' is no extension of term '%s'";
-
 
 	/**
 	 * Most frequent first
@@ -68,36 +60,6 @@ public class TermUtils {
 					.result();
 		}
 	};
-	
-	public static void showIndex(Terminology index, PrintStream stream) {
-		Optional<Pattern> watchExpression = Optional.empty();
-		showIndex(index, stream, watchExpression);
-	}
-		
-	public static void showIndex(Terminology index, PrintStream stream, Optional<Pattern> watchExpression) {
-		for(Term term:index.getTerms().values()) {
-			if(!watchExpression.isPresent()
-					|| (watchExpression.isPresent() && watchExpression.get().matcher(term.getGroupingKey()).find())
-					) {
-				stream.println(term);
-//				for(Term t:term.getGraphicalVariants()) 
-//					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
-				for(TermRelation variation:index.getOutboundRelations(term)) 
-					stream.format("\tsyntactic: %s\n" , variation.getTo().getGroupingKey());
-			}
-		}
-	}
-
-	public static void showCompounds(Terminology index, PrintStream out, int threshhold) {
-		List<Term> terms = Lists.newArrayList();
-		for(Term term:index.getTerms().values()) {
-			if(term.isCompound() && term.getFrequency() >= threshhold)
-				terms.add(term);
-		}
-		Collections.sort(terms, frequencyComparator);
-		for(Term term:terms) 
-			out.println(term);
-	}
 	
 	/**
 	 * 
@@ -384,7 +346,6 @@ public class TermUtils {
 	}
 	
 	
-	
 	/**
 	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#ALLCOMP_PAIRS}.
 	 * 
@@ -404,35 +365,6 @@ public class TermUtils {
 		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
 	}
 
-	public static Collection<Term> getExtensions(Terminology termino, Term term) {
-		return termino.getOutboundRelations(term, RelationType.HAS_EXTENSION)
-				.stream()
-				.map(TermRelation::getTo)
-				.collect(Collectors.toSet());
-	}
-		
-	public static boolean isExtension(Terminology termino, Term term, Term extension) {
-		return termino.getOutboundRelations(term, RelationType.HAS_EXTENSION)
-			.stream()
-			.filter(tv -> tv.getTo().equals(extension))
-			.findAny().isPresent();
-	}
-	
-	
-	public static Collection<TermRelation> getVariations(Terminology termino, Term t) {
-		return termino.getOutboundRelations(t,
-				RelationType.VARIATION, 
-				RelationType.DERIVES_INTO,
-				RelationType.IS_PREFIX_OF);
-	}
-
-	public static Collection<TermRelation> getBases(Terminology termino, Term current) {
-		return termino.getInboundRelations(current,
-				RelationType.VARIATION, 
-				RelationType.DERIVES_INTO,
-				RelationType.IS_PREFIX_OF);
-	}
-	
 	public static void setTfIdf(Term term) {
 		term.setTfIdf((double)term.getFrequency()/term.getDocumentFrequency());
 	}

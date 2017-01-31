@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 
 import com.google.inject.Inject;
 
-import fr.univnantes.termsuite.SimpleEngine;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
@@ -32,11 +32,11 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 	protected YamlRuleSet variantRules;
 
 	@Parameter
-	private VariationType variationType;
+	protected VariationType variationType;
 	
 	@Override
 	public void execute() {
-		if(variantRules.getVariantRules().isEmpty())
+		if(variantRules.getVariantRules(variationType).isEmpty())
 			return;
 
 		AtomicLong cnt = new AtomicLong(0);

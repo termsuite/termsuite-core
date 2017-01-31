@@ -6,7 +6,7 @@ import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
 import fr.univnantes.termsuite.framework.Pipeline;
 import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
@@ -48,12 +48,12 @@ public class TerminoExtractor {
 		return this;
 	}
 	
-	public PipelineStats execute(Terminology terminology) {
+	public PipelineStats execute(IndexedCorpus corpus) {
 		if(options == null)
-			options = TermSuite.getDefaultExtractorConfig(terminology.getLang());
+			options = TermSuite.getDefaultExtractorConfig(corpus.getTerminology().getLang());
 		Pipeline pipeline = TermSuiteFactory.createPipeline(
 				TerminologyExtractorEngine.class, 
-				terminology,
+				corpus,
 				resourceConfig.orElse(null),
 				history.orElse(null),
 				options

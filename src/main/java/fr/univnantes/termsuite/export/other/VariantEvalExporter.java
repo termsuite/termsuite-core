@@ -1,67 +1,63 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.export.other;
 
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.google.common.collect.Lists;
+import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
-public class VariantEvalExporter {
+public class VariantEvalExporter implements TerminologyExporter {
+
+	@Inject
+	private TerminologyService termino;
 	
-	private Terminology termino;
+	@Inject
 	private Writer writer;
 
+	@Inject
+	private OccurrenceStore occurrenceStore;
+	
 	private int nbVariantsPerTerm;
 	private int contextSize;
 	private int nbExampleOccurrences;
 	private int topN;
 	
-	private VariantEvalExporter(Terminology termino, Writer writer, int nbVariantsPerTerm, int contextSize,
-			int nbExampleOccurrences, int topN) {
-		super();
-		this.termino = termino;
-		this.writer = writer;
-		this.nbVariantsPerTerm = nbVariantsPerTerm;
-		this.contextSize = contextSize;
-		this.nbExampleOccurrences = nbExampleOccurrences;
-		this.topN = topN;
-	}
-	
-	
-	public static void export(Terminology termino, Writer writer, int nbVariantsPerTerm, int contextSize,
-			int nbExampleOccurrences, int topN) {
-		new VariantEvalExporter(termino, writer, nbVariantsPerTerm, contextSize, nbExampleOccurrences, topN).doExport();
-	}
-
-	private void doExport() {
+	public void export() {
 		try {
-			int rank = 0;
-			int variantCnt = 0;
-			for(Term t:termino.getTerms().values()) {
-				if(!termino.getOutboundRelations(t).isEmpty())
+			AtomicInteger rank = new AtomicInteger(0);
+			AtomicInteger variantCnt = new AtomicInteger(0);
+			for(Term t:termino.getTerms()) {
+				if(!termino.outboundRelations(t).findAny().isPresent())
 					continue;
-				printBase(++rank, t);
-				int variantRank = 0;
-				for(TermRelation variation:termino.getOutboundRelations(t,  RelationType.VARIATION)) {
-					if(variantRank >= nbVariantsPerTerm)
-						break;
-					variantCnt++;
-					variantRank++;
-					printVariation(rank, variantRank, variation);
-					printTermOccurrences(variation.getTo());
-				}
+				printBase(rank.incrementAndGet(), t);
+				AtomicInteger variantRank = new AtomicInteger(0);
+				termino.variationsFrom(t).forEach(variation -> {
+					if(variantRank.intValue() >= nbVariantsPerTerm)
+						return;
+					variantCnt.getAndIncrement();
+					variantRank.getAndIncrement();
+					try {
+						printVariation(rank.intValue(), variantRank.intValue(), variation);
+						printTermOccurrences(variation.getTo());
+					} catch(IOException e) {
+						throw new TermSuiteException(e);
+					}
+				});
 				
-				if(variantCnt>this.topN)
+				if(variantCnt.intValue()>this.topN)
 					break;
 			}
 
@@ -99,7 +95,7 @@ public class VariantEvalExporter {
 	}
 
 	private void printTermOccurrences(Term term) throws IOException {
-		List<TermOccurrence> occurrences = Lists.newArrayList(termino.getOccurrenceStore().getOccurrences(term));
+		List<TermOccurrence> occurrences = Lists.newArrayList(occurrenceStore.getOccurrences(term));
 		Collections.shuffle(occurrences);
 		int occCnt = 0;
 		for(TermOccurrence occurrence:occurrences) {

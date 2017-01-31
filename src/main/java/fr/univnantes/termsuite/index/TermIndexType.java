@@ -24,11 +24,11 @@
 package fr.univnantes.termsuite.index;
 
 import fr.univnantes.termsuite.index.providers.AllComponentPairsProvider;
-import fr.univnantes.termsuite.index.providers.DerivationLemmasProvider;
 import fr.univnantes.termsuite.index.providers.LowercaseTermLemmaProvider;
-import fr.univnantes.termsuite.index.providers.PrefixationLemmasProvider;
 import fr.univnantes.termsuite.index.providers.SwtGroupingKeysProvider;
+import fr.univnantes.termsuite.index.providers.SwtGroupingKeysSwtTermsOnlyProvider;
 import fr.univnantes.termsuite.index.providers.SwtLemmasProvider;
+import fr.univnantes.termsuite.index.providers.SwtLemmasSwtTermsOnlyProvider;
 import fr.univnantes.termsuite.index.providers.WordLemmaStemProvider;
 import fr.univnantes.termsuite.index.providers.WordLemmasProvider;
 import fr.univnantes.termsuite.index.providers._1FirstLetterValueProvider;
@@ -53,10 +53,6 @@ public enum TermIndexType {
 			SwtLemmasSwtTermsOnlyProvider.class),
 	SWT_GROUPING_KEYS_SWT_ONLY(
 			SwtGroupingKeysSwtTermsOnlyProvider.class), 
-	PREFIXATION_LEMMAS(
-			PrefixationLemmasProvider.class),
-	DERIVATION_LEMMAS(
-			DerivationLemmasProvider.class),
 	FIRST_LETTERS_1(
 			_1FirstLetterValueProvider.class),
 	FIRST_LETTERS_2(

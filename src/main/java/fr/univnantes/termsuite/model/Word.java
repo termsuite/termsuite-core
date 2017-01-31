@@ -87,7 +87,7 @@ public class Word {
 		return compoundType;
 	}
 
-	void setCompoundType(CompoundType compoundType) {
+	public void setCompoundType(CompoundType compoundType) {
 		this.compoundType = compoundType;
 	}
 	

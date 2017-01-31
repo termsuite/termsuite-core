@@ -30,7 +30,6 @@ import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Multimaps;
 
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
 
 public class TermIndex {
 	
@@ -54,9 +53,9 @@ public class TermIndex {
 		return this.classes.get(key);
 	}
 
-	public void addToIndex(Terminology termino, Term term) {
+	public void addToIndex(Term term) {
 		mutex.acquireUninterruptibly();
-		Collection<String> classes = valueProvider.getClasses(termino, term);
+		Collection<String> classes = valueProvider.getClasses(term);
 		if(classes != null) {
 			for(String cls:classes) {
 				if(cls!= null)			
@@ -70,9 +69,9 @@ public class TermIndex {
 		return this.classes.size();
 	}
 
-	public void removeTerm(Terminology termino, Term t) {
+	public void removeTerm(Term t) {
 		mutex.acquireUninterruptibly();
-		for(String k:valueProvider.getClasses(termino, t))
+		for(String k:valueProvider.getClasses(t))
 			this.classes.remove(k, t);
 		mutex.release();
 

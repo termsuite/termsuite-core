@@ -35,7 +35,6 @@ import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.api.TextCorpus;
 import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.model.Document;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.PreparationPipelineException;
@@ -158,16 +157,6 @@ public class PreprocessorService {
 		String sourceDocumentUri = JCasUtils.getSourceDocumentAnnotation(cas).get().getUri();
 		Path targetDocumentPath = corpusService.getTargetDocumentPath(targetCorpus, textCorpus, Paths.get(sourceDocumentUri));
 		toXMIPath(targetDocumentPath, cas);
-	}
-
-	public void consumeToTerminology(Stream<JCas> cases, Terminology terminology) {
-		final TermOccAnnotationImporter importer = new TermOccAnnotationImporter(terminology);
-		cases.forEach(cas -> importer.importCas(cas));
-	}
-
-	public void consumeToTerminology(Stream<JCas> cases, Terminology terminology, int maxSize) {
-		final TermOccAnnotationImporter importer = new TermOccAnnotationImporter(terminology, maxSize);
-		cases.forEach(cas -> importer.importCas(cas));
 	}
 
 	public String generateTerminologyName(TextCorpus textCorpus) {

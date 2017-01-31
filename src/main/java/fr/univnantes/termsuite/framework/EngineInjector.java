@@ -14,8 +14,8 @@ import org.apache.uima.resource.SharedResourceObject;
 
 import com.google.inject.Injector;
 
-import fr.univnantes.termsuite.SimpleEngine;
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.index.TermIndex;

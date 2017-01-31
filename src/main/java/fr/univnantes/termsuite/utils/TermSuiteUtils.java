@@ -179,32 +179,4 @@ public class TermSuiteUtils {
       }
 	}
 	
-//	/**
-//	 * Adds a path (jar or directory) to classpath of default Class loader
-//	 * @param path
-//	 */
-//	public static void addToClasspath(String path) {
-//		URLClassLoader urlClassLoader = null;
-//		try {
-//		    File f = new File(path);
-//		    Preconditions.checkArgument(f.exists(), "No such file: %s", path);
-//		    if(f.isFile()) {
-//		    	ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(f));
-//		    	boolean isZipped = zipInputStream.getNextEntry() != null;
-//		    	Preconditions.checkArgument(isZipped, "No such file: %s", path);
-//		    	zipInputStream.close();
-//		    } else
-//		    	Preconditions.checkArgument(f.isDirectory(), "Should be a directory or a jar : %s", f.getAbsolutePath());
-//		    URI u = f.toURI();
-//		    urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-//		    Class<URLClassLoader> urlClass = URLClassLoader.class;
-//		    Method method;
-//			method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});
-//			method.setAccessible(true);
-//			LOGGER.info("Adding {} to system class loader");
-//			method.invoke(urlClassLoader, new Object[]{u.toURL()});
-//		} catch (Exception e) {
-//			throw new RuntimeException("Could not add "+path+" to classpath", e);
-//		}
-//	}
 }

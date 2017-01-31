@@ -10,32 +10,33 @@ import java.nio.file.Paths;
 
 import com.google.common.base.Charsets;
 
+import fr.univnantes.termsuite.export.json.JsonOptions;
 import fr.univnantes.termsuite.index.JsonTerminologyIO;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 
-public class TerminologyIO {
+public class IndexedCorpusIO {
 	
-	public static void toJson(Terminology termino, Writer writer) throws IOException {
+	public static void toJson(IndexedCorpus termino, Writer writer) throws IOException {
 		toJson(termino, writer, new JsonOptions());
 	}
 	
-	public static void toJson(Terminology termino, Writer writer, JsonOptions options) throws IOException {
+	public static void toJson(IndexedCorpus termino, Writer writer, JsonOptions options) throws IOException {
 		JsonTerminologyIO.save(writer, termino, options);
 	}
 	
-	public static Terminology fromJson(String filePath, JsonOptions options) {
+	public static IndexedCorpus fromJson(String filePath, JsonOptions options) {
 		return fromJson(Paths.get(filePath), options);
 	}
 
-	public static Terminology fromJson(String filePath) {
+	public static IndexedCorpus fromJson(String filePath) {
 		return fromJson(filePath, new JsonOptions());
 	}
 
-	public static Terminology fromJson(Path path) {
+	public static IndexedCorpus fromJson(Path path) {
 		return fromJson(path, new JsonOptions());
 	}
 	
-	public static Terminology fromJson(Path path, JsonOptions options) {
+	public static IndexedCorpus fromJson(Path path, JsonOptions options) {
 		try {
 			return fromJson(path.toUri().toURL(), options);
 		} catch (MalformedURLException e) {
@@ -43,11 +44,11 @@ public class TerminologyIO {
 		}
 	}
 
-	public static Terminology fromJson(URL terminoUrl) {
+	public static IndexedCorpus fromJson(URL terminoUrl) {
 		return fromJson(terminoUrl, new JsonOptions());
 	}
 
-	public static Terminology fromJson(URL terminoUrl, JsonOptions options) {
+	public static IndexedCorpus fromJson(URL terminoUrl, JsonOptions options) {
 		try {
 			return JsonTerminologyIO.load(
 				new InputStreamReader(terminoUrl.openStream(), Charsets.UTF_8),

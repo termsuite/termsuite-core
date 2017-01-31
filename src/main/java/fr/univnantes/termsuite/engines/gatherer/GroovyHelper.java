@@ -23,27 +23,28 @@
 
 package fr.univnantes.termsuite.engines.gatherer;
 
+import static java.util.stream.Collectors.toSet;
+
 import java.util.Iterator;
+import java.util.Set;
 
 import com.google.common.base.Objects;
+import com.google.inject.Inject;
 
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class GroovyHelper {
 
-	private Terminology termino;
+	@Inject
+	private TerminologyService termino;
 	
 	public GroovyHelper() {
 		super();
-	}
-	
-	void setTerminology(Terminology termino) {
-		this.termino = termino;
 	}
 	
 	public boolean areSynonym(GroovyWord s, GroovyWord t) {
@@ -59,7 +60,8 @@ public class GroovyHelper {
 			return false;
 		
 		TermRelation tv;
-		for(Iterator<TermRelation> it = termino.getOutboundRelations(sourceTerm, RelationType.DERIVES_INTO).iterator()
+		Set<TermRelation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.DERIVES_INTO).collect(toSet());
+		for(Iterator<TermRelation> it = outboundRelations.iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -81,7 +83,8 @@ public class GroovyHelper {
 			return false;
 		
 		TermRelation tv;
-		for(Iterator<TermRelation> it = termino.getOutboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).iterator()
+		Set<TermRelation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).collect(toSet());
+		for(Iterator<TermRelation> it = outboundRelations.iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -95,7 +98,7 @@ public class GroovyHelper {
 
 	private Term toTerm(GroovyWord s) {
 		String sourceGroupingKey = TermUtils.toGroupingKey(s.getTermWord());
-		Term sourceTerm = this.termino.getTerms().get(sourceGroupingKey);
+		Term sourceTerm = this.termino.getTerm(sourceGroupingKey);
 		return sourceTerm;
 	}
 

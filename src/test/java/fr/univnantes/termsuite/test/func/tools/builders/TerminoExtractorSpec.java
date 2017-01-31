@@ -13,11 +13,11 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TerminoExtractorSpec {
 	

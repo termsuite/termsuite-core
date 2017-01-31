@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.api;
+package fr.univnantes.termsuite.export.tsv;
 
 import java.util.List;
 

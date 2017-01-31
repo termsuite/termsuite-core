@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.utils;
+package fr.univnantes.termsuite.alignment;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -33,16 +33,17 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.resources.BilingualDictionary;
+import fr.univnantes.termsuite.utils.Pair;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 public class AlignerUtils {
 	private static final Logger LOGGER = LoggerFactory.getLogger(AlignerUtils.class);

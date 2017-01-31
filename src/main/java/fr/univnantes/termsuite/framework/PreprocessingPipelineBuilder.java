@@ -49,10 +49,8 @@ import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
-import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.uima.DocumentLogger;
 import fr.univnantes.termsuite.uima.PipelineClosingAE;
@@ -671,7 +669,6 @@ public class PreprocessingPipelineBuilder {
 		}
 	}
 	
-	
 	/**
 	 * 
 	 * Aggregates an AE to the TS pipeline.
@@ -687,15 +684,6 @@ public class PreprocessingPipelineBuilder {
 		return this;
 	}
 	
-	public PreprocessingPipelineBuilder setTargetTerminology(Terminology terminology) {
-		TerminologyService resource = new TerminologyService(terminology);
-		PipelineResourceMgrs
-			.getResourceMgr(pipelineId)
-			.register(TerminologyService.class, resource);
-
-		return this;
-	}
-
 	public PreprocessingPipelineBuilder setNbDocuments(long nbDocuments) {
 		this.nbDocuments = Optional.of(nbDocuments);
 		return this;
