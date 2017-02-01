@@ -25,6 +25,7 @@ import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
 public class Relation extends PropertyHolder<RelationProperty> {
+	
 	private RelationType relationType;
 	private Term from;
 	private Term to;
@@ -61,7 +62,7 @@ public class Relation extends PropertyHolder<RelationProperty> {
 		/*
 		 * FIXME Very bad choice since properties can change over the time.
 		 */
-		return Objects.hashCode(this.from, this.to, this.relationType, this.properties);
+		return Objects.hashCode(this.from, this.to, this.relationType);
 	}
 	
 	@Override
