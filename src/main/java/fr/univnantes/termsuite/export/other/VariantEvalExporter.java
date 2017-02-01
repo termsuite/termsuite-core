@@ -7,10 +7,9 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.google.common.collect.Lists;
-import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -19,45 +18,39 @@ import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
-public class VariantEvalExporter implements TerminologyExporter {
+public class VariantEvalExporter {
+	
+	private VariantEvalExporterOptions options;
+	
+	public VariantEvalExporter(VariantEvalExporterOptions options) {
+		super();
+		this.options = options;
+	}
 
-	@Inject
-	private TerminologyService termino;
-	
-	@Inject
-	private Writer writer;
-
-	@Inject
-	private OccurrenceStore occurrenceStore;
-	
-	private int nbVariantsPerTerm;
-	private int contextSize;
-	private int nbExampleOccurrences;
-	private int topN;
-	
-	public void export() {
+	@Export
+	public void export(TerminologyService termino, Writer writer,OccurrenceStore occurrenceStore) {
 		try {
 			AtomicInteger rank = new AtomicInteger(0);
 			AtomicInteger variantCnt = new AtomicInteger(0);
 			for(Term t:termino.getTerms()) {
 				if(!termino.outboundRelations(t).findAny().isPresent())
 					continue;
-				printBase(rank.incrementAndGet(), t);
+				printBase(writer, rank.incrementAndGet(), t);
 				AtomicInteger variantRank = new AtomicInteger(0);
 				termino.variationsFrom(t).forEach(variation -> {
-					if(variantRank.intValue() >= nbVariantsPerTerm)
+					if(variantRank.intValue() >= options.getNbVariantsPerTerm())
 						return;
 					variantCnt.getAndIncrement();
 					variantRank.getAndIncrement();
 					try {
-						printVariation(rank.intValue(), variantRank.intValue(), variation);
-						printTermOccurrences(variation.getTo());
+						printVariation(writer, rank.intValue(), variantRank.intValue(), variation);
+						printTermOccurrences(writer, occurrenceStore, variation.getTo());
 					} catch(IOException e) {
 						throw new TermSuiteException(e);
 					}
 				});
 				
-				if(variantCnt.intValue()>this.topN)
+				if(variantCnt.intValue()>this.options.getTopN())
 					break;
 			}
 
@@ -66,7 +59,7 @@ public class VariantEvalExporter implements TerminologyExporter {
 		}
 	}
 	
-	private void printVariation(int termRank, int variantRank, TermRelation variation) throws IOException {
+	private void printVariation(Writer writer, int termRank, int variantRank, TermRelation variation) throws IOException {
 		Term variant = variation.getTo();
 		String pilot = variant.getPilot();
 		writer.write(Integer.toString(termRank));
@@ -83,7 +76,7 @@ public class VariantEvalExporter implements TerminologyExporter {
 		writer.write("\n");		
 	}
 
-	private void printBase(int rank, Term t) throws IOException {
+	private void printBase(Writer writer, int rank, Term t) throws IOException {
 		writer.write(Integer.toString(rank));
 		writer.write("\t");
 		writer.write("T");
@@ -94,21 +87,21 @@ public class VariantEvalExporter implements TerminologyExporter {
 		writer.write("\n");
 	}
 
-	private void printTermOccurrences(Term term) throws IOException {
+	private void printTermOccurrences(Writer writer, OccurrenceStore occurrenceStore, Term term) throws IOException {
 		List<TermOccurrence> occurrences = Lists.newArrayList(occurrenceStore.getOccurrences(term));
 		Collections.shuffle(occurrences);
 		int occCnt = 0;
 		for(TermOccurrence occurrence:occurrences) {
-			if(occCnt > this.nbExampleOccurrences)
+			if(occCnt > this.options.getNbExampleOccurrences())
 				break;
-			printOccurrence(occurrence);
+			printOccurrence(writer, occurrence);
 			occCnt++;
 		}
 	}
 
-	private void printOccurrence(TermOccurrence occurrence) throws IOException {
+	private void printOccurrence(Writer writer, TermOccurrence occurrence) throws IOException {
 		writer.write("#\t\t  ...");
-		String textualContext = TermOccurrenceUtils.getTextualContext(occurrence, contextSize);
+		String textualContext = TermOccurrenceUtils.getTextualContext(occurrence, options.getContextSize());
 		writer.write(textualContext);
 		writer.write("\n");
 	}

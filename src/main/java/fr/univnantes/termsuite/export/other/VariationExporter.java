@@ -2,13 +2,11 @@ package fr.univnantes.termsuite.export.other;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.util.List;
+import java.util.Collection;
+import java.util.EnumSet;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
-
-import javax.inject.Inject;
-import javax.inject.Named;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -16,31 +14,29 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 
-public class VariationExporter implements TerminologyExporter {
+public class VariationExporter {
 	
 	private static final String SOURCE_LINE_FORMAT = "%-30s f=%-3d";
 	private static final String EMPTY_LINE_FORMAT = "%-36s";
 
 	private static final String TARGET_LINE_FORMAT = " [%s] %-30s {f=%d,%s}%n";
+	
+	private EnumSet<VariationType> variationTypes;
+	
+	public VariationExporter(Collection<VariationType> variationTypes) {
+		super();
+		this.variationTypes = EnumSet.copyOf(variationTypes);
+	}
 
-	@Inject
-	private TerminologyService termino;
-	
-	@Inject
-	private Writer writer;
-	
-	@Inject
-	@Named(value="variationTypes")
-	private List<VariationType> variationTypes;
-	
-	public void export() {
+	@Export
+	public void export(TerminologyService termino, Writer writer) {
 		try {
 			Multimap<Term,TermRelation> acceptedVariations = HashMultimap.create();
 			for(Term t:termino.getTerms()) {

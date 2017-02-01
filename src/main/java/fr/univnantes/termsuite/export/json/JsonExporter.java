@@ -4,16 +4,21 @@ import java.io.IOException;
 import java.io.Writer;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.index.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 
 public class JsonExporter {
 
-	public static void export(IndexedCorpus indexedCorpus, Writer writer) {
-		export(indexedCorpus, writer, new JsonOptions());
-	}
+	private JsonOptions options;
 	
-	public static void export(IndexedCorpus indexedCorpus, Writer writer, JsonOptions options) {
+	public JsonExporter(JsonOptions options) {
+		super();
+		this.options = options;
+	}
+
+	@Export
+	public void export(IndexedCorpus indexedCorpus, Writer writer) {
 		try {
 			JsonTerminologyIO.save(writer, indexedCorpus, options);
 		} catch (IOException e) {

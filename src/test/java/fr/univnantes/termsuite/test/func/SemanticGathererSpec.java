@@ -46,7 +46,6 @@ public class SemanticGathererSpec {
 						.setOptions(extractorOptions)
 						.setHistory(history)
 						.execute(corpus);
-			System.out.println(history);
 	}
 	
 	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR_WITH_TYPE = new Extractor<TermRelation, Tuple>() {

@@ -25,6 +25,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.api.TermOrdering;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
@@ -33,7 +34,6 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
@@ -363,9 +363,9 @@ public class TerminologyService {
 		relationMutex.release();
 	}
 
-	public List<Term> getTermsBy(TermProperty property, boolean desc) {
+	public List<Term> getTerms(TermOrdering ordering) {
 		List<Term> terms = new ArrayList<>(this.termino.getTerms().values());
-		Collections.sort(terms, property.getComparator(desc));
+		Collections.sort(terms, ordering.toComparator());
 		return terms;
 	}
 }

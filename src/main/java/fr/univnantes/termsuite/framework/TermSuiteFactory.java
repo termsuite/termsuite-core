@@ -1,11 +1,28 @@
 package fr.univnantes.termsuite.framework;
 
+import java.util.List;
+import java.util.function.Predicate;
+
+import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.modules.ExtractorModule;
+import fr.univnantes.termsuite.export.BaseExporter;
+import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.export.json.JsonExporter;
+import fr.univnantes.termsuite.export.json.JsonOptions;
+import fr.univnantes.termsuite.export.other.CompoundExporter;
+import fr.univnantes.termsuite.export.other.TermDistributionExporter;
+import fr.univnantes.termsuite.export.other.VariantDistributionExporter;
+import fr.univnantes.termsuite.export.other.VariantEvalExporter;
+import fr.univnantes.termsuite.export.other.VariantEvalExporterOptions;
+import fr.univnantes.termsuite.export.other.VariationExporter;
+import fr.univnantes.termsuite.export.other.VariationRuleExamplesExporter;
+import fr.univnantes.termsuite.export.tsv.TsvExporter;
+import fr.univnantes.termsuite.export.tsv.TsvOptions;
+import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.AggregateEngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
@@ -17,6 +34,7 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
@@ -58,7 +76,7 @@ public class TermSuiteFactory {
 			TermHistory history) {
 		Injector injector = Guice.createInjector(
 				new ResourceModule(config),
-				new ExtractorModule(terminology, history)
+				new IndexedCorpusModule(terminology, history)
 			);
 		return injector;
 	}
@@ -97,4 +115,47 @@ public class TermSuiteFactory {
 		relation.setProperty(variationType.getRelationProperty(), true);
 		return relation;
 	}
+
+	public static TerminologyExporter createTsvExporter() {
+		return createTsvExporter(new TsvOptions());
+	}
+
+	public static TerminologyExporter createTsvExporter(TsvOptions options) {
+		return new BaseExporter(new TsvExporter(options));
+	}
+	
+	public static TerminologyExporter createJsonExporter(JsonOptions options) {
+		return new BaseExporter(new JsonExporter(options));
+	}
+	
+	public static TerminologyExporter createJsonExporter() {
+		return new BaseExporter(new JsonExporter(new JsonOptions()));
+	}
+
+	public static TerminologyExporter createCompoundExporter() {
+		return new BaseExporter(new CompoundExporter());
+	}
+
+	public static TerminologyExporter createVariantEvalExporter(VariantEvalExporterOptions options) {
+		return new BaseExporter(new VariantEvalExporter(options));
+	}
+
+	public static TerminologyExporter createTermDistributionExporter(List<TermProperty> termProperties, Predicate<Term> selector) {
+		return new BaseExporter(new TermDistributionExporter(termProperties, selector));
+	}
+
+	public static TerminologyExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<TermRelation> selector) {
+		return new BaseExporter(new VariantDistributionExporter(relationProperties, selector));
+	}
+
+	public static TerminologyExporter createVariationExporter(VariationType... variationTypes) {
+		return new BaseExporter(new VariationExporter(Lists.newArrayList(variationTypes)));
+	}
+
+	public static TerminologyExporter createVariationRuleExamplesExporter() {
+		return new BaseExporter(new VariationRuleExamplesExporter());
+	}
+
+	
+
 }

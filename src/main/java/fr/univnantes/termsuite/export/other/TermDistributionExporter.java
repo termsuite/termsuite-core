@@ -8,28 +8,25 @@ import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 
-public class TermDistributionExporter implements TerminologyExporter {
+public class TermDistributionExporter {
 	
-	private Terminology termino;
-	private Writer writer;
 	private Predicate<Term> selector;
 	
 	private List<TermProperty> termProperties = Lists.newArrayList();
 	
-	private TermDistributionExporter(Terminology termino, Writer writer, Predicate<Term> selector, TermProperty... properties) {
+	public TermDistributionExporter(List<TermProperty> termProperties, Predicate<Term> selector) {
 		super();
-		this.termino = termino;
-		this.writer = writer;
 		this.selector = selector;
-		this.termProperties = Lists.newArrayList(properties);
+		this.termProperties = termProperties;
 	}
 
-	public void export() {
+	@Export
+	public void export(Terminology termino, Writer writer) {
 		try {
 			writer.write("term");
 			writer.write("\t");

@@ -39,7 +39,7 @@ import fr.univnantes.termsuite.framework.Engine;
 import fr.univnantes.termsuite.framework.EngineDescription;
 import fr.univnantes.termsuite.framework.EngineInjector;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.framework.modules.ExtractorModule;
+import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
@@ -65,8 +65,8 @@ import fr.univnantes.termsuite.test.unit.engines.gatherer.RelationPairsBasedGath
 import fr.univnantes.termsuite.test.unit.engines.gatherer.TermGathererSpec;
 import fr.univnantes.termsuite.test.unit.engines.postproc.IndependanceScorerSpec;
 import fr.univnantes.termsuite.test.unit.engines.postproc.VariantScorerSpec;
-import fr.univnantes.termsuite.test.unit.engines.splitter.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.engines.splitter.ManualSuffixDerivationDetecterSpec;
+import fr.univnantes.termsuite.test.unit.engines.splitter.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.export.TsvExporterSpec;
 import fr.univnantes.termsuite.test.unit.framework.TermSuiteResourceManagerSpec;
 import fr.univnantes.termsuite.test.unit.framework.service.TerminologyServiceSpec;
@@ -203,12 +203,12 @@ public class UnitTests {
 	}
 
 	public static Injector extractorInjector(IndexedCorpus corpus, ResourceModule resourceModule) {
-		Injector injector = Guice.createInjector(resourceModule, new ExtractorModule(corpus));
+		Injector injector = Guice.createInjector(resourceModule, new IndexedCorpusModule(corpus));
 		return injector;
 	}
 
 	public static Injector extractorInjector(IndexedCorpus corpus, Module resourceModule) {
-		Injector injector = Guice.createInjector(resourceModule, new ExtractorModule(corpus));
+		Injector injector = Guice.createInjector(resourceModule, new IndexedCorpusModule(corpus));
 		return injector;
 	}
 

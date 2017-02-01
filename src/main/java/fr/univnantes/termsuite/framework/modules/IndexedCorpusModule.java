@@ -29,16 +29,16 @@ import fr.univnantes.termsuite.utils.TermHistory;
 import uima.sandbox.filter.resources.DefaultFilterResource;
 import uima.sandbox.filter.resources.FilterResource;
 
-public class ExtractorModule extends AbstractModule {
+public class IndexedCorpusModule extends AbstractModule {
 	private IndexedCorpus indexedterminology;
 	private Optional<TermHistory> history = Optional.empty();
 	
-	public ExtractorModule(IndexedCorpus terminology) {
+	public IndexedCorpusModule(IndexedCorpus terminology) {
 		Preconditions.checkNotNull(terminology, "Terminology cannot be null");
 		this.indexedterminology = terminology;
 	}
 
-	public ExtractorModule(IndexedCorpus terminology, 
+	public IndexedCorpusModule(IndexedCorpus terminology, 
 			TermHistory history) {
 		this(terminology);
 		this.history = Optional.ofNullable(history);

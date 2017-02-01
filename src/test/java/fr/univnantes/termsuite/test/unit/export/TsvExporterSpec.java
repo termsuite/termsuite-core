@@ -11,8 +11,8 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.export.tsv.TsvExporter;
 import fr.univnantes.termsuite.export.tsv.TsvOptions;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -47,7 +47,6 @@ public class TsvExporterSpec {
 		UnitTests.addTerm(termino, term3);
 		UnitTests.addRelation(termino, tv);
 
-		
 		terms = Lists.newArrayList(
 				term1,
 				term2,
@@ -68,7 +67,8 @@ public class TsvExporterSpec {
 	
 	@Test
 	public void testTsvExportNoScore() {
-		TsvExporter.export(termino, writer);
+		TermSuiteFactory.createTsvExporter()
+			.export(termino, writer);
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(5)
 			.tsvLineEquals(1, "#","type", "gkey", "f")
@@ -81,7 +81,8 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoHeaders() {
-		TsvExporter.export(termino, writer, new TsvOptions().showHeaders(false));
+		TermSuiteFactory.createTsvExporter(new TsvOptions().showHeaders(false))
+			.export(termino, writer);
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(4)
 			.tsvLineEquals(1, 1, "T", "t2", 2)
@@ -93,8 +94,11 @@ public class TsvExporterSpec {
 
 	@Test
 	public void testTsvExportNoVariant() {
-		TsvExporter.export(termino, writer, new TsvOptions().setShowVariants(false));
-		TermSuiteAssertions.assertThat(writer.toString())
+		TermSuiteFactory.createTsvExporter(new TsvOptions().setShowVariants(false))
+			.export(termino, writer);
+		String string = writer.toString();
+		System.out.println(string);
+		TermSuiteAssertions.assertThat(string)
 			.hasLineCount(4)
 			.tsvLineEquals(1, "#","type", "gkey", "f")
 			.tsvLineEquals(2, 1, "T", "t2", 2)

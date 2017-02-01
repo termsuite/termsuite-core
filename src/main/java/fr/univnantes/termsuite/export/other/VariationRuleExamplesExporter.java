@@ -11,34 +11,23 @@ import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
-import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariantRule;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
-import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.Export;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
-public class VariationRuleExamplesExporter implements TerminologyExporter {
+public class VariationRuleExamplesExporter {
 
-	@Inject
-	private TerminologyService termino;
-
-	@Inject
-	private Writer writer;
-
-	@Inject
-	private YamlRuleSet yamlVariantRules;
-
-	@Inject
-	private OccurrenceStore occStore;
-	
 	class TermPair implements Comparable<TermPair> {
 		Term source;
 		Term target;
@@ -55,7 +44,8 @@ public class VariationRuleExamplesExporter implements TerminologyExporter {
 		}
 	}
 
-	public void export() {
+	@Export
+	public void export(TermSuiteResourceManager mgr, TerminologyService termino, Writer writer, OccurrenceStore occStore) {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
 		for (Term t : termino.getTerms()) {
@@ -73,7 +63,8 @@ public class VariationRuleExamplesExporter implements TerminologyExporter {
 						.compare(o1.getName(), o2.getName()).result();
 			}
 		});
-		varianRules.addAll(yamlVariantRules.getVariantRules());
+		YamlRuleSet variantRuleSet = mgr.get(YamlRuleSet.class, ResourceType.VARIANTS);
+		varianRules.addAll(variantRuleSet.getVariantRules());
 
 		try {
 			/*
@@ -130,10 +121,5 @@ public class VariationRuleExamplesExporter implements TerminologyExporter {
 		} catch (IOException e) {
 			throw new TermSuiteException(e);
 		}
-
-		
 	}
-
-	
-	
 }

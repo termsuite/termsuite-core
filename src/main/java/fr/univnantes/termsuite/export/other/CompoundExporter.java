@@ -17,6 +17,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.Term;
@@ -25,20 +26,8 @@ import fr.univnantes.termsuite.model.Word;
 public class CompoundExporter {
 	private static final String LINE_FORMAT = "%-30s %-10s %-35s %d\n";
 
-	private Terminology termino;
-	private Writer writer;
-	
-	private CompoundExporter(Terminology termino, Writer writer) {
-		super();
-		this.termino = termino;
-		this.writer = writer;
-	}
-
-	public static void export(Terminology termino, Writer writer) {
-		new CompoundExporter(termino, writer).doExport();
-	}
-
-	private void doExport() {
+	@Export
+	public void export(Terminology termino, Writer writer) {
 		try {
 			Multimap<Word,Term> terms = HashMultimap.create();
 			Set<Word> compounds = Sets.newHashSet();

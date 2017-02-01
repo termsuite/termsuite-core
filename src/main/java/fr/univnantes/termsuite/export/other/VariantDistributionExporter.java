@@ -7,29 +7,27 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
-import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.export.TerminologyExporter;
+import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermRelation;
 
-public class VariantDistributionExporter implements TerminologyExporter {
+public class VariantDistributionExporter  {
 	
-	@Inject
-	private TerminologyService termino;
-	
-	@Inject
-	private Writer writer;
-	
-	@Inject
 	private Predicate<TermRelation> selector;
 	
-	@Inject
-	private List<RelationProperty> termProperties = Lists.newArrayList();
+	private List<RelationProperty> relationProperties = Lists.newArrayList();
 	
-	public void export() {
+	public VariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<TermRelation> selector) {
+		super();
+		this.selector = selector;
+		this.relationProperties = relationProperties;
+	}
+
+	@Export
+	public void export(Writer writer, TerminologyService termino) {
 		try {
 			writer.write("type");
 			writer.write("\t");
@@ -37,7 +35,7 @@ public class VariantDistributionExporter implements TerminologyExporter {
 			writer.write("\t");
 			writer.write("to");
 			writer.write("\t");
-			writer.write(termProperties.stream().map(RelationProperty::getShortName).collect(Collectors.joining("\t")));
+			writer.write(relationProperties.stream().map(RelationProperty::getShortName).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
 			termino.relations()
@@ -54,7 +52,7 @@ public class VariantDistributionExporter implements TerminologyExporter {
 					writer.write(relation.getFrom().getGroupingKey());
 					writer.write("\t");
 					writer.write(relation.getTo().getGroupingKey());
-					for(RelationProperty p:termProperties) {
+					for(RelationProperty p:relationProperties) {
 						writer.write("\t");
 						writer.write(relation.isPropertySet(p) ?
 								relation.getPropertyValue(p).toString() :
