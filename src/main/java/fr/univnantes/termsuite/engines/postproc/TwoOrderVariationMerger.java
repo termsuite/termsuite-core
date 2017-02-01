@@ -75,7 +75,7 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
 				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_MORPHOLOGICAL)
 						|| r2.getPropertyBooleanValue(RelationProperty.IS_DERIVATION)
-						|| r2.getPropertyBooleanValue(RelationProperty.IS_PREXATION)
+						|| r2.getPropertyBooleanValue(RelationProperty.IS_PREFIXATION)
 						|| r2.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC)
 			);
 		

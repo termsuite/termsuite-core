@@ -94,7 +94,6 @@ public class GraphicalGatherer extends SimpleEngine {
 				}
 			}
 		}
-		System.out.println("");
 	}
 	
 	protected TermRelation createGraphicalRelation(Term from, Term to, Double similarity) {
@@ -130,22 +129,23 @@ public class GraphicalGatherer extends SimpleEngine {
 					this.options.getGraphicalSimilarityThreshold()) ;
 			boolean isGraphicalVariant = similarity >= this.options.getGraphicalSimilarityThreshold();
 			r.setProperty(RelationProperty.IS_GRAPHICAL, isGraphicalVariant);
-			if(isGraphicalVariant)
+			if(isGraphicalVariant) {
 				r.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 			
-			if(history.isPresent()) {
-				if(history.get().isGKeyWatched(r.getFrom().getGroupingKey())
-						|| history.get().isGKeyWatched(r.getTo().getGroupingKey()))
-					history.get().saveEvent(
-							r.getFrom().getGroupingKey(),
-							this.getClass(), 
-							"Variation "+r+" is marked as graphical (dist="+similarity+")");
-					history.get().saveEvent(
-						r.getTo().getGroupingKey(),
-							this.getClass(), 
-							"Variation "+r+" is marked as graphical (dist="+similarity+")");
+				if(history.isPresent()) {
+					if(history.get().isGKeyWatched(r.getFrom().getGroupingKey()))
+						history.get().saveEvent(
+								r.getFrom().getGroupingKey(),
+								this.getClass(), 
+								"Variation "+r+" is marked as graphical (dist="+similarity+")");
+					
+					if(history.get().isGKeyWatched(r.getTo().getGroupingKey()))
+						history.get().saveEvent(
+							r.getTo().getGroupingKey(),
+								this.getClass(), 
+								"Variation "+r+" is marked as graphical (dist="+similarity+")");
+				}
 			}
-
 		});
 
 		

@@ -98,7 +98,7 @@ public class GroovyHelper {
 
 	private Term toTerm(GroovyWord s) {
 		String sourceGroupingKey = TermUtils.toGroupingKey(s.getTermWord());
-		Term sourceTerm = this.termino.getTerm(sourceGroupingKey);
+		Term sourceTerm = this.termino.getTermUnchecked(sourceGroupingKey);
 		return sourceTerm;
 	}
 

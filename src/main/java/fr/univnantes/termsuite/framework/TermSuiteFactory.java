@@ -4,6 +4,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.api.ResourceConfig;
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.modules.ExtractorModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.AggregateEngineRunner;
@@ -13,6 +14,10 @@ import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.RelationType;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
@@ -82,5 +87,14 @@ public class TermSuiteFactory {
 
 	public static IndexedCorpus createIndexedCorpus(Lang lang, String name) {
 		return createIndexedCorpus(createTerminology(lang, name), createMemoryOccurrenceStore(lang));
+	}
+
+	public static TermRelation createVariation(VariationType variationType, Term from, Term to) {
+		TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
+		for(VariationType vType:VariationType.values())
+			relation.setProperty(vType.getRelationProperty(), false);
+		relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
+		relation.setProperty(variationType.getRelationProperty(), true);
+		return relation;
 	}
 }

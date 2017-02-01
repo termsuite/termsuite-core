@@ -26,6 +26,7 @@ import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -167,11 +168,7 @@ public class TerminologyService {
 		TermRelation r;
 		Optional<TermRelation> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {
-			TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
-			for(VariationType vType:VariationType.values())
-				relation.setProperty(vType.getRelationProperty(), false);
-			relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
-			relation.setProperty(variationType.getRelationProperty(), true);
+			TermRelation relation = TermSuiteFactory.createVariation(variationType, from, to);
 			privateAddRelation(relation);
 			r = relation;
 		} else

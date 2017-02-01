@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 
 import com.google.common.collect.Maps;
 
+import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.Component;
@@ -111,10 +112,10 @@ public class GroovyService {
 			return false;
 		} catch(InvokerInvocationException e) {
 			logger.error("An error occurred in groovy variant rule", e);
-			throw new RuntimeException(e);
+			throw new TermSuiteException(e);
 		} catch(Exception e) {
 			logger.warn("The variant rule {} throwed an exception: {}", rule.getName(), e.getClass());
-			return false;
+			throw new TermSuiteException(e);
 		}
 	}
 

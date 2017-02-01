@@ -182,7 +182,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 			.containsEntry(RelationProperty.IS_INFERED, true)
 			.containsEntry(RelationProperty.IS_MORPHOLOGICAL, true)
 			.containsEntry(RelationProperty.IS_DERIVATION, false)
-			.containsEntry(RelationProperty.IS_PREXATION, false)
+			.containsEntry(RelationProperty.IS_PREFIXATION, false)
 			.containsEntry(RelationProperty.IS_SYNTAGMATIC, false)
 			.containsEntry(RelationProperty.IS_GRAPHICAL, true)
 			;

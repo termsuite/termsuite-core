@@ -19,7 +19,6 @@ public enum RelationProperty implements Property<TermRelation> {
 	AFFIX_ORTHOGRAPHIC_SCORE("AffixOrthographicScore", "affOrtho", "affOrtho", Double.class),
 	EXTENSION_SCORE("ExtensionScore", "extScore", "extScore", Double.class),
 	AFFIX_SPEC("AffixSpec", "affSpec", "affSpec", Double.class),
-//	STRICTNESS("Strictness", "strictness", "strictness", Double.class),
 	HAS_EXTENSION_AFFIX("HasExtensionAffix", "hasExtAffix", "hasExtAffix", Boolean.class),
 	IS_EXTENSION("IsExtension", "isExt", "isExt", Boolean.class), 
 	SOURCE_GAIN("SourceGain", "srcGain", "srcGain", Double.class),
@@ -33,10 +32,12 @@ public enum RelationProperty implements Property<TermRelation> {
 	IS_GRAPHICAL("IsGraphical", "isGraph", "isGraph", Boolean.class), 
 	IS_SEMANTIC("IsSemantic", "isSem", "isSem", Boolean.class), 
 	IS_DERIVATION("IsDerivation", "isDeriv", "isDeriv", Boolean.class), 
-	IS_PREXATION("IsPrefixation", "isPref", "isPref", Boolean.class), 
+	IS_PREFIXATION("IsPrefixation", "isPref", "isPref", Boolean.class), 
 	IS_SYNTAGMATIC("IsSyntagmatic", "isSyntag", "isSyntag", Boolean.class), 
 	IS_MORPHOLOGICAL("IsMorphological", "isMorph", "isMorph", Boolean.class), 
 	VARIANT_BAG_FREQUENCY("VariantBagFrequency", "vBagFreq", "vBagFreq", Integer.class), 
+	IS_DICO("Dico", "isDico", "isDico", Boolean.class), 
+	SEMANTIC_SCORE("SemanticScore", "semScore", "semScore", Double.class), 
 	;
 
 	private String propertyName;
@@ -76,8 +77,6 @@ public enum RelationProperty implements Property<TermRelation> {
 		return Property.isNumeric(range);
 	}
 
-	
-
 	@Override
 	public int compare(TermRelation o1, TermRelation o2) {
 		return ComparisonChain.start()
@@ -86,7 +85,6 @@ public enum RelationProperty implements Property<TermRelation> {
 						o2.getPropertyValueUnchecked(this))
 				.result();
 	}
-
 
 	@Override
 	public String getJsonField() {

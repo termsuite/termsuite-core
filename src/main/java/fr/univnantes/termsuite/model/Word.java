@@ -65,9 +65,8 @@ public class Word {
 		this.stem = stem;
 	}
 
-	public void setComposition(CompoundType type, List<Component> components) {
-		this.compoundType = type;
-		this.components = ImmutableList.copyOf(components);
+	public void setComponents(List<Component> components) {
+		this.components = components;
 	}
 	
 	public List<Component> getComponents() {
@@ -139,6 +138,4 @@ public class Word {
 	public String getLemma() {
 		return lemma;
 	}
-	
-	
 }

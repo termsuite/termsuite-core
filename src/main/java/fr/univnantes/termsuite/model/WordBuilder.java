@@ -76,7 +76,8 @@ public class WordBuilder {
 		if(!components.isEmpty()) {
 			if(!type.isPresent())
 				type = Optional.of(CompoundType.NATIVE);
-			w.setComposition(type.get(), components);
+			w.setCompoundType(type.get());
+			w.setComponents(components);
 		}
 		return w;
 	}
@@ -96,7 +97,7 @@ public class WordBuilder {
 	public WordBuilder addComponent(int begin, int end, String substring, String compLemma, boolean neoclassicalAffix) {
 		Component component = new Component(begin, end,substring,compLemma);
 		if(neoclassicalAffix)
-			component.setNeoclassical();
+			component.setNeoclassicalAffix(true);
 		components.add(component);
 		return this;
 	}
@@ -113,7 +114,7 @@ public class WordBuilder {
 	public WordBuilder setNeoclassicalAffix(int begin, int end) {
 		for(Component component:components) {
 			if(component.getBegin() == begin && component.getEnd() == end) {
-				component.setNeoclassical();
+				component.setNeoclassicalAffix(true);
 				return this;
 			}
 		}

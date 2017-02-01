@@ -19,6 +19,8 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.utils.TermHistory;
 
 public class SemanticGathererSpec {
 
@@ -33,27 +35,42 @@ public class SemanticGathererSpec {
 		extractorOptions.getGathererConfig().setSemanticSimilarityThreshold(0.3);
 		extractorOptions.getContextualizerOptions().setEnabled(true);
 		extractorOptions.getContextualizerOptions().setMinimumCooccFrequencyThreshold(2);
-		
+		extractorOptions.getPostProcessorConfig().setEnabled(false);
 		
 		corpus = TermSuite.preprocessor()
 				.setTaggerPath(FunctionalTests.getTaggerPath())
 				.toIndexedCorpus(FunctionalTests.getCorpusWE(lang), 5000000);
 			
+			TermHistory history = TermHistory.create("na: coût global");
 			TermSuite.terminoExtractor()
 						.setOptions(extractorOptions)
+						.setHistory(history)
 						.execute(corpus);
+			System.out.println(history);
 	}
+	
+	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR_WITH_TYPE = new Extractor<TermRelation, Tuple>() {
+		@Override
+		public Tuple extract(TermRelation input) {
+			return new Tuple(
+					input.getFrom().getGroupingKey(),
+					input.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL) ? "distrib" : "-",
+					input.getPropertyBooleanValue(RelationProperty.IS_DICO) ? "dico" : "-",
+					input.getTo().getGroupingKey()
+				);
+		}
+	};
 	
 	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR = new Extractor<TermRelation, Tuple>() {
 		@Override
 		public Tuple extract(TermRelation input) {
 			return new Tuple(
 					input.getFrom().getGroupingKey(),
-					input.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL),
 					input.getTo().getGroupingKey()
 				);
 		}
 	};
+
 
 	@Test
 	public void testVariationsFR() {
@@ -61,18 +78,43 @@ public class SemanticGathererSpec {
 		List<TermRelation> relations = corpus.getTerminology()
 				.getOutboundRelations().values().stream()
 				.filter(Relations.IS_SEMANTIC)
+				.filter(Relations.NOT_INFERED)
 				.collect(Collectors.toList());
-		assertTrue("Expected number of relations between 3800 and 3900. Got: " + relations.size(),
-				relations.size() > 3800 && relations.size() < 3900);
+		
+		
+		TermSuiteAssertions.assertThat(corpus.getTerminology())
+			.containsTerm("na: batterie rechargeable")
+			.containsTerm("na: batterie électrochimique")
+			.containsTerm("na: coût global")
+			.containsTerm("npn: cadre de étude")
+			.containsTerm("na: lieu éloigner")
+			.containsTerm("na: emplacement éloigner")
+			.containsTerm("na: coût total")
+			.containsTerm("npn: cadre de projet")
+			;
+			
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
 			.contains(
-					tuple("na: lieu éloigner", false, "na: emplacement éloigner"),
-					tuple("na: coût global", false, "na: coût total"),
-					tuple("npn: cadre de étude", true, "npn: cadre de projet"),
-					tuple("na: batterie rechargeable", true, "na: batterie électrochimique")
+					tuple("na: lieu éloigner", "na: emplacement éloigner"),
+					tuple("na: coût global", "na: coût total"),
+					tuple("npn: cadre de étude", "npn: cadre de projet"),
+					tuple("na: batterie rechargeable", "na: batterie électrochimique")
 			)
 			;
+
+		assertThat(relations)
+			.extracting(SYNONYM_EXTRACTOR_WITH_TYPE)
+			.contains(
+					tuple("na: lieu éloigner", "distrib", "dico", "na: emplacement éloigner"),
+					tuple("na: coût global", "distrib", "dico", "na: coût total"),
+					tuple("npn: cadre de étude", "distrib", "-", "npn: cadre de projet"),
+					tuple("na: batterie rechargeable", "distrib", "-", "na: batterie électrochimique")
+			)
+			;
+
+		assertTrue("Expected number of relations between 10900 and 11000. Got: " + relations.size(),
+				relations.size() > 10900 && relations.size() < 11000);
 	}
 	
 	@Test
@@ -82,21 +124,31 @@ public class SemanticGathererSpec {
 		List<TermRelation> relations = corpus.getTerminology()
 				.getOutboundRelations().values().stream()
 				.filter(Relations.IS_SEMANTIC)
+				.filter(Relations.NOT_INFERED)
 			.collect(Collectors.toList());
+		
+		assertTrue("Expected number of relations between 13600 and 13700. Got: "  +relations.size() ,
+				relations.size() > 13600 && relations.size() < 13800);
+
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)
 			.contains(
-					tuple("an: technical report", false, "an: technical paper"),
-					tuple("an: potential hazard", false, "an: potential risk"),
-					tuple("nn: max torque", true, "nn: min torque"),
-					tuple("an: environmental effect", true, "an: environmental consequence")
+					tuple("an: technical report", "an: technical paper"),
+					tuple("an: potential hazard", "an: potential risk"),
+					tuple("nn: max torque", "nn: min torque"),
+					tuple("an: environmental effect", "an: environmental consequence")
 			)
 			;
-		
-		assertTrue("Expected number of relations between 2470 and 2500. Got: "  +relations.size() ,
-				relations.size() > 2470 && relations.size() < 2500);
-		
-	}
 
-	
+		assertThat(relations)
+			.extracting(SYNONYM_EXTRACTOR_WITH_TYPE)
+			.contains(
+					tuple("an: technical report", "distrib", "dico", "an: technical paper"),
+					tuple("an: potential hazard", "distrib", "dico", "an: potential risk"),
+					tuple("nn: max torque", "distrib", "-", "nn: min torque"),
+					tuple("an: environmental effect", "distrib", "dico", "an: environmental consequence")
+			)
+			;
+
+	}
 }

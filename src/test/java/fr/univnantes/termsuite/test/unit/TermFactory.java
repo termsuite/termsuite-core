@@ -111,8 +111,8 @@ public class TermFactory {
 			Component component = new Component(start, start + substring.length(), substring, lemma);
 			components.add(component);
 		}
-		
-		word.setComposition(type, components);
+		word.setCompoundType(type);
+		word.setComponents(components);
 	}
 	
 	public static Term termMock(String groupingKey, int freq, int rank, double specificity) {

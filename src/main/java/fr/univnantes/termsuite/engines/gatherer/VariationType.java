@@ -12,7 +12,7 @@ import fr.univnantes.termsuite.model.TermRelation;
  * 
  */
 public enum VariationType implements PropertyValue {
-	PREFIXATION("P", 5, "pref", true, RelationProperty.IS_PREXATION), 
+	PREFIXATION("P", 5, "pref", true, RelationProperty.IS_PREFIXATION), 
 	DERIVATION("D", 4, "deriv", true, RelationProperty.IS_DERIVATION),
 	SEMANTIC("H", 7, "syno", true, RelationProperty.IS_SEMANTIC),
 	MORPHOLOGICAL("M", 1, "morph", true, RelationProperty.IS_MORPHOLOGICAL),

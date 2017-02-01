@@ -3,6 +3,7 @@ package fr.univnantes.termsuite.engines.splitter;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toSet;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -169,6 +170,7 @@ public class NativeSplitter extends SimpleEngine {
 					// build the word component from segmentation
 					
 					boolean isNeoclassical = false;
+					List<Component> components = new ArrayList<>();
 					for(Segment seg:bestSegmentation.getSegments()) {
 						String lemma = segmentLemmaCache.getUnchecked(seg.getLemma());
 						Component component;
@@ -183,13 +185,15 @@ public class NativeSplitter extends SimpleEngine {
 									seg.getEnd(), 
 									seg.getSubstring(),
 									lemma);
-						word.getComponents().add(component);
-						if(compostIndex.isNeoclassical(seg.getSubstring())) 
-							component.setNeoclassical();
-						word.getComponents().add(component);
+						if(compostIndex.isNeoclassical(seg.getSubstring())) {
+							component.setNeoclassicalAffix(true);
+							isNeoclassical = true;
+						} else
+							component.setNeoclassicalAffix(false);
+						components.add(component);
 					}
 					word.setCompoundType(isNeoclassical ? CompoundType.NEOCLASSICAL : CompoundType.NATIVE);
-					
+					word.setComponents(components);
 					watchComposition(word, true);
 					// log the word composition
 					if(logger.isTraceEnabled()) {

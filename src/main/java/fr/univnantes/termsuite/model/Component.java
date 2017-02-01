@@ -104,8 +104,8 @@ public class Component implements Comparable<Component> {
 		return this.substring;
 	}
 
-	public void setNeoclassical() {
-		this.neoclassicalAffix = true;
+	public void setNeoclassicalAffix(boolean neoclassicalAffix) {
+		this.neoclassicalAffix = neoclassicalAffix;
 	}
 
 	public boolean isNeoclassicalAffix() {

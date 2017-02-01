@@ -27,6 +27,11 @@ public class TermHistory {
 
 	private LinkedListMultimap<String, PipelineEvent> eventsByGroupingKeys = LinkedListMultimap.create();
 	
+
+	public void saveEvent(Term term, Class<?> source, String msg) {
+		saveEvent(term.getGroupingKey(), source, msg);
+	}
+	
 	public void saveEvent(String termKey, Class<?> source, String msg) {
 		Preconditions.checkArgument(isGKeyWatched(termKey), ERR_TERM_NOT_WATCHED);
 		eventsByGroupingKeys.put(termKey, PipelineEvent.create(termKey, source, msg));

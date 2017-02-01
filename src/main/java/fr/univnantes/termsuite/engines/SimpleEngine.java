@@ -13,6 +13,7 @@ public abstract class SimpleEngine extends Engine {
 	@Inject 
 	protected TerminologyService terminology;
 
+	@Inject 
 	protected Optional<TermHistory> history = Optional.empty();
 
 	public abstract void execute();
