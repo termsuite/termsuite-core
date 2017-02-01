@@ -19,7 +19,7 @@ import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class VariationExporter {
 	
@@ -38,7 +38,7 @@ public class VariationExporter {
 	@Export
 	public void export(TerminologyService termino, Writer writer) {
 		try {
-			Multimap<Term,TermRelation> acceptedVariations = HashMultimap.create();
+			Multimap<Term,Relation> acceptedVariations = HashMultimap.create();
 			for(Term t:termino.getTerms()) {
 				termino.outboundRelations(t).forEach(v -> {
 					if(this.variationTypes.isEmpty())
@@ -61,9 +61,9 @@ public class VariationExporter {
 			sortedTerms.addAll(acceptedVariations.keySet());
 			
 			for(Term t:sortedTerms) {
-				Set<TermRelation> variations = Sets.newHashSet(acceptedVariations.get(t));
+				Set<Relation> variations = Sets.newHashSet(acceptedVariations.get(t));
 				boolean first = true;
-				for(TermRelation tv:variations) {
+				for(Relation tv:variations) {
 					if(first)
 						writer.write(String.format(SOURCE_LINE_FORMAT,
 							t.getGroupingKey(),
@@ -85,7 +85,7 @@ public class VariationExporter {
 
 	}
 
-	public String propertiesToString(TermRelation tv) {
+	public String propertiesToString(Relation tv) {
 		return tv.getProperties().entrySet().stream()
 				.map(e -> String.format("%s=%s", e.getKey().getShortName(), e.getValue()))
 				.collect(Collectors.joining(", "));

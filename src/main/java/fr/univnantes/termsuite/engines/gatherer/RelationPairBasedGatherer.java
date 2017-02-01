@@ -12,7 +12,7 @@ import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 
 /**
@@ -60,7 +60,7 @@ public abstract class RelationPairBasedGatherer extends VariationTypeGatherer {
 		Multimap<String, Term> relationIndex = HashMultimap.create();
 		terminology.terms().forEach(term-> {
 			Term t;
-			Set<TermRelation> relations = new HashSet<>();
+			Set<Relation> relations = new HashSet<>();
 			for(TermWord tw:term.getWords()) {
 				if((t = terminology.getTermUnchecked(tw.toGroupingKey())) != null) {
 					terminology.inboundRelations(t, relType).forEach(relations::add);

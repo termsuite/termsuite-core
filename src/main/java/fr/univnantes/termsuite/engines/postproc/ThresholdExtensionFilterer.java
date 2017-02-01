@@ -11,7 +11,7 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class ThresholdExtensionFilterer extends SimpleEngine {
 
@@ -19,7 +19,7 @@ public class ThresholdExtensionFilterer extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		Set<TermRelation> remTargets = Sets.newHashSet();
+		Set<Relation> remTargets = Sets.newHashSet();
 
 		/*
 		 *	Remove target term if it has no affix
@@ -48,7 +48,7 @@ public class ThresholdExtensionFilterer extends SimpleEngine {
 		});
 		
 		
-		Set<Term> remSet = remTargets.stream().map(TermRelation::getTo).collect(Collectors.toSet());
+		Set<Term> remSet = remTargets.stream().map(Relation::getTo).collect(Collectors.toSet());
 		logger.debug("Removing {} extension targets from term index", remSet.size());
 		remSet.stream().forEach(terminology::removeTerm);
 		

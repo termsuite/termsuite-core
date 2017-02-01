@@ -32,7 +32,7 @@ import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 
 /**
@@ -50,7 +50,7 @@ public class Terminology  {
 	 */
 	private ConcurrentMap<String, Term> terms = new ConcurrentHashMap<>();
 	private ConcurrentMap<String, Word> words = new ConcurrentHashMap<>();
-	private Multimap<Term, TermRelation> outboundRelations = LinkedListMultimap.create();
+	private Multimap<Term, Relation> outboundRelations = LinkedListMultimap.create();
 	
 	private String name;
 	private Lang lang;
@@ -72,7 +72,7 @@ public class Terminology  {
 		return words;
 	}
 	
-	public Multimap<Term, TermRelation> getOutboundRelations() {
+	public Multimap<Term, Relation> getOutboundRelations() {
 		return outboundRelations;
 	}
 	

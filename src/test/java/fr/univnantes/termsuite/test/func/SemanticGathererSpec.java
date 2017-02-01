@@ -18,7 +18,7 @@ import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -48,9 +48,9 @@ public class SemanticGathererSpec {
 						.execute(corpus);
 	}
 	
-	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR_WITH_TYPE = new Extractor<TermRelation, Tuple>() {
+	private static final Extractor<Relation, Tuple> SYNONYM_EXTRACTOR_WITH_TYPE = new Extractor<Relation, Tuple>() {
 		@Override
-		public Tuple extract(TermRelation input) {
+		public Tuple extract(Relation input) {
 			return new Tuple(
 					input.getFrom().getGroupingKey(),
 					input.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL) ? "distrib" : "-",
@@ -60,9 +60,9 @@ public class SemanticGathererSpec {
 		}
 	};
 	
-	private static final Extractor<TermRelation, Tuple> SYNONYM_EXTRACTOR = new Extractor<TermRelation, Tuple>() {
+	private static final Extractor<Relation, Tuple> SYNONYM_EXTRACTOR = new Extractor<Relation, Tuple>() {
 		@Override
-		public Tuple extract(TermRelation input) {
+		public Tuple extract(Relation input) {
 			return new Tuple(
 					input.getFrom().getGroupingKey(),
 					input.getTo().getGroupingKey()
@@ -74,7 +74,7 @@ public class SemanticGathererSpec {
 	@Test
 	public void testVariationsFR() {
 		extract(Lang.FR);
-		List<TermRelation> relations = corpus.getTerminology()
+		List<Relation> relations = corpus.getTerminology()
 				.getOutboundRelations().values().stream()
 				.filter(Relations.IS_SEMANTIC)
 				.filter(Relations.NOT_INFERED)
@@ -120,7 +120,7 @@ public class SemanticGathererSpec {
 	public void testVariationsEN() {
 		extract(Lang.EN);
 
-		List<TermRelation> relations = corpus.getTerminology()
+		List<Relation> relations = corpus.getTerminology()
 				.getOutboundRelations().values().stream()
 				.filter(Relations.IS_SEMANTIC)
 				.filter(Relations.NOT_INFERED)

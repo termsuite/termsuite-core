@@ -21,7 +21,7 @@ import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class GraphicalGatherer extends SimpleEngine {
 	
@@ -96,8 +96,8 @@ public class GraphicalGatherer extends SimpleEngine {
 		}
 	}
 	
-	protected TermRelation createGraphicalRelation(Term from, Term to, Double similarity) {
-		TermRelation rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
+	protected Relation createGraphicalRelation(Term from, Term to, Double similarity) {
+		Relation rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
 		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 		watch(from, to, similarity);
 		return rel;

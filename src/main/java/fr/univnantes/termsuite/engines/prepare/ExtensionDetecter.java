@@ -14,7 +14,7 @@ import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -72,7 +72,7 @@ public class ExtensionDetecter extends SimpleEngine {
 				from, to
 			);
 			
-			terminology.addRelation(new TermRelation(
+			terminology.addRelation(new Relation(
 					RelationType.HAS_EXTENSION,
 					from, 
 					to

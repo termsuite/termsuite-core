@@ -14,7 +14,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 /*
  *  Detect 2-order extension variations.
@@ -96,7 +96,7 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 	 *   baseTerm --rtrans--> v2 
 	 * 
 	 */
-	private void mergeTwoOrderVariations(Predicate<TermRelation> p1, Predicate<TermRelation> p2) {
+	private void mergeTwoOrderVariations(Predicate<Relation> p1, Predicate<Relation> p2) {
 		/*
 		 *  t1 --r1--> t2 --r2--> t3
 		 *  t1 --rtrans--> t3
@@ -105,14 +105,14 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 		terminology.terms()
 		.sorted(TermProperty.FREQUENCY.getComparator(true))
 		.forEach(t1 -> {
-			final Map<Term, TermRelation> r1Set = new HashMap<>();
+			final Map<Term, Relation> r1Set = new HashMap<>();
 
 			terminology.outboundRelations(t1, RelationType.VARIATION).forEach(r1 -> {
 				if(p1.test(r1))
 					r1Set.put(r1.getTo(), r1);
 			});
 			
-			final Set<TermRelation> rem = new HashSet<>();
+			final Set<Relation> rem = new HashSet<>();
 			
 			r1Set.keySet().forEach(t2-> {
 				terminology
@@ -122,7 +122,7 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 					.forEach(r2 -> {
 						Term t3 = r2.getTo();
 						
-						TermRelation rtrans = r1Set.get(t3);
+						Relation rtrans = r1Set.get(t3);
 						if(logger.isTraceEnabled()) {
 							logger.trace("Found order-2 relation in variation set {}-->{}-->{}", t1, t2, t3);
 							logger.trace("Removing {}", rtrans);
@@ -140,7 +140,7 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 
 	}
 
-	private void watchRemoval(Term t1, Term t2, Term t3, TermRelation rtrans) {
+	private void watchRemoval(Term t1, Term t2, Term t3, Relation rtrans) {
 		if(history.isPresent()) {
 			if(history.get().isWatched(t1)) 
 				history.get().saveEvent(t1.getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));

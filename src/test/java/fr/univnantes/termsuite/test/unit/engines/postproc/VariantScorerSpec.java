@@ -14,7 +14,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class VariantScorerSpec {
@@ -51,7 +51,7 @@ public class VariantScorerSpec {
 	}
 
 	private void addVariation(String from, String to, boolean isExtension) {
-		TermRelation relation = new TermRelation(RelationType.VARIATION, 
+		Relation relation = new Relation(RelationType.VARIATION, 
 				terminology.getTerms().get(from), 
 				terminology.getTerms().get(to));
 		relation.setProperty(RelationProperty.IS_EXTENSION, !isExtension);
@@ -69,15 +69,15 @@ public class VariantScorerSpec {
 	@Test
 	public void testVARIANT_FREQUENCY() {
 		scorer.doVariationFrenquencies();
-		TermRelation relation1 = service.variations("t7", "t4").findFirst().get();
+		Relation relation1 = service.variations("t7", "t4").findFirst().get();
 		assertThat(relation1.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(19);
 		
-		TermRelation relation2 = service.variations("t4", "t5").findFirst().get();
+		Relation relation2 = service.variations("t4", "t5").findFirst().get();
 		assertThat(relation2.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(2);
 		
-		TermRelation relation3 = service.variations("t4", "t6").findFirst().get();
+		Relation relation3 = service.variations("t4", "t6").findFirst().get();
 		assertThat(relation3.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(3);
 	}
@@ -86,16 +86,16 @@ public class VariantScorerSpec {
 	public void testVARIANT_FREQUENCY_handleCycles() {
 		service = UnitTests.getTerminologyService(indexedCorpus);
 		scorer.doVariationFrenquencies();
-		TermRelation relation1 = service.variations("t3", "t2").findFirst().get();
+		Relation relation1 = service.variations("t3", "t2").findFirst().get();
 		assertThat(relation1.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(8); // t2.freq + t1.freq
 
-		TermRelation relation2 = service.variations("t2", "t1").findFirst().get();
+		Relation relation2 = service.variations("t2", "t1").findFirst().get();
 		assertThat(relation2.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(14); // t1.freq + t3.freq
 
 
-		TermRelation relation3 = service.variations("t1", "t3").findFirst().get();
+		Relation relation3 = service.variations("t1", "t3").findFirst().get();
 		assertThat(relation3.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(16); // t3.freq + t2.freq
 

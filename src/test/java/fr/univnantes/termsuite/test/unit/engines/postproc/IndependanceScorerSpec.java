@@ -16,7 +16,7 @@ import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class IndependanceScorerSpec {
@@ -30,7 +30,7 @@ public class IndependanceScorerSpec {
 	private Term t_xab;
 	private Term t_xat;
 
-	TermRelation a_ab, a_at, a_xa, a_xab, a_xat, ab_xab, xa_xab, xa_xat, at_xat;
+	Relation a_ab, a_at, a_xa, a_xab, a_xat, ab_xab, xa_xab, xa_xat, at_xat;
 
 	Terminology terminology;
 
@@ -70,8 +70,8 @@ public class IndependanceScorerSpec {
 		scorer = UnitTests.createSimpleEngine(indexedCorpus, IndependanceScorer.class);
 	}
 	
-	private  TermRelation addExtension(Term t1, Term t2) {
-		TermRelation termRelation = new TermRelation(RelationType.HAS_EXTENSION, t1, t2);
+	private  Relation addExtension(Term t1, Term t2) {
+		Relation termRelation = new Relation(RelationType.HAS_EXTENSION, t1, t2);
 		UnitTests.addRelation(terminology, termRelation);
 		return termRelation;
 	}

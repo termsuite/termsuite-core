@@ -34,7 +34,7 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -52,16 +52,16 @@ public class TerminologyService {
 	@Inject
 	private IndexService indexService;
 
-	private Multimap<Term, TermRelation> inboundVariations =  null;
+	private Multimap<Term, Relation> inboundVariations =  null;
 	
 	private Semaphore relationMutex = new Semaphore(1);
 	private Semaphore inboundMutex = new Semaphore(1);
 
 	
-	private Multimap<Term, TermRelation> getInboundRelations() {
+	private Multimap<Term, Relation> getInboundRelations() {
 		inboundMutex.acquireUninterruptibly();
 		if(inboundVariations == null) {
-			LinkedListMultimap<Term, TermRelation> map = LinkedListMultimap.create();
+			LinkedListMultimap<Term, Relation> map = LinkedListMultimap.create();
 			this.termino.getOutboundRelations().values().forEach(r-> {
 				map.put(r.getTo(), r);
 			});
@@ -71,8 +71,8 @@ public class TerminologyService {
 		return inboundVariations;
 	}
 	
-	public Stream<TermRelation> getRelations(Term from, Term to, RelationType... types) {
-		Stream<TermRelation> stream = this.termino.getOutboundRelations().get(from)
+	public Stream<Relation> getRelations(Term from, Term to, RelationType... types) {
+		Stream<Relation> stream = this.termino.getOutboundRelations().get(from)
 					.stream()
 					.filter(relation -> relation.getTo().equals(to));
 		
@@ -87,31 +87,31 @@ public class TerminologyService {
 	}
 
 	
-	public Stream<TermRelation> relations() {
+	public Stream<Relation> relations() {
 		return termino.getOutboundRelations().values().stream();
 	}
 	
-	public Stream<TermRelation> variations() {
+	public Stream<Relation> variations() {
 		return relations().filter(r -> r.getType() == RelationType.VARIATION);
 	}
 	
-	public Stream<TermRelation> variations(VariationType type) {
-		Predicate<? super TermRelation> havingVariationType = havingProperty(RelationProperty.VARIATION_TYPE);
+	public Stream<Relation> variations(VariationType type) {
+		Predicate<? super Relation> havingVariationType = havingProperty(RelationProperty.VARIATION_TYPE);
 		return variations()
 				.filter(havingVariationType)
 				.filter(r -> r.get(RelationProperty.VARIATION_TYPE) == type);
 	}
 
-	private Predicate<? super TermRelation> havingProperty(RelationProperty property) {
-		return new Predicate<TermRelation>() {
+	private Predicate<? super Relation> havingProperty(RelationProperty property) {
+		return new Predicate<Relation>() {
 			@Override
-			public boolean test(TermRelation t) {
+			public boolean test(Relation t) {
 				return t.isPropertySet(property);
 			}
 		};
 	}
 
-	public Stream<TermRelation> relations(RelationType type, RelationType... types) {
+	public Stream<Relation> relations(RelationType type, RelationType... types) {
 		EnumSet<RelationType> typeSet = EnumSet.of(type, types);
 		return relations()
 				.filter(r -> typeSet.contains(r.getType()));
@@ -125,50 +125,50 @@ public class TerminologyService {
 		return termino.getTerms().values().stream();
 	}
 
-	public Stream<TermRelation> relations(Term from, Term to) {
+	public Stream<Relation> relations(Term from, Term to) {
 		return outboundRelations(from)
 						.filter(r-> r.getTo().equals(to));
 	}
 
 
-	public Stream<TermRelation> inboundRelations(Term target) {
+	public Stream<Relation> inboundRelations(Term target) {
 		return this.getInboundRelations()
 				.get(target)
 				.stream();
 	}
 	
-	public Stream<TermRelation> inboundRelations(Term target, RelationType rType, RelationType... relationTypes) {
+	public Stream<Relation> inboundRelations(Term target, RelationType rType, RelationType... relationTypes) {
 		Set<RelationType> rTypes = EnumSet.of(rType, relationTypes);
 		return inboundRelations(target)
 				.filter(r->rTypes.contains(r.getType()));
 	}
 	
-	public Stream<TermRelation> outboundRelations(Term source) {
+	public Stream<Relation> outboundRelations(Term source) {
 		return this.termino.getOutboundRelations().get(source)
 			.stream();
 	}
 
-	public Stream<TermRelation> outboundRelations(Term source, RelationType rType, RelationType... relationTypes) {
+	public Stream<Relation> outboundRelations(Term source, RelationType rType, RelationType... relationTypes) {
 		Set<RelationType> rTypes = EnumSet.of(rType, relationTypes);
 		return outboundRelations(source)
 				.filter(r->rTypes.contains(r.getType()));
 	}
 	
-	public Stream<TermRelation> variations(Term from, Term to) {
+	public Stream<Relation> variations(Term from, Term to) {
 		return relations(from,to)
 				.filter(r-> r.getType() == RelationType.VARIATION);
 	}
 
-	public synchronized Optional<TermRelation> getVariation(Term from, Term to) {
+	public synchronized Optional<Relation> getVariation(Term from, Term to) {
 		return variations(from, to).findAny();
 	}
 
-	public TermRelation createVariation(VariationType variationType, Term from, Term to) {
+	public Relation createVariation(VariationType variationType, Term from, Term to) {
 		relationMutex.acquireUninterruptibly();
-		TermRelation r;
-		Optional<TermRelation> existing = variations(from, to).findAny();
+		Relation r;
+		Optional<Relation> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {
-			TermRelation relation = TermSuiteFactory.createVariation(variationType, from, to);
+			Relation relation = TermSuiteFactory.createVariation(variationType, from, to);
 			privateAddRelation(relation);
 			r = relation;
 		} else
@@ -177,14 +177,14 @@ public class TerminologyService {
 		return r;
 	}
 
-	public Stream<TermRelation> relations(RelationProperty property, Object value) {
+	public Stream<Relation> relations(RelationProperty property, Object value) {
 		return relations()
 				.filter(r->r.isPropertySet(property))
 				.filter(r->Objects.equals(r.get(property), value))
 				;
 	}
 
-	public Stream<TermRelation> variations(String fromKey, String toKey) {
+	public Stream<Relation> variations(String fromKey, String toKey) {
 		return variations(getTerm(fromKey), getTerm(toKey));
 	}
 
@@ -198,7 +198,7 @@ public class TerminologyService {
 		return termino.getTerms().get(termKey);
 	}
 
-	public Stream<TermRelation> variationsFrom(Term from) {
+	public Stream<Relation> variationsFrom(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.VARIATION);
 	}
@@ -211,11 +211,11 @@ public class TerminologyService {
 		return this.termino.getTerms().size();
 	}
 
-	public Stream<TermRelation> extensions() {
+	public Stream<Relation> extensions() {
 		return relations(RelationType.HAS_EXTENSION);
 	}
 	
-	public Stream<TermRelation> extensionBases(Term term) {
+	public Stream<Relation> extensionBases(Term term) {
 		return inboundRelations(term)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION)
 			;
@@ -225,7 +225,7 @@ public class TerminologyService {
 		return this.termino.getWords().get(lemma);
 	}
 
-	public Stream<TermRelation> extensions(Term from) {
+	public Stream<Relation> extensions(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
 	}
@@ -246,7 +246,7 @@ public class TerminologyService {
 		return this.termino.getWords().values();
 	}
 
-	public Stream<TermRelation> extensions(Term from, Term to) {
+	public Stream<Relation> extensions(Term from, Term to) {
 		return relations(from, to).filter(r->r.getType() == RelationType.HAS_EXTENSION);
 	}
 
@@ -301,7 +301,7 @@ public class TerminologyService {
 		
 		this.termino.getTerms().remove(t.getGroupingKey());
 		// remove from variants
-		List<TermRelation> toRem = Lists.newLinkedList();
+		List<Relation> toRem = Lists.newLinkedList();
 		toRem.addAll(this.termino.getOutboundRelations().get(t));
 		toRem.addAll(this.getInboundRelations().get(t));
 		toRem.forEach(this::removeRelation);
@@ -333,7 +333,7 @@ public class TerminologyService {
 		this.termino.getNbSpottedTerms().addAndGet(nbSpottedTerms);
 	}
 
-	public void addRelation(TermRelation termVariation) {
+	public void addRelation(Relation termVariation) {
 		relationMutex.acquireUninterruptibly();
 		privateAddRelation(termVariation);
 		relationMutex.release();
@@ -343,7 +343,7 @@ public class TerminologyService {
 	/*
 	 * Must be invoked under mutex
 	 */
-	private void privateAddRelation(TermRelation termVariation) {
+	private void privateAddRelation(Relation termVariation) {
 		/*
 		 * Do not delete: First synchronize inbound with outbound
 		 */
@@ -356,7 +356,7 @@ public class TerminologyService {
 		this.getInboundRelations().put(termVariation.getTo(), termVariation);
 	}
 
-	public void removeRelation(TermRelation variation) {
+	public void removeRelation(Relation variation) {
 		relationMutex.acquireUninterruptibly();
 		this.termino.getOutboundRelations().remove(variation.getFrom(), variation);
 		this.getInboundRelations().remove(variation.getTo(), variation);

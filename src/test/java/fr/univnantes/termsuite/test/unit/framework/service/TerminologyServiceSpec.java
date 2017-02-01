@@ -17,7 +17,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -47,9 +47,9 @@ public class TerminologyServiceSpec {
 	
 	@Test
 	public void testInboundRelations() {
-		terminologyService.addRelation(new TermRelation(RelationType.VARIATION, term1, term2));
-		terminologyService.addRelation(new TermRelation(RelationType.VARIATION, term1, term3));
-		terminologyService.addRelation(new TermRelation(RelationType.VARIATION, term4, term3));
+		terminologyService.addRelation(new Relation(RelationType.VARIATION, term1, term2));
+		terminologyService.addRelation(new Relation(RelationType.VARIATION, term1, term3));
+		terminologyService.addRelation(new Relation(RelationType.VARIATION, term4, term3));
 		
 		assertThat(terminologyService.inboundRelations(term1).collect(toList()))
 			.isEmpty();
@@ -74,7 +74,7 @@ public class TerminologyServiceSpec {
 	
 	@Test
 	public void testAddRelation() {
-		TermRelation r = new TermRelation(RelationType.VARIATION, term1, term2);
+		Relation r = new Relation(RelationType.VARIATION, term1, term2);
 		r.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		terminologyService.addRelation(r);
 		
@@ -88,9 +88,9 @@ public class TerminologyServiceSpec {
 	
 	@Test
 	public void testAddRelationTwiceSetTwoRelations() {
-		TermRelation termVariation1 = new TermRelation(RelationType.VARIATION, term1, term2);
+		Relation termVariation1 = new Relation(RelationType.VARIATION, term1, term2);
 		termVariation1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
-		TermRelation termVariation2 = new TermRelation(RelationType.VARIATION, term1, term2);
+		Relation termVariation2 = new Relation(RelationType.VARIATION, term1, term2);
 		termVariation2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 
 		UnitTests.addRelation(terminology, termVariation1);
@@ -103,11 +103,11 @@ public class TerminologyServiceSpec {
 			;
 	}
 
-	public Collection<TermRelation> outRels(Term from) {
+	public Collection<Relation> outRels(Term from) {
 		return terminologyService.outboundRelations(from).collect(toList());
 	}
 
-	public Collection<TermRelation> inRels(Term to) {
+	public Collection<Relation> inRels(Term to) {
 		return terminologyService.inboundRelations(to).collect(toList());
 	}
 
@@ -120,7 +120,7 @@ public class TerminologyServiceSpec {
 		assertThat(outRels(this.term4)).hasSize(0);
 		assertThat(inRels(this.term4)).hasSize(0);
 		
-		TermRelation rel1 = new TermRelation(RelationType.VARIATION, term5, term3);
+		Relation rel1 = new Relation(RelationType.VARIATION, term5, term3);
 		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel1);
@@ -133,7 +133,7 @@ public class TerminologyServiceSpec {
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata");
 		
-		TermRelation rel2 = new TermRelation(RelationType.VARIATION, term5, term4);
+		Relation rel2 = new Relation(RelationType.VARIATION, term5, term4);
 		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel2.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel2);
@@ -147,7 +147,7 @@ public class TerminologyServiceSpec {
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata","Tata");
 		
-		TermRelation rel3 = new TermRelation(RelationType.VARIATION, term5, term3);
+		Relation rel3 = new Relation(RelationType.VARIATION, term5, term3);
 		rel3.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel3.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel3);
@@ -166,11 +166,11 @@ public class TerminologyServiceSpec {
 	
 	@Test
 	public void testRemoveTermWithRelations() {
-		TermRelation termVariation = new TermRelation(RelationType.VARIATION, term1, term2);
+		Relation termVariation = new Relation(RelationType.VARIATION, term1, term2);
 		terminologyService.addRelation(termVariation);
-		TermRelation termVariation2 = new TermRelation(RelationType.VARIATION, term2, term3);
+		Relation termVariation2 = new Relation(RelationType.VARIATION, term2, term3);
 		terminologyService.addRelation(termVariation2);
-		TermRelation termVariation3 = new TermRelation(RelationType.VARIATION, term3, term1);
+		Relation termVariation3 = new Relation(RelationType.VARIATION, term3, term1);
 		terminologyService.addRelation(termVariation3);
 		TermSuiteAssertions.assertThat(terminology)
 			.hasNTerms(5)

@@ -64,7 +64,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
 import fr.univnantes.termsuite.test.unit.TestUtil;
@@ -126,11 +126,11 @@ public class JsonTerminologyIOSpec {
 		store.addOccurrence(term2, "source1", 10, 12, form2);
 		store.addOccurrence(term2, "source2", 14, 20, form2);
 		UnitTests.addTerm(termino, term2);
-		TermRelation rel1 = new TermRelation(RelationType.VARIATION, term1, term2);
+		Relation rel1 = new Relation(RelationType.VARIATION, term1, term2);
 		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
 		UnitTests.addRelation(termino, rel1);
-		TermRelation rel2 = new TermRelation(RelationType.VARIATION, term1, term2);
+		Relation rel2 = new Relation(RelationType.VARIATION, term1, term2);
 		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
 		rel2.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, 0.956d);
 		UnitTests.addRelation(termino, rel2);
@@ -149,7 +149,7 @@ public class JsonTerminologyIOSpec {
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
 		Terminology termino = indexedCorpus.getTerminology();
-		TermRelation rel = termino.getOutboundRelations().get(term1).iterator().next();
+		Relation rel = termino.getOutboundRelations().get(term1).iterator().next();
 		termino.getOutboundRelations().remove(term1, rel);
 		StringWriter writer = new StringWriter();
 		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(true));

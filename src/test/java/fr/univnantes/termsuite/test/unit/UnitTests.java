@@ -47,7 +47,7 @@ import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
@@ -250,7 +250,7 @@ public class UnitTests {
 		return term;
 	}
 
-	public static void addRelation(Terminology terminology, TermRelation r) {
+	public static void addRelation(Terminology terminology, Relation r) {
 		terminology.getOutboundRelations().put(r.getFrom(), r);
 	}
 

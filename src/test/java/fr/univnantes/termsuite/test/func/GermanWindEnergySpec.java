@@ -44,7 +44,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 
 public class GermanWindEnergySpec extends WindEnergySpec {
@@ -268,7 +268,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
-		List<TermRelation> msnanVars = termino.getOutboundRelations().values().stream()
+		List<Relation> msnanVars = termino.getOutboundRelations().values().stream()
 				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
 				.collect(Collectors.toList());
 		// TODO investigate why the size varies

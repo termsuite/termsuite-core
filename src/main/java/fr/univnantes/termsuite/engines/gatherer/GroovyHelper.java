@@ -35,7 +35,7 @@ import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class GroovyHelper {
@@ -59,9 +59,9 @@ public class GroovyHelper {
 		if(targetTerm == null)
 			return false;
 		
-		TermRelation tv;
-		Set<TermRelation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.DERIVES_INTO).collect(toSet());
-		for(Iterator<TermRelation> it = outboundRelations.iterator()
+		Relation tv;
+		Set<Relation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.DERIVES_INTO).collect(toSet());
+		for(Iterator<Relation> it = outboundRelations.iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -82,9 +82,9 @@ public class GroovyHelper {
 		if(targetTerm == null)
 			return false;
 		
-		TermRelation tv;
-		Set<TermRelation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).collect(toSet());
-		for(Iterator<TermRelation> it = outboundRelations.iterator()
+		Relation tv;
+		Set<Relation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).collect(toSet());
+		for(Iterator<Relation> it = outboundRelations.iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();

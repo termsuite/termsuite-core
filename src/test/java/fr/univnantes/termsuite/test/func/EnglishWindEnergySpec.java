@@ -49,7 +49,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -173,7 +173,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testInferenceOnHorizontalAxis() {
-		Optional<TermRelation> rel1 = UnitTests.getTerminologyService(corpus)
+		Optional<Relation> rel1 = UnitTests.getTerminologyService(corpus)
 				.variations("nnn: horizontal-axis wind turbine", "annn: horizontal axis wind turbine")
 				.findFirst();
 
@@ -223,11 +223,11 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 	@Test
 	public void testMorphologicalVariations() {
-		Stream<TermRelation> variationsTypedMorpho = UnitTests.getTerminologyService(corpus)
+		Stream<Relation> variationsTypedMorpho = UnitTests.getTerminologyService(corpus)
 				.variations(VariationType.MORPHOLOGICAL);
 		assertThat(variationsTypedMorpho.collect(Collectors.toList())).hasSize(458);
 
-		Stream<TermRelation> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
+		Stream<Relation> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
 				.relations(RelationProperty.IS_MORPHOLOGICAL, true);
 		assertThat(variationsTaggedMorpho.collect(Collectors.toList())).hasSize(958);
 	}

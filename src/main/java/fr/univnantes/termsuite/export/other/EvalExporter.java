@@ -5,7 +5,7 @@ import java.io.Writer;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class EvalExporter {
 	
@@ -28,7 +28,7 @@ public class EvalExporter {
 		try {
 			for(Term t: termino.getTerms().values()) {
 				if(this.withVariants) {
-					for (TermRelation v : termino.getOutboundRelations().get(t))
+					for (Relation v : termino.getOutboundRelations().get(t))
 						writer.write(v.getTo().getGroupingKey() + "#");
 				}
 				writer.write(t.getGroupingKey());

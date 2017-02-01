@@ -15,7 +15,7 @@ import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class VariantEvalExporter {
@@ -59,7 +59,7 @@ public class VariantEvalExporter {
 		}
 	}
 	
-	private void printVariation(Writer writer, int termRank, int variantRank, TermRelation variation) throws IOException {
+	private void printVariation(Writer writer, int termRank, int variantRank, Relation variation) throws IOException {
 		Term variant = variation.getTo();
 		String pilot = variant.getPilot();
 		writer.write(Integer.toString(termRank));

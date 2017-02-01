@@ -56,7 +56,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -112,7 +112,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 			VariationType.DERIVATION,
 	};
 
-	public void addVariant(TerminologyService termino, TermRelation variation, boolean showVariantTag) throws IOException {
+	public void addVariant(TerminologyService termino, Relation variation, boolean showVariantTag) throws IOException {
 		Preconditions.checkArgument(variation.getType() == RelationType.VARIATION, "Relation is not a variation: %s", variation);
 		Preconditions.checkArgument(variation.isPropertySet(RelationProperty.VARIATION_TYPE), "Property %s not set for variation %s", RelationProperty.VARIATION_TYPE, variation);
 		List<String> line = Lists.newArrayList();

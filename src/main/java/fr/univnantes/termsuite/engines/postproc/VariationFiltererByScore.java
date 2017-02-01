@@ -10,7 +10,7 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 
 public class VariationFiltererByScore extends SimpleEngine {
@@ -22,7 +22,7 @@ public class VariationFiltererByScore extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		Set<TermRelation> remRelations = terminology.variations()
+		Set<Relation> remRelations = terminology.variations()
 				.filter(this::filterVariation)
 				.collect(Collectors.toSet());
 		remRelations
@@ -32,7 +32,7 @@ public class VariationFiltererByScore extends SimpleEngine {
 		TermPostProcessor.logVariationsAndTerms(logger, terminology);
 	}
 
-	private boolean filterVariation(TermRelation relation) {
+	private boolean filterVariation(Relation relation) {
 		Term variant = relation.getTo();
 		Term base = relation.getFrom();
 		if(relation.getPropertyDoubleValue(RelationProperty.VARIANT_SCORE) < config.getVariationScoreTh()) {

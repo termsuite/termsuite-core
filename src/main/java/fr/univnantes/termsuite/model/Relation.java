@@ -24,12 +24,12 @@ package fr.univnantes.termsuite.model;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
-public class TermRelation extends PropertyHolder<RelationProperty> {
+public class Relation extends PropertyHolder<RelationProperty> {
 	private RelationType relationType;
 	private Term from;
 	private Term to;
 	
-	public TermRelation(RelationType variationType, Term from, Term to) {
+	public Relation(RelationType variationType, Term from, Term to) {
 		super(RelationProperty.class);
 		Preconditions.checkNotNull(from);
 		Preconditions.checkNotNull(to);
@@ -66,8 +66,8 @@ public class TermRelation extends PropertyHolder<RelationProperty> {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof TermRelation) {
-			TermRelation v = (TermRelation) obj;
+		if (obj instanceof Relation) {
+			Relation v = (Relation) obj;
 			return Objects.equal(this.from, v.from)
 					&& Objects.equal(this.to, v.to)
 					&& Objects.equal(this.relationType, v.relationType)

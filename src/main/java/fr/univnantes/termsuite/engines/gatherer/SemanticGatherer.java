@@ -24,7 +24,7 @@ import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -111,7 +111,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		for(String key:index.keySet()) {
 			Term t1, t2, a1, a2;
 			Pair<Term> pair;
-			List<TermRelation> t1SemRelations;
+			List<Relation> t1SemRelations;
 			List<Term> terms = index.getTerms(key).stream()
 					.filter(t->rule.getSourcePatterns().contains(t.getPattern()))
 					.collect(Collectors.toList());
@@ -137,7 +137,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 					else
 						a2 = terminology.getTerm(akey2);
 					
-					TermRelation rel = null;
+					Relation rel = null;
 					if(areDicoSynonyms(a1, a2)) {
 						nbDicoRelationFound.incrementAndGet();
 						rel = buildDicoVariation(terminology, t1, t2);
@@ -195,16 +195,16 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		return score;
 	}
 
-	private TermRelation buildDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
-		TermRelation rel = TermSuiteFactory.createVariation(VariationType.SEMANTIC, t1, t2);
+	private Relation buildDistributionalVariation(TerminologyService terminoService, Term t1, Term t2, Double value) {
+		Relation rel = TermSuiteFactory.createVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 		rel.setProperty(RelationProperty.IS_DICO, false);
 		rel.setProperty(RelationProperty.SEMANTIC_SIMILARITY, value);
 		return rel;
 	}
 
-	private TermRelation buildDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
-		TermRelation rel = TermSuiteFactory.createVariation(VariationType.SEMANTIC, t1, t2);
+	private Relation buildDicoVariation(TerminologyService terminoService, Term t1, Term t2) {
+		Relation rel = TermSuiteFactory.createVariation(VariationType.SEMANTIC, t1, t2);
 		rel.setProperty(RelationProperty.IS_DICO, true);
 		rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
 		return rel;
@@ -215,7 +215,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 				|| dico.getValues(a2.getLemma()).contains(a1.getLemma());
 	}
 
-	private void watch(TermRelation rel) {
+	private void watch(Relation rel) {
 		if(history.isPresent()) {
 			Term t1 = rel.getFrom();
 			Term t2 = rel.getTo();

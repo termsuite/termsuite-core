@@ -16,7 +16,7 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -82,14 +82,14 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 				Term m1 = relation.getFrom();
 				Term m2 = relation.getTo();
 				
-				List<TermRelation> m1Extensions = terminology.extensions(m1).collect(toList());
-				for(TermRelation rel1:m1Extensions) {
+				List<Relation> m1Extensions = terminology.extensions(m1).collect(toList());
+				for(Relation rel1:m1Extensions) {
 					Term affix1 = TermUtils.getExtensionAffix(terminology, m1, rel1.getTo());
 					if(affix1 == null)
 						continue;
 					
-					List<TermRelation> m2extensions = terminology.extensions(m2).collect(toList());
-					for(TermRelation rel2:m2extensions) {
+					List<Relation> m2extensions = terminology.extensions(m2).collect(toList());
+					for(Relation rel2:m2extensions) {
 							Term affix2 = TermUtils.getExtensionAffix(terminology, m2, rel2.getTo());
 							if(affix2 == null)
 								continue;
@@ -100,7 +100,7 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 								if(logger.isTraceEnabled()) 
 									logger.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
 								
-								TermRelation inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
+								Relation inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
 								inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.SEMANTIC_SIMILARITY);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DICO);
@@ -120,14 +120,14 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 		logger.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
 	}
 
-	public void copyRelationPropertyIfSet(TermRelation baseRelation, TermRelation inferedRel, RelationProperty property) {
+	public void copyRelationPropertyIfSet(Relation baseRelation, Relation inferedRel, RelationProperty property) {
 		if(baseRelation.isPropertySet(property))
 			inferedRel.setProperty(
 					property, 
 					baseRelation.get(property));
 	}
 
-	private void watch(TermRelation inferedRel, TermRelation r1, TermRelation r2) {
+	private void watch(Relation inferedRel, Relation r1, Relation r2) {
 		if(history.isPresent()) {
 			if(history.get().isWatched(inferedRel.getTo()))
 				history.get().saveEvent(inferedRel.getTo().getGroupingKey(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));

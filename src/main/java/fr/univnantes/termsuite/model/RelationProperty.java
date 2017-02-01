@@ -7,7 +7,7 @@ import com.google.common.collect.ComparisonChain;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 
-public enum RelationProperty implements Property<TermRelation> {
+public enum RelationProperty implements Property<Relation> {
 	VARIATION_RANK("VariationRank", "vrank", "vrank", Integer.class),
 	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
 	VARIATION_TYPE("VariationRuleType", "vtype", "vtype", VariationType.class),
@@ -78,7 +78,7 @@ public enum RelationProperty implements Property<TermRelation> {
 	}
 
 	@Override
-	public int compare(TermRelation o1, TermRelation o2) {
+	public int compare(Relation o1, Relation o2) {
 		return ComparisonChain.start()
 				.compare(
 						o1.getPropertyValueUnchecked(this), 
@@ -100,15 +100,15 @@ public enum RelationProperty implements Property<TermRelation> {
 	}
 
 	@Override
-	public Comparator<TermRelation> getComparator() {
+	public Comparator<Relation> getComparator() {
 		return getComparator(false);
 	}
 
 	@Override
-	public Comparator<TermRelation> getComparator(boolean reverse) {
-		return new Comparator<TermRelation>() {
+	public Comparator<Relation> getComparator(boolean reverse) {
+		return new Comparator<Relation>() {
 			@Override
-			public int compare(TermRelation o1, TermRelation o2) {
+			public int compare(Relation o1, Relation o2) {
 				return reverse ? 
 						RelationProperty.this.compare(o2, o1) :
 							RelationProperty.this.compare(o1, o2)

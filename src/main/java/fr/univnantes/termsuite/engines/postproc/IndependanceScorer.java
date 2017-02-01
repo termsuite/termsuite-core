@@ -13,7 +13,7 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import jetbrains.exodus.core.dataStructures.hash.HashSet;
 
 public class IndependanceScorer extends SimpleEngine {
@@ -33,7 +33,7 @@ public class IndependanceScorer extends SimpleEngine {
 	}
 
 	public void checkNoCycleInExtensions() {
-		Predicate<TermRelation> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
+		Predicate<Relation> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
 		if(terminology.extensions().filter(badExtension).findFirst().isPresent()) {
 			terminology.extensions()
 				.filter(badExtension)

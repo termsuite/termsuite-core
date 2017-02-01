@@ -36,7 +36,7 @@ import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class TbxExporter {
 
@@ -183,10 +183,10 @@ public class TbxExporter {
 		langSet.setAttribute("xml:lang", termino.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (TermRelation variation : termino.inboundRelations(term).collect(toSet())) 
+		for (Relation variation : termino.inboundRelations(term).collect(toSet())) 
 			this.addTermBase(tbxDocument, langSet, variation.getFrom().getGroupingKey(), null);
 
-		for (TermRelation variation : termino.outboundRelations(term).collect(toSet())) {
+		for (Relation variation : termino.outboundRelations(term).collect(toSet())) {
 			this.addTermVariant(tbxDocument, langSet, String.format("langset-%d", getId(variation.getTo())),
 					variation.getTo().getGroupingKey());
 		}

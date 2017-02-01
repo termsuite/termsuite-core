@@ -43,7 +43,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.utils.StringUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -55,11 +55,11 @@ import fr.univnantes.termsuite.utils.TermUtils;
  *
  */
 public class VariationScorer extends SimpleEngine {
-	private static final Predicate<? super TermRelation> NOT_SEMANTIC = v -> 
+	private static final Predicate<? super Relation> NOT_SEMANTIC = v -> 
 			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
 			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
 					|| !v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
-	private static final Predicate<? super TermRelation> SEMANTIC = v -> 
+	private static final Predicate<? super Relation> SEMANTIC = v -> 
 		v.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC 
 		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
 				&& v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
@@ -99,7 +99,7 @@ public class VariationScorer extends SimpleEngine {
 	}
 
 	private void normalizeExtensionScores() {
-		Predicate<? super TermRelation> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
+		Predicate<? super Relation> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
 		if(!terminology.relations().filter(extensionSet).findFirst().isPresent()) {
 			logger.warn("Found no relation with property {} set.", extensionSet);
 			return;
@@ -161,7 +161,7 @@ public class VariationScorer extends SimpleEngine {
 	}
 
 	
-	private int recursiveDoVariationFrenquencies(TermRelation rel, Set<Term> visitedTerms) {
+	private int recursiveDoVariationFrenquencies(Relation rel, Set<Term> visitedTerms) {
 		Term term = rel.getTo();
 		if(visitedTerms.contains(term)) {
 			return 0;
@@ -215,7 +215,7 @@ public class VariationScorer extends SimpleEngine {
 		
 		for(Term from:terminology.getTerms()) {
 			Set<Term> extensions = terminology.outboundRelations(from, RelationType.HAS_EXTENSION)
-					.map(TermRelation::getTo)
+					.map(Relation::getTo)
 					.collect(Collectors.toSet());
 			terminology.outboundRelations(from, RelationType.VARIATION).forEach( variation -> {
 				if(extensions.contains(variation.getTo())) {

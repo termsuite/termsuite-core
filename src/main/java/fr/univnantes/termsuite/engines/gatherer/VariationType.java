@@ -1,11 +1,11 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 /**
  * 
- * When a {@link TermRelation} is a variation, this enum
+ * When a {@link Relation} is a variation, this enum
  * represents the variation type.
  * 
  * @author Damien Cram

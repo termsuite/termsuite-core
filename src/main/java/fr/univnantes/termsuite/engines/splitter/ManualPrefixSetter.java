@@ -34,7 +34,7 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
@@ -56,8 +56,8 @@ public class ManualPrefixSetter extends SimpleEngine {
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					List<TermRelation> outboundRels = terminology.outboundRelations(swt, RelationType.IS_PREFIX_OF).collect(toList());
-					for(TermRelation tv:outboundRels) {
+					List<Relation> outboundRels = terminology.outboundRelations(swt, RelationType.IS_PREFIX_OF).collect(toList());
+					for(Relation tv:outboundRels) {
 						terminology.removeRelation(tv);
 						watch(swt, tv);
 					}
@@ -69,7 +69,7 @@ public class ManualPrefixSetter extends SimpleEngine {
 		}
 	}
 
-	private void watch(Term swt, TermRelation tv) {
+	private void watch(Term swt, Relation tv) {
 		if(history.isPresent()) {
 			if(history.get().isGKeyWatched(swt.getGroupingKey()))
 				history.get().saveEvent(

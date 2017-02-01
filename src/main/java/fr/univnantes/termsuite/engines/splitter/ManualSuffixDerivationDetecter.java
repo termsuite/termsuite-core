@@ -34,7 +34,7 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public class ManualSuffixDerivationDetecter extends SimpleEngine {
@@ -46,27 +46,27 @@ public class ManualSuffixDerivationDetecter extends SimpleEngine {
 	public void execute() {
 		Term regularForm;
 		String lemma;
-		List<TermRelation> toRem;
+		List<Relation> toRem;
 		for(Term derivateForm:terminology.getTerms()) {
 			if(!derivateForm.isSingleWord())
 				continue;
 			toRem = Lists.newArrayList();
 			lemma = derivateForm.getWords().get(0).getWord().getLemma();
 			for(String regularFormException:manualSuffixDerivations.getValues(lemma)) {
-				for(TermRelation tv:terminology.inboundRelations(derivateForm, RelationType.DERIVES_INTO).collect(toList())) {
+				for(Relation tv:terminology.inboundRelations(derivateForm, RelationType.DERIVES_INTO).collect(toList())) {
 					regularForm = tv.getFrom();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 
 						toRem.add(tv);
 				}
 			}
-			for(TermRelation rem:toRem) {
+			for(Relation rem:toRem) {
 				terminology.removeRelation(rem);
 				watch(rem);
 			}
 		}
 	}
 
-	private void watch(TermRelation rem) {
+	private void watch(Relation rem) {
 		if(history.isPresent()) {
 			if(history.get().isGKeyWatched(rem.getFrom().getGroupingKey())) {
 				history.get().saveEvent(

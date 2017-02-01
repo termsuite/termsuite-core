@@ -46,7 +46,7 @@ import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 
 /**
@@ -187,9 +187,9 @@ public class ControlFilesGenerator {
 		return Joiner.on("|").join(componentStrings);
 	}
 	
-	private void writeVariations(String path, Stream<TermRelation> variations, RelationProperty... additionalProperties) throws IOException {
+	private void writeVariations(String path, Stream<Relation> variations, RelationProperty... additionalProperties) throws IOException {
 		Writer writer = new FileWriter(path);
-		for(TermRelation tv:variations.collect(Collectors.toList())) {
+		for(Relation tv:variations.collect(Collectors.toList())) {
 			writer.append(tv.getFrom().getGroupingKey());
 			writer.append("\t");
 			writer.append(tv.getTo().getGroupingKey());

@@ -18,7 +18,7 @@ import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public abstract class VariationTypeGatherer extends SimpleEngine {
@@ -54,7 +54,7 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 	}
 	
 
-	private void watch(Term source, Term target, TermRelation tv) {
+	private void watch(Term source, Term target, Relation tv) {
 		if(history.isPresent()) {
 			if(history.get().isGKeyWatched(source.getGroupingKey()))
 				history.get().saveEvent(
@@ -103,10 +103,10 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 	}
 
 	private synchronized void createVariationRuleRelation(TerminologyService terminoService, Term source, Term target, VariantRule rule) {
-		Optional<TermRelation> variation = terminoService.getVariation(source, target);
+		Optional<Relation> variation = terminoService.getVariation(source, target);
 				
 		if(!variation.isPresent()){
-			TermRelation relation = terminoService.createVariation(rule.getVariationType(), source, target);
+			Relation relation = terminoService.createVariation(rule.getVariationType(), source, target);
 			relation.setProperty(RelationProperty.IS_GRAPHICAL, false);
 			variation = Optional.of(relation);
 			watch(source, target, relation);

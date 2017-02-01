@@ -18,7 +18,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -40,7 +40,7 @@ public class TsvExporterSpec {
 		term2 = TermFactory.termMock("t2", 2, 1, 0.8);
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
 		
-		TermRelation tv = new TermRelation(RelationType.VARIATION, term3, term1);
+		Relation tv = new Relation(RelationType.VARIATION, term3, term1);
 		tv.setProperty(RelationProperty.VARIATION_TYPE, VariationType.MORPHOLOGICAL);
 		UnitTests.addTerm(termino, term1);
 		UnitTests.addTerm(termino, term2);

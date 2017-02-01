@@ -12,15 +12,15 @@ import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class VariantDistributionExporter  {
 	
-	private Predicate<TermRelation> selector;
+	private Predicate<Relation> selector;
 	
 	private List<RelationProperty> relationProperties = Lists.newArrayList();
 	
-	public VariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<TermRelation> selector) {
+	public VariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<Relation> selector) {
 		super();
 		this.selector = selector;
 		this.relationProperties = relationProperties;

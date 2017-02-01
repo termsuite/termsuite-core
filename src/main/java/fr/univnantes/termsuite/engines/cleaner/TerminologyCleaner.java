@@ -18,7 +18,7 @@ import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class TerminologyCleaner extends SimpleEngine {
@@ -67,7 +67,7 @@ public class TerminologyCleaner extends SimpleEngine {
 				.filter(term -> term.getPropertyBooleanValue(TermProperty.FILTERED));
 		else {
 			Set<Term> keptTerms = termino.variations()
-					.map(TermRelation::getTo)
+					.map(Relation::getTo)
 					.collect(toSet());
 
 			terms = terms

@@ -35,7 +35,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
@@ -107,8 +107,8 @@ public class TermSuiteFactory {
 		return createIndexedCorpus(createTerminology(lang, name), createMemoryOccurrenceStore(lang));
 	}
 
-	public static TermRelation createVariation(VariationType variationType, Term from, Term to) {
-		TermRelation relation = new TermRelation(RelationType.VARIATION, from, to);
+	public static Relation createVariation(VariationType variationType, Term from, Term to) {
+		Relation relation = new Relation(RelationType.VARIATION, from, to);
 		for(VariationType vType:VariationType.values())
 			relation.setProperty(vType.getRelationProperty(), false);
 		relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
@@ -144,7 +144,7 @@ public class TermSuiteFactory {
 		return new BaseExporter(new TermDistributionExporter(termProperties, selector));
 	}
 
-	public static TerminologyExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<TermRelation> selector) {
+	public static TerminologyExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<Relation> selector) {
 		return new BaseExporter(new VariantDistributionExporter(relationProperties, selector));
 	}
 

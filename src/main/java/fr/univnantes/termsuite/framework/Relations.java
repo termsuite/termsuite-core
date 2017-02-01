@@ -7,11 +7,11 @@ import com.google.common.collect.Ordering;
 
 import fr.univnantes.termsuite.metrics.HarmonicMean;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 
 public class Relations {
 	
-	public static Comparator<TermRelation> relFreqHmean() {
+	public static Comparator<Relation> relFreqHmean() {
 		final HarmonicMean harmonicMean = new HarmonicMean();
 		return Ordering
 				.natural()
@@ -21,7 +21,7 @@ public class Relations {
 				);
 	}
 	
-	private static class BooleanPropertyPredicate implements Predicate<TermRelation> {
+	private static class BooleanPropertyPredicate implements Predicate<Relation> {
 		private RelationProperty property;
 		private boolean logicalNot;
 		
@@ -36,21 +36,21 @@ public class Relations {
 		}
 
 		@Override
-		public boolean test(TermRelation t) {
+		public boolean test(Relation t) {
 			boolean b = t.isPropertySet(property)
 					&& t.getPropertyBooleanValue(property);
 			return logicalNot ? !b : b;
 		}
 	}
 
-	public static Predicate<TermRelation> IS_MORPHOLOGICAL = new BooleanPropertyPredicate(RelationProperty.IS_MORPHOLOGICAL);
-	public static Predicate<TermRelation> IS_DERIVATION = new BooleanPropertyPredicate(RelationProperty.IS_DERIVATION);
-	public static Predicate<TermRelation> IS_PREFIXATION = new BooleanPropertyPredicate(RelationProperty.IS_PREFIXATION);
-	public static Predicate<TermRelation> IS_SYNTAGMATIC = new BooleanPropertyPredicate(RelationProperty.IS_SYNTAGMATIC);
-	public static Predicate<TermRelation> IS_GRAPHICAL = new BooleanPropertyPredicate(RelationProperty.IS_GRAPHICAL);
-	public static Predicate<TermRelation> IS_SEMANTIC = new BooleanPropertyPredicate(RelationProperty.IS_SEMANTIC);
-	public static Predicate<TermRelation> IS_INFERENCE = new BooleanPropertyPredicate(RelationProperty.IS_INFERED);
-	public static Predicate<TermRelation> NOT_INFERED = new BooleanPropertyPredicate(RelationProperty.IS_INFERED, true);
+	public static Predicate<Relation> IS_MORPHOLOGICAL = new BooleanPropertyPredicate(RelationProperty.IS_MORPHOLOGICAL);
+	public static Predicate<Relation> IS_DERIVATION = new BooleanPropertyPredicate(RelationProperty.IS_DERIVATION);
+	public static Predicate<Relation> IS_PREFIXATION = new BooleanPropertyPredicate(RelationProperty.IS_PREFIXATION);
+	public static Predicate<Relation> IS_SYNTAGMATIC = new BooleanPropertyPredicate(RelationProperty.IS_SYNTAGMATIC);
+	public static Predicate<Relation> IS_GRAPHICAL = new BooleanPropertyPredicate(RelationProperty.IS_GRAPHICAL);
+	public static Predicate<Relation> IS_SEMANTIC = new BooleanPropertyPredicate(RelationProperty.IS_SEMANTIC);
+	public static Predicate<Relation> IS_INFERENCE = new BooleanPropertyPredicate(RelationProperty.IS_INFERED);
+	public static Predicate<Relation> NOT_INFERED = new BooleanPropertyPredicate(RelationProperty.IS_INFERED, true);
 
 
 }

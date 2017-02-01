@@ -15,7 +15,7 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -38,7 +38,7 @@ public class TermMerger extends SimpleEngine {
 	public void execute() {
 		final MutableInt nbMerged = new MutableInt(0);
 		
-		List<TermRelation> relationsToMerge = terminology.variations()
+		List<Relation> relationsToMerge = terminology.variations()
 			.filter(rel -> rel.isPropertySet(RelationProperty.IS_GRAPHICAL)
 							&& rel.isPropertySet(RelationProperty.IS_PREFIXATION)
 							&& rel.isPropertySet(RelationProperty.IS_DERIVATION)
@@ -94,7 +94,7 @@ public class TermMerger extends SimpleEngine {
 		}
 	}
 
-	private void watch(TermRelation rel) {
+	private void watch(Relation rel) {
 		if(history.isPresent()) {
 			if(history.get().isWatched(rel.getFrom()) )
 				history.get().saveEvent(rel.getFrom().getGroupingKey(), this.getClass(), String.format(

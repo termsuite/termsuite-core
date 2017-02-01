@@ -62,7 +62,7 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
@@ -393,7 +393,7 @@ public class JsonTerminologyIO {
 						
 						RelationType vType = RelationType.fromShortName(relationType);
 						
-						TermRelation tv = new TermRelation(
+						Relation tv = new Relation(
 								vType, 
 								b, 
 								v);
@@ -684,7 +684,7 @@ public class JsonTerminologyIO {
 		/* Variants */
 		jg.writeFieldName(TERM_RELATIONS);
 		jg.writeStartArray();
-		for(Entry<Term, TermRelation> entry:terminology.getOutboundRelations().entries()) {
+		for(Entry<Term, Relation> entry:terminology.getOutboundRelations().entries()) {
 			jg.writeStartObject();
 			jg.writeFieldName(FROM);
 			jg.writeString(entry.getValue().getFrom().getGroupingKey());
