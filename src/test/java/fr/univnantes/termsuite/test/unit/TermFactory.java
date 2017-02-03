@@ -34,14 +34,15 @@ import com.google.common.base.Preconditions;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermFactory {
 	private Terminology termino;
@@ -70,6 +71,7 @@ public class TermFactory {
 			builder.addWord(lemma, stem, label, label.equals("N") || label.equals("A"));
 		}
 		Term term = builder.create();
+		term.setProperty(TermProperty.LEMMA, TermUtils.getTermLemma(term));
 		termino.getTerms().put(term.getGroupingKey(), term);
 		return term;
 	}

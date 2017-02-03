@@ -7,13 +7,13 @@ import org.junit.Test;
 
 import com.google.common.collect.Multimap;
 
-import fr.univnantes.termsuite.engines.gatherer.RelationPairBasedGatherer;
+import fr.univnantes.termsuite.engines.gatherer.DerivationGatherer;
+import fr.univnantes.termsuite.engines.gatherer.PrefixationGatherer;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -22,9 +22,11 @@ public class RelationPairsBasedGathererSpec {
 	private Term synchrone, asynchrone, machine_synchrone_de_stator, machine_synchrone, machine_statorique, machine_de_stator, statorique, stator;
 
 	private TerminologyService terminology;
-	
+	private PrefixationGatherer prefixationAe;
+	private DerivationGatherer derivationAe;
+
 	@Before
-	public void setup() {
+	public void setup() throws InstantiationException, IllegalAccessException {
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
 		Terminology termino = indexedCorpus.getTerminology();
 		TermFactory termFactory = new TermFactory(termino);
@@ -41,12 +43,19 @@ public class RelationPairsBasedGathererSpec {
 		termFactory.addPrefix(this.asynchrone, this.synchrone);
 		termFactory.addDerivesInto("N A", this.stator, this.statorique);
 
+		prefixationAe = new PrefixationGatherer();
+		UnitTests.injectIndexes(prefixationAe, "terminology", termino);
+		UnitTests.setField(prefixationAe, "terminology", terminology);
+
+		derivationAe = new DerivationGatherer();
+		UnitTests.injectIndexes(derivationAe, "terminology", termino);
+		UnitTests.setField(derivationAe, "terminology", terminology);
 
 	}
 	
 	@Test
 	public void testDerivationKeying() throws Exception {
-		Multimap<String, Term> classes = RelationPairBasedGatherer.getRelationIndex(terminology, RelationType.DERIVES_INTO);
+		Multimap<String, Term> classes = derivationAe.getRelationIndex();
 		assertThat(classes.get("stator+statorique"))
 			.contains(this.machine_de_stator)
 			.contains(this.machine_statorique)
@@ -60,7 +69,7 @@ public class RelationPairsBasedGathererSpec {
 
 	@Test
 	public void testPrefixationKeying() throws Exception {
-		Multimap<String, Term> classes = RelationPairBasedGatherer.getRelationIndex(terminology, RelationType.IS_PREFIX_OF);
+		Multimap<String, Term> classes = prefixationAe.getRelationIndex();
 
 		assertThat(classes.get("asynchrone+synchrone"))
 			.contains(machine_synchrone)

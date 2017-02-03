@@ -77,5 +77,4 @@ public class Relation extends PropertyHolder<RelationProperty> {
 			return false;
 	}
 
-	
 }

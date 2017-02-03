@@ -12,9 +12,9 @@ import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -51,7 +51,7 @@ public class ExtensionDetecter extends SimpleEngine {
 		
 		logger.debug("Detecting size-1 extensions");
 		for (String swtGroupingKey : swtIndex.keySet()) {
-			Term swt = terminology.getTerm(swtGroupingKey);
+			Term swt = terminology.getTerm(swtGroupingKey).getTerm();
 			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
 				if(swt.equals(term) || term.getWords().size() == 1)
 					continue;

@@ -6,7 +6,7 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.uima.ResourceType;
 import uima.sandbox.filter.resources.FilterResource;
 
@@ -20,8 +20,8 @@ public class StopWordCleaner extends SimpleEngine {
 
 		Set<String> filters = filter.getFilters();
 		
-		Set<Term> toRem = Sets.newHashSet();
-		for(Term t:terminology.getTerms()) {
+		Set<TermService> toRem = Sets.newHashSet();
+		for(TermService t:terminology.getTerms()) {
 			if(filters.contains(t.getWords().get(0).getWord().getLemma())) {
 				// first word of term is a filter word
 				toRem.add(t);
@@ -31,7 +31,7 @@ public class StopWordCleaner extends SimpleEngine {
 			}
 		}
 		
-		for(Term t:toRem) {
+		for(TermService t:toRem) {
 			terminology.removeTerm(t);
 		}
 	}

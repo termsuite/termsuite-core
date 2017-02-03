@@ -1,6 +1,5 @@
 package fr.univnantes.termsuite.engines.postproc;
 
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -8,8 +7,7 @@ import org.slf4j.Logger;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 import fr.univnantes.termsuite.utils.StringUtils;
 
@@ -22,41 +20,40 @@ public class TermFiltererByScore extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		Set<Term> remTerms = terminology.getTerms().stream()
+		terminology.terms()
 			.filter(this::filterTermByThresholds)
-			.collect(Collectors.toSet());
-		remTerms
+			.collect(Collectors.toSet())
 			.parallelStream()
 			.forEach(terminology::removeTerm);
 		
 		TermPostProcessor.logVariationsAndTerms(logger, terminology);
 	}
 
-	private boolean filterTermByThresholds(Term term) {
+	private boolean filterTermByThresholds(TermService term) {
 		if(StringUtils.getOrthographicScore(term.getLemma()) < this.config.getOrthographicScoreTh()) {
 			watchOrthographicFiltering(term);
 			return true;
 		}
-		else if(term.getPropertyDoubleValue(TermProperty.INDEPENDANCE) < this.config.getTermIndependanceTh()) {
+		else if(term.getIndependance() < this.config.getTermIndependanceTh()) {
 			watchIndependanceFiltering(term);
 			return true;
 		}
 		return false;
 	}
 
-	public void watchIndependanceFiltering(Term term) {
-		if(history.isPresent() && history.get().isWatched(term))
+	public void watchIndependanceFiltering(TermService term) {
+		if(history.isPresent() && history.get().isWatched(term.getTerm()))
 			history.get().saveEvent(
 					term.getGroupingKey(), 
 					this.getClass(), 
 					String.format(
 							"Removing term because independence score <%.2f> is under threshhold <%.2f>.",
-							term.getPropertyDoubleValue(TermProperty.INDEPENDANCE),
+							term.getIndependance(),
 							this.config.getTermIndependanceTh()));
 	}
 
-	public void watchOrthographicFiltering(Term term) {
-		if(history.isPresent() && history.get().isWatched(term))
+	public void watchOrthographicFiltering(TermService term) {
+		if(history.isPresent() && history.get().isWatched(term.getTerm()))
 			history.get().saveEvent(
 					term.getGroupingKey(), 
 					this.getClass(), 

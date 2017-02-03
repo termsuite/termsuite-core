@@ -10,14 +10,15 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -104,11 +105,15 @@ public class TerminologyServiceSpec {
 	}
 
 	public Collection<Relation> outRels(Term from) {
-		return terminologyService.outboundRelations(from).collect(toList());
+		return terminologyService.outboundRelations(from)
+				.map(RelationService::getRelation)
+				.collect(toList());
 	}
 
 	public Collection<Relation> inRels(Term to) {
-		return terminologyService.inboundRelations(to).collect(toList());
+		return terminologyService.inboundRelations(to)
+					.map(RelationService::getRelation)
+					.collect(toList());
 	}
 
 	@Test

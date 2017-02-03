@@ -32,9 +32,11 @@ import org.slf4j.Logger;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
@@ -49,17 +51,17 @@ public class ManualPrefixSetter extends SimpleEngine {
 	@Override
 	public void execute()  {
 		Segmentation segmentation;
-		for(Term swt:terminology.getTerms()) {
+		for(TermService swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			Word word = swt.getWords().get(0).getWord();
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					List<Relation> outboundRels = terminology.outboundRelations(swt, RelationType.IS_PREFIX_OF).collect(toList());
-					for(Relation tv:outboundRels) {
+					List<RelationService> outboundRels = swt.outboundRelations(RelationType.IS_PREFIX_OF).collect(toList());
+					for(RelationService tv:outboundRels) {
 						terminology.removeRelation(tv);
-						watch(swt, tv);
+						watch(swt.getTerm(), tv.getRelation());
 					}
 				} else {
 					logger.warn("Ignoring prefix exception {}->{} since non-expty prefix exceptions are not allowed.",

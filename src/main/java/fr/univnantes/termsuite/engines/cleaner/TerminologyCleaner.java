@@ -14,11 +14,11 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions.FilterType;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class TerminologyCleaner extends SimpleEngine {
@@ -61,31 +61,32 @@ public class TerminologyCleaner extends SimpleEngine {
 	}
 
 	private void cleanFilteredTerms(TerminologyService termino) {
-		Stream<Term> terms = termino.terms();
+		Stream<TermService> terms = termino.terms();
 		if(!options.isKeepVariants()) 
 			terms = terms
-				.filter(term -> term.getPropertyBooleanValue(TermProperty.FILTERED));
+				.filter(TermService::isFiltered);
 		else {
-			Set<Term> keptTerms = termino.variations()
-					.map(Relation::getTo)
+			Set<TermService> keptTerms = termino.variations()
+					.map(RelationService::getTo)
 					.collect(toSet());
 
 			terms = terms
-				.filter(term -> term.getPropertyBooleanValue(TermProperty.FILTERED)
-						&& !keptTerms.contains(term));
+				.filter(term -> term.isFiltered() && !keptTerms.contains(term));
 		}
 		terms
 			.collect(toSet())
+			.stream()
+			.map(TermService::getTerm)
 			.forEach(termino::removeTerm);
 	}
 	private void cleanVariations(TerminologyService termino) {
 		termino.variations()
-			.filter(variation -> variation.getPropertyIntegerValue(RelationProperty.VARIATION_RANK) > options.getMaxVariantNum())
+			.filter(variation -> variation.getRank() > options.getMaxVariantNum())
 			.collect(toSet())
 			.forEach(termino::removeRelation);
 
 		termino.variations()
-			.filter(variation -> variation.getFrom().getPropertyBooleanValue(TermProperty.FILTERED))
+			.filter(variation -> variation.getFrom().isFiltered())
 			.collect(toSet())
 			.forEach(termino::removeRelation);
 	}
@@ -95,7 +96,7 @@ public class TerminologyCleaner extends SimpleEngine {
 			term.setProperty(TermProperty.FILTERED, true);
 		});
 		
-		Stream<Term> terms = termino.terms();
+		Stream<Term> terms = termino.terms().map(TermService::getTerm);
 		if(options.getFilterType() == FilterType.TOP_N) 
 			terms = terms
 				.sorted(options.getFilterProperty().getComparator(true))
@@ -103,7 +104,7 @@ public class TerminologyCleaner extends SimpleEngine {
 		
 		if(options.getFilterType() == FilterType.THRESHOLD) 
 			terms = terms
-				.filter(term -> term.getPropertyNumberValue(options.getFilterProperty()).doubleValue() >= options.getThreshold().doubleValue());
+				.filter(term -> term.getNumber(options.getFilterProperty()).doubleValue() >= options.getThreshold().doubleValue());
 
 		terms.forEach(term -> {
 			term.setProperty(TermProperty.FILTERED, false);

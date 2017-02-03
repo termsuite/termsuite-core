@@ -39,6 +39,7 @@ import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.ContextVector.Entry;
 import fr.univnantes.termsuite.model.Document;
@@ -77,8 +78,8 @@ public class Contextualizer extends SimpleEngine {
 		
 		// 0- drop all context vectors
 		logger.debug("0 - Drop all context vectors");
-		for(Term t:terminology.getTerms())
-			t.setContext(null);
+		for(TermService t:terminology.getTerms())
+			t.dropContext();
 		
 		
 		// 1- index all occurrences in source documents
@@ -97,11 +98,11 @@ public class Contextualizer extends SimpleEngine {
 		logger.debug("3b - Normalizing {} context vectors", total);
 		String traceMsg = "[Progress: {} / {}] Normalizing term {}";
 		int progress = 0;
-		for(Term t:IteratorUtils.toIterable(getTermIterator())) {
+		for(TermService t:IteratorUtils.toIterable(getTermIterator())) {
 			++progress;
 			if(progress%500 == 0)
 				logger.trace(traceMsg, progress, total, t);
-			toAssocRateVector(t, crossTable, rate, true);
+			toAssocRateVector(t.getTerm(), crossTable, rate, true);
 		}
 		
 		// 4- Clean occurrence indexes in source documents
@@ -110,13 +111,13 @@ public class Contextualizer extends SimpleEngine {
 	}
 
 	public long setContexts() {
-		long total = terminology.terms().filter(t->t.getWords().size()==1).count();
+		long total = terminology.terms().filter(TermService::isSingleWord).count();
 		logger.debug("2 - Create context vectors. (number of contexts to compute: {})", 
 				total);
-		Iterator<Term> iterator = getTermIterator();
-		for(Term t:IteratorUtils.toIterable(iterator)) {
-			ContextVector vector =computeContextVector(t, options.getScope(), options.getMinimumCooccFrequencyThreshold());
-			t.setContext(vector);
+		Iterator<TermService> iterator = getTermIterator();
+		for(TermService t:IteratorUtils.toIterable(iterator)) {
+			ContextVector vector =computeContextVector(t.getTerm(), options.getScope(), options.getMinimumCooccFrequencyThreshold());
+			t.getTerm().setContext(vector);
 		}
 		return total;
 	}
@@ -125,8 +126,8 @@ public class Contextualizer extends SimpleEngine {
 		documentViews = new HashMap<>();
 		for(Document document:occurrenceStore.getDocuments()) 
 			documentViews.put(document, new DocumentView());
-		for(Term term:terminology.getTerms())
-			for(TermOccurrence occ:occurrenceStore.getOccurrences(term))
+		for(TermService term:terminology.getTerms())
+			for(TermOccurrence occ:occurrenceStore.getOccurrences(term.getTerm()))
 				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
 	}
 
@@ -140,10 +141,10 @@ public class Contextualizer extends SimpleEngine {
 		return rate;
 	}
 
-	private Iterator<Term> getTermIterator() {
+	private Iterator<TermService> getTermIterator() {
 		return terminology
 				.terms()
-				.filter(t->t.getWords().size()==1)
+				.filter(TermService::isSingleWord)
 				.collect(Collectors.toList()).iterator();
 	}
 	
@@ -254,9 +255,9 @@ public class Contextualizer extends SimpleEngine {
 	    Map<Term, AtomicDouble> aPlusC = Maps.newConcurrentMap();
 
         Term term;
-        for (Iterator<Term> it1 = terminology.getTerms().iterator(); 
+        for (Iterator<TermService> it1 = terminology.getTerms().iterator(); 
         		it1.hasNext() ;) {
-            term = it1.next();
+            term = it1.next().getTerm();
 //            this.totalFrequency++;
             if(term.getContext() == null)
             	continue;

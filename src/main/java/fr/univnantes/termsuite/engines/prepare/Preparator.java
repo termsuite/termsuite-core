@@ -6,7 +6,9 @@ public class Preparator extends AggregateEngine {
 
 	@Override
 	public void configure() {
+		pipe(TerminologyChecker.class);
 		pipe(StopWordCleaner.class);
+		pipe(LemmaSetter.class);
 		pipe(SWTFlagSetter.class);
 		pipe(SWTSizeSetter.class);
 		pipe(CorpusWidePropertiesSetter.class);

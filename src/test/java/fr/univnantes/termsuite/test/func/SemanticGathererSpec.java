@@ -13,13 +13,13 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
-import fr.univnantes.termsuite.framework.Relations;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class SemanticGathererSpec {
@@ -48,21 +48,21 @@ public class SemanticGathererSpec {
 						.execute(corpus);
 	}
 	
-	private static final Extractor<Relation, Tuple> SYNONYM_EXTRACTOR_WITH_TYPE = new Extractor<Relation, Tuple>() {
+	private static final Extractor<RelationService, Tuple> SYNONYM_EXTRACTOR_WITH_TYPE = new Extractor<RelationService, Tuple>() {
 		@Override
-		public Tuple extract(Relation input) {
+		public Tuple extract(RelationService input) {
 			return new Tuple(
 					input.getFrom().getGroupingKey(),
-					input.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL) ? "distrib" : "-",
-					input.getPropertyBooleanValue(RelationProperty.IS_DICO) ? "dico" : "-",
+					input.getBoolean(RelationProperty.IS_DISTRIBUTIONAL) ? "distrib" : "-",
+					input.getBoolean(RelationProperty.IS_DICO) ? "dico" : "-",
 					input.getTo().getGroupingKey()
 				);
 		}
 	};
 	
-	private static final Extractor<Relation, Tuple> SYNONYM_EXTRACTOR = new Extractor<Relation, Tuple>() {
+	private static final Extractor<RelationService, Tuple> SYNONYM_EXTRACTOR = new Extractor<RelationService, Tuple>() {
 		@Override
-		public Tuple extract(Relation input) {
+		public Tuple extract(RelationService input) {
 			return new Tuple(
 					input.getFrom().getGroupingKey(),
 					input.getTo().getGroupingKey()
@@ -74,10 +74,10 @@ public class SemanticGathererSpec {
 	@Test
 	public void testVariationsFR() {
 		extract(Lang.FR);
-		List<Relation> relations = corpus.getTerminology()
-				.getOutboundRelations().values().stream()
-				.filter(Relations.IS_SEMANTIC)
-				.filter(Relations.NOT_INFERED)
+		List<RelationService> relations = UnitTests.getTerminologyService(corpus)
+				.relations()
+				.filter(RelationService::isSemantic)
+				.filter(RelationService::isInfered)
 				.collect(Collectors.toList());
 		
 		
@@ -120,10 +120,10 @@ public class SemanticGathererSpec {
 	public void testVariationsEN() {
 		extract(Lang.EN);
 
-		List<Relation> relations = corpus.getTerminology()
-				.getOutboundRelations().values().stream()
-				.filter(Relations.IS_SEMANTIC)
-				.filter(Relations.NOT_INFERED)
+		List<RelationService> relations = UnitTests.getTerminologyService(corpus)
+				.relations()
+				.filter(RelationService::isSemantic)
+				.filter(RelationService::notInfered)
 			.collect(Collectors.toList());
 		
 		assertTrue("Expected number of relations between 13600 and 13700. Got: "  +relations.size() ,

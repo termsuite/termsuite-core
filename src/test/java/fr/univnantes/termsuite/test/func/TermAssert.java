@@ -35,6 +35,7 @@ import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.utils.TermUtils;
 import fr.univnantes.termsuite.utils.WordUtils;
 
 public class TermAssert extends AbstractAssert<TermAssert, Term> {
@@ -67,7 +68,7 @@ public class TermAssert extends AbstractAssert<TermAssert, Term> {
 
 	public TermAssert isCompound() {
 		isNotNull();
-		if(!actual.isCompound())
+		if(!TermUtils.isCompound(actual))
 			failWithMessage("Expected term <%s> to be a compound but it is not.", actual);
 		return this;
 	}

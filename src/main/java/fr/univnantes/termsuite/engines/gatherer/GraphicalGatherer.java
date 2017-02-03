@@ -1,5 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,14 +16,15 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 
 public class GraphicalGatherer extends SimpleEngine {
 	
@@ -97,10 +100,11 @@ public class GraphicalGatherer extends SimpleEngine {
 	}
 	
 	protected Relation createGraphicalRelation(Term from, Term to, Double similarity) {
-		Relation rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
+		RelationService rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
 		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
+		rel.setProperty(RelationProperty.IS_GRAPHICAL, true);
 		watch(from, to, similarity);
-		return rel;
+		return rel.getRelation();
 	}
 	
 	private void watch(Term from, Term to, double dist) {
@@ -120,8 +124,9 @@ public class GraphicalGatherer extends SimpleEngine {
 
 	private void setIsGraphicalVariantProperties() {
 		terminology.variations()
-		.filter(r -> r.isPropertySet(RelationProperty.IS_GRAPHICAL) 
-				&& !r.getPropertyBooleanValue(RelationProperty.IS_GRAPHICAL))
+		.filter(RelationService::notGraphical)
+		.collect(toList())
+		.stream()
 		.forEach(r -> {
 			double similarity = distance.computeNormalized(
 					r.getFrom().getLemma(), 
@@ -147,8 +152,5 @@ public class GraphicalGatherer extends SimpleEngine {
 				}
 			}
 		});
-
-		
 	}
-
 }

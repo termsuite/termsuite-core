@@ -52,11 +52,11 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Property;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -124,7 +124,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 					&& variation.get(RelationProperty.VARIATION_TYPE) == vType) {
 				tagBuilder.append(vType.getLetter().toLowerCase());
 			} else if(variation.isPropertySet(vType.getRelationProperty()) 
-					&& variation.getPropertyBooleanValue(vType.getRelationProperty()))
+					&& variation.getBoolean(vType.getRelationProperty()))
 				tagBuilder.append(vType.getLetter().toLowerCase());
 		}
 		tagBuilder.append("]");

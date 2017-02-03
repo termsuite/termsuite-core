@@ -3,8 +3,8 @@ package fr.univnantes.termsuite.test.unit;
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
 
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.model.RelationProperty;
 
 public class TermSuiteExtractors {
 	
@@ -69,7 +69,7 @@ public class TermSuiteExtractors {
 	public static final Extractor<Relation, String> RELATION_RULESTR = new Extractor<Relation, String>() {
 		@Override
 		public String extract(Relation input) {
-			return input.getPropertyStringValue(RelationProperty.VARIATION_RULE);
+			return input.getString(RelationProperty.VARIATION_RULE);
 		}
 
 	};

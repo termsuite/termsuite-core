@@ -10,12 +10,13 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.Export;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class VariantEvalExporter {
@@ -32,19 +33,19 @@ public class VariantEvalExporter {
 		try {
 			AtomicInteger rank = new AtomicInteger(0);
 			AtomicInteger variantCnt = new AtomicInteger(0);
-			for(Term t:termino.getTerms()) {
-				if(!termino.outboundRelations(t).findAny().isPresent())
+			for(TermService t:termino.getTerms()) {
+				if(!t.outboundRelations().findAny().isPresent())
 					continue;
-				printBase(writer, rank.incrementAndGet(), t);
+				printBase(writer, rank.incrementAndGet(), t.getTerm());
 				AtomicInteger variantRank = new AtomicInteger(0);
-				termino.variationsFrom(t).forEach(variation -> {
+				t.variations().forEach(variation -> {
 					if(variantRank.intValue() >= options.getNbVariantsPerTerm())
 						return;
 					variantCnt.getAndIncrement();
 					variantRank.getAndIncrement();
 					try {
-						printVariation(writer, rank.intValue(), variantRank.intValue(), variation);
-						printTermOccurrences(writer, occurrenceStore, variation.getTo());
+						printVariation(writer, rank.intValue(), variantRank.intValue(), variation.getRelation());
+						printTermOccurrences(writer, occurrenceStore, variation.getTo().getTerm());
 					} catch(IOException e) {
 						throw new TermSuiteException(e);
 					}

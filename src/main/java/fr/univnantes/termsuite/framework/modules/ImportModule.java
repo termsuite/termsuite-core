@@ -5,6 +5,7 @@ import javax.inject.Singleton;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 
+import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.TermOccAnnotationImporter;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
@@ -28,8 +29,8 @@ public class ImportModule extends AbstractModule {
 	protected void configure() {
 		bind(TermOccAnnotationImporter.class).in(Singleton.class);
 		bind(Integer.class).annotatedWith(Names.named("maxSize")).toInstance(maxSize);
-		bind(TerminologyService.class).in(Singleton.class);
-		bind(Terminology.class).toInstance(terminology);
+		bind(TerminologyService.class).toInstance(new TerminologyService(terminology));
+		bind(IndexService.class).toInstance(new IndexService(terminology));
 		bind(OccurrenceStore.class).toInstance(occurrenceStore);
 	}
 

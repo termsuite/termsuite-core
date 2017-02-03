@@ -9,30 +9,30 @@ import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.postproc.IndependanceScorer;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class IndependanceScorerSpec {
 
 	IndependanceScorer scorer;
 	
-	private Term t_a;
-	private Term t_ab;
-	private Term t_xa;
-	private Term t_at;
-	private Term t_xab;
-	private Term t_xat;
+	private TermService t_a;
+	private TermService t_ab;
+	private TermService t_xa;
+	private TermService t_at;
+	private TermService t_xab;
+	private TermService t_xat;
 
-	Relation a_ab, a_at, a_xa, a_xab, a_xat, ab_xab, xa_xab, xa_xat, at_xat;
+	RelationService a_ab, a_at, a_xa, a_xab, a_xat, ab_xab, xa_xab, xa_xat, at_xat;
 
-	Terminology terminology;
+	IndexedCorpus indexedCorpus;
 
 	/*
 	 * Fixture graph
@@ -47,8 +47,7 @@ public class IndependanceScorerSpec {
 	 */
 	@Before
 	public void setup() {
-		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
-		terminology = indexedCorpus.getTerminology();
+		indexedCorpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
 
 		t_a = addTerm("a", 10);
 		t_ab = addTerm("ab", 3);
@@ -70,14 +69,14 @@ public class IndependanceScorerSpec {
 		scorer = UnitTests.createSimpleEngine(indexedCorpus, IndependanceScorer.class);
 	}
 	
-	private  Relation addExtension(Term t1, Term t2) {
-		Relation termRelation = new Relation(RelationType.HAS_EXTENSION, t1, t2);
-		UnitTests.addRelation(terminology, termRelation);
-		return termRelation;
+	private  RelationService addExtension(TermService t1, TermService t2) {
+		Relation termRelation = new Relation(RelationType.HAS_EXTENSION, t1.getTerm(), t2.getTerm());
+		UnitTests.addRelation(indexedCorpus.getTerminology(), termRelation);
+		return new RelationService(UnitTests.getTerminologyService(indexedCorpus), termRelation);
 	}
 
-	private Term addTerm(String gKey, int frequency) {
-		TermBuilder builder = TermBuilder.start(terminology)
+	private TermService addTerm(String gKey, int frequency) {
+		TermBuilder builder = TermBuilder.start(indexedCorpus.getTerminology())
 				.setGroupingKey(gKey)
 				.setFrequency(frequency);
 		
@@ -90,8 +89,8 @@ public class IndependanceScorerSpec {
 			builder.addWord(Character.toString(c), Character.toString(c), "Label", true);
 				
 		Term term = builder.create();
-		UnitTests.addTerm(terminology, term);
-		return term;
+		UnitTests.addTerm(indexedCorpus.getTerminology(), term);
+		return new TermService(UnitTests.getTerminologyService(indexedCorpus), term);
 	}
 	
 	@Test
@@ -146,12 +145,12 @@ public class IndependanceScorerSpec {
 
 
 
-	private void assertInd(double ifreq, Term t) {
-		assertEquals(ifreq, t.getPropertyDoubleValue(TermProperty.INDEPENDANCE), 0.0001d);
+	private void assertInd(double ifreq, TermService t) {
+		assertEquals(ifreq, t.getIndependance(), 0.0001d);
 
 	}
-	private void assertIndFreq(int ifreq, Term t) {
-		assertEquals(ifreq, t.get(TermProperty.INDEPENDANT_FREQUENCY));
+	private void assertIndFreq(int ifreq, TermService t) {
+		assertEquals(ifreq, t.getIndependantFrequency().intValue());
 	}
 
 	@Test
@@ -166,8 +165,8 @@ public class IndependanceScorerSpec {
 		assertEquals(3, maxDepth);
 	}
 
-	private void assertDepth(int expected, Term t) {
-		assertEquals(expected, t.get(TermProperty.DEPTH));
+	private void assertDepth(int expected, TermService t) {
+		assertEquals(expected, t.getDepth().intValue());
 		
 	}
 

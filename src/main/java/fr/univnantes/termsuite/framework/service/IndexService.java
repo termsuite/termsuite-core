@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
-import com.google.inject.Inject;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.InjectLogger;
@@ -24,12 +23,16 @@ public class IndexService {
 	@InjectLogger 
 	Logger logger;
 	
-	@Inject
 	Terminology terminology;
 	
 	private Stopwatch indexingSW = Stopwatch.createUnstarted();
 
 	private ConcurrentMap<TermIndexType, TermIndex> termIndexes = new ConcurrentHashMap<>();
+	
+	public IndexService(Terminology terminology) {
+		super();
+		this.terminology = terminology;
+	}
 
 	public void addTerm(Term term) {
 		for(TermIndex termIndex:termIndexes.values())

@@ -1,10 +1,10 @@
 package fr.univnantes.termsuite.framework.service;
 
+import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.List;
@@ -12,6 +12,8 @@ import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.Semaphore;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -31,20 +33,26 @@ import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.utils.TermSuiteUtils;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TerminologyService {
-	
+	private static final String MSG_NOT_AN_EXTENSION = "Term '%s' is no extension of term '%s'";
 	private static final String MSG_TERM_NOT_FOUND = "No such term with key %s";
+	private static final String MSG_REFLEXION_NOT_ALLOWED = "reflexive relations not allowed: %s --%s--> %s";
 
-	@Inject
 	private Terminology termino;
+	
+	public TerminologyService(Terminology termino) {
+		super();
+		this.termino = termino;
+	}
 
 	@Inject
 	OccurrenceStore occurrenceStore;
@@ -55,6 +63,7 @@ public class TerminologyService {
 	private Multimap<Term, Relation> inboundVariations =  null;
 	
 	private Semaphore relationMutex = new Semaphore(1);
+	private Semaphore termMutex = new Semaphore(1);
 	private Semaphore inboundMutex = new Semaphore(1);
 
 	
@@ -87,135 +96,171 @@ public class TerminologyService {
 	}
 
 	
-	public Stream<Relation> relations() {
-		return termino.getOutboundRelations().values().stream();
+	public Stream<RelationService> relations() {
+		return termino.getOutboundRelations()
+				.values()
+				.stream()
+				.map(this::asRelationService)
+				;
 	}
 	
-	public Stream<Relation> variations() {
-		return relations().filter(r -> r.getType() == RelationType.VARIATION);
+	public Stream<RelationService> variations() {
+		return relations().filter(r -> r.getRelation().getType() == RelationType.VARIATION);
 	}
 	
-	public Stream<Relation> variations(VariationType type) {
-		Predicate<? super Relation> havingVariationType = havingProperty(RelationProperty.VARIATION_TYPE);
+	public Stream<RelationService> variations(VariationType type) {
+		Predicate<? super RelationService> havingVariationType = havingProperty(RelationProperty.VARIATION_TYPE);
 		return variations()
 				.filter(havingVariationType)
-				.filter(r -> r.get(RelationProperty.VARIATION_TYPE) == type);
+				.filter(r -> r.getRelation().get(RelationProperty.VARIATION_TYPE) == type);
 	}
 
-	private Predicate<? super Relation> havingProperty(RelationProperty property) {
-		return new Predicate<Relation>() {
+	private Predicate<? super RelationService> havingProperty(RelationProperty property) {
+		return new Predicate<RelationService>() {
 			@Override
-			public boolean test(Relation t) {
-				return t.isPropertySet(property);
+			public boolean test(RelationService t) {
+				return t.getRelation().isPropertySet(property);
 			}
 		};
 	}
 
-	public Stream<Relation> relations(RelationType type, RelationType... types) {
+	public Stream<RelationService> relations(RelationType type, RelationType... types) {
 		EnumSet<RelationType> typeSet = EnumSet.of(type, types);
 		return relations()
-				.filter(r -> typeSet.contains(r.getType()));
+				.filter(r -> typeSet.contains(r.getRelation().getType()));
 	}
 
-	public Collection<Term> getTerms() {
-		return termino.getTerms().values();
+	public Collection<TermService> getTerms() {
+		return terms().collect(toList());
 	}
 
-	public Stream<Term> terms() {
-		return termino.getTerms().values().stream();
+	public Stream<TermService> terms() {
+		return this.termino.getTerms().values()
+				.stream()
+				.map(this::asTermService)
+				;
 	}
 
-	public Stream<Relation> relations(Term from, Term to) {
+	private ConcurrentMap<Term, TermService> termServices = new ConcurrentHashMap<>();
+	public TermService asTermService(Term term) {
+		return termServices.computeIfAbsent(
+				term, t -> 
+				new TermService(this, t));
+	}
+
+	private ConcurrentMap<Relation, RelationService> relationServices = new ConcurrentHashMap<>();
+
+	public RelationService asRelationService(Relation relation) {
+		return relationServices.computeIfAbsent(
+				relation, r -> 
+				new RelationService(this, r));
+	}
+
+	public Stream<RelationService> relations(Term from, Term to) {
 		return outboundRelations(from)
 						.filter(r-> r.getTo().equals(to));
 	}
 
 
-	public Stream<Relation> inboundRelations(Term target) {
+	public Stream<RelationService> inboundRelations(Term target) {
 		return this.getInboundRelations()
 				.get(target)
-				.stream();
+				.stream()
+				.map(this::asRelationService);
 	}
 	
-	public Stream<Relation> inboundRelations(Term target, RelationType rType, RelationType... relationTypes) {
+	public Stream<RelationService> inboundRelations(Term target, RelationType rType, RelationType... relationTypes) {
 		Set<RelationType> rTypes = EnumSet.of(rType, relationTypes);
 		return inboundRelations(target)
-				.filter(r->rTypes.contains(r.getType()));
+				.filter(r->rTypes.contains(r.getRelation().getType()));
 	}
 	
-	public Stream<Relation> outboundRelations(Term source) {
-		return this.termino.getOutboundRelations().get(source)
-			.stream();
+	public Stream<RelationService> outboundRelations(Term source) {
+		return this.termino.getOutboundRelations()
+				.get(source)
+				.stream()
+				.map(this::asRelationService)
+				;
 	}
 
-	public Stream<Relation> outboundRelations(Term source, RelationType rType, RelationType... relationTypes) {
+	public Stream<RelationService> outboundRelations(Term source, RelationType rType, RelationType... relationTypes) {
 		Set<RelationType> rTypes = EnumSet.of(rType, relationTypes);
 		return outboundRelations(source)
-				.filter(r->rTypes.contains(r.getType()));
+				.filter(r->rTypes.contains(r.getRelation().getType()))
+				;
 	}
 	
-	public Stream<Relation> variations(Term from, Term to) {
+	public Stream<RelationService> variations(Term from, Term to) {
 		return relations(from,to)
-				.filter(r-> r.getType() == RelationType.VARIATION);
+				.filter(r-> r.getRelation().getType() == RelationType.VARIATION);
 	}
 
-	public synchronized Optional<Relation> getVariation(Term from, Term to) {
+	public synchronized Optional<RelationService> getVariation(Term from, Term to) {
 		return variations(from, to).findAny();
 	}
 
-	public Relation createVariation(VariationType variationType, Term from, Term to) {
+	public RelationService createVariation(VariationType variationType, Term from, Term to) {
+		Preconditions.checkArgument(!from.equals(to), 
+				MSG_REFLEXION_NOT_ALLOWED, from, variationType, to);
 		relationMutex.acquireUninterruptibly();
-		Relation r;
-		Optional<Relation> existing = variations(from, to).findAny();
+		RelationService r;
+		Optional<RelationService> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {
 			Relation relation = TermSuiteFactory.createVariation(variationType, from, to);
 			privateAddRelation(relation);
-			r = relation;
+			r = asRelationService(relation);
 		} else
 			r = existing.get();
 		relationMutex.release();
 		return r;
 	}
 
-	public Stream<Relation> relations(RelationProperty property, Object value) {
+	public Stream<RelationService> relations(RelationProperty property, Object value) {
 		return relations()
-				.filter(r->r.isPropertySet(property))
-				.filter(r->Objects.equals(r.get(property), value))
+				.filter(r->r.getRelation().isPropertySet(property))
+				.filter(r->Objects.equals(r.getRelation().get(property), value))
 				;
 	}
 
-	public Stream<Relation> variations(String fromKey, String toKey) {
-		return variations(getTerm(fromKey), getTerm(toKey));
+	public Stream<RelationService> variations(String fromKey, String toKey) {
+		return variations(toTerm(fromKey), toTerm(toKey));
 	}
 
-	public Term getTerm(String termKey) {
-		Term term = getTermUnchecked(termKey);
+	private Term toTerm(String groupingKey) {
+		Preconditions.checkArgument(this.termino.getTerms().containsKey(groupingKey), MSG_TERM_NOT_FOUND, groupingKey);
+		return this.termino.getTerms().get(groupingKey);
+	}
+	
+	public TermService getTerm(String termKey) {
+		TermService term = getTermUnchecked(termKey);
 		Preconditions.checkNotNull(term, MSG_TERM_NOT_FOUND, termKey);
 		return term;
 	}
 
-	public Term getTermUnchecked(String termKey) {
-		return termino.getTerms().get(termKey);
+	public TermService getTermUnchecked(String termKey) {
+		return termino.getTerms().containsKey(termKey) ? asTermService(termino.getTerms().get(termKey)) : null;
 	}
 
-	public Stream<Relation> variationsFrom(Term from) {
+	public Stream<RelationService> variationsFrom(Term from) {
 		return outboundRelations(from)
-				.filter(r-> r.getType() == RelationType.VARIATION);
+				.filter(r-> r.getRelation().getType() == RelationType.VARIATION);
 	}
 
 	public void removeAll(Predicate<Term> predicate) {
-		terms().filter(predicate).collect(toSet()).forEach(this::removeTerm);
+		this.termino.getTerms().values().stream()
+			.filter(predicate).collect(toSet())
+			.forEach(this::removeTerm);
 	}
 
 	public long termCount() {
 		return this.termino.getTerms().size();
 	}
 
-	public Stream<Relation> extensions() {
+	public Stream<RelationService> extensions() {
 		return relations(RelationType.HAS_EXTENSION);
 	}
 	
-	public Stream<Relation> extensionBases(Term term) {
+	public Stream<RelationService> extensionBases(Term term) {
 		return inboundRelations(term)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION)
 			;
@@ -225,7 +270,7 @@ public class TerminologyService {
 		return this.termino.getWords().get(lemma);
 	}
 
-	public Stream<Relation> extensions(Term from) {
+	public Stream<RelationService> extensions(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
 	}
@@ -246,7 +291,7 @@ public class TerminologyService {
 		return this.termino.getWords().values();
 	}
 
-	public Stream<Relation> extensions(Term from, Term to) {
+	public Stream<RelationService> extensions(Term from, Term to) {
 		return relations(from, to).filter(r->r.getType() == RelationType.HAS_EXTENSION);
 	}
 
@@ -259,16 +304,14 @@ public class TerminologyService {
 	}
 	
 	public void addTerm(Term term) {
+		termMutex.acquireUninterruptibly();
 		Preconditions.checkArgument(
 				!containsTerm(term.getGroupingKey()));
 		this.termino.getTerms().put(term.getGroupingKey(), term);
-		for(TermWord tw:term.getWords()) {
+		for(TermWord tw:term.getWords())
 			privateAddWord(tw.getWord(), false);
-			if(!tw.isSwt())
-				// try to set swt manually
-				tw.setSwt(this.termino.getTerms().containsKey(TermUtils.toGroupingKey(tw)));
-		}
 		indexService.addTerm(term);
+		termMutex.release();
 	}
 
 	public void addWord(Word word) {
@@ -284,8 +327,8 @@ public class TerminologyService {
 	
 	public void cleanOrphanWords() {
 		Set<String> usedWordLemmas = Sets.newHashSet();
-		for(Term t:getTerms()) {
-			for(TermWord tw:t.getWords())
+		for(TermService t:getTerms()) {
+			for(TermWord tw:t.getTerm().getWords())
 				usedWordLemmas.add(tw.getWord().getLemma());
 		}
 		Iterator<Entry<String, Word>> it = this.termino.getWords().entrySet().iterator();
@@ -295,6 +338,10 @@ public class TerminologyService {
 			if(!usedWordLemmas.contains(entry.getValue().getLemma()))
 				it.remove();
 		}
+	}
+	
+	public void removeTerm(TermService t) {
+		removeTerm(t.getTerm());
 	}
 	
 	public void removeTerm(Term t) {
@@ -339,11 +386,16 @@ public class TerminologyService {
 		relationMutex.release();
 	}
 
-	
 	/*
 	 * Must be invoked under mutex
 	 */
-	private void privateAddRelation(Relation termVariation) {
+	private void privateAddRelation(Relation relation) {
+		Preconditions.checkArgument(!relation.getFrom().equals(relation.getTo()),
+				MSG_REFLEXION_NOT_ALLOWED,
+				relation.getFrom(),
+				relation.getType(),
+				relation.getTo()
+				);
 		/*
 		 * Do not delete: First synchronize inbound with outbound
 		 */
@@ -352,10 +404,14 @@ public class TerminologyService {
 		/*
 		 * Then add the relation in both
 		 */
-		this.termino.getOutboundRelations().put(termVariation.getFrom(), termVariation);
-		this.getInboundRelations().put(termVariation.getTo(), termVariation);
+		this.termino.getOutboundRelations().put(relation.getFrom(), relation);
+		this.getInboundRelations().put(relation.getTo(), relation);
 	}
 
+	public void removeRelation(RelationService variation) {
+		removeRelation(variation.getRelation());
+	}
+	
 	public void removeRelation(Relation variation) {
 		relationMutex.acquireUninterruptibly();
 		this.termino.getOutboundRelations().remove(variation.getFrom(), variation);
@@ -363,9 +419,133 @@ public class TerminologyService {
 		relationMutex.release();
 	}
 
-	public List<Term> getTerms(TermOrdering ordering) {
-		List<Term> terms = new ArrayList<>(this.termino.getTerms().values());
-		Collections.sort(terms, ordering.toComparator());
-		return terms;
+	public List<TermService> getTerms(TermOrdering ordering) {
+		return terms()
+				.map(TermService::getTerm)
+				.sorted(ordering.toComparator())
+				.map(this::asTermService)
+				.collect(toList());
 	}
+
+	public static Comparator<TermService> toTermServiceComparator(Comparator<Term> comparator) {
+		return new Comparator<TermService>() {
+			@Override
+			public int compare(TermService o1, TermService o2) {
+				return comparator.compare(o1.getTerm(), o2.getTerm());
+			}
+		};
+	}
+	
+
+	public Stream<TermService> terms(Comparator<Term> comparator) {
+		return terms()
+				.sorted(toTermServiceComparator(comparator));
+	}
+	
+	
+	public Stream<TermService> terms(TermOrdering termOrdering) {
+		return terms()
+				.sorted(termOrdering.toTermServiceComparator());
+	}
+	
+	
+	/**
+	 * 
+	 * Finds in a {@link Terminology} the biggest extension affix term of a term depending 
+	 * on a base term.
+	 * 
+	 * For example, the term "offshore wind turbine" is an extension of 
+	 * "wind turbine". The extension affix is the term "offshore".
+	 * 
+	 * @param base
+	 * 			The base term
+	 * @param extension
+	 * 			The extension term
+	 * @return
+	 * 		the extension affix found in <code>termino</code>, <code>null</code> if none
+	 * 		has been found.
+	 * @throws IllegalArgumentException if <code>extension</code> id not an 
+	 * 			extension of the term <code>base</code>.
+	 */
+	public Optional<TermService> getExtensionAffix(Term base, Term extension) {
+		int index = TermUtils.getPosition(base, extension);
+		if(index == -1)
+			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
+					extension,
+					base)
+				);
+
+		/*
+		 *  true if prefix, false if suffix
+		 */
+		boolean isPrefix = false;
+		if(index == 0)
+			isPrefix = true;
+		else if(index + base.getWords().size() == extension.getWords().size())
+			isPrefix = false; // suffix
+		else {
+			/*
+			 * Happens sometimes. 
+			 * 
+			 * base = 		'nnnn: hd spring spring spring' 
+			 * extension = 	'nn: spring spring'
+			 * 
+			 * Do nothing.
+			 */
+		}
+		
+		if(isPrefix) 
+			return findBiggestSuffix(
+					extension.getWords().subList(index + base.getWords().size(), extension.getWords().size())
+				);
+		else
+			return findBiggestPrefix(
+					extension.getWords().subList(0, index)
+				);
+	}
+	
+	
+	/**
+	 * Finds in a {@link Terminology} the biggest prefix of a sequence of
+	 * {@link TermWord}s that exists as a term.
+	 * 
+	 * @param words
+	 * 			the initial sequence of {@link TermWord}s
+	 * @return
+	 * 			A {@link Term} found in <code>termino</code> that makes the
+	 * 			biggest possible prefix sequence for <code>words</code>.
+	 */
+	public Optional<TermService> findBiggestPrefix(List<TermWord> words) {
+		String gKey;
+		for(int i = words.size(); i > 0 ; i--) {
+			gKey = TermSuiteUtils.getGroupingKey(words.subList(0, i));
+			if(containsTerm(gKey))
+				return Optional.of(getTerm(gKey));
+		}
+		return Optional.empty();
+	}
+	
+
+	/**
+	 * Finds in a {@link Terminology} the biggest suffix of a sequence of
+	 * {@link TermWord}s that exists as a term.
+	 * 
+	 * @param words
+	 * 			the initial sequence of {@link TermWord}s
+	 * @return
+	 * 			A {@link Term} found in <code>termino</code> that makes the
+	 * 			biggest possible suffix sequence for <code>words</code>.
+
+	 */
+	public Optional<TermService> findBiggestSuffix(List<TermWord> words) {
+		String gKey;
+		for(int i = 0; i < words.size() ; i++) {
+			gKey = TermSuiteUtils.getGroupingKey(words.subList(i, words.size()));
+			if(containsTerm(gKey))
+				return Optional.of(getTerm(gKey));
+		}
+		return Optional.empty();
+	}
+
+
 }

@@ -45,11 +45,13 @@ import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
 import fr.univnantes.termsuite.test.unit.api.PreprocessorSpec;
 import fr.univnantes.termsuite.test.unit.api.ResourceConfigSpec;
@@ -282,6 +284,17 @@ public class UnitTests {
 		} catch(Exception e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public static <T extends SimpleEngine> void injectIndexes(
+			T engine, 
+			String string, 
+			Terminology terminology) {
+		
+		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(
+				terminology, 
+				new EmptyOccurrenceStore(Lang.EN));
+		new EngineInjector(engine.getClass(), extractorInjector(indexedCorpus)).injectIndexes(engine);
 	}
 
 }

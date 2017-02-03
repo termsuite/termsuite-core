@@ -15,11 +15,12 @@ import com.google.common.collect.Sets;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.Export;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 
 public class VariationExporter {
 	
@@ -39,19 +40,19 @@ public class VariationExporter {
 	public void export(TerminologyService termino, Writer writer) {
 		try {
 			Multimap<Term,Relation> acceptedVariations = HashMultimap.create();
-			for(Term t:termino.getTerms()) {
-				termino.outboundRelations(t).forEach(v -> {
+			for(TermService t:termino.getTerms()) {
+				t.outboundRelations().forEach(v -> {
 					if(this.variationTypes.isEmpty())
-							acceptedVariations.put(t, v);
+						acceptedVariations.put(t.getTerm(), v.getRelation());
 					else {
 						if(variationTypes
 							.stream()
 							.filter(vType -> 
-								v.isPropertySet(vType.getRelationProperty()) && v.getPropertyBooleanValue(vType.getRelationProperty())
+								v.getBooleanIfSet(vType.getRelationProperty())
 								|| v.isPropertySet(RelationProperty.VARIATION_TYPE) && v.get(RelationProperty.VARIATION_TYPE) == vType
 							).findAny()
 							.isPresent()) 
-						acceptedVariations.put(t, v);
+						acceptedVariations.put(t.getTerm(), v.getRelation());
 					}
 				});
 			}

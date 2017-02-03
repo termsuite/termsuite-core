@@ -7,9 +7,8 @@ import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.Export;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.uima.engines.export.IndexerTSVBuilder;
 
 public class TsvExporter {
@@ -32,29 +31,32 @@ public class TsvExporter {
 			if(options.showHeaders())
 				tsv.writeHeaders();
 				
-			for(Term t:termino.getTerms(options.getTermOrdering())) {
-				if(t.isPropertySet(TermProperty.FILTERED) && t.getPropertyBooleanValue(TermProperty.FILTERED))
-					continue;
+			termino.terms(options.getTermOrdering())
+				.filter(TermService::notFiltered)
+				.forEach(t-> {
 				
-				tsv.startTerm(t);
+				try {
+					tsv.startTerm(t.getTerm());
+				} catch (IOException e1) {
+					throw new TermSuiteException(e1);
+				}
 				
 				if(options.isShowVariants())
-					termino.variationsFrom(t)
-						.sorted(options.getVariantOrdering().toComparator())
+					t.variations()
+						.sorted(options.getVariantOrdering().toServiceComparator())
 						.forEach(tv -> {
 							try {
 								tsv.addVariant(
 										termino, 
-										tv,
+										tv.getRelation(),
 										options.tagsTermsHavingVariants());
 							} catch (IOException e) {
 								throw new TermSuiteException(e);
 							}
 					});
-			}
+			});
 			tsv.close();
 		} catch (IOException e) {
-			throw new TermSuiteException(e);
 		}
 	}
 }

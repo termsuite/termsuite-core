@@ -25,6 +25,7 @@ package fr.univnantes.termsuite.engines.postproc;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
@@ -35,18 +36,16 @@ import org.slf4j.Logger;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.utils.StringUtils;
-import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * Scores all variations in a {@link Terminology}
@@ -55,14 +54,14 @@ import fr.univnantes.termsuite.utils.TermUtils;
  *
  */
 public class VariationScorer extends SimpleEngine {
-	private static final Predicate<? super Relation> NOT_SEMANTIC = v -> 
+	private static final Predicate<? super RelationService> NOT_SEMANTIC = v -> 
 			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
 			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
-					|| !v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
-	private static final Predicate<? super Relation> SEMANTIC = v -> 
+					|| !v.getBoolean(RelationProperty.IS_SEMANTIC));
+	private static final Predicate<? super RelationService> SEMANTIC = v -> 
 		v.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC 
 		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
-				&& v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
+				&& v.getBoolean(RelationProperty.IS_SEMANTIC));
 
 	@InjectLogger Logger logger;
 
@@ -95,11 +94,11 @@ public class VariationScorer extends SimpleEngine {
 			.filter(r -> r.isPropertySet(RelationProperty.SOURCE_GAIN))
 			.forEach(r -> 
 				r.setProperty(RelationProperty.NORMALIZED_SOURCE_GAIN, 
-						normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN))));
+						normalizer.normalize(r.getDouble(RelationProperty.SOURCE_GAIN))));
 	}
 
 	private void normalizeExtensionScores() {
-		Predicate<? super Relation> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
+		Predicate<? super RelationService> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
 		if(!terminology.relations().filter(extensionSet).findFirst().isPresent()) {
 			logger.warn("Found no relation with property {} set.", extensionSet);
 			return;
@@ -108,7 +107,7 @@ public class VariationScorer extends SimpleEngine {
 		final Normalizer normalizer = new MinMaxNormalizer(terminology
 				.relations()
 				.filter(extensionSet)
-				.map(r -> r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))
+				.map(r -> r.getDouble(RelationProperty.EXTENSION_SCORE))
 				.collect(Collectors.toList()));
 		
 		terminology
@@ -116,7 +115,7 @@ public class VariationScorer extends SimpleEngine {
 			.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
 			.forEach(r -> 
 					r.setProperty(RelationProperty.NORMALIZED_EXTENSION_SCORE, 
-							normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))));
+							normalizer.normalize(r.getDouble(RelationProperty.EXTENSION_SCORE))));
 	}
 
 	public void doVariantScores() {
@@ -128,8 +127,8 @@ public class VariationScorer extends SimpleEngine {
 			.filter(NOT_SEMANTIC)
 			.forEach( variation -> {
 				double score = variation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
-							0.91*variation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
-							0.89 + 0.1*variation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
+							0.91*variation.getDouble(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
+							0.89 + 0.1*variation.getDouble(RelationProperty.NORMALIZED_SOURCE_GAIN);
 				variation.setProperty(
 					RelationProperty.VARIANT_SCORE, 
 					score);
@@ -149,8 +148,8 @@ public class VariationScorer extends SimpleEngine {
 				 */
 				
 				double score = 0.75;
-				if(variation.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL)) {
-					score *= variation.getPropertyDoubleValue(RelationProperty.SEMANTIC_SIMILARITY);
+				if(variation.getBoolean(RelationProperty.IS_DISTRIBUTIONAL)) {
+					score *= variation.getDouble(RelationProperty.SEMANTIC_SIMILARITY);
 				}
 				
 				variation.setProperty(
@@ -161,21 +160,21 @@ public class VariationScorer extends SimpleEngine {
 	}
 
 	
-	private int recursiveDoVariationFrenquencies(Relation rel, Set<Term> visitedTerms) {
-		Term term = rel.getTo();
+	private int recursiveDoVariationFrenquencies(RelationService rel, Set<TermService> visitedTerms) {
+		TermService term = rel.getTo();
 		if(visitedTerms.contains(term)) {
 			return 0;
 		} else {
-			Set<Term> newVisitedTerms = new HashSet<>();
+			Set<TermService> newVisitedTerms = new HashSet<>();
 			newVisitedTerms.addAll(visitedTerms);
 			newVisitedTerms.add(term);
 			newVisitedTerms.add(rel.getFrom());
 			AtomicInteger sum = new AtomicInteger(term.getFrequency());
-			terminology.variationsFrom(term)
+			term.variations()
 				// exclude semantic variations, otherwise there are too many variation pathes
 				.filter(NOT_SEMANTIC)
 				.forEach(v2 -> {
-					if(!v2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)) {
+					if(!v2.getBoolean(RelationProperty.IS_EXTENSION)) {
 						sum.addAndGet(recursiveDoVariationFrenquencies(v2, newVisitedTerms));
 					}
 			});
@@ -200,7 +199,7 @@ public class VariationScorer extends SimpleEngine {
 	public void doSourceGains() {
 		terminology.variations()
 			.forEach( relation -> {
-				double sourceGain = Math.log10((double)relation.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
+				double sourceGain = Math.log10((double)relation.getInteger(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
 				relation.setProperty(RelationProperty.SOURCE_GAIN, 
 					sourceGain);
 
@@ -213,18 +212,18 @@ public class VariationScorer extends SimpleEngine {
 			return;
 		}
 		
-		for(Term from:terminology.getTerms()) {
-			Set<Term> extensions = terminology.outboundRelations(from, RelationType.HAS_EXTENSION)
-					.map(Relation::getTo)
+		for(TermService from:terminology.getTerms()) {
+			Set<TermService> extensions = from
+					.outboundRelations(RelationType.HAS_EXTENSION)
+					.map(RelationService::getTo)
 					.collect(Collectors.toSet());
-			terminology.outboundRelations(from, RelationType.VARIATION).forEach( variation -> {
+			from.variations().forEach( variation -> {
 				if(extensions.contains(variation.getTo())) {
-					Term affix = TermUtils.getExtensionAffix(
-							terminology,
-							from, 
-							variation.getTo());
+					Optional<TermService> affix = terminology.getExtensionAffix(
+							from.getTerm(), 
+							variation.getTo().getTerm());
 					
-					if(affix == null) {
+					if(!affix.isPresent()) {
 						variation.setProperty(
 								RelationProperty.HAS_EXTENSION_AFFIX, 
 								false);
@@ -235,16 +234,16 @@ public class VariationScorer extends SimpleEngine {
 								RelationProperty.HAS_EXTENSION_AFFIX, 
 								true);
 					
-					double affixGain = Math.log10((double)variation.getTo().getFrequency()/affix.getFrequency());
+					double affixGain = Math.log10((double)variation.getTo().getFrequency()/affix.get().getFrequency());
 					variation.setProperty(RelationProperty.AFFIX_GAIN, 
 							affixGain);
 
-					double affixRatio = Math.log10((double)affix.getFrequency()/from.getFrequency());
+					double affixRatio = Math.log10((double)affix.get().getFrequency()/from.getFrequency());
 					variation.setProperty(RelationProperty.AFFIX_RATIO, 
 							affixRatio);
 
 					
-					double affixSpec = (Double)affix.getPropertyValue(TermProperty.SPECIFICITY);
+					double affixSpec = affix.get().getSpecificity();
 					variation.setProperty(RelationProperty.AFFIX_SPEC, 
 							affixSpec);
 
@@ -253,7 +252,7 @@ public class VariationScorer extends SimpleEngine {
 							affixScore);
 
 					double orthographicScore = 1d;
-					for(TermWord tw:affix.getWords())
+					for(TermWord tw:affix.get().getWords())
 						orthographicScore = orthographicScore * StringUtils.getOrthographicScore(tw.getWord().getLemma());
 					variation.setProperty(RelationProperty.AFFIX_ORTHOGRAPHIC_SCORE, 
 							orthographicScore);
@@ -268,7 +267,7 @@ public class VariationScorer extends SimpleEngine {
 		List<Double> affixScores = terminology
 				.relations()
 				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
-				.map(r -> r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE))
+				.map(r -> r.getDouble(RelationProperty.AFFIX_SCORE))
 				.collect(Collectors.toList());
 		if(!affixScores.isEmpty()) {
 			final Normalizer affixScoreNormalizer = new MinMaxNormalizer(affixScores);
@@ -279,17 +278,17 @@ public class VariationScorer extends SimpleEngine {
 				.forEach(r -> {
 						r.setProperty(
 									RelationProperty.NORMALIZED_AFFIX_SCORE, 
-									affixScoreNormalizer.normalize(r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE)));
+									affixScoreNormalizer.normalize(r.getDouble(RelationProperty.AFFIX_SCORE)));
 					}
 				);
 		}
 
 		// compute global extension score
 		terminology.relations()
-			.filter(rel -> rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX) && rel.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX))
+			.filter(rel -> rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX) && rel.getBoolean(RelationProperty.HAS_EXTENSION_AFFIX))
 			.forEach(rel -> {
-				double extensionScore = (rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN)
-								+ 0.3 * rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_AFFIX_SCORE));
+				double extensionScore = (rel.getDouble(RelationProperty.NORMALIZED_SOURCE_GAIN)
+								+ 0.3 * rel.getDouble(RelationProperty.NORMALIZED_AFFIX_SCORE));
 					
 				rel.setProperty(RelationProperty.EXTENSION_SCORE, 
 						extensionScore);

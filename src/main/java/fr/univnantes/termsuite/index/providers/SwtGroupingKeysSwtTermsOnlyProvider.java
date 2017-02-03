@@ -10,7 +10,7 @@ public class SwtGroupingKeysSwtTermsOnlyProvider extends SwtGroupingKeysProvider
 	@SuppressWarnings("unchecked")
 	@Override
 	public Collection<String> getClasses(Term term) {
-		if(term.isSingleWord())
+		if(term.getWords().size() == 1)
 			return super.getClasses(term);
 		else
 			return Collections.EMPTY_SET;

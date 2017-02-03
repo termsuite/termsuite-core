@@ -21,7 +21,6 @@ import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.PipelineService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -30,12 +29,12 @@ import uima.sandbox.filter.resources.DefaultFilterResource;
 import uima.sandbox.filter.resources.FilterResource;
 
 public class IndexedCorpusModule extends AbstractModule {
-	private IndexedCorpus indexedterminology;
+	private IndexedCorpus corpus;
 	private Optional<TermHistory> history = Optional.empty();
 	
 	public IndexedCorpusModule(IndexedCorpus terminology) {
 		Preconditions.checkNotNull(terminology, "Terminology cannot be null");
-		this.indexedterminology = terminology;
+		this.corpus = terminology;
 	}
 
 	public IndexedCorpusModule(IndexedCorpus terminology, 
@@ -48,13 +47,13 @@ public class IndexedCorpusModule extends AbstractModule {
 	protected void configure() {
 		bind(new TypeLiteral<Optional<TermHistory>>(){}).toInstance(history);
 		bind(FilterResource.class).to(DefaultFilterResource.class);
-		bind(Terminology.class).toInstance(indexedterminology.getTerminology());
-		bind(IndexedCorpus.class).toInstance(indexedterminology);
-		bind(Lang.class).toInstance(indexedterminology.getTerminology().getLang());
-		bind(OccurrenceStore.class).toInstance(indexedterminology.getOccurrenceStore());
-		bind(TerminologyService.class).in(Singleton.class);
+//		bind(Terminology.class).toInstance(indexedterminology.getTerminology());
+//		bind(IndexedCorpus.class).toInstance(indexedterminology);
+		bind(Lang.class).toInstance(corpus.getTerminology().getLang());
+		bind(OccurrenceStore.class).toInstance(corpus.getOccurrenceStore());
+		bind(TerminologyService.class).toInstance(new TerminologyService(corpus.getTerminology()));
 		bind(PipelineService.class).in(Singleton.class);
-		bind(IndexService.class).in(Singleton.class);
+		bind(IndexService.class).toInstance(new IndexService(corpus.getTerminology()));
 		bind(GroovyService.class).in(Singleton.class);
 		bind(PipelineStats.class).in(Singleton.class);
 	    bindListener(Matchers.any(), new Slf4JTypeListener());

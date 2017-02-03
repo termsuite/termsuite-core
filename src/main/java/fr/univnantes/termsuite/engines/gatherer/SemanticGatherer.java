@@ -19,12 +19,13 @@ import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.Pair;
 import fr.univnantes.termsuite.utils.TermUtils;
@@ -96,14 +97,14 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		AtomicInteger nbDicoRelationFound = new AtomicInteger(0);
 		
 		
-		if(!terminology.terms().filter(t->t.getContext()!= null).findAny().isPresent())
+		if(!terminology.terms().filter(TermService::isContextSet).findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires a contextualized term index");
 		if(!terminology.extensions().findAny().isPresent())
 			throw new IllegalStateException("Semantic aligner requires term extension relations");
 		
 		indexingSw.start();
 		TermIndex index = new TermIndex(rule.getTermProvider());
-		terminology.terms().forEach(index::addToIndex);
+		terminology.terms().map(TermService::getTerm).forEach(index::addToIndex);
 		indexingSw.stop();
 
 		Stopwatch ruleSw = Stopwatch.createStarted();
@@ -122,7 +123,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 				if(!terminology.containsTerm(akey1)) 
 					continue;
 				else
-					a1 = terminology.getTerm(akey1);
+					a1 = terminology.getTerm(akey1).getTerm();
 
 				t1SemRelations = new ArrayList<>();
 				
@@ -135,7 +136,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 					if(!terminology.containsTerm(akey2)) 
 						continue;
 					else
-						a2 = terminology.getTerm(akey2);
+						a2 = terminology.getTerm(akey2).getTerm();
 					
 					Relation rel = null;
 					if(areDicoSynonyms(a1, a2)) {
@@ -160,8 +161,8 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						rel.setProperty(
 								RelationProperty.SEMANTIC_SCORE, 
 								computeScore(
-									rel.getPropertyBooleanValue(RelationProperty.IS_DICO),
-									rel.getPropertyDoubleValue(RelationProperty.SEMANTIC_SIMILARITY)
+									rel.getBoolean(RelationProperty.IS_DICO),
+									rel.getDouble(RelationProperty.SEMANTIC_SIMILARITY)
 						));
 					}
 				} // end for j
@@ -171,7 +172,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 				t1SemRelations
 					.stream()
 					.sorted(RelationProperty.SEMANTIC_SCORE.getComparator(true))
-					.filter(r -> r.getPropertyDoubleValue(RelationProperty.SEMANTIC_SCORE) > options.getSemanticSimilarityThreshold())
+					.filter(r -> r.getDouble(RelationProperty.SEMANTIC_SCORE) > options.getSemanticSimilarityThreshold())
 					.limit(this.options.getSemanticNbCandidates())
 					.forEach(rel -> {
 						nbDistribRelationsFound.incrementAndGet();
@@ -219,8 +220,8 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		if(history.isPresent()) {
 			Term t1 = rel.getFrom();
 			Term t2 = rel.getTo();
-			String label = rel.getPropertyBooleanValue(RelationProperty.IS_DICO) ? "[dico]" : "";
-			label += rel.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL) ? ("[distrib:"+rel.getPropertyDoubleValue(RelationProperty.SEMANTIC_SIMILARITY)+"]") : "";
+			String label = rel.getBoolean(RelationProperty.IS_DICO) ? "[dico]" : "";
+			label += rel.getBoolean(RelationProperty.IS_DISTRIBUTIONAL) ? ("[distrib:"+rel.getDouble(RelationProperty.SEMANTIC_SIMILARITY)+"]") : "";
 			if(this.history.get().isGKeyWatched(t1.getGroupingKey()))
 				this.history.get().saveEvent(
 						t1.getGroupingKey(),

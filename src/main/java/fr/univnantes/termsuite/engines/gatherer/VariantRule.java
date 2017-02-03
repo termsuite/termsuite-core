@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 
 import com.google.common.base.Objects;
 
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.framework.service.TermService;
 
 /**
  * 
@@ -146,13 +146,13 @@ public class VariantRule {
 		this.expression = expression;
 	}
 	
-	public boolean isSourceAcceptable(Term source) {
+	public boolean isSourceAcceptable(TermService source) {
 		return sourceSizes.contains(source.getWords().size())
 				&& sourcePatterns.contains(source.getPattern())
 				&& (sourceCompound ? source.isCompound() : true);
 	}
 
-	public boolean isTargetAcceptable(Term target) {
+	public boolean isTargetAcceptable(TermService target) {
 		return targetSizes.contains(target.getWords().size())
 				&& targetPatterns.contains(target.getPattern())
 				&& (targetCompound ? target.isCompound() : true);

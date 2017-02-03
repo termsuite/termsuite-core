@@ -72,26 +72,26 @@ public class TermBuilder {
 		Term term = new Term(groupingKey.get(), termWords);
 
 		if(spottingRule.isPresent())
-			term.setSpottingRule(spottingRule.get());
+			term.setProperty(TermProperty.SPOTTING_RULE,spottingRule.get());
 		
 		if(generalFrequencyNorm.isPresent())
-			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
+			term.setProperty(TermProperty.GENERAL_FREQUENCY_NORM,generalFrequencyNorm.get());
 		
 		if(frequencyNorm.isPresent())
-			term.setFrequencyNorm(frequencyNorm.get());
+			term.setProperty(TermProperty.FREQUENCY_NORM,frequencyNorm.get());
 
 
 		if(pilot.isPresent())
-			term.setPilot(pilot.get());
+			term.setProperty(TermProperty.PILOT,pilot.get());
 
 		if(documentFrequency.isPresent())
-			term.setDocumentFrequency(documentFrequency.get());
+			term.setProperty(TermProperty.DOCUMENT_FREQUENCY,documentFrequency.get());
 
 		if(specificity.isPresent())
-			term.setSpecificity(specificity.get());
+			term.setProperty(TermProperty.SPECIFICITY,specificity.get());
 		
 		if(rank.isPresent())
-			term.setRank(rank.get());
+			term.setProperty(TermProperty.RANK,rank.get());
 		
 		if(contextVector.isPresent())
 			term.setContext(contextVector.get());
@@ -103,7 +103,7 @@ public class TermBuilder {
 		for(TermWord w:termWords) 
 			labels.add(w.getSyntacticLabel());
 		String pattern = Joiner.on(' ').join(labels);
-		term.setPattern(pattern);
+		term.setProperty(TermProperty.PATTERN, pattern);
 		
 		
 		/*
@@ -111,7 +111,7 @@ public class TermBuilder {
 		 * the exiting term frequency incremented by occurrences adding.
 		 */
 		if(frequency.isPresent()) {
-			term.setFrequency(frequency.get());
+			term.setProperty(TermProperty.FREQUENCY, frequency.get());
 		} 
 //		else
 //			term.setFrequency(occurrences.size());

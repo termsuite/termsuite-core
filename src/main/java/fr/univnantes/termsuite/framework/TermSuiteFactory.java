@@ -27,15 +27,16 @@ import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.AggregateEngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.SimpleEngineRunner;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.MemoryOccurrenceStore;
 import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
@@ -144,7 +145,7 @@ public class TermSuiteFactory {
 		return new BaseExporter(new TermDistributionExporter(termProperties, selector));
 	}
 
-	public static TerminologyExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<Relation> selector) {
+	public static TerminologyExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<RelationService> selector) {
 		return new BaseExporter(new VariantDistributionExporter(relationProperties, selector));
 	}
 

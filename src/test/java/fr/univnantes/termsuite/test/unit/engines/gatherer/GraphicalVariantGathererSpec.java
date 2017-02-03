@@ -40,6 +40,7 @@ import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.unit.TermFactory;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -64,17 +65,17 @@ public class GraphicalVariantGathererSpec {
 		termino = corpus.getTerminology();
 		TermFactory termFactory = new TermFactory(termino);
 		tetetete = termFactory.create("N:tetetete|tetetete");
-		tetetete.setSpecificity(1d);
+		tetetete.setProperty(TermProperty.SPECIFICITY, 1d);
 		tetetetx = termFactory.create("N:tetetetx|tetetetx");
-		tetetetx.setSpecificity(2d);
+		tetetetx.setProperty(TermProperty.SPECIFICITY, 2d);
 		teteteteAccent = termFactory.create("N:tétetete|tétetete");
-		teteteteAccent.setSpecificity(3d);
+		teteteteAccent.setProperty(TermProperty.SPECIFICITY, 3d);
 		abcdefghijklCapped = termFactory.create("N:Abcdefghijkl|Abcdefghijkl");
-		abcdefghijklCapped.setSpecificity(4d);
+		abcdefghijklCapped.setProperty(TermProperty.SPECIFICITY, 4d);
 		abcdefghijkl = termFactory.create("N:abcdefghijkl|abcdefghijkl");
-		abcdefghijkl.setSpecificity(5d);
+		abcdefghijkl.setProperty(TermProperty.SPECIFICITY, 5d);
 		abcdefghijkx = termFactory.create("N:abcdefghijkx|abcdefghijkx");
-		abcdefghijkx.setSpecificity(6d);
+		abcdefghijkx.setProperty(TermProperty.SPECIFICITY, 6d);
 	}
 
 

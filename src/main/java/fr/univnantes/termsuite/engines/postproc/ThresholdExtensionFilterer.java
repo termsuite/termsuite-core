@@ -9,9 +9,8 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 
 public class ThresholdExtensionFilterer extends SimpleEngine {
 
@@ -19,16 +18,14 @@ public class ThresholdExtensionFilterer extends SimpleEngine {
 
 	@Override
 	public void execute() {
-		Set<Relation> remTargets = Sets.newHashSet();
+		Set<RelationService> remTargets = Sets.newHashSet();
 
 		/*
 		 *	Remove target term if it has no affix
 		 */
 		terminology
 			.extensions()
-			.filter(rel -> 
-						rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX)
-							&&	!rel.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX))
+			.filter(RelationService::hasExtensionAffix)
 			.forEach(remTargets::add);
 
 		
@@ -48,15 +45,15 @@ public class ThresholdExtensionFilterer extends SimpleEngine {
 		});
 		
 		
-		Set<Term> remSet = remTargets.stream().map(Relation::getTo).collect(Collectors.toSet());
+		Set<TermService> remSet = remTargets.stream().map(RelationService::getTo).collect(Collectors.toSet());
 		logger.debug("Removing {} extension targets from term index", remSet.size());
 		remSet.stream().forEach(terminology::removeTerm);
 		
 		TermPostProcessor.logVariationsAndTerms(logger, terminology);
 	}
 
-	private void watchTermRemoval(Term term, String msg) {
-		if(history.isPresent() && history.get().isWatched(term))
+	private void watchTermRemoval(TermService term, String msg) {
+		if(history.isPresent() && history.get().isWatched(term.getTerm()))
 			history.get().saveEvent(
 					term.getGroupingKey(), 
 					this.getClass(), 

@@ -4,8 +4,8 @@ import java.io.Writer;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.index.Terminology;
-import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.model.Term;
 
 public class EvalExporter {
 	

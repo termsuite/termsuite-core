@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -20,10 +20,10 @@ public class SWTSizeSetter extends SimpleEngine {
 	@Override
 	public void execute() {
 		Set<String> swts = terminology.terms()
-				.filter(t -> t.getWords().size() == 1)
-				.map(Term::getGroupingKey)
+				.filter(TermService::isSingleWord)
+				.map(TermService::getGroupingKey)
 				.collect(Collectors.toSet());
-		for(Term t:terminology.getTerms()) {
+		for(TermService t:terminology.getTerms()) {
 			long cnt = t.getWords()
 				.stream()
 				.filter( tw -> swts.contains(TermUtils.toGroupingKey(tw)))

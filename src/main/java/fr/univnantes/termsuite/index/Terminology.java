@@ -31,8 +31,8 @@ import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Word;
 
 /**

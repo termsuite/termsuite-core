@@ -48,11 +48,12 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Terminology> {
 
@@ -184,7 +185,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 			if(tv.getType() == RelationType.VARIATION
 					&& tv.get(RelationProperty.VARIATION_TYPE) == type
 					&& tv.isPropertySet(p)
-					&& java.util.Objects.equals(tv.getPropertyStringValue(p), expectedValue) 
+					&& java.util.Objects.equals(tv.getString(p), expectedValue) 
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
@@ -247,7 +248,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		Set<String> matchingRuleNames = Sets.newHashSet();
 		for(Relation tv:actual.getOutboundRelations().values().stream().filter(r->r.getType() == RelationType.VARIATION).collect(toSet())) 
 			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
-				matchingRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
+				matchingRuleNames.add(tv.getString(RelationProperty.VARIATION_RULE));
 		return assertThat(matchingRuleNames);
 	}
 
@@ -300,7 +301,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	public TerminologyAssert hasExpectedCompounds(Path diffFileIfFail, Tuple... expectedTuples) {
 		CompoundTupleExtractor compoundTupleExtractor = new CompoundTupleExtractor();
 		Set<Tuple> actualTuples = actual.getTerms().values().stream()
-			.filter(Term::isCompound)
+			.filter(t -> TermUtils.isCompound(t))
 			.map(compoundTupleExtractor::extract)
 			.collect(Collectors.toSet());
 		return tupleDiff(diffFileIfFail, Sets.newHashSet(expectedTuples), actualTuples);

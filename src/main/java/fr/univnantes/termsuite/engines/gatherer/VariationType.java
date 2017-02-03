@@ -1,7 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.model.RelationProperty;
 
 /**
  * 

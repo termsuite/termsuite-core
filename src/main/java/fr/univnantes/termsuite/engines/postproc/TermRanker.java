@@ -1,14 +1,16 @@
 package fr.univnantes.termsuite.engines.postproc;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.google.common.collect.Lists;
-
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Parameter;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 
 public class TermRanker extends SimpleEngine {
 	
@@ -17,11 +19,11 @@ public class TermRanker extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		List<Term> ranked = Lists.newArrayList(terminology.getTerms());
+		List<Term> ranked = terminology.terms().map(TermService::getTerm).collect(toList());
 		Comparator<Term> comparator = config.getRankingProperty().getComparator(config.isDesc());
 		Collections.sort(ranked, comparator);
 		for(int index = 0; index < ranked.size(); index++) {
-			ranked.get(index).setRank(index + 1);
+			ranked.get(index).setProperty(TermProperty.RANK, index + 1);
 			watch(ranked, index);
 		}
 	}

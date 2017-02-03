@@ -36,18 +36,21 @@ import java.util.stream.Stream;
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Ordering;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.Relations;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.metrics.HarmonicMean;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * 
@@ -78,7 +81,7 @@ public class ControlFilesGenerator {
 		Set<String> distinctRuleNames = Sets.newHashSet();
 		termino.variations().forEach( tv -> {
 			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
-				distinctRuleNames.add(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE));
+				distinctRuleNames.add(tv.getString(RelationProperty.VARIATION_RULE));
 		});
 
 		/*
@@ -90,7 +93,7 @@ public class ControlFilesGenerator {
 				pathname, 
 				termino.relations()
 					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULE))
-					.filter(r-> r.getPropertyStringValue(RelationProperty.VARIATION_RULE).equals(ruleName)),
+					.filter(r-> r.getString(RelationProperty.VARIATION_RULE).equals(ruleName)),
 				RelationProperty.VARIATION_RULE
 				);
 		}
@@ -98,11 +101,17 @@ public class ControlFilesGenerator {
 		/*
 		 * Write variation types
 		 */
+		final HarmonicMean harmonicMean = new HarmonicMean();
 		for(VariationType vType:VariationType.values()) {
 			String pathname = directory.getAbsolutePath() + "/variations-" + vType.getShortName();
 			writeVariations(
 					pathname, 
-					termino.variations(vType).sorted(Relations.relFreqHmean())
+					termino.variations(vType).sorted(Ordering
+							.natural()
+							.reverse()
+							.onResultOf(r ->
+								harmonicMean.mean(r.getFrom().getFrequency(), r.getTo().getFrequency())
+							))
 				);
 		}
 		
@@ -157,12 +166,12 @@ public class ControlFilesGenerator {
 
 	private void writeCompounds(String filePath) throws IOException {
 		Writer writer = new FileWriter(filePath);
-		for(Term t:termino.getTerms()) {
+		for(TermService t:termino.getTerms()) {
 			if(t.isSingleWord() && t.isCompound()) {
 				writer.append(String.format("%s\t%s\t%s%n", 
 						t.getGroupingKey(),
 						t.getWords().get(0).getWord().getCompoundType(),
-						toCompoundString(t)
+						toCompoundString(t.getTerm())
 					)
 				);
 			}
@@ -173,8 +182,8 @@ public class ControlFilesGenerator {
 
 
 	public static String toCompoundString(Term t) {
-		Preconditions.checkArgument(t.isSingleWord(), "Term %s should be a single-word term", t);
-		Preconditions.checkArgument(t.isCompound(), "Term %s should be compound", t);
+		Preconditions.checkArgument(t.getWords().size() == 1, "Term %s should be a single-word term", t);
+		Preconditions.checkArgument(TermUtils.isCompound(t), "Term %s should be compound", t);
 		List<String> componentStrings = Lists.newArrayList();
 		Word word = t.getWords().get(0).getWord();
 		for(Component c:word.getComponents()) {
@@ -187,9 +196,9 @@ public class ControlFilesGenerator {
 		return Joiner.on("|").join(componentStrings);
 	}
 	
-	private void writeVariations(String path, Stream<Relation> variations, RelationProperty... additionalProperties) throws IOException {
+	private void writeVariations(String path, Stream<RelationService> variations, RelationProperty... additionalProperties) throws IOException {
 		Writer writer = new FileWriter(path);
-		for(Relation tv:variations.collect(Collectors.toList())) {
+		for(RelationService tv:variations.collect(Collectors.toList())) {
 			writer.append(tv.getFrom().getGroupingKey());
 			writer.append("\t");
 			writer.append(tv.getTo().getGroupingKey());

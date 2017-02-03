@@ -85,14 +85,14 @@ public class TermOccAnnotationImporter {
 			this.occurrenceStore.log();
 	}
 
-	private Term createOrGetTerm(String[] pattern, Word[] words) {
+	private TermService createOrGetTerm(String[] pattern, Word[] words) {
 		Preconditions.checkArgument(pattern.length > 0, MSG_PATTERN_EMPTY);
 		Preconditions.checkArgument(words.length > 0, MSG_LEMMAS_EMPTY);
 		Preconditions.checkArgument(words.length == pattern.length, MSG_NOT_SAME_LENGTH);
 
 		String termGroupingKey = TermSuiteUtils.getGroupingKey(pattern, words);
 	
-		Term term;
+		TermService term;
 		if(this.terminoService.containsTerm(termGroupingKey)) {
 			term = this.terminoService.getTerm(termGroupingKey);
 		} else {
@@ -100,8 +100,9 @@ public class TermOccAnnotationImporter {
 			for (int i = 0; i < pattern.length; i++)
 				builder.addWord(words[i], pattern[i]);
 			builder.setFrequency(0);
-			term = builder.create();
-			this.terminoService.addTerm(term);
+			Term t = builder.create();
+			this.terminoService.addTerm(t);
+			term = this.terminoService.getTerm(t.getGroupingKey());
 		}
 		return term;
 	}
@@ -121,7 +122,7 @@ public class TermOccAnnotationImporter {
 			toa = (TermOccAnnotation) it.next();
 			String gKey = TermSuiteUtils.getGroupingKey(toa);
 			
-			Term term;
+			TermService term;
 			if(terminoService.containsTerm(gKey))
 				term = terminoService.getTerm(gKey);
 			else {
@@ -139,9 +140,9 @@ public class TermOccAnnotationImporter {
 				term.setSpottingRule(toa.getSpottingRuleName());
 			}
 
-			term.setFrequency(term.getFrequency() + 1);
+			term.incrementFrequency(1);
 			occurrenceStore.addOccurrence(
-					term,
+					term.getTerm(),
 					currentFileURI, 
 					toa.getBegin(),
 					toa.getEnd(),

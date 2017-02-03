@@ -14,11 +14,12 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public abstract class VariationTypeGatherer extends SimpleEngine {
@@ -74,13 +75,17 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 			AtomicLong cnt) {
 		for(VariantRule rule:variantRules.getVariantRules(variationType)) {
 			Set<Term> sources = termClass.stream()
+				.map(t -> termino.asTermService(t))
 				.filter(rule::isSourceAcceptable)
+				.map(t -> t.getTerm())
 				.collect(Collectors.toSet());
 			if(sources.isEmpty())
 				continue;
 
 			Set<Term> targets = termClass.stream()
+					.map(t -> termino.asTermService(t))
 					.filter(rule::isTargetAcceptable)
+					.map(t -> t.getTerm())
 					.collect(Collectors.toSet());
 			if(targets.isEmpty())
 				continue;
@@ -103,13 +108,13 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 	}
 
 	private synchronized void createVariationRuleRelation(TerminologyService terminoService, Term source, Term target, VariantRule rule) {
-		Optional<Relation> variation = terminoService.getVariation(source, target);
+		Optional<RelationService> variation = terminoService.getVariation(source, target);
 				
 		if(!variation.isPresent()){
-			Relation relation = terminoService.createVariation(rule.getVariationType(), source, target);
+			RelationService relation = terminoService.createVariation(rule.getVariationType(), source, target);
 			relation.setProperty(RelationProperty.IS_GRAPHICAL, false);
 			variation = Optional.of(relation);
-			watch(source, target, relation);
+			watch(source, target, relation.getRelation());
 		}
 		variation.get().setProperty(RelationProperty.VARIATION_RULE, rule.getName());
 	}

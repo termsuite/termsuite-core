@@ -30,12 +30,12 @@ import org.slf4j.Logger;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguage;
 import fr.univnantes.termsuite.utils.TermHistory;
-import fr.univnantes.termsuite.utils.TermUtils;
 
 public class TermSpecificityComputer extends SimpleEngine {
 	@InjectLogger Logger logger;
@@ -52,16 +52,16 @@ public class TermSpecificityComputer extends SimpleEngine {
 			return;
 		
 		//		double maxWR = 0.0;
-		for(Term term:terminology.getTerms()) {
+		for(TermService term:terminology.getTerms()) {
 			double generalTermFrequency = (double)generalLanguage.getFrequency(term.getLemma(), term.getPattern());
 			double normalizedGeneralTermFrequency = 1000*generalTermFrequency/generalLanguage.getNbCorpusWords();
 			double termFrequency = term.getFrequency();
 			double normalizedTermFrequency = (1000 * termFrequency)/terminology.getWordAnnotationsNum();
 			term.setFrequencyNorm(normalizedTermFrequency);
 			term.setGeneralFrequencyNorm( normalizedGeneralTermFrequency);
-			TermUtils.setSpecificity(term);
-			TermUtils.setTfIdf(term);
-			watch(term);
+			term.updateSpecificity();
+			term.updateTfIdf();
+			watch(term.getTerm());
 		}
 	}
 

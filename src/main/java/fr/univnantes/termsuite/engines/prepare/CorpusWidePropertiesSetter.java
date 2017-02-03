@@ -4,7 +4,6 @@ import javax.inject.Inject;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.model.OccurrenceStore;
-import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 
 /**
@@ -20,10 +19,10 @@ public class CorpusWidePropertiesSetter extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		for(Term t:terminology.getTerms()) {
-			String pilot = occurrenceStore.getMostFrequentForm(t);
+		terminology.terms().forEach( t-> {
+			String pilot = occurrenceStore.getMostFrequentForm(t.getTerm());
 			t.setPilot(pilot == null ? t.getGroupingKey() : pilot);
-			t.setDocumentFrequency(occurrenceStore.getDocuments(t).size());
-		}
+			t.setDocumentFrequency(occurrenceStore.getDocuments(t.getTerm()).size());
+		});
 	}
 }

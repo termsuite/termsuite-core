@@ -11,19 +11,19 @@ import org.slf4j.Logger;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import jetbrains.exodus.core.dataStructures.hash.HashSet;
 
 public class IndependanceScorer extends SimpleEngine {
 	@InjectLogger Logger logger;
 
-	public Set<Term> getExtensions(Term from) {
-		Set<Term> extensions = new HashSet<>();
+	public Set<TermService> getExtensions(TermService from) {
+		Set<TermService> extensions = new HashSet<>();
 		
-		terminology
-			.extensions(from)
+		from
+			.extensions()
 			.forEach(rel -> {
 				extensions.add(rel.getTo());
 				extensions.addAll(getExtensions(rel.getTo()));
@@ -33,8 +33,11 @@ public class IndependanceScorer extends SimpleEngine {
 	}
 
 	public void checkNoCycleInExtensions() {
-		Predicate<Relation> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
-		if(terminology.extensions().filter(badExtension).findFirst().isPresent()) {
+		Predicate<RelationService> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
+		if(terminology
+				.extensions()
+				.filter(badExtension)
+				.findFirst().isPresent()) {
 			terminology.extensions()
 				.filter(badExtension)
 				.limit(10)
@@ -79,10 +82,10 @@ public class IndependanceScorer extends SimpleEngine {
 				.filter(t -> t.isPropertySet(TermProperty.DEPTH))
 				.filter(t -> t.getDepth() == depth.intValue())
 				.forEach(t -> {
-					final int frequency = t.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
+					final int frequency = t.getIndependantFrequency();
 					getBases(t)
 						.forEach(base -> {
-							int baseFrequency = base.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
+							int baseFrequency = base.getIndependantFrequency();
 							baseFrequency -= frequency;
 							base.setProperty(TermProperty.INDEPENDANT_FREQUENCY, baseFrequency);
 						});
@@ -97,8 +100,8 @@ public class IndependanceScorer extends SimpleEngine {
 		logger.debug("Computing INDEPENDANCE for all terms");
 		terminology.terms()
 			.forEach(t -> {
-				double iFreq = (double)t.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
-				int freq = t.getPropertyIntegerValue(TermProperty.FREQUENCY);
+				double iFreq = (double)t.getIndependantFrequency();
+				int freq = t.getFrequency();
 				t.setProperty(TermProperty.INDEPENDANCE, 
 						iFreq / freq);
 			});
@@ -122,14 +125,13 @@ public class IndependanceScorer extends SimpleEngine {
 						&& t.getDepth() == currentDepth.intValue())
 				.forEach(t -> {
 					anyAtCurrentDepth.set(true);
-					terminology
-						.extensions(t)
+					t.extensions()
 						.forEach(rel -> rel.getTo().setDepth(currentDepth.intValue() + 1));
 				});
 		} while(anyAtCurrentDepth.get());
 		currentDepth.decrementAndGet();
 		
-		Set<Term> noDepthTerms = terminology
+		Set<TermService> noDepthTerms = terminology
 			.terms()
 			.filter(t -> !t.isPropertySet(TermProperty.DEPTH))
 			.collect(toSet());
@@ -145,11 +147,11 @@ public class IndependanceScorer extends SimpleEngine {
 		return currentDepth;
 	}
 	
-	public Set<Term> getBases(Term term) {
-		Set<Term> allBases = new java.util.HashSet<>(); 
+	public Set<TermService> getBases(TermService term) {
+		Set<TermService> allBases = new java.util.HashSet<>(); 
 		
-		terminology
-			.extensionBases(term)
+		term
+			.extensionBases()
 			.forEach(rel -> {
 				allBases.add(rel.getFrom());
 				allBases.addAll(getBases(rel.getFrom()));

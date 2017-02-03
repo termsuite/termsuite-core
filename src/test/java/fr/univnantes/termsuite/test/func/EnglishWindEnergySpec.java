@@ -39,17 +39,17 @@ import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.Relations;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -175,6 +175,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	public void testInferenceOnHorizontalAxis() {
 		Optional<Relation> rel1 = UnitTests.getTerminologyService(corpus)
 				.variations("nnn: horizontal-axis wind turbine", "annn: horizontal axis wind turbine")
+				.map(RelationService::getRelation)
 				.findFirst();
 
 		assertTrue("Relation not found", rel1.isPresent());
@@ -192,42 +193,43 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testNumberOfInferedVariations() {
 		TerminologyService service = UnitTests.getTerminologyService(corpus);
+		System.out.println("Nb relations: " + service.relations().count());
 		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
+				.filter(RelationService::isInfered)
 				.collect(Collectors.toSet())).hasSize(510);
 		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
-				.filter(Relations.IS_GRAPHICAL)
-				.collect(Collectors.toSet())).hasSize(176);
-		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
-				.filter(Relations.IS_SEMANTIC)
+				.filter(RelationService::isInfered)
+				.filter(RelationService::isSemantic)
 				.collect(Collectors.toSet())).hasSize(0);
 		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
-				.filter(Relations.IS_PREFIXATION)
+				.filter(RelationService::isInfered)
+				.filter(RelationService::isPrefixation)
 				.collect(Collectors.toSet())).hasSize(9);
 		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
-				.filter(Relations.IS_DERIVATION)
+				.filter(RelationService::isInfered)
+				.filter(RelationService::isDerivation)
 				.collect(Collectors.toSet())).hasSize(1);
 		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
-				.filter(Relations.IS_MORPHOLOGICAL)
+				.filter(RelationService::isInfered)
+				.filter(RelationService::isMorphological)
 				.collect(Collectors.toSet())).hasSize(500);
 		assertThat(service.relations()
-				.filter(Relations.IS_INFERENCE)
-				.filter(Relations.IS_SYNTAGMATIC)
+				.filter(RelationService::isInfered)
+				.filter(RelationService::isSyntagmatic)
 				.collect(Collectors.toSet())).hasSize(0);
+		assertThat(service.relations()
+				.filter(RelationService::isInfered)
+				.filter(RelationService::isGraphical)
+				.collect(Collectors.toSet())).hasSize(176);
 	}
 
 	@Test
 	public void testMorphologicalVariations() {
-		Stream<Relation> variationsTypedMorpho = UnitTests.getTerminologyService(corpus)
+		Stream<RelationService> variationsTypedMorpho = UnitTests.getTerminologyService(corpus)
 				.variations(VariationType.MORPHOLOGICAL);
 		assertThat(variationsTypedMorpho.collect(Collectors.toList())).hasSize(458);
 
-		Stream<Relation> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
+		Stream<RelationService> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
 				.relations(RelationProperty.IS_MORPHOLOGICAL, true);
 		assertThat(variationsTaggedMorpho.collect(Collectors.toList())).hasSize(958);
 	}

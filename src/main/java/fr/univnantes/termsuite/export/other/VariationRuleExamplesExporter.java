@@ -20,7 +20,6 @@ import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.uima.ResourceType;
@@ -48,11 +47,11 @@ public class VariationRuleExamplesExporter {
 	public void export(TermSuiteResourceManager mgr, TerminologyService termino, Writer writer, OccurrenceStore occStore) {
 		final Multimap<String, TermPair> pairs = HashMultimap.create();
 
-		for (Term t : termino.getTerms()) {
-			termino.outboundRelations(t, RelationType.VARIATION).forEach(v -> {
-				pairs.put(v.getPropertyStringValue(RelationProperty.VARIATION_RULE), new TermPair(t, v.getTo()));
+		termino.terms().forEach(t -> {
+			t.variations().forEach(v -> {
+				pairs.put(v.getString(RelationProperty.VARIATION_RULE), new TermPair(t.getTerm(), v.getTo().getTerm()));
 			});
-		}
+		});
 
 		// gets all variant rules (event size-0) and sorts them
 		TreeSet<VariantRule> varianRules = new TreeSet<VariantRule>(new Comparator<VariantRule>() {

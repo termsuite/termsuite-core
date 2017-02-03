@@ -86,7 +86,7 @@ public class DocumentView {
 		private boolean keepOccurrence(TermOccurrence o) {
 			if(overlap(o))
 				return false;
-			return o.getTerm().isSingleWord();
+			return o.getTerm().getWords().size() == 1;
 		}
 
 		protected abstract boolean overlap(TermOccurrence o);

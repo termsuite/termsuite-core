@@ -15,7 +15,7 @@ public class IsExtensionPropertySetter extends SimpleEngine {
 					relation.setProperty(RelationProperty.IS_EXTENSION, true);
 				else {
 					boolean isExtension = terminology
-						.extensions(relation.getFrom(), relation.getTo())
+						.extensions(relation.getFrom().getTerm(), relation.getTo().getTerm())
 						.findAny().isPresent();
 					relation.setProperty(
 							RelationProperty.IS_EXTENSION,

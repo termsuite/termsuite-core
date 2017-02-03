@@ -13,12 +13,11 @@ import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.utils.TermHistory;
-import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * 
@@ -74,24 +73,22 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 		AtomicInteger cnt = new AtomicInteger(0);
 		Stopwatch sw = Stopwatch.createStarted();
 		terminology.variations()
-			.filter(rel -> rel.isPropertySet(RelationProperty.VARIATION_TYPE))
-			// Apply to all variations but syntagmatic ones
-			.filter(rel -> rel.get(RelationProperty.VARIATION_TYPE) == type)
+			.filter(rel -> rel.isVariationOfType(type))
 			.collect(toList())
 			.forEach(relation -> {
-				Term m1 = relation.getFrom();
-				Term m2 = relation.getTo();
+				TermService m1 = relation.getFrom();
+				TermService m2 = relation.getTo();
 				
-				List<Relation> m1Extensions = terminology.extensions(m1).collect(toList());
-				for(Relation rel1:m1Extensions) {
-					Term affix1 = TermUtils.getExtensionAffix(terminology, m1, rel1.getTo());
-					if(affix1 == null)
+				List<RelationService> m1Extensions = m1.extensions().collect(toList());
+				for(RelationService rel1:m1Extensions) {
+					Optional<TermService> affix1 = rel1.getExtensionAffix(m1.getTerm());
+					if(!affix1.isPresent())
 						continue;
 					
-					List<Relation> m2extensions = terminology.extensions(m2).collect(toList());
-					for(Relation rel2:m2extensions) {
-							Term affix2 = TermUtils.getExtensionAffix(terminology, m2, rel2.getTo());
-							if(affix2 == null)
+					List<RelationService> m2extensions = m2.extensions().collect(toList());
+					for(RelationService rel2:m2extensions) {
+						Optional<TermService> affix2 = rel2.getExtensionAffix(m2.getTerm());
+							if(!affix2.isPresent())
 								continue;
 
 							if(Objects.equals(affix1, affix2)) {
@@ -100,13 +97,14 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 								if(logger.isTraceEnabled()) 
 									logger.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
 								
-								Relation inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
+								RelationService inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo().getTerm(), rel2.getTo().getTerm());
 								inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.SEMANTIC_SIMILARITY);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DICO);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DISTRIBUTIONAL);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.SEMANTIC_SCORE);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_GRAPHICAL);
+								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_SEMANTIC);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_PREFIXATION);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_MORPHOLOGICAL);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_SYNTAGMATIC);
@@ -120,18 +118,18 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 		logger.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
 	}
 
-	public void copyRelationPropertyIfSet(Relation baseRelation, Relation inferedRel, RelationProperty property) {
+	public void copyRelationPropertyIfSet(RelationService baseRelation, RelationService inferedRel, RelationProperty property) {
 		if(baseRelation.isPropertySet(property))
 			inferedRel.setProperty(
 					property, 
 					baseRelation.get(property));
 	}
 
-	private void watch(Relation inferedRel, Relation r1, Relation r2) {
+	private void watch(RelationService inferedRel, RelationService r1, RelationService r2) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(inferedRel.getTo()))
+			if(history.get().isWatched(inferedRel.getTo().getTerm()))
 				history.get().saveEvent(inferedRel.getTo().getGroupingKey(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
-			if(history.get().isWatched(inferedRel.getFrom()))
+			if(history.get().isWatched(inferedRel.getFrom().getTerm()))
 				history.get().saveEvent(inferedRel.getFrom().getGroupingKey(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
 		}
 	}

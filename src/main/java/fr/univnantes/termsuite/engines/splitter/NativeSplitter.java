@@ -30,6 +30,8 @@ import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.EditDistance;
@@ -118,7 +120,7 @@ public class NativeSplitter extends SimpleEngine {
 //		int observingStep = 100;
 		Set<Word> words = terminology.getTerms()
 				.parallelStream()
-				.filter(Term::isSingleWord)
+				.filter(TermService::isSingleWord)
 				.map(swt -> swt.getWords().get(0).getWord())
 				/*
 				 * Do not do native morphology splitting 
@@ -384,7 +386,7 @@ public class NativeSplitter extends SimpleEngine {
 
 	public double getMaxSpec() {
 		if(!maxSpec.isPresent()) {
-			Comparator<Term> specComparator = TermProperty.SPECIFICITY.getComparator(false);
+			Comparator<TermService> specComparator = TerminologyService.toTermServiceComparator(TermProperty.SPECIFICITY.getComparator(false));
 			double wrLog = terminology.terms().max(specComparator).get().getSpecificity();
 			maxSpec = Optional.of((double)Math.pow(10, wrLog));
 		}

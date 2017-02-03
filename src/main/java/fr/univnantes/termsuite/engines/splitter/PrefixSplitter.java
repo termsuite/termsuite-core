@@ -31,9 +31,10 @@ import com.google.common.collect.Multimap;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
@@ -51,14 +52,14 @@ public class PrefixSplitter extends SimpleEngine {
 		Multimap<String, Term> lemmaIndex = HashMultimap.create();
 		int nb = 0;
 		String prefixExtension, lemma, pref;
-		for(Term swt:terminology.getTerms()) {
+		for(TermService swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			else {
-				lemmaIndex.put(swt.getLemma(), swt);
+				lemmaIndex.put(swt.getLemma(), swt.getTerm());
 			}
 		}
-		for(Term swt:terminology.getTerms()) {
+		for(TermService swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 
@@ -76,10 +77,10 @@ public class PrefixSplitter extends SimpleEngine {
 						continue;
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
-							watch(swt, target);
+							watch(swt.getTerm(), target);
 							terminology.addRelation(new Relation(
 									RelationType.IS_PREFIX_OF,
-									swt, 
+									swt.getTerm(), 
 									target
 									));
 						}

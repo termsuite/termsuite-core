@@ -10,11 +10,11 @@ import org.slf4j.Logger;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
-import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Relation;
 
 /*
  *  Detect 2-order extension variations.
@@ -53,8 +53,8 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 		 *  
 		 */
 		mergeTwoOrderVariations(
-				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
-				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)
+				RelationService::isExtension,
+				RelationService::isExtension
 			);
 
 		/*
@@ -72,11 +72,11 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 		 * 
 		 */
 		mergeTwoOrderVariations(
-				r1 -> r1.getPropertyBooleanValue(RelationProperty.IS_EXTENSION),
-				r2 -> r2.getPropertyBooleanValue(RelationProperty.IS_MORPHOLOGICAL)
-						|| r2.getPropertyBooleanValue(RelationProperty.IS_DERIVATION)
-						|| r2.getPropertyBooleanValue(RelationProperty.IS_PREFIXATION)
-						|| r2.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC)
+				RelationService::isExtension,
+				r2 -> r2.isMorphological()
+							|| r2.isDerivation()
+							|| r2.isPrefixation()
+							|| r2.isSemantic()
 			);
 		
 		
@@ -96,20 +96,19 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 	 *   baseTerm --rtrans--> v2 
 	 * 
 	 */
-	private void mergeTwoOrderVariations(Predicate<Relation> p1, Predicate<Relation> p2) {
+	private void mergeTwoOrderVariations(Predicate<RelationService> p1, Predicate<RelationService> p2) {
 		/*
 		 *  t1 --r1--> t2 --r2--> t3
 		 *  t1 --rtrans--> t3
 		 */
 
-		terminology.terms()
-		.sorted(TermProperty.FREQUENCY.getComparator(true))
+		terminology.terms(TermProperty.FREQUENCY.getComparator(true))
 		.forEach(t1 -> {
 			final Map<Term, Relation> r1Set = new HashMap<>();
 
-			terminology.outboundRelations(t1, RelationType.VARIATION).forEach(r1 -> {
+			t1.variations().forEach(r1 -> {
 				if(p1.test(r1))
-					r1Set.put(r1.getTo(), r1);
+					r1Set.put(r1.getTo().getTerm(), r1.getRelation());
 			});
 			
 			final Set<Relation> rem = new HashSet<>();
@@ -120,14 +119,14 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 					.filter(p2)
 					.filter(r2 -> r1Set.containsKey(r2.getTo()))
 					.forEach(r2 -> {
-						Term t3 = r2.getTo();
+						Term t3 = r2.getTo().getTerm();
 						
 						Relation rtrans = r1Set.get(t3);
 						if(logger.isTraceEnabled()) {
 							logger.trace("Found order-2 relation in variation set {}-->{}-->{}", t1, t2, t3);
 							logger.trace("Removing {}", rtrans);
 						}
-						watchRemoval(t1, t2, t3, rtrans);
+						watchRemoval(t1.getTerm(), t2, t3, rtrans);
 						rem.add(rtrans);
 					})
 				;

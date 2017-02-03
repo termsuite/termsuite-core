@@ -32,9 +32,10 @@ import com.google.common.collect.Lists;
 import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Resource;
-import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.uima.ResourceType;
 
 public class ManualSuffixDerivationDetecter extends SimpleEngine {
@@ -44,24 +45,24 @@ public class ManualSuffixDerivationDetecter extends SimpleEngine {
 	
 	@Override
 	public void execute() {
-		Term regularForm;
+		TermService regularForm;
 		String lemma;
-		List<Relation> toRem;
-		for(Term derivateForm:terminology.getTerms()) {
+		List<RelationService> toRem;
+		for(TermService derivateForm:terminology.getTerms()) {
 			if(!derivateForm.isSingleWord())
 				continue;
 			toRem = Lists.newArrayList();
 			lemma = derivateForm.getWords().get(0).getWord().getLemma();
 			for(String regularFormException:manualSuffixDerivations.getValues(lemma)) {
-				for(Relation tv:terminology.inboundRelations(derivateForm, RelationType.DERIVES_INTO).collect(toList())) {
+				for(RelationService tv:derivateForm.inboundRelations(RelationType.DERIVES_INTO).collect(toList())) {
 					regularForm = tv.getFrom();
 					if(regularForm.getWords().get(0).getWord().getLemma().equals(regularFormException)) 
 						toRem.add(tv);
 				}
 			}
-			for(Relation rem:toRem) {
+			for(RelationService rem:toRem) {
 				terminology.removeRelation(rem);
-				watch(rem);
+				watch(rem.getRelation());
 			}
 		}
 	}

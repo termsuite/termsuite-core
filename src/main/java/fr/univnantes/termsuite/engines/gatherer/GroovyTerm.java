@@ -46,9 +46,9 @@ public class GroovyTerm {
 	public GroovyTerm(Term term, GroovyService adapter) {
 		this.term = term;
 		
-		this.compound = term.isCompound();
-		this.isSingleWord = term.isSingleWord();
-		this.neoclassical = term.isCompound() && term.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
+		this.isSingleWord = term.getWords().size() == 1;
+		this.compound = isSingleWord && term.getWords().get(0).getWord().isCompound();
+		this.neoclassical = this.compound && term.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL;
 		this.pattern = term.getPattern();
 		this.lemma = term.getGroupingKey();
 		this.stem = term.getWords().get(0).getWord().getStem();

@@ -30,13 +30,14 @@ import org.w3c.dom.Node;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.Export;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Form;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.Relation;
 
 public class TbxExporter {
 
@@ -65,9 +66,9 @@ public class TbxExporter {
 			Document tbxDocument = prepareTBXDocument();
 			
 			try {
-				for(Term t: termino.getTerms()) {
+				for(TermService t: termino.getTerms()) {
 					addTermEntry(tbxDocument, termino, occurrenceStore, t, false);
-					termino.outboundRelations(t).forEach(v->
+					t.outboundRelations().forEach(v->
 						addTermEntry(tbxDocument, termino, occurrenceStore, v.getTo(), true));
 				}
 				exportTBXDocument(tbxDocument, writer);
@@ -170,37 +171,37 @@ public class TbxExporter {
      * @param isVariant
      * @throws IOException
      */
-	private void addTermEntry(Document tbxDocument, TerminologyService termino, OccurrenceStore occurrenceStore, Term term, boolean isVariant) {
-		String langsetId = LANGSET_ID_PREFIX + getId(term);
+	private void addTermEntry(Document tbxDocument, TerminologyService termino, OccurrenceStore occurrenceStore, TermService term, boolean isVariant) {
+		String langsetId = LANGSET_ID_PREFIX + getId(term.getTerm());
         Node body = tbxDocument.getElementsByTagName("body").item(0);
 
 		Element termEntry = tbxDocument.createElement("termEntry");
 		termEntry.setAttribute("xml:id",
-				TERMENTRY_ID_PREFIX + getId(term));
+				TERMENTRY_ID_PREFIX + getId(term.getTerm()));
 		body.appendChild(termEntry);
 		Element langSet = tbxDocument.createElement("langSet");
 		langSet.setAttribute("xml:id", langsetId);
 		langSet.setAttribute("xml:lang", termino.getLang().getCode());
 		termEntry.appendChild(langSet);
 
-		for (Relation variation : termino.inboundRelations(term).collect(toSet())) 
+		for (RelationService variation : term.inboundRelations().collect(toSet())) 
 			this.addTermBase(tbxDocument, langSet, variation.getFrom().getGroupingKey(), null);
 
-		for (Relation variation : termino.outboundRelations(term).collect(toSet())) {
-			this.addTermVariant(tbxDocument, langSet, String.format("langset-%d", getId(variation.getTo())),
+		for (RelationService variation : term.outboundRelations().collect(toSet())) {
+			this.addTermVariant(tbxDocument, langSet, String.format("langset-%d", getId(variation.getTo().getTerm())),
 					variation.getTo().getGroupingKey());
 		}
-		Collection<TermOccurrence> allOccurrences = occurrenceStore.getOccurrences(term);
+		Collection<TermOccurrence> allOccurrences = occurrenceStore.getOccurrences(term.getTerm());
 		this.addDescrip(tbxDocument, langSet, langSet, "nbOccurrences", allOccurrences.size());
 
 		Element tig = tbxDocument.createElement("tig");
-		tig.setAttribute("xml:id", TIG_ID_PREFIX + getId(term));
+		tig.setAttribute("xml:id", TIG_ID_PREFIX + getId(term.getTerm()));
 		langSet.appendChild(tig);
 		Element termElmt = tbxDocument.createElement("term");
 		termElmt.setTextContent(term.getGroupingKey());
 		tig.appendChild(termElmt);
 
-		List<Form> forms = occurrenceStore.getForms(term);
+		List<Form> forms = occurrenceStore.getForms(term.getTerm());
 		addNote(tbxDocument, langSet, tig, "termPilot", term.getPilot());
 
 		this.addNote(tbxDocument, langSet, tig, "termType", isVariant ? "variant" : "termEntry");
@@ -219,7 +220,7 @@ public class TbxExporter {
 		this.addDescrip(tbxDocument, langSet, tig, "relativeFrequency",
 				NUMBER_FORMATTER.format(term.getFrequency()));
 		addDescrip(tbxDocument, langSet, tig, "formList",
-					buildFormListJSON(occurrenceStore, term, forms.size()));
+					buildFormListJSON(occurrenceStore, term.getTerm(), forms.size()));
 		 this.addDescrip(tbxDocument, langSet, tig, "domainSpecificity",
 				 term.getSpecificity());
 	}
@@ -276,7 +277,7 @@ public class TbxExporter {
 		return sb.toString();
 	}
 
-	private String getComplexity(Term term) {
+	private String getComplexity(TermService term) {
 		if (term.isSingleWord()) {
 			if(term.isCompound()) {
 				if(term.getWords().get(0).getWord().getCompoundType() == CompoundType.NEOCLASSICAL)

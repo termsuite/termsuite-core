@@ -38,6 +38,7 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.unit.Fixtures;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
@@ -59,9 +60,9 @@ public class TermOccurrenceUtilsSpec {
 		term1 = Fixtures.term1(corpus.getTerminology());
 		term2 = Fixtures.term2(corpus.getTerminology());
 		term3 = Fixtures.term3(corpus.getTerminology());
-		term1.setFrequencyNorm(0.1);
-		term2.setFrequencyNorm(0.2);
-		term3.setFrequencyNorm(0.3);
+		term1.setProperty(TermProperty.FREQUENCY_NORM, 0.1);
+		term2.setProperty(TermProperty.FREQUENCY_NORM, 0.2);
+		term3.setProperty(TermProperty.FREQUENCY_NORM, 0.3);
 		o1 = new TermOccurrence(term1, "blabla1", document1, 10, 20);
 		o2 = new TermOccurrence(term2, "blabla2", document1, 20, 30);
 		o3 = new TermOccurrence(term1, "blabla3", document1, 10, 40);
