@@ -24,7 +24,6 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.TermOrdering;
@@ -60,28 +59,35 @@ public class TerminologyService {
 	@Inject
 	private IndexService indexService;
 
-	private Multimap<Term, Relation> inboundVariations =  null;
+	private Multimap<Term, Relation> inboundRelations =  null;
+	private Multimap<Term, Relation> outboundRelations =  null;
 	
 	private Semaphore relationMutex = new Semaphore(1);
 	private Semaphore termMutex = new Semaphore(1);
-	private Semaphore inboundMutex = new Semaphore(1);
-
 	
-	private Multimap<Term, Relation> getInboundRelations() {
-		inboundMutex.acquireUninterruptibly();
-		if(inboundVariations == null) {
-			LinkedListMultimap<Term, Relation> map = LinkedListMultimap.create();
-			this.termino.getOutboundRelations().values().forEach(r-> {
-				map.put(r.getTo(), r);
+	private synchronized void initRelations() {
+		if(inboundRelations == null) {
+			inboundRelations = LinkedListMultimap.create(); 
+			outboundRelations = LinkedListMultimap.create(); 
+			this.termino.getRelations().forEach(r-> {
+				outboundRelations.put(r.getFrom(), r);
+				inboundRelations.put(r.getTo(), r);
 			});
-			inboundVariations = Multimaps.synchronizedListMultimap(map);
 		}
-		inboundMutex.release();
-		return inboundVariations;
+	}
+	
+	private Multimap<Term, Relation> getOutboundRelations() {
+		initRelations();
+		return outboundRelations;
+	}
+
+	private Multimap<Term, Relation> getInboundRelations() {
+		initRelations();
+		return inboundRelations;
 	}
 	
 	public Stream<Relation> getRelations(Term from, Term to, RelationType... types) {
-		Stream<Relation> stream = this.termino.getOutboundRelations().get(from)
+		Stream<Relation> stream = this.getOutboundRelations().get(from)
 					.stream()
 					.filter(relation -> relation.getTo().equals(to));
 		
@@ -97,8 +103,7 @@ public class TerminologyService {
 
 	
 	public Stream<RelationService> relations() {
-		return termino.getOutboundRelations()
-				.values()
+		return this.termino.getRelations()
 				.stream()
 				.map(this::asRelationService)
 				;
@@ -176,7 +181,7 @@ public class TerminologyService {
 	}
 	
 	public Stream<RelationService> outboundRelations(Term source) {
-		return this.termino.getOutboundRelations()
+		return this.getOutboundRelations()
 				.get(source)
 				.stream()
 				.map(this::asRelationService)
@@ -349,7 +354,7 @@ public class TerminologyService {
 		this.termino.getTerms().remove(t.getGroupingKey());
 		// remove from variants
 		List<Relation> toRem = Lists.newLinkedList();
-		toRem.addAll(this.termino.getOutboundRelations().get(t));
+		toRem.addAll(this.getOutboundRelations().get(t));
 		toRem.addAll(this.getInboundRelations().get(t));
 		toRem.forEach(this::removeRelation);
 		
@@ -396,15 +401,9 @@ public class TerminologyService {
 				relation.getType(),
 				relation.getTo()
 				);
-		/*
-		 * Do not delete: First synchronize inbound with outbound
-		 */
-		this.getInboundRelations();
-		
-		/*
-		 * Then add the relation in both
-		 */
-		this.termino.getOutboundRelations().put(relation.getFrom(), relation);
+		initRelations();
+		this.termino.getRelations().add(relation);
+		this.getOutboundRelations().put(relation.getFrom(), relation);
 		this.getInboundRelations().put(relation.getTo(), relation);
 	}
 
@@ -412,10 +411,11 @@ public class TerminologyService {
 		removeRelation(variation.getRelation());
 	}
 	
-	public void removeRelation(Relation variation) {
+	public void removeRelation(Relation relation) {
 		relationMutex.acquireUninterruptibly();
-		this.termino.getOutboundRelations().remove(variation.getFrom(), variation);
-		this.getInboundRelations().remove(variation.getTo(), variation);
+		this.termino.getRelations().remove(relation);
+		this.getOutboundRelations().remove(relation.getFrom(), relation);
+		this.getInboundRelations().remove(relation.getTo(), relation);
 		relationMutex.release();
 	}
 

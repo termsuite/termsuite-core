@@ -113,34 +113,34 @@ public class TermGathererSpec {
 	
 	@Test
 	public void testProcessDefault() throws AnalysisEngineProcessException{
-		assertThat(termino.getOutboundRelations().get(this.geothermie_hydraulique))
+		assertThat(UnitTests.outRels(termino, this.geothermie_hydraulique))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_FROM_TYPE_TO)
 			.contains(tuple(this.geothermie_hydraulique, VariationType.SYNTAGMATIC, this.geothermie_hydraulique_solaire));
 		
-		assertThat(termino.getOutboundRelations().get(this.geothermie_hydraulique_solaire))
+		assertThat(UnitTests.outRels(termino, this.geothermie_hydraulique_solaire))
 			.hasSize(0);
 	}
 
 	
 	@Test
 	public void testProcessPrefix() throws AnalysisEngineProcessException{
-		assertThat(termino.getOutboundRelations().get(this.machine_synchrone))
+		assertThat(UnitTests.outRels(termino, this.machine_synchrone))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
 			.contains(tuple(VariationType.PREFIXATION, "NA-NprefA", this.machine_asynchrone));
 		
-		assertThat(termino.getOutboundRelations().get(this.machine_asynchrone))
+		assertThat(UnitTests.outRels(termino, this.machine_asynchrone))
 			.hasSize(0);
 	}
 
 	@Test
 	public void testProcessDerivation() throws AnalysisEngineProcessException{
-		assertThat(termino.getOutboundRelations().get(this.phase_du_stator))
+		assertThat(UnitTests.outRels(termino, this.phase_du_stator))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
 			.contains(tuple(VariationType.DERIVATION, "S-R2D-NPN", this.phase_statorique));
-		assertThat(termino.getOutboundRelations().get(this.phase_statorique))
+		assertThat(UnitTests.outRels(termino, this.phase_statorique))
 			.hasSize(0);
 		
 	}

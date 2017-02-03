@@ -84,8 +84,8 @@ public class VariantScorerSpec {
 	
 	@Test
 	public void testVARIANT_FREQUENCY_handleCycles() {
-		service = UnitTests.getTerminologyService(indexedCorpus);
 		scorer.doVariationFrenquencies();
+		service = UnitTests.getTerminologyService(indexedCorpus);
 		Relation relation1 = service.variations("t3", "t2").findFirst().get().getRelation();
 		assertThat(relation1.getInteger(RelationProperty.VARIANT_BAG_FREQUENCY))
 			.isEqualTo(8); // t2.freq + t1.freq

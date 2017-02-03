@@ -78,14 +78,14 @@ public class TermFactory {
 
 	public void addPrefix(Term term1, Term term2) {
 		termsExist(term1, term2);
-		termino.getOutboundRelations().put(term1, new Relation(RelationType.IS_PREFIX_OF, term1, term2));
+		termino.getRelations().add(new Relation(RelationType.IS_PREFIX_OF, term1, term2));
 	}
 
 	public void addDerivesInto(String type, Term term1, Term term2) {
 		termsExist(term1, term2);
 		Relation relation = new Relation(RelationType.DERIVES_INTO, term1, term2);
 		relation.setProperty(RelationProperty.DERIVATION_TYPE, type);
-		termino.getOutboundRelations().put(term1, relation);
+		termino.getRelations().add(relation);
 	}
 
 	private void termsExist(Term... terms) {

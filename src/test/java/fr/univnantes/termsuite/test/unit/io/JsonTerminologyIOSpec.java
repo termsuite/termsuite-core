@@ -40,7 +40,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.Collectors;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -129,11 +128,11 @@ public class JsonTerminologyIOSpec {
 		Relation rel1 = new Relation(RelationType.VARIATION, term1, term2);
 		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
-		UnitTests.addRelation(termino, rel1);
+		termino.getRelations().add(rel1);
 		Relation rel2 = new Relation(RelationType.VARIATION, term1, term2);
 		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
 		rel2.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, 0.956d);
-		UnitTests.addRelation(termino, rel2);
+		termino.getRelations().add(rel2);
 		
 		// generate context vectors
 		ContextVector v = new ContextVector(term1);
@@ -146,11 +145,16 @@ public class JsonTerminologyIOSpec {
 		json1 = TestUtil.readFile(jsonFile1);
 	}
 	
+	
+	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
 		Terminology termino = indexedCorpus.getTerminology();
-		Relation rel = termino.getOutboundRelations().get(term1).iterator().next();
-		termino.getOutboundRelations().remove(term1, rel);
+		Relation rel = termino.getRelations().stream()
+				.filter(r -> r.getFrom().equals(term1))
+				.findFirst()
+				.get();
+		termino.getRelations().remove(rel);
 		StringWriter writer = new StringWriter();
 		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
@@ -170,10 +174,10 @@ public class JsonTerminologyIOSpec {
 		assertEquals(222, termino2.getNbWordAnnotations().intValue());
 		assertThat(termino2.getTerms().values()).hasSameElementsAs(termino.getTerms().values());
 		assertThat(termino2.getWords().values()).hasSameElementsAs(termino.getWords().values());
+		assertThat(termino2.getRelations()).hasSameElementsAs(termino.getRelations());
 		for(Term t:termino.getTerms().values()) {
 			Term t2 = termino2.getTerms().get(t.getGroupingKey());
 			assertThat(indexCorpus2.getOccurrenceStore().getOccurrences(t2)).hasSameElementsAs(indexedCorpus.getOccurrenceStore().getOccurrences(t));
-			assertThat(termino2.getOutboundRelations().get(t2)).hasSameElementsAs(termino.getOutboundRelations().get(t));
 			assertThat(t2.getFrequency()).isEqualTo(t.getFrequency());
 			assertThat(t2.getSpecificity()).isEqualTo(t.getSpecificity());
 			assertThat(t2.getFrequencyNorm()).isEqualTo(t.getFrequencyNorm());
@@ -254,16 +258,12 @@ public class JsonTerminologyIOSpec {
 		assertThat(t1.getGeneralFrequencyNorm()).isCloseTo(0.025d, offset(0.000001d));
 		assertThat(t1.getFrequency()).isEqualTo(6);
 		assertThat(termino2
-				.getOutboundRelations().get(t1) // variations only
-				.stream()
-				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.GRAPHICAL)
-				.collect(Collectors.toList())
-				).extracting("to").containsOnly(t2);
-		assertThat(termino2.getOutboundRelations().get(t1)// variations only
-				.stream()
-				.filter(tv -> tv.get(RelationProperty.VARIATION_TYPE) == VariationType.SYNTAGMATIC)
-				.collect(Collectors.toList())
-				).hasSize(0);
+			.getRelations()
+			).extracting("from", "type", "to").containsOnly(
+				tuple(t2, RelationType.VARIATION, t1),
+				tuple(t3, RelationType.VARIATION, t1),
+				tuple(t1, RelationType.VARIATION, t2)
+			);
 		
 		
 		// test words
@@ -306,7 +306,6 @@ public class JsonTerminologyIOSpec {
 		ObjectMapper mapper = new ObjectMapper();
 //		System.out.println(writer.toString());
 		String string = writer.toString();
-		System.out.println(string);
 		Map<String,Object> map = mapper.readValue(string, 
 			    new TypeReference<HashMap<String,Object>>(){});
 		assertThat(map.keySet()).hasSize(6).containsOnly(

@@ -77,7 +77,7 @@ public class SemanticGathererSpec {
 		List<RelationService> relations = UnitTests.getTerminologyService(corpus)
 				.relations()
 				.filter(RelationService::isSemantic)
-				.filter(RelationService::isInfered)
+				.filter(RelationService::notInfered)
 				.collect(Collectors.toList());
 		
 		

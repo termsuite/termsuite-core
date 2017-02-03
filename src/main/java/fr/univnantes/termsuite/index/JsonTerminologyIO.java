@@ -28,7 +28,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.io.IOUtils;
@@ -398,7 +397,7 @@ public class JsonTerminologyIO {
 								b, 
 								v);
 						tv.setProperties(properties);
-						termino.getOutboundRelations().put(tv.getFrom(), tv);
+						termino.getRelations().add(tv);
 					} else {
 						if(b==null)
 							LOGGER.warn("Could not build variant because term \"{}\" was not found.", base);
@@ -684,17 +683,17 @@ public class JsonTerminologyIO {
 		/* Variants */
 		jg.writeFieldName(TERM_RELATIONS);
 		jg.writeStartArray();
-		for(Entry<Term, Relation> entry:terminology.getOutboundRelations().entries()) {
+		for(Relation relation:terminology.getRelations()) {
 			jg.writeStartObject();
 			jg.writeFieldName(FROM);
-			jg.writeString(entry.getValue().getFrom().getGroupingKey());
+			jg.writeString(relation.getFrom().getGroupingKey());
 			jg.writeFieldName(TO);
-			jg.writeString(entry.getValue().getTo().getGroupingKey());
+			jg.writeString(relation.getTo().getGroupingKey());
 			jg.writeFieldName(RELATION_TYPE);
-			jg.writeString(entry.getValue().getType().getShortName());
+			jg.writeString(relation.getType().getShortName());
 			jg.writeFieldName(PROPERTIES);
 			jg.writeStartObject();
-			writeProperties(jg, entry.getValue());
+			writeProperties(jg, relation);
 			jg.writeEndObject();
 			jg.writeEndObject();
 		}

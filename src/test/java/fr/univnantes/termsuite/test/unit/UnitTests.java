@@ -21,9 +21,11 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.test.unit;
 
+import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
 import java.lang.reflect.Field;
+import java.util.Collection;
 import java.util.Set;
 
 import org.junit.runner.RunWith;
@@ -252,10 +254,6 @@ public class UnitTests {
 		return term;
 	}
 
-	public static void addRelation(Terminology terminology, Relation r) {
-		terminology.getOutboundRelations().put(r.getFrom(), r);
-	}
-
 	public static TerminologyService getTerminologyService(IndexedCorpus corpus) {
 		return extractorInjector(corpus).getInstance(TerminologyService.class);
 	}
@@ -296,5 +294,11 @@ public class UnitTests {
 				new EmptyOccurrenceStore(Lang.EN));
 		new EngineInjector(engine.getClass(), extractorInjector(indexedCorpus)).injectIndexes(engine);
 	}
+	
+	
+	public static Collection<Relation> outRels(Terminology termino, Term term) {
+		return termino.getRelations().stream().filter(r->r.getFrom().equals(term)).collect(toList());
+	}
+
 
 }

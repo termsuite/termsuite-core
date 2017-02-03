@@ -45,7 +45,7 @@ public class TsvExporterSpec {
 		UnitTests.addTerm(termino, term1);
 		UnitTests.addTerm(termino, term2);
 		UnitTests.addTerm(termino, term3);
-		UnitTests.addRelation(termino, tv);
+		termino.getRelations().add(tv);
 
 		terms = Lists.newArrayList(
 				term1,

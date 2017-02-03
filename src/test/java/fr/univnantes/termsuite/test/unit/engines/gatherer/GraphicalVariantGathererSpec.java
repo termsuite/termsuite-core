@@ -88,10 +88,10 @@ public class GraphicalVariantGathererSpec {
 	public void testCaseInsensitive() throws  Exception {
 		makeAE( 1.0d).execute();
 
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijkl)).hasSize(1);
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijklCapped)).hasSize(0);
+		assertThat(UnitTests.outRels(termino, this.abcdefghijkl)).hasSize(1);
+		assertThat(UnitTests.outRels(termino, this.abcdefghijklCapped)).hasSize(0);
 		
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijkl))
+		assertThat(UnitTests.outRels(termino, this.abcdefghijkl))
 			.hasSize(1)
 			.extracting("to")
 			.contains(this.abcdefghijklCapped);
@@ -101,11 +101,11 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
 		makeAE( 1.0d).execute();
-		assertThat(termino.getOutboundRelations().get(this.tetetete))
+		assertThat(UnitTests.outRels(termino, this.tetetete))
 			.hasSize(0)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO);
 
-		assertThat(termino.getOutboundRelations().get(this.teteteteAccent))
+		assertThat(UnitTests.outRels(termino, this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(tuple(VariationType.GRAPHICAL, this.tetetete));
@@ -116,12 +116,12 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testWith0_9() throws AnalysisEngineProcessException, Exception {
 		makeAE( 0.9d).execute();
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijkx))
+		assertThat(UnitTests.outRels(termino, this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
 			.contains(this.abcdefghijkl, this.abcdefghijklCapped);
 		
-		assertThat(termino.getOutboundRelations().get(this.teteteteAccent))
+		assertThat(UnitTests.outRels(termino, this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(
@@ -133,15 +133,15 @@ public class GraphicalVariantGathererSpec {
 	@Test
 	public void testWith0_8() throws AnalysisEngineProcessException, Exception {
 		makeAE(0.8d).execute();
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijklCapped))
+		assertThat(UnitTests.outRels(termino, this.abcdefghijklCapped))
 			.hasSize(0);
 		
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijkl))
+		assertThat(UnitTests.outRels(termino, this.abcdefghijkl))
 			.hasSize(1)
 			.extracting("to")
 			.contains(this.abcdefghijklCapped);
 
-		assertThat(termino.getOutboundRelations().get(this.abcdefghijkx))
+		assertThat(UnitTests.outRels(termino, this.abcdefghijkx))
 			.hasSize(2)
 			.extracting("to")
 			.contains(this.abcdefghijklCapped, this.abcdefghijkl);

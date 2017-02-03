@@ -94,8 +94,8 @@ public class TerminologyServiceSpec {
 		Relation termVariation2 = new Relation(RelationType.VARIATION, term1, term2);
 		termVariation2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
 
-		UnitTests.addRelation(terminology, termVariation1);
-		UnitTests.addRelation(terminology, termVariation2);
+		terminology.getRelations().add(termVariation1);
+		terminology.getRelations().add(termVariation2);
 		TermSuiteAssertions.assertThat(terminology)
 			.hasNTerms(5)
 			.containsVariation("t1", VariationType.SYNTAGMATIC, "t2")

@@ -1,34 +1,30 @@
 package fr.univnantes.termsuite.export.other;
 
+import static java.util.stream.Collectors.toSet;
+
 import java.io.Writer;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.index.Terminology;
-import fr.univnantes.termsuite.model.Relation;
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.framework.Export;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 
 public class EvalExporter {
 	
-	private Terminology termino;
 	private boolean withVariants;
-	private Writer writer;
 	
-	private EvalExporter(Terminology termino, Writer writer, boolean withVariants) {
+	public EvalExporter(boolean withVariants) {
 		super();
-		this.termino = termino;
-		this.writer = writer;
 		this.withVariants = withVariants;
 	}
 
-	public static void export(Terminology termino, Writer writer, boolean withVariants) {
-		new EvalExporter(termino, writer, withVariants).doExport();
-	}
-
-	private void doExport() {
+	@Export
+	public void export(TerminologyService termino, Writer writer) {
 		try {
-			for(Term t: termino.getTerms().values()) {
+			for(TermService t: termino.getTerms()) {
 				if(this.withVariants) {
-					for (Relation v : termino.getOutboundRelations().get(t))
+					for (RelationService v : t.variations().collect(toSet()))
 						writer.write(v.getTo().getGroupingKey() + "#");
 				}
 				writer.write(t.getGroupingKey());

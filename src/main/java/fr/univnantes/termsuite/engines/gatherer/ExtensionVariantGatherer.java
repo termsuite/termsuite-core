@@ -94,10 +94,15 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 							if(Objects.equals(affix1, affix2)) {
 								cnt.incrementAndGet();
 								
-								if(logger.isTraceEnabled()) 
-									logger.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
+								TermService inferedFrom = rel1.getTo();
+								TermService inferedTo = rel2.getTo();
+								if(inferedFrom.equals(inferedTo))
+									continue;
 								
-								RelationService inferedRel = terminology.createVariation(VariationType.INFERENCE, rel1.getTo().getTerm(), rel2.getTo().getTerm());
+								if(logger.isTraceEnabled()) 
+									logger.trace("Found infered variation {} --> {}", inferedFrom, inferedTo);
+								
+								RelationService inferedRel = terminology.createVariation(VariationType.INFERENCE, inferedFrom.getTerm(), inferedTo.getTerm());
 								inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.SEMANTIC_SIMILARITY);
 								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DICO);

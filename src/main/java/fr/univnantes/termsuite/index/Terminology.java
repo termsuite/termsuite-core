@@ -21,14 +21,15 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.index;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.google.common.base.MoreObjects;
-import com.google.common.collect.LinkedListMultimap;
-import com.google.common.collect.Multimap;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Relation;
@@ -50,7 +51,7 @@ public class Terminology  {
 	 */
 	private ConcurrentMap<String, Term> terms = new ConcurrentHashMap<>();
 	private ConcurrentMap<String, Word> words = new ConcurrentHashMap<>();
-	private Multimap<Term, Relation> outboundRelations = LinkedListMultimap.create();
+	private List<Relation> relations = new ArrayList<>();
 	
 	private String name;
 	private Lang lang;
@@ -72,8 +73,8 @@ public class Terminology  {
 		return words;
 	}
 	
-	public Multimap<Term, Relation> getOutboundRelations() {
-		return outboundRelations;
+	public Collection<Relation> getRelations() {
+		return relations;
 	}
 	
 	public String getName() {

@@ -92,9 +92,9 @@ public class ManualSuffixDerivationDetecterSpec {
 
 	@Test
 	public void testProcessCollectionComplete() {
-		assertThat(termino.getOutboundRelations().get(ferme_a)).hasSize(0);
-		assertThat(termino.getOutboundRelations().get(ferme_n)).hasSize(0);
-		assertThat(termino.getOutboundRelations().get(this.pays))
+		assertThat(UnitTests.outRels(termino, ferme_a)).hasSize(0);
+		assertThat(UnitTests.outRels(termino, ferme_n)).hasSize(0);
+		assertThat(UnitTests.outRels(termino, this.pays))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.RELATION_FROM_TYPE_TO)
 			.contains(tuple(this.pays, RelationType.DERIVES_INTO, paysVraiDerive))

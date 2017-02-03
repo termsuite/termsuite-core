@@ -71,7 +71,7 @@ public class IndependanceScorerSpec {
 	
 	private  RelationService addExtension(TermService t1, TermService t2) {
 		Relation termRelation = new Relation(RelationType.HAS_EXTENSION, t1.getTerm(), t2.getTerm());
-		UnitTests.addRelation(indexedCorpus.getTerminology(), termRelation);
+		indexedCorpus.getTerminology().getRelations().add(termRelation);
 		return new RelationService(UnitTests.getTerminologyService(indexedCorpus), termRelation);
 	}
 

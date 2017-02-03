@@ -268,7 +268,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
-		List<Relation> msnanVars = termino.getOutboundRelations().values().stream()
+		List<Relation> msnanVars = termino.getRelations().stream()
 				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
 				.collect(Collectors.toList());
 		// TODO investigate why the size varies
