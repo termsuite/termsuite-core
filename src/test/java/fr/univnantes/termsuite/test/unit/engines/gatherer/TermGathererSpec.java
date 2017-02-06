@@ -38,7 +38,6 @@ import com.google.common.io.Files;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
@@ -116,7 +115,7 @@ public class TermGathererSpec {
 		assertThat(UnitTests.outRels(termino, this.geothermie_hydraulique))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_FROM_TYPE_TO)
-			.contains(tuple(this.geothermie_hydraulique, VariationType.SYNTAGMATIC, this.geothermie_hydraulique_solaire));
+			.contains(tuple(this.geothermie_hydraulique, "s", this.geothermie_hydraulique_solaire));
 		
 		assertThat(UnitTests.outRels(termino, this.geothermie_hydraulique_solaire))
 			.hasSize(0);
@@ -128,7 +127,7 @@ public class TermGathererSpec {
 		assertThat(UnitTests.outRels(termino, this.machine_synchrone))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
-			.contains(tuple(VariationType.PREFIXATION, "NA-NprefA", this.machine_asynchrone));
+			.contains(tuple("gp", "NA-NprefA", this.machine_asynchrone));
 		
 		assertThat(UnitTests.outRels(termino, this.machine_asynchrone))
 			.hasSize(0);
@@ -139,7 +138,7 @@ public class TermGathererSpec {
 		assertThat(UnitTests.outRels(termino, this.phase_du_stator))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_RULE_TO)
-			.contains(tuple(VariationType.DERIVATION, "S-R2D-NPN", this.phase_statorique));
+			.contains(tuple("d", "S-R2D-NPN", this.phase_statorique));
 		assertThat(UnitTests.outRels(termino, this.phase_statorique))
 			.hasSize(0);
 		

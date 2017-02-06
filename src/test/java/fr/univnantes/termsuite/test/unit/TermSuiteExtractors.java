@@ -5,6 +5,7 @@ import org.assertj.core.groups.Tuple;
 
 import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.utils.VariationUtils;
 
 public class TermSuiteExtractors {
 	
@@ -21,7 +22,7 @@ public class TermSuiteExtractors {
 		@Override
 		public Tuple extract(Relation input) {
 			return new Tuple(
-					input.get(RelationProperty.VARIATION_TYPE),
+					VariationUtils.toTagString(input),
 					input.get(RelationProperty.VARIATION_RULE),
 					input.getTo());
 		}
@@ -33,7 +34,7 @@ public class TermSuiteExtractors {
 		public Tuple extract(Relation input) {
 			return new Tuple(
 					input.getFrom(),
-					input.getPropertyValue(RelationProperty.VARIATION_TYPE),
+					VariationUtils.toTagString(input),
 					input.getTo());
 		}
 
@@ -41,7 +42,7 @@ public class TermSuiteExtractors {
 	public static final Extractor<Relation, Tuple> VARIATION_TYPE_TO = new Extractor<Relation, Tuple>() {
 		@Override
 		public Tuple extract(Relation input) {
-			return new Tuple(input.getPropertyValue(RelationProperty.VARIATION_TYPE),
+			return new Tuple(VariationUtils.toTagString(input),
 					input.getTo());
 		}
 	};

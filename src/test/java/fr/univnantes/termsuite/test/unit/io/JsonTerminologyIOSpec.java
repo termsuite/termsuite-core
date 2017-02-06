@@ -49,7 +49,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.export.json.JsonOptions;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.JsonTerminologyIO;
@@ -126,11 +125,11 @@ public class JsonTerminologyIOSpec {
 		store.addOccurrence(term2, "source2", 14, 20, form2);
 		UnitTests.addTerm(termino, term2);
 		Relation rel1 = new Relation(RelationType.VARIATION, term1, term2);
-		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		rel1.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "variationRule1");
 		termino.getRelations().add(rel1);
-		Relation rel2 = new Relation(RelationType.VARIATION, term1, term2);
-		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.GRAPHICAL);
+		Relation rel2 = new Relation(RelationType.HAS_EXTENSION, term1, term2);
+		rel2.setProperty(RelationProperty.IS_GRAPHICAL, true);
 		rel2.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, 0.956d);
 		termino.getRelations().add(rel2);
 		
@@ -374,12 +373,12 @@ public class JsonTerminologyIOSpec {
 		
 		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(0)).get("props"))
 			.containsEntry("vrule", "variationRule1")
-			.containsEntry("vtype", "syn")
+			.containsEntry("isSyntag", true)
 			.doesNotContainKey("graphSim");
 
 		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(1)).get("props"))
 			.containsEntry("graphSim", 0.956)
-			.containsEntry("vtype", "graph")
+			.containsEntry("isGraph", true)
 			.doesNotContainKey("vrule");
 		
 		

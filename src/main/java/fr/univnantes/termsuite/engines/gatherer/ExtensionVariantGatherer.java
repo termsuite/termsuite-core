@@ -18,6 +18,7 @@ import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.utils.TermHistory;
+import fr.univnantes.termsuite.utils.VariationUtils;
 
 /**
  * 
@@ -103,17 +104,13 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 									logger.trace("Found infered variation {} --> {}", inferedFrom, inferedTo);
 								
 								RelationService inferedRel = terminology.createVariation(VariationType.INFERENCE, inferedFrom.getTerm(), inferedTo.getTerm());
+								for(RelationProperty p:RelationProperty.values()) 
+									VariationUtils.copyRelationPropertyIfSet(
+											relation.getRelation(), 
+											inferedRel.getRelation(), 
+											p);
 								inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.SEMANTIC_SIMILARITY);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DICO);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DISTRIBUTIONAL);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.SEMANTIC_SCORE);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_GRAPHICAL);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_SEMANTIC);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_PREFIXATION);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_MORPHOLOGICAL);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_SYNTAGMATIC);
-								copyRelationPropertyIfSet(relation, inferedRel, RelationProperty.IS_DERIVATION);
+								inferedRel.setProperty(RelationProperty.IS_INFERED, true);
 								watch(inferedRel, rel1, rel2);
 							}
 						}
@@ -121,13 +118,6 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 			});
 		sw.stop();
 		logger.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
-	}
-
-	public void copyRelationPropertyIfSet(RelationService baseRelation, RelationService inferedRel, RelationProperty property) {
-		if(baseRelation.isPropertySet(property))
-			inferedRel.setProperty(
-					property, 
-					baseRelation.get(property));
 	}
 
 	private void watch(RelationService inferedRel, RelationService r1, RelationService r2) {

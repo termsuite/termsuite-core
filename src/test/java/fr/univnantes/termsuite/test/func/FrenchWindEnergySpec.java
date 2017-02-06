@@ -308,7 +308,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testNbMorphologicalVariations() {
 		assertThat(termino)
-			.hasNVariationsOfType(38, VariationType.MORPHOLOGICAL);
+			.hasNVariationsOfType(42, VariationType.MORPHOLOGICAL);
 	}
 
 

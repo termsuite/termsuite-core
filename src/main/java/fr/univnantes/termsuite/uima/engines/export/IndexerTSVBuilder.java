@@ -49,7 +49,6 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.Relation;
@@ -57,6 +56,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.utils.VariationUtils;
 
 /**
  * Incrementally creates an indexer output TSV file.
@@ -102,31 +102,13 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				String.format(T_FORMAT));
 	}
 	
-	private static final VariationType[] VARIANT_TAG_TYPES = new VariationType[]{
-			VariationType.INFERENCE,
-			VariationType.SYNTAGMATIC,
-			VariationType.MORPHOLOGICAL,
-			VariationType.GRAPHICAL,
-			VariationType.SEMANTIC,
-			VariationType.PREFIXATION,
-			VariationType.DERIVATION,
-	};
-
 	public void addVariant(TerminologyService termino, Relation variation, boolean showVariantTag) throws IOException {
 		Preconditions.checkArgument(variation.getType() == RelationType.VARIATION, "Relation is not a variation: %s", variation);
-		Preconditions.checkArgument(variation.isPropertySet(RelationProperty.VARIATION_TYPE), "Property %s not set for variation %s", RelationProperty.VARIATION_TYPE, variation);
 		List<String> line = Lists.newArrayList();
 		
 		StringBuilder tagBuilder = new StringBuilder();
 		tagBuilder.append("V[");
-		for(VariationType vType:VARIANT_TAG_TYPES) {
-			if(variation.isPropertySet(RelationProperty.VARIATION_TYPE) 
-					&& variation.get(RelationProperty.VARIATION_TYPE) == vType) {
-				tagBuilder.append(vType.getLetter().toLowerCase());
-			} else if(variation.isPropertySet(vType.getRelationProperty()) 
-					&& variation.getBoolean(vType.getRelationProperty()))
-				tagBuilder.append(vType.getLetter().toLowerCase());
-		}
+		tagBuilder.append(VariationUtils.toTagString(variation));
 		tagBuilder.append("]");
 		if(showVariantTag 
 				&& termino.variationsFrom(variation.getTo()).findAny().isPresent())
@@ -146,6 +128,8 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				currentTerm.getRank() == null ? "-" : Integer.toString(currentTerm.getRank()), 
 				line.toArray(new String[line.size()]));
 	}
+
+
 
 	private void appendTerm(Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();

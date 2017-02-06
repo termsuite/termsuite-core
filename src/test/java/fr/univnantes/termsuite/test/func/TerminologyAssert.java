@@ -30,10 +30,8 @@ import static org.assertj.core.api.Assertions.tuple;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.EnumSet;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -133,8 +131,8 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		Term baseTerm = actual.getTerms().get(baseGroupingKey);
 		for(Relation tv:UnitTests.outRels(actual, baseTerm)) {
 			if(tv.getType() == RelationType.VARIATION 
-					&& tv.isPropertySet(RelationProperty.VARIATION_TYPE)
-					&& tv.get(RelationProperty.VARIATION_TYPE) == type
+					&& tv.isPropertySet(type.getRelationProperty())
+					&& tv.getBooleanUnchecked(type.getRelationProperty())
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
 				return this;
 		}
@@ -184,7 +182,8 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		Term baseTerm = actual.getTerms().get(baseGroupingKey);
 		for(Relation tv:UnitTests.outRels(actual, baseTerm)) {
 			if(tv.getType() == RelationType.VARIATION
-					&& tv.get(RelationProperty.VARIATION_TYPE) == type
+					&& tv.isPropertySet(type.getRelationProperty())
+					&& tv.getBooleanUnchecked(type.getRelationProperty())
 					&& tv.isPropertySet(p)
 					&& java.util.Objects.equals(tv.getString(p), expectedValue) 
 					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
@@ -204,8 +203,9 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	public TerminologyAssert hasNVariationsOfType(int expected, VariationType type) {
 		int cnt = 0;
 		for(Relation tv:actual.getRelations()) {
-			if(tv.isPropertySet(RelationProperty.VARIATION_TYPE)
-					&& tv.get(RelationProperty.VARIATION_TYPE) == type)
+			if(tv.isPropertySet(type.getRelationProperty())
+					&& tv.getBooleanUnchecked(type.getRelationProperty())
+)
 				cnt++;
 		}
 	
@@ -265,19 +265,19 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 
-	public TerminologyAssert hasNVariationsOfType(Term base, int n, VariationType... vTypes) {
+	public TerminologyAssert hasNVariationsOfType(Term base, int n, VariationType vType) {
 		isNotNull();
-		Set<VariationType> vTypesSet = new HashSet<>(Arrays.asList(vTypes));
 		int actualSize = (int)UnitTests.outRels(actual, base)
 				.stream()
 				.filter(r -> r.getType() == RelationType.VARIATION)
 				.filter(r -> 
-					r.isPropertySet(RelationProperty.VARIATION_TYPE)	
-						&& vTypesSet.contains(r.get(RelationProperty.VARIATION_TYPE)))
+						r.isPropertySet(vType.getRelationProperty())
+							&& r.getBooleanUnchecked(vType.getRelationProperty())
+)
 				.count();
 		if (actualSize != n)
 			failWithMessage("Expected to find <%s> variations of type <%s> for term <%s>, but actually found <%s>", n,
-					vTypes, base, actualSize);
+					vType, base, actualSize);
 		return this;
 	}
 

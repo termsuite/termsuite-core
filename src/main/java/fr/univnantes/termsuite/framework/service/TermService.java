@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -331,6 +332,10 @@ public class TermService {
 
 	public Stream<RelationService> variations() {
 		return terminology.variationsFrom(term);
+	}
+
+	public Stream<RelationService> variations(VariationType variationType) {
+		return variations().filter(rel -> rel.getBooleanIfSet(variationType.getRelationProperty()));
 	}
 
 }

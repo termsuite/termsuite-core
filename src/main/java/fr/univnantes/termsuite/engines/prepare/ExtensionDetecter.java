@@ -12,7 +12,6 @@ import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -65,18 +64,12 @@ public class ExtensionDetecter extends SimpleEngine {
 
 	private static final String MSG_BAD_EXTENSION = "Bad extension format. Require from.size < to.size. Got from: \"%s\" and to: \"%s\"";
 	public void addExtensionRelationIfNotExisting(Term from, Term to) {
-		if(!terminology.extensions(from, to)
-				.findAny().isPresent()) {
-			Preconditions.checkArgument(from.getWords().size() < to.getWords().size(), 
+		Preconditions.checkArgument(from.getWords().size() < to.getWords().size(), 
 				MSG_BAD_EXTENSION,
 				from, to
-			);
-			
-			terminology.addRelation(new Relation(
-					RelationType.HAS_EXTENSION,
-					from, 
-					to
-					));
+				);
+		if(!terminology.getRelation(from, RelationType.HAS_EXTENSION, to).isPresent()) {
+			terminology.getRelationOrCreate(from, RelationType.HAS_EXTENSION, to);
 			watch(from, to);
 		}
 	}

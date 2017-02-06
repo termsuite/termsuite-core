@@ -227,7 +227,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	public void testMorphologicalVariations() {
 		Stream<RelationService> variationsTypedMorpho = UnitTests.getTerminologyService(corpus)
 				.variations(VariationType.MORPHOLOGICAL);
-		assertThat(variationsTypedMorpho.collect(Collectors.toList())).hasSize(458);
+		assertThat(variationsTypedMorpho
+				.filter(RelationService::notInfered)
+				.collect(Collectors.toList())).hasSize(458);
 
 		Stream<RelationService> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
 				.relations(RelationProperty.IS_MORPHOLOGICAL, true);

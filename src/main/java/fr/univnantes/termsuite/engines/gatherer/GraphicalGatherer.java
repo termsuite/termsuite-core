@@ -102,7 +102,6 @@ public class GraphicalGatherer extends SimpleEngine {
 	protected Relation createGraphicalRelation(Term from, Term to, Double similarity) {
 		RelationService rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
 		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
-		rel.setProperty(RelationProperty.IS_GRAPHICAL, true);
 		watch(from, to, similarity);
 		return rel.getRelation();
 	}

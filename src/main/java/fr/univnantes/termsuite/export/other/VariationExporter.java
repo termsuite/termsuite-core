@@ -18,7 +18,6 @@ import fr.univnantes.termsuite.framework.Export;
 import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.Relation;
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 
@@ -47,10 +46,8 @@ public class VariationExporter {
 					else {
 						if(variationTypes
 							.stream()
-							.filter(vType -> 
-								v.getBooleanIfSet(vType.getRelationProperty())
-								|| v.isPropertySet(RelationProperty.VARIATION_TYPE) && v.get(RelationProperty.VARIATION_TYPE) == vType
-							).findAny()
+							.filter(vType -> v.isVariationOfType(vType))
+							.findAny()
 							.isPresent()) 
 						acceptedVariations.put(t.getTerm(), v.getRelation());
 					}

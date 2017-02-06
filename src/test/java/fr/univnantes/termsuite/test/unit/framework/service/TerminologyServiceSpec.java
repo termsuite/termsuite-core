@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.test.unit.framework.service;
 
 import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.fail;
 
 import java.util.Collection;
 
@@ -76,7 +77,7 @@ public class TerminologyServiceSpec {
 	@Test
 	public void testAddRelation() {
 		Relation r = new Relation(RelationType.VARIATION, term1, term2);
-		r.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		r.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
 		terminologyService.addRelation(r);
 		
 		TermSuiteAssertions.assertThat(terminology)
@@ -90,18 +91,18 @@ public class TerminologyServiceSpec {
 	@Test
 	public void testAddRelationTwiceSetTwoRelations() {
 		Relation termVariation1 = new Relation(RelationType.VARIATION, term1, term2);
-		termVariation1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		termVariation1.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
 		Relation termVariation2 = new Relation(RelationType.VARIATION, term1, term2);
-		termVariation2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		termVariation2.setProperty(RelationProperty.IS_MORPHOLOGICAL, true);
 
-		terminology.getRelations().add(termVariation1);
-		terminology.getRelations().add(termVariation2);
-		TermSuiteAssertions.assertThat(terminology)
-			.hasNTerms(5)
-			.containsVariation("t1", VariationType.SYNTAGMATIC, "t2")
-			.hasNRelationsFrom(2, "t1")
-			.hasNRelations(2)
-			;
+		terminologyService.addRelation(termVariation1);
+		try {
+			terminologyService.addRelation(termVariation2);
+			fail("Should raise an exception duue to duplicate relation");
+		} catch(IllegalArgumentException e) {
+			assertThat(e.getMessage())
+				.contains("already exists in termino");
+		}
 	}
 
 	public Collection<Relation> outRels(Term from) {
@@ -126,7 +127,7 @@ public class TerminologyServiceSpec {
 		assertThat(inRels(this.term4)).hasSize(0);
 		
 		Relation rel1 = new Relation(RelationType.VARIATION, term5, term3);
-		rel1.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		rel1.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
 		rel1.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel1);
 		
@@ -139,7 +140,7 @@ public class TerminologyServiceSpec {
 			.containsExactly("Tata");
 		
 		Relation rel2 = new Relation(RelationType.VARIATION, term5, term4);
-		rel2.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		rel2.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
 		rel2.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel2);
 		assertThat(outRels(this.term5)).hasSize(2);
@@ -152,8 +153,8 @@ public class TerminologyServiceSpec {
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
 			.containsExactly("Tata","Tata");
 		
-		Relation rel3 = new Relation(RelationType.VARIATION, term5, term3);
-		rel3.setProperty(RelationProperty.VARIATION_TYPE, VariationType.SYNTAGMATIC);
+		Relation rel3 = new Relation(RelationType.HAS_EXTENSION, term5, term3);
+		rel3.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
 		rel3.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel3);
 		assertThat(outRels(this.term5)).hasSize(3);

@@ -61,12 +61,12 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 				history.get().saveEvent(
 						source.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new variation: " + tv + " ("+tv.get(RelationProperty.VARIATION_TYPE)+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+")");
+						"Term has a new variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+"");
 			if(history.get().isGKeyWatched(target.getGroupingKey()))
 				history.get().saveEvent(
 						target.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new variation base: " + tv + " ("+tv.get(RelationProperty.VARIATION_TYPE)+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+")");
+						"Term has a new base-variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+"");
 		}
 	}
 
@@ -111,8 +111,8 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 		Optional<RelationService> variation = terminoService.getVariation(source, target);
 				
 		if(!variation.isPresent()){
+			
 			RelationService relation = terminoService.createVariation(rule.getVariationType(), source, target);
-			relation.setProperty(RelationProperty.IS_GRAPHICAL, false);
 			variation = Optional.of(relation);
 			watch(source, target, relation.getRelation());
 		}

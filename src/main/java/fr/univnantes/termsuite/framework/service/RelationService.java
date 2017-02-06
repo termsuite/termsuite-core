@@ -21,7 +21,6 @@ import static fr.univnantes.termsuite.model.RelationProperty.VARIANT_BAG_FREQUEN
 import static fr.univnantes.termsuite.model.RelationProperty.VARIANT_SCORE;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RANK;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RULE;
-import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_TYPE;
 
 import java.util.Optional;
 
@@ -200,10 +199,6 @@ public class RelationService {
 		return relation.getStringUnchecked(VARIATION_RULE);
 	}
 
-	public VariationType getVariationType() {
-		return (VariationType)get(VARIATION_TYPE);
-	}
-
 	public String getDerivationType() {
 		return relation.getStringUnchecked(DERIVATION_TYPE);
 	}
@@ -289,9 +284,7 @@ public class RelationService {
 	}
 
 	public boolean isVariationOfType(VariationType type) {
-		if(isPropertySet(RelationProperty.VARIATION_TYPE) && getVariationType() == type)
-			return true;
-		else if(isPropertySet(type.getRelationProperty()) && getBoolean(type.getRelationProperty()))
+		if(isPropertySet(type.getRelationProperty()) && getBoolean(type.getRelationProperty()))
 			return true;
 		else
 			return false;

@@ -32,7 +32,6 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.service.TermService;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.Word;
@@ -78,11 +77,11 @@ public class PrefixSplitter extends SimpleEngine {
 					} else {
 						for(Term target:lemmaIndex.get(prefixExtension)) {
 							watch(swt.getTerm(), target);
-							terminology.addRelation(new Relation(
-									RelationType.IS_PREFIX_OF,
+							terminology.getRelationOrCreate(
 									swt.getTerm(), 
+									RelationType.IS_PREFIX_OF,
 									target
-									));
+								);
 						}
 					}
 				}

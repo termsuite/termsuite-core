@@ -112,7 +112,6 @@ public class TermSuiteFactory {
 		Relation relation = new Relation(RelationType.VARIATION, from, to);
 		for(VariationType vType:VariationType.values())
 			relation.setProperty(vType.getRelationProperty(), false);
-		relation.setProperty(RelationProperty.VARIATION_TYPE, variationType);
 		relation.setProperty(variationType.getRelationProperty(), true);
 		return relation;
 	}

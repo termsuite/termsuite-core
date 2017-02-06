@@ -71,8 +71,7 @@ public class Relation extends PropertyHolder<RelationProperty> {
 			Relation v = (Relation) obj;
 			return Objects.equal(this.from, v.from)
 					&& Objects.equal(this.to, v.to)
-					&& Objects.equal(this.relationType, v.relationType)
-					&& super.equals(obj);
+					&& Objects.equal(this.relationType, v.relationType);
 		} else 
 			return false;
 	}

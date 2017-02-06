@@ -34,7 +34,6 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.framework.service.TermService;
@@ -54,15 +53,6 @@ import fr.univnantes.termsuite.utils.StringUtils;
  *
  */
 public class VariationScorer extends SimpleEngine {
-	private static final Predicate<? super RelationService> NOT_SEMANTIC = v -> 
-			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
-			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
-					|| !v.getBoolean(RelationProperty.IS_SEMANTIC));
-	private static final Predicate<? super RelationService> SEMANTIC = v -> 
-		v.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC 
-		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
-				&& v.getBoolean(RelationProperty.IS_SEMANTIC));
-
 	@InjectLogger Logger logger;
 
 	@Override
@@ -124,7 +114,7 @@ public class VariationScorer extends SimpleEngine {
 		 * Non-semantic variations
 		 */
 		terminology.variations()
-			.filter(NOT_SEMANTIC)
+			.filter(RelationService::notSemantic)
 			.forEach( variation -> {
 				double score = variation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
 							0.91*variation.getDouble(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
@@ -138,7 +128,7 @@ public class VariationScorer extends SimpleEngine {
 		 * Semantic variations
 		 */
 		terminology.variations()
-			.filter(SEMANTIC)
+			.filter(RelationService::isSemantic)
 			.forEach( variation -> {
 				/*
 				 * The score of a semantic variation is :
@@ -172,7 +162,7 @@ public class VariationScorer extends SimpleEngine {
 			AtomicInteger sum = new AtomicInteger(term.getFrequency());
 			term.variations()
 				// exclude semantic variations, otherwise there are too many variation pathes
-				.filter(NOT_SEMANTIC)
+				.filter(RelationService::notSemantic)
 				.forEach(v2 -> {
 					if(!v2.getBoolean(RelationProperty.IS_EXTENSION)) {
 						sum.addAndGet(recursiveDoVariationFrenquencies(v2, newVisitedTerms));
@@ -188,7 +178,7 @@ public class VariationScorer extends SimpleEngine {
 
 		terminology.variations()
 			// exclude semantic variations, otherwise there are too many variation pathes
-			.filter(NOT_SEMANTIC)
+			.filter(RelationService::notSemantic)
 			.forEach(v1 -> {
 				v1.setProperty(
 					RelationProperty.VARIANT_BAG_FREQUENCY, 

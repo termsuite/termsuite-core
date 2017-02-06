@@ -21,10 +21,10 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.index;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
@@ -51,7 +51,7 @@ public class Terminology  {
 	 */
 	private ConcurrentMap<String, Term> terms = new ConcurrentHashMap<>();
 	private ConcurrentMap<String, Word> words = new ConcurrentHashMap<>();
-	private List<Relation> relations = new ArrayList<>();
+	private Set<Relation> relations = new HashSet<>();
 	
 	private String name;
 	private Lang lang;

@@ -34,7 +34,6 @@ import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.gatherer.GraphicalGatherer;
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
@@ -102,13 +101,12 @@ public class GraphicalVariantGathererSpec {
 	public void testWithDiacritics() throws AnalysisEngineProcessException, Exception {
 		makeAE( 1.0d).execute();
 		assertThat(UnitTests.outRels(termino, this.tetetete))
-			.hasSize(0)
-			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO);
+			.hasSize(0);
 
 		assertThat(UnitTests.outRels(termino, this.teteteteAccent))
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
-			.contains(tuple(VariationType.GRAPHICAL, this.tetetete));
+			.contains(tuple("g", this.tetetete));
 	}
 	
 	
@@ -125,7 +123,7 @@ public class GraphicalVariantGathererSpec {
 			.hasSize(1)
 			.extracting(TermSuiteExtractors.VARIATION_TYPE_TO)
 			.contains(
-					tuple(VariationType.GRAPHICAL, this.tetetete)
+					tuple("g", this.tetetete)
 					);
 	}
 

@@ -511,7 +511,7 @@ public class JsonTerminologyIO {
 		} else if(property.getRange().equals(Long.class)) {
 			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_INT);
 			return jp.getLongValue();
-		} else if(property.getRange().equals(Long.class)) {
+		} else if(property.getRange().equals(Boolean.class)) {
 			checkToken(property, jp.currentToken(), JsonToken.VALUE_FALSE, JsonToken.VALUE_TRUE);
 			return jp.getBooleanValue();
 		} else if(property.getRange().equals(String.class)) {

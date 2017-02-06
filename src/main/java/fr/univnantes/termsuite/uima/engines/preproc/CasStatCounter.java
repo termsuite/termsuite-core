@@ -51,7 +51,6 @@ import com.google.common.collect.Ordering;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.utils.JCasUtils;
@@ -166,8 +165,7 @@ public class CasStatCounter extends JCasAnnotator_ImplBase {
 
 	public long count(TerminologyService termino, VariationType type) {
 		return termino
-				.variations()	
-				.filter(r->r.get(RelationProperty.VARIATION_TYPE) == type)
+				.variations(type)	
 				.count();
 	}
 }

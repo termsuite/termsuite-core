@@ -31,10 +31,10 @@ import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
 import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
-import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
@@ -71,9 +71,8 @@ public class SuffixDerivationDetecter extends SimpleEngine {
 							nbDerivations++;
 							if(logger.isTraceEnabled())
 								logger.trace("Found derivation base: {} for derivate word {}", baseTerm, swt);
-							Relation relation = new Relation(RelationType.DERIVES_INTO, baseTerm, swt.getTerm());
+							RelationService relation = terminology.getRelationOrCreate(baseTerm, RelationType.DERIVES_INTO, swt.getTerm());
 							relation.setProperty(RelationProperty.DERIVATION_TYPE, suffixDerivation.getType());
-							terminology.addRelation(relation);
 							watch(swt.getTerm(), baseTerm);
 						}
 					}

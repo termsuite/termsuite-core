@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.export.tsv.TsvOptions;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
@@ -41,7 +40,7 @@ public class TsvExporterSpec {
 		term3 = TermFactory.termMock("t3", 3, 2, 1);
 		
 		Relation tv = new Relation(RelationType.VARIATION, term3, term1);
-		tv.setProperty(RelationProperty.VARIATION_TYPE, VariationType.MORPHOLOGICAL);
+		tv.setProperty(RelationProperty.IS_MORPHOLOGICAL, true);
 		UnitTests.addTerm(termino, term1);
 		UnitTests.addTerm(termino, term2);
 		UnitTests.addTerm(termino, term3);
@@ -97,7 +96,6 @@ public class TsvExporterSpec {
 		TermSuiteFactory.createTsvExporter(new TsvOptions().setShowVariants(false))
 			.export(termino, writer);
 		String string = writer.toString();
-		System.out.println(string);
 		TermSuiteAssertions.assertThat(string)
 			.hasLineCount(4)
 			.tsvLineEquals(1, "#","type", "gkey", "f")

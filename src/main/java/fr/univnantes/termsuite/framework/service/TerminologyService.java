@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 import javax.inject.Inject;
 
 import com.google.common.base.Preconditions;
-import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
@@ -45,6 +45,7 @@ public class TerminologyService {
 	private static final String MSG_NOT_AN_EXTENSION = "Term '%s' is no extension of term '%s'";
 	private static final String MSG_TERM_NOT_FOUND = "No such term with key %s";
 	private static final String MSG_REFLEXION_NOT_ALLOWED = "reflexive relations not allowed: %s --%s--> %s";
+	private static final String MSG_DUPLICATE_RELATION = "Relation %s already exists in termino";
 
 	private Terminology termino;
 	
@@ -67,8 +68,8 @@ public class TerminologyService {
 	
 	private synchronized void initRelations() {
 		if(inboundRelations == null) {
-			inboundRelations = LinkedListMultimap.create(); 
-			outboundRelations = LinkedListMultimap.create(); 
+			inboundRelations = HashMultimap.create(); 
+			outboundRelations = HashMultimap.create(); 
 			this.termino.getRelations().forEach(r-> {
 				outboundRelations.put(r.getFrom(), r);
 				inboundRelations.put(r.getTo(), r);
@@ -86,7 +87,27 @@ public class TerminologyService {
 		return inboundRelations;
 	}
 	
-	public Stream<Relation> getRelations(Term from, Term to, RelationType... types) {
+
+	public RelationService getRelationOrCreate(Term from, RelationType type, Term to) {
+		RelationService r;
+		relationMutex.acquireUninterruptibly();
+		Optional<RelationService> relation = getRelation(from, type, to);
+		if(relation.isPresent())
+			r =  relation.get();
+		else {
+			Relation created = new Relation(type, from, to);
+			privateAddRelation(created);
+			r = asRelationService(created);
+		}
+		relationMutex.release();
+		return r;
+	}
+
+	public Optional<RelationService> getRelation(Term from, RelationType type, Term to) {
+		return outboundRelations(from).filter(rel -> rel.getTo().equals(to) && type == rel.getType()).findAny();
+	}
+	
+	public Stream<Relation> getRelations(Term from, Term to, RelationType type, RelationType... types) {
 		Stream<Relation> stream = this.getOutboundRelations().get(from)
 					.stream()
 					.filter(relation -> relation.getTo().equals(to));
@@ -114,19 +135,8 @@ public class TerminologyService {
 	}
 	
 	public Stream<RelationService> variations(VariationType type) {
-		Predicate<? super RelationService> havingVariationType = havingProperty(RelationProperty.VARIATION_TYPE);
 		return variations()
-				.filter(havingVariationType)
-				.filter(r -> r.getRelation().get(RelationProperty.VARIATION_TYPE) == type);
-	}
-
-	private Predicate<? super RelationService> havingProperty(RelationProperty property) {
-		return new Predicate<RelationService>() {
-			@Override
-			public boolean test(RelationService t) {
-				return t.getRelation().isPropertySet(property);
-			}
-		};
+				.filter(r -> r.isVariationOfType(type));
 	}
 
 	public Stream<RelationService> relations(RelationType type, RelationType... types) {
@@ -212,6 +222,7 @@ public class TerminologyService {
 		Optional<RelationService> existing = variations(from, to).findAny();
 		if(!existing.isPresent()) {
 			Relation relation = TermSuiteFactory.createVariation(variationType, from, to);
+			relation.setProperty(variationType.getRelationProperty(), true);
 			privateAddRelation(relation);
 			r = asRelationService(relation);
 		} else
@@ -402,6 +413,9 @@ public class TerminologyService {
 				relation.getTo()
 				);
 		initRelations();
+		Preconditions.checkArgument(
+				!this.termino.getRelations().contains(relation),
+				MSG_DUPLICATE_RELATION, relation);
 		this.termino.getRelations().add(relation);
 		this.getOutboundRelations().put(relation.getFrom(), relation);
 		this.getInboundRelations().put(relation.getTo(), relation);
