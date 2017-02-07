@@ -21,9 +21,9 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.func;
+package fr.univnantes.termsuite.test.func.extractor;
 
-import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
+import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static fr.univnantes.termsuite.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;

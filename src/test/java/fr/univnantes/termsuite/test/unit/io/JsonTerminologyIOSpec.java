@@ -67,8 +67,8 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
-import fr.univnantes.termsuite.test.unit.TestUtil;
 import fr.univnantes.termsuite.test.unit.UnitTests;
+import fr.univnantes.termsuite.test.util.TestUtil;
 
 @SuppressWarnings("unchecked")
 public class JsonTerminologyIOSpec {

@@ -21,9 +21,9 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.func;
+package fr.univnantes.termsuite.test.func.extractor;
 
-import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
+import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static fr.univnantes.termsuite.test.func.FunctionalTests.termsByProperty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
@@ -45,7 +45,7 @@ import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.util.TermSuiteExtractors;
 
 public class FrenchWindEnergySpec extends WindEnergySpec {
 	

@@ -41,7 +41,7 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import fr.univnantes.termsuite.resources.SuffixDerivation;
-import fr.univnantes.termsuite.test.unit.TestUtil;
+import fr.univnantes.termsuite.test.util.TestUtil;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList;
 import fr.univnantes.termsuite.uima.resources.termino.SuffixDerivationList.SuffixDerivationEntry;
 

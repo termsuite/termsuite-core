@@ -33,7 +33,7 @@ import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 
 public class SimilarityDistanceSpec {
 

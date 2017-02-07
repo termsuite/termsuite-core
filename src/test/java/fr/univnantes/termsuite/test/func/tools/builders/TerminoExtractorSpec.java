@@ -1,7 +1,7 @@
 package fr.univnantes.termsuite.test.func.tools.builders;
 
 
-import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
+import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 
 import java.nio.file.Paths;
 import java.util.List;

@@ -17,7 +17,7 @@ import org.junit.Test;
 import com.google.common.base.Splitter;
 
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.tools.Aligner;
 

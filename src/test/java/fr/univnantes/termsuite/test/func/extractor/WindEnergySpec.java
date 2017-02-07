@@ -21,9 +21,9 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.func;
+package fr.univnantes.termsuite.test.func.extractor;
 
-import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
+import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -53,9 +53,11 @@ import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.test.unit.UnitTests;
+import fr.univnantes.termsuite.test.util.TermSuiteExtractors;
 import fr.univnantes.termsuite.tools.ClearTempFiles;
+import fr.univnantes.termsuite.tools.ControlFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.ResourceType;
 

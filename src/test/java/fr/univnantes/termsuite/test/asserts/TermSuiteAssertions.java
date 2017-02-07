@@ -21,16 +21,12 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test;
+package fr.univnantes.termsuite.test.asserts;
 
 import org.apache.uima.jcas.JCas;
 
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.func.TermAssert;
-import fr.univnantes.termsuite.test.func.TerminologyAssert;
-import fr.univnantes.termsuite.test.unit.CasAssert;
-import fr.univnantes.termsuite.test.unit.StringAssert;
 
 public class TermSuiteAssertions {
 

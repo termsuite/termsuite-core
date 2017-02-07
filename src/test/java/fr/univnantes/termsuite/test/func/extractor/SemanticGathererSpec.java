@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.func;
+package fr.univnantes.termsuite.test.func.extractor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
@@ -18,7 +18,8 @@ import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
+import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.utils.TermHistory;
 

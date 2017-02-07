@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.unit;
+package fr.univnantes.termsuite.test.mock;
 
 import java.util.List;
 import java.util.regex.Matcher;

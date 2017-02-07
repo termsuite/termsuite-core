@@ -40,7 +40,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import fr.univnantes.termsuite.test.unit.TestUtil;
+import fr.univnantes.termsuite.test.util.TestUtil;
 import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;

@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.test.unit;
+package fr.univnantes.termsuite.test.mock;
 
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Document;
@@ -28,6 +28,7 @@ import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.WordBuilder;
+import fr.univnantes.termsuite.test.unit.UnitTests;
 
 public class Fixtures {
 

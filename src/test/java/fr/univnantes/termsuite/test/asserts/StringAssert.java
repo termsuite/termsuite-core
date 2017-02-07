@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.unit;
+package fr.univnantes.termsuite.test.asserts;
 
 import java.io.BufferedReader;
 import java.io.IOException;

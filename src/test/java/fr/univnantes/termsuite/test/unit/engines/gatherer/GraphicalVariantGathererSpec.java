@@ -40,9 +40,9 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.test.unit.TermFactory;
-import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.mock.TermFactory;
 import fr.univnantes.termsuite.test.unit.UnitTests;
+import fr.univnantes.termsuite.test.util.TermSuiteExtractors;
 
 public class GraphicalVariantGathererSpec {
 	

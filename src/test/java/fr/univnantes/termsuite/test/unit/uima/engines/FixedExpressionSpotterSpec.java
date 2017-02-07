@@ -35,7 +35,7 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;

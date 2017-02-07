@@ -1,6 +1,6 @@
 package fr.univnantes.termsuite.test.func.tools.cmd;
 
-import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
+import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -25,7 +25,7 @@ import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.test.TermSuiteAssertions;
+import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.tools.TerminologyExtractor;
 import fr.univnantes.termsuite.utils.FileUtils;

@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.unit;
+package fr.univnantes.termsuite.test.util;
 
 import static java.util.stream.Collectors.joining;
 

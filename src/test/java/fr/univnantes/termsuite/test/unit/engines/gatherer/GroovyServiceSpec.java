@@ -15,7 +15,7 @@ import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 import groovy.util.ResourceException;
 import groovy.util.ScriptException;

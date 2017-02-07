@@ -54,6 +54,7 @@ import fr.univnantes.termsuite.model.TermBuilder;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
+import fr.univnantes.termsuite.test.mock.MockResourceModule;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
 import fr.univnantes.termsuite.test.unit.api.PreprocessorSpec;
 import fr.univnantes.termsuite.test.unit.api.ResourceConfigSpec;

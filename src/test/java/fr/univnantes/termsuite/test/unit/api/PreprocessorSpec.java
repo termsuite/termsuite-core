@@ -1,6 +1,6 @@
 package fr.univnantes.termsuite.test.unit.api;
 
-import static fr.univnantes.termsuite.test.TermSuiteAssertions.assertThat;
+import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 
 import org.junit.Test;
 

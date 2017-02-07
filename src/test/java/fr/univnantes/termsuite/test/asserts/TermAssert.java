@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.func;
+package fr.univnantes.termsuite.test.asserts;
 
 import java.util.List;
 import java.util.stream.Collectors;

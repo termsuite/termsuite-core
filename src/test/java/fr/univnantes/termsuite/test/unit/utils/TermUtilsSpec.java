@@ -43,7 +43,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.utils.TermUtils;
 

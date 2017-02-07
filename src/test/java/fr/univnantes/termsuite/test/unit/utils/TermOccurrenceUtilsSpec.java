@@ -39,7 +39,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class TermOccurrenceUtilsSpec {

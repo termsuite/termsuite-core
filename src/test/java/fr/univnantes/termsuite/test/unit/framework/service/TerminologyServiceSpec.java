@@ -20,9 +20,9 @@ import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.TermSuiteAssertions;
-import fr.univnantes.termsuite.test.unit.TermSuiteExtractors;
+import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.unit.UnitTests;
+import fr.univnantes.termsuite.test.util.TermSuiteExtractors;
 
 public class TerminologyServiceSpec {
 

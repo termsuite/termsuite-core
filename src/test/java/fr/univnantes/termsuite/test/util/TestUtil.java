@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.test.unit;
+package fr.univnantes.termsuite.test.util;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -39,7 +39,7 @@ import fr.univnantes.termsuite.index.providers.EqualityIndicesProvider;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.unit.TermFactory;
+import fr.univnantes.termsuite.test.mock.TermFactory;
 
 public class TermValueProvidersSpec {
 	

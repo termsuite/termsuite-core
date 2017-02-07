@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.test.func;
+package fr.univnantes.termsuite.tools;
 
 import static org.assertj.core.api.Assertions.tuple;
 

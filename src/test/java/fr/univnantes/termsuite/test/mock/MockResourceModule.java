@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.unit;
+package fr.univnantes.termsuite.test.mock;
 
 import java.net.URL;
 import java.util.HashMap;
