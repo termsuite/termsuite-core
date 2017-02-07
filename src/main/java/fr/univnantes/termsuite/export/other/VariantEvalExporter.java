@@ -67,7 +67,7 @@ public class VariantEvalExporter {
 		writer.write("\t");
 		writer.write("V_" + Integer.toString(variantRank));
 		writer.write("\t");
-		writer.write(String.format("<%s>", variation.getPropertyStringValue(RelationProperty.VARIATION_RULE, "[]")));
+		writer.write(String.format("<%s>", variation.getPropertyStringValue(RelationProperty.VARIATION_RULES, "[]")));
 		writer.write("\t");
 		writer.write(String.format("%s (%d)", pilot, variant.getFrequency()));
 		writer.write("\t");

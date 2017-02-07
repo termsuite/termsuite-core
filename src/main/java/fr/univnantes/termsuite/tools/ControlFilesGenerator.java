@@ -74,14 +74,15 @@ public class ControlFilesGenerator {
 	 * @param directory
 	 * 			the directory where to create the files.
 	 */
+	@SuppressWarnings("unchecked")
 	public void generate(File directory) throws IOException {
 		if(!directory.exists())
 			directory.mkdirs();
 		
 		Set<String> distinctRuleNames = Sets.newHashSet();
 		termino.variations().forEach( tv -> {
-			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
-				distinctRuleNames.add(tv.getString(RelationProperty.VARIATION_RULE));
+			if(tv.isPropertySet(RelationProperty.VARIATION_RULES))
+				distinctRuleNames.addAll((Set<String>)tv.get(RelationProperty.VARIATION_RULES));
 		});
 
 		/*
@@ -92,9 +93,9 @@ public class ControlFilesGenerator {
 			writeVariations(
 				pathname, 
 				termino.relations()
-					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULE))
-					.filter(r-> r.getString(RelationProperty.VARIATION_RULE).equals(ruleName)),
-				RelationProperty.VARIATION_RULE
+					.filter(r-> r.isPropertySet(RelationProperty.VARIATION_RULES))
+					.filter(r-> ((Set<String>)r.get(RelationProperty.VARIATION_RULES)).contains(ruleName)),
+				RelationProperty.VARIATION_RULES
 				);
 		}
 		

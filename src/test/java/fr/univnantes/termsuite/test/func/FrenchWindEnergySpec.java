@@ -41,7 +41,6 @@ import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.index.TermIndexValueProvider;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
@@ -85,7 +84,6 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-Ed-NPN-CPN",
 				"S-Ed-NPN-,PNCPN",
 				"S-Eg-NA-NP",
-				"S-Eg-NPN-NP",
 				"S-R2-NPN",
 				"S-R2I-NPN-P",
 				"S-R2D-NPN",
@@ -94,6 +92,8 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"M-S-NN",
 				"M-PI-EN-P",
 				"M-I-NA-CE",
+				"S-IEg-NA-A,-CA",
+				"S-Eg-NPN-NP",
 				
 				/*
 				 * Found only when term merging is disabled
@@ -110,7 +110,6 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				"S-R2I2-NPN-PNP",
 				"S-I2-NPN-PN,PNC",
 				"S-PID-NA-P",
-				"S-IEg-NA-A,-CA",
 				"S-PID-NAA-P",
 				"M-I2-NA");
 	}
@@ -300,7 +299,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 				   tuple("n: schéma-bloc", "nn: schéma bloc"),
 				   tuple("n: micro-turbines", "nn: micro turbine")
 			)
-			.hasSize(9)
+			.hasSize(13)
 			;
 		
 	}
@@ -317,12 +316,12 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsVariation("npn: phase du stator", VariationType.DERIVATION, "na: phase statorique", RelationProperty.VARIATION_RULE, "S-R2D-NPN")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "naa: machine asynchrone auto-excitée", RelationProperty.VARIATION_RULE, "S-Ed-NA-A")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napn: machine asynchrone à cage", RelationProperty.VARIATION_RULE, "S-Ed-NA-PN")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napna: machine asynchrone à cage autonome", RelationProperty.VARIATION_RULE, "S-Ed-NA-PNA")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "napan: machine asynchrone à double alimentation",RelationProperty.VARIATION_RULE,  "S-Ed-NA-PAN")
-			.containsVariation("na: machine asynchrone", VariationType.SYNTAGMATIC, "naca: machine synchrone ou asynchrone", RelationProperty.VARIATION_RULE, "S-I-NA-AC")
+			.containsVariationWithRuleName("npn: phase du stator", VariationType.DERIVATION, "na: phase statorique", "S-R2D-NPN")
+			.containsVariationWithRuleName("na: machine asynchrone", VariationType.SYNTAGMATIC, "naa: machine asynchrone auto-excitée", "S-Ed-NA-A")
+			.containsVariationWithRuleName("na: machine asynchrone", VariationType.SYNTAGMATIC, "napn: machine asynchrone à cage", "S-Ed-NA-PN")
+			.containsVariationWithRuleName("na: machine asynchrone", VariationType.SYNTAGMATIC, "napna: machine asynchrone à cage autonome", "S-Ed-NA-PNA")
+			.containsVariationWithRuleName("na: machine asynchrone", VariationType.SYNTAGMATIC, "napan: machine asynchrone à double alimentation", "S-Ed-NA-PAN")
+			.containsVariationWithRuleName("na: machine asynchrone", VariationType.SYNTAGMATIC, "naca: machine synchrone ou asynchrone", "S-I-NA-AC")
 			;
 	}
 
@@ -349,7 +348,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			tuple("na: mesure précis", "na: mesure imprécis"),
 			tuple("na: circulation stationnaire", "na: circulation instationnaire")
 		)
-		.hasSize(27)
+		.hasSize(36)
 		;
 		
 	}
@@ -358,7 +357,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 	public void testSyntacticalVariationsWithDerivatesSR2DNPN() {
 		assertThat(termino)
 			.asTermVariationsHavingRule("S-R2D-NPN")
-			.hasSize(77)
+			.hasSize(82)
 			.extracting("from.groupingKey", "to.groupingKey")
 			.contains(
 					tuple("npn: production de électricité", "na: production électrique"),

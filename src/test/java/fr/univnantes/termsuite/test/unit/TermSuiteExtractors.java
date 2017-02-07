@@ -1,5 +1,9 @@
 package fr.univnantes.termsuite.test.unit;
 
+import static java.util.stream.Collectors.joining;
+
+import java.util.Set;
+
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
 
@@ -23,7 +27,7 @@ public class TermSuiteExtractors {
 		public Tuple extract(Relation input) {
 			return new Tuple(
 					VariationUtils.toTagString(input),
-					input.get(RelationProperty.VARIATION_RULE),
+					getRuleString(input),
 					input.getTo());
 		}
 	};
@@ -51,7 +55,7 @@ public class TermSuiteExtractors {
 		@Override
 		public Tuple extract(Relation input) {
 			return new Tuple(input.getFrom(),
-					input.getPropertyValue(RelationProperty.VARIATION_RULE),
+					getRuleString(input),
 					input.getTo());
 		}
 	};
@@ -61,7 +65,7 @@ public class TermSuiteExtractors {
 		public Tuple extract(Relation input) {
 			return new Tuple(
 					input.getType(),
-					input.getPropertyValue(RelationProperty.VARIATION_RULE),
+					getRuleString(input),
 					input.getTo());
 		}
 
@@ -70,17 +74,25 @@ public class TermSuiteExtractors {
 	public static final Extractor<Relation, String> RELATION_RULESTR = new Extractor<Relation, String>() {
 		@Override
 		public String extract(Relation input) {
-			return input.getString(RelationProperty.VARIATION_RULE);
+			return getRuleString(input);
 		}
 
 	};
+	
+	@SuppressWarnings("unchecked")
+	public static String getRuleString(Relation input) {
+		if(input.isPropertySet(RelationProperty.VARIATION_RULES))
+			return ((Set<String>)input.get(RelationProperty.VARIATION_RULES)).stream().collect(joining(","));
+		else
+			return "";
+	}
 
 	public static final Extractor<Relation, Tuple> RELATION_TOGKEY_RULE_TOFREQ = new Extractor<Relation, Tuple>() {
 		@Override
 		public Tuple extract(Relation input) {
 			return new Tuple(
 					input.getTo().getGroupingKey(),
-					input.getPropertyValue(RelationProperty.VARIATION_RULE),
+					getRuleString(input),
 					input.getTo().getFrequency());
 		}
 	};

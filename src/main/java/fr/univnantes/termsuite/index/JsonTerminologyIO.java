@@ -25,9 +25,12 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.io.IOUtils;
@@ -280,7 +283,7 @@ public class JsonTerminologyIO {
 				while ((tok = jp.nextToken()) != JsonToken.END_ARRAY) { 
 					TermBuilder builder = TermBuilder.start(termino);
 					List<TempVecEntry> currentContextVector = Lists.newArrayList();
-					Map<TermProperty, Comparable<?>> properties = null;
+					Map<TermProperty, Object> properties = null;
 					String currentGroupingKey = null;
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
@@ -371,7 +374,7 @@ public class JsonTerminologyIO {
 					base = null;
 					variant = null;
 					relationType = null;
-					Map<RelationProperty,Comparable<?>> properties = new HashMap<>();
+					Map<RelationProperty,Object> properties = new HashMap<>();
 					while ((tok = jp.nextToken()) != JsonToken.END_OBJECT) {
 						fieldname = jp.getCurrentName();
 						if (FROM.equals(fieldname)) 
@@ -477,8 +480,8 @@ public class JsonTerminologyIO {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static <T extends Enum<T> & Property<?>> Map<T,Comparable<?>> readProperties(Class<T> pCls, JsonParser jp) throws IOException {
-		Map<T,Comparable<?>> properties = new HashMap<>();
+	private static <T extends Enum<T> & Property<?>> Map<T,Object> readProperties(Class<T> pCls, JsonParser jp) throws IOException {
+		Map<T,Object> properties = new HashMap<>();
 		T property;
 		String fieldname;
 
@@ -497,7 +500,7 @@ public class JsonTerminologyIO {
 		return properties;
 	}
 
-	public static <T extends Enum<T> & Property<?>> Comparable<?> readPropertyValue(JsonParser jp, 
+	public static <T extends Enum<T> & Property<?>> Object readPropertyValue(JsonParser jp, 
 			T property) throws IOException {
 		if(property.getRange().equals(Double.class)) {
 			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_FLOAT);
@@ -517,6 +520,12 @@ public class JsonTerminologyIO {
 		} else if(property.getRange().equals(String.class)) {
 			checkToken(property, jp.currentToken(), JsonToken.VALUE_STRING);
 			return jp.getValueAsString();
+		} else if(Set.class.isAssignableFrom(property.getRange())) {
+			checkToken(property, jp.currentToken(), JsonToken.START_ARRAY);
+			HashSet<Object> values = new HashSet<>();
+			readCollection(jp, values);
+			return values;
+
 		} else if(property.getRange().isEnum()) {
 			checkToken(property, jp.currentToken(), JsonToken.VALUE_STRING);
 			PropertyValue theValue;
@@ -526,6 +535,12 @@ public class JsonTerminologyIO {
 		} else {
 			throw new UnsupportedOperationException(String.format(
 					"Unsupported property range <%s> in property %s",property.getRange(), property));
+		}
+	}
+
+	public static void readCollection(JsonParser jp, Collection<Object> c) throws IOException {
+		while(jp.nextToken() != JsonToken.END_ARRAY) {
+			c.add(jp.getCurrentValue());
 		}
 	}
 
@@ -740,7 +755,7 @@ public class JsonTerminologyIO {
 		}
 	}
 	
-	private static <P extends Enum<P> & Property<?>> void writePropertyValue(JsonGenerator jg, P p, Comparable<?> value) throws IOException {
+	private static <P extends Enum<P> & Property<?>> void writePropertyValue(JsonGenerator jg, P p, Object value) throws IOException {
 		if(p.getRange().equals(Double.class)) 
 			jg.writeNumber((Double)value);
 		else if(p.getRange().equals(Integer.class)) 
@@ -753,7 +768,13 @@ public class JsonTerminologyIO {
 			jg.writeBoolean((Boolean)value);
 		else if(PropertyValue.class.isAssignableFrom(p.getRange())) {
 			jg.writeString(((PropertyValue)value).getSerializedString());
-		} else 
+		} else if(Collection.class.isAssignableFrom(p.getRange())) {
+			jg.writeStartArray();
+			for(Object o:(Collection<?>)value)
+				jg.writeObject(o);
+			jg.writeEndArray();
+		} else
+			
 			throw new UnsupportedOperationException(String.format("Cannot serialize property %s. Unsupported range: %s", p, p.getRange()));
 	}
 

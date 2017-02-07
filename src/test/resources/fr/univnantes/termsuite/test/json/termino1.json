@@ -85,8 +85,8 @@
 		}
 	],
 	relations: [
-		{from: "n: word1", to: "na: word1 word2", type: "var", props: {vrule: "n-na", isSyntag: true}},
-		{from: "a: word2", to: "na: word1 word2", type: "var", props: {vrule: "a-na", isSyntag: true}},
+		{from: "n: word1", to: "na: word1 word2", type: "var", props: {vrules: ["n-na"], isSyntag: true}},
+		{from: "a: word2", to: "na: word1 word2", type: "var", props: {vrules: ["a-na"], isSyntag: true}},
 		{from: "na: word1 word2", to: "n: word1", type: "var", props: {graphSim: 0.914, isGraph: true}}
 	],
 	occurrences: [

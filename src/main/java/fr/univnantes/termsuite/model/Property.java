@@ -20,17 +20,4 @@ public interface Property<T> {
 	public Comparator<T> getComparator();
 	public Comparator<T> getComparator(boolean reverse);
 	
-	static boolean isNumeric(Class<?> cls) {
-		return cls.equals(Integer.class)
-				|| cls.equals(Double.class)
-				|| cls.equals(Float.class)
-				|| cls.equals(Long.class)
-				;
-	}
-
-	static boolean isDecimalNumber(Class<?> cls) {
-		return cls.equals(Double.class)
-				|| cls.equals(Float.class)
-				;
-	}
 }

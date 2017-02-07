@@ -128,8 +128,8 @@ public class TerminologyServiceSpec {
 		
 		Relation rel1 = new Relation(RelationType.VARIATION, term5, term3);
 		rel1.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
-		rel1.setProperty(RelationProperty.VARIATION_RULE, "Tata");
 		terminologyService.addRelation(rel1);
+		terminologyService.asRelationService(rel1).addVariationRule("Tata");
 		
 		assertThat(outRels(this.term5)).hasSize(1);
 		assertThat(inRels(this.term5)).hasSize(0);
@@ -141,7 +141,7 @@ public class TerminologyServiceSpec {
 		
 		Relation rel2 = new Relation(RelationType.VARIATION, term5, term4);
 		rel2.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
-		rel2.setProperty(RelationProperty.VARIATION_RULE, "Tata");
+		terminologyService.asRelationService(rel2).addVariationRule("Tata");
 		terminologyService.addRelation(rel2);
 		assertThat(outRels(this.term5)).hasSize(2);
 		assertThat(inRels(this.term5)).hasSize(0);
@@ -155,7 +155,8 @@ public class TerminologyServiceSpec {
 		
 		Relation rel3 = new Relation(RelationType.HAS_EXTENSION, term5, term3);
 		rel3.setProperty(RelationProperty.IS_SYNTAGMATIC, true);
-		rel3.setProperty(RelationProperty.VARIATION_RULE, "Tata");
+		terminologyService.asRelationService(rel3).addVariationRule("Tata");
+		terminologyService.asRelationService(rel3).addVariationRule("Titi");
 		terminologyService.addRelation(rel3);
 		assertThat(outRels(this.term5)).hasSize(3);
 		assertThat(inRels(this.term5)).hasSize(0);
@@ -165,7 +166,7 @@ public class TerminologyServiceSpec {
 		assertThat(inRels(this.term4)).hasSize(1);
 		assertThat(outRels(this.term5))
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
-			.containsExactly("Tata","Tata", "Tata");
+			.containsExactly("Tata","Tata,Titi", "Tata");
 	}
 		
 

@@ -104,7 +104,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				"S-PI-NN-P",
 				"M-SD-(N|A)N",
 				"S-R2I-NPN-P",
-				"ANN-prefANN",
 				"AAN-AprefAN",
 				"S-R2D-NN1",
 				"M-I2-(A|N)N-E",
@@ -118,6 +117,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	protected List<String> getSyntacticNotMatchingRules() {
 		return Lists.newArrayList(
 				"S-I1-NPN-CN",
+				"ANN-prefANN",
 				"S-PEg-NN-NP", "S-PID-AN-P", "S-R2D-NN");
 	}
 
@@ -196,7 +196,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		System.out.println("Nb relations: " + service.relations().count());
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
-				.collect(Collectors.toSet())).hasSize(510);
+				.collect(Collectors.toSet())).hasSize(519);
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isSemantic)
@@ -204,7 +204,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isPrefixation)
-				.collect(Collectors.toSet())).hasSize(9);
+				.collect(Collectors.toSet())).hasSize(15);
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isDerivation)
@@ -212,7 +212,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isMorphological)
-				.collect(Collectors.toSet())).hasSize(500);
+				.collect(Collectors.toSet())).hasSize(503);
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isSyntagmatic)
@@ -220,7 +220,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isGraphical)
-				.collect(Collectors.toSet())).hasSize(176);
+				.collect(Collectors.toSet())).hasSize(182);
 	}
 
 	@Test
@@ -229,7 +229,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				.variations(VariationType.MORPHOLOGICAL);
 		assertThat(variationsTypedMorpho
 				.filter(RelationService::notInfered)
-				.collect(Collectors.toList())).hasSize(458);
+				.collect(Collectors.toList())).hasSize(455);
 
 		Stream<RelationService> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
 				.relations(RelationProperty.IS_MORPHOLOGICAL, true);
@@ -359,7 +359,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				   tuple("n: spreadsheet", "nn: spread sheet"), 
 				   tuple("n: gearbox", "nn: gear box")
 			)
-			.hasSize(193)
+			.hasSize(628)
 			;
 	}
 
@@ -368,9 +368,9 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsVariation("nn: wind turbine", VariationType.SYNTAGMATIC, "nnn: wind regime turbine", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
-			.containsVariation("an: low frequency", VariationType.SYNTAGMATIC, "aan: low audible frequency", RelationProperty.VARIATION_RULE, "S-I-AN-A")
-			.containsVariation("nn: wind generator", VariationType.SYNTAGMATIC, "nnn: wind turbine generator", RelationProperty.VARIATION_RULE, "S-I-NN-(N|A)")
+			.containsVariationWithRuleName("nn: wind turbine", VariationType.SYNTAGMATIC, "nnn: wind regime turbine", "S-I-NN-(N|A)")
+			.containsVariationWithRuleName("an: low frequency", VariationType.SYNTAGMATIC, "aan: low audible frequency", "S-I-AN-A")
+			.containsVariationWithRuleName("nn: wind generator", VariationType.SYNTAGMATIC, "nnn: wind turbine generator", "S-I-NN-(N|A)")
 			;
 	}
 
@@ -412,7 +412,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("an: suitable site", "an: unsuitable site"),
 				tuple("an: national institute", "an: international institute")
 		)
-		.hasSize(33)
+		.hasSize(47)
 		;
 		
 	}
@@ -444,7 +444,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				tuple("nn: industry noise", "an: industrial noise"),
 				tuple("nn: axis direction", "an: axial direction")
 			)
-			.hasSize(19)
+			.hasSize(20)
 		;
 	}
 

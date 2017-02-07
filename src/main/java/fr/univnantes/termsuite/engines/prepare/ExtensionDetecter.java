@@ -1,19 +1,26 @@
 package fr.univnantes.termsuite.engines.prepare;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
 
-import com.google.common.base.Preconditions;
+import com.google.common.base.Stopwatch;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermUtils;
 
@@ -22,9 +29,6 @@ public class ExtensionDetecter extends SimpleEngine {
 	
 	@InjectLogger Logger logger;
 
-	@Index(type=TermIndexType.SWT_GROUPING_KEYS)
-	TermIndex swtIndex;
-	
 	@Index(type=TermIndexType.ALLCOMP_PAIRS)
 	TermIndex allCompPairsIndex;
 
@@ -35,49 +39,50 @@ public class ExtensionDetecter extends SimpleEngine {
 		return this;
 	}
 	
-	
 	@Override
 	public void execute() {
 		if(terminology.getTerms().isEmpty())
 			return;
-		setSize1Extensions();
-		setSize2Extensions();
-	}
-
-	
-	
-	public void setSize1Extensions() {
 		
 		logger.debug("Detecting size-1 extensions");
-		for (String swtGroupingKey : swtIndex.keySet()) {
-			Term swt = terminology.getTerm(swtGroupingKey).getTerm();
-			for(Term term:swtIndex.getTerms(swtGroupingKey)) {
-				if(swt.equals(term) || term.getWords().size() == 1)
-					continue;
-				else {
-					addExtensionRelationIfNotExisting(swt, term);
-				}
-			}
-		}
+		Stopwatch sw1 = Stopwatch.createStarted();
+		AtomicInteger cnt = new AtomicInteger(0);
+		setSize1Extensions(cnt);
+		sw1.stop();
+		logger.debug("{} size-1 extensions detected in {}ms", cnt, sw1.elapsed(TimeUnit.MILLISECONDS));
+		
+		logger.debug("Detecting size-2 extensions");
+		Stopwatch sw2 = Stopwatch.createStarted();
+		setSize2Extensions();
+		sw2.stop();
+		logger.debug("Size-2 extensions detected in {}ms", sw2.elapsed(TimeUnit.MILLISECONDS));
+//		logger.debug("Total nb of extension relations: {}", terminology.relations(RelationType.HAS_EXTENSION).count());
 	}
-
-
-	private static final String MSG_BAD_EXTENSION = "Bad extension format. Require from.size < to.size. Got from: \"%s\" and to: \"%s\"";
-	public void addExtensionRelationIfNotExisting(Term from, Term to) {
-		Preconditions.checkArgument(from.getWords().size() < to.getWords().size(), 
-				MSG_BAD_EXTENSION,
-				from, to
-				);
-		if(!terminology.getRelation(from, RelationType.HAS_EXTENSION, to).isPresent()) {
-			terminology.getRelationOrCreate(from, RelationType.HAS_EXTENSION, to);
-			watch(from, to);
-		}
+	
+	public void setSize1Extensions(AtomicInteger cnt) {
+		Set<Relation> relations = new HashSet<>();
+		terminology.terms()
+			.filter(t-> t.isMultiWord())
+			.forEach(t-> {
+				Optional<TermService> swt = Optional.empty(); 
+				for(TermWord tw:t.getWords()) {
+					if(tw.isSwt()) {
+						swt = terminology.getSwt(tw);
+						if(swt.isPresent()) {
+							cnt.incrementAndGet();
+							relations.add(new Relation(RelationType.HAS_EXTENSION, swt.get().getTerm(),t.getTerm()));
+						}
+					}
+				}
+			});
+		watchAndAdd(relations);
 	}
 	
 	public void setSize2Extensions() {
 		logger.debug("Detecting size-2 (and more) extensions");
 
 		logger.debug("Rule-based gathering over {} classes", allCompPairsIndex.size());
+		Set<Relation> relations = new HashSet<>();
 
 		Term t1;
 		Term t2;
@@ -92,14 +97,21 @@ public class ExtensionDetecter extends SimpleEngine {
 				for(int j = i+1; j< list.size(); j++) {
 					t2 = list.get(j);
 					if(TermUtils.isIncludedIn(t1, t2)) {
-						addExtensionRelationIfNotExisting(t1, t2);
-
+						relations.add(new Relation(RelationType.HAS_EXTENSION, t1,t2));
 					} else if(TermUtils.isIncludedIn(t2, t1)) {
-						addExtensionRelationIfNotExisting(t2, t1);
+						relations.add(new Relation(RelationType.HAS_EXTENSION, t2,t1));
 					}
 				}
 			}
 		}
+		watchAndAdd(relations);
+	}
+
+
+	public void watchAndAdd(Set<Relation> relations) {
+		for(Relation r:relations)
+			watch(r.getFrom(), r.getTo());
+		terminology.addRelations(relations);
 	}
 
 	private void watch(Term t1, Term t2) {

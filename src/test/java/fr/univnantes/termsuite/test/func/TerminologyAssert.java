@@ -31,6 +31,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -41,7 +42,6 @@ import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Objects;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
@@ -175,7 +175,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return failed;
 	}
 	
-	public TerminologyAssert containsVariation(String baseGroupingKey, VariationType type, String variantGroupingKey, RelationProperty p, Comparable<?> expectedValue) {
+	public TerminologyAssert containsVariationWithRuleName(String baseGroupingKey, VariationType type, String variantGroupingKey, String ruleName) {
 		if(failToFindTerms(baseGroupingKey, variantGroupingKey))
 			return this;
 
@@ -184,16 +184,13 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 			if(tv.getType() == RelationType.VARIATION
 					&& tv.isPropertySet(type.getRelationProperty())
 					&& tv.getBooleanUnchecked(type.getRelationProperty())
-					&& tv.isPropertySet(p)
-					&& java.util.Objects.equals(tv.getString(p), expectedValue) 
-					&& tv.getTo().getGroupingKey().equals(variantGroupingKey))
+					&& getVariationRules(tv).contains(ruleName))
 				return this;
 		}
 		
-		failWithMessage("No such variation <%s--%s[%s=%s]--%s> found in term index", 
+		failWithMessage("No such variation <%s--%s[rule=%s]--%s> found in term index", 
 				baseGroupingKey, type, 
-				p,
-				expectedValue,
+				ruleName,
 				variantGroupingKey
 				);
 		return this;
@@ -215,10 +212,18 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 
+	
+	@SuppressWarnings("unchecked")
+	private Set<String> getVariationRules(Relation relation) {
+		if(relation.isPropertySet(RelationProperty.VARIATION_RULES))
+			return (Set<String>)relation.get(RelationProperty.VARIATION_RULES);
+		else
+			return Collections.EMPTY_SET;
+	}
 	public AbstractIterableAssert<?, ? extends Iterable<? extends Relation>, Relation> asTermVariationsHavingRule(String ruleName) {
 		Set<Relation> variations = Sets.newHashSet();
 		for(Relation v:actual.getRelations()) {
-			if(Objects.equal(v.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), ruleName))
+			if(getVariationRules(v).contains(ruleName))
 				variations.add(v);
 			
 		}
@@ -244,8 +249,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
 		for(Relation tv:actual.getRelations().stream().filter(r->r.getType() == RelationType.VARIATION).collect(toSet())) 
-			if(tv.isPropertySet(RelationProperty.VARIATION_RULE))
-				matchingRuleNames.add(tv.getString(RelationProperty.VARIATION_RULE));
+			matchingRuleNames.addAll(getVariationRules(tv));
 		return assertThat(matchingRuleNames);
 	}
 

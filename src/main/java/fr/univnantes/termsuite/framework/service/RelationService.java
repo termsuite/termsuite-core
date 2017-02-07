@@ -20,9 +20,11 @@ import static fr.univnantes.termsuite.model.RelationProperty.SOURCE_GAIN;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIANT_BAG_FREQUENCY;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIANT_SCORE;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RANK;
-import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RULE;
+import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RULES;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 import com.google.common.base.Preconditions;
 
@@ -100,7 +102,7 @@ public class RelationService {
 		return relation.isPropertySet(p);
 	}
 
-	public void setProperty(RelationProperty p, Comparable<?> value) {
+	public void setProperty(RelationProperty p, Object value) {
 		relation.setProperty(p, value);
 	}
 
@@ -111,7 +113,7 @@ public class RelationService {
 		return terminologyService.getExtensionAffix(term, relation.getTo());
 	}
 
-	public Comparable<?> get(RelationProperty property) {
+	public Object get(RelationProperty property) {
 		return relation.get(property);
 	}
 	
@@ -194,9 +196,9 @@ public class RelationService {
 		return relation.getIntegerUnchecked(VARIATION_RANK);
 	}
 
-
-	public String getVariationRule() {
-		return relation.getStringUnchecked(VARIATION_RULE);
+	@SuppressWarnings("unchecked")
+	public Set<String> getVariationRules() {
+		return (Set<String>)relation.get(VARIATION_RULES);
 	}
 
 	public String getDerivationType() {
@@ -289,5 +291,10 @@ public class RelationService {
 		else
 			return false;
 	}
-
+	
+	public synchronized void addVariationRule(String rule) {
+		if(!isPropertySet(RelationProperty.VARIATION_RULES))
+			setProperty(RelationProperty.VARIATION_RULES, new HashSet<>());
+			getVariationRules().add(rule);
+	}
 }

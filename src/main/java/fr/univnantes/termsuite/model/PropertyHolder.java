@@ -15,21 +15,21 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 	private static final String ERR_PROPERTY_NOT_SET = "Property %s not set";
 	private static final String ERR_NOT_AN_INSTANCE = "Value <%s> is not an instance of range %s";
 	
-	protected Map<T, Comparable<?>> properties;
+	protected Map<T, Object> properties;
 	
 	public PropertyHolder(Class<T> cls) {
 		super();
 		this.properties = Collections.synchronizedMap(new EnumMap<>(cls));
 	}
 
-	public void setProperty(T property, Comparable<?> value) {
+	public void setProperty(T property, Object value) {
 		Preconditions.checkNotNull(property, ERR_PROPERTY_CANNOT_BE_NULL);
 		Preconditions.checkNotNull(value, ERR_VALUE_CANNOT_BE_NULL, property);
 		Preconditions.checkArgument(property.getRange().isInstance(value), ERR_NOT_AN_INSTANCE, value, property.getRange());
 		properties.put(property, value);
 	}
 
-	public Comparable<?> getPropertyValue(T property) {
+	public Object getPropertyValue(T property) {
 		Preconditions.checkNotNull(isPropertySet(property), ERR_PROPERTY_NOT_SET, property);
 		return properties.get(property);
 	}
@@ -39,7 +39,7 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 		return properties.containsKey(property);
 	}
 
-	public Comparable<?> getPropertyValueUnchecked(T property) {
+	public Object getPropertyValueUnchecked(T property) {
 		return properties.get(property);		
 	}
 	
@@ -149,7 +149,7 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 		return compareNumericValue(property, value) <= 0;
 	}
 	
-	public Map<T, Comparable<?>> getProperties() {
+	public Map<T, Object> getProperties() {
 		return Collections.unmodifiableMap(this.properties);
 	}
 	
@@ -162,12 +162,12 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 			return false;
 	}
 	
-	public Comparable<?> get(T p) {
+	public Object get(T p) {
 		return properties.get(p);
 	}
 
-	public void setProperties(Map<T, Comparable<?>> properties) {
-		for(Entry<T, Comparable<?>> e:properties.entrySet())
+	public void setProperties(Map<T, Object> properties) {
+		for(Entry<T, Object> e:properties.entrySet())
 			setProperty(e.getKey(), e.getValue());
 	}
 }

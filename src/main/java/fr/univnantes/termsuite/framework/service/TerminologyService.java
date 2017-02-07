@@ -561,5 +561,18 @@ public class TerminologyService {
 		return Optional.empty();
 	}
 
+	public Optional<TermService> getSwt(TermWord tw) {
+		String groupingKey = TermUtils.toGroupingKey(tw);
+		if(containsTerm(groupingKey))
+			return Optional.of(getTerm(groupingKey));
+		else
+			return Optional.empty();
+	}
 
+	public void addRelations(Set<Relation> relations) {
+		relationMutex.acquireUninterruptibly();
+		for(Relation r:relations)
+			privateAddRelation(r);
+		relationMutex.release();
+	}
 }

@@ -9,6 +9,7 @@ import com.google.common.collect.ComparisonChain;
 
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.PropertyHolder;
+import fr.univnantes.termsuite.model.PropertyHolderBase;
 
 public abstract class Ordering<T extends Enum<T> & Property<?>, U extends PropertyHolder<T>, Z> {
 	
@@ -48,14 +49,17 @@ public abstract class Ordering<T extends Enum<T> & Property<?>, U extends Proper
 	}
 
 	public Comparator<U> toComparator() {
+		for(Direction d:directions) 
+			PropertyHolderBase.checkComparable(d.getProperty().getRange(), d.getProperty());
+			
 		return new Comparator<U>() {
 			@Override
 			public int compare(U o1, U o2) {
 				ComparisonChain chain = ComparisonChain.start();
 				Comparable<?> v1, v2;
 				for(Direction d:directions) {
-					v1 = o1.getPropertyValueUnchecked(d.getProperty());
-					v2 = o2.getPropertyValueUnchecked(d.getProperty());
+					v1 = (Comparable<?>)o1.getPropertyValueUnchecked(d.getProperty());
+					v2 = (Comparable<?>)o2.getPropertyValueUnchecked(d.getProperty());
 					if(d.isAscending()) 
 						chain = chain.compare(v1,v2);
 					else 

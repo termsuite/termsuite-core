@@ -68,6 +68,21 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 		inferVariations(VariationType.PREFIXATION);
 		inferVariations(VariationType.SEMANTIC);
 	}
+	
+	private static final RelationProperty[] INFERED_PROPERTIES = new RelationProperty[] {
+			RelationProperty.IS_DERIVATION,
+			RelationProperty.IS_DICO,
+			RelationProperty.IS_DISTRIBUTIONAL,
+			RelationProperty.IS_GRAPHICAL,
+			RelationProperty.IS_MORPHOLOGICAL,
+			RelationProperty.IS_PREFIXATION,
+			RelationProperty.IS_SEMANTIC,
+			RelationProperty.IS_SYNTAGMATIC,
+			RelationProperty.SEMANTIC_SCORE,
+			RelationProperty.SEMANTIC_SIMILARITY,
+			RelationProperty.GRAPHICAL_SIMILARITY,
+			RelationProperty.VARIATION_RULES,
+	};
 
 
 	public void inferVariations(VariationType type) {
@@ -104,7 +119,7 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 									logger.trace("Found infered variation {} --> {}", inferedFrom, inferedTo);
 								
 								RelationService inferedRel = terminology.createVariation(VariationType.INFERENCE, inferedFrom.getTerm(), inferedTo.getTerm());
-								for(RelationProperty p:RelationProperty.values()) 
+								for(RelationProperty p:INFERED_PROPERTIES) 
 									VariationUtils.copyRelationPropertyIfSet(
 											relation.getRelation(), 
 											inferedRel.getRelation(), 

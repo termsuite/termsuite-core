@@ -25,8 +25,6 @@ import java.util.Comparator;
 import java.util.Map;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Maps;
 
 /**
@@ -76,60 +74,70 @@ public enum TermProperty implements Property<Term> {
 		}
 	}
 	
-	private String propertyName;
-	private String propertyShortName;
-	private String jsonField;
-	private Class<?> range;
+	private PropertyHolderBase<TermProperty, Term> delegate;
 
-	private TermProperty(String propertyName, String propertyShortName, String propertyJsonName, Class<?> range) {
-		this.propertyName = propertyName;
-		this.propertyShortName = propertyShortName;
-		this.jsonField = propertyJsonName;
-		this.range = range;
+	private TermProperty(String propertyName, String propertyShortName, String jsonField, Class<?> range) {
+		delegate = new PropertyHolderBase<>(propertyName, propertyShortName, jsonField, range);
 	}
 	
-	@Override
-	public Class<?> getRange() {
-		return range;
-	}
-	
-	@Override
-	public boolean isDecimalNumber() {
-		return Property.isDecimalNumber(range);
-	}
-	
+
 	@Override
 	public String getPropertyName() {
-		return propertyName;
+		return delegate.getPropertyName();
 	}
 
+
 	@Override
-	public Comparator<Term> getComparator(final boolean reverse) {
-		return new Comparator<Term>() {
-			@Override
-			public int compare(Term o1, Term o2) {
-				return reverse ? TermProperty.this.compare(o2, o1) : TermProperty.this.compare(o1, o2) ;
-			}
-		};
+	public String getJsonField() {
+		return delegate.getJsonField();
 	}
-	
+
+
+	@Override
+	public Class<?> getRange() {
+		return delegate.getRange();
+	}
+
+
+	@Override
+	public String getShortName() {
+		return delegate.getShortName();
+	}
+
+
+	@Override
+	public boolean isNumeric() {
+		return delegate.isNumeric();
+	}
+
+
+	@Override
+	public boolean isDecimalNumber() {
+		return delegate.isDecimalNumber();
+	}
+
+
+	@Override
+	public Comparator<Term> getComparator() {
+		return delegate.getComparator(this);
+	}
+
+
+	@Override
+	public Comparator<Term> getComparator(boolean reverse) {
+		return delegate.getComparator(this, reverse);
+	}
 
 	@Override
 	public int compare(Term o1, Term o2) {
-		if(o1.getPropertyValueUnchecked(this) == o2.getPropertyValueUnchecked(this))
-			return 0;
-		else if(o1.getPropertyValueUnchecked(this)==null)
-			return -1;
-		else if(o2.getPropertyValueUnchecked(this)==null)
-			return 1;
-		else
-			return ComparisonChain.start()
-				.compare(
-						o1.getPropertyValueUnchecked(this), 
-						o2.getPropertyValueUnchecked(this))
-				.result();
+		return delegate.compare(this, o1, o2);
 	}
-		
+
+
+	public String toString() {
+		return delegate.toString();
+	}
+
 
 	public static TermProperty forName(String name) {
 		TermProperty termProperty = byNames.get(name);
@@ -144,32 +152,8 @@ public enum TermProperty implements Property<Term> {
 				)
 		);
 	}
-
-	@Override
-	public String getShortName() {
-		return propertyShortName;
-	}
-
-	@Override
-	public boolean isNumeric() {
-		return Property.isNumeric(range);
-	}
-
-	@Override
-	public String getJsonField() {
-		return jsonField;
-	}
-
-	@Override
-	public Comparator<Term> getComparator() {
-		return getComparator(false);
-	}
-
+	
 	public static TermProperty fromJsonString(String field) {
-		Preconditions.checkNotNull(field);
-		for(TermProperty p:values())
-			if(p.jsonField.equals(field))
-				return p;
-		throw new IllegalArgumentException("No TermProperty with such json field: " + field);
+		return PropertyHolderBase.fromJsonString(TermProperty.class, field);
 	}
 }

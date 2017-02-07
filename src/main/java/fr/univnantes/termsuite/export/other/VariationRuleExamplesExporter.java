@@ -49,7 +49,7 @@ public class VariationRuleExamplesExporter {
 
 		termino.terms().forEach(t -> {
 			t.variations().forEach(v -> {
-				pairs.put(v.getString(RelationProperty.VARIATION_RULE), new TermPair(t.getTerm(), v.getTo().getTerm()));
+				pairs.put(v.getString(RelationProperty.VARIATION_RULES), new TermPair(t.getTerm(), v.getTo().getTerm()));
 			});
 		});
 

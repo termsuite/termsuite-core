@@ -30,12 +30,11 @@ import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.assertj.core.util.Lists;
 import org.junit.Test;
-
-import com.google.common.base.Objects;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.CompoundType;
@@ -268,11 +267,13 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 			)
 			;
 		
+		@SuppressWarnings("unchecked")
 		List<Relation> msnanVars = termino.getRelations().stream()
-				.filter(tv -> Objects.equal(tv.getPropertyStringValue(RelationProperty.VARIATION_RULE, null), "M-S-(N|A)N"))
+				.filter(tv -> tv.isPropertySet(RelationProperty.VARIATION_RULES))
+				.filter(tv -> ((Set<String>)tv.get(RelationProperty.VARIATION_RULES)).contains("M-S-(N|A)N"))
 				.collect(Collectors.toList());
 		// TODO investigate why the size varies
-		assertTrue("Expected size between 83 and 89, but got: " + msnanVars.size(), msnanVars.size() <= 89 && msnanVars.size() >= 83
+		assertTrue("Expected size between 89 and 95, but got: " + msnanVars.size(), msnanVars.size() <= 95 && msnanVars.size() >= 89
 				);
 	}
 
@@ -281,8 +282,8 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testSyntacticalVariations() {
 		assertThat(termino)
-			.containsVariation("an: staatlich umweltamt", VariationType.SYNTAGMATIC, "aan: windenergie staatlich umweltamt", RelationProperty.VARIATION_RULE, "S-Eg-AN-A")
-			.containsVariation("acan: topographisch und meteorologisch verhältnis", VariationType.SYNTAGMATIC, "an: topographisch verhältnis", RelationProperty.VARIATION_RULE, "S-I-AN-CA")
+			.containsVariationWithRuleName("an: staatlich umweltamt", VariationType.SYNTAGMATIC, "aan: windenergie staatlich umweltamt", "S-Eg-AN-A")
+			.containsVariationWithRuleName("acan: topographisch und meteorologisch verhältnis", VariationType.SYNTAGMATIC, "an: topographisch verhältnis", "S-I-AN-CA")
 			;
 	}
 

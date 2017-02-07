@@ -116,10 +116,10 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		line.add(tagBuilder.toString());
 		for(Property<?> p:properties) {
 			if(p instanceof RelationProperty) {
-				Comparable<?> value = variation.getPropertyValueUnchecked((RelationProperty)p);
+				Object value = variation.getPropertyValueUnchecked((RelationProperty)p);
 				line.add(getPropertyValue(value));
 			} else if(p instanceof TermProperty) {
-				Comparable<?> value = variation.getTo().getPropertyValueUnchecked((TermProperty)p);
+				Object value = variation.getTo().getPropertyValueUnchecked((TermProperty)p);
 				line.add(getPropertyValue(value));
 			} else
 				line.add("");
@@ -136,7 +136,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		line.add(termType);
 		for(Property<?> p:properties) {
 			if(p instanceof TermProperty) {
-				Comparable<?> value = t.getPropertyValueUnchecked((TermProperty)p);
+				Object value = t.getPropertyValueUnchecked((TermProperty)p);
 				line.add(getPropertyValue(value));
 			} else
 				line.add("");
@@ -146,7 +146,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				line.toArray(new String[line.size()]));
 	}
 
-	private String getPropertyValue(Comparable<?> value) {
+	private String getPropertyValue(Object value) {
 		if (value instanceof Integer || value instanceof Long)
 			return value.toString();
 		else if(value instanceof Boolean) 

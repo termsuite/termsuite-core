@@ -61,12 +61,12 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 				history.get().saveEvent(
 						source.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+"");
+						"Term has a new variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULES)+"");
 			if(history.get().isGKeyWatched(target.getGroupingKey()))
 				history.get().saveEvent(
 						target.getGroupingKey(),
 						this.getClass(), 
-						"Term has a new base-variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULE)+"");
+						"Term has a new base-variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULES)+"");
 		}
 	}
 
@@ -116,7 +116,7 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 			variation = Optional.of(relation);
 			watch(source, target, relation.getRelation());
 		}
-		variation.get().setProperty(RelationProperty.VARIATION_RULE, rule.getName());
+		variation.get().addVariationRule(rule.getName());
 	}
 
 	protected abstract TermIndex getTermIndex();
