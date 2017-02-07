@@ -21,6 +21,7 @@ import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.PipelineService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -47,8 +48,8 @@ public class IndexedCorpusModule extends AbstractModule {
 	protected void configure() {
 		bind(new TypeLiteral<Optional<TermHistory>>(){}).toInstance(history);
 		bind(FilterResource.class).to(DefaultFilterResource.class);
-//		bind(Terminology.class).toInstance(indexedterminology.getTerminology());
-//		bind(IndexedCorpus.class).toInstance(indexedterminology);
+		bind(Terminology.class).toInstance(corpus.getTerminology());
+		bind(IndexedCorpus.class).toInstance(corpus);
 		bind(Lang.class).toInstance(corpus.getTerminology().getLang());
 		bind(OccurrenceStore.class).toInstance(corpus.getOccurrenceStore());
 		bind(TerminologyService.class).toInstance(new TerminologyService(corpus.getTerminology()));

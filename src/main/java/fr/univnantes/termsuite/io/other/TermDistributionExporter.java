@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export.other;
+package fr.univnantes.termsuite.io.other;
 
 import static java.util.stream.Collectors.toList;
 

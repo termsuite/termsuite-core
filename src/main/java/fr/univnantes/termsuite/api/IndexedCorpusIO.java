@@ -10,8 +10,8 @@ import java.nio.file.Paths;
 
 import com.google.common.base.Charsets;
 
-import fr.univnantes.termsuite.export.json.JsonOptions;
-import fr.univnantes.termsuite.index.JsonTerminologyIO;
+import fr.univnantes.termsuite.io.json.JsonOptions;
+import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 
 public class IndexedCorpusIO {

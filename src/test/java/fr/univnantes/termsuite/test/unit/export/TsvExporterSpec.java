@@ -10,9 +10,9 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.export.tsv.TsvOptions;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.io.tsv.TsvOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;

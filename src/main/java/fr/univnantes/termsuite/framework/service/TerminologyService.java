@@ -361,13 +361,13 @@ public class TerminologyService {
 	}
 	
 	public void removeTerm(Term t) {
-		
+		termMutex.acquireUninterruptibly();
 		this.termino.getTerms().remove(t.getGroupingKey());
 		// remove from variants
 		List<Relation> toRem = Lists.newLinkedList();
 		toRem.addAll(this.getOutboundRelations().get(t));
 		toRem.addAll(this.getInboundRelations().get(t));
-		toRem.forEach(this::removeRelation);
+		removeRelations(toRem);
 		
 		/*
 		 * Removes from context vectors.
@@ -385,6 +385,7 @@ public class TerminologyService {
 		}
 		indexService.removeTerm(t);
 		occurrenceStore.removeTerm(t);
+		termMutex.release();
 	}
 
 	
@@ -425,6 +426,17 @@ public class TerminologyService {
 		removeRelation(variation.getRelation());
 	}
 	
+	public void removeRelations(Collection<Relation> relations) {
+		relationMutex.acquireUninterruptibly();
+		this.termino.getRelations().removeAll(relations);
+		for(Relation relation:relations) {
+			this.getOutboundRelations().remove(relation.getFrom(), relation);
+			this.getInboundRelations().remove(relation.getTo(), relation);
+		}
+		relationMutex.release();
+	}
+
+
 	public void removeRelation(Relation relation) {
 		relationMutex.acquireUninterruptibly();
 		this.termino.getRelations().remove(relation);

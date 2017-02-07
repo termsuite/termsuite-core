@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.io;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 
-public interface TerminologyExporter {
+public interface IndexedCorpusExporter {
 
 	public void export(IndexedCorpus corpus, Writer writer);
 	public String exportToString(IndexedCorpus corpus);

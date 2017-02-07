@@ -134,11 +134,6 @@ public enum TermProperty implements Property<Term> {
 	}
 
 
-	public String toString() {
-		return delegate.toString();
-	}
-
-
 	public static TermProperty forName(String name) {
 		TermProperty termProperty = byNames.get(name);
 		if(termProperty != null)

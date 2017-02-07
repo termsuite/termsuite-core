@@ -1,11 +1,10 @@
-package fr.univnantes.termsuite.export.json;
+package fr.univnantes.termsuite.io.json;
 
 import java.io.IOException;
 import java.io.Writer;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.framework.Export;
-import fr.univnantes.termsuite.index.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 
 public class JsonExporter {

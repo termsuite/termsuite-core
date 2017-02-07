@@ -51,10 +51,10 @@ import com.google.common.collect.HashBiMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import fr.univnantes.termsuite.export.json.JsonOptions;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.index.JsonTerminologyIO;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.io.json.JsonOptions;
+import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.IndexedCorpus;

@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export.tbx;
+package fr.univnantes.termsuite.io.tbx;
 
 import static java.util.stream.Collectors.toSet;
 

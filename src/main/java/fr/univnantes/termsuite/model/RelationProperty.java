@@ -94,11 +94,6 @@ public enum RelationProperty implements Property<Relation> {
 		return delegate.compare(this, o1, o2);
 	}
 
-
-	public String toString() {
-		return delegate.toString();
-	}
-
 	public static RelationProperty fromJsonString(String field) {
 		return PropertyHolderBase.fromJsonString(RelationProperty.class, field);
 	}

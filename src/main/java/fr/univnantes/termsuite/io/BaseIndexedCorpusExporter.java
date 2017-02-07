@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export;
+package fr.univnantes.termsuite.io;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,11 +24,11 @@ import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 
-public class BaseExporter implements TerminologyExporter {
+public class BaseIndexedCorpusExporter implements IndexedCorpusExporter {
 
 	private Object exporter;
 	
-	public BaseExporter(Object exporter) {
+	public BaseIndexedCorpusExporter(Object exporter) {
 		super();
 		this.exporter = exporter;
 	}

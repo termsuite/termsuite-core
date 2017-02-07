@@ -16,9 +16,9 @@ import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.eval.model.LangPair;
-import fr.univnantes.termsuite.export.json.JsonOptions;
 import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 

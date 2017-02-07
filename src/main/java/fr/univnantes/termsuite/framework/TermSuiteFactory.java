@@ -9,19 +9,6 @@ import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.export.BaseExporter;
-import fr.univnantes.termsuite.export.TerminologyExporter;
-import fr.univnantes.termsuite.export.json.JsonExporter;
-import fr.univnantes.termsuite.export.json.JsonOptions;
-import fr.univnantes.termsuite.export.other.CompoundExporter;
-import fr.univnantes.termsuite.export.other.TermDistributionExporter;
-import fr.univnantes.termsuite.export.other.VariantDistributionExporter;
-import fr.univnantes.termsuite.export.other.VariantEvalExporter;
-import fr.univnantes.termsuite.export.other.VariantEvalExporterOptions;
-import fr.univnantes.termsuite.export.other.VariationExporter;
-import fr.univnantes.termsuite.export.other.VariationRuleExamplesExporter;
-import fr.univnantes.termsuite.export.tsv.TsvExporter;
-import fr.univnantes.termsuite.export.tsv.TsvOptions;
 import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.AggregateEngineRunner;
@@ -29,6 +16,21 @@ import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.SimpleEngineRunner;
 import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.io.BaseIndexedCorpusExporter;
+import fr.univnantes.termsuite.io.IndexedCorpusExporter;
+import fr.univnantes.termsuite.io.IndexedCorpusImporter;
+import fr.univnantes.termsuite.io.json.JsonExporter;
+import fr.univnantes.termsuite.io.json.JsonImporter;
+import fr.univnantes.termsuite.io.json.JsonOptions;
+import fr.univnantes.termsuite.io.other.CompoundExporter;
+import fr.univnantes.termsuite.io.other.TermDistributionExporter;
+import fr.univnantes.termsuite.io.other.VariantDistributionExporter;
+import fr.univnantes.termsuite.io.other.VariantEvalExporter;
+import fr.univnantes.termsuite.io.other.VariantEvalExporterOptions;
+import fr.univnantes.termsuite.io.other.VariationExporter;
+import fr.univnantes.termsuite.io.other.VariationRuleExamplesExporter;
+import fr.univnantes.termsuite.io.tsv.TsvExporter;
+import fr.univnantes.termsuite.io.tsv.TsvOptions;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
@@ -43,7 +45,6 @@ import fr.univnantes.termsuite.model.occurrences.XodusOccurrenceStore;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class TermSuiteFactory {
-
 	public static Terminology createTerminology(Lang lang, String name) {
 		return new Terminology(name, lang);
 	}
@@ -116,46 +117,51 @@ public class TermSuiteFactory {
 		return relation;
 	}
 
-	public static TerminologyExporter createTsvExporter() {
+	public static IndexedCorpusExporter createTsvExporter() {
 		return createTsvExporter(new TsvOptions());
 	}
 
-	public static TerminologyExporter createTsvExporter(TsvOptions options) {
-		return new BaseExporter(new TsvExporter(options));
+	public static IndexedCorpusExporter createTsvExporter(TsvOptions options) {
+		return new BaseIndexedCorpusExporter(new TsvExporter(options));
 	}
 	
-	public static TerminologyExporter createJsonExporter(JsonOptions options) {
-		return new BaseExporter(new JsonExporter(options));
+	public static IndexedCorpusExporter createJsonExporter(JsonOptions options) {
+		return new BaseIndexedCorpusExporter(new JsonExporter(options));
 	}
 	
-	public static TerminologyExporter createJsonExporter() {
-		return new BaseExporter(new JsonExporter(new JsonOptions()));
+	public static IndexedCorpusExporter createJsonExporter() {
+		return new BaseIndexedCorpusExporter(new JsonExporter(new JsonOptions()));
 	}
 
-	public static TerminologyExporter createCompoundExporter() {
-		return new BaseExporter(new CompoundExporter());
+	public static IndexedCorpusExporter createCompoundExporter() {
+		return new BaseIndexedCorpusExporter(new CompoundExporter());
 	}
 
-	public static TerminologyExporter createVariantEvalExporter(VariantEvalExporterOptions options) {
-		return new BaseExporter(new VariantEvalExporter(options));
+	public static IndexedCorpusExporter createVariantEvalExporter(VariantEvalExporterOptions options) {
+		return new BaseIndexedCorpusExporter(new VariantEvalExporter(options));
 	}
 
-	public static TerminologyExporter createTermDistributionExporter(List<TermProperty> termProperties, Predicate<Term> selector) {
-		return new BaseExporter(new TermDistributionExporter(termProperties, selector));
+	public static IndexedCorpusExporter createTermDistributionExporter(List<TermProperty> termProperties, Predicate<Term> selector) {
+		return new BaseIndexedCorpusExporter(new TermDistributionExporter(termProperties, selector));
 	}
 
-	public static TerminologyExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<RelationService> selector) {
-		return new BaseExporter(new VariantDistributionExporter(relationProperties, selector));
+	public static IndexedCorpusExporter createVariantDistributionExporter(List<RelationProperty> relationProperties, Predicate<RelationService> selector) {
+		return new BaseIndexedCorpusExporter(new VariantDistributionExporter(relationProperties, selector));
 	}
 
-	public static TerminologyExporter createVariationExporter(VariationType... variationTypes) {
-		return new BaseExporter(new VariationExporter(Lists.newArrayList(variationTypes)));
+	public static IndexedCorpusExporter createVariationExporter(VariationType... variationTypes) {
+		return new BaseIndexedCorpusExporter(new VariationExporter(Lists.newArrayList(variationTypes)));
 	}
 
-	public static TerminologyExporter createVariationRuleExamplesExporter() {
-		return new BaseExporter(new VariationRuleExamplesExporter());
+	public static IndexedCorpusExporter createVariationRuleExamplesExporter() {
+		return new BaseIndexedCorpusExporter(new VariationRuleExamplesExporter());
 	}
 
-	
+	public static IndexedCorpusImporter createJsonImporter(JsonOptions jsonOptions) {
+		return new JsonImporter(jsonOptions);
+	}
 
+	public static IndexedCorpusImporter createJsonImporter() {
+		return createJsonImporter(new JsonOptions());
+	}
 }

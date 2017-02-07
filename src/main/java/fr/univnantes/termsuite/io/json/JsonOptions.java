@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export.json;
+package fr.univnantes.termsuite.io.json;
 
 import java.util.Optional;
 

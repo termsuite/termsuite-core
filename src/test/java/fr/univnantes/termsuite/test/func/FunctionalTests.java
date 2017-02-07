@@ -48,6 +48,7 @@ import fr.univnantes.termsuite.test.func.extractor.EnglishWindEnergySpec;
 import fr.univnantes.termsuite.test.func.extractor.FrenchWindEnergySpec;
 import fr.univnantes.termsuite.test.func.extractor.GermanWindEnergySpec;
 import fr.univnantes.termsuite.test.func.extractor.SemanticGathererSpec;
+import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TermSuitePreprocessorSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoCleanerSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoExtractorSpec;
@@ -59,6 +60,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,
 	GermanWindEnergySpec.class,
+	JsonIOReturnSpec.class,
 	TermSuitePreprocessorSpec.class,
 	TerminoCleanerSpec.class,
 	TermSuiteTerminoCLISpec.class,
@@ -67,6 +69,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	BilingualAlignerDeEnSpec.class,
 	SemanticGathererSpec.class,
 	TerminoExtractorSpec.class
+	
 	})
 public class FunctionalTests {
 	

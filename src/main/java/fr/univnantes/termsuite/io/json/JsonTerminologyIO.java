@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.index;
+package fr.univnantes.termsuite.io.json;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -47,8 +47,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import fr.univnantes.termsuite.engines.gatherer.PropertyValue;
-import fr.univnantes.termsuite.export.json.JsonOptions;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Component;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.ContextVector;
@@ -154,7 +154,7 @@ public class JsonTerminologyIO {
 	 * @throws JsonParseException
 	 * @throws IOException
 	 */
-	public static IndexedCorpus load(Reader reader, JsonOptions options) throws JsonParseException, IOException {
+	public static IndexedCorpus load(Reader reader, JsonOptions options) throws IOException {
 		Terminology termino = null;
 		OccurrenceStore occurrenceStore = null;
 		IndexedCorpus indexedCorpus = null;
@@ -632,6 +632,8 @@ public class JsonTerminologyIO {
 					jg.writeNumber(c.getBegin());
 					jg.writeFieldName(END);
 					jg.writeNumber(c.getEnd());
+					jg.writeFieldName(SUBSTRING);
+					jg.writeString(c.getSubstring());
 					jg.writeFieldName(COMPOUND_NEOCLASSICAL_AFFIX);
 					jg.writeBoolean(c.isNeoclassicalAffix());
 					jg.writeEndObject();

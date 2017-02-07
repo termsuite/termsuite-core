@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.export.tsv;
+package fr.univnantes.termsuite.io.tsv;
 
 import java.io.IOException;
 import java.io.Writer;
