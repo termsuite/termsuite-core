@@ -118,8 +118,10 @@ public abstract class WindEnergySpec {
 	}
 	
 	protected static IndexedCorpus runPipeline(Lang lang) throws IOException {
-		ClearTempFiles.main(new String[0]);
+//		ClearTempFiles.main(new String[0]);
+		
 		IndexedCorpus corpus = TermSuite.preprocessor()
+			.setPreprocessedCorpusCache(FunctionalTests.getCachedWindEnergyPreprocessedCorpusFile(lang))
 			.setTaggerPath(FunctionalTests.getTaggerPath())
 			.toIndexedCorpus(FunctionalTests.getCorpusWE(lang), 5000000);
 		

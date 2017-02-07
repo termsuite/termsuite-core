@@ -80,8 +80,8 @@ public class JsonIOReturnSpec {
 		
 		String json = exporter.exportToString(corpus);
 
-		IndexedCorpusImporter importer = TermSuiteFactory.createJsonImporter();
-		IndexedCorpus corpus2 = importer.importFromString(json);
+		IndexedCorpusImporter importer = TermSuiteFactory.createJsonLoader();
+		IndexedCorpus corpus2 = importer.loadFromString(json);
 	
 		Terminology termino2 = corpus2.getTerminology();
 		Terminology termino = corpus.getTerminology();

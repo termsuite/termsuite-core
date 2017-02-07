@@ -20,7 +20,7 @@ import fr.univnantes.termsuite.io.BaseIndexedCorpusExporter;
 import fr.univnantes.termsuite.io.IndexedCorpusExporter;
 import fr.univnantes.termsuite.io.IndexedCorpusImporter;
 import fr.univnantes.termsuite.io.json.JsonExporter;
-import fr.univnantes.termsuite.io.json.JsonImporter;
+import fr.univnantes.termsuite.io.json.JsonLoader;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.io.other.CompoundExporter;
 import fr.univnantes.termsuite.io.other.TermDistributionExporter;
@@ -157,11 +157,11 @@ public class TermSuiteFactory {
 		return new BaseIndexedCorpusExporter(new VariationRuleExamplesExporter());
 	}
 
-	public static IndexedCorpusImporter createJsonImporter(JsonOptions jsonOptions) {
-		return new JsonImporter(jsonOptions);
+	public static IndexedCorpusImporter createJsonLoader(JsonOptions jsonOptions) {
+		return new JsonLoader(jsonOptions);
 	}
 
-	public static IndexedCorpusImporter createJsonImporter() {
-		return createJsonImporter(new JsonOptions());
+	public static IndexedCorpusImporter createJsonLoader() {
+		return createJsonLoader(new JsonOptions());
 	}
 }

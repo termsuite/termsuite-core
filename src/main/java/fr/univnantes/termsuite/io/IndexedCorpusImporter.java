@@ -8,7 +8,7 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 
 public interface IndexedCorpusImporter {
 
-	public IndexedCorpus importt(Reader reader) throws IOException;
-	public IndexedCorpus importFromString(String string) throws IOException;
-	public IndexedCorpus importt(Path path) throws IOException;
+	public IndexedCorpus load(Reader reader) throws IOException;
+	public IndexedCorpus loadFromString(String string) throws IOException;
+	public IndexedCorpus load(Path path) throws IOException;
 }
