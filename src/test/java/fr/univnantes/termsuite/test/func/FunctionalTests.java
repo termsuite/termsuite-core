@@ -161,4 +161,8 @@ public class FunctionalTests {
 			path.toFile().mkdirs();
 		return path;
 	}
+
+	public static Path getCachedWindEnergyPreprocessedCorpusFile(Lang lang) {
+		return getTestTmpDir().resolve("we-" + lang.getCode() + ".json");
+	}
 }

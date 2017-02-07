@@ -1,5 +1,6 @@
 package fr.univnantes.termsuite.api;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,8 @@ import javax.inject.Inject;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -26,6 +29,8 @@ import fr.univnantes.termsuite.uima.PreparationPipelineOptions;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class Preprocessor {
+	
+	private static final Logger logger = LoggerFactory.getLogger(Preprocessor.class);
 	
 	@Inject
 	PreprocessorService preprocessorService;
@@ -85,12 +90,38 @@ public class Preprocessor {
 
 	public IndexedCorpus consumeToIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
 		String name = preprocessorService.generateTerminologyName(textCorpus);
+		
+		if(preprocessedCorpusCachePath.isPresent()) {
+			if(preprocessedCorpusCachePath.get().toFile().exists()) {
+				logger.info("Cached preprocessed terminology found at path {}", preprocessedCorpusCachePath.get());
+				try {
+					return TermSuiteFactory.createJsonLoader().load(preprocessedCorpusCachePath.get());
+				} catch (IOException e) {
+					logger.error("Could not load cached preprocessed terminology due to unexpected error", e);
+					logger.info("Ignoring cache");
+				}
+				
+			} else
+				logger.info("No cached terminology found");
+		}
+		
 		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
 		OccurrenceStore store = occurrenceStore;
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(termino, store);
 		Injector injector = Guice.createInjector(new ImportModule(indexedCorpus, maxSize));
 		TermOccAnnotationImporter importer = injector.getInstance(TermOccAnnotationImporter.class);
+
+		logger.info("Starting preprocessing pipeline");
 		asStream(textCorpus).forEach(importer::importCas);
+		
+		if(preprocessedCorpusCachePath.isPresent()) {
+			logger.info("Saving preprocessed terminology to cache path {}", preprocessedCorpusCachePath.get());
+			try {
+				TermSuiteFactory.createJsonExporter().export(indexedCorpus, preprocessedCorpusCachePath.get());
+			} catch (IOException e) {
+				logger.error("Could not save preprocessed terminology to cache due to unexpected error", e);
+			}
+		}
 		return indexedCorpus;
 	}
 	
@@ -122,5 +153,12 @@ public class Preprocessor {
 		if(parallel)
 			stream.parallel();
 		return stream;
+	}
+	
+	private Optional<Path> preprocessedCorpusCachePath = Optional.empty();
+
+	public Preprocessor setPreprocessedCorpusCache(Path cachedPath) {
+		preprocessedCorpusCachePath = Optional.of(cachedPath);
+		return this;
 	}
 }
