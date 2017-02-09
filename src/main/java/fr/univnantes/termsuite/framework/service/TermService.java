@@ -302,13 +302,9 @@ public class TermService {
 		return terminology.outboundRelations(term);
 	}
 
-
-	
 	public boolean isContextSet() {
 		return this.term.getContext()!= null;
 	}
-	
-	
 	
 	public void updateTfIdf() {
 		term.setProperty(
@@ -334,8 +330,11 @@ public class TermService {
 		return terminology.variationsFrom(term);
 	}
 
+	public Stream<RelationService> variationBases() {
+		return terminology.variationsTo(term);
+	}
+
 	public Stream<RelationService> variations(VariationType variationType) {
 		return variations().filter(rel -> rel.getBooleanIfSet(variationType.getRelationProperty()));
 	}
-
 }

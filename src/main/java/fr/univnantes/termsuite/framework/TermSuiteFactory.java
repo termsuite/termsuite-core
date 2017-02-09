@@ -92,6 +92,11 @@ public class TermSuiteFactory {
 	}
 
 	public static Pipeline createPipeline(Class<? extends Engine> engineClass, IndexedCorpus terminology,
+			Object... parameters) {
+		return createPipeline(engineClass, terminology, null, null, parameters);
+	}
+
+	public static Pipeline createPipeline(Class<? extends Engine> engineClass, IndexedCorpus terminology,
 			ResourceConfig resourceConfig, TermHistory history, Object... parameters) {
 		EngineDescription description = new EngineDescription(engineClass.getSimpleName(), engineClass, parameters);
 		Injector injector = createExtractorInjector(terminology, resourceConfig, history);

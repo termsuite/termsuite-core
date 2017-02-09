@@ -64,12 +64,19 @@ public class DocumentLogger extends JCasAnnotator_ImplBase {
 		if(totalDoc == 0)
 			return;
 		
-		String msg = String.format("Processing document %d on %d [%.2f%%]. Uri: %s", 
+		String msg;
+		if(corpusSize > 0 && nbDocuments > 0)
+			msg = String.format("Processing document %d on %d [%.2f%%]. Uri: %s", 
 				docCnt,
 				totalDoc,
 				100 * ((double)docCnt/totalDoc),
 				sdi.getUri()
 				);
+		else
+			msg = String.format("Processing document %d. Uri: %s", 
+					docCnt,
+					sdi.getUri()
+					);
 		if(top - lastTop > TIME_SEP ) {
 			lastTop = top;
 			LOGGER.info(msg);

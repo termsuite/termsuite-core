@@ -2,7 +2,7 @@ package fr.univnantes.termsuite.engines.prepare;
 
 import fr.univnantes.termsuite.framework.AggregateEngine;
 
-public class Preparator extends AggregateEngine {
+public class TerminologyPreparator extends AggregateEngine {
 
 	@Override
 	public void configure() {

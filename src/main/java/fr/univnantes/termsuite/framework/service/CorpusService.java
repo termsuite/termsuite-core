@@ -12,11 +12,11 @@ import java.util.stream.Stream;
 
 import com.google.common.base.Preconditions;
 
-import fr.univnantes.termsuite.api.Corpus;
-import fr.univnantes.termsuite.api.CorpusMetadata;
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.api.TextCorpus;
+import fr.univnantes.termsuite.model.Corpus;
+import fr.univnantes.termsuite.model.CorpusMetadata;
 import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.uima.readers.StringPreparator;
 import fr.univnantes.termsuite.utils.FileUtils;
 

@@ -166,7 +166,8 @@ public class TerminologyServiceSpec {
 		assertThat(inRels(this.term4)).hasSize(1);
 		assertThat(outRels(this.term5))
 			.extracting(TermSuiteExtractors.RELATION_RULESTR)
-			.containsExactly("Tata","Tata,Titi", "Tata");
+			.hasSize(3)
+			.contains("Tata","Tata,Titi", "Tata");
 	}
 		
 

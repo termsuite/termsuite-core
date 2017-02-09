@@ -37,11 +37,12 @@ import org.junit.runners.Suite;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.api.TextCorpus;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerDeEnSpec;
 import fr.univnantes.termsuite.test.func.align.BilingualAlignerFrEnSpec;
 import fr.univnantes.termsuite.test.func.extractor.EnglishWindEnergySpec;
@@ -49,6 +50,7 @@ import fr.univnantes.termsuite.test.func.extractor.FrenchWindEnergySpec;
 import fr.univnantes.termsuite.test.func.extractor.GermanWindEnergySpec;
 import fr.univnantes.termsuite.test.func.extractor.SemanticGathererSpec;
 import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
+import fr.univnantes.termsuite.test.func.projection.FrenchWindEnergyProjectorSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TermSuitePreprocessorSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoCleanerSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoExtractorSpec;
@@ -68,6 +70,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	BilingualAlignerFrEnSpec.class,
 	BilingualAlignerDeEnSpec.class,
 	SemanticGathererSpec.class,
+	FrenchWindEnergyProjectorSpec.class,
 	TerminoExtractorSpec.class
 	
 	})
@@ -90,6 +93,7 @@ public class FunctionalTests {
 			
 	public static final String CORPUS_WESHORT_PATH="fr/univnantes/termsuite/test/corpus/weshort/";
 	public static final String CORPUS_WE_PATH="fr/univnantes/termsuite/test/corpus/we/";
+	public static final String CORPUS_MOBILE_PATH="fr/univnantes/termsuite/test/corpus/mobile/";
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
 	public static final TextCorpus CORPUS1 = new TextCorpus(Lang.FR, CORPUS1_PATH);
@@ -115,6 +119,10 @@ public class FunctionalTests {
 		return "src/test/resources/" + CORPUS_WESHORT_PATH + lang.getName().toLowerCase() + "/txt/";
 	}
 
+	public static Path getCorpusMobilePath(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_MOBILE_PATH, lang.getName().toLowerCase(), "txt");
+	}
+	
 	public static Path getCorpusWEPath(Lang lang) {
 		return Paths.get("src","test","resources", CORPUS_WE_PATH, lang.getName().toLowerCase(), "txt");
 	}
@@ -164,5 +172,12 @@ public class FunctionalTests {
 
 	public static Path getCachedWindEnergyPreprocessedCorpusFile(Lang lang) {
 		return getTestTmpDir().resolve("we-" + lang.getCode() + ".json");
+	}
+
+	public static Document getMobileTechnologyDocument(Lang lang, String filename) {
+		return new Document(lang, getCorpusMobilePath(lang).resolve(filename).toUri().getPath());
+	}
+	public static Document getWindEnergyDocument(Lang lang, String filename) {
+		return new Document(lang, getCorpusWEPath(lang).resolve(filename).toUri().getPath());
 	}
 }

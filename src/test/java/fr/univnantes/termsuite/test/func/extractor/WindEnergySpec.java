@@ -56,7 +56,6 @@ import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.test.unit.UnitTests;
 import fr.univnantes.termsuite.test.util.TermSuiteExtractors;
-import fr.univnantes.termsuite.tools.ClearTempFiles;
 import fr.univnantes.termsuite.tools.ControlFiles;
 import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 import fr.univnantes.termsuite.uima.ResourceType;

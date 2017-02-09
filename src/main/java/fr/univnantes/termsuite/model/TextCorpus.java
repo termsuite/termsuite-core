@@ -1,8 +1,6 @@
-package fr.univnantes.termsuite.api;
+package fr.univnantes.termsuite.model;
 
 import java.nio.file.Path;
-
-import fr.univnantes.termsuite.model.Lang;
 
 public class TextCorpus extends Corpus {
 	

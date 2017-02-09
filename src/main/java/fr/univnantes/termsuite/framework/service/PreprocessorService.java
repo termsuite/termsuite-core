@@ -1,59 +1,58 @@
 package fr.univnantes.termsuite.framework.service;
 
-import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Optional;
 import java.util.stream.Stream;
 
-import javax.inject.Inject;
-
 import org.apache.uima.UIMAException;
-import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.ResourceManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
-import fr.univnantes.termsuite.api.CorpusMetadata;
+import com.google.common.base.Preconditions;
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.Injector;
+
 import fr.univnantes.termsuite.api.PreprocessedCorpus;
-import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.api.TermSuiteException;
-import fr.univnantes.termsuite.api.TextCorpus;
-import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
+import fr.univnantes.termsuite.engines.prepare.TerminologyPreparator;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.modules.ImportModule;
+import fr.univnantes.termsuite.model.CorpusMetadata;
 import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.TextCorpus;
+import fr.univnantes.termsuite.projection.DocumentProjection;
+import fr.univnantes.termsuite.projection.DocumentProjectionService;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
-import fr.univnantes.termsuite.uima.PipelineListener;
-import fr.univnantes.termsuite.uima.PreparationPipelineException;
-import fr.univnantes.termsuite.uima.PreparationPipelineOptions;
 import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
 import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.TermHistory;
 
 public class PreprocessorService {
-	private static final Logger LOGGER = LoggerFactory.getLogger(PreprocessorService.class);
-	
-	@Inject
-	CorpusService corpusService;
 
-	public Stream<JCas> prepare(TextCorpus textCorpus, 
-			Path taggerPath, PreparationPipelineOptions options, 
-			Optional<ResourceConfig> resourceConfig, 
-			Optional<TermHistory> termHistory, 
-			Optional<PipelineListener> listener, AnalysisEngineDescription... customAEs) {
+	@Inject
+	private CorpusService corpusService;
+	 
+	@Inject
+	private AnalysisEngine engine;
+
+	@Inject
+	private Lang uimaPipelineLang;
+	
+	public Stream<JCas> prepare(TextCorpus textCorpus) {
+		checkLang(textCorpus);
+		Stream<Document> documents = corpusService.documents(textCorpus);
 		
 		CorpusMetadata corpusMetadata;
 		try {
@@ -61,45 +60,36 @@ public class PreprocessorService {
 		} catch (IOException e1) {
 			throw new TermSuiteException(e1);
 		}
-		
-		PreprocessingPipelineBuilder builder = PreprocessingPipelineBuilder
-				.create(textCorpus.getLang(), taggerPath)
-				.setNbDocuments(corpusMetadata.getNbDocuments())
-				.setCorpusSize(corpusMetadata.getTotalSize());
+		return prepare(documents, corpusMetadata);
+	}
+
+	public void checkLang(TextCorpus textCorpus) {
+		Preconditions.checkArgument(this.uimaPipelineLang == textCorpus.getLang(), 
+				"Preprocessor lang is %s while corpus lang is %s", 
+				this.uimaPipelineLang, 
+				textCorpus.getLang());
+	}
 	
-		if(listener.isPresent())
-			builder.addPipelineListener(listener.get());
-		
-		for(AnalysisEngineDescription customAE:customAEs) 
-			builder.addCustomAE(customAE);
-		
-		if(resourceConfig.isPresent()) {
-			builder.setResourceConfig(resourceConfig.get());
+	public JCas prepare(Document document) {
+		try {
+			JCas cas = createCas(document);
+			engine.process(cas);
+			return cas;
+		} catch (UIMAException | IOException e) {
+			throw new TermSuiteException(e);
 		}
+	}
 
-		if(termHistory.isPresent())
-				builder.setHistory(termHistory.get());
-		
-		ThreadLocal<AnalysisEngine> analysisEngine = ThreadLocal.withInitial(()-> {
-			try {
-				LOGGER.info("Initializing analysis engine for thread {}", Thread.currentThread().getName());
-				ResourceManager resMgr = UIMAFramework.newDefaultResourceManager();
-		    	AnalysisEngineDescription aaeDesc;
-				aaeDesc = createEngineDescription(builder.create());
-				// Instantiate AAE
-				final AnalysisEngine aae = UIMAFramework.produceAnalysisEngine(aaeDesc, resMgr, null);
-				return aae;
-			} catch (ResourceInitializationException e) {
-				throw new PreparationPipelineException(e);
-			}
-		});
+	public Stream<JCas> prepare(Stream<Document> documents) {
+		return documents.map(this::prepare);
+	}
 
-		return corpusService
-				.documents(textCorpus)
+	public Stream<JCas> prepare(Stream<Document> documents, CorpusMetadata corpusMetadata) {
+		return documents
 				.map(document -> {
 					try {
 						JCas cas = createCas(document, corpusMetadata);
-						analysisEngine.get().process(cas);
+						engine.process(cas);
 						return cas;
 					} catch (UIMAException | IOException e) {
 						throw new TermSuiteException(e);
@@ -107,23 +97,34 @@ public class PreprocessorService {
 				});
 	}
 
+	public JCas createCas(Document document) throws UIMAException, IOException {
+		return createCas(document, new CorpusMetadata(Charset.defaultCharset()));
+	}
+	
 	public JCas createCas(Document document, CorpusMetadata corpusMetadata) throws UIMAException, IOException {
-		String documentText = corpusService.readDocumentText(document, corpusMetadata.getEncoding());
-		JCas cas = JCasFactory.createJCas();
-		cas.setDocumentLanguage(document.getLang().getCode());
-		cas.setDocumentText(documentText);
-		SourceDocumentInformation sdi = JCasUtils.initJCasSDI(
-				cas, 
-				document.getLang().getCode(), 
-				documentText, 
+		JCas cas = createCas(
+				corpusService.readDocumentText(document, corpusMetadata.getEncoding()), 
+				document.getLang(), 
 				document.getUrl());
+		SourceDocumentInformation sdi = JCasUtils.getSourceDocumentAnnotation(cas).get();
 		sdi.setCorpusSize(corpusMetadata.getTotalSize());
 		sdi.setNbDocuments(corpusMetadata.getNbDocuments());
 		return cas;
 	}
 
+	public JCas createCas(String documentText, Lang lang, String url) throws UIMAException {
+		JCas cas = JCasFactory.createJCas();
+		cas.setDocumentLanguage(lang.getCode());
+		cas.setDocumentText(documentText);
+		JCasUtils.initJCasSDI(
+				cas, 
+				lang.getCode(), 
+				documentText, 
+				url);
+		return cas;
+	}
 
-	public void toXMIPath(Path filePath, JCas cas) {
+	private void toXMIPath(Path filePath, JCas cas) {
 		try {
 			XmiCasSerializer.serialize(cas.getCas(), new FileOutputStream(makeParentDirs(filePath).toFile()));
 		} catch (FileNotFoundException | SAXException e) {
@@ -131,8 +132,7 @@ public class PreprocessorService {
 		}
 	}
 
-
-	public void toJsonPath(Path filePath, JCas cas) {
+	private void toJsonPath(Path filePath, JCas cas) {
 		try {
 			TermSuiteJsonCasSerializer.serialize(new FileWriter(makeParentDirs(filePath).toFile()), cas);
 		} catch (IOException e) {
@@ -145,13 +145,11 @@ public class PreprocessorService {
 		return path;
 	}
 
-
 	public void consumeToTargetJsonCorpus(JCas cas, TextCorpus textCorpus, PreprocessedCorpus targetCorpus) {
 		String sourceDocumentUri = JCasUtils.getSourceDocumentAnnotation(cas).get().getUri();
 		Path targetDocumentPath = corpusService.getTargetDocumentPath(targetCorpus, textCorpus, Paths.get(sourceDocumentUri));
 		toJsonPath(targetDocumentPath, cas);
 	}
-
 
 	public void consumeToTargetXMICorpus(JCas cas, TextCorpus textCorpus, PreprocessedCorpus targetCorpus) {
 		String sourceDocumentUri = JCasUtils.getSourceDocumentAnnotation(cas).get().getUri();
@@ -164,5 +162,27 @@ public class PreprocessorService {
 				textCorpus.getRootDirectory().getFileName(),
 				textCorpus.getLang(),
 				DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss").format(LocalDateTime.now()));
+	}
+	
+	public DocumentProjectionService toProjectionService(Document document) {
+		String name = "document-" + document.getUrl();
+		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(uimaPipelineLang, name);
+		Injector injector = Guice.createInjector(new ImportModule(indexedCorpus, Integer.MAX_VALUE));
+		TermOccAnnotationImporter importer = injector.getInstance(TermOccAnnotationImporter.class);
+		
+		/*
+		 * Prepare document
+		 */
+		JCas prepare = prepare(document);
+		importer.importCas(prepare);
+		DocumentProjection projection = new DocumentProjection(indexedCorpus.getTerminology().getTerms().values());
+		DocumentProjectionService documentProjectionService = new DocumentProjectionService(projection);
+		
+		/*
+		 * Compute basic term properties
+		 */
+		TermSuiteFactory.createPipeline(TerminologyPreparator.class, indexedCorpus).run();
+
+		return documentProjectionService;
 	}
 }

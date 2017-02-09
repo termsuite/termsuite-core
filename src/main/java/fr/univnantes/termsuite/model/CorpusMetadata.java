@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.api;
+package fr.univnantes.termsuite.model;
 
 import java.nio.charset.Charset;
 
@@ -7,6 +7,10 @@ public class CorpusMetadata {
 	private int nbDocuments;
 	private long totalSize;
 	private Charset encoding;
+	
+	public CorpusMetadata(Charset encoding) {
+		this(encoding, -1, -1);
+	}
 	
 	public CorpusMetadata(Charset encoding, int nbDocuments, long totalSize) {
 		super();

@@ -1,11 +1,9 @@
-package fr.univnantes.termsuite.api;
+package fr.univnantes.termsuite.model;
 
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 
 import com.google.common.base.Charsets;
-
-import fr.univnantes.termsuite.model.Lang;
 
 public abstract class Corpus {
 

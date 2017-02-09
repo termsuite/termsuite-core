@@ -34,6 +34,7 @@ import static org.junit.Assert.fail;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -364,30 +365,40 @@ public class JsonTerminologyIOSpec {
 		assertThat((List<?>)t2.get("words")).extracting("lemma", "syn").containsOnly(tuple("word1", "L1"), tuple("word2", "L2"), tuple("word3", "L3"));
 
 		
-		// test syntactic variants
+		/*
+		 *  Test relations
+		 */
 		List<?> variantList = (List<?>)map.get("relations");
 		assertThat(variantList)
+			.hasSize(2)
 			.extracting("from", "to", "type")
 			.contains(
-				tuple(term1.getGroupingKey(), term2.getGroupingKey(), "var"),
 				tuple(term1.getGroupingKey(), term2.getGroupingKey(), "var")
 			);
 		
-		Map<String,Object> relation = (Map<String,Object>)((Map<?,?>)variantList.get(0)).get("props");
+		variantList.sort(new Comparator<Object>() {
+			@Override
+			public int compare(Object o1, Object o2) {
+				Map<String,Object> props1 = (Map<String, Object>) ((Map<String,Object>)o1).get("props");
+				Map<String,Object> props2 = (Map<String, Object>) ((Map<String,Object>)o2).get("props");
+				return Integer.compare(props1.hashCode(), props2.hashCode());
+			}
+		});
+		Map<?,?> firstVariant = (Map<?,?>)variantList.get(0);
+		Map<?,?> secondVariant = (Map<?,?>)variantList.get(1);
+		
+		Map<String,Object> relation = (Map<String,Object>)firstVariant.get("props");
 		assertThat(relation)
 			.containsEntry("vrules", Lists.newArrayList("variationRule1"))
 			.containsEntry("isSyntag", true)
 			.doesNotContainKey("graphSim");
-
-		assertThat((Map<String,Object>)((Map<?,?>)variantList.get(1)).get("props"))
+		
+		assertThat((Map<String,Object>)secondVariant.get("props"))
 			.containsEntry("graphSim", 0.956)
 			.containsEntry("isGraph", true)
 			.doesNotContainKey("vrules");
 		
-		
-		
 		List<?> occurrences = (List<?>)map.get("occurrences");
-
 		
 		assertThat(occurrences).hasSize(5).extracting("tid", "begin", "end", "file", "text")
 			.containsOnly(
@@ -396,6 +407,6 @@ public class JsonTerminologyIOSpec {
 				tuple("l1l2l3: word1 word2 word3",14, 20, Integer.parseInt(sources.inverse().get("source2")), "coveredText 2"),
 				tuple("l1l2: word1 word2",10, 12, Integer.parseInt(sources.inverse().get("source2")), "coveredText 3"),
 				tuple("l1l2: word1 word2",20, 30, Integer.parseInt(sources.inverse().get("source3")), "coveredText 4")
-				);
+			);
 	}
 }

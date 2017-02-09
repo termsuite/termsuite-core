@@ -8,7 +8,7 @@ import fr.univnantes.termsuite.engines.contextualizer.Contextualizer;
 import fr.univnantes.termsuite.engines.gatherer.TermGatherer;
 import fr.univnantes.termsuite.engines.postproc.TermPostProcessor;
 import fr.univnantes.termsuite.engines.postproc.TermRanker;
-import fr.univnantes.termsuite.engines.prepare.Preparator;
+import fr.univnantes.termsuite.engines.prepare.TerminologyPreparator;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalAnalyzer;
 import fr.univnantes.termsuite.framework.AggregateEngine;
 import fr.univnantes.termsuite.framework.InjectLogger;
@@ -27,7 +27,7 @@ public class TerminologyExtractorEngine extends AggregateEngine {
 				&& !config.getContextualizerOptions().isEnabled()) 
 			logger.warn("Distributional alignment disabled for semantic aligner, because contextualizer is disabled.");
 
-		pipe(Preparator.class);
+		pipe(TerminologyPreparator.class);
 		
 		if(config.getContextualizerOptions().isEnabled())
 			pipe(Contextualizer.class, config.getContextualizerOptions());

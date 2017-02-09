@@ -49,6 +49,7 @@ public enum TermProperty implements Property<Term> {
 	PILOT("pilot", "pilot", "pilot", String.class),
 	LEMMA("lemma", "lm", "lemma", String.class),
 	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class),
+	SPEC_IDF("spec-idf", "specidf", "specidf", Double.class),
 	GROUPING_KEY("groupingKey", "gkey", "key", String.class),
 	PATTERN("pattern", "p", "pattern", String.class),
 	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 

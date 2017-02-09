@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.api;
 
 import java.nio.file.Path;
 
+import fr.univnantes.termsuite.model.Corpus;
 import fr.univnantes.termsuite.model.Lang;
 
 public class PreprocessedCorpus extends Corpus {

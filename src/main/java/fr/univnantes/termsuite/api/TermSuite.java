@@ -3,17 +3,18 @@ package fr.univnantes.termsuite.api;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.TermSuiteModule;
 import fr.univnantes.termsuite.framework.service.LanguageService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 
 public class TermSuite {
-	
 
 	public static TerminoExtractor terminoExtractor() {
 		return new TerminoExtractor();
 	}
-
 
 	public static ExtractorOptions getDefaultExtractorConfig(Lang lang) {
 		return getLanguageService().getDefaultExtractorConfig(lang);
@@ -29,6 +30,10 @@ public class TermSuite {
 
 	private static Injector termSuiteInjector() {
 		return Guice.createInjector(new TermSuiteModule());
+	}
+
+	public static TerminologyService toService(IndexedCorpus corpus) {
+		return Guice.createInjector(new IndexedCorpusModule(corpus)).getInstance(TerminologyService.class);
 	}
 
 }

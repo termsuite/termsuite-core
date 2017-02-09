@@ -261,6 +261,12 @@ public class TerminologyService {
 		return outboundRelations(from)
 				.filter(r-> r.getRelation().getType() == RelationType.VARIATION);
 	}
+	
+	public Stream<RelationService> variationsTo(Term to) {
+		return outboundRelations(to)
+				.filter(r-> r.getRelation().getType() == RelationType.VARIATION);
+	}
+
 
 	public void removeAll(Predicate<Term> predicate) {
 		this.termino.getTerms().values().stream()
@@ -388,7 +394,38 @@ public class TerminologyService {
 		termMutex.release();
 	}
 
-	
+	public void removeTerms(Collection<Term> terms) {
+		termMutex.acquireUninterruptibly();
+		List<Relation> toRem = Lists.newLinkedList();
+		for(Term t:terms) {
+			this.termino.getTerms().remove(t.getGroupingKey());
+			// remove from variants
+			toRem.addAll(this.getOutboundRelations().get(t));
+			toRem.addAll(this.getInboundRelations().get(t));
+		}
+		removeRelations(toRem);
+		
+		/*
+		 * Removes from context vectors.
+		 * 
+		 * We assumes that if this term has a context vector 
+		 * then all others terms may have this term as co-term,
+		 * thus they must be checked from removal.
+		 * 
+		 */
+		for(Term t:terms) {
+			if(t.getContext() != null) {
+				for(Term o:this.termino.getTerms().values()) {
+					if(o.getContext() != null)
+						o.getContext().removeCoTerm(t);
+				}
+			}
+			indexService.removeTerm(t);
+			occurrenceStore.removeTerm(t);
+		}
+		termMutex.release();
+	}
+
 	public void incrementWordAnnotationNum(int nbWordAnnotations) {
 		this.termino.getNbWordAnnotations().addAndGet(nbWordAnnotations);
 	}
@@ -587,4 +624,14 @@ public class TerminologyService {
 			privateAddRelation(r);
 		relationMutex.release();
 	}
+
+	public TerminologyService cloneTerminology() {
+		Terminology clone = new Terminology(this.termino.getName(), this.termino.getLang());
+		clone.getTerms().putAll(this.termino.getTerms());
+		clone.setNbSpottedTerms(this.termino.getNbSpottedTerms());
+		clone.setNbWordAnnotations(this.termino.getNbWordAnnotations());
+		clone.getRelations().addAll(this.termino.getRelations());
+		return new TerminologyService(clone);
+	}
+
 }

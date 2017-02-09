@@ -33,9 +33,9 @@ public class IndexedCorpusModule extends AbstractModule {
 	private IndexedCorpus corpus;
 	private Optional<TermHistory> history = Optional.empty();
 	
-	public IndexedCorpusModule(IndexedCorpus terminology) {
-		Preconditions.checkNotNull(terminology, "Terminology cannot be null");
-		this.corpus = terminology;
+	public IndexedCorpusModule(IndexedCorpus indexedCorpus) {
+		Preconditions.checkNotNull(indexedCorpus, "Terminology cannot be null");
+		this.corpus = indexedCorpus;
 	}
 
 	public IndexedCorpusModule(IndexedCorpus terminology, 

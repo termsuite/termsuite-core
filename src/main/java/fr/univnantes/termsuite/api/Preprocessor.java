@@ -1,6 +1,9 @@
 package fr.univnantes.termsuite.api;
 
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,35 +12,43 @@ import java.util.stream.Stream;
 
 import javax.inject.Inject;
 
+import org.apache.uima.UIMAFramework;
+import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.resource.ResourceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.modules.ImportModule;
+import fr.univnantes.termsuite.framework.modules.PreprocessingModule;
+import fr.univnantes.termsuite.framework.modules.TermSuiteModule;
+import fr.univnantes.termsuite.framework.service.CorpusService;
 import fr.univnantes.termsuite.framework.service.PreprocessorService;
 import fr.univnantes.termsuite.framework.service.TermOccAnnotationImporter;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.CorpusMetadata;
+import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.uima.PipelineListener;
-import fr.univnantes.termsuite.uima.PreparationPipelineOptions;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class Preprocessor {
-	
 	private static final Logger logger = LoggerFactory.getLogger(Preprocessor.class);
 	
 	@Inject
-	PreprocessorService preprocessorService;
-
-	private boolean parallel;
+	private CorpusService corpusService;
+	
 	private Path taggerPath;
-	private PreparationPipelineOptions options = new PreparationPipelineOptions();
 	private Optional<ResourceConfig> resourceOptions = Optional.empty();
 	private Optional<TermHistory> history = Optional.empty();
 	private Optional<PipelineListener> listener = Optional.empty();
@@ -58,18 +69,8 @@ public class Preprocessor {
 		return this;
 	}
 	
-	public Preprocessor setOptions(PreparationPipelineOptions options) {
-		this.options = options;
-		return this;
-	}
-	
 	public Preprocessor setResourceOptions(ResourceConfig resourceOptions) {
 		this.resourceOptions = Optional.of(resourceOptions);
-		return this;
-	}
-	
-	public Preprocessor parallel() {
-		this.parallel = true;
 		return this;
 	}
 	
@@ -89,7 +90,7 @@ public class Preprocessor {
 	}
 
 	public IndexedCorpus consumeToIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
-		String name = preprocessorService.generateTerminologyName(textCorpus);
+		String name = asService(textCorpus.getLang()).generateTerminologyName(textCorpus);
 		
 		if(preprocessedCorpusCachePath.isPresent()) {
 			if(preprocessedCorpusCachePath.get().toFile().exists()) {
@@ -129,7 +130,7 @@ public class Preprocessor {
 		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), jsonDir, PreprocessedCorpus.JSON_PATTERN, PreprocessedCorpus.JSON_EXTENSION);
 		
 		asStream(textCorpus)
-			.forEach(cas -> preprocessorService.consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
+			.forEach(cas -> asService(textCorpus.getLang()).consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
 		return targetCorpus;
 	}
 
@@ -137,28 +138,75 @@ public class Preprocessor {
 		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), xmiDir, PreprocessedCorpus.XMI_PATTERN, PreprocessedCorpus.XMI_EXTENSION);
 		
 		asStream(textCorpus)
-			.forEach(cas -> preprocessorService.consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
+			.forEach(cas -> asService(textCorpus.getLang()).consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
 		return targetCorpus;
 	}
 
 	public Stream<JCas> asStream(TextCorpus textCorpus) {
-		Stream<JCas> stream = preprocessorService.prepare(
-				textCorpus, 
-				taggerPath, 
-				options, 
-				resourceOptions, 
-				history, 
-				listener, 
-				customAEs.toArray(new AnalysisEngineDescription[customAEs.size()]));
-		if(parallel)
-			stream.parallel();
+		Stream<JCas> stream = asService(textCorpus).prepare(textCorpus);
 		return stream;
 	}
 	
 	private Optional<Path> preprocessedCorpusCachePath = Optional.empty();
-
 	public Preprocessor setPreprocessedCorpusCache(Path cachedPath) {
 		preprocessedCorpusCachePath = Optional.of(cachedPath);
 		return this;
+	}
+
+	public Stream<JCas> asStream(Lang lang, Stream<Document> documents) {
+		return asService(lang).prepare(
+				documents
+				);
+	}
+	
+	public PreprocessorService asService(Lang lang) {
+		return asService(lang, new CorpusMetadata(Charset.defaultCharset()));
+	}
+	
+	public PreprocessorService asService(TextCorpus textCorpus) {
+		try {
+			return asService(
+					textCorpus.getLang(), 
+					corpusService.computeMetadata(textCorpus));
+		} catch(IOException e) {
+			throw new TermSuiteException(e);
+		}
+	}
+	
+	public PreprocessorService asService(Lang lang, CorpusMetadata corpusMetadata) {
+		PreprocessingPipelineBuilder builder = PreprocessingPipelineBuilder
+				.create(lang, taggerPath)
+				.setNbDocuments(corpusMetadata.getNbDocuments())
+				.setCorpusSize(corpusMetadata.getTotalSize());
+	
+		if(listener.isPresent())
+			builder.addPipelineListener(listener.get());
+		
+		for(AnalysisEngineDescription customAE:customAEs) 
+			builder.addCustomAE(customAE);
+		
+		if(resourceOptions.isPresent()) 
+			builder.setResourceConfig(resourceOptions.get());
+
+		if(history.isPresent())
+				builder.setHistory(history.get());
+		
+		final AnalysisEngine aae;
+		try {
+			logger.info("Initializing analysis engine");
+			ResourceManager resMgr = UIMAFramework.newDefaultResourceManager();
+	    	AnalysisEngineDescription aaeDesc;
+			aaeDesc = createEngineDescription(builder.create());
+			// Instantiate AAE
+			aae = UIMAFramework.produceAnalysisEngine(aaeDesc, resMgr, null);
+		} catch (ResourceInitializationException e) {
+			throw new TermSuiteException(e);
+		}
+		
+		
+		return Guice.createInjector(
+					new TermSuiteModule(),
+					new PreprocessingModule(lang, aae))
+				.getInstance(PreprocessorService.class);
 	}
 }
