@@ -471,8 +471,7 @@ public class JsonTerminologyIO {
 					coTerm = termino.getTerms().get(tempVecEntry.getTermGroupingKey());
 					contextVector.addEntry(coTerm, tempVecEntry.getNbCooccs(), tempVecEntry.getAssocRate());
 				}
-				if(!contextVector.getEntries().isEmpty())
-					term.setContext(contextVector);
+				term.setContext(contextVector);
 			}
 		}
 

@@ -191,7 +191,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.hasFrequency(308);
 		
 		assertThat(termino)
-			.hasNVariationsOfType(term, 24, VariationType.SYNTAGMATIC)
+			.hasNVariationsOfType(term, 21, VariationType.SYNTAGMATIC)
 			.getVariations(term)
 			.extracting(TermSuiteExtractors.RELATION_TOGKEY_RULE_TOFREQ)
 			.contains(

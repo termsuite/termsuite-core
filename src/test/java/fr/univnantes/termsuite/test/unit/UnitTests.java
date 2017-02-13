@@ -39,11 +39,13 @@ import com.google.inject.Module;
 import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.Engine;
 import fr.univnantes.termsuite.framework.EngineDescription;
-import fr.univnantes.termsuite.framework.EngineInjector;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.injector.EngineInjector;
 import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
+import fr.univnantes.termsuite.framework.service.IndexService;
+import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
@@ -220,7 +222,7 @@ public class UnitTests {
 
 	public static <T extends SimpleEngine> T createSimpleEngine(IndexedCorpus corpus, Class<T> cls, Object... parameters) {
 		Injector guiceInjector = TermSuiteFactory.createExtractorInjector(corpus, null, null);
-		EngineInjector engineInjector = new EngineInjector(cls, guiceInjector);
+		EngineInjector engineInjector = getEngineInjector(corpus);
 		
 		T engine;
 		try {
@@ -293,7 +295,16 @@ public class UnitTests {
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(
 				terminology, 
 				new EmptyOccurrenceStore(Lang.EN));
-		new EngineInjector(engine.getClass(), extractorInjector(indexedCorpus)).injectIndexes(engine);
+		EngineInjector engineInjector = getEngineInjector(indexedCorpus);
+		engineInjector.injectIndexes(engine);
+	}
+
+	public static EngineInjector getEngineInjector(IndexedCorpus indexedCorpus) {
+		Injector extractorInjector = extractorInjector(indexedCorpus);
+		EngineInjector engineInjector = new EngineInjector(
+				extractorInjector.getInstance(TermSuiteResourceManager.class), 
+				extractorInjector.getInstance(IndexService.class));
+		return engineInjector;
 	}
 	
 	

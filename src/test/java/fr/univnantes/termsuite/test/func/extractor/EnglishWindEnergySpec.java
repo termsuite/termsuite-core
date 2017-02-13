@@ -104,7 +104,6 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				"S-PI-NN-P",
 				"M-SD-(N|A)N",
 				"S-R2I-NPN-P",
-				"AAN-AprefAN",
 				"S-R2D-NN1",
 				"M-I2-(A|N)N-E",
 				"M-R3I1-ANNN",
@@ -118,6 +117,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		return Lists.newArrayList(
 				"S-I1-NPN-CN",
 				"ANN-prefANN",
+				"AAN-AprefAN",
 				"S-PEg-NN-NP", "S-PID-AN-P", "S-R2D-NN");
 	}
 
@@ -196,7 +196,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		System.out.println("Nb relations: " + service.relations().count());
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
-				.collect(Collectors.toSet())).hasSize(519);
+				.collect(Collectors.toSet())).hasSize(516);
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isSemantic)
@@ -204,7 +204,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isPrefixation)
-				.collect(Collectors.toSet())).hasSize(15);
+				.collect(Collectors.toSet())).hasSize(14);
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isDerivation)
@@ -212,7 +212,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isMorphological)
-				.collect(Collectors.toSet())).hasSize(503);
+				.collect(Collectors.toSet())).hasSize(501);
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isSyntagmatic)
@@ -220,7 +220,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 		assertThat(service.relations()
 				.filter(RelationService::isInfered)
 				.filter(RelationService::isGraphical)
-				.collect(Collectors.toSet())).hasSize(182);
+				.collect(Collectors.toSet())).hasSize(181);
 	}
 
 	@Test
@@ -233,7 +233,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 
 		Stream<RelationService> variationsTaggedMorpho = UnitTests.getTerminologyService(corpus)
 				.relations(RelationProperty.IS_MORPHOLOGICAL, true);
-		assertThat(variationsTaggedMorpho.collect(Collectors.toList())).hasSize(958);
+		assertThat(variationsTaggedMorpho.collect(Collectors.toList())).hasSize(956);
 	}
 
 
@@ -359,7 +359,7 @@ public class EnglishWindEnergySpec extends WindEnergySpec {
 				   tuple("n: spreadsheet", "nn: spread sheet"), 
 				   tuple("n: gearbox", "nn: gear box")
 			)
-			.hasSize(628)
+			.hasSize(626)
 			;
 	}
 

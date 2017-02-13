@@ -10,6 +10,7 @@ public class TerminologyPreparator extends AggregateEngine {
 		pipe(StopWordCleaner.class);
 		pipe(LemmaSetter.class);
 		pipe(SWTFlagSetter.class);
+		pipe(SWTBoundFilterer.class);
 		pipe(SWTSizeSetter.class);
 		pipe(CorpusWidePropertiesSetter.class);
 		pipe(TermSpecificityComputer.class);

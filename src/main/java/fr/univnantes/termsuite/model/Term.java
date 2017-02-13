@@ -76,26 +76,6 @@ public class Term extends PropertyHolder<TermProperty> implements Comparable<Ter
 		return getGroupingKey().compareTo(o.getGroupingKey());
 	}
 
-//	private Integer rank;
-//	private Boolean singleWord;
-//	private Integer documentFrequency;
-//	private Double frequencyNorm;
-//	private Double generalFrequencyNorm;
-//	private Double specificity;
-//	private Integer frequency;
-//	private Double orthographicScore;
-//	private Integer independantFrequency;
-//	private Double independance;
-//	private String pilot;
-//	private String lemma;
-//	private Double tfIdf;
-//	private String groupingKey;
-//	private String spottingRule;
-//	private Boolean fixedExpression;
-//	private Integer swtSize;
-//	private Boolean filtered;
-//	private Integer depth;
-
 	public Integer getRank() {
 		return getIntegerUnchecked(TermProperty.RANK);
 	}

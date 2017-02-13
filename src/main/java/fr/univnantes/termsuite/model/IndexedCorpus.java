@@ -28,4 +28,9 @@ public class IndexedCorpus {
 	public void setOccurrenceStore(OccurrenceStore occurrenceStore) {
 		this.occurrenceStore = occurrenceStore;
 	}
+	
+	@Override
+	public String toString() {
+		return IndexedCorpus.class.getSimpleName() + "["+this.getTerminology().getName()+"]";
+	}
 }

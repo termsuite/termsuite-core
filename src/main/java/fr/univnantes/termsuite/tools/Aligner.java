@@ -64,9 +64,9 @@ import com.google.common.base.Splitter;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.alignment.BilingualAligner;
-import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
+import fr.univnantes.termsuite.alignment.BilingualAlignmentService;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.api.BilingualAligner;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
@@ -149,7 +149,7 @@ public class Aligner {
 				TermSuiteCLIUtils.setGlobalLogLevel("info");
 				TermSuiteCLIUtils.logCommandLineOptions(line);
 				
-				BilingualAligner aligner = TermSuiteAlignerBuilder.start()
+				BilingualAlignmentService aligner = BilingualAligner.start()
 						.setSourceTerminology(sourceTermino.get())
 						.setTargetTerminology(targetTermino.get())
 						.setDicoPath(dicoPath)

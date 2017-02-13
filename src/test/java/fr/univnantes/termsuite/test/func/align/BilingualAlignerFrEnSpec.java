@@ -11,10 +11,10 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import fr.univnantes.termsuite.alignment.AlignmentMethod;
-import fr.univnantes.termsuite.alignment.BilingualAligner;
-import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
+import fr.univnantes.termsuite.alignment.BilingualAlignmentService;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
+import fr.univnantes.termsuite.api.BilingualAligner;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
@@ -25,13 +25,14 @@ public class BilingualAlignerFrEnSpec {
 
 	Terminology frTermino;
 	Terminology enTermino;
-	BilingualAligner aligner;
+	BilingualAlignmentService aligner;
 	
 	@Before
 	public void setup() {
-		frTermino = IndexedCorpusIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.FR));
-		enTermino = IndexedCorpusIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.EN));
-		aligner = TermSuiteAlignerBuilder.start()
+		frTermino = IndexedCorpusIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.FR)).getTerminology();
+		enTermino = IndexedCorpusIO.fromJson(FunctionalTests.getTerminoWEShortPath(Lang.EN)).getTerminology();
+		
+		aligner = new BilingualAligner()
 				.setSourceTerminology(frTermino)
 				.setTargetTerminology(enTermino)
 				.setDicoPath(FunctionalTests.getDicoPath(Lang.FR, Lang.EN))
@@ -47,7 +48,7 @@ public class BilingualAlignerFrEnSpec {
 	@Test
 	public void failWhenSourceTermNotExisting() {
 		thrown.expect(NullPointerException.class);
-		Term t1 = frTermino.getTermByGroupingKey("npna: production de ssénergie électrique");
+		Term t1 = frTermino.getTerms().get("npna: production de ssénergie électrique");
 		aligner.alignSize2(t1, 3, 2);
 	}
 
@@ -68,13 +69,13 @@ public class BilingualAlignerFrEnSpec {
 
 	@Test
 	public void testAlignMWTWithManualDico() {
-		Term t1 = frTermino.getTermByGroupingKey("npna: production de énergie électrique");
+		Term t1 = frTermino.getTerms().get("npna: production de énergie électrique");
 		aligner.addTranslation(
-				frTermino.getTermByGroupingKey("npn: production de énergie"), 
-				enTermino.getTermByGroupingKey("nn: energy production"));
+				frTermino.getTerms().get("npn: production de énergie"), 
+				enTermino.getTerms().get("nn: energy production"));
 		aligner.addTranslation(
-				frTermino.getTermByGroupingKey("a: électrique"), 
-				enTermino.getTermByGroupingKey("a: electrical"));
+				frTermino.getTerms().get("a: électrique"), 
+				enTermino.getTerms().get("a: electrical"));
 		List<TranslationCandidate> results = aligner.align(t1, 3, 1);
 		assertThat(results)
 			.hasSize(1)
@@ -86,7 +87,7 @@ public class BilingualAlignerFrEnSpec {
 
 	@Test
 	public void testTermSizeGreaterThan2() {
-		Term t1 = frTermino.getTermByGroupingKey("npna: production de énergie électrique");
+		Term t1 = frTermino.getTerms().get("npna: production de énergie électrique");
 		List<TranslationCandidate> results = aligner.align(t1, 3, 2);
 		assertThat(results)
 			.hasSize(1)
@@ -99,7 +100,7 @@ public class BilingualAlignerFrEnSpec {
 
 	@Test
 	public void testAlignSWTWithManualDico() {
-		Term eolienne = frTermino.getTermByGroupingKey("n: éolienne");
+		Term eolienne = frTermino.getTerms().get("n: éolienne");
 		TranslationCandidate noDicoCandidate = aligner.align(
 				eolienne, 
 				1, 
@@ -108,7 +109,7 @@ public class BilingualAlignerFrEnSpec {
 		assertThat(noDicoCandidate.getTerm().getGroupingKey()).isEqualTo("n: wind");
 		assertThat(noDicoCandidate.getMethod()).isEqualTo(AlignmentMethod.DICTIONARY);
 		
-		aligner.addTranslation(eolienne, enTermino.getTermByGroupingKey("nn: wind turbine"));
+		aligner.addTranslation(eolienne, enTermino.getTerms().get("nn: wind turbine"));
 		TranslationCandidate dicoCandidate = aligner.align(
 				eolienne, 
 				1, 
@@ -121,7 +122,7 @@ public class BilingualAlignerFrEnSpec {
 	
 	@Test
 	public void testAlignerMWTComp() {
-		Term t1 = frTermino.getTermByGroupingKey("na: turbine éolien");
+		Term t1 = frTermino.getTerms().get("na: turbine éolien");
 
 		List<TranslationCandidate> results = aligner.alignSize2(t1, 3, 2);
 		assertThat(results)
@@ -135,21 +136,21 @@ public class BilingualAlignerFrEnSpec {
 
 	@Test
 	public void testAlignerNeoclassicalDico() {
-		Term t1 = frTermino.getTermByGroupingKey("a: aérodynamique");
+		Term t1 = frTermino.getTerms().get("a: aérodynamique");
 		List<TranslationCandidate> results = aligner.alignNeoclassical(t1, 3, 1);
 		assertThat(results)
 			.hasSize(3)
 			.extracting("term.groupingKey", "method")
 			.containsExactly(
 					tuple("a: aerodynamic", AlignmentMethod.NEOCLASSICAL),
-					tuple("r: aerodynamically", AlignmentMethod.NEOCLASSICAL),
-					tuple("n: aerodynamics", AlignmentMethod.NEOCLASSICAL)
+					tuple("n: aerodynamics", AlignmentMethod.NEOCLASSICAL),
+					tuple("r: aerodynamically", AlignmentMethod.NEOCLASSICAL)
 					);
 	}
 
 	@Test
 	public void testAlignerNeoclassicalGraph() {
-		Term t1 = frTermino.getTermByGroupingKey("n: géothermie");
+		Term t1 = frTermino.getTerms().get("n: géothermie");
 		List<TranslationCandidate> results = aligner.alignNeoclassical(t1, 3, 1);
 		assertThat(results)
 			.hasSize(3)
@@ -157,13 +158,13 @@ public class BilingualAlignerFrEnSpec {
 			.containsExactly(
 					tuple("a: geothermal", AlignmentMethod.NEOCLASSICAL),
 					tuple("n: geometry", AlignmentMethod.NEOCLASSICAL),
-					tuple("a: geometrical", AlignmentMethod.NEOCLASSICAL)
+					tuple("a: geometric", AlignmentMethod.NEOCLASSICAL)
 					);
 	}
 
 	@Test
 	public void testAlignerMWTSemiDist() {
-		Term t1 = frTermino.getTermByGroupingKey("na: parc éolien");
+		Term t1 = frTermino.getTerms().get("na: parc éolien");
 
 		List<TranslationCandidate> results = aligner.alignSize2(t1, 3, 2);
 		assertThat(results)
@@ -177,7 +178,7 @@ public class BilingualAlignerFrEnSpec {
 	}
 	@Test
 	public void testAlignerSWT() {
-		Term t1 = frTermino.getTermByGroupingKey("n: énergie");
+		Term t1 = frTermino.getTerms().get("n: énergie");
 
 		List<TranslationCandidate> results = aligner.alignSize2(t1, 3, 2);
 		assertThat(results)
@@ -186,7 +187,7 @@ public class BilingualAlignerFrEnSpec {
 			.containsExactly(
 					tuple("n: power", AlignmentMethod.DICTIONARY),
 					tuple("n: energy", AlignmentMethod.DICTIONARY),
-					tuple("n: turbine", AlignmentMethod.DISTRIBUTIONAL)
+					tuple("n: motor", AlignmentMethod.DISTRIBUTIONAL)
 					);
 		
 		

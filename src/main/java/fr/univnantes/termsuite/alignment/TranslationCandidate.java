@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 
@@ -37,6 +38,7 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 	TranslationCandidate(AlignmentMethod method, Term targetTerm, double score, Object sourceTerm,
 			TranslationCandidate... subCandidates) {
 		super();
+		Preconditions.checkNotNull(targetTerm);
 		this.method = method;
 		this.term = targetTerm;
 		this.score = score;

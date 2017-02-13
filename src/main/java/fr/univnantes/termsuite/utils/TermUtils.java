@@ -55,35 +55,6 @@ public class TermUtils {
 					.result();
 		}
 	};
-	
-	/**
-	 * 
-	 * Finds in an input term all single-word terms it is made off. 
-	 * If the input term has compounds, this method will iterate 
-	 * over each compound and try to find a matching swt for each compound.
-	 * 
-	 * This method creates an index on Terminology based on key
-	 * {@link TermIndexType#SWT_LEMMAS}.
-	 * 
-	 * @param termino
-	 * 			The {@link Terminology} in which single word terms must be found.
-	 * @param term
-	 * 			The input term.
-	 * @return
-	 * 			The list of single word terms.
-	 * 
-	 * @see Term#asComponentIterator(boolean)
-	 */
-	public static List<Term> getSingleWordTerms(Terminology termino, Term term) {
-		List<Term> terms = Lists.newArrayList();
-		for(TermWord tw:term.getWords()) {
-			Term swt = termino.getTerms().get(toGroupingKey(tw));
-			if(swt != null)
-				terms.add(swt);
-		}
-		
-		return terms;
-	}
 
 	private static final String STEMMED_INSENSITIVE_GKEY_FORMAT = "%s: %s";
 	/**

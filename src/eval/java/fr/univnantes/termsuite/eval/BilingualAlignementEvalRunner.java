@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import fr.univnantes.termsuite.alignment.BilingualAligner;
+import fr.univnantes.termsuite.alignment.BilingualAlignmentService;
 import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
-import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.api.BilingualAligner;
 import fr.univnantes.termsuite.eval.bilangaligner.AlignmentEvalRun;
 import fr.univnantes.termsuite.eval.bilangaligner.AlignmentEvalService;
 import fr.univnantes.termsuite.eval.bilangaligner.AlignmentRecord;
@@ -90,7 +90,7 @@ public class BilingualAlignementEvalRunner {
 		Terminology sourceTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getSource(), run.getTerminoConfig());
 		Terminology targetTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getTarget(), run.getTerminoConfig());
 		
-		BilingualAligner aligner = TermSuiteAlignerBuilder.start()
+		BilingualAlignmentService aligner = BilingualAligner.start()
 				.setSourceTerminology(sourceTermino)
 				.setTargetTerminology(targetTermino)
 				.setDicoPath(dicoPath.toString())

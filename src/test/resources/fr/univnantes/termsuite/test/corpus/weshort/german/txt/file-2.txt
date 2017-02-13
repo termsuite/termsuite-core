@@ -1,0 +1,261 @@
+INHALTSVERZEICHNIS                                                               Seite
+
+                                                                                    
+1. Windenergie                                                                                                                              
+2. Die Geschichte der Nutzung der Windenergie                      
+3. Voraussetzung für die Aufstellung                                         
+4. Technik                                                                                      
+4.1 Bauart                                                                                    
+4.1.1 Anlagen mit vertikaler Achse                                      
+4.1.2 Anlagen mit horizontaler Achse                                 
+5. Einteilung nach Generatorenleistung                                      
+6. Wirkungsgrad                                                                             
+7. Potenzial                                                                                     
+8. Windkraftnützung in Baden- Württemberg                              
+9. Neuer Standort: Off- Shore                                                        
+10.Vorteile und Nachteile der Windenergie                                 
+11. Erneuerbaren Energie- Gesetz                                                
+
+Literaturverzeichnis                                                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Windenergie
+Der Wind ist eine indirekte Form der Sonnenenergie. Die Sonne strahlt in einer Stunde ca. 10.000.000.000.000 Kilowattstunden an Energie auf die Erde ab. 1-2 % davon wird in Windenergie umgewandelt.
+ Die Luft über Boden und Wasser wird durch die Sonneneinstrahlung erwärmt, allerdings ungleichmäßig. In Gegenden stärkerer Einstrahlung steigt die Luft höher als über solchen mit weniger Einstrahlung. (Warme Luft ist leichter)
+Es ergeben sich dadurch Luftdruckunterschiede. Die daraus resultierenden Luftströmungen vom Hochdruck- zum Tiefdruckgebiet werden als Wind bezeichnet.
+=> unter Windenergie versteht man die Bewegungsenergie der Luft
+
+2. Die Geschichte der Nutzung der Windenergie
+Seit Jahrtausenden nutzt der Mensch die Kraft des Windes. Schon 3300 v. Chr. nutzen Segelschiffe diese Energiequelle. Durch sie waren die Voraussetzungen für internationale Kommunikation und Handel über die Weltmeere gesichert.
+Bis zur Erfindung der Dampfmaschine im 18. Jahrhundert, bleiben die Segelschiffe wichtigstes Verkehrsmittel.
+Auch die Windräder nützen die Kraft es Windes. Die Geschichte der Windräder wird oftmals sehr unterschiedlich datiert. Es wird vermutet, dass es bereits 1200 v. Chr. im Orient Mühlen, mit Segeln an den Speichen gab. Dies scheint realistisch, wenn man bedenkt, dass dort kaum Wasserkraft zu Verfügung stand.
+Sichere Informationen über das Bestehen von Windmühlen gibt es aus Persien. Im 7. Jahrhundert soll die erste Windmühle dort gebaut worden sein.
+Im Jahre 1180 entstanden nun Mühlen mit waagrechten Achsen. Angenommen wird, dass die Mühlen durch die Kreuzzüge nach Europa gelangten. 
+Anfang des 15. Jahrhunderts setzten sich in Deutschland die Blockwindmühlen durch und im 18. Jahrhundert, die technisch ausgefeiltere höllandische Kappenwindmühle.
+
+Die Windmühle und das Segelschiff blieben bis ins 19. Jhdt bedeutsame Energietechniken, die aber zu sehens durch Wasserräder, Dampfmaschine, Elektrizität und Verbrennungsmotoren verdrängt wurden. Der Hauptgrund dafür ist in der Ungleichmäßigkeit des Windes zu sehen.
+Ab 1930 gab es für Windräder eine neue Chance. Marcellus Jacobs, USA, entwickelte den Windgenerator. In den 40 iger Jahren, errichtete Palmer C. Putnam den ersten großen Windgenerator in Vermont. Sie sollte damals 1250 kW erzeugen.
+Erneutes Interesse erfuhr die Windenergie in den 70 iger Jahren. Vor allem verstärkt wurde das Interesse durch die in den 70er und 80er Jahren einsetzende Krisen. 
+( Ölkrise, Kernenergiekrise, Umweltkrise). Das Bundesministerium für Forschung und Technologie begann Forschungen zu fördern.
+Trotzdem ist heute der Anteil an der Energieversorgung in Deutschland durch den Wind mit  3% immer noch sehr gering. Wobei zu betonen ist, dass ein starker Anwachs zu verzeichnen ist. Immerhin werden täglich sechs Konverter aufgestellt.
+ Im Jahr 2001 steigerte sich die Windenergie in Deutschland. 
+Rund 8750 MW Gesamtleitung werden erzielt, was auf den Bau  von neuen Windkraftanlagen zurückzuführen ist. Insgesamt wurden 36 Milliarden Kilowattstunden aus erneuerbaren Energien erzeugt.
+Weltweit gibt es mehr als 20000 Anlagen mit einer Gesamtleistung von mehr als
+ 1,4 Gigawatt.
+
+3. Voraussetzung für die Aufstellung
+Bevor die konkrete Planung für den Standort und den Bau einer Windkraftanlage eingeleitet wird, muss zunächst anhand von Windgeschwindigkeitsmessungen bzw. aufgrund von Aufzeichnungen des Deutschen Wetterdienstes das Windpotential festgelegt werden. 
+Nur in Gebieten mit einer Windgeschwindigkeit im Jahresdurchschnitt von 4 m/s besser aber über 5m/s lohnt sich eine Aufstellung. Die Windgeschwindigkeit ist von gravierender Bedeutung, da die Energieabgabe von Windkraftanlagen mit der dritten Potenz steigt.
+
+Ptheor/m² = œ * p * v³ ( Watt/ m²)
+Erklärung: -   Ptheor/ m²:  theoretische Windleistung ( Watt/ m²)
+- p: Luftdichte ( kg/ m²)
+- v: Momentane Windgeschwindigkeit
+
+
+
+4. Technik
+Die Windkraftanlage besteht im wesentlichen aus zwei Teilen: dem Windrad oder Rotor und dem Generator. 
+Das Herzstück der Windkraftanlage ist der Rotor. Er wandelt die Bewegungsenergie der Luft in Rotationsenergie um und diese steht als Drehbewegung zur Verfügung. Durch die Drehbewegung der Rotorwelle wird der Generator angetrieben. Er wandelt die Bewegungsenergie des Windes in elektrische Energie um und gibt diese in Form von Wechselspannung an den Abnehmer weiter. Das Getriebe übersetzt die Rotationsbewegung des Windrades auf die für den Generator notwendige Drehzahl.
+Es gibt Rotoren mit zwei, drei, vier oder vielen Flügeln, Blättern, Lamellen oder Zylinderhälften.  Eine Sonderform stellt der Einflügler auch Monopteros genannt dar. Dieser hat an Stelle eines zweiten Flügels ein Gegengewicht angebracht.
+Die Rotorblätter bei modernen Windkraftanlagen sind nach aerodynamischen Gesichtspunkten gebaut.  Die Form eines Rotorblattes ähnelt dem Profil einer Flugzeugtragfläche. Die Oberfläche ist stärker gewölbt als die Unterseite.
+Die über den Tragflügel strömende Luft wird oben zusammengedrückt und dadurch sehr schnell. Ein Unterdruck entsteht. Unten strömt die Luft mit einer geringen Geschwindigkeit, wodurch ein Überdruck entsteht. Wie beim Flugzeug wird so die Tragfläche nach oben gedrückt und das Rotorblatt erhält eine Kraft in Drehrichtung.
+Die Rotorblätter werden heutzutage überwiegend aus Faserverbundwerkstoffen hergestellt und können eine Länge von bis zu 30 m erreichen. Um die Stabilität zu verstärken, werden Glasfasern eingesetzt. Diese halten das Gewicht des Rotorblattes niedrig.
+Um die Drehzahl des Rotors bei größeren Windkraftanlagen trotz schwankender Windgeschwindigkeiten konstant zu halten, werden die Rotorblätter durch einen Blattverstellantrieb gedreht.
+Diese Regelung wird als Pitch- Regelung bezeichnet. Wenn der Wind schwach ist werden die Rotorblätter so eingestellt das sie in voller Breite gegen die Strömung stehen. Wird der Wind stärker, so wird der Einstellwinkel reduziert.
+Gibt es Sturm, dann werden die Rotorblätter parallel zur Windströmung gerichtet und der Rotor bewegt sich dann nicht mehr.
+Die Rotorblätter bei kleineren Windkraftanlagen sind nicht verstellbar. In diesem Fall greift die sogenannte Stall-Regelung ( englisch to stall= abrutschen). Das aerodynamische Profil des Blattes ist so konstruiert, dass bei hoher Windgeschwindigkeit ein Strömungsabtrieb am Rotor erfolgt. Daraus erfolgt eine Reduzierung der Antriebskräfte.
+
+4.1 Bauart 
+Aufgrund der Bauart wird zwischen Windturbinen mit horizontaler und vertikaler Achse unterschieden.
+
+4.1. 1 Anlagen mit vertikaler Achse
+Diese Anlagen müssen nicht nach dem Wind ausgerichtet werden. Moderne Vertikalachser sind beispielsweise der  Darrieus- Rotor, der Heidelberg- Rotor und der Savonius- Rotor. 
+ Der erste der drei, der von dem Franzose George Darrieus erfunden wurde, arbeitet nach dem Auftriebsprinzip. Er hat zwei bis drei Rotorblätter, die als Mantellinien ausgeführt sind. Vorteil dieser Anlage liegt sicherlich an der Unabhängigkeit von der Windrichtung und darin, dass die Bauelemente auf dem Boden angebracht werden können.  Diese erleichtert die Wartung der Anlage. Allerdings ist dadurch die Energieausbeute gering und beträgt nur 75% von Anlagen mit waagrechter Achse. Dieser Rotor ist schlecht regelbar und läuft auch nicht von selber an. Vieler dieser Anlagen stehen in den Windparks von Kalifornien.
+Der Heidelberg- Rotor ist eine sehr robuste Anlage.  Mit seinen senkrecht umlaufenden Rotorblättern nutzt er ebenfalls das Auftriebsprinzip. Bei dieser Bauart entfallen Getriebe, Rotorblattverstellung und Windnachführung. Durch die niedrige Geschwindigkeit ist die Geräuschentwicklung gering.
+Der Savonius Rotor wurde von dem finnischen Kapitänleutnant Sigrud Savonius  entwickelt. Dieser arbeitet nach dem aerodynamischen Widerstandsprinzip. Der Wind findet in der Schaufelöffnung einen höheren Widerstand als auf der anderen Seite. Ein Drehmoment ergibt sich, das beide Schaufeln abwechselnd in die Windrichtung bringt. 
+Die Anlagen laufen bereits bei geringen Windstärken an. Allerdings beträgt ihr Wirkungsgrad nur 23%. Sie werden daher oft als Anlaufhilfen für Darrieus- Rotoren verwendet.
+
+
+
+4.1. 2 Anlagen mit horizontaler Achse
+Die Anlagen mit horizontaler Achse sind gängiger als die Vertikalachser. Moderne Horizontalachsen- Windkraftanlagen bestehen aus dem Turm und dem Turmkopf mit Rotor, Nabe, Getriebe, Generator und den Einrichtungen zur Regelung und Betriebsführung. Der große Unterschied zu den Anlagen mit vertikaler Achse liegt darin, dass diese nach dem Wind ausgerichtet werden müssen. Für den Bau haben sich freistehende Stahlrohrtürme durchgesetzt. 
+
+ Von beiden Grundtypen gibt es sogenannte Langsamläufer und Schnelläufer.
+Langsamläufer: Windturbine mit vielen bzw. großflächigen Flügeln, die ihr ein hohes Anlaufdrehmoment verleihen. Problem dabei ist allerdings, dass bei höheren Windgeschwindigkeiten starke Strömungsverluste auftreten und der Wirkungsgrad dadurch gering ist.
+Schnelläufer: Windturbine mit zwei oder drei schmalen Rotorblättern. Diese benötigen eine hohe Anlaufgeschwindigkeit, aber zeichnen sich durch einen hohen Wirkungsgrad aus.
+
+5. Einteilung nach Generatorenleistung
+Die Windkraftanlagen werden in der Forschung je nach Nennleistung ihres Generators in drei Größenklassen unterteilt:
+=> Kleine Windenergiekonverter mit einer Leistung von 100 Kilowatt. Die Nutzungsdauer beträgt etwa 20 Jahre. Diese Anlagen sind gängig und technisch ausgereift.  Zu ihren typischen Anwendungsbereichen zählt die Einspeisung ins öffentliche Netz und der Inselbetrieb.
+=> Mittlere Windenergiekonverter mit einer Leistung von 1 Megawatt.  Diese Anlagen haben eine Turmhöhe von ca. 50 m und sind die am meisten vertretenen und wettbewerbsfähigsten Anlagen.
+=> Große Windenergiekonverter mit einigen MW Leistung. Diese haben einen Propeller mit 100 m Durchmesser oder sogar mehr und etwa 100 m Türmen. Anreiz diese großen Anlagen zu bauen ist die Tatsache, dass der Wind in 100 m Höhe 50 % schneller ist als auf dem Boden. Große Windkraftanlagen stellen die Technik noch vor einige Probleme. Diese Anlagen sind unzuverlässig, Probleme mit dem Getriebe oder den Rotoren sind keine Seltenheit. Sie werden deshalb vorrangig für den Versuchsbetrieb und die Erprobung von Werkstoffen ausgelegt.
+Windanlagen zur Elektrizitätserzeugung werden auf dreierlei Weise eingesetzt.
+1) Für den Eigenbedarf
+2) Einbindung in ein kleines Netz mit anderen Generatoren
+3) Kopplung an das überregionale Netz
+
+
+6. Wirkungsgrad
+Da der Wind hinter dem Konverter noch eine bestimmte Geschwindigkeit zum Abströmen haben muss, kann selbst ein optimaler konstruierter Propeller maximal 59, 3 von 100 Windeinheiten in elektrische Energie umwandeln ( nach Albert Betz).
+Die allerdings tatsächliche nutzbare elektrische Leistung ergibt sich nach Abzug der Getriebe- und Generatorenverluste.  Hauptsächlich die an den Rotorblättern auftretenden Wirbel und Luftreibungen, sowie die Umwandlungsverluste sind maßgeblich dafür verantwortlich. So ergibt sich bei modernen Windkraftanlagen ein Wirkungsgrad von 40- 45%. Allerdings kommt es bei der weiteren Umwandlung in elektrische Energie nochmals zu Verlusten, was dann einen Gesamtwirkungsgrad von 25- 40 % ergibt.
+
+7. Potential
+Ungefähr zwei Tausendstel von der Sonne eingestrahlten Energie wird in Windenergie umgewandelt. Theoretisch ließe sich damit der gesamte Weltstrombedarf decken. Allerdings wird dieses theoretische vorhandene Potential stark eingeschränkt, denn Windkraftanlagen sind erst ab einer Geschwindigkeit von 4m/s technisch und auch wirtschaftlich sinnvoll. 
+Das technisch nutzbare Potential wird in Deutschland jährlich auf 50 tWh geschätzt, was 12% des Stromverbrauchs ausmachen würde.
+
+
+
+
+
+
+
+8. Windkraftnützung in Baden- Württemberg
+a) Orte: - Schwäbische Alb
+- Schwarzwald
+     Erst kürzlich wurde in Schnittlingen eine neue Windkraftanlage mit 1000 Kilowatt  
+     Leistung errichtet.
+
+b) Anzahl: 77 mit 45 MW - Leistung
+c) Vergleich:
+              -   im Ländervergleich ist Baden- Württemberg bei der 
+                   Windenergienutzung Schlußlicht
+- nur ein Anteil von weniger als 1% der Windleistung von ganz 
+     Deutschland ist trotz sehr guten Windpotential In Baden- Württemberg         
+     installiert. 
+
+d) Gründe: 
+- liegt an den häufig sehr schwierigen und langwierigen  
+Genehmigungsverfahren bzw. die häufig sehr ablehnende Haltung der Behörden gegenüber Windkraft
+- nur sehr kurzfristige Förderprogramme
+
+Allerdings wird für die Zukunft ein Zuwachs erwartet.
+
+9. Neuer Standort: Off- Shore
+Um den Nachteilen, wie beispielsweise Schattenwurf und Beeinträchtigung der Landschaft, aus dem Weg zu gehen, wird in Deutschland geplant, Windkraftanlagen im Meer zu errichten. Standorte dafür, sollen die Küstengebiete der Nord- und Ostsee sein. Vorteil dieses Standortes ist, dass auf dem Meer doppelt so viel Strom erzeugt werden kann, wie auf dem Land. Zudem ist der Wind dort konstanter und turbulenzenfreier. 
+Aber auch dieser Standort bringt Nachteile mit sich. Der elektrische Strom muss durch lange Kabel geleitet werden, wobei ein großer Teil verloren geht. Zudem sind die Anlagen extremen Wetterbedingungen ausgesetzt. Der Salzgehalt des Meeres und der Wellengang machen diesen Standort problematisch. Bei Sturm müssen die Windräder auf Grund der Bruchgefahr abgestellt werden. Die Instanthaltung und Wartung der Anlagen kostet zudem eine Menge Geld.
+
+9.  Vorteile und Nachteile der Windenergie
+
+VORTEILE
+NACHTEILE
+1) Erspart der Umwelt Schadstoffe wie zum Beispiel CO2
+1) starke Abhängigkeit von der Windgeschwindigkeit.
+Problem dabei: Energieeinheit des Windes wächst in dritter Potenz
+=> sinkt die Windgeschwindigkeit um die Hälfte, reduziert sich die Windleistung auf ein Achtel des vorherigen Wertes
+2)Die natürlichen Ressourcen werden geschont
+2) Lärmbelästigung
+3) Profitables Geschäft, da sich durch die staatliche Förderung gute Renditen ergeben
+3)Lichteffekte der Rotoren störend. Bewohner beschweren sich über Schattenwurf.
+
+4) Störungen des Funk- und Fernsehempfanges ( Windkraftanlage stören die Übertragung von elektromagnetischen Wellen)
+
+5) Optische Beeinträchtigung der Landschaft ( Verspargelung der Landschaft)
+
+6) Windkonverter ersetzen keine Kraftwerke
+
+7) Wind ist unregelmäßig und unzuverlässig
+
+8) Eingriff in die Vogelwelt ( Vogelschlag)
+
+
+
+10. Erneuerbaren- Energien Gesetz (EEG)
+Durch dieses Gesetz, vom 29. März 2000, bestärkt der Bund den Vorrang von Strom aus allen erneuerbaren Energieträger. Dieses Gesetz  hat das sogenannte Stromeinspeisungsgesetz abgelöst und verpflichtet die Netzbetreiber Strom aus diesen Quellen aufzunehmen und 20 Jahren zu festgelegten Preisen zu vergüten.
+Im §7 dieses Gesetzes wird die Vergütung für Strom aus Windkraft festgelegt.
+Die Vergütungssätze für Strom aus Wind belaufen sich auf 17, 5 Pf pro kWh für mindestens die ersten fünf Jahre. Erst wird dann ein Referenzertrag ermittelt ( hängt ab von der eingespeisten Strommenge). 
+Ab diesem Tag erhält der Einspeiser 12, 1 Pf pro kWh.  Durch das Ermitteln eines Referenzertrages reduzieren sich die Vergütungssätze an windreichen Standorten schneller, als an windärmeren Standorten. Daraus ergibt sich im Durchschnitt eine Vergütung von 16, 6 Pf an durchschnittlichen windgünstigen Orten, 14 Pf erhalten Windstandorte an der Küste und gute bis weniger gute Standorte erhalten 17-17,8 Pf pro kWh.
+Für neu, ab dem 1. Januar 2000 in Betrieb gehende Anlagen, sinken die Vergütungssätze jährlich um 1, 5%.
+
+
+
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Literaturverzeichnis
+
+Der Bundesminister für Forschung und Technologie (hrsg.): Erneuerbare Energie. Bonn 1992
+
+FWU Institut für Film und Bild in Wissenschaft und Unterricht (hrsg.): Erneuerbare Energien. 7 Kurzfilme. Grünwald 1995
+
+Hanus, Bo: Das große Anwenderbuch der Windgeneratoren Technik. Franzis- Verlag. Feldkirchen 1997
+
+Informationszentrale der Elekrititätswirtschaft (hrsg.): Die Erneuerbaren. Strom und Wärme aus regenerativen Energien. Frankfurt am Main 1999
+
+Informationszentrale der Elekrititätswirtschaft (hrsg.): Erneuerbare Energien. Unterrichtsmaterial zum Thema Energie. Sekundarstufe 1. Frankfurt am Main 1996
+
+Landesinstitut für Pädagogik und Medien (Hrsg.): Energie und Umwelt. Saarbrücken 1997
+
+Naturwissenschaft und Technik: Energie. Zweiburgen Verlag. Weinheim 1991
+
+Neckarwerke Stuttgart AG (Hrsg.): Magazin.  3/2002
+
+StromBasiswissen: Dokumente und Kommentare zur energiewirtschaftlichen und energiepolitischen Diskussionen. Nr. 109. Frankfurt am Main
+
+Vom Faustkeil zum Laserstrahl. Die Erfindung der Menschheit von A-Z. Verlag das Beste. Stuttgart 1982
+
+Weber, Rudolf: Erneuerbare Energien. Webers Taschenlexikon. Band 2. Olynthus Verlag. Vaduz 1995
+
+WWF Deutschland (hrsg.): Energietechnologien. Frankfurt 2000
+
+
+Internetquellen:
+
+www.bmu.de  (Seite des Bundesumweltministeriums)
+www. Iwr.de/Welcomed.html (Branchenportal der Regenerativen Energien)
+
+1
+
+
+1
+
+

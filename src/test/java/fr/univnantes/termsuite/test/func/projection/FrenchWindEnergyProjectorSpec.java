@@ -41,7 +41,7 @@ public class FrenchWindEnergyProjectorSpec {
 	@Test
 	public void testFileMobile2() {
 		DocumentProjectionService s = getProjection(FunctionalTests.getMobileTechnologyDocument(Lang.FR, "file-2.txt"));
-		assertEquals(0.06, s.getProjectionScore(TermSuite.toService(corpus)), 0.01d);
+		assertEquals(0.07, s.getProjectionScore(TermSuite.toService(corpus)), 0.01d);
 	}
 
 	

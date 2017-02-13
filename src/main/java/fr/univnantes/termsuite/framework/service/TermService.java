@@ -337,4 +337,12 @@ public class TermService {
 	public Stream<RelationService> variations(VariationType variationType) {
 		return variations().filter(rel -> rel.getBooleanIfSet(variationType.getRelationProperty()));
 	}
+
+	public Stream<TermService> getSwts() {
+		return this.term.getWords().stream()
+			.filter(TermWord::isSwt)
+			.map(TermWord::toGroupingKey)
+			.filter(this.terminology::containsTerm)
+			.map(this.terminology::getTerm);
+	}
 }

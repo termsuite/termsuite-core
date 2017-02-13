@@ -8,11 +8,11 @@ import org.apache.uima.resource.SharedResourceObject;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.framework.EngineDescription;
-import fr.univnantes.termsuite.framework.EngineInjector;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.Resource;
 import fr.univnantes.termsuite.framework.TermSuiteResource;
+import fr.univnantes.termsuite.framework.injector.EngineInjector;
 import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.index.TermIndex;
@@ -41,13 +41,13 @@ public abstract class EngineRunner {
 		this.resourceMgr = injector.getInstance(TermSuiteResourceManager.class);
 		this.indexService = injector.getInstance(IndexService.class);
 		this.injector = injector;
-		this.engineInjector = new EngineInjector(description.getEngineClass(), injector);
+		this.engineInjector = new EngineInjector(resourceMgr, indexService);
 		this.parent = Optional.ofNullable(parent);
 		this.stats = injector.getInstance(PipelineStats.class);
 	}
 
 	public void configure() {
-		for(Field field:engineInjector.getAnnotatedFields(Resource.class, SharedResourceObject.class, TermSuiteResource.class)) {
+		for(Field field:engineInjector.getAnnotatedFields(description.getEngineClass(), Resource.class, SharedResourceObject.class, TermSuiteResource.class)) {
 			Resource annotation = field.getAnnotation(Resource.class);
 			ResourceType resourceType = annotation.type();
 			resourceMgr.registerResource(description.getEngineName(), resourceType);
@@ -61,7 +61,7 @@ public abstract class EngineRunner {
 	}
 
 	protected void dropIndexes() {
-		for(Field field:engineInjector.getAnnotatedFields(Index.class, TermIndex.class)) {
+		for(Field field:engineInjector.getAnnotatedFields(description.getEngineClass(), Index.class, TermIndex.class)) {
 			Index annotation = field.getAnnotation(Index.class);
 			TermIndexType type = annotation.type();
 			indexService.dropIndex(type);

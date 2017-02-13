@@ -62,15 +62,15 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,
 	GermanWindEnergySpec.class,
+	BilingualAlignerFrEnSpec.class,
+	BilingualAlignerDeEnSpec.class,
 	JsonIOReturnSpec.class,
+	SemanticGathererSpec.class,
+	FrenchWindEnergyProjectorSpec.class,
 	TermSuitePreprocessorSpec.class,
 	TerminoCleanerSpec.class,
 	TermSuiteTerminoCLISpec.class,
 	TermSuiteAlignerCLISpec.class,
-	BilingualAlignerFrEnSpec.class,
-	BilingualAlignerDeEnSpec.class,
-	SemanticGathererSpec.class,
-	FrenchWindEnergyProjectorSpec.class,
 	TerminoExtractorSpec.class
 	
 	})
@@ -111,12 +111,16 @@ public class FunctionalTests {
 		}
 	}
 
+	public static TextCorpus getCorpusWEShort(Lang lang) {
+		return new TextCorpus(lang, getCorpusWEShortPath(lang));
+	}
+
 	public static TextCorpus getCorpusWE(Lang lang) {
 		return new TextCorpus(lang, getCorpusWEPath(lang));
 	}
 	
-	public static String getCorpusWEShortPath(Lang lang) {
-		return "src/test/resources/" + CORPUS_WESHORT_PATH + lang.getName().toLowerCase() + "/txt/";
+	public static Path getCorpusWEShortPath(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "txt");
 	}
 
 	public static Path getCorpusMobilePath(Lang lang) {
@@ -127,14 +131,13 @@ public class FunctionalTests {
 		return Paths.get("src","test","resources", CORPUS_WE_PATH, lang.getName().toLowerCase(), "txt");
 	}
 
-	public static String getTerminoWEShortPath(Lang lang) {
-		return Paths.get(TERMINO_WESHORT_PATH.toString(), "we-short-" +  lang.getCode() + ".json").toString();
-		
+	public static Path getTerminoWEShortPath(Lang lang) {
+		return TERMINO_WESHORT_PATH.resolve("we-short-" +  lang.getCode() + ".json");
 	}
 
-	public static String getDicoPath(Lang source, Lang target) {
+	public static Path getDicoPath(Lang source, Lang target) {
 		String dicoFileName = String.format("%s-%s.txt", source.getCode(), target.getCode());
-		return Paths.get(DICO_PATH.toString(), dicoFileName).toString();
+		return DICO_PATH.resolve(dicoFileName);
 	}
 
 	public static Path getTaggerPath() {

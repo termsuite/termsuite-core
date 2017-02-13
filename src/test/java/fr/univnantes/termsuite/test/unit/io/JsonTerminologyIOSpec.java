@@ -194,7 +194,7 @@ public class JsonTerminologyIOSpec {
 				assertThat(t2.getContext()).isEqualTo(t.getContext());
 			} else if(t2.getGroupingKey().equals(term2.getGroupingKey())) {
 				assertNull(t.getContext());
-				assertNull(t2.getContext());
+				assertNotNull(t2.getContext());
 			} else {
 				fail("should never happen");
 			}

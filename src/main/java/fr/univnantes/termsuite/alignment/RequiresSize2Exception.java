@@ -20,7 +20,7 @@ public class RequiresSize2Exception extends RuntimeException {
 
 	@Override
 	public String getMessage() {
-		return String.format(BilingualAligner.MSG_REQUIRES_SIZE_2_LEMMAS, 
+		return String.format(BilingualAlignmentService.MSG_REQUIRES_SIZE_2_LEMMAS, 
 			term, 
 			Joiner.on(TermSuiteConstants.COMMA).join(swtTerms)
 			);

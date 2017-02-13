@@ -73,6 +73,15 @@ public class TermSuiteFactory {
 	}
 
 	public static Injector createExtractorInjector(
+			IndexedCorpus terminology) {
+		Injector injector = Guice.createInjector(
+				new ResourceModule(null),
+				new IndexedCorpusModule(terminology, null)
+			);
+		return injector;
+	}
+
+	public static Injector createExtractorInjector(
 			IndexedCorpus terminology, 
 			ResourceConfig config,
 			TermHistory history) {
