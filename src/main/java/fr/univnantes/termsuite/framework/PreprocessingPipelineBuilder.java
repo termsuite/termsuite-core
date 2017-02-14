@@ -58,7 +58,6 @@ import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.PipelineListenerAE;
 import fr.univnantes.termsuite.uima.PipelineResourceMgrs;
 import fr.univnantes.termsuite.uima.PreparationPipelineException;
-import fr.univnantes.termsuite.uima.PreparationPipelineOptions;
 import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.engines.preproc.CasStatCounter;
 import fr.univnantes.termsuite.uima.engines.preproc.FixedExpressionSpotter;
@@ -96,13 +95,15 @@ public class PreprocessingPipelineBuilder {
 	 * MAIN PIPELINE PARAMETERS
 	 */
 	private Lang lang;
-	private PreparationPipelineOptions options = new PreparationPipelineOptions();
 	private Optional<Long> nbDocuments = Optional.empty();
 	private Optional<Long> corpusSize = Optional.empty();
 	private List<AnalysisEngineDescription> customAEs = new ArrayList<>();
 	private Path taggerPath;
 	private List<PipelineListener> userPipelineListeners = new ArrayList<>();
 	private ResourceConfig resourceConfig = new ResourceConfig();
+	private Tagger tagger = Tagger.TREE_TAGGER;
+	private boolean fixedExpressionEnabled = false;
+	private boolean documentLoggingEnabled = true;
 
 	
 	/* *******************
@@ -142,16 +143,12 @@ public class PreprocessingPipelineBuilder {
 		return this;
 	}
 	
-	public void setOptions(PreparationPipelineOptions options) {
-		this.options = options;
-	}
-	
 	public void terminates() {
 		PipelineResourceMgrs.clearPipeline(pipelineId);
 	}
 
 	public AnalysisEngineDescription create() {
-		if(options.isDocumentLoggingEnabled())
+		if(documentLoggingEnabled)
 			aeDocumentLogger(nbDocuments.orElse(0l), corpusSize.orElse(0l));
 		
 		if(lang == Lang.ZH)
@@ -159,14 +156,14 @@ public class PreprocessingPipelineBuilder {
 		else
 			aeWordTokenizer();
 		
-		switch (options.getTagger()) {
+		switch (tagger) {
 		case TREE_TAGGER:
 			aeTreeTagger(taggerPath.toString());
 			break;
 		case MATE:
 			aeMateTaggerLemmatizer(taggerPath.toString());
 		default:
-			throw new UnsupportedOperationException("Unknown tagger: " + options.getTagger());
+			throw new UnsupportedOperationException("Unknown tagger: " + tagger);
 		}
 		
 		aeUrlFilter();
@@ -175,7 +172,7 @@ public class PreprocessingPipelineBuilder {
 		
 		aeRegexSpotter();
 		
-		if(options.isFixedExpressionEnabled()) 
+		if(fixedExpressionEnabled) 
 			aeFixedExpressionSpotter();
 		
 		for(AnalysisEngineDescription ae:customAEs)
@@ -586,6 +583,21 @@ public class PreprocessingPipelineBuilder {
 		}
 	}
 	
+	public PreprocessingPipelineBuilder setTagger(Tagger tagger) {
+		this.tagger = tagger;
+		return this;
+	}
+	
+	
+	public PreprocessingPipelineBuilder setDocumentLoggingEnabled(boolean documentLoggingEnabled) {
+		this.documentLoggingEnabled = documentLoggingEnabled;
+		return this;
+	}
+	
+	public PreprocessingPipelineBuilder setFixedExpressionEnabled(boolean fixedExpressionEnabled) {
+		this.fixedExpressionEnabled = fixedExpressionEnabled;
+		return this;
+	}
 	
 
 	private PreprocessingPipelineBuilder aeDocumentLogger(long nbDocument, long corpusSize)  {

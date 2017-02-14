@@ -46,6 +46,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -67,12 +68,12 @@ import com.google.common.collect.Lists;
 import fr.univnantes.termsuite.alignment.BilingualAlignmentService;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
 import fr.univnantes.termsuite.api.BilingualAligner;
-import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Term;
 
 /**
@@ -80,7 +81,7 @@ import fr.univnantes.termsuite.model.Term;
  * 
  * @author Damien Cram
  */
-public class Aligner {
+public class Aligner { // NO_UCD (public entry point)
 	private static final Logger LOGGER = LoggerFactory.getLogger(Aligner.class);
 		
 
@@ -104,12 +105,12 @@ public class Aligner {
 	
 	// values
 	
-	private Optional<Terminology> sourceTermino = Optional.empty();
-	private Optional<Terminology> targetTermino = Optional.empty();
-	private String dicoPath;
+	private Optional<IndexedCorpus> sourceTermino = Optional.empty();
+	private Optional<IndexedCorpus> targetTermino = Optional.empty();
+	private Path dicoPath;
 	private int n = 10;
 	private List<String> terms = Lists.newArrayList();
-	private SimilarityDistance distance = new Cosine();
+	private Class<? extends SimilarityDistance> distance = Cosine.class;
 	private boolean showExplanation = false;
 
 	
@@ -149,7 +150,7 @@ public class Aligner {
 				TermSuiteCLIUtils.setGlobalLogLevel("info");
 				TermSuiteCLIUtils.logCommandLineOptions(line);
 				
-				BilingualAlignmentService aligner = BilingualAligner.start()
+				BilingualAlignmentService aligner = new BilingualAligner()
 						.setSourceTerminology(sourceTermino.get())
 						.setTargetTerminology(targetTermino.get())
 						.setDicoPath(dicoPath)
@@ -197,7 +198,7 @@ public class Aligner {
 	}
 	
 	private Term readSourceTerm(String term) {
-		for(Term t:sourceTermino.get().getTerms().values()) {
+		for(Term t:sourceTermino.get().getTerminology().getTerms().values()) {
 			if(t.getGroupingKey().equals(term)
 					|| t.getPilot().equals(term)
 					|| t.getLemma().equals(term)
@@ -271,7 +272,7 @@ public class Aligner {
 		return options;
 	}
 
-	public void readArguments(CommandLine line, PrintStream out) throws IOException {
+	private void readArguments(CommandLine line, PrintStream out) throws IOException {
 		if(!line.hasOption(TERM) && !line.hasOption(TERM_LIST)) {
 			String msg = String.format("ERROR: One option of --%s or --%s must be provided.", TERM, TERM_LIST);
 			LOGGER.error(msg);
@@ -291,9 +292,9 @@ public class Aligner {
 			n = Integer.parseInt(line.getOptionValue(N));
 		if(line.hasOption(DISTANCE)) {
 			if(line.getOptionValue(DISTANCE).equals(DISTANCE_COSINE))
-				distance = new Cosine();
+				distance = Cosine.class;
 			else if(line.getOptionValue(DISTANCE).equals(DISTANCE_JACCARD))
-				distance = new Jaccard();
+				distance = Jaccard.class;
 			else 
 				TermSuiteCLIUtils.exitWithErrorMessage(String.format("Unknown distance: %s. Allowed values: %s;%s",
 						line.getOptionValue(DISTANCE),
@@ -310,7 +311,7 @@ public class Aligner {
 		targetTermino = Optional.of(
 				JsonTerminologyIO.load(new FileReader(line.getOptionValue(TARGET_TERMINO)), loadOptions)
 			);
-		dicoPath = line.getOptionValue(DICTIONARY);
+		dicoPath = Paths.get(line.getOptionValue(DICTIONARY));
 
 		showExplanation = line.hasOption(EXPLAIN);
 	}

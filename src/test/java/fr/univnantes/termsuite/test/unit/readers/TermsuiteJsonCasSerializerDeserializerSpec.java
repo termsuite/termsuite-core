@@ -46,7 +46,7 @@ import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
 
 /**
  * Created by Simon Meoni on 24/06/16.
@@ -248,7 +248,7 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 	public void SerializationTest() throws IOException {
 
 		// Test Out File
-		TermSuiteJsonCasSerializer.serialize(new FileWriter(jsonResFile), fixtureCas);
+		JsonCasSerializer.serialize(new FileWriter(jsonResFile), fixtureCas);
 		final String baseFile = TestUtil.readFile(jsonExpectedFile);
 		final String resFile = TestUtil.readFile(jsonResFile);
 		assertEquals(baseFile, resFile);

@@ -79,7 +79,7 @@ import fr.univnantes.termsuite.types.WordAnnotation;
 /**
  * Created by smeoni on 27/05/16.
  */
-public class TermSuiteJsonCasSerializer {
+public class JsonCasSerializer {
 
     public static void serialize(Writer writer, JCas jCas) throws IOException {
 

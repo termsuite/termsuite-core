@@ -41,17 +41,11 @@
  */
 package fr.univnantes.termsuite.tools;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
-import java.util.Properties;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
@@ -80,97 +74,11 @@ import ch.qos.logback.core.FileAppender;
  */
 public final class TermSuiteCLIUtils {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteCLIUtils.class);
-	
-	/** Name of the parameter that must be set to the input directory */
-	public static final String P_INPUT_DIR = "directory";
-	
-	/** Name of the parameter that must be set to the input files' encoding */
-	public static final String P_ENCODING = "encoding";
-	
-	/** Name of the parameter that must be set to the input files' language */
-	public static final String P_LANGUAGE = "language";
-	
-	/** Name of the parameter that must be set to the configuration file */
-	public static final String P_PROPERTIES_FILE = "configFile";
-	
-	/* The corpus format: txt or tei */
-	public static final String CORPUS_FORMAT = "corpus-format";
-
-	/* Possible values for argument corpus-format */
-	public static final String CORPUS_FORMAT_TXT = "txt";
-	public static final String CORPUS_FORMAT_TEI = "tei";
 
 	/**
 	 * Instances should NOT be constructed in standard programming.
 	 */
 	private TermSuiteCLIUtils() {}
-
-	/**
-	 * Unconditionally close an <code>InputStream</code>. Equivalent to
-	 * {@link InputStream#close()}, except any exceptions will be ignored.
-	 * <p>
-	 * Code from apache IOUtils.
-	 * 
-	 * @param input
-	 *            A (possibly null) InputStream
-	 */
-	public static void closeQuietly(InputStream input) {
-		if (input == null) {
-			return;
-		}
-
-		try {
-			input.close();
-		} catch (IOException ioe) {
-		}
-	}
-
-	/**
-	 * Unconditionally close an <code>OutputStream</code>. Equivalent to
-	 * {@link OutputStream#close()}, except any exceptions will be ignored.
-	 * <p>
-	 * Code from apache IOUtils.
-	 * 
-	 * @param output
-	 *            A (possibly null) OutputStream
-	 */
-	public static void closeQuietly(OutputStream output) {
-		if (output == null) {
-			return;
-		}
-
-		try {
-			output.close();
-		} catch (IOException ioe) {
-		}
-	}
-
-	
-	/**
-	 * Reads a list of {@link Properties} from the specified
-	 * <code>fileName</code> in the user preferences folder.
-	 * 
-	 * @param fileName
-	 *            The name of the file to read
-	 * @return The properties read, or <code>null</code> if the file cannot be
-	 *         read.
-	 */
-	@SuppressWarnings("resource")
-	public static Properties readPropertiesFileName(String fileName) {
-		File preFile = new File(fileName);
-		FileInputStream input = null;
-		try {
-			input = new FileInputStream(preFile);
-			Properties props = new Properties();
-			props.load(input);
-			return props;
-		} catch (IOException e) {
-			return null;
-		} finally {
-			closeQuietly(input);
-		}
-	}
-
 
 	/**
 	 * Creates a mandatory {@link Option} using the specified arguments.
@@ -187,80 +95,34 @@ public final class TermSuiteCLIUtils {
 	 *            whether the Option is mandatory
 	 * @return The option instance
 	 */
-	public static Option createOption(String opt, String longOpt,
+	private static Option createOption(String opt, String longOpt,
 			boolean hasArg, String description, boolean isMandatory) {
 		Option option = new Option(opt, longOpt, hasArg, description);
 		option.setRequired(isMandatory);
 		return option;
 	}
 
-	/**
-	 * Returns the key of the given option
-	 * 
-	 * @param opt
-	 *            The option
-	 * @return {@link Option#getOpt()} if the value returned is not empty, or
-	 *         {@link Option#getLongOpt()} otherwise.
-	 */
-	public static String getOptionKey(Option opt) {
-		String key = opt.getOpt();
-		if (key == null || key.isEmpty())
-			key = opt.getLongOpt();
-		return key;
+	public static Option createMandatoryOption(String opt, String longOpt,
+			boolean hasArg, String description) {
+		return createOption(opt, longOpt, hasArg, description, true);
 	}
 
-	/**
-	 * Sets the <code>value</code> of the specified <code>property</code> if no
-	 * value exists for it in the given <code>properties</code>.
-	 * 
-	 * @param properties
-	 *            The property list
-	 * @param property
-	 *            The property name
-	 * @param value
-	 *            The value to set
-	 */
-	public static void setToValueIfNotExists(Properties properties,
-			String property, String value) {
-		if (properties.getProperty(property) == null)
-			properties.setProperty(property, value);
+	public static Option createOptionalOption(String opt, String longOpt,
+			boolean hasArg, String description) {
+		return createOption(opt, longOpt, hasArg, description, false);
 	}
 
-	/**
-	 * Determines whether the specified <code>property</code> value is
-	 * <code>null</code>.
-	 * 
-	 * @param properties
-	 *            The property list
-	 * @param property
-	 *            The property name
-	 * @return <code>true</code> if the value of <code>property</code> is
-	 *         <code>null</code>, or <code>false</code> otherwise.
-	 */
-	public static boolean isNull(Properties properties, String property) {
-		return properties.getProperty(property) == null;
-	}
-		
 	
-		
-	/**
-	 * Reads a file path from a command line option if set and 
-	 * return the absolute file path as an optional, or exits with a log message if
-	 * the file does not exist. 
-	 * @param line the command line
-	 * @param optionName the name of the file path option
-	 * @return the string optional set with absolute file path if the option is set.
-	 */
-	public static Optional<String> readFileOption(CommandLine line, String optionName) {
-		if(line.getOptionValue(optionName) != null) {
-			if(!new File(line.getOptionValue(optionName)).exists()) 
-				exitWithErrorMessage("File does not exist: " + line.getOptionValue(optionName));
-			else 
-				return Optional.of("file:" + new File(line.getOptionValue(optionName)).getAbsolutePath());
-		}
-		return Optional.empty();
+	public static Option createMandatoryOption(String longOpt,
+			boolean hasArg, String description) {
+		return createOption(null, longOpt, hasArg, description, true);
 	}
-	
+
+	public static Option createOptionalOption(String longOpt,
+			boolean hasArg, String description) {
+		return createOption(null, longOpt, hasArg, description, false);
+	}
+
 	
 	private static String in = null;
 	/**
@@ -268,7 +130,7 @@ public final class TermSuiteCLIUtils {
 	 * @return
 	 * @throws IOException
 	 */
-	public static String readIn(String encoding) throws IOException {
+	static String readIn(String encoding) throws IOException {
 		if(in == null) {
 			InputStreamReader reader = new InputStreamReader(System.in, encoding);
 			List<Character> chars = new LinkedList<Character>();
@@ -288,7 +150,7 @@ public final class TermSuiteCLIUtils {
 	 * Prints an error message to the log and exits.
 	 * @param aMessage
 	 */
-	public static void exitWithErrorMessage(String aMessage) {
+	static void exitWithErrorMessage(String aMessage) {
 		LOGGER.error(aMessage);
 		System.err.println(aMessage);
 		System.exit(1);
@@ -305,7 +167,7 @@ public final class TermSuiteCLIUtils {
 	 * @param options
 	 *            The options expected
 	 */
-	public static void printUsage(ParseException e, String cmdLine,
+	static void printUsage(ParseException e, String cmdLine,
 			Options options) {
 		System.err.println(e.getMessage());
 		// automatically generate the help statement
@@ -320,7 +182,7 @@ public final class TermSuiteCLIUtils {
 	 * Displays all command line options in log messages.
 	 * @param line
 	 */
-	public static void logCommandLineOptions(CommandLine line) {
+	static void logCommandLineOptions(CommandLine line) {
 		for (Option myOption : line.getOptions()) {
 			String message;
 			String opt = "";
@@ -341,8 +203,6 @@ public final class TermSuiteCLIUtils {
 		}
 	}
 	
-	
-	
 	private static Stopwatch stopwatch;
 	public static Stopwatch startChrono() {
 		stopwatch = Stopwatch.createStarted();
@@ -353,7 +213,7 @@ public final class TermSuiteCLIUtils {
 		LOGGER.info("CLI stopped after " + stopwatch.toString());
 	}
 
-	public static void logToFile(String path) {
+	static void logToFile(String path) {
 		PatternLayoutEncoder ple = new PatternLayoutEncoder();
 
 		ple.setPattern("%date %level [%thread] %logger{10} [%file:%line] %msg%n");
@@ -373,21 +233,19 @@ public final class TermSuiteCLIUtils {
 		rootLogger.addAppender(fa);
 	}
 
-	public static void disableLogging() {
+	static void disableLogging() {
 		LoggerContext loggerContext = (LoggerContext)LoggerFactory.getILoggerFactory();
 		loggerContext.stop();
 	}
 	
-	
-	public static void setGlobalLogLevel(String levelString) {
+	static void setGlobalLogLevel(String levelString) {
 		setGlobalLogLevel(getLevel(levelString));
 	}
 	
-	public static void setGlobalLogLevel(Level level) {
+	private static void setGlobalLogLevel(Level level) {
 		ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 		logger.setLevel(level);
 	}
-
 
 	public static void setLogLevel(Object... loggerOverridings) {
 		Preconditions.checkArgument(loggerOverridings.length%2==0);
@@ -400,11 +258,12 @@ public final class TermSuiteCLIUtils {
 		}
 	}
 
-	public static Level getLevel(String logLevelString) {
+	private static Level getLevel(String logLevelString) {
 		for(Level level:ImmutableList.of(Level.ALL, Level.ERROR, Level.WARN, Level.INFO, Level.DEBUG, Level.TRACE)) {
 			if(level.toString().toLowerCase().equals(logLevelString.toLowerCase()))
 				return level;
 		}
 		throw new IllegalArgumentException("Invalid log level: " + logLevelString);
 	}
+
 }

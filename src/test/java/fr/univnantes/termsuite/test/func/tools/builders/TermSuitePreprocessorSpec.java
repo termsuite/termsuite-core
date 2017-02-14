@@ -53,7 +53,7 @@ public class TermSuitePreprocessorSpec {
 		Preprocessor
 				.fromTxtCorpus(lang, FunctionalTests.CORPUS1_PATH.toString())
 				.setTreeTaggerHome(FunctionalTests.getTaggerPath())
-				.toJson(folder.getRoot().getAbsolutePath(), Charset.defaultCharset().name())
+				.toJSONCas(folder.getRoot().getAbsolutePath(), Charset.defaultCharset().name())
 				.execute();
 		
 //		assertThat(folder.getRoot().list()).extracting("name").containsExactly("file1.xmi", "dir1");

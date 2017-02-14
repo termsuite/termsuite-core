@@ -3,8 +3,11 @@ package fr.univnantes.termsuite.api;
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -38,8 +41,10 @@ import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
+import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.uima.PipelineListener;
+import fr.univnantes.termsuite.utils.JCasUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class Preprocessor {
@@ -48,6 +53,10 @@ public class Preprocessor {
 	@Inject
 	private CorpusService corpusService;
 	
+	private Optional<Tagger> tagger = Optional.of(Tagger.TREE_TAGGER);
+	private Optional<Boolean> documentLoggingEnabled = Optional.of(true);
+	private Optional<Boolean> fixedExpressionEnabled = Optional.of(false);
+
 	private Path taggerPath;
 	private Optional<ResourceConfig> resourceOptions = Optional.empty();
 	private Optional<TermHistory> history = Optional.empty();
@@ -56,6 +65,21 @@ public class Preprocessor {
 	
 	public Preprocessor setTaggerPath(Path taggerPath) {
 		this.taggerPath = taggerPath;
+		return this;
+	}
+	
+	public Preprocessor setTagger(Tagger tagger) {
+		this.tagger = Optional.of(tagger);
+		return this;
+	}
+	
+	public Preprocessor setDocumentLoggingEnabled(boolean documentLoggingEnabled) {
+		this.documentLoggingEnabled = Optional.of(documentLoggingEnabled);
+		return this;
+	}
+	
+	public Preprocessor setFixedExpressionEnabled(boolean fixedExpressionEnabled) {
+		this.fixedExpressionEnabled = Optional.of(fixedExpressionEnabled);
 		return this;
 	}
 	
@@ -90,7 +114,8 @@ public class Preprocessor {
 	}
 
 	public IndexedCorpus consumeToIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
-		String name = asService(textCorpus.getLang()).generateTerminologyName(textCorpus);
+		PreprocessorService preprocService = asService(textCorpus.getLang());
+		String name = preprocService.generateTerminologyName(textCorpus);
 		
 		if(preprocessedCorpusCachePath.isPresent()) {
 			if(preprocessedCorpusCachePath.get().toFile().exists()) {
@@ -106,14 +131,32 @@ public class Preprocessor {
 				logger.info("No cached terminology found");
 		}
 		
+		
 		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
 		OccurrenceStore store = occurrenceStore;
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(termino, store);
 		Injector injector = Guice.createInjector(new ImportModule(indexedCorpus, maxSize));
 		TermOccAnnotationImporter importer = injector.getInstance(TermOccAnnotationImporter.class);
 
+		
+		Stream<JCas> preapredStream = asStream(textCorpus);
+		if(xmiPath.isPresent())
+			preapredStream = preapredStream.map(cas -> preprocService.toXMICas(
+					cas, 
+					toCasFile(xmiPath.get(), cas, "xmi")));
+		if(tsvPath.isPresent())
+			preapredStream = preapredStream.map(cas -> preprocService.toTSVCas(
+					cas, 
+					toCasFile(tsvPath.get(), cas, "tsv")));
+		if(jsonPath.isPresent())
+			preapredStream = preapredStream.map(cas -> preprocService.toJSONCas(
+					cas, 
+					toCasFile(jsonPath.get(), cas, "json")));
+		
+		
+		
 		logger.info("Starting preprocessing pipeline");
-		asStream(textCorpus).forEach(importer::importCas);
+		preapredStream.forEach(importer::importCas);
 		
 		if(preprocessedCorpusCachePath.isPresent()) {
 			logger.info("Saving preprocessed terminology to cache path {}", preprocessedCorpusCachePath.get());
@@ -126,6 +169,17 @@ public class Preprocessor {
 		return indexedCorpus;
 	}
 	
+	private Path toCasFile(Path parentDestination, JCas cas, String newExtension) {
+
+		String txtUri = JCasUtils.getSourceDocumentAnnotation(cas).get()
+				.getUri()
+				.replaceAll("\\.txt$", "." + newExtension);
+
+		Path resolve = parentDestination.resolve(Paths.get(txtUri).getFileName());
+
+		return resolve;
+	}
+
 	public PreprocessedCorpus toPreparedCorpusJSON(TextCorpus textCorpus, Path jsonDir) {
 		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), jsonDir, PreprocessedCorpus.JSON_PATTERN, PreprocessedCorpus.JSON_EXTENSION);
 		
@@ -178,7 +232,16 @@ public class Preprocessor {
 				.create(lang, taggerPath)
 				.setNbDocuments(corpusMetadata.getNbDocuments())
 				.setCorpusSize(corpusMetadata.getTotalSize());
-	
+		
+		if(tagger.isPresent()) 
+			builder.setTagger(tagger.get());
+		
+		if(documentLoggingEnabled.isPresent())
+			builder.setDocumentLoggingEnabled(documentLoggingEnabled.get());
+		
+		if(fixedExpressionEnabled.isPresent())
+			builder.setFixedExpressionEnabled(fixedExpressionEnabled.get());
+			
 		if(listener.isPresent())
 			builder.addPipelineListener(listener.get());
 		
@@ -187,6 +250,7 @@ public class Preprocessor {
 		
 		if(resourceOptions.isPresent()) 
 			builder.setResourceConfig(resourceOptions.get());
+
 
 		if(history.isPresent())
 				builder.setHistory(history.get());
@@ -209,4 +273,21 @@ public class Preprocessor {
 					new PreprocessingModule(lang, aae))
 				.getInstance(PreprocessorService.class);
 	}
+
+	private Optional<Path> xmiPath = Optional.empty();
+	private Optional<Path> tsvPath = Optional.empty();
+	private Optional<Path> jsonPath = Optional.empty();
+	
+	public void toXMI(Path xmiPath) {
+		this.xmiPath = Optional.of(xmiPath);
+	}
+
+	public void toTSV(Path tsvPath) {
+		this.tsvPath = Optional.of(tsvPath);
+	}
+
+	public void toJSON(Path jsonPath) {
+		this.jsonPath = Optional.of(jsonPath);
+	}
+
 }

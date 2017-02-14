@@ -64,34 +64,7 @@ public class SpotterTSVWriter extends CasExporter {
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException {
 	    
-		String name = getExportFilePath(cas, "tsv");
-		if (name == null) {
-			this.getContext().getLogger()
-					.log(Level.WARNING, "Skiping CAS Serialization");
-			return;
-		}
-		try {
-			File file = new File(this.directoryFile, name);
-			OutputStreamWriter out = new OutputStreamWriter(
-					new FileOutputStream(file), "utf-8");
-			try {
-				this.getContext().getLogger()
-						.log(Level.FINE, "Writing " + file.getAbsolutePath());
-				AnnotationIndex<Annotation> index = cas
-						.getAnnotationIndex(WordAnnotation.type);
-				WordAnnotation word;
-				for (Annotation annot : index) {
-					word = (WordAnnotation) annot;
-					out.append(word.getCoveredText()).append('\t');
-					out.append(word.getCategory()).append('\t');
-					out.append(word.getLemma()).append('\n');
-				}
-			} finally {
-				out.close();
-			}
-		} catch (Exception e) {
-			throw new AnalysisEngineProcessException(e);
-		}
 	}
 
+	
 }

@@ -86,7 +86,7 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * 
  * @author Damien Cram
  */
-public class TerminologyExtractor {
+public class TerminologyExtractor { // NO_UCD (public entry point)
 	
 	private enum CollectionMode {ISTEX_API, FILESYSTEM, INLINE_TEXT}
 	
@@ -115,7 +115,7 @@ public class TerminologyExtractor {
 	private static final String CORPUS_FORMAT = "corpus-format";
 	
 	/** Name of the parameter that must be set to the tt dir */
-	public static final String P_TAGGER_HOME_DIRECTORY = "tagger-home";
+	private static final String P_TAGGER_HOME_DIRECTORY = "tagger-home";
 	
 	/** Name of the parameter that must be set to disable graphical variants */
 	private static final String GRAPHICAL_SIMILARITY = "graphical-similarity-th";

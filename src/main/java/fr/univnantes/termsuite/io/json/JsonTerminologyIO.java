@@ -85,13 +85,11 @@ public class JsonTerminologyIO {
 	private static final String MSG_WORD_NOT_FOUND = "No such word: %s";
 	private static final String MSG_NO_SUCH_TERM_IN_TERMINO = "No such term in terminology: %s";
 
-
 	/*
 	 * Occurrence storing options
 	 */
 	private static final String OCCURRENCE_STORAGE_EMBEDDED = "embedded";
 	private static final String OCCURRENCE_STORAGE_DISK = "disk";
-	
 	
 	/*
 	 * Json properties
@@ -466,12 +464,14 @@ public class JsonTerminologyIO {
 			for(String groupingKey:contextVectors.keySet()) {
 				currentTempVecList = contextVectors.get(groupingKey);
 				term = termino.getTerms().get(groupingKey);
-				contextVector = new ContextVector(term);
-				for(TempVecEntry tempVecEntry:currentTempVecList) {
-					coTerm = termino.getTerms().get(tempVecEntry.getTermGroupingKey());
-					contextVector.addEntry(coTerm, tempVecEntry.getNbCooccs(), tempVecEntry.getAssocRate());
+				if(!currentTempVecList.isEmpty()) {
+					contextVector = new ContextVector(term);
+					for(TempVecEntry tempVecEntry:currentTempVecList) {
+						coTerm = termino.getTerms().get(tempVecEntry.getTermGroupingKey());
+						contextVector.addEntry(coTerm, tempVecEntry.getNbCooccs(), tempVecEntry.getAssocRate());
+					}
+					term.setContext(contextVector);
 				}
-				term.setContext(contextVector);
 			}
 		}
 
@@ -499,7 +499,7 @@ public class JsonTerminologyIO {
 		return properties;
 	}
 
-	public static <T extends Enum<T> & Property<?>> Object readPropertyValue(JsonParser jp, 
+	private static <T extends Enum<T> & Property<?>> Object readPropertyValue(JsonParser jp, 
 			T property) throws IOException {
 		if(property.getRange().equals(Double.class)) {
 			checkToken(property, jp.currentToken(), JsonToken.VALUE_NUMBER_FLOAT);
@@ -537,13 +537,13 @@ public class JsonTerminologyIO {
 		}
 	}
 
-	public static void readCollection(JsonParser jp, Collection<Object> c) throws IOException {
+	private static void readCollection(JsonParser jp, Collection<Object> c) throws IOException {
 		while(jp.nextToken() != JsonToken.END_ARRAY) {
 			c.add(jp.getCurrentValue());
 		}
 	}
 
-	public static <T extends Enum<T> & Property<?>> PropertyValue loadEnumConstant(T property, String jsonString) {
+	private static <T extends Enum<T> & Property<?>> PropertyValue loadEnumConstant(T property, String jsonString) {
 		for(Object value:property.getRange().getEnumConstants()) {
 			if(((PropertyValue)value).getSerializedString().equals(jsonString))
 				return (PropertyValue)value;
@@ -551,7 +551,7 @@ public class JsonTerminologyIO {
 		throw new IllegalStateException(String.format("Unkown value <%s> for enun class %s", jsonString, property.getRange()));
 	}
 
-	public static <T extends Enum<T> & Property<?>> void checkToken(T property, JsonToken valueToken, JsonToken... expectedToken) {
+	private static <T extends Enum<T> & Property<?>> void checkToken(T property, JsonToken valueToken, JsonToken... expectedToken) {
 		if(!Arrays.asList(expectedToken).contains(valueToken))
 			throw new IllegalStateException(String.format(
 				"Expected %s token for property %s (range: %s). Got: <%s>", 
@@ -749,7 +749,7 @@ public class JsonTerminologyIO {
 		jg.close();
 	}
 
-	public static <P extends Enum<P> & Property<?>> void writeProperties(JsonGenerator jg, PropertyHolder<P> t) throws IOException {
+	private static <P extends Enum<P> & Property<?>> void writeProperties(JsonGenerator jg, PropertyHolder<P> t) throws IOException {
 		for(P p:t.getProperties().keySet()) {
 			jg.writeFieldName(p.getJsonField());
 			writePropertyValue(jg, p, t.get(p));

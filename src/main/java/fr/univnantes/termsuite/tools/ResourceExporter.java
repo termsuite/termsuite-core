@@ -19,7 +19,7 @@ import fr.univnantes.termsuite.uima.ResourceType;
  * @author Damien Cram
  *
  */
-public class ResourceExporter {
+public class ResourceExporter { // NO_UCD (public entry point)
 	
 	
 	public static void main(String[] args) throws IOException {

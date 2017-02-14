@@ -96,12 +96,6 @@ public class BilingualAlignmentService {
 	private static final String ERR_VECTOR_NOT_SET = "Cannot align on term %s. Cause: context vector no set.";
 
 	
-	/**
-	 * The bonus factor applied to dictionary candidates when they are
-	 * merged with distributional candidates
-	 */
-	public static final double DICO_CANDIDATE_BONUS_FACTOR = 30;
-
 	@Inject
 	private BilingualDictionary dico;
 	

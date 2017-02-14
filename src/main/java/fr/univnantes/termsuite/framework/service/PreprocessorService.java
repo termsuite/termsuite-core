@@ -36,7 +36,8 @@ import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.projection.DocumentProjection;
 import fr.univnantes.termsuite.projection.DocumentProjectionService;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
+import fr.univnantes.termsuite.uima.readers.TSVCasSerializer;
 import fr.univnantes.termsuite.utils.JCasUtils;
 
 public class PreprocessorService {
@@ -69,7 +70,7 @@ public class PreprocessorService {
 				this.uimaPipelineLang, 
 				textCorpus.getLang());
 	}
-	
+
 	public JCas prepare(Document document) {
 		try {
 			JCas cas = createCas(document);
@@ -124,17 +125,28 @@ public class PreprocessorService {
 		return cas;
 	}
 
-	private void toXMIPath(Path filePath, JCas cas) {
+	public JCas toTSVCas(JCas cas, Path filePath) {
+		try {
+			TSVCasSerializer.serialize(cas, new FileWriter(makeParentDirs(filePath).toFile()));
+			return cas;
+		} catch (IOException e) {
+			throw new TermSuiteException(e);
+		}
+	}
+
+	public JCas toXMICas(JCas cas, Path filePath) {
 		try {
 			XmiCasSerializer.serialize(cas.getCas(), new FileOutputStream(makeParentDirs(filePath).toFile()));
+			return cas;
 		} catch (FileNotFoundException | SAXException e) {
 			throw new TermSuiteException(e);
 		}
 	}
 
-	private void toJsonPath(Path filePath, JCas cas) {
+	public JCas toJSONCas(JCas cas, Path filePath) {
 		try {
-			TermSuiteJsonCasSerializer.serialize(new FileWriter(makeParentDirs(filePath).toFile()), cas);
+			JsonCasSerializer.serialize(new FileWriter(makeParentDirs(filePath).toFile()), cas);
+			return cas;
 		} catch (IOException e) {
 			throw new TermSuiteException(e);
 		}
@@ -148,13 +160,13 @@ public class PreprocessorService {
 	public void consumeToTargetJsonCorpus(JCas cas, TextCorpus textCorpus, PreprocessedCorpus targetCorpus) {
 		String sourceDocumentUri = JCasUtils.getSourceDocumentAnnotation(cas).get().getUri();
 		Path targetDocumentPath = corpusService.getTargetDocumentPath(targetCorpus, textCorpus, Paths.get(sourceDocumentUri));
-		toJsonPath(targetDocumentPath, cas);
+		toJSONCas(cas, targetDocumentPath);
 	}
 
 	public void consumeToTargetXMICorpus(JCas cas, TextCorpus textCorpus, PreprocessedCorpus targetCorpus) {
 		String sourceDocumentUri = JCasUtils.getSourceDocumentAnnotation(cas).get().getUri();
 		Path targetDocumentPath = corpusService.getTargetDocumentPath(targetCorpus, textCorpus, Paths.get(sourceDocumentUri));
-		toXMIPath(targetDocumentPath, cas);
+		toXMICas(cas, targetDocumentPath);
 	}
 
 	public String generateTerminologyName(TextCorpus textCorpus) {

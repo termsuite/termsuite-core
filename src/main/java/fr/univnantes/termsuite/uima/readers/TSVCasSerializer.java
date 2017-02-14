@@ -21,39 +21,36 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.model;
+package fr.univnantes.termsuite.uima.readers;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
+import java.io.IOException;
+import java.io.Writer;
 
-public enum Tagger {
-	MATE("mate", "mate"),
-	TREE_TAGGER("tree-tagger", "tt");
-	
-	private String shortName;
-	private String name;
+import org.apache.uima.cas.text.AnnotationIndex;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.tcas.Annotation;
 
-	private Tagger(String name, String shortName) {
-		this.shortName = shortName;
-		this.name = name;
-	}
-	
-	public String getShortName() {
-		return shortName;
-	}
-	
-	public String getName() {
-		return name;
-	}
+import fr.univnantes.termsuite.types.WordAnnotation;
 
-	public static Stream<Tagger> stream() {
-		return Arrays.stream(values());
-	}
+/**
+ * 
+ * Exports all {@link WordAnnotation} of a CAS to a {@link Writer}
+ * 
+ * @author Damien Cram
+ *
+ */
+public class TSVCasSerializer {
 
-	public static Tagger forName(String name) {
-		for(Tagger t:values())
-			if(t.getName().equals(name) && t.getShortName().equals(name))
-				return t;
-		return null;
-	}
+    public static void serialize(JCas cas, Writer writer) throws IOException {
+		AnnotationIndex<Annotation> index = cas
+				.getAnnotationIndex(WordAnnotation.type);
+		WordAnnotation word;
+		for (Annotation annot : index) {
+			word = (WordAnnotation) annot;
+			writer.append(word.getCoveredText()).append('\t');
+			writer.append(word.getCategory()).append('\t');
+			writer.append(word.getLemma()).append('\n');
+		}
+        writer.close();
+    }
 }
