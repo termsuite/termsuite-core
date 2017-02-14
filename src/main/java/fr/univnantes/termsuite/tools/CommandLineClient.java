@@ -1,5 +1,7 @@
 package fr.univnantes.termsuite.tools;
 
+import static java.util.stream.Collectors.toList;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -203,12 +205,13 @@ public abstract class CommandLineClient {
 		}
 	}
 
+
 	private void checkAtLeastOneOf() {
 		for(Set<CliOption> bag:atLeastOneOfBags) {
 			boolean found = false;
 			for(CliOption opt:bag) 
 				found |= getOpt(opt).isPresent();
-			Preconditions.checkState(found, "At least one option of %s must be set.", bag);
+			Preconditions.checkState(found, "At least one option of %s must be set.", bag.stream().sorted().map(opt -> "--" + opt.getOptName()).collect(toList()));
 		}
 	}
 	

@@ -3,6 +3,7 @@ package fr.univnantes.termsuite.test.func.tools.cmd;
 import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.fail;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -25,7 +26,23 @@ public class PreprocessorCLISpec {
 
 	@Rule
 	public TemporaryFolder folder = new TemporaryFolder();
-	
+
+	@Test
+	public void testTerminoWithoutOutputParam() throws Exception {
+		try {
+			launch(String.format("-t %s -c %s -l %s --watch \"%s\"" ,
+					FunctionalTests.getTaggerPath(),
+					FunctionalTests.getCorpusWEShortPath(Lang.EN),
+					Lang.EN.getCode(),
+					"offshore wind energy"
+					));
+			fail("Should have rased an exception because at least one output param must be set.");
+		} catch(Exception e) {
+			assertThat(e).hasMessageContaining("At least one option of [--json, --tsv-anno, --json-anno, --xmi-anno] must be set.");
+		}
+
+	}
+
 	@Test
 	public void testTerminoEnBasic() throws Exception {
 		
