@@ -68,6 +68,12 @@ public class TermHistory {
 		addWatchedTerms(Lists.newArrayList(termKeys));
 	}
 	
+	public void addWatchedLemmas(String... lemmas) {
+		for(String lemma:lemmas)
+			watchedLemmas.add(lemma);
+	}
+
+	
 	private static final String LINE_FORMAT="[%s] <%s> %-25s > %s%n";
 	public String toString(String termKey) {
 		

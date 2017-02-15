@@ -55,7 +55,7 @@ import fr.univnantes.termsuite.test.func.tools.builders.TermSuitePreprocessorSpe
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoCleanerSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteAlignerCLISpec;
-import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
+import fr.univnantes.termsuite.test.func.tools.cmd.TerminologyExtractorCLISpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
@@ -69,7 +69,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TermSuiteTerminoCLISpec;
 	FrenchWindEnergyProjectorSpec.class,
 	TermSuitePreprocessorSpec.class,
 	TerminoCleanerSpec.class,
-	TermSuiteTerminoCLISpec.class,
+	TerminologyExtractorCLISpec.class,
 	TermSuiteAlignerCLISpec.class,
 	TerminoExtractorSpec.class
 	

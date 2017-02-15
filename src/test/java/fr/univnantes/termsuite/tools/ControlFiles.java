@@ -42,7 +42,6 @@ import com.google.common.base.Splitter;
 import fr.univnantes.termsuite.model.CompoundType;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.tools.ControlFilesGenerator;
 
 public class ControlFiles {
 	

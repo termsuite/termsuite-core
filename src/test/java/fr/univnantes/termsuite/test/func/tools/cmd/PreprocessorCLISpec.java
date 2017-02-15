@@ -38,7 +38,7 @@ public class PreprocessorCLISpec {
 					));
 			fail("Should have rased an exception because at least one output param must be set.");
 		} catch(Exception e) {
-			assertThat(e).hasMessageContaining("At least one option of [--json, --tsv-anno, --json-anno, --xmi-anno] must be set.");
+			assertThat(e).hasMessageContaining("At least one option in --json, --json-anno, --tsv-anno, --xmi-anno must be set");
 		}
 
 	}

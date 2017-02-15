@@ -4,8 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
+import fr.univnantes.termsuite.utils.JsonConfigObject;
 
-public class GathererOptions  {
+public class GathererOptions  extends JsonConfigObject  {
 	@JsonProperty("semantic-enabled")
 	private boolean semanticEnabled = false;
 	
@@ -35,6 +36,24 @@ public class GathererOptions  {
 	@JsonProperty("semantic-similarity-distance")
 	private Class<? extends SimilarityDistance> semanticSimilarityDistance = Cosine.class;
 	
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof GathererOptions) {
+			GathererOptions o = (GathererOptions)obj;
+			return semanticEnabled == o.semanticEnabled
+					&& graphicalEnabled == o.graphicalEnabled
+					&& graphicalSimilarityThreshold == o.graphicalSimilarityThreshold
+					&& maxClassSize == o.maxClassSize
+					&& maxNumberOfComparisons == o.maxNumberOfComparisons
+					&& mergerEnabled == o.mergerEnabled
+					&& semanticSimilarityThreshold == o.semanticSimilarityThreshold
+					&& semanticNbCandidates == o.semanticNbCandidates
+					&& semanticSimilarityDistance.equals(o.semanticSimilarityDistance)
+					;
+		} else return false;
+	}
+
 	public boolean isSemanticEnabled() {
 		return semanticEnabled;
 	}

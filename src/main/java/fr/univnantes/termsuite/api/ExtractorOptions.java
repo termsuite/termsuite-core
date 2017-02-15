@@ -1,5 +1,7 @@
 package fr.univnantes.termsuite.api;
 
+import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
@@ -8,8 +10,9 @@ import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.postproc.TermRankingOptions;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalOptions;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
+import fr.univnantes.termsuite.utils.JsonConfigObject;
 
-public class ExtractorOptions {
+public class ExtractorOptions extends JsonConfigObject {
 
 	@JsonProperty("pre-filter")
 	private TerminoFilterOptions preFilterConfig = new TerminoFilterOptions();
@@ -36,7 +39,7 @@ public class ExtractorOptions {
 	/*
 	 * Ensure it is only instanciated through default JSON config in classpath
 	 */
-	private ExtractorOptions() {
+	public ExtractorOptions() {
 		super();
 	}
 
@@ -102,4 +105,21 @@ public class ExtractorOptions {
 		this.contextualizerOptions = contextualizerOptions;
 		return this;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof ExtractorOptions) {
+			ExtractorOptions o = (ExtractorOptions)obj;
+			return 
+					Objects.equals(preFilterConfig, o.preFilterConfig)
+					&& Objects.equals(postFilterConfig, o.postFilterConfig)
+					&& Objects.equals(morphologicalConfig, o.morphologicalConfig)
+					&& Objects.equals(gathererConfig, o.gathererConfig)
+					&& Objects.equals(rankingConfig, o.rankingConfig)
+					&& Objects.equals(contextualizerOptions, o.contextualizerOptions)
+					&& Objects.equals(postProcessorConfig, o.postProcessorConfig);
+		} else 
+			return false;
+	}
+	
 }

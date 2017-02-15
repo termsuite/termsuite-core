@@ -2,7 +2,9 @@ package fr.univnantes.termsuite.engines.splitter;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MorphologicalOptions {
+import fr.univnantes.termsuite.utils.JsonConfigObject;
+
+public class MorphologicalOptions  extends JsonConfigObject {
 
 	private boolean enabled = true;
 	
@@ -31,6 +33,29 @@ public class MorphologicalOptions {
 
 	@JsonProperty("segment-similarity-th")
 	private double segmentSimilarityThreshold;
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof MorphologicalOptions) {
+			MorphologicalOptions o = (MorphologicalOptions)obj;
+			return enabled == o.enabled
+					&& prefixSplitterEnabled == o.prefixSplitterEnabled
+					&& derivativesDetecterEnabled == o.derivativesDetecterEnabled
+					&& nativeSplittingEnabled == o.nativeSplittingEnabled
+					&& minComponentSize == o.minComponentSize
+					&& maxNumberOfComponents == o.maxNumberOfComponents
+					&& alpha == o.alpha
+					&& beta == o.beta
+					&& gamma == o.gamma
+					&& delta == o.delta
+					&& scoreThreshold == o.scoreThreshold
+					&& segmentSimilarityThreshold == o.segmentSimilarityThreshold
+					;
+		} else return false;
+	}
+
+
 	
 	public double getAlpha() {
 		return alpha;

@@ -25,7 +25,9 @@ package fr.univnantes.termsuite.resources;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class PostProcessorOptions {
+import fr.univnantes.termsuite.utils.JsonConfigObject;
+
+public class PostProcessorOptions  extends JsonConfigObject {
 	
 	@JsonProperty("enabled")
 	private boolean enabled = true;
@@ -41,6 +43,22 @@ public class PostProcessorOptions {
 	
 	@JsonProperty("term-independance-th")
 	private double termIndependanceTh = 0.10;
+
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof PostProcessorOptions) {
+			PostProcessorOptions o = (PostProcessorOptions)obj;
+			return enabled == o.enabled
+					&& affixScoreTh == o.affixScoreTh
+					&& variationScoreTh == o.variationScoreTh
+					&& orthographicScoreTh == o.orthographicScoreTh
+					&& termIndependanceTh == o.termIndependanceTh
+					;
+		} else return false;
+	}
+
 
 	public PostProcessorOptions() {
 	}

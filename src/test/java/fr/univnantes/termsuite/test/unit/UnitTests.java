@@ -89,6 +89,7 @@ import fr.univnantes.termsuite.test.unit.readers.TermsuiteJsonCasSerializerDeser
 import fr.univnantes.termsuite.test.unit.resources.PrefixTreeSpec;
 import fr.univnantes.termsuite.test.unit.resources.SuffixDerivationListSpec;
 import fr.univnantes.termsuite.test.unit.resources.SuffixDerivationSpec;
+import fr.univnantes.termsuite.test.unit.tools.ClientHelperSpec;
 import fr.univnantes.termsuite.test.unit.uima.engines.FixedExpressionSpotterSpec;
 import fr.univnantes.termsuite.test.unit.utils.CollectionUtilsSpec;
 import fr.univnantes.termsuite.test.unit.utils.CompoundUtilsSpec;
@@ -108,7 +109,12 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	TerminoExtractorSpec.class,
 	PreprocessorSpec.class,
 	ResourceConfigSpec.class,
-	
+
+	/*
+	 * Command Line API
+	 */
+	ClientHelperSpec.class,
+
 	/*
 	 * Engines
 	 */

@@ -144,19 +144,19 @@ public class ControlFilesGenerator {
 		
 	}
 
-	private static String getCompoundsFileName() {
+	public static String getCompoundsFileName() {
 		return "compounds.tsv";
 	}
 
-	private static String getDerivatesFileName() {
+	public static String getDerivatesFileName() {
 		return "derivates.tsv";
 	}
 
-	private static String getPrefixFileName() {
+	public static String getPrefixFileName() {
 		return "prefixes.tsv";
 	}
 
-	private static String getSyntacticRuleFileName(String ruleName) {
+	public static String getSyntacticRuleFileName(String ruleName) {
 		return "syntactic-" + ruleNametoFileName(ruleName) + ".tsv";
 	}
 

@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.test.func.tools.cmd;
 
 import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
@@ -11,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-import org.junit.After;
 import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
@@ -22,34 +22,28 @@ import com.google.common.base.Splitter;
 
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Relation;
+import fr.univnantes.termsuite.model.RelationProperty;
+import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
-import fr.univnantes.termsuite.tools.TerminologyExtractor;
+import fr.univnantes.termsuite.tools.TerminologyExtractorCLI;
 import fr.univnantes.termsuite.utils.FileUtils;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TermSuiteTerminoCLISpec {
+public class TerminologyExtractorCLISpec {
 	
 	@Rule
 	public TemporaryFolder folder = new TemporaryFolder();
 	
-	
-	@After
-	public void clear() {
-		TermSuiteResourceManager.getInstance().clear();
-	}
-	
 	@Test
-	public void testTerminoEnBasic() throws Exception {
-		
-		
+	public void testTerminoEnBasicFromCorpus() throws Exception {
 		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
 		Path tbxPath = Paths.get(folder.getRoot().getAbsolutePath(), "tbx.json");
 		Path tsvPath = Paths.get(folder.getRoot().getAbsolutePath(), "tsv.json");
-		
 		
 		assertThat(jsonPath.toFile()).doesNotExist();
 		assertThat(tbxPath.toFile()).doesNotExist();
@@ -68,23 +62,25 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(tbxPath.toFile()).exists();
 		assertThat(tbxPath.toFile()).exists();
 		
-		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
-		assertThat(termindex).containsTerm("nn: wind energy").hasNTerms(843);
-		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
+		assertThat(termindex)
+			.containsTerm("nn: wind energy")
+			.hasNTerms(2507);
+
+		assertNull(termindex.getTerms().get("n: energy").getContext());
 	}
 
 
 	@Test
-	public void testTerminoEnWithSpecificTsvExport() throws Exception {
+	public void testTerminoEnFromCorpusWithSpecificTsvExport() throws Exception {
 		
 		Path tsvPath = Paths.get(folder.getRoot().getAbsolutePath(), "tsv.json");
-		
 		
 		assertThat(tsvPath.toFile()).doesNotExist();
 		
 		launch(String.format("-t %s -c %s -l %s --tsv %s "
-				+ "--tsv-properties pilot,frequency,dfreq,pattern,spottingRule "
-				+ "--tsv-show-scores" ,
+				+ " --tsv-properties pilot,frequency,dfreq,pattern,spottingRule,graphSim"
+				,
 				FunctionalTests.getTaggerPath(),
 				FunctionalTests.getCorpusWEShortPath(Lang.EN),
 				Lang.EN.getCode(),
@@ -94,8 +90,8 @@ public class TermSuiteTerminoCLISpec {
 		assertThat(tsvPath.toFile()).exists();
 
 		TermSuiteAssertions.assertThat(FileUtils.readFile(tsvPath.toString(), Charset.defaultCharset()))
-			.tsvLineEquals(1, "#","type","pilot","f","dfreq","p", "rule")
-			.tsvLineEquals(2, "1","T","rotor","96","2", "N", "n")
+			.tsvLineEquals(1, "#","type","pilot","f","dfreq","p", "rule", "graphSim")
+			.tsvLineEquals(2, "1","T","rotor","282","2", "N", "n", "")
 			;
 				
 	}
@@ -105,7 +101,7 @@ public class TermSuiteTerminoCLISpec {
 		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
 		assertThat(jsonPath.toFile()).doesNotExist();
 		
-		launch(String.format("-t %s -c %s -l %s --json %s --filter-property dfreq --filter-th 2" ,
+		launch(String.format("-t %s -c %s -l %s --json %s --post-filter-property dfreq --post-filter-th 2" ,
 				FunctionalTests.getTaggerPath(),
 				FunctionalTests.getCorpusWEShortPath(Lang.EN),
 				Lang.EN.getCode(),
@@ -114,11 +110,12 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
+		
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.containsVariation("nn: wind energy", VariationType.SYNTAGMATIC, "ann: offshore wind energy")
-			.hasNTerms(92);
+			.containsVariation("nn: wind speed", VariationType.SYNTAGMATIC, "ann: average wind speed")
+			.hasNTerms(499);
 	}
 	
 
@@ -127,7 +124,7 @@ public class TermSuiteTerminoCLISpec {
 		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
 		assertThat(jsonPath.toFile()).doesNotExist();
 		
-		launch(String.format("-t %s -c %s -l %s --json %s --filter-property specificity --filter-top-n 100 --filter-variants" ,
+		launch(String.format("-t %s -c %s -l %s --json %s --post-filter-property specificity --post-filter-top-n 100" ,
 				FunctionalTests.getTaggerPath(),
 				FunctionalTests.getCorpusWEShortPath(Lang.EN),
 				Lang.EN.getCode(),
@@ -136,11 +133,39 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 		assertThat(termindex).containsTerm("nn: wind turbine").hasNTerms(100);
 	}
 
-	
+	@Test
+	public void testTerminoEnFromCorpusDisablePostProc() throws Exception {
+		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
+		assertThat(jsonPath.toFile()).doesNotExist();
+		
+		launch(String.format("-t %s -c %s -l %s --json %s --disable-post-processing" ,
+				FunctionalTests.getTaggerPath(),
+				FunctionalTests.getCorpusWEShortPath(Lang.EN),
+				Lang.EN.getCode(),
+				jsonPath.toString()
+			));
+		
+		assertThat(jsonPath.toFile()).exists();
+		
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
+		
+		assertThat(termindex.getRelations()).isNotEmpty();
+		for(Relation relation:termindex.getRelations()) {
+			assertFalse(relation.isPropertySet(RelationProperty.AFFIX_ORTHOGRAPHIC_SCORE));
+			assertFalse(relation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE));
+		}
+		
+		assertThat(termindex.getTerms()).isNotEmpty();
+		for(Term term:termindex.getTerms().values()) {
+			assertFalse(term.isPropertySet(TermProperty.INDEPENDANCE));
+			assertFalse(term.isPropertySet(TermProperty.ORTHOGRAPHIC_SCORE));
+		}
+	}
+
 	@Test
 	public void testTerminoEnContextualizeSWTOnly() throws Exception {
 		
@@ -150,7 +175,7 @@ public class TermSuiteTerminoCLISpec {
 		assertTrue(jsonPath.toFile().getAbsoluteFile().getParentFile().canWrite());
 		
 		launch(String.format("-t %s -c %s -l %s --json %s "
-				+ "--contextualize --context-scope 4 --allow-mwts-in-contexts" ,
+				+ "--contextualize --context-scope 4" ,
 				FunctionalTests.getTaggerPath(),
 				FunctionalTests.getCorpusWEShortPath(Lang.EN),
 				Lang.EN.getCode(),
@@ -159,37 +184,17 @@ public class TermSuiteTerminoCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		
-		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 		assertThat(termindex).containsTerm("nn: wind energy");
-//		assertNotNull(termindex.getTermByGroupingKey("n: wind").getContext());
-		assertNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
+		assertNull(termindex.getTerms().get("nn: wind energy").getContext());
+		assertNotNull(termindex.getTerms().get("n: energy").getContext());
+		Term term = termindex.getTerms().get("n: rotor");
+		assertNotNull(term);
+		assertNotNull(term.getContext());
 	}
-
-	@Test
-	public void testTerminoEnContextualizeAllTerms() throws Exception {
-		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino2.json");
-		
-		assertThat(jsonPath.toFile()).doesNotExist();
-		
-		launch(String.format("-t %s -c %s -l %s --json %s "
-				+ "--contextualize --context-scope 2 --contextualize-all-terms --allow-mwts-in-contexts" ,
-				FunctionalTests.getTaggerPath(),
-				FunctionalTests.getCorpusWEShortPath(Lang.EN),
-				Lang.EN.getCode(),
-				jsonPath.toString()
-			));
-		
-		assertThat(jsonPath.toFile()).exists();
-		
-		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath);
-		assertThat(termindex).containsTerm("nn: wind energy");
-//		assertNotNull(termindex.getTermByGroupingKey("n: wind").getContext());
-		assertNotNull(termindex.getTermByGroupingKey("nn: wind energy").getContext());
-	}
-
 	
 	private void launch(String args) throws Exception {
 		List<String> argList = Splitter.on(" ").splitToList(args);
-		TerminologyExtractor.main(argList.toArray(new String[argList.size()]));
+		TerminologyExtractorCLI.main(argList.toArray(new String[argList.size()]));
 	}
 }

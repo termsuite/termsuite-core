@@ -45,4 +45,21 @@ public interface AssociationRate {
 
 	public double getValue(ContextData contextData);
 	
+	@SuppressWarnings("unchecked")
+	public static Class<? extends AssociationRate>[] values() {
+		return new Class[]{
+				MutualInformation.class,
+				LogLikelihood.class
+		};
+	}
+	
+	public static Class<? extends AssociationRate> forName(String name) {
+		for(Class<? extends AssociationRate> cls:values()) {
+			if(cls.getName().equals(name)
+					|| cls.getCanonicalName().equals(name)
+					|| cls.getSimpleName().equals(name))
+				return cls;
+		}
+		throw new IllegalArgumentException("No such " + AssociationRate.class.getSimpleName() + ": " + name);
+	}
 }

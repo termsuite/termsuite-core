@@ -1,7 +1,10 @@
 package fr.univnantes.termsuite.model;
 
 import java.util.Comparator;
+import java.util.Optional;
 import java.util.Set;
+
+import com.google.common.base.Joiner;
 
 public enum RelationProperty implements Property<Relation> {
 
@@ -34,7 +37,9 @@ public enum RelationProperty implements Property<Relation> {
 	VARIANT_BAG_FREQUENCY("VariantBagFrequency", "vBagFreq", "vBagFreq", Integer.class), 
 	IS_DICO("Dico", "isDico", "isDico", Boolean.class), 
 	SEMANTIC_SCORE("SemanticScore", "semScore", "semScore", Double.class), 
+	
 	;
+	
 	private PropertyHolderBase<RelationProperty, Relation> delegate;
 
 	private RelationProperty(String propertyName, String propertyShortName, String jsonField, Class<?> range) {
@@ -96,5 +101,28 @@ public enum RelationProperty implements Property<Relation> {
 
 	public static RelationProperty fromJsonString(String field) {
 		return PropertyHolderBase.fromJsonString(RelationProperty.class, field);
+	}
+
+
+	public static RelationProperty forName(String name) {
+		for(RelationProperty p:values()) {
+			if(p.getPropertyName().equals(name) || p.getShortName().equals(name))
+				return p;
+		}
+		throw new IllegalArgumentException(
+				String.format(
+						"Bad relation property name: %s. Allowed: %s", 
+						name,
+						Joiner.on(',').join(RelationProperty.values())
+				)
+		);
+	}
+
+	public static Optional<RelationProperty> forNameOptional(String str) {
+		for(RelationProperty p:values()) {
+			if(p.getPropertyName().equals(str) || p.getShortName().equals(str))
+				return Optional.of(p);
+		}
+		return Optional.empty();
 	}
 }

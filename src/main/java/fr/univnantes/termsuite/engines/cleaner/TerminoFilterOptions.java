@@ -3,8 +3,9 @@ package fr.univnantes.termsuite.engines.cleaner;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.utils.JsonConfigObject;
 
-public class TerminoFilterOptions  {
+public class TerminoFilterOptions  extends JsonConfigObject  {
 	public static enum FilterType{THRESHOLD, TOP_N};
 
 	private boolean enabled;
@@ -27,6 +28,27 @@ public class TerminoFilterOptions  {
 	@JsonProperty("max-variant-num")
 	private int maxVariantNum = 25;
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof TerminoFilterOptions) {
+			TerminoFilterOptions o = (TerminoFilterOptions)obj;
+			boolean eq = enabled == o.enabled
+					&& filterType == o.filterType
+					&& filterProperty == o.filterProperty
+					&& keepVariants == o.keepVariants;
+			
+			if(keepVariants)
+				eq&= maxVariantNum == o.maxVariantNum;
+			
+			if(filterType == FilterType.THRESHOLD)
+				eq&=threshold.equals(o.threshold);
+			else
+				eq&=topN == o.topN;
+			return eq;
+		} else return false;
+	}
+
+	
 	public int getMaxVariantNum() {
 		return maxVariantNum;
 	}
@@ -36,9 +58,14 @@ public class TerminoFilterOptions  {
 	}
 
 	public TerminoFilterOptions by(TermProperty p) {
+		return setProperty(p);
+	}
+	
+	public TerminoFilterOptions setProperty(TermProperty p) {
 		this.filterProperty = p;
 		return this;
 	}
+
 	
 	public TerminoFilterOptions keepOverTh(Number threshold) {
 		this.filterType = FilterType.THRESHOLD;
@@ -98,4 +125,5 @@ public class TerminoFilterOptions  {
 	public boolean isEnabled() {
 		return enabled;
 	}
+	
 }

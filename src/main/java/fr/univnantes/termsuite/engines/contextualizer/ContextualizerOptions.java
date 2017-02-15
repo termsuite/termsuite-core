@@ -2,7 +2,9 @@ package fr.univnantes.termsuite.engines.contextualizer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ContextualizerOptions  {
+import fr.univnantes.termsuite.utils.JsonConfigObject;
+
+public class ContextualizerOptions   extends JsonConfigObject {
 
 	private boolean enabled = false;
 	
@@ -14,6 +16,20 @@ public class ContextualizerOptions  {
 
 	@JsonProperty("association-rate")
 	private Class<? extends AssociationRate> associationRate = LogLikelihood.class;
+
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof ContextualizerOptions) {
+			ContextualizerOptions o = (ContextualizerOptions)obj;
+			return enabled == o.enabled
+					&& scope == o.scope
+					&& minimumCooccFrequencyThreshold == o.minimumCooccFrequencyThreshold
+					&& associationRate.equals(o.associationRate)
+					;
+		} else return false;
+	}
+
 
 	
 	public Class<? extends AssociationRate> getAssociationRate() {

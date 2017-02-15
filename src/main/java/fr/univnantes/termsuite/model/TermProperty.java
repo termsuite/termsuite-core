@@ -21,8 +21,11 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.model;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Maps;
@@ -134,7 +137,6 @@ public enum TermProperty implements Property<Term> {
 		return delegate.compare(this, o1, o2);
 	}
 
-
 	public static TermProperty forName(String name) {
 		TermProperty termProperty = byNames.get(name);
 		if(termProperty != null)
@@ -148,8 +150,26 @@ public enum TermProperty implements Property<Term> {
 				)
 		);
 	}
-	
+
+	public static Optional<TermProperty> forNameOptional(String name) {
+		TermProperty termProperty = byNames.get(name);
+		if(termProperty != null)
+			return Optional.of(termProperty);
+		else
+			return Optional.empty();
+	}
+
 	public static TermProperty fromJsonString(String field) {
 		return PropertyHolderBase.fromJsonString(TermProperty.class, field);
 	}
+
+	public static Stream<TermProperty> numberValues() {
+		return stream().filter(p -> Number.class.isAssignableFrom(p.getRange()));
+	}
+
+
+	public static Stream<TermProperty> stream() {
+		return Arrays.stream(values());
+	}
+	
 }

@@ -13,6 +13,7 @@ import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.model.TextCorpus;
+import fr.univnantes.termsuite.tools.opt.CliOption;
 
 public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry point)
 	
@@ -23,19 +24,18 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 
 	@Override
 	protected void configureOpts() {
-		declareResourceOpts();
-		declareOptional(CliOption.TAGGER);
+		clientHelper.declareResourceOpts();
+		clientHelper.declareHistory();
+		declareFacultative(CliOption.TAGGER);
 		declareMandatory(CliOption.TAGGER_PATH);
-		declareMandatory(CliOption.CORPUS_PATH);
+		declareMandatory(CliOption.FROM_TXT_CORPUS_PATH);
 		declareMandatory(CliOption.LANGUAGE);
-		declareOptional(CliOption.ENCODING);
+		declareFacultative(CliOption.ENCODING);
 		declareAtLeastOneOf(
 				CliOption.CAS_JSON, 
 				CliOption.CAS_TSV,
 				CliOption.CAS_XMI,
 				CliOption.PREPARED_TERMINO_JSON);
-		declareOptional(CliOption.WATCH);
-		
 	}
 
 	@Override
@@ -47,10 +47,12 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 		
 		preprocessor.setTaggerPath(asDir(CliOption.TAGGER_PATH));
 
-		if(isSet(CliOption.WATCH)) 
-			preprocessor.setHistory(createHistory());
+		if(clientHelper.getHistory().isPresent()) 
+			preprocessor.setHistory(clientHelper.getHistory().get());
 		
-		TextCorpus txtCorpus = toTxtCorpus();
+		preprocessor.setResourceOptions(clientHelper.getResourceConfig());
+		
+		TextCorpus txtCorpus = clientHelper.getTxtCorpus();
 
 		if(isSet(CliOption.CAS_XMI))
 			preprocessor.toXMI(asDir(CliOption.CAS_XMI));
@@ -72,10 +74,6 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 			preprocessor.asStream(txtCorpus).count();
 	}
 	
-	private TextCorpus toTxtCorpus() {
-		Path ascorpusPath = asDir(CliOption.CORPUS_PATH);
-		return new TextCorpus(getLang(), ascorpusPath);
-	}
 
 	public static void main(String[] args) {
 		new PreprocessorCLI().launch(args);

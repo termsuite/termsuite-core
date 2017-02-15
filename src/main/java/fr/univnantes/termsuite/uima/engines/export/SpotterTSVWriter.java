@@ -42,17 +42,8 @@
 package fr.univnantes.termsuite.uima.engines.export;
 
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
-
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.tcas.Annotation;
-import org.apache.uima.util.Level;
-
-import fr.univnantes.termsuite.types.WordAnnotation;
 
 /**
  * Writes spotter cases as TSV.

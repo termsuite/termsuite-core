@@ -29,6 +29,7 @@ import fr.univnantes.termsuite.io.other.VariantEvalExporter;
 import fr.univnantes.termsuite.io.other.VariantEvalExporterOptions;
 import fr.univnantes.termsuite.io.other.VariationExporter;
 import fr.univnantes.termsuite.io.other.VariationRuleExamplesExporter;
+import fr.univnantes.termsuite.io.tbx.TbxExporter;
 import fr.univnantes.termsuite.io.tsv.TsvExporter;
 import fr.univnantes.termsuite.io.tsv.TsvOptions;
 import fr.univnantes.termsuite.model.IndexedCorpus;
@@ -135,10 +136,16 @@ public class TermSuiteFactory {
 		return createTsvExporter(new TsvOptions());
 	}
 
+
+
 	public static IndexedCorpusExporter createTsvExporter(TsvOptions options) {
 		return new BaseIndexedCorpusExporter(new TsvExporter(options));
 	}
 	
+	public static IndexedCorpusExporter createTbxExporter() {
+		return new BaseIndexedCorpusExporter(new TbxExporter());
+	}
+
 	public static IndexedCorpusExporter createJsonExporter(JsonOptions options) {
 		return new BaseIndexedCorpusExporter(new JsonExporter(options));
 	}
