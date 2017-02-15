@@ -40,7 +40,7 @@ import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.uima.engines.preproc.FixedExpressionSpotter;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasDeserializer;
 import fr.univnantes.termsuite.uima.resources.preproc.FixedExpressionResource;
 
 public class FixedExpressionSpotterSpec {
@@ -51,7 +51,7 @@ public class FixedExpressionSpotterSpec {
 	@Before
 	public void set() throws Exception {
 		cas = JCasFactory.createJCas();
-		TermSuiteJsonCasDeserializer.deserialize(new FileInputStream(CAS_URL), cas.getCas());
+		JsonCasDeserializer.deserialize(new FileInputStream(CAS_URL), cas.getCas());
 	}
 	
 	private AnalysisEngine makeAE(boolean removeWordAnnotationFromCas, boolean removeTermOccAnnotationFromCas) throws Exception {

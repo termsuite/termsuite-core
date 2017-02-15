@@ -123,6 +123,22 @@ public class FunctionalTests {
 		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "txt");
 	}
 
+	public static Path getTsvPreprocessedCorpusWEShortPath(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "tsv");
+	}
+
+	public static Path getPreprocessedCorpusWEShortPathAsTermino(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "termino-imported.json");
+	}
+
+	public static Path getXmiPreprocessedCorpusWEShortPath(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "xmi");
+	}
+
+	public static Path getJsonPreprocessedCorpusWEShortPath(Lang lang) {
+		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "json");
+	}
+
 	public static Path getCorpusMobilePath(Lang lang) {
 		return Paths.get("src","test","resources", CORPUS_MOBILE_PATH, lang.getName().toLowerCase(), "txt");
 	}
@@ -183,4 +199,5 @@ public class FunctionalTests {
 	public static Document getWindEnergyDocument(Lang lang, String filename) {
 		return new Document(lang, getCorpusWEPath(lang).resolve(filename).toUri().getPath());
 	}
+
 }

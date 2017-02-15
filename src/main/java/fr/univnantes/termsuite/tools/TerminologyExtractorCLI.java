@@ -66,10 +66,15 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 
 	@Override
 	protected void configureOpts() {
+		
+		// Either from indexed corpus or prepared corpus
 		declareExactlyOneOf(
 				CliOption.FROM_TXT_CORPUS_PATH, 
 				CliOption.FROM_PREPARED_CORPUS_PATH);
 		
+		declareFacultative(CliOption.LANGUAGE);
+
+		// at least one output necessary
 		declareAtLeastOneOf(
 				CliOption.JSON, 
 				CliOption.TSV, 
@@ -84,9 +89,7 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 		declareFacultative(CliOption.TAGGER);
 		declareConditional(
 				CliOption.FROM_TXT_CORPUS_PATH, 
-				CliOption.LANGUAGE,
-				CliOption.TAGGER_PATH,
-				CliOption.LANGUAGE);
+				CliOption.TAGGER_PATH);
 		declareFacultative(CliOption.ENCODING);
 		
 		/*
@@ -119,7 +122,7 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 	} 
 
 	public Lang getLang() {
-		if(isSet(CliOption.FROM_TXT_CORPUS_PATH))
+		if(isSet(CliOption.FROM_TXT_CORPUS_PATH) || isSet(CliOption.FROM_PREPARED_CORPUS_PATH))
 			return super.getLang();
 		else 
 			return getIndexedCorpus().getTerminology().getLang();
@@ -129,8 +132,9 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 		if(isSet(CliOption.FROM_PREPARED_CORPUS_PATH)) {
 			Path path = asPath(CliOption.FROM_PREPARED_CORPUS_PATH);
 			if(path.toFile().isDirectory()) {
-				CliUtil.throwException("Extracting terminology from an XMI corpus not yet supported: %s", path);
-				return null;
+				return TermSuite.toIndexedCorpus(
+						TermSuiteFactory.createPreprocessedCorpus(getLang(), path), 
+						500000);
 			} else {
 				return IndexedCorpusIO.fromJson(path);
 			}

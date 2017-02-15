@@ -1,13 +1,19 @@
 package fr.univnantes.termsuite.framework;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 
 import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.api.PreprocessedCorpus;
 import fr.univnantes.termsuite.api.ResourceConfig;
+import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
@@ -184,5 +190,55 @@ public class TermSuiteFactory {
 
 	public static IndexedCorpusImporter createJsonLoader() {
 		return createJsonLoader(new JsonOptions());
+	}
+
+
+	/**
+	 * 
+	 * Creates a {@link PreprocessedCorpus}. Detects if it is XMI or JSON.
+	 * 
+	 * @param lang
+	 * 			the language of the input corpus
+	 * @param rootDirectory
+	 * 			the root directory of the corpus
+	 * @return
+	 * 			The created {@link PreprocessedCorpus}
+	 */
+	public static PreprocessedCorpus createPreprocessedCorpus(Lang lang, Path rootDirectory) {
+		try {
+			AtomicInteger json = new AtomicInteger(0);
+			AtomicInteger xmi = new AtomicInteger(0);
+			
+			Files.walk(rootDirectory)
+				.filter(file -> file.toFile().isFile())
+				.forEach(filePath-> {
+					if(filePath.getFileName().endsWith(PreprocessedCorpus.JSON_EXTENSION))
+						json.incrementAndGet();
+					else if(filePath.getFileName().endsWith(PreprocessedCorpus.XMI_EXTENSION))
+						xmi.incrementAndGet();
+				});
+			
+			if(json.intValue() > xmi.intValue()) 
+				return createJsonPreprocessedCorpus(lang, rootDirectory);
+			return createXMIPreprocessedCorpus(lang, rootDirectory);
+		} catch (IOException e) {
+			throw new TermSuiteException(e);
+		}
+	}
+	
+	public static PreprocessedCorpus createJsonPreprocessedCorpus(Lang lang, Path rootDirectory) {
+		return new PreprocessedCorpus(
+				lang, 
+				rootDirectory, 
+				PreprocessedCorpus.JSON_PATTERN, 
+				PreprocessedCorpus.JSON_EXTENSION);
+	}
+
+	public static PreprocessedCorpus createXMIPreprocessedCorpus(Lang lang, Path rootDirectory) {
+		return new PreprocessedCorpus(
+				lang, 
+				rootDirectory, 
+				PreprocessedCorpus.XMI_PATTERN, 
+				PreprocessedCorpus.XMI_EXTENSION);
 	}
 }

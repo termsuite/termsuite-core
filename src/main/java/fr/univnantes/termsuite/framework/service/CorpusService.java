@@ -1,5 +1,6 @@
 package fr.univnantes.termsuite.framework.service;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.FileSystems;
@@ -10,13 +11,20 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
+import org.apache.uima.cas.CAS;
+import org.apache.uima.cas.impl.XmiCasDeserializer;
+import org.apache.uima.fit.factory.JCasFactory;
+import org.apache.uima.jcas.JCas;
+
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.api.PreprocessedCorpus;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.model.Corpus;
 import fr.univnantes.termsuite.model.CorpusMetadata;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.TextCorpus;
+import fr.univnantes.termsuite.uima.readers.JsonCasDeserializer;
 import fr.univnantes.termsuite.uima.readers.StringPreparator;
 import fr.univnantes.termsuite.utils.FileUtils;
 
@@ -44,8 +52,8 @@ public class CorpusService {
 		return prepared;
 	}
 
-	StringPreparator stringPreparator = new StringPreparator();
 	public String cleanRawText(String rawText) {
+		StringPreparator stringPreparator = new StringPreparator();
 		return stringPreparator.prepare(rawText);
 	}
 
@@ -96,10 +104,54 @@ public class CorpusService {
 		}
 	}
 	
+	/**
+	 * 
+	 * Reads the {@link TextCorpus} from file system as a {@link Document} stream.
+	 * 
+	 * @param corpus
+	 * 			The input {@link TextCorpus} to read from file system
+	 * @return
+	 * 			The {@link Document} stream
+	 */
 	public Stream<Document> documents(TextCorpus corpus) {
 		return pathWalker(
 				corpus.getRootDirectory(), 
 				corpus.getPattern(), 
 				path -> new Document(corpus.getLang(),  path.toUri().getPath()));
 	}
+	
+	
+	/**
+	 * 
+	 * Reads a {@link PreprocessedCorpus} from file system 
+	 * as a {@link JCas} stream.
+	 * 
+	 * @param corpus
+	 * 			The {@link PreprocessedCorpus}
+	 * @return
+	 * 			The {@link JCas} stream
+	 */
+	public Stream<JCas> cases(PreprocessedCorpus corpus) {
+		return pathWalker(
+				corpus.getRootDirectory(), 
+				corpus.getPattern(), 
+				path -> {
+					try {
+						JCas jCas = JCasFactory.createJCas();
+						CAS cas = jCas.getCas();
+						if(corpus.getExtension().equals(PreprocessedCorpus.XMI_EXTENSION)) {
+							XmiCasDeserializer.deserialize(new FileInputStream(path.toFile()), cas);
+						} else if(corpus.getExtension().equals(PreprocessedCorpus.JSON_EXTENSION)) {
+							JsonCasDeserializer.deserialize(new FileInputStream(path.toFile()), cas);
+						} else
+							throw new IllegalArgumentException("Expected a XMI or JSON " + PreprocessedCorpus.class.getSimpleName());
+						return jCas;
+					} catch (Exception e) {
+						throw new TermSuiteException(e);
+					}
+				});	
+		
+	}
+
+
 }

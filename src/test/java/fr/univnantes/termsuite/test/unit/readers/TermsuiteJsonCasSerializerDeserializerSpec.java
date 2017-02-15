@@ -46,7 +46,7 @@ import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasDeserializer;
 
 /**
  * Created by Simon Meoni on 24/06/16.
@@ -256,7 +256,7 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 
 	@Test
 	public void DeserializationTest() {
-		TermSuiteJsonCasDeserializer.deserialize(fis, jCas.getCas());
+		JsonCasDeserializer.deserialize(fis, jCas.getCas());
 
 		// Test Sdi
 		assertEquals(fixtureCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next().toString(),

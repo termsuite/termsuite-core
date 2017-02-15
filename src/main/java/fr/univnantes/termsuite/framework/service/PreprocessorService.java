@@ -27,7 +27,7 @@ import fr.univnantes.termsuite.api.PreprocessedCorpus;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.engines.prepare.TerminologyPreparator;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.framework.modules.ImportModule;
+import fr.univnantes.termsuite.framework.modules.ImporterModule;
 import fr.univnantes.termsuite.model.CorpusMetadata;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.IndexedCorpus;
@@ -179,8 +179,8 @@ public class PreprocessorService {
 	public DocumentProjectionService toProjectionService(Document document) {
 		String name = "document-" + document.getUrl();
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(uimaPipelineLang, name);
-		Injector injector = Guice.createInjector(new ImportModule(indexedCorpus, Integer.MAX_VALUE));
-		TermOccAnnotationImporter importer = injector.getInstance(TermOccAnnotationImporter.class);
+		Injector injector = Guice.createInjector(new ImporterModule(indexedCorpus, Integer.MAX_VALUE));
+		ImporterService importer = injector.getInstance(ImporterService.class);
 		
 		/*
 		 * Prepare document

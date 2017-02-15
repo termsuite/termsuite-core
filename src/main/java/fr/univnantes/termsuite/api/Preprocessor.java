@@ -27,12 +27,12 @@ import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.framework.PreprocessingPipelineBuilder;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
-import fr.univnantes.termsuite.framework.modules.ImportModule;
+import fr.univnantes.termsuite.framework.modules.ImporterModule;
 import fr.univnantes.termsuite.framework.modules.PreprocessingModule;
 import fr.univnantes.termsuite.framework.modules.TermSuiteModule;
 import fr.univnantes.termsuite.framework.service.CorpusService;
 import fr.univnantes.termsuite.framework.service.PreprocessorService;
-import fr.univnantes.termsuite.framework.service.TermOccAnnotationImporter;
+import fr.univnantes.termsuite.framework.service.ImporterService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.CorpusMetadata;
 import fr.univnantes.termsuite.model.Document;
@@ -133,8 +133,8 @@ public class Preprocessor {
 		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
 		OccurrenceStore store = occurrenceStore;
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(termino, store);
-		Injector injector = Guice.createInjector(new ImportModule(indexedCorpus, maxSize));
-		TermOccAnnotationImporter importer = injector.getInstance(TermOccAnnotationImporter.class);
+		Injector injector = Guice.createInjector(new ImporterModule(indexedCorpus, maxSize));
+		ImporterService importer = injector.getInstance(ImporterService.class);
 
 		
 		Stream<JCas> preapredStream = asStream(textCorpus);
@@ -276,16 +276,18 @@ public class Preprocessor {
 	private Optional<Path> tsvPath = Optional.empty();
 	private Optional<Path> jsonPath = Optional.empty();
 	
-	public void toXMI(Path xmiPath) {
+	public Preprocessor toXMI(Path xmiPath) {
 		this.xmiPath = Optional.of(xmiPath);
+		return this;
 	}
 
-	public void toTSV(Path tsvPath) {
+	public Preprocessor toTSV(Path tsvPath) {
 		this.tsvPath = Optional.of(tsvPath);
+		return this;
 	}
 
-	public void toJSON(Path jsonPath) {
+	public Preprocessor toJSON(Path jsonPath) {
 		this.jsonPath = Optional.of(jsonPath);
+		return this;
 	}
-
 }

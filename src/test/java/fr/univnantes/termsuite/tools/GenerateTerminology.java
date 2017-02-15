@@ -19,18 +19,40 @@ public class GenerateTerminology {
 	}
 
 	public static void runPipeline(TextCorpus txtCorpus, Path jsonExportPath) throws IOException {
+		/*
+		 * 1. Preprocess
+		 */
 		IndexedCorpus corpus = TermSuite.preprocessor()
 				.setTaggerPath(FunctionalTests.getTaggerPath())
+				.toTSV(FunctionalTests.getTsvPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.toJSON(FunctionalTests.getJsonPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.toXMI(FunctionalTests.getXmiPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
 				.toIndexedCorpus(txtCorpus, 5000000);
-			
+		
+		/*
+		 * 2. Export termino before extraction
+		 */
+		Path preprocessedTerminoPath = FunctionalTests
+				.getPreprocessedCorpusWEShortPathAsTermino(txtCorpus.getLang());
+		TermSuiteFactory.createJsonExporter()
+			.export(corpus, preprocessedTerminoPath);
+		
+		
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(txtCorpus.getLang());
 		extractorOptions.getPostProcessorConfig().setEnabled(false);
 		extractorOptions.getGathererConfig().setMergerEnabled(false);
 		extractorOptions.getContextualizerOptions().setEnabled(true);
+		
+		/*
+		 * 3. Extract termino
+		 */
 		TermSuite.terminoExtractor()
 					.setOptions(extractorOptions)
 					.execute(corpus);
 		
+		/*
+		 * 4. Export etxracted termnio
+		 */
 		TermSuiteFactory.createJsonExporter()
 				.export(corpus, jsonExportPath);
 	}

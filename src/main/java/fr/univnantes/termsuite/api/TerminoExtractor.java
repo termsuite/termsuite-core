@@ -24,7 +24,8 @@ public class TerminoExtractor {
 	private Optional<TermHistory> history = Optional.empty();
 	private ExtractorOptions options;
 	private Optional<ResourceConfig> resourceConfig = Optional.empty();
-	
+	private Optional<PipelineStats> stats = Optional.empty();
+
 	public TerminoExtractor setResourceConfig(ResourceConfig resourceConfig) {
 		this.resourceConfig = Optional.of(resourceConfig);
 		return this;
@@ -48,6 +49,24 @@ public class TerminoExtractor {
 		return this;
 	}
 	
+	public IndexedCorpus execute(PreprocessedCorpus corpus, int maxSize) {
+		IndexedCorpus iCorpus = TermSuite.toIndexedCorpus(corpus, maxSize);
+		execute(iCorpus);
+		return iCorpus;
+	}
+	
+	/**
+	 * Return the {@link PipelineStats} of the terminology
+	 * extraction pipeline. 
+	 * 
+	 * @return
+	 * 		the {@link Optional} {@link PipelineStats}, {@link Optional#empty()}
+	 * 		if pipeline not finished.
+	 */
+	public Optional<PipelineStats> getStats() {
+		return stats;
+	}
+	
 	public PipelineStats execute(IndexedCorpus corpus) {
 		if(options == null)
 			options = TermSuite.getDefaultExtractorConfig(corpus.getTerminology().getLang());
@@ -58,6 +77,8 @@ public class TerminoExtractor {
 				history.orElse(null),
 				options
 				);
-		return pipeline.run();
+		PipelineStats stats = pipeline.run();
+		this.stats = Optional.of(stats);
+		return stats;
 	}
 }

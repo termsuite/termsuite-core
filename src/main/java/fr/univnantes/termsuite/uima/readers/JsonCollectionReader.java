@@ -37,7 +37,7 @@ public class JsonCollectionReader extends AbstractTermSuiteCollectionReader{
 
     @Override
     protected void fillCas(CAS cas, File file) throws IOException, CollectionException {
-        TermSuiteJsonCasDeserializer.deserialize(new FileInputStream(file), cas);
+        JsonCasDeserializer.deserialize(new FileInputStream(file), cas);
     }
     @Override
     protected String getDocumentText(String uri, String encoding) throws IOException {

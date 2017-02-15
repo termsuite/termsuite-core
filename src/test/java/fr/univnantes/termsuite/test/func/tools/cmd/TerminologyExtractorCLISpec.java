@@ -40,6 +40,43 @@ public class TerminologyExtractorCLISpec {
 	public TemporaryFolder folder = new TemporaryFolder();
 	
 	@Test
+	public void testTerminoEnBasicFromXMIPreparedCorpus() throws Exception {
+		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
+		assertThat(jsonPath.toFile()).doesNotExist();
+		
+		Path xmiPath = FunctionalTests.getXmiPreprocessedCorpusWEShortPath(Lang.EN);
+		launch(String.format("--from-prepared-corpus %s -l %s --json %s",
+				xmiPath,
+				Lang.EN.getCode(),
+				jsonPath.toString()
+			));
+		assertThat(jsonPath.toFile()).exists();
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
+		assertThat(termindex)
+			.containsTerm("nn: wind energy")
+			.hasNTerms(2506);
+		assertNull(termindex.getTerms().get("n: energy").getContext());
+	}
+
+	@Test
+	public void testTerminoEnBasicFromImportedTermino() throws Exception {
+		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
+		assertThat(jsonPath.toFile()).doesNotExist();
+		Path terminoPath = FunctionalTests.getPreprocessedCorpusWEShortPathAsTermino(Lang.EN);
+		launch(String.format("--from-prepared-corpus %s -l %s --json %s",
+				terminoPath,
+				Lang.EN.getCode(),
+				jsonPath.toString()
+			));
+		assertThat(jsonPath.toFile()).exists();
+		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
+		assertThat(termindex)
+			.containsTerm("nn: wind energy")
+			.hasNTerms(2506);
+		assertNull(termindex.getTerms().get("n: energy").getContext());
+	}
+
+	@Test
 	public void testTerminoEnBasicFromCorpus() throws Exception {
 		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
 		Path tbxPath = Paths.get(folder.getRoot().getAbsolutePath(), "tbx.json");
@@ -47,7 +84,7 @@ public class TerminologyExtractorCLISpec {
 		
 		assertThat(jsonPath.toFile()).doesNotExist();
 		assertThat(tbxPath.toFile()).doesNotExist();
-		assertThat(tbxPath.toFile()).doesNotExist();
+		assertThat(tsvPath.toFile()).doesNotExist();
 		
 		launch(String.format("-t %s -c %s -l %s --tsv %s --tbx %s --json %s" ,
 				FunctionalTests.getTaggerPath(),
@@ -60,12 +97,12 @@ public class TerminologyExtractorCLISpec {
 		
 		assertThat(jsonPath.toFile()).exists();
 		assertThat(tbxPath.toFile()).exists();
-		assertThat(tbxPath.toFile()).exists();
+		assertThat(tsvPath.toFile()).exists();
 		
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.hasNTerms(2507);
+			.hasNTerms(2506);
 
 		assertNull(termindex.getTerms().get("n: energy").getContext());
 	}

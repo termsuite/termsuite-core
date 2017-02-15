@@ -94,7 +94,8 @@ public abstract class CommandLineClient {
 		Preconditions.checkArgument(declaredOptions.contains(conditionalOpt), "%s must be declared as optional", conditionalOpt);
 		Set<CliOption> set = Sets.newHashSet(mandatoryOptsIfPresent);
 		for(CliOption opt:set)
-			declareFacultative(opt);
+			if(!declaredOptions.contains(opt))
+				declareFacultative(opt);
 		if(conditionalOptions.containsKey(conditionalOpt))
 			conditionalOptions.get(conditionalOpt).addAll(set);
 		else
