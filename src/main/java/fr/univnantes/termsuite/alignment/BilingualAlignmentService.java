@@ -94,8 +94,6 @@ public class BilingualAlignmentService {
 	private static final String MSG_TERM_NOT_NULL = "Source term must not be null";
 	static final String MSG_REQUIRES_SIZE_2_LEMMAS = "The term %s must have exactly two single-word terms (single-word terms: %s)";
 	private static final String MSG_SEVERAL_VECTORS_NOT_COMPUTED = "Several terms have no context vectors in target terminology (nb terms with vector: {}, nb terms without vector: {})";
-	private static final String ERR_VECTOR_NOT_SET = "Cannot align on term %s. Cause: context vector no set.";
-
 	
 	@Inject
 	private BilingualDictionary dico;

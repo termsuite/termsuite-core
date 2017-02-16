@@ -1,8 +1,10 @@
 package fr.univnantes.termsuite.tools;
 
+import java.io.PrintStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -21,9 +23,11 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Property;
@@ -37,7 +41,8 @@ public abstract class CommandLineClient {
 	
 	protected ClientHelper clientHelper = new ClientHelper(this);
 	
-	protected abstract void configureOpts();
+	protected String description;
+	public abstract void configureOpts();
 	protected abstract void run() throws Exception;
 	protected Options options = new Options();
 	protected CommandLine line = null;
@@ -47,11 +52,14 @@ public abstract class CommandLineClient {
 	protected List<Set<CliOption>> exactlyOneOfBags= new ArrayList<>();
 	protected Set<CliOption> declaredOptions = new HashSet<>();
 	protected Set<CliOption> facultativeOptions = new HashSet<>();
+	protected Set<CliOption> mandatoryOptions = new HashSet<>();
 	protected Map<CliOption, Set<CliOption>> conditionalOptions = new HashMap<>();
 	protected Map<CliOption, Set<CliOption>> conditionalAbsentOptions = new HashMap<>();
 
-	
-	
+	public CommandLineClient(String description) {
+		super();
+		this.description = description;
+	}
 	public void declareAtMostOneOf(CliOption first, CliOption second, CliOption... others) {
 		atMostOneOfBags.add(toBag(first, second, others));
 	}
@@ -83,6 +91,7 @@ public abstract class CommandLineClient {
 	public void declareMandatory(CliOption option) {
 		Option opt = addDeclaredOption(option);
 		opt.setRequired(true);
+		mandatoryOptions.add(option);
 	}
 	
 	/**
@@ -249,9 +258,14 @@ public abstract class CommandLineClient {
 	}
 	
 	public void launch(String[] args) {
+		declareFacultative(CliOption.HELP);
 		configureOpts();
 		try {
 			this.line = new PosixParser().parse(options, args);
+			if(isSet(CliOption.HELP)) {
+				doHelp(System.out);
+				return;
+			}
 			checkAtLeastOneOf();
 			checkAtMostOneOf();
 			checkExactlyOneOf();
@@ -268,7 +282,62 @@ public abstract class CommandLineClient {
 			throw new TermSuiteCliException("An unexpected error occurred: " + e.getMessage(), e);
 		}
 	}
+	
+	protected void runClient(String[] args) {
+		try {
+			launch(args);
+		} catch(TermSuiteCliException e) {
+			System.out.flush();
+			System.err.flush();
+			System.err.format("ERROR: %s%n---%nRun again with option --%s for more information", e.getMessage());
+			System.exit(1);
+		}
+	}
 
+	public void doHelp(PrintStream out) {
+		out.format("Usage:%n\tjava [-Xms256m -Xmx8g] -cp termsuite-core-%s.jar %s OPTIONS %n",
+				TermSuite.currentVersion(),
+				this.getClass().getCanonicalName());
+		out.format("%nDescription:%n\t%s%n", description);
+		out.format("%nMandatory options:%n");
+		for(CliOption opt:mandatoryOptions) {
+			out.format("\t%-3s --%-35s %s%n", 
+					opt.getOptShortName() == null ? "" : ("-"+opt.getOptShortName()+""),
+					opt.getOptName() + " " + (opt.hasArg() ? opt.getArgType() : ""),
+					opt.getDescription()
+							
+				);
+		}
+		out.format("%nOther options:%n");
+		List<CliOption> otherOptions = getSortedDeclaredOptions();
+		otherOptions.removeAll(mandatoryOptions);
+		for(CliOption opt:otherOptions) {
+			out.format("\t%-3s --%-35s %s%n", 
+					opt.getOptShortName() == null ? "" : ("-"+opt.getOptShortName()+""),
+					opt.getOptName() + " " + (opt.hasArg() ? opt.getArgType() : ""),
+					opt.getDescription()
+							
+				);
+		}
+
+	}
+	
+	private List<CliOption> getSortedDeclaredOptions() {
+		ArrayList<CliOption> sorted = Lists.newArrayList(declaredOptions);
+		sorted.sort(new Comparator<CliOption>() {
+			@Override
+			public int compare(CliOption o1, CliOption o2) {
+				if(mandatoryOptions.contains(o1) && !mandatoryOptions.contains(o2))
+					return -1;
+				else if(mandatoryOptions.contains(o2) && !mandatoryOptions.contains(o1))
+					return 1;
+				else
+					return o1.compareTo(o2);
+			}
+		});
+		return sorted;
+	}
+	
 	private void checkConditionals() {
 		for(CliOption condition:conditionalOptions.keySet()) {
 			if(!isSet(condition)) {

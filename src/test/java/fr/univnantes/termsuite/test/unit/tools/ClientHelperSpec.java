@@ -30,9 +30,9 @@ public class ClientHelperSpec {
 	
 	@Before
 	public void setup() {
-		client = new CommandLineClient() {
+		client = new CommandLineClient("") {
 			protected void run() throws Exception {}
-			protected void configureOpts() {
+			public void configureOpts() {
 				clientHelper.declareExtractorOptions();
 			}
 		};

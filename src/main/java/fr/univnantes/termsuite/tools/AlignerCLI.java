@@ -75,8 +75,12 @@ import fr.univnantes.termsuite.tools.opt.CliOption;
 public class AlignerCLI extends CommandLineClient { // NO_UCD (public entry point)
 	private static final Logger LOGGER = LoggerFactory.getLogger(AlignerCLI.class);
 	
+	public AlignerCLI() {
+		super("translates domain-specific terms in multiligual comparable corpora from given language to given target language");
+	}
+	
 	@Override
-	protected void configureOpts() {
+	public void configureOpts() {
 		declareMandatory(CliOption.SOURCE_TERMINO);
 		declareMandatory(CliOption.TARGET_TERMINO);
 		declareExactlyOneOf(CliOption.TERM, CliOption.TERM_LIST);

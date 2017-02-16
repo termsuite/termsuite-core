@@ -83,6 +83,6 @@ public class PreprocessorCLISpec {
 
 	private void launch(String args) throws Exception {
 		List<String> argList = Splitter.on(" ").splitToList(args);
-		PreprocessorCLI.main(argList.toArray(new String[argList.size()]));
+		new PreprocessorCLI().launch(argList.toArray(new String[argList.size()]));
 	}
 }

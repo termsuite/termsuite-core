@@ -54,22 +54,40 @@ import fr.univnantes.termsuite.test.func.projection.FrenchWindEnergyProjectorSpe
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoCleanerSpec;
 import fr.univnantes.termsuite.test.func.tools.builders.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.func.tools.cmd.AlignerCLISpec;
+import fr.univnantes.termsuite.test.func.tools.cmd.PreprocessorCLISpec;
 import fr.univnantes.termsuite.test.func.tools.cmd.TerminologyExtractorCLISpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+	
+	/*
+	 * Extraction Engine
+	 */
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,
 	GermanWindEnergySpec.class,
-	BilingualAlignerFrEnSpec.class,
-	BilingualAlignerDeEnSpec.class,
-	JsonIOReturnSpec.class,
 	SemanticGathererSpec.class,
 	FrenchWindEnergyProjectorSpec.class,
+
+	/*
+	 * IO
+	 */
+	JsonIOReturnSpec.class,
+	
+	/*
+	 * API
+	 */
+	BilingualAlignerFrEnSpec.class,
+	BilingualAlignerDeEnSpec.class,
 	TerminoCleanerSpec.class,
+	TerminoExtractorSpec.class,
+	
+	/*
+	 * CLI
+	 */
+	PreprocessorCLISpec.class,
 	TerminologyExtractorCLISpec.class,
 	AlignerCLISpec.class,
-	TerminoExtractorSpec.class
 	
 	})
 public class FunctionalTests {

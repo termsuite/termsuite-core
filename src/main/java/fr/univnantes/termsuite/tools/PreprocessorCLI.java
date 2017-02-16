@@ -4,9 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
@@ -17,13 +14,12 @@ import fr.univnantes.termsuite.tools.opt.CliOption;
 
 public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry point)
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(PreprocessorCLI.class);
-
-	/** Short usage description of the CLI */
-	private static final String USAGE = "java [-DconfigFile=<file>] -cp termsuite-core-x.x.jar fr.univnantes.termsuite.tools.PreProcessor";
+	public PreprocessorCLI() {
+		super("Applies TermSuite's preprocessings to given text corpus");
+	}
 
 	@Override
-	protected void configureOpts() {
+	public void configureOpts() {
 		clientHelper.declareResourceOpts();
 		clientHelper.declareHistory();
 		declareFacultative(CliOption.TAGGER);
@@ -37,6 +33,7 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 				CliOption.CAS_XMI,
 				CliOption.PREPARED_TERMINO_JSON);
 	}
+
 
 	@Override
 	protected void run() throws IOException {
@@ -76,6 +73,6 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 	
 
 	public static void main(String[] args) {
-		new PreprocessorCLI().launch(args);
+		new PreprocessorCLI().runClient(args);
 	}
 }
