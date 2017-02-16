@@ -1,5 +1,8 @@
 package fr.univnantes.termsuite.api;
 
+import java.io.InputStream;
+import java.util.Scanner;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
@@ -16,6 +19,14 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 
 public class TermSuite {
+
+	public static String currentVersion() {
+		InputStream is = TermSuite.class.getClassLoader().getResourceAsStream("TERMSUITE_VERSION");
+	    try(Scanner s = new Scanner(is);) {
+	    	s.useDelimiter("\\A");
+	    	return s.hasNext() ? s.next() : "UNKNOWN";
+	    }
+	}
 
 	public static TerminoExtractor terminoExtractor() {
 		return new TerminoExtractor();

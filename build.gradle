@@ -30,7 +30,6 @@ repositories {
 	mavenCentral()
 }
 
-
 sourceSets {
     eval
 }     
@@ -332,6 +331,15 @@ jar {
             "Built-JDK": System.getProperty('java.version'),
 			"Main-Class": "eu.project.ttc.tools.TermSuite")
     }
+}
+
+compileJava.doFirst{
+	def termsuiteVersion = file("src/main/resources/TERMSUITE_VERSION").text
+	if(!termsuiteVersion.equals(project.getProperty("version"))) {
+		println "Version in gradle property: " + project.getProperty("version")
+		println "Version TERMSUITE_VERSION: " + termsuiteVersion	
+		throw new GradleException("TermSuite versions differ! Version in gradle property: " + project.getProperty("version") + ". Version in TERMSUITE_VERSION: " + termsuiteVersion)
+	}
 }
 
 clean.doLast {
