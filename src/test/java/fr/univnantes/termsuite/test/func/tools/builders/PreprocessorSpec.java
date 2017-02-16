@@ -18,6 +18,7 @@ import org.junit.rules.TemporaryFolder;
 
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
@@ -69,11 +70,11 @@ public class PreprocessorSpec {
 
 	@Test
 	public void testTerminoOnCorpus1() {
-		Terminology termino = TermSuite.preprocessor()
+		IndexedCorpus ic = TermSuite.preprocessor()
 				.setTaggerPath(FunctionalTests.getTaggerPath())
-				.toTerminology(corpus, true);
+				.toIndexedCorpus(corpus, 500000);
 		
-		assertTermino(termino);
+		assertTermino(ic.getTerminology());
 
 	}
 
@@ -81,11 +82,10 @@ public class PreprocessorSpec {
 	public void testParallelTerminoOnCorpus1() {
 		IntStream.range(0, 1).forEach(i -> {
 			setup();
-			Terminology termino = TermSuite.preprocessor()
+			IndexedCorpus ic = TermSuite.preprocessor()
 					.setTaggerPath(FunctionalTests.getTaggerPath())
-					.parallel()
-					.toTerminology(corpus, true);
-			assertTermino(termino);
+					.toIndexedCorpus(corpus, 500000);
+			assertTermino(ic.getTerminology());
 		});
 	}
 
@@ -101,7 +101,7 @@ public class PreprocessorSpec {
 				.containsTerm("n: demain", 1)
 				.hasNTerms(8);
 
-		assertThat(termino.getWords())
+		assertThat(termino.getWords().values())
 				.extracting("lemma")
 				.containsOnly("éolienne", "éolien", "énergie", "demain", "futur", "de", "du")
 				.hasSize(7);

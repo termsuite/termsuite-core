@@ -5,8 +5,8 @@ import javax.inject.Singleton;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 
-import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.ImporterService;
+import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;

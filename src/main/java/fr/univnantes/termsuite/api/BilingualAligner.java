@@ -25,6 +25,7 @@ import static java.util.stream.Collectors.toSet;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
 
@@ -72,14 +73,16 @@ public class BilingualAligner {
 	}
 	
 	private void checkCorpus(IndexedCorpus corpus) {
-		Set<Term> notCOntextualizedSwts = corpus.getTerminology().getTerms().values().stream()
+		Collection<Term> terms = corpus.getTerminology().getTerms().values();
+		Set<Term> contextualizedSwts = terms.stream()
 					.filter(t->t.getWords().size() == 1)
-					.filter(t->t.getContext() == null)
-					.limit(20)
+					.filter(t->t.getContext() != null)
 					.collect(toSet());
-		Preconditions.checkArgument(notCOntextualizedSwts.isEmpty(), 
-				"Some SWT in corpus %s are not contextualized: " + notCOntextualizedSwts,
-				corpus)
+		
+		Preconditions.checkArgument(!contextualizedSwts.isEmpty(), 
+				"Corpus %s are not contextualized", 
+				corpus
+				)
 		;
 	}
 

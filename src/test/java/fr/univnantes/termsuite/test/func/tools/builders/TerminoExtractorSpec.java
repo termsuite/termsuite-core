@@ -6,14 +6,12 @@ import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertTha
 import java.nio.file.Paths;
 import java.util.List;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.api.TerminoExtractor;
-import fr.univnantes.termsuite.framework.service.TermSuiteResourceManager;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
@@ -26,11 +24,6 @@ public class TerminoExtractorSpec {
 	Document document1;
 	Document document2;
 	
-	@After
-	public void clean() {
-		TermSuiteResourceManager.getInstance().clear();
-	}
-	
 	@Before
 	public void setup() {
 		lang = Lang.FR;
@@ -41,7 +34,6 @@ public class TerminoExtractorSpec {
 		documents.add(document2);
 	}
 
-
 	@Test
 	public void fromPreprocessedJsonFiles() {
 		String jsonDirPath = Paths.get(FunctionalTests.CORPUS2_PATH.toString(), "json").toString();
@@ -51,7 +43,6 @@ public class TerminoExtractorSpec {
 				.execute();
 		assertTermino(termino);
 	}
-
 
 	@Test
 	public void fromPreprocessedXmiFiles() {
@@ -99,5 +90,4 @@ public class TerminoExtractorSpec {
 			.containsTerm("npn: énergie de demain", 1)
 			;
 	}
-
 }

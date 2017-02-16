@@ -11,22 +11,22 @@ import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.engines.cleaner.TerminologyCleaner;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.index.Terminology;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
 public class TerminoCleanerSpec {
 
-	Terminology termino1;
+	IndexedCorpus corpus1;
 	@Before
 	public void setup() throws MalformedURLException {
-		termino1 = IndexedCorpusIO.fromJson(FunctionalTests.TERMINOLOGY_1.toUri().toURL());
+		corpus1 = IndexedCorpusIO.fromJson(FunctionalTests.TERMINOLOGY_1.toUri().toURL());
 	}
 	
 	@Test
 	public void test1() {
 		
-		assertThat(termino1)
+		assertThat(corpus1)
 			.hasNTerms(3)
 			.containsTerm("a: word2")
 			.containsTerm("n: word1")
@@ -35,9 +35,9 @@ public class TerminoCleanerSpec {
 		
 		new TerminologyCleaner()
 			.setOptions(new TerminoFilterOptions().by(TermProperty.FREQUENCY).keepOverTh(6))
-			.clean(new TerminologyService(termino1));
+			.clean(new TerminologyService(corpus1));
 
-		assertThat(termino1)
+		assertThat(corpus1)
 			.hasNTerms(1)
 			.containsTerm("na: word1 word2")
 			;
@@ -46,7 +46,7 @@ public class TerminoCleanerSpec {
 	@Test
 	public void test2() {
 		
-		assertThat(termino1)
+		assertThat(corpus1)
 		.hasNTerms(3)
 		.containsTerm("a: word2")
 		.containsTerm("n: word1")
@@ -55,9 +55,9 @@ public class TerminoCleanerSpec {
 		
 		new TerminologyCleaner()
 		.setOptions(new TerminoFilterOptions().by(TermProperty.FREQUENCY).keepOverTh(10))
-		.clean(new TerminologyService(termino1));
+		.clean(new TerminologyService(corpus1));
 
-		assertThat(termino1)
+		assertThat(corpus1)
 		.hasNTerms(0)
 		;
 	}

@@ -24,6 +24,7 @@ package fr.univnantes.termsuite.alignment;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -174,7 +175,6 @@ public class BilingualAlignmentService {
 	 */
 	public List<TranslationCandidate> alignDicoThenDistributional(TermService sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		checkNotNull(sourceTerm);
-		Preconditions.checkArgument(sourceTerm.getContext() != null, ERR_VECTOR_NOT_SET, sourceTerm.getGroupingKey());
 
 		List<TranslationCandidate> dicoCandidates = Lists.newArrayList();
 		/*
@@ -418,6 +418,8 @@ public class BilingualAlignmentService {
 			int minCandidateFrequency) {
 		Queue<TranslationCandidate> alignedCandidateQueue = MinMaxPriorityQueue.maximumSize(nbCandidates).create();
 		ContextVector sourceVector = sourceTerm.getContext();
+		if(sourceVector == null)
+			return new ArrayList<>();
 		ContextVector translatedSourceVector = translateVector(
 				sourceVector,
 				dico,
@@ -639,9 +641,7 @@ public class BilingualAlignmentService {
 							sourceTerm)
 						));
 		} else {
-			if(sourceTerm.getContext() == null)
-				LOGGER.warn("Context vector not set for term {}", sourceTerm);
-			else {
+			if(sourceTerm.getContext() != null) {
 				
 				ContextVector translatedSourceVector = translateVector(
 						sourceTerm.getContext(),

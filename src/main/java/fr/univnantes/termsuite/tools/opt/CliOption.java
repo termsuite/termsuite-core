@@ -97,6 +97,23 @@ public enum CliOption {
 	TSV_PROPERTIES(	"tsv-properties", 	null, 		true, 	"The comma-separated list columns of the tsv file. Allowed values are: " + properties().stream().collect(joining(","))),
 	TSV_HIDE_HEADER("tsv-hide-headers", null, 		false, 	"Hide column headers"),
 	TSV_HIDE_VARIANTS("tsv-hide-variants",null, 	false, 	"Does no show the variants for each term"),
+	
+	
+	
+	/*
+	 * ALIGNER
+	 */
+	SOURCE_TERMINO("source-termino", null, true, "The source terminology (indexed corpus)"),
+	TARGET_TERMINO("target-termino", null, true, "The source terminology (indexed corpus)"),
+	TERM("term", null, true, "The source term (lemma or grouping key) to translate"),
+	TERM_LIST("term-list", null, true, "The path to a list of source terms (lemmas or grouping keys) to translate"),
+	DICTIONARY("dictionary", null, true, "The path to the bilingual dictionary to use for bilingual alignment"),
+	N("n", null, true, "The number of translation candidates to show in the output"),
+	MIN_CANDIDATE_FREQUENCY("min-candidate-frequency", null, true, "The minimum frequency of target translation candidates"),
+	DISTANCE("distance", null, true, "Similarity measure used for context vector alignment. Allowed values: " + Arrays.stream(SimilarityDistance.values()).map(Class::getSimpleName).collect(joining(", "))),
+	EXPLAIN("explain", null, false, "Shows for each aligned term the most influencial co-terms"), 
+	ALIGNER_TSV("tsv", null, true, "A file path to write output of the bilingual aligner")
+	
 	;
 	
 	private String optName;

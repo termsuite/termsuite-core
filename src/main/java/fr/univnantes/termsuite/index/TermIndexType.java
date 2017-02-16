@@ -25,6 +25,7 @@ package fr.univnantes.termsuite.index;
 
 import fr.univnantes.termsuite.index.providers.AllComponentPairsProvider;
 import fr.univnantes.termsuite.index.providers.LowercaseTermLemmaProvider;
+import fr.univnantes.termsuite.index.providers.PilotLowercaseProvider;
 import fr.univnantes.termsuite.index.providers.SwtGroupingKeysProvider;
 import fr.univnantes.termsuite.index.providers.SwtGroupingKeysSwtTermsOnlyProvider;
 import fr.univnantes.termsuite.index.providers.SwtLemmasProvider;
@@ -39,6 +40,8 @@ import fr.univnantes.termsuite.index.providers._4FirstLetterValueProvider;
 public enum TermIndexType {
 	LEMMA_LOWER_CASE(
 			LowercaseTermLemmaProvider.class),
+	TERM_PILOT_LOWERCASE(
+			PilotLowercaseProvider.class),
 	WORD_LEMMAS(
 			WordLemmasProvider.class),
 	ALLCOMP_PAIRS(

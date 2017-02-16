@@ -18,10 +18,13 @@ import org.apache.commons.cli.PosixParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.api.IndexedCorpusIO;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -138,6 +141,8 @@ public abstract class CommandLineClient {
 				option.getOptName(), 
 				option.hasArg(), 
 				option.getDescription());
+		if(option == CliOption.TERM)
+			opt.setArgs(Option.UNLIMITED_VALUES);
 		options.addOption(opt);
 		return opt;
 	}
@@ -171,7 +176,11 @@ public abstract class CommandLineClient {
 			path.getParent().toFile().mkdirs();
 		return path;
 	}
-	
+
+	protected IndexedCorpus asIndexedCorpus(CliOption path) {
+		return IndexedCorpusIO.fromJson(asPath(path));
+	}
+
 	public Path asDir(CliOption opt) {
 		Path path = asPath(opt);
 		if(path.toFile().exists())
@@ -222,6 +231,12 @@ public abstract class CommandLineClient {
 	public String asString(CliOption opt) {
 		Preconditions.checkState(opt.hasArg());
 		return getOpt(opt).get().trim();
+	}
+	public String asTermString(CliOption opt) {
+		Preconditions.checkState(opt.hasArg());
+		Preconditions.checkArgument(isSet(opt));
+		String[] optionValues = line.getOptionValues(opt.getOptName());
+		return Joiner.on(" ").join(optionValues);
 	}
 
 	public Lang getLang() {
@@ -280,8 +295,8 @@ public abstract class CommandLineClient {
 				}
 			}
 		}
-		
 	}
+	
 
 	public void checkExactlyOneOf() {
 		for(Set<CliOption> bag:exactlyOneOfBags) {

@@ -8,8 +8,9 @@ import fr.univnantes.termsuite.framework.modules.ImporterModule;
 import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.TermSuiteModule;
 import fr.univnantes.termsuite.framework.service.CorpusService;
-import fr.univnantes.termsuite.framework.service.LanguageService;
 import fr.univnantes.termsuite.framework.service.ImporterService;
+import fr.univnantes.termsuite.framework.service.IndexService;
+import fr.univnantes.termsuite.framework.service.LanguageService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
@@ -18,6 +19,10 @@ public class TermSuite {
 
 	public static TerminoExtractor terminoExtractor() {
 		return new TerminoExtractor();
+	}
+	
+	public static BilingualAligner bilingualAligner() {
+		return new BilingualAligner();
 	}
 
 	public static ExtractorOptions getDefaultExtractorConfig(Lang lang) {
@@ -79,6 +84,17 @@ public class TermSuite {
 	public static ImporterService terminologyImporter(IndexedCorpus indexedCorpus, int maxSize) {
 		return importerInjector(indexedCorpus, maxSize)
 				.getInstance(ImporterService.class);
+	}
+
+	public static IndexService getIndexService(IndexedCorpus indexedCorpus) {
+		return indexedCorpusInjector(indexedCorpus).getInstance(IndexService.class);
+	}
+	
+	public static TerminologyService getTerminologyService(IndexedCorpus indexedCorpus) {
+		return indexedCorpusInjector(indexedCorpus).getInstance(TerminologyService.class);
+	}
+	public static Injector indexedCorpusInjector(IndexedCorpus indexedCorpus) {
+		return Guice.createInjector(new IndexedCorpusModule(indexedCorpus));
 	}
 
 	public static Injector importerInjector(IndexedCorpus indexedCorpus, int maxSize) {
