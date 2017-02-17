@@ -1,14 +1,13 @@
 package fr.univnantes.termsuite.framework;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import org.assertj.core.util.Lists;
 
 public abstract class AggregateEngine extends Engine {
 
 	public abstract void configure();
 	
-	private List<EngineDescription> childEngineDescriptions = Lists.newArrayList();
+	private List<EngineDescription> childEngineDescriptions = new ArrayList<>();
 
 	
 	protected EngineDescription pipe(String engineName, Class<? extends Engine> engineClass, Object... parameters) {
