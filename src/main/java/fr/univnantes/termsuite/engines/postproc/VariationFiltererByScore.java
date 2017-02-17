@@ -57,9 +57,9 @@ public class VariationFiltererByScore extends SimpleEngine {
 	}
 
 	private void watchVariationRemoval(TermService variant, TermService base, String msg, double score, double th) {
-		if(history.isPresent() && history.get().isWatched(base.getTerm()))
+		if(history.isPresent() && history.get().isTermWatched(base.getTerm()))
 			history.get().saveEvent(
-					base.getGroupingKey(), 
+					base, 
 					this.getClass(), 
 					String.format(
 							msg,

@@ -123,7 +123,7 @@ public class RegexSpotter extends TokenRegexAE {
 	}
 
 	public void watchOccurrence(JCas jCas, RegexOccurrence occurrence, String groupingKey) {
-		if(history.get().isGKeyWatched(groupingKey))
+		if(history.get().isStringWatched(groupingKey))
 			history.get().saveEvent(
 					groupingKey, 
 					RegexSpotter.class, String.format("Term spotted at [%d,%d] in file %s",
@@ -133,7 +133,7 @@ public class RegexSpotter extends TokenRegexAE {
 
 	public void watchStopWordFiltered(JCas jCas, RegexOccurrence occurrence, String groupingKey) {
 		if(history.isPresent())
-			if(history.get().isGKeyWatched(groupingKey))
+			if(history.get().isStringWatched(groupingKey))
 				history.get().saveEvent(
 						groupingKey, 
 						RegexSpotter.class, String.format(
@@ -145,7 +145,7 @@ public class RegexSpotter extends TokenRegexAE {
 
 	public void watchCharacterFiltered(JCas jCas, RegexOccurrence occurrence, String groupingKey) {
 		if(history.isPresent())
-			if(history.get().isGKeyWatched(groupingKey))
+			if(history.get().isStringWatched(groupingKey))
 				history.get().saveEvent(
 						groupingKey, 
 						RegexSpotter.class, String.format(

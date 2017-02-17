@@ -34,7 +34,8 @@ public class CommandLineClientSpec {
 		client = new TataToto();
 		client.configureOpts();
 	}
-	
+
+
 	
 	@Test
 	public void testHelp() throws IOException {

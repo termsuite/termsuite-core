@@ -87,15 +87,15 @@ public class SuffixDerivationDetecter extends SimpleEngine {
 
 	private void watch(Term swt, Term baseTerm) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(swt.getGroupingKey())) 
+			if(history.get().isTermWatched(swt)) 
 				history.get().saveEvent(
-						swt.getGroupingKey(), 
+						swt, 
 						this.getClass(), 
 						"Term is a derivate of term " + baseTerm);
 			
-			if(history.get().isGKeyWatched(baseTerm.getGroupingKey())) 
+			if(history.get().isTermWatched(baseTerm)) 
 				history.get().saveEvent(
-						baseTerm.getGroupingKey(), 
+						baseTerm, 
 						this.getClass(), 
 						"Term has a new found derivate: " + swt);
 		}

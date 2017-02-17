@@ -34,6 +34,7 @@ public class ClientHelperSpec {
 			protected void run() throws Exception {}
 			public void configureOpts() {
 				clientHelper.declareExtractorOptions();
+				clientHelper.declareHistory();
 			}
 		};
 		helper = new ClientHelper(client);
@@ -51,6 +52,19 @@ public class ClientHelperSpec {
 				.isInstanceOf(TermSuiteCliException.class)
 				.hasMessageContaining("Option --context-assoc-rate can be set only when option --contextualize is present");
 		}
+	}
+
+	@Test
+	public void testWatch() throws Exception {
+		client.launch(args(
+				String.format("--watch \"%s\"" ,
+				"wind power, turbine"
+			)));
+
+		assertThat(helper.getHistory().isPresent()).isTrue();
+		assertThat(helper.getHistory().get().getWatchedTermStrings())
+			.contains("wind power")
+			.contains("turbine");
 	}
 
 	@Test

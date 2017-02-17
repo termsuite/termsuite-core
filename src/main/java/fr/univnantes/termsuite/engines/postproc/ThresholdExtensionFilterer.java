@@ -53,9 +53,9 @@ public class ThresholdExtensionFilterer extends SimpleEngine {
 	}
 
 	private void watchTermRemoval(TermService term, String msg) {
-		if(history.isPresent() && history.get().isWatched(term.getTerm()))
+		if(history.isPresent() && history.get().isTermWatched(term.getTerm()))
 			history.get().saveEvent(
-					term.getGroupingKey(), 
+					term, 
 					this.getClass(), 
 					msg);
 	}

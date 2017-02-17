@@ -69,15 +69,15 @@ public class ManualSuffixDerivationDetecter extends SimpleEngine {
 
 	private void watch(Relation rem) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(rem.getFrom().getGroupingKey())) {
+			if(history.get().isTermWatched(rem.getFrom())) {
 				history.get().saveEvent(
-					rem.getFrom().getGroupingKey(), 
+					rem.getFrom(), 
 					this.getClass(), 
 					"Removing derivation into " + rem.getTo());
 			}
-			if(history.get().isGKeyWatched(rem.getTo().getGroupingKey())) {
+			if(history.get().isTermWatched(rem.getTo())) {
 				history.get().saveEvent(
-					rem.getTo().getGroupingKey(), 
+					rem.getTo(), 
 					this.getClass(), 
 					"Removed as derivate of " + rem.getFrom());
 			}

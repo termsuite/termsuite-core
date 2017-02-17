@@ -269,15 +269,15 @@ public class SemanticGatherer extends VariationTypeGatherer {
 			Term t2 = rel.getTo();
 			String label = rel.getBoolean(RelationProperty.IS_DICO) ? "[dico]" : "";
 			label += rel.getBoolean(RelationProperty.IS_DISTRIBUTIONAL) ? ("[distrib:"+rel.getDouble(RelationProperty.SEMANTIC_SIMILARITY)+"]") : "";
-			if(this.history.get().isGKeyWatched(t1.getGroupingKey()))
+			if(this.history.get().isTermWatched(t1))
 				this.history.get().saveEvent(
-						t1.getGroupingKey(),
+						t1,
 						this.getClass(), 
 						"Term has a new semantic variant: " + t2 + " " + label);
 	
-			if(this.history.get().isGKeyWatched(t2.getGroupingKey()))
+			if(this.history.get().isTermWatched(t2))
 				this.history.get().saveEvent(
-						t2.getGroupingKey(),
+						t2,
 						this.getClass(), 
 						"Term has new semantic base " + t1 + " " + label);
 		}

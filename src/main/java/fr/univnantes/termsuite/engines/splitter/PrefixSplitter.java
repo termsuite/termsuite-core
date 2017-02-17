@@ -95,14 +95,14 @@ public class PrefixSplitter extends SimpleEngine {
 
 	private void watch(Term swt, Term target) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(swt.getGroupingKey()))
+			if(history.get().isTermWatched(swt))
 				history.get().saveEvent(
-						swt.getGroupingKey(), 
+						swt, 
 						this.getClass(), 
 						"Term is prefix of term " + target);
-			if(history.get().isGKeyWatched(target.getGroupingKey()))
+			if(history.get().isTermWatched(target))
 				history.get().saveEvent(
-						target.getGroupingKey(), 
+						target, 
 						this.getClass(), 
 						"Term has a new found prefix: " + swt);
 		}

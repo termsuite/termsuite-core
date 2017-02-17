@@ -137,10 +137,10 @@ public class ExtensionVariantGatherer extends SimpleEngine {
 
 	private void watch(RelationService inferedRel, RelationService r1, RelationService r2) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(inferedRel.getTo().getTerm()))
-				history.get().saveEvent(inferedRel.getTo().getGroupingKey(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
-			if(history.get().isWatched(inferedRel.getFrom().getTerm()))
-				history.get().saveEvent(inferedRel.getFrom().getGroupingKey(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
+			if(history.get().isTermWatched(inferedRel.getTo().getTerm()))
+				history.get().saveEvent(inferedRel.getTo(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
+			if(history.get().isTermWatched(inferedRel.getFrom().getTerm()))
+				history.get().saveEvent(inferedRel.getFrom(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
 		}
 	}
 }

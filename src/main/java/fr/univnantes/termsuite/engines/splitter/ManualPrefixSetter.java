@@ -73,14 +73,14 @@ public class ManualPrefixSetter extends SimpleEngine {
 
 	private void watch(Term swt, Relation tv) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(swt.getGroupingKey()))
+			if(history.get().isTermWatched(swt))
 				history.get().saveEvent(
-						swt.getGroupingKey(), 
+						swt, 
 						this.getClass(), 
-						"Prefix variation of term " + tv.getTo().getGroupingKey() + " removed");
-			if(history.get().isGKeyWatched(tv.getTo().getGroupingKey()))
+						"Prefix variation of term " + tv.getTo() + " removed");
+			if(history.get().isTermWatched(tv.getTo()))
 				history.get().saveEvent(
-						tv.getTo().getGroupingKey(), 
+						tv.getTo(), 
 						this.getClass(), 
 						"Prefix variation of term " + swt + " removed");
 		}

@@ -141,10 +141,10 @@ public class TwoOrderVariationMerger extends SimpleEngine {
 
 	private void watchRemoval(Term t1, Term t2, Term t3, Relation rtrans) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(t1)) 
-				history.get().saveEvent(t1.getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));
-			if(history.get().isWatched(t3)) 
-				history.get().saveEvent(t3.getGroupingKey(), this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));
+			if(history.get().isTermWatched(t1)) 
+				history.get().saveEvent(t1, this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));
+			if(history.get().isTermWatched(t3)) 
+				history.get().saveEvent(t3, this.getClass(), String.format("Removing two-order relation %s because it has a length-2 path %s -> %s -> %s", rtrans, t1, t2, t3));
 		}
 	}
 }

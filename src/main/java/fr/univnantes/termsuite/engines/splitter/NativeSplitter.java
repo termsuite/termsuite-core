@@ -222,8 +222,8 @@ public class NativeSplitter extends SimpleEngine {
 	
 	private void watchComposition(Word word, boolean newlyCreated) {
 		if(history.isPresent()) {
-			if(history.get().isLemmaWatched(word.getLemma())) {
-				history.get().saveEventByLemma(
+			if(history.get().isWordWatched(word)) {
+				history.get().saveEvent(
 						word.getLemma(), 
 						NativeSplitter.class, 
 						String.format("%sSegmentation of swt is [%s]%s", 
@@ -237,7 +237,7 @@ public class NativeSplitter extends SimpleEngine {
 
 	private void watchScores(Word word, Map<Segmentation, Double> scores) {
 		if(history.isPresent()) {
-			if(history.get().isLemmaWatched(word.getLemma())) {
+			if(history.get().isStringWatched(word.getLemma())) {
 				String scoreStr = scores.entrySet().stream().sorted(new Comparator<Entry<Segmentation, Double>>() {
 					@Override
 					public int compare(Entry<Segmentation, Double> o1, Entry<Segmentation, Double> o2) {
@@ -246,7 +246,7 @@ public class NativeSplitter extends SimpleEngine {
 				}).map(e -> String.format("%s[%.3f]", e.getKey(), e.getValue()))
 				.collect(joining(", "));
 				
-				history.get().saveEventByLemma(
+				history.get().saveEvent(
 						word.getLemma(), 
 						NativeSplitter.class, 
 						"Segmentation scores are: " + scoreStr);

@@ -91,14 +91,14 @@ public class TermMerger extends SimpleEngine {
 
 	private void watch(Relation rel) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(rel.getFrom()) )
-				history.get().saveEvent(rel.getFrom().getGroupingKey(), this.getClass(), String.format(
+			if(history.get().isTermWatched(rel.getFrom()) )
+				history.get().saveEvent(rel.getFrom(), this.getClass(), String.format(
 						"Merging %s into %s",
 						rel.getTo(),
 						rel.getFrom()
 						));
-			if(history.get().isWatched(rel.getTo()) )
-				history.get().saveEvent(rel.getTo().getGroupingKey(), this.getClass(), String.format(
+			if(history.get().isTermWatched(rel.getTo()) )
+				history.get().saveEvent(rel.getTo(), this.getClass(), String.format(
 						"Merging %s into %s",
 						rel.getTo(),
 						rel.getFrom()

@@ -31,11 +31,11 @@ public class TerminoExtractor {
 		return this;
 	}
 	
-	public TerminoExtractor watch(String termKey) {
+	public TerminoExtractor watch(String termString) {
 		if(!this.history.isPresent()) {
 			this.history = Optional.of(new TermHistory());
 		}
-		this.history.get().addWatchedGroupingKeys(termKey);
+		this.history.get().addWatchedTermString(termString);
 		return this;
 	}
 

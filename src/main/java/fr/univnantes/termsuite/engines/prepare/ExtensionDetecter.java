@@ -116,15 +116,15 @@ public class ExtensionDetecter extends SimpleEngine {
 
 	private void watch(Term t1, Term t2) {
 		if(history.isPresent()) {
-			if(this.history.get().isGKeyWatched(t1.getGroupingKey()))
+			if(this.history.get().isTermWatched(t1))
 				this.history.get().saveEvent(
-						t1.getGroupingKey(),
+						t1,
 						this.getClass(), 
 						"Term has a new extension: " + t2);
 	
-			if(this.history.get().isGKeyWatched(t2.getGroupingKey()))
+			if(this.history.get().isTermWatched(t2))
 				this.history.get().saveEvent(
-						t2.getGroupingKey(),
+						t2,
 						this.getClass(), 
 						"Term is the extension of " + t1);
 		}

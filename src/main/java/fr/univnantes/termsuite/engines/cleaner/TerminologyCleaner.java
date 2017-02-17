@@ -114,8 +114,8 @@ public class TerminologyCleaner extends SimpleEngine {
 
 	private void watchMarkedAsFiltered(Term term) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(term)) {
-				history.get().saveEvent(term.getGroupingKey(), this.getClass(), String.format(
+			if(history.get().isTermWatched(term)) {
+				history.get().saveEvent(term, this.getClass(), String.format(
 						"Term %s is marked as filtered because %s=%s",
 						term,
 						options.getFilterProperty(),

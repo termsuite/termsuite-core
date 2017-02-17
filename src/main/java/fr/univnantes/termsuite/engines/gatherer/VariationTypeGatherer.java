@@ -57,14 +57,14 @@ public abstract class VariationTypeGatherer extends SimpleEngine {
 
 	private void watch(Term source, Term target, Relation tv) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(source.getGroupingKey()))
+			if(history.get().isTermWatched(source))
 				history.get().saveEvent(
-						source.getGroupingKey(),
+						source,
 						this.getClass(), 
 						"Term has a new variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULES)+"");
-			if(history.get().isGKeyWatched(target.getGroupingKey()))
+			if(history.get().isTermWatched(target))
 				history.get().saveEvent(
-						target.getGroupingKey(),
+						target,
 						this.getClass(), 
 						"Term has a new base-variation type: "+variationType+", relation: "+tv+", rule: "+tv.get(RelationProperty.VARIATION_RULES)+"");
 		}

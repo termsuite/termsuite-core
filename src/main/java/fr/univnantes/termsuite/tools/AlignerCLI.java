@@ -182,9 +182,10 @@ public class AlignerCLI extends CommandLineClient { // NO_UCD (public entry poin
 	private List<Term> getSourceTerms(Injector sourceInjector) {
 		List<Term> sourceTerms = new ArrayList<>();
 		if(isSet(CliOption.TERM)) {
-			String term = asTermString(CliOption.TERM);
-			LOGGER.info("Loading source term: {}", term);
-			sourceTerms.add(findTerm(sourceInjector, term));
+			List<String> terms = asTermString(CliOption.TERM);
+			LOGGER.info("Loading source terms: {}", terms);
+			for(String term:terms)
+				sourceTerms.add(findTerm(sourceInjector, term));
 		} else if(isSet(CliOption.TERM_LIST)) {
 			try {
 				Files.readAllLines(asPath(CliOption.TERM_LIST)).stream()

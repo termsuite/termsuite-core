@@ -4,25 +4,25 @@ import java.util.Date;
 
 public class PipelineEvent {
 	
-	private String termKey;
+	private String term;
 	private Class<?> source;
 	private String message;
 	private Date date;
 	
-	private PipelineEvent(String termKey, Class<?> source, String message) {
+	private PipelineEvent(String term, Class<?> source, String message) {
 		super();
-		this.termKey = termKey;
+		this.term = term;
 		this.source = source;
 		this.message = message;
 		this.date = new Date();
 	}
 	
-	public static PipelineEvent create(String termKey, Class<?> source, String message) {
-		return new PipelineEvent(termKey, source, message);
+	public static PipelineEvent create(String term, Class<?> source, String message) {
+		return new PipelineEvent(term, source, message);
 	}
 
-	public String getTermKey() {
-		return termKey;
+	public String getTermString() {
+		return term;
 	}
 
 	public Class<?> getSource() {

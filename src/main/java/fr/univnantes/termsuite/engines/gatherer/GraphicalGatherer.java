@@ -108,14 +108,14 @@ public class GraphicalGatherer extends SimpleEngine {
 	
 	private void watch(Term from, Term to, double dist) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(from.getGroupingKey()))
+			if(history.get().isTermWatched(from))
 				history.get().saveEvent(
-						from.getGroupingKey(),
+						from,
 						this.getClass(), 
 						"Term has a new graphical variant " + to + " (dist="+dist+")");
-			if(history.get().isGKeyWatched(to.getGroupingKey()))
+			if(history.get().isTermWatched(to))
 				history.get().saveEvent(
-						to.getGroupingKey(),
+						to,
 						this.getClass(), 
 						"Term has a new graphical base " + from + " (dist="+dist+")");
 		}
@@ -137,15 +137,15 @@ public class GraphicalGatherer extends SimpleEngine {
 				r.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 			
 				if(history.isPresent()) {
-					if(history.get().isGKeyWatched(r.getFrom().getGroupingKey()))
+					if(history.get().isTermWatched(r.getFrom()))
 						history.get().saveEvent(
-								r.getFrom().getGroupingKey(),
+								r.getFrom(),
 								this.getClass(), 
 								"Variation "+r+" is marked as graphical (dist="+similarity+")");
 					
-					if(history.get().isGKeyWatched(r.getTo().getGroupingKey()))
+					if(history.get().isTermWatched(r.getTo()))
 						history.get().saveEvent(
-							r.getTo().getGroupingKey(),
+							r.getTo(),
 								this.getClass(), 
 								"Variation "+r+" is marked as graphical (dist="+similarity+")");
 				}

@@ -42,9 +42,9 @@ public class TermFiltererByScore extends SimpleEngine {
 	}
 
 	public void watchIndependanceFiltering(TermService term) {
-		if(history.isPresent() && history.get().isWatched(term.getTerm()))
+		if(history.isPresent() && history.get().isTermWatched(term.getTerm()))
 			history.get().saveEvent(
-					term.getGroupingKey(), 
+					term, 
 					this.getClass(), 
 					String.format(
 							"Removing term because independence score <%.2f> is under threshhold <%.2f>.",
@@ -53,9 +53,9 @@ public class TermFiltererByScore extends SimpleEngine {
 	}
 
 	public void watchOrthographicFiltering(TermService term) {
-		if(history.isPresent() && history.get().isWatched(term.getTerm()))
+		if(history.isPresent() && history.get().isTermWatched(term.getTerm()))
 			history.get().saveEvent(
-					term.getGroupingKey(), 
+					term, 
 					this.getClass(), 
 					String.format(
 							"Removing term because orthographic score <%.2f> is under threshhold <%.2f>.",

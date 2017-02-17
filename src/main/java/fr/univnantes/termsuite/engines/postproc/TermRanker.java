@@ -30,9 +30,9 @@ public class TermRanker extends SimpleEngine {
 
 	private void watch(List<Term> ranked, int index) {
 		if(history.isPresent()) {
-			if(history.get().isWatched(ranked.get(index)))
+			if(history.get().isTermWatched(ranked.get(index)))
 				history.get().saveEvent(
-						ranked.get(index).getGroupingKey(), 
+						ranked.get(index), 
 						this.getClass(), 
 						"Set term rank: " + (index+1));
 		}

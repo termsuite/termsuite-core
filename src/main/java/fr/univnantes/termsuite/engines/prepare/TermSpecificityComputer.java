@@ -67,9 +67,9 @@ public class TermSpecificityComputer extends SimpleEngine {
 
 	private void watch(Term term) {
 		if(history.isPresent())
-			if(history.get().isGKeyWatched(term.getGroupingKey()))
+			if(history.get().isTermWatched(term))
 				history.get().saveEvent(
-						term.getGroupingKey(), 
+						term, 
 						this.getClass(), 
 						String.format("Specificity of term set to %.2f [%s=%d, %s=%.2f, %s=%.2f]", 
 								term.getSpecificity(),

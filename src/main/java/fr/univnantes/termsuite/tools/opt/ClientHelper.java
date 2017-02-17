@@ -5,6 +5,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -69,7 +70,8 @@ public class ClientHelper {
 	public Optional<TermHistory> getHistory() {
 		if(client.isSet(CliOption.WATCH)) {
 			TermHistory value = new TermHistory();
-			value.addWatchedLemmas(client.asArray(CliOption.WATCH));
+			List<String> asTermString = client.asTermString(CliOption.WATCH);
+			value.addWatchedTermString(asTermString);
 			return Optional.of(value);
 		} else
 			return Optional.empty();
@@ -281,7 +283,7 @@ public class ClientHelper {
 			options.properties(properties);
 		}
 		
-		options.showHeaders(!client.asBoolean(CliOption.TSV_HIDE_HEADER));
+		options.showHeaders(!client.isSet(CliOption.TSV_HIDE_HEADER));
 		
 		return options;
 	}
