@@ -96,7 +96,7 @@ public class TermSuiteEvals {
 		Path path = getTerminologyPath(lang, corpus, config);
 		if(!path.toFile().isFile()) {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
-			TextCorpus textCorpus = new TextCorpus(lang, corpus.getRootDir());
+			TextCorpus textCorpus = new TextCorpus(lang, corpus.getRootDir().resolve(lang.getName()));
 			IndexedCorpus extracted = toIndexedCorpus(textCorpus, config);
 			try(FileWriter writer = new FileWriter(path.toFile())){
 				IndexedCorpusIO.toJson(extracted, writer, new JsonOptions().withOccurrences(false).withContexts(true));
@@ -113,7 +113,7 @@ public class TermSuiteEvals {
 	public static IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, TerminoConfig config) {
 		IndexedCorpus corpus = TermSuite.preprocessor()
 				.setTaggerPath(TermSuiteEvals.getTreeTaggerPath())
-				.toIndexedCorpus(textCorpus, 1000000, TermSuiteFactory.createEmptyOccurrenceStore(textCorpus.getLang()));
+				.toIndexedCorpus(textCorpus, 1000000);
 			
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(textCorpus.getLang());
 		extractorOptions.getContextualizerOptions().setEnabled(true);
