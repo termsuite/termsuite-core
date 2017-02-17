@@ -1,43 +1,90 @@
 package fr.univnantes.termsuite.engines.splitter;
 
-public class MorphologicalOptions {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import fr.univnantes.termsuite.utils.JsonConfigObject;
+
+public class MorphologicalOptions  extends JsonConfigObject {
+
+	private boolean enabled = true;
+	
+	@JsonProperty("prefix-splitter-enabled")
+	private boolean prefixSplitterEnabled = true;
+
+	@JsonProperty("derivatives-detector-enabled")
+	private boolean derivativesDetecterEnabled = true;
+	
+	@JsonProperty("native-splitter-enabled")
+	private boolean nativeSplittingEnabled = true;
+
+	@JsonProperty("min-component-size")
+	private int minComponentSize;
+
+	@JsonProperty("max-component-num")
+	private int maxNumberOfComponents;
 
 	private double alpha;
 	private double beta;
 	private double gamma;
 	private double delta;
 	
-	private int minComponentSize;
-	private int maxNumberOfComponents;
-	
+	@JsonProperty("score-th")
 	private double scoreThreshold;
+
+	@JsonProperty("segment-similarity-th")
 	private double segmentSimilarityThreshold;
 	
-	private boolean prefixSplitterEnabled = true;
-	private boolean derivationDetecterEnabled = true;
-	private boolean nativeSplittingEnabled = true;
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof MorphologicalOptions) {
+			MorphologicalOptions o = (MorphologicalOptions)obj;
+			return enabled == o.enabled
+					&& prefixSplitterEnabled == o.prefixSplitterEnabled
+					&& derivativesDetecterEnabled == o.derivativesDetecterEnabled
+					&& nativeSplittingEnabled == o.nativeSplittingEnabled
+					&& minComponentSize == o.minComponentSize
+					&& maxNumberOfComponents == o.maxNumberOfComponents
+					&& alpha == o.alpha
+					&& beta == o.beta
+					&& gamma == o.gamma
+					&& delta == o.delta
+					&& scoreThreshold == o.scoreThreshold
+					&& segmentSimilarityThreshold == o.segmentSimilarityThreshold
+					;
+		} else return false;
+	}
+
+
 	
 	public double getAlpha() {
 		return alpha;
 	}
+	
 	public double getBeta() {
 		return beta;
 	}
+	
 	public double getGamma() {
 		return gamma;
 	}
+	
 	public double getDelta() {
 		return delta;
 	}
+	
 	public int getMinComponentSize() {
 		return minComponentSize;
 	}
+	
 	public int getMaxNumberOfComponents() {
 		return maxNumberOfComponents;
 	}
+	
 	public double getScoreThreshold() {
 		return scoreThreshold;
 	}
+	
 	public double getSegmentSimilarityThreshold() {
 		return segmentSimilarityThreshold;
 	}
@@ -90,13 +137,12 @@ public class MorphologicalOptions {
 		return this;
 	}
 	
-	public MorphologicalOptions setDerivationDetecterEnabled(boolean derivationDetecterEnabled) {
-		this.derivationDetecterEnabled = derivationDetecterEnabled;
-		return this;
+	public void setDerivativesDetecterEnabled(boolean derivativesDetecterEnabled) {
+		this.derivativesDetecterEnabled = derivativesDetecterEnabled;
 	}
 	
-	public boolean isDerivationDetecterEnabled() {
-		return this.derivationDetecterEnabled;
+	public boolean isDerivativesDetecterEnabled() {
+		return derivativesDetecterEnabled;
 	}
 	
 	public MorphologicalOptions setNativeSplittingEnabled(boolean nativeSplittingEnabled) {
@@ -106,5 +152,13 @@ public class MorphologicalOptions {
 	
 	public boolean isNativeSplittingEnabled() {
 		return this.nativeSplittingEnabled;
+	}
+	
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+	
+	public boolean isEnabled() {
+		return enabled;
 	}
 }

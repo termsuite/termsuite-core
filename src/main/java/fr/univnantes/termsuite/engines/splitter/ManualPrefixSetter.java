@@ -23,66 +23,64 @@
 
 package fr.univnantes.termsuite.engines.splitter;
 
+import static java.util.stream.Collectors.toList;
+
+import java.util.List;
+
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Lists;
-
+import fr.univnantes.termsuite.engines.SimpleEngine;
+import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.Resource;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.uima.resources.preproc.ManualSegmentationResource;
-import fr.univnantes.termsuite.utils.TermHistory;
 
-public class ManualPrefixSetter {
-	private static final Logger LOGGER = LoggerFactory.getLogger(ManualPrefixSetter.class);
-	
+public class ManualPrefixSetter extends SimpleEngine {
+	@InjectLogger Logger logger;
+
+	@Resource(type=ResourceType.PREFIX_EXCEPTIONS)
 	private ManualSegmentationResource prefixExceptions;
-	private TermHistory history;
-	
-	public ManualPrefixSetter setHistory(TermHistory history) {
-		this.history = history;
-		return this;
-	}
-	
-	public ManualPrefixSetter setPrefixExceptions(ManualSegmentationResource prefixExceptions) {
-		this.prefixExceptions = prefixExceptions;
-		return this;
-	}
 
-	public void setPrefixes(Terminology termino)  {
+	
+	@Override
+	public void execute()  {
 		Segmentation segmentation;
-		for(Term swt:termino.getTerms()) {
+		for(TermService swt:terminology.getTerms()) {
 			if(!swt.isSingleWord())
 				continue;
 			Word word = swt.getWords().get(0).getWord();
 			segmentation = prefixExceptions.getSegmentation(word.getLemma());
 			if(segmentation != null) 
 				if(segmentation.size() <= 1) {
-					for(TermRelation tv:Lists.newArrayList(termino.getOutboundRelations(swt, RelationType.IS_PREFIX_OF))) {
-						termino.removeRelation(tv);
-						watch(swt, tv);
+					List<RelationService> outboundRels = swt.outboundRelations(RelationType.IS_PREFIX_OF).collect(toList());
+					for(RelationService tv:outboundRels) {
+						terminology.removeRelation(tv);
+						watch(swt.getTerm(), tv.getRelation());
 					}
 				} else {
-					LOGGER.warn("Ignoring prefix exception {}->{} since non-expty prefix exceptions are not allowed.",
+					logger.warn("Ignoring prefix exception {}->{} since non-expty prefix exceptions are not allowed.",
 							word.getLemma(),
 							segmentation);
 				}
 		}
 	}
 
-	private void watch(Term swt, TermRelation tv) {
-		if(history != null) {
-			if(history.isGKeyWatched(swt.getGroupingKey()))
-				history.saveEvent(
-						swt.getGroupingKey(), 
+	private void watch(Term swt, Relation tv) {
+		if(history.isPresent()) {
+			if(history.get().isTermWatched(swt))
+				history.get().saveEvent(
+						swt, 
 						this.getClass(), 
-						"Prefix variation of term " + tv.getTo().getGroupingKey() + " removed");
-			if(history.isGKeyWatched(tv.getTo().getGroupingKey()))
-				history.saveEvent(
-						tv.getTo().getGroupingKey(), 
+						"Prefix variation of term " + tv.getTo() + " removed");
+			if(history.get().isTermWatched(tv.getTo()))
+				history.get().saveEvent(
+						tv.getTo(), 
 						this.getClass(), 
 						"Prefix variation of term " + swt + " removed");
 		}

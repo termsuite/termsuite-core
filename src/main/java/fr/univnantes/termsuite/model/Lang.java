@@ -24,56 +24,25 @@ package fr.univnantes.termsuite.model;
 import java.util.Locale;
 import java.util.NoSuchElementException;
 
-import fr.univnantes.termsuite.LanguageException;
-import fr.univnantes.termsuite.engines.EngineState;
-import fr.univnantes.termsuite.utils.OccurrenceBuffer;
+import fr.univnantes.termsuite.framework.LanguageException;
 
 public enum Lang {
-	FR("french", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 3, 1, EngineState.ENABLED),
-	EN("english", Locale.ENGLISH, OccurrenceBuffer.NO_CLEANING, 0.7d, 0.1d, 0.1d, 0.1d, 0.85d, 3, 3, 1, EngineState.ENABLED),
-	ES("spanish", Locale.FRENCH, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 1d, 3, 3, 1, EngineState.ENABLED),
-	DE("german", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.3d, 0.1d, 0.1d, 0.75d, 3, 4, 2, EngineState.ENABLED),
-	ZH("chinese", Locale.CHINESE, OccurrenceBuffer.NO_CLEANING, 0.5d, 0.1d, 0.1d, 0.3d, 0.7d, 3, 2, 1, EngineState.DISABLED),
-	LV("latvian", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5d, 0.1d, 0.1d, 0.3d, 0.8d, 3, 3, 1, EngineState.ENABLED),
-	RU("russian", Locale.JAPAN, OccurrenceBuffer.NO_CLEANING,0.3d, 0.1d, 0.4d, 0.2d, 0.7d, 3, 3, 2, EngineState.ENABLED),
-	DA("danish", Locale.GERMAN, OccurrenceBuffer.NO_CLEANING,0.5f, 0.1f, 0.1f, 0.3f, 0.8f, 3, 3, 1, EngineState.ENABLED);
+	FR("french", Locale.FRENCH),
+	EN("english", Locale.ENGLISH),
+	ES("spanish", Locale.FRENCH),
+	DE("german", Locale.GERMAN),
+	ZH("chinese", Locale.SIMPLIFIED_CHINESE),
+	LV("latvian", Locale.ENGLISH),
+	RU("russian", Locale.ENGLISH),
+	DA("danish", Locale.GERMAN)
+	;
 	
-	private final double compostAlpha;
-	private final double compostBeta;
-	private final double compostGamma;
-	private final double compostDelta;
-	private final double compostScoreThreshold;
-	private final int compostMinComponentSize;
-	private final int compostMaxComponentNumber;
-	private final Locale locale;
 	private final String longLang;
-	private final String regexPostProcessingStrategy;
-	private final int gVariantNbPreindexingLetters;
-	private final EngineState gVariantGatheringState;
+	private final Locale locale;
 
-    private Lang(String longLang, Locale locale, String regexPostProcessingStrategy, 
-    		double compostAlpha,
-    		double compostBeta,
-    		double compostGamma,
-    		double compostDelta,
-    		double compostCompostThreshold,
-    		int compostMinComponentSize,
-    		int compostMaxComponentNumber,
-    		int gVariantNbPreindexingLetters,
-    		EngineState gVariantGatheringState
-    		) {
-    	this.locale = locale;
+    private Lang(String longLang, Locale locale) {
         this.longLang = longLang;
-        this.regexPostProcessingStrategy = regexPostProcessingStrategy;
-        this.compostAlpha = compostAlpha;
-        this.compostBeta = compostBeta;
-        this.compostGamma = compostGamma;
-        this.compostDelta = compostDelta;
-        this.compostScoreThreshold = compostCompostThreshold;
-        this.compostMinComponentSize = compostMinComponentSize;
-        this.compostMaxComponentNumber = compostMaxComponentNumber;
-        this.gVariantNbPreindexingLetters = gVariantNbPreindexingLetters;
-        this.gVariantGatheringState = gVariantGatheringState;
+        this.locale = locale;
     }
     
     public String getName() {
@@ -91,10 +60,6 @@ public enum Lang {
 
 	public String getCode() {
 		return name().toLowerCase();
-	}
-    
-    public String getRegexPostProcessingStrategy() {
-		return regexPostProcessingStrategy;
 	}
     
 	public static void checkLang(String lang) {
@@ -122,44 +87,10 @@ public enum Lang {
 		return locale;
 	}
 	
-	public double getCompostAlpha() {
-		return compostAlpha;
-	}
-	
-	public double getCompostBeta() {
-		return compostBeta;
-	}
-	public double getCompostDelta() {
-		return compostDelta;
-	}
-	public double getCompostGamma() {
-		return compostGamma;
-	}
-	
-	public int getCompostMaxComponentNumber() {
-		return compostMaxComponentNumber;
-	}
-	
-	public double getCompostScoreThreshold() {
-		return compostScoreThreshold;
-	}
-	
 	public static Lang fromCode(String code) {
 		for(Lang l:values())
 			if(l.getCode().equals(code))
 				return l;
 		throw new NoSuchElementException(code);
-	}
-
-	public int getCompostMinComponentSize() {
-		return compostMinComponentSize;
-	}
-	
-	public int getGraphicalVariantNbPreindexingLetters() {
-		return gVariantNbPreindexingLetters;
-	}
-	
-	public EngineState getgVariantGatheringState() {
-		return gVariantGatheringState;
 	}
 }

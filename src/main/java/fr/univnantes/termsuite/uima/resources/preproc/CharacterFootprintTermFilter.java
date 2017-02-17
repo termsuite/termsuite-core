@@ -99,7 +99,6 @@ public class CharacterFootprintTermFilter  implements SharedResourceObject, Occu
 
 	@Override
 	public void load(DataResource aData) throws ResourceInitializationException {
-		LOGGER.debug("Loading resource character footprint resource at: " + aData.getUri());
 		InputStream inputStream = null;
 		try {
 			inputStream = aData.getInputStream();

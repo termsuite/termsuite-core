@@ -42,17 +42,8 @@
 package fr.univnantes.termsuite.uima.engines.export;
 
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
-
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.tcas.Annotation;
-import org.apache.uima.util.Level;
-
-import fr.univnantes.termsuite.types.WordAnnotation;
 
 /**
  * Writes spotter cases as TSV.
@@ -64,34 +55,7 @@ public class SpotterTSVWriter extends CasExporter {
 	@Override
 	public void process(JCas cas) throws AnalysisEngineProcessException {
 	    
-		String name = getExportFilePath(cas, "tsv");
-		if (name == null) {
-			this.getContext().getLogger()
-					.log(Level.WARNING, "Skiping CAS Serialization");
-			return;
-		}
-		try {
-			File file = new File(this.directoryFile, name);
-			OutputStreamWriter out = new OutputStreamWriter(
-					new FileOutputStream(file), "utf-8");
-			try {
-				this.getContext().getLogger()
-						.log(Level.FINE, "Writing " + file.getAbsolutePath());
-				AnnotationIndex<Annotation> index = cas
-						.getAnnotationIndex(WordAnnotation.type);
-				WordAnnotation word;
-				for (Annotation annot : index) {
-					word = (WordAnnotation) annot;
-					out.append(word.getCoveredText()).append('\t');
-					out.append(word.getCategory()).append('\t');
-					out.append(word.getLemma()).append('\n');
-				}
-			} finally {
-				out.close();
-			}
-		} catch (Exception e) {
-			throw new AnalysisEngineProcessException(e);
-		}
 	}
 
+	
 }

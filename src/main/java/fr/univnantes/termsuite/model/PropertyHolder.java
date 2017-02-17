@@ -15,21 +15,21 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 	private static final String ERR_PROPERTY_NOT_SET = "Property %s not set";
 	private static final String ERR_NOT_AN_INSTANCE = "Value <%s> is not an instance of range %s";
 	
-	protected Map<T, Comparable<?>> properties;
+	protected Map<T, Object> properties;
 	
 	public PropertyHolder(Class<T> cls) {
 		super();
 		this.properties = Collections.synchronizedMap(new EnumMap<>(cls));
 	}
 
-	public void setProperty(T property, Comparable<?> value) {
+	public void setProperty(T property, Object value) {
 		Preconditions.checkNotNull(property, ERR_PROPERTY_CANNOT_BE_NULL);
 		Preconditions.checkNotNull(value, ERR_VALUE_CANNOT_BE_NULL, property);
 		Preconditions.checkArgument(property.getRange().isInstance(value), ERR_NOT_AN_INSTANCE, value, property.getRange());
 		properties.put(property, value);
 	}
 
-	public Comparable<?> getPropertyValue(T property) {
+	public Object getPropertyValue(T property) {
 		Preconditions.checkNotNull(isPropertySet(property), ERR_PROPERTY_NOT_SET, property);
 		return properties.get(property);
 	}
@@ -39,7 +39,7 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 		return properties.containsKey(property);
 	}
 
-	public Comparable<?> getPropertyValueUnchecked(T property) {
+	public Object getPropertyValueUnchecked(T property) {
 		return properties.get(property);		
 	}
 	
@@ -48,28 +48,52 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 				(String)properties.get(property)
 					: defaultValue;
 	}
+	
+	public String getStringUnchecked(T property) {
+		return isPropertySet(property) ? getString(property) : null;
+	}
 
-	public String getPropertyStringValue(T property) {
+	public Double getDoubleUnchecked(T property) {
+		return isPropertySet(property) ? getDouble(property) : null;
+	}
+
+	public Float getFloatUnchecked(T property) {
+		return isPropertySet(property) ? getFloat(property) : null;
+	}
+
+	public Integer getIntegerUnchecked(T property) {
+		return isPropertySet(property) ? getInteger(property) : null;
+	}
+
+	public Long getLongUnchecked(T property) {
+		return isPropertySet(property) ? getLong(property) : null;
+	}
+
+	public Boolean getBooleanUnchecked(T property) {
+		return isPropertySet(property) ? getBoolean(property) : null;
+	}
+
+	public String getString(T property) {
 		return (String)getPropertyValue(property);
 	}
 
-	public Double getPropertyDoubleValue(T property) {
+	public Double getDouble(T property) {
 		return (Double)getPropertyValue(property);
 	}
 
-	public Integer getPropertyIntegerValue(T property) {
+	public Integer getInteger(T property) {
 		return (Integer)getPropertyValue(property);
 	}
 
-	public Long getPropertyLongValue(T property) {
+	public Long getLong(T property) {
 		return (Long)getPropertyValue(property);
 	}
 
-	public Float getPropertyFloatValue(T property) {
+	public Float getFloat(T property) {
 		return (Float)getPropertyValue(property);
 	}
 
-	public Boolean getPropertyBooleanValue(T property) {
+	public Boolean getBoolean(T property) {
 		return (Boolean)getPropertyValue(property);
 	}
 	
@@ -78,13 +102,13 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 	public int compareNumericValue(T property, Double value) {
 		Preconditions.checkArgument(property.isNumeric(),ERR_PROPERTY_MUST_BE_NUMERIC, property);
 		if(property.getRange().equals(Double.class)) 
-			return Double.compare(getPropertyDoubleValue(property), value);
+			return Double.compare(getDouble(property), value);
 		else if(property.getRange().equals(Integer.class)) 
-			return Double.compare(getPropertyIntegerValue(property), value);
+			return Double.compare(getInteger(property), value);
 		else if(property.getRange().equals(Float.class)) 
-			return Double.compare(getPropertyFloatValue(property), value);
+			return Double.compare(getFloat(property), value);
 		else if(property.getRange().equals(Long.class)) 
-			return Double.compare(getPropertyLongValue(property), value);
+			return Double.compare(getLong(property), value);
 		else 
 			throw new IllegalArgumentException(String.format(
 					ERR_UNEXPECTED_PROPERTY_RANGE, 
@@ -95,13 +119,13 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 	public int compareNumericValue(T property, Long value) {
 		Preconditions.checkArgument(property.isNumeric(),ERR_PROPERTY_MUST_BE_NUMERIC, property);
 		if(property.getRange().equals(Double.class)) 
-			return Double.compare(getPropertyDoubleValue(property), value);
+			return Double.compare(getDouble(property), value);
 		else if(property.getRange().equals(Integer.class)) 
-			return Long.compare(getPropertyIntegerValue(property), value);
+			return Long.compare(getInteger(property), value);
 		else if(property.getRange().equals(Float.class)) 
-			return Double.compare(getPropertyFloatValue(property), value);
+			return Double.compare(getFloat(property), value);
 		else if(property.getRange().equals(Long.class)) 
-			return Long.compare(getPropertyLongValue(property), value);
+			return Long.compare(getLong(property), value);
 		else 
 			throw new IllegalArgumentException(String.format(
 					ERR_UNEXPECTED_PROPERTY_RANGE, 
@@ -125,7 +149,7 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 		return compareNumericValue(property, value) <= 0;
 	}
 	
-	public Map<T, Comparable<?>> getProperties() {
+	public Map<T, Object> getProperties() {
 		return Collections.unmodifiableMap(this.properties);
 	}
 	
@@ -138,12 +162,12 @@ public class PropertyHolder<T extends Enum<T> & Property<?>> {
 			return false;
 	}
 	
-	public Comparable<?> get(T p) {
+	public Object get(T p) {
 		return properties.get(p);
 	}
 
-	public void setProperties(Map<T, Comparable<?>> properties) {
-		for(Entry<T, Comparable<?>> e:properties.entrySet())
+	public void setProperties(Map<T, Object> properties) {
+		for(Entry<T, Object> e:properties.entrySet())
 			setProperty(e.getKey(), e.getValue());
 	}
 }

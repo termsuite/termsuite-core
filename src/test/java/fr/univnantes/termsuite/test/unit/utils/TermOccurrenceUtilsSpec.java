@@ -32,30 +32,37 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.model.Document;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 import fr.univnantes.termsuite.utils.TermOccurrenceUtils;
 
 public class TermOccurrenceUtilsSpec {
 
+	IndexedCorpus corpus;
 	
 	TermOccurrence o1;
 	TermOccurrence o2;
 	TermOccurrence o3;
 	TermOccurrence o4;
 	TermOccurrence o5;
+	Term term1, term2, term3;
 	
 	@Before
 	public void setup() {
+		corpus = TermSuiteFactory.createIndexedCorpus(Lang.FR, "");
 		final Document document1 = Fixtures.document1();
-		final Term term1 = Fixtures.term1();
-		final Term term2 = Fixtures.term2();
-		final Term term3 = Fixtures.term3();
-		term1.setFrequencyNorm(0.1);
-		term2.setFrequencyNorm(0.2);
-		term3.setFrequencyNorm(0.3);
+		term1 = Fixtures.term1(corpus.getTerminology());
+		term2 = Fixtures.term2(corpus.getTerminology());
+		term3 = Fixtures.term3(corpus.getTerminology());
+		term1.setProperty(TermProperty.FREQUENCY_NORM, 0.1);
+		term2.setProperty(TermProperty.FREQUENCY_NORM, 0.2);
+		term3.setProperty(TermProperty.FREQUENCY_NORM, 0.3);
 		o1 = new TermOccurrence(term1, "blabla1", document1, 10, 20);
 		o2 = new TermOccurrence(term2, "blabla2", document1, 20, 30);
 		o3 = new TermOccurrence(term1, "blabla3", document1, 10, 40);
@@ -127,8 +134,8 @@ public class TermOccurrenceUtilsSpec {
 	
 	@Test
 	public void testOccurrenceChunkIterator2() {
-		TermOccurrence o6 = new TermOccurrence(Fixtures.term1(), "blabla6", Fixtures.document1(), 100, 200);
-		TermOccurrence o7 = new TermOccurrence(Fixtures.term2(), "blabla7", Fixtures.document1(), 150, 220);
+		TermOccurrence o6 = new TermOccurrence(term1, "blabla6", Fixtures.document1(), 100, 200);
+		TermOccurrence o7 = new TermOccurrence(term2, "blabla7", Fixtures.document1(), 150, 220);
 		
 		List<TermOccurrence> occurrences = Lists.newArrayList(o1, o2, o3, o4, o5, o6, o7);
 		List<List<TermOccurrence>> chunks = Lists.newArrayList(TermOccurrenceUtils.occurrenceChunkIterator(occurrences));

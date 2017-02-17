@@ -30,7 +30,6 @@ repositories {
 	mavenCentral()
 }
 
-
 sourceSets {
     eval
 }     
@@ -219,7 +218,8 @@ dependencies {
 	compile "ch.qos.logback:logback-classic:1.1.7"
 
 	// Json
-	compile "com.fasterxml.jackson.core:jackson-databind:2.8.2"
+	compile "com.fasterxml.jackson.core:jackson-databind:2.8.6"
+	compile "com.fasterxml.jackson.core:jackson-annotations:2.8.6"
 
 	// Xodus
 	compile 'org.jetbrains.xodus:xodus-entity-store:1.0.2'
@@ -247,7 +247,10 @@ dependencies {
 	// Guava
 	compile "com.google.guava:guava:19.0"
 	
-	//compile "org.mongodb:mongo-java-driver:3.2.2"
+
+	// Guice
+	compile 'com.google.inject:guice:4.1.0'
+	
 			
 	// Snake YAML
 	compile "org.yaml:snakeyaml:1.15"
@@ -328,6 +331,15 @@ jar {
             "Built-JDK": System.getProperty('java.version'),
 			"Main-Class": "eu.project.ttc.tools.TermSuite")
     }
+}
+
+compileJava.doFirst{
+	def termsuiteVersion = file("src/main/resources/TERMSUITE_VERSION").text
+	if(!termsuiteVersion.equals(project.getProperty("version"))) {
+		println "Version in gradle property: " + project.getProperty("version")
+		println "Version TERMSUITE_VERSION: " + termsuiteVersion	
+		throw new GradleException("TermSuite versions differ! Version in gradle property: " + project.getProperty("version") + ". Version in TERMSUITE_VERSION: " + termsuiteVersion)
+	}
 }
 
 clean.doLast {

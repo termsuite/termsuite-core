@@ -1,18 +1,18 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.TermRelation;
 
 /**
  * 
- * When a {@link TermRelation} is a variation, this enum
+ * When a {@link Relation} is a variation, this enum
  * represents the variation type.
  * 
  * @author Damien Cram
  * 
  */
 public enum VariationType implements PropertyValue {
-	PREFIXATION("P", 5, "pref", true, RelationProperty.IS_PREXATION), 
+	PREFIXATION("P", 5, "pref", true, RelationProperty.IS_PREFIXATION), 
 	DERIVATION("D", 4, "deriv", true, RelationProperty.IS_DERIVATION),
 	SEMANTIC("H", 7, "syno", true, RelationProperty.IS_SEMANTIC),
 	MORPHOLOGICAL("M", 1, "morph", true, RelationProperty.IS_MORPHOLOGICAL),

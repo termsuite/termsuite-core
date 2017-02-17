@@ -39,11 +39,6 @@
 				{lemma: "word1", syn: "N", swt: true},
 				{lemma: "word2", syn: "A", swt: true}
 			],
-
-			occurrences: [
-				{begin:1, end:3, text:"occ 1", file: 1},
-				{begin:10, end:14, text:"occ 1", file: 2}
-			],
 			context: {
 				total_cooccs: 30,
 				cooccs: [
@@ -90,8 +85,13 @@
 		}
 	],
 	relations: [
-		{from: "n: word1", to: "na: word1 word2", type: "var", props: {vrule: "n-na", vtype: "syn"}},
-		{from: "a: word2", to: "na: word1 word2", type: "var", props: {vrule: "a-na", vtype: "syn"}},
-		{from: "na: word1 word2", to: "n: word1", type: "var", props: {graphSim: 0.914, vtype: "graph"}}
-	]
+		{from: "n: word1", to: "na: word1 word2", type: "var", props: {vrules: ["n-na"], isSyntag: true}},
+		{from: "a: word2", to: "na: word1 word2", type: "var", props: {vrules: ["a-na"], isSyntag: true}},
+		{from: "na: word1 word2", to: "n: word1", type: "var", props: {graphSim: 0.914, isGraph: true}}
+	],
+	occurrences: [
+				{tid: "na: word1 word2", begin:1, end:3, text:"occ 1", file: 1},
+				{tid: "na: word1 word2", begin:10, end:14, text:"occ 1", file: 2}
+			]
+	
 }

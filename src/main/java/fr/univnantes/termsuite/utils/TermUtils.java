@@ -21,16 +21,13 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.utils;
 
-import java.io.PrintStream;
+import static java.util.stream.Collectors.joining;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
@@ -38,23 +35,11 @@ import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.splitter.CompoundUtils;
 import fr.univnantes.termsuite.model.Component;
-import fr.univnantes.termsuite.model.ContextVector;
-import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.model.Word;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
-import fr.univnantes.termsuite.model.termino.TermValueProviders;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
-import fr.univnantes.termsuite.uima.TermSuiteResourceException;
-import fr.univnantes.termsuite.uima.resources.termino.GeneralLanguageResource;
 
 public class TermUtils {
-
-	private static final String MSG_NOT_AN_EXTENSION = "Term '%s' is no extension of term '%s'";
 
 
 	/**
@@ -68,65 +53,6 @@ public class TermUtils {
 					.result();
 		}
 	};
-	
-	public static void showIndex(Terminology index, PrintStream stream) {
-		Optional<Pattern> watchExpression = Optional.empty();
-		showIndex(index, stream, watchExpression);
-	}
-		
-	public static void showIndex(Terminology index, PrintStream stream, Optional<Pattern> watchExpression) {
-		for(Term term:index.getTerms()) {
-			if(!watchExpression.isPresent()
-					|| (watchExpression.isPresent() && watchExpression.get().matcher(term.getGroupingKey()).find())
-					) {
-				stream.println(term);
-//				for(Term t:term.getGraphicalVariants()) 
-//					stream.format("\tgraphical: %s\n" , t.getGroupingKey());
-				for(TermRelation variation:index.getOutboundRelations(term)) 
-					stream.format("\tsyntactic: %s\n" , variation.getTo().getGroupingKey());
-			}
-		}
-	}
-
-	public static void showCompounds(Terminology index, PrintStream out, int threshhold) {
-		List<Term> terms = Lists.newArrayList();
-		for(Term term:index.getTerms()) {
-			if(term.isCompound() && term.getFrequency() >= threshhold)
-				terms.add(term);
-		}
-		Collections.sort(terms, frequencyComparator);
-		for(Term term:terms) 
-			out.println(term);
-	}
-	
-	/**
-	 * 
-	 * Finds in an input term all single-word terms it is made off. 
-	 * If the input term has compounds, this method will iterate 
-	 * over each compound and try to find a matching swt for each compound.
-	 * 
-	 * This method creates an index on Terminology based on key
-	 * {@link TermIndexes#SINGLE_WORD_LEMMA}.
-	 * 
-	 * @param termino
-	 * 			The {@link Terminology} in which single word terms must be found.
-	 * @param term
-	 * 			The input term.
-	 * @return
-	 * 			The list of single word terms.
-	 * 
-	 * @see Term#asComponentIterator(boolean)
-	 */
-	public static List<Term> getSingleWordTerms(Terminology termino, Term term) {
-		List<Term> terms = Lists.newArrayList();
-		for(TermWord tw:term.getWords()) {
-			Term swt = termino.getTermByGroupingKey(toGroupingKey(tw));
-			if(swt != null)
-				terms.add(swt);
-		}
-		
-		return terms;
-	}
 
 	private static final String STEMMED_INSENSITIVE_GKEY_FORMAT = "%s: %s";
 	/**
@@ -169,127 +95,6 @@ public class TermUtils {
 			last = c;
 		}
 		return builder.toString().trim();
-	}
-	
-	public static void showContextVector(ContextVector contextVector, int topN) {
-		Set<ContextVector.Entry> entries = Sets.newTreeSet(contextVector.getEntries());
-		int i = 0;
-		for(ContextVector.Entry e:entries) {
-			i++;
-			if(i>topN)
-				break;
-			System.out.format("\t%-12s: %d\n", e.getCoTerm().getLemma(), e.getNbCooccs());
-		}
-	}
-
-	
-	/**
-	 * 
-	 * Finds in a {@link Terminology} the biggest extension affix term of a term depending 
-	 * on a base term.
-	 * 
-	 * For example, the term "offshore wind turbine" is an extension of 
-	 * "wind turbine". The extension affix is the term "offshore".
-	 * 
-	 * @param termino
-	 * 			The term index that both terms belong to.
-	 * @param base
-	 * 			The base term
-	 * @param extension
-	 * 			The extension term
-	 * @return
-	 * 		the extension affix found in <code>termino</code>, <code>null</code> if none
-	 * 		has been found.
-	 * @throws IllegalArgumentException if <code>extension</code> id not an 
-	 * 			extension of the term <code>base</code>.
-	 */
-	public static Term getExtensionAffix(Terminology termino, Term base, Term extension) {
-		int index = TermUtils.getPosition(base, extension);
-		if(index == -1)
-			throw new IllegalStateException(String.format(MSG_NOT_AN_EXTENSION, 
-					extension,
-					base)
-				);
-
-		/*
-		 *  true if prefix, false if suffix
-		 */
-		boolean isPrefix = false;
-		if(index == 0)
-			isPrefix = true;
-		else if(index + base.getWords().size() == extension.getWords().size())
-			isPrefix = false; // suffix
-		else {
-			/*
-			 * Happens sometimes. 
-			 * 
-			 * base = 		'nnnn: hd spring spring spring' 
-			 * extension = 	'nn: spring spring'
-			 * 
-			 * Do nothing.
-			 */
-		}
-		
-		if(isPrefix) 
-			return findBiggestSuffix(
-					termino, 
-					extension.getWords().subList(index + base.getWords().size(), extension.getWords().size())
-				);
-		else
-			return findBiggestPrefix(
-					termino, 
-					extension.getWords().subList(0, index)
-				);
-	}
-
-	/**
-	 * Finds in a {@link Terminology} the biggest prefix of a sequence of
-	 * {@link TermWord}s that exists as a term.
-	 * 
-	 * @param termino
-	 * 			the term index
-	 * @param words
-	 * 			the initial sequence of {@link TermWord}s
-	 * @return
-	 * 			A {@link Term} found in <code>termino</code> that makes the
-	 * 			biggest possible prefix sequence for <code>words</code>.
-	 */
-	public static Term findBiggestPrefix(Terminology termino, List<TermWord> words) {
-		Term t;
-		String gKey;
-		for(int i = words.size(); i > 0 ; i--) {
-			gKey = TermSuiteUtils.getGroupingKey(words.subList(0, i));
-			t = termino.getTermByGroupingKey(gKey);
-			if(t!=null)
-				return t;
-		}
-		return null;
-	}
-	
-
-	/**
-	 * Finds in a {@link Terminology} the biggest suffix of a sequence of
-	 * {@link TermWord}s that exists as a term.
-	 * 
-	 * @param termino
-	 * 			the term index
-	 * @param words
-	 * 			the initial sequence of {@link TermWord}s
-	 * @return
-	 * 			A {@link Term} found in <code>termino</code> that makes the
-	 * 			biggest possible suffix sequence for <code>words</code>.
-
-	 */
-	public static Term findBiggestSuffix(Terminology termino, List<TermWord> words) {
-		Term t;
-		String gKey;
-		for(int i = 0; i < words.size() ; i++) {
-			gKey = TermSuiteUtils.getGroupingKey(words.subList(i, words.size()));
-			t = termino.getTermByGroupingKey(gKey);
-			if(t!=null)
-				return t;
-		}
-		return null;
 	}
 	
 	public static boolean isIncludedIn(Term term, Term inTerm) {
@@ -335,22 +140,22 @@ public class TermUtils {
 		return -1;
 	}
 
-	/**
-	 * 
-	 * @param l
-	 * @param t
-	 * @return
-	 */
-	public static int getGeneralFrequency(Lang l, Term t) {
-		String resName = TermSuiteResource.GENERAL_LANGUAGE.getPath(l);
-		GeneralLanguageResource generalLanguage = new GeneralLanguageResource();
-		try {
-			generalLanguage.load(TermUtils.class.getClassLoader().getResourceAsStream(resName));
-			return generalLanguage.getFrequency(t.getLemma(), t.getPattern());
-		} catch (Exception e) {
-			throw new TermSuiteResourceException("Could not read resource " + resName, e);
-		}
-	}
+//	/**
+//	 * 
+//	 * @param l
+//	 * @param t
+//	 * @return
+//	 */
+//	public static int getGeneralFrequency(Lang l, Term t) {
+//		String resName = ResourceType.GENERAL_LANGUAGE.getPath(l);
+//		GeneralLanguageResource generalLanguage = new GeneralLanguageResource();
+//		try {
+//			generalLanguage.load(TermUtils.class.getClassLoader().getResourceAsStream(resName));
+//			return generalLanguage.getFrequency(t.getLemma(), t.getPattern());
+//		} catch (Exception e) {
+//			throw new TermSuiteResourceException("Could not read resource " + resName, e);
+//		}
+//	}
 
 	public static double getExtensionGain(Term extension, Term extensionAffix) {
 		return ((double)extension.getFrequency())/extensionAffix.getFrequency();
@@ -388,7 +193,6 @@ public class TermUtils {
 	}
 	
 	
-	
 	/**
 	 * Return the term pair indexing key that is compliant with {@link TermValueProviders#ALLCOMP_PAIRS}.
 	 * 
@@ -408,40 +212,16 @@ public class TermUtils {
 		return String.format("%s+%s", lemmas.get(0), lemmas.get(1));
 	}
 
-	public static Collection<Term> getExtensions(Terminology termino, Term term) {
-		return termino.getOutboundRelations(term, RelationType.HAS_EXTENSION)
-				.stream()
-				.map(TermRelation::getTo)
-				.collect(Collectors.toSet());
-	}
-		
-	public static boolean isExtension(Terminology termino, Term term, Term extension) {
-		return termino.getOutboundRelations(term, RelationType.HAS_EXTENSION)
-			.stream()
-			.filter(tv -> tv.getTo().equals(extension))
-			.findAny().isPresent();
-	}
-	
-	
-	public static Collection<TermRelation> getVariations(Terminology termino, Term t) {
-		return termino.getOutboundRelations(t,
-				RelationType.VARIATION, 
-				RelationType.DERIVES_INTO,
-				RelationType.IS_PREFIX_OF);
+	public static boolean isCompound(Term actual) {
+		return actual.getWords().size() == 1 
+				&& actual.getWords().get(0).getWord().isCompound();
 	}
 
-	public static Collection<TermRelation> getBases(Terminology termino, Term current) {
-		return termino.getInboundRelations(current,
-				RelationType.VARIATION, 
-				RelationType.DERIVES_INTO,
-				RelationType.IS_PREFIX_OF);
+	public static String getTermLemma(Term t) {
+		return t.getWords().stream()
+			.map(TermWord::getWord)
+			.map(Word::getLemma)
+			.collect(joining(TermSuiteConstants.WHITESPACE_STRING));
 	}
-	
-	public static void setTfIdf(Term term) {
-		term.setTfIdf((double)term.getFrequency()/term.getDocumentFrequency());
-	}
-	
-	public static void setSpecificity(Term term) {
-		term.setSpecificity(Math.log10(1 + term.getFrequencyNorm()/term.getGeneralFrequencyNorm()));
-	}
+
 }

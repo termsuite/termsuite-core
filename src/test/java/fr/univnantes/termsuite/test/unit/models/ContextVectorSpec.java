@@ -27,41 +27,50 @@ import static org.assertj.core.api.Assertions.tuple;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.ContextVector;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 
 public class ContextVectorSpec {
 
 	private ContextVector vector;
 	private Document doc;
-
+	private Term term1, term2, term3;
+	
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		this.vector = new ContextVector(Fixtures.term1());
+		Terminology terminology = TermSuiteFactory.createIndexedCorpus(Lang.FR, "").getTerminology();
+
+		term1 = Fixtures.term1(terminology);
+		term2 = Fixtures.term2(terminology);
+		term3 = Fixtures.term3(terminology);
+		this.vector = new ContextVector(term1);
 		this.doc = new Document(Lang.FR, "doc1");
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term1(), "text1", doc, 10, 15));
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term3(), "text2", doc, 30, 45));
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term2(), "text2", doc, 50, 65));
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term1(), "text1", doc, 70, 90));
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term3(), "text1", doc, 100, 115));
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term1(), "text2", doc, 200, 215));
+		this.vector.addCooccurrence(new TermOccurrence(term1, "text1", doc, 10, 15));
+		this.vector.addCooccurrence(new TermOccurrence(term3, "text2", doc, 30, 45));
+		this.vector.addCooccurrence(new TermOccurrence(term2, "text2", doc, 50, 65));
+		this.vector.addCooccurrence(new TermOccurrence(term1, "text1", doc, 70, 90));
+		this.vector.addCooccurrence(new TermOccurrence(term3, "text1", doc, 100, 115));
+		this.vector.addCooccurrence(new TermOccurrence(term1, "text2", doc, 200, 215));
 	}
 	
 	@Test
 	public void testGetEntries() {
 		assertThat(this.vector.getEntries()).extracting("coTerm", "nbCooccs", "assocRate").containsExactly(
-				tuple(Fixtures.term1(), 3, 0d),
-				tuple(Fixtures.term3(), 2, 0d),
-				tuple(Fixtures.term2(), 1, 0d)
+				tuple(term1, 3, 0d),
+				tuple(term3, 2, 0d),
+				tuple(term2, 1, 0d)
 			);
-		this.vector.addCooccurrence(new TermOccurrence(Fixtures.term1(), "text2", doc, 64, 65));
+		this.vector.addCooccurrence(new TermOccurrence(term1, "text2", doc, 64, 65));
 		assertThat(this.vector.getEntries()).extracting("coTerm", "nbCooccs", "assocRate").containsExactly(
-				tuple(Fixtures.term1(), 4, 0d),
-				tuple(Fixtures.term3(), 2, 0d),
-				tuple(Fixtures.term2(), 1, 0d)
+				tuple(term1, 4, 0d),
+				tuple(term3, 2, 0d),
+				tuple(term2, 1, 0d)
 			);
 	}
 }

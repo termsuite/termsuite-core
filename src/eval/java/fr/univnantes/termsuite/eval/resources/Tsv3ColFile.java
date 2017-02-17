@@ -15,11 +15,13 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.CustomTermIndex;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
 
 public class Tsv3ColFile {
 
@@ -39,9 +41,9 @@ public class Tsv3ColFile {
 			.collect(Collectors.toList());
 	}
 	
-	public Stream<Term[]> pairs(Terminology sourceTermino, Terminology targetTermino) throws IOException {
-		CustomTermIndex sourceLemmaIndex = sourceTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
-		CustomTermIndex targetLemmaIndex = targetTermino.getCustomIndex(TermIndexes.LEMMA_LOWER_CASE);
+	public Stream<TermService[]> pairs(TerminologyService sourceTermino, TerminologyService targetTermino) throws IOException {
+		TermIndex sourceLemmaIndex = TermSuiteFactory.createTermIndex(sourceTermino, TermIndexType.LEMMA_LOWER_CASE);
+		TermIndex targetLemmaIndex = TermSuiteFactory.createTermIndex(targetTermino, TermIndexType.LEMMA_LOWER_CASE);
 
 		return lines().filter(line -> {
 			if(!sourceLemmaIndex.containsKey(line[1])) {
@@ -59,7 +61,7 @@ public class Tsv3ColFile {
 			List<Term> targets = targetLemmaIndex.getTerms(line[2]);
 			Collections.sort(targets, TermProperty.FREQUENCY.getComparator(true));
 			LOGGER.debug("Reading eval pair. Source: <{}>. Target: <{}>", sources.get(0), targets.get(0));
-			return new Term[]{sources.get(0), targets.get(0)};
+			return new TermService[]{sourceTermino.asTermService(sources.get(0)), targetTermino.asTermService(targets.get(0))};
 		});
 	}
 

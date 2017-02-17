@@ -32,12 +32,14 @@ import org.apache.commons.lang3.mutable.MutableInt;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import fr.univnantes.termsuite.metrics.AssociationRate;
+import fr.univnantes.termsuite.engines.contextualizer.AssociationRate;
+import fr.univnantes.termsuite.engines.contextualizer.CrossTable;
 
 /**
  * 
@@ -89,6 +91,7 @@ public class ContextVector {
 	}
 
 	public void addEntry(Term coTerm, int nbCooccs, double assocRate) {
+		Preconditions.checkNotNull(coTerm);
 		Term termToAdd = coTerm;
 		
 		if(entries.containsKey(termToAdd))
@@ -138,6 +141,7 @@ public class ContextVector {
 			for(Entry e:entries.values())
 				e.setAssocRate(e.getAssocRate()/sum);
 		}
+		setDirty();
 	}
 		
 
@@ -204,6 +208,11 @@ public class ContextVector {
 		return entries.containsKey(term) ? entries.get(term).getNbCooccs() : 0;
 	}
 
+	public void setAssocRate(Term coTerm, double assocRate) {
+		entries.get(coTerm).setAssocRate(assocRate);
+		setDirty();
+	}
+
 	public double getAssocRate(Term term) {
 		return entries.containsKey(term) ? entries.get(term).getAssocRate() : 0d;
 	}
@@ -231,31 +240,7 @@ public class ContextVector {
 		return term;
 	}
 	
-	/**
-	 * Normalize this vector according to a cross table
-	 * and an association rate measure.
-	 * 
-	 * This method recomputes all <code>{@link Entry}.frequency</code> values
-	 * with the normalized ones.
-	 * 
-	 * @param table
-	 * 			the pre-computed co-occurrences {@link CrossTable}
-	 * @param assocRateFunction
-	 * 			the {@link AssociationRate} measure implementation
-	 * @param normalize 
-	 */
-	public void toAssocRateVector(CrossTable table, AssociationRate assocRateFunction, boolean normalize) {
-		double assocRate;
-		for(Term coterm:entries.keySet()) {
-			assocRate = table.computeRate(assocRateFunction, this.term, coterm);
-			entries.get(coterm).setAssocRate(assocRate);
-		}
-		if(normalize)
-			normalize();
 
-		setDirty();
-	}
-	
 	private final static String STRING_FORMAT = "<%s> {%s}";
 	@Override
 	public String toString() {

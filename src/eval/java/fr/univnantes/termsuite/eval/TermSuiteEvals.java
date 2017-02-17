@@ -12,15 +12,19 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 
-import fr.univnantes.termsuite.api.JsonOptions;
-import fr.univnantes.termsuite.api.TerminologyIO;
+import fr.univnantes.termsuite.api.ExtractorOptions;
+import fr.univnantes.termsuite.api.IndexedCorpusIO;
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.eval.model.LangPair;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.io.json.JsonOptions;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.model.TermProperty;
+import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
-import fr.univnantes.termsuite.utils.TermSuiteResourceManager;
 
 public class TermSuiteEvals {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);
@@ -88,14 +92,14 @@ public class TermSuiteEvals {
 		}
 	}
 
-	public static Terminology getTerminology(Corpus corpus, Lang lang, TerminoConfig config) {
+	public static IndexedCorpus getTerminology(Corpus corpus, Lang lang, TerminoConfig config) {
 		Path path = getTerminologyPath(lang, corpus, config);
 		if(!path.toFile().isFile()) {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
-			TermSuiteResourceManager.getInstance().clear();
-			Terminology termino = config.toExtractor(lang, corpus).execute();
+			TextCorpus textCorpus = new TextCorpus(lang, corpus.getRootDir().resolve(lang.getName()));
+			IndexedCorpus extracted = toIndexedCorpus(textCorpus, config);
 			try(FileWriter writer = new FileWriter(path.toFile())){
-				TerminologyIO.toJson(termino, writer, new JsonOptions().withOccurrences(false).withContexts(true));
+				IndexedCorpusIO.toJson(extracted, writer, new JsonOptions().withOccurrences(false).withContexts(true));
 			} catch (IOException e) {
 				LOGGER.error("Could not create terminology {}", getTerminologyFileName(lang, corpus, config));
 				throw new RuntimeException(e);
@@ -103,17 +107,37 @@ public class TermSuiteEvals {
 		} else
 			LOGGER.info("Terminology {} found in cache", getTerminologyFileName(lang, corpus, config));
 
-		return TerminologyIO.fromJson(path);
+		return IndexedCorpusIO.fromJson(path);
 	}
+	
+	public static IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, TerminoConfig config) {
+		IndexedCorpus corpus = TermSuite.preprocessor()
+				.setTaggerPath(TermSuiteEvals.getTreeTaggerPath())
+				.toIndexedCorpus(textCorpus, 1000000);
+			
+		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(textCorpus.getLang());
+		extractorOptions.getContextualizerOptions().setEnabled(true);
+		extractorOptions.getContextualizerOptions().setScope(config.getScope());
+		extractorOptions.getContextualizerOptions().setMinimumCooccFrequencyThreshold(config.getCoocFrequencyTh());
+		
+		if(config.getFrequencyTh() > 1)
+			extractorOptions.getPreFilterConfig().by(TermProperty.FREQUENCY).keepOverTh(config.getFrequencyTh());
+
+		TermSuite.terminoExtractor()
+					.setOptions(extractorOptions)
+					.execute(corpus);
+		
+		return corpus;
+	}
+
 	
 	
 	public static String getTerminologyFileName(Lang lang, Corpus corpus, TerminoConfig config) {
-		return String.format("%s-%s-th%s-scope%d-%s.json", 
+		return String.format("%s-%s-th%s-scope%d.json", 
 				corpus.getShortName(), 
 				lang.getCode(), 
 				Integer.toString(config.getFrequencyTh()), 
-				config.getScope(),
-				config.isSwtOnly() ? "swtonly" : "allterms");
+				config.getScope());
 	}
 
 	public static Path getTerminologyPath(Lang lang, Corpus corpus, TerminoConfig config) {

@@ -5,11 +5,11 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.alignment.BilingualAligner;
+import fr.univnantes.termsuite.alignment.BilingualAlignmentService;
 import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.CompoundType;
-import fr.univnantes.termsuite.model.Term;
 
 public enum EvaluatedMethod {
 	DISTRIBUTIONAL("distrib"),
@@ -27,7 +27,7 @@ public enum EvaluatedMethod {
 		this.dirName = dirName;
 	}
 
-	public boolean acceptPair(BilingualAligner aligner, Term source, Term target) {
+	public boolean acceptPair(BilingualAlignmentService aligner, TermService source, TermService target) {
 		try {
 			switch(this) {
 			case DISTRIBUTIONAL: return source.isSingleWord() && target.isSingleWord();
@@ -45,7 +45,7 @@ public enum EvaluatedMethod {
 		}
 	}
 
-	public List<TranslationCandidate> align(BilingualAligner aligner, Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
+	public List<TranslationCandidate> align(BilingualAlignmentService aligner, TermService sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		switch(this) {
 		case DISTRIBUTIONAL: return aligner.alignDistributional(sourceTerm, nbCandidates, minCandidateFrequency);
 		case NEOCLASSICAL: return aligner.alignNeoclassical(sourceTerm, nbCandidates, minCandidateFrequency);

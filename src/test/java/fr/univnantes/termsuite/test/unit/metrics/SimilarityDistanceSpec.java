@@ -26,11 +26,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.Jaccard;
 import fr.univnantes.termsuite.model.ContextVector;
+import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.test.unit.Fixtures;
+import fr.univnantes.termsuite.test.mock.Fixtures;
 
 public class SimilarityDistanceSpec {
 
@@ -52,10 +55,12 @@ public class SimilarityDistanceSpec {
 	
 	@Before
 	public void setTerms() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		this.term1 = Fixtures.term1();
-		this.term2 = Fixtures.term2();
-		this.term3 = Fixtures.term3();
-		this.term4 = Fixtures.term4();
+		
+		Terminology terminology = TermSuiteFactory.createIndexedCorpus(Lang.FR, "").getTerminology();
+		this.term1 = Fixtures.term1(terminology);
+		this.term2 = Fixtures.term2(terminology);
+		this.term3 = Fixtures.term3(terminology);
+		this.term4 = Fixtures.term4(terminology);
 		this.v1 = new ContextVector();
 		this.v1.addEntry(term1, 1234, 1d);
 		

@@ -1,26 +1,43 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
+
+import org.slf4j.Logger;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.engines.SimpleEngine;
+import fr.univnantes.termsuite.framework.Index;
+import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.Parameter;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.EditDistance;
 import fr.univnantes.termsuite.metrics.FastDiacriticInsensitiveLevenshtein;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
-import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.model.termino.TermIndexes;
+import fr.univnantes.termsuite.model.TermProperty;
 
-public class GraphicalGatherer extends AbstractGatherer {
+public class GraphicalGatherer extends SimpleEngine {
 	
 	private EditDistance distance = new FastDiacriticInsensitiveLevenshtein(false);
-	private double similarityThreshold = 1d;
+	
+	@InjectLogger Logger logger;
+	
+	@Parameter
+	private GathererOptions options;
+	
+	@Index(type=TermIndexType.FIRST_LETTERS_2)
+	TermIndex letterIndex;
+	
 	
 	/*
 	 * Gives the direction of the graphical relation between two terms.
@@ -29,57 +46,36 @@ public class GraphicalGatherer extends AbstractGatherer {
 	private static class GraphicalDirection implements Comparator<Term> {
 		@Override
 		public int compare(Term t1, Term t2) {
-			if(t1.getFrequency() > t2.getFrequency())
-				return -1;
-			else if(t1.getFrequency() < t2.getFrequency())
-				return 1;
-			else if(t1.getSpecificity() > t2.getSpecificity())
-				return -1;
-			else if(t1.getSpecificity() < t2.getSpecificity())
-				return 1;
-			else {
-				return t1.getGroupingKey().compareTo(t2.getGroupingKey());
+			if(t1.isPropertySet(TermProperty.FREQUENCY) && t2.isPropertySet(TermProperty.FREQUENCY)) {
+				if(t1.getFrequency() > t2.getFrequency())
+					return -1;
+				else if(t1.getFrequency() < t2.getFrequency())
+					return 1;
+			} 
+			if(t1.isPropertySet(TermProperty.SPECIFICITY) && t2.isPropertySet(TermProperty.SPECIFICITY)) {
+				if(t1.getSpecificity() > t2.getSpecificity())
+					return -1;
+				else if(t1.getSpecificity() < t2.getSpecificity())
+					return 1;
 			}
+			return t1.getGroupingKey().compareTo(t2.getGroupingKey());
 		}
-	}
-	
-	public GraphicalGatherer() {
-		super();
-		setNbFixedLetters(2);
-	}
-
-	public GraphicalGatherer setDistance(EditDistance distance) {
-		this.distance = distance;
-		return this;
-	}
-	
-	public GraphicalGatherer setSimilarityThreshold(double similarityThreshold) {
-		this.similarityThreshold = similarityThreshold;
-		return this;
-	}
-	
-	public GraphicalGatherer setNbFixedLetters(int nbFixedLetters) {
-		switch(nbFixedLetters){
-		case 1:
-			setIndexName(TermIndexes.FIRST_LETTERS_1, true);
-			break;
-		case 2:
-			setIndexName(TermIndexes.FIRST_LETTERS_2, true);
-			break;
-		case 3:
-			setIndexName(TermIndexes.FIRST_LETTERS_3, true);
-			break;
-		case 4:
-			setIndexName(TermIndexes.FIRST_LETTERS_4, true);
-			break;
-		default:
-			throw new IllegalArgumentException("Bad value for number of letters for a n-first-letters index: " + nbFixedLetters);
-		}
-		return this;
 	}
 	
 	@Override
-	protected void gather(TerminologyService termino, Collection<Term> termClass, String clsName) {
+	public void execute() {
+		AtomicLong comparisonCounter = new AtomicLong(0);
+		letterIndex.keySet().stream()
+			.parallel()
+			.forEach(key -> {
+				Collection<Term> terms = letterIndex.getTerms(key);
+				gather(terms, key, comparisonCounter);
+			});
+		setIsGraphicalVariantProperties();
+		logger.debug("Number of graphical comparison computed: {}", comparisonCounter.longValue());
+	}
+	
+	protected void gather(Collection<Term> termClass, String clsName, AtomicLong comparisonCounter) {
 		GraphicalDirection ordering = new GraphicalDirection();
 		List<Term> terms = termClass.getClass().isAssignableFrom(List.class) ? 
 				(List<Term>) termClass
@@ -90,71 +86,70 @@ public class GraphicalGatherer extends AbstractGatherer {
 		for(int i=0; i<terms.size();i++) {
 			t1 = terms.get(i);
 			for(int j=i+1; j<terms.size();j++) {
-				cnt.incrementAndGet();
+				comparisonCounter.incrementAndGet();
 				t2 = terms.get(j);
-				dist = distance.computeNormalized(t1.getLemma(), t2.getLemma(), this.similarityThreshold);
-				if(dist >= this.similarityThreshold) {
+				dist = distance.computeNormalized(t1.getLemma(), t2.getLemma(), this.options.getGraphicalSimilarityThreshold());
+				if(dist >= this.options.getGraphicalSimilarityThreshold()) {
 					List<Term> pair = Lists.newArrayList(t1, t2);
 					Collections.sort(pair, ordering);
-					createGraphicalRelation(termino, pair.get(0), pair.get(1), dist);
+					createGraphicalRelation(pair.get(0), pair.get(1), dist);
 					
 				}
 			}
 		}
 	}
 	
-	protected TermRelation createGraphicalRelation(TerminologyService termino, Term from, Term to, Double similarity) {
-		TermRelation rel = termino.createVariation(VariationType.GRAPHICAL, from, to);
+	protected Relation createGraphicalRelation(Term from, Term to, Double similarity) {
+		RelationService rel = terminology.createVariation(VariationType.GRAPHICAL, from, to);
 		rel.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 		watch(from, to, similarity);
-		return rel;
+		return rel.getRelation();
 	}
 	
 	private void watch(Term from, Term to, double dist) {
 		if(history.isPresent()) {
-			if(history.get().isGKeyWatched(from.getGroupingKey()))
+			if(history.get().isTermWatched(from))
 				history.get().saveEvent(
-						from.getGroupingKey(),
+						from,
 						this.getClass(), 
 						"Term has a new graphical variant " + to + " (dist="+dist+")");
-			if(history.get().isGKeyWatched(to.getGroupingKey()))
+			if(history.get().isTermWatched(to))
 				history.get().saveEvent(
-						to.getGroupingKey(),
+						to,
 						this.getClass(), 
 						"Term has a new graphical base " + from + " (dist="+dist+")");
 		}
 	}
 
-	public void setIsGraphicalVariantProperties(Terminology termino) {
-		termino.getRelations(RelationType.VARIATION)
-		.filter(r -> r.isPropertySet(RelationProperty.IS_GRAPHICAL) 
-				&& !r.getPropertyBooleanValue(RelationProperty.IS_GRAPHICAL))
+	private void setIsGraphicalVariantProperties() {
+		terminology.variations()
+		.filter(RelationService::notGraphical)
+		.collect(toList())
+		.stream()
 		.forEach(r -> {
 			double similarity = distance.computeNormalized(
 					r.getFrom().getLemma(), 
 					r.getTo().getLemma(), 
-					this.similarityThreshold) ;
-			boolean isGraphicalVariant = similarity >= this.similarityThreshold;
+					this.options.getGraphicalSimilarityThreshold()) ;
+			boolean isGraphicalVariant = similarity >= this.options.getGraphicalSimilarityThreshold();
 			r.setProperty(RelationProperty.IS_GRAPHICAL, isGraphicalVariant);
-			if(isGraphicalVariant)
+			if(isGraphicalVariant) {
 				r.setProperty(RelationProperty.GRAPHICAL_SIMILARITY, similarity);
 			
-			if(history.isPresent()) {
-				if(history.get().isGKeyWatched(r.getFrom().getGroupingKey())
-						|| history.get().isGKeyWatched(r.getTo().getGroupingKey()))
-					history.get().saveEvent(
-							r.getFrom().getGroupingKey(),
-							this.getClass(), 
-							"Variation "+r+" is marked as graphical (dist="+similarity+")");
-					history.get().saveEvent(
-						r.getTo().getGroupingKey(),
-							this.getClass(), 
-							"Variation "+r+" is marked as graphical (dist="+similarity+")");
+				if(history.isPresent()) {
+					if(history.get().isTermWatched(r.getFrom()))
+						history.get().saveEvent(
+								r.getFrom(),
+								this.getClass(), 
+								"Variation "+r+" is marked as graphical (dist="+similarity+")");
+					
+					if(history.get().isTermWatched(r.getTo()))
+						history.get().saveEvent(
+							r.getTo(),
+								this.getClass(), 
+								"Variation "+r+" is marked as graphical (dist="+similarity+")");
+				}
 			}
-
 		});
-
-		
 	}
-
 }

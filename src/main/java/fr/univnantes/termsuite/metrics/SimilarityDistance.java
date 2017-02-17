@@ -82,5 +82,24 @@ public interface SimilarityDistance {
 	 */
 	public ExplainedValue getExplainedValue(ContextVector first, ContextVector second);
 	
+
+	@SuppressWarnings("unchecked")
+	public static Class<? extends SimilarityDistance>[] values() {
+		return new Class[]{
+			Cosine.class,
+			Jaccard.class
+		};
+	}
 	
+	
+	public static Class<? extends SimilarityDistance> forName(String name) {
+		for(Class<? extends SimilarityDistance> cls:values()) {
+			if(cls.getName().equals(name)
+					|| cls.getCanonicalName().equals(name)
+					|| cls.getSimpleName().equals(name))
+				return cls;
+		}
+		throw new IllegalArgumentException("No such " + SimilarityDistance.class.getSimpleName() + ": " + name);
+	}
+
 }

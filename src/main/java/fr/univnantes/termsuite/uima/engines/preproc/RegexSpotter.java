@@ -23,12 +23,15 @@ package fr.univnantes.termsuite.uima.engines.preproc;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Optional;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.StringArray;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,9 +42,7 @@ import fr.univnantes.termsuite.resources.OccurrenceFilter;
 import fr.univnantes.termsuite.resources.TrueFilter;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.uima.resources.TermHistoryResource;
 import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.OccurrenceBuffer;
 import fr.univnantes.termsuite.utils.TermHistory;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
@@ -59,10 +60,6 @@ import uima.sandbox.filter.resources.FilterResource;
 public class RegexSpotter extends TokenRegexAE {
 	private static final Logger LOGGER = LoggerFactory.getLogger(RegexSpotter.class);
 	
-	public static final String POST_PROCESSING_STRATEGY = "PostProcessingStrategy";
-	@ConfigurationParameter(name = POST_PROCESSING_STRATEGY, mandatory = false, defaultValue = OccurrenceBuffer.NO_CLEANING)
-	private String postProcessingStrategy;
-
 	public static final String LOG_OVERLAPPING_RULES = "LogOverlappingRules";
 	@ConfigurationParameter(name = LOG_OVERLAPPING_RULES, mandatory = false, defaultValue = "false")
 	private boolean logOverlappingRules;
@@ -70,7 +67,6 @@ public class RegexSpotter extends TokenRegexAE {
 	public static final String CONTEXTUALIZE = "Contextualize";
 	@ConfigurationParameter(name = CONTEXTUALIZE, mandatory = false, defaultValue = "false")
 	private boolean contextualize;
-
 
 	public static final String CHARACTER_FOOTPRINT_TERM_FILTER = "CharacterFootprintTermFilter";
 	@ExternalResource(key =CHARACTER_FOOTPRINT_TERM_FILTER, mandatory = false)
@@ -81,36 +77,29 @@ public class RegexSpotter extends TokenRegexAE {
 	@ExternalResource(key =STOP_WORD_FILTER, mandatory = true)
 	private FilterResource stopWordFilter;
 	
-	@ExternalResource(key =TermHistoryResource.TERM_HISTORY, mandatory = true)
-	private TermHistoryResource historyResource;
-
-	
 	@Override
 	protected void beforeRuleProcessing(JCas jCas) {
-		this.occurrenceBuffer = new OccurrenceBuffer(this.postProcessingStrategy);
+		this.occurrenceBuffer = new OccurrenceBuffer();
 	}
 	
 	private OccurrenceBuffer occurrenceBuffer;
 	
+	private Optional<TermHistory> history = Optional.empty();
+	
+	@Override
+	public void initialize(UimaContext context) throws ResourceInitializationException {
+		super.initialize(context);
+	}
 	
 	@Override
 	public void ruleMatched(JCas jCas, RegexOccurrence occurrence) {
 		String groupingKey = TermSuiteUtils.toGroupingKey(occurrence);
-		TermHistory history = historyResource.getHistory();
-		
 		
 		/*
 		 * Do not keep the term if it has too many bad characters
 		 */
 		if(!termFilter.accept(occurrence)) {
-			if(history.isGKeyWatched(groupingKey))
-				history.saveEvent(
-						groupingKey, 
-						RegexSpotter.class, String.format(
-								"[!] Term spotted at [%d,%d] in file %s but filtered out by %s",
-								occurrence.getBegin(), occurrence.getEnd(),
-								JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri(),
-								termFilter.getClass()));
+			watchCharacterFiltered(jCas, occurrence, groupingKey);
 			return;
 		}
 
@@ -120,30 +109,50 @@ public class RegexSpotter extends TokenRegexAE {
 		WordAnnotation wa = (WordAnnotation)occurrence.getLabelledAnnotations().get(0).getAnnotation();
 		if((occurrence.size() == 1 && stopWordFilter.getFilters().contains(wa.getCoveredText().toLowerCase()))
 				|| (occurrence.size() == 1 && wa.getLemma() != null && stopWordFilter.getFilters().contains(wa.getLemma().toLowerCase()))) {
-			if(history.isGKeyWatched(groupingKey))
-				history.saveEvent(
+			watchStopWordFiltered(jCas, occurrence, groupingKey);
+			return;
+		}
+		
+		if(history.isPresent())
+			watchOccurrence(jCas, occurrence, groupingKey);
+			
+		/*
+		 * Add the occurrence the buffer. Will be added to jCas if it is not filtered by any post processing strategy
+		 */
+		this.occurrenceBuffer.bufferize(occurrence);
+	}
+
+	public void watchOccurrence(JCas jCas, RegexOccurrence occurrence, String groupingKey) {
+		if(history.get().isStringWatched(groupingKey))
+			history.get().saveEvent(
+					groupingKey, 
+					RegexSpotter.class, String.format("Term spotted at [%d,%d] in file %s",
+							occurrence.getBegin(), occurrence.getEnd(),
+							JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri()));
+	}
+
+	public void watchStopWordFiltered(JCas jCas, RegexOccurrence occurrence, String groupingKey) {
+		if(history.isPresent())
+			if(history.get().isStringWatched(groupingKey))
+				history.get().saveEvent(
 						groupingKey, 
 						RegexSpotter.class, String.format(
 								"[!] Term spotted at [%d,%d] in file %s but filtered out by stop word filter",
 								occurrence.getBegin(), occurrence.getEnd(),
 								JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri(),
 								termFilter.getClass()));
-			
-			return;
-		}
-		
-		if(history.isGKeyWatched(groupingKey))
-			history.saveEvent(
-					groupingKey, 
-					RegexSpotter.class, String.format("Term spotted at [%d,%d] in file %s",
-							occurrence.getBegin(), occurrence.getEnd(),
-							JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri()));
+	}
 
-			
-		/*
-		 * Add the occurrence the buffer. Will be added to jCas if it is not filtered by any post processing strategy
-		 */
-		this.occurrenceBuffer.bufferize(occurrence);
+	public void watchCharacterFiltered(JCas jCas, RegexOccurrence occurrence, String groupingKey) {
+		if(history.isPresent())
+			if(history.get().isStringWatched(groupingKey))
+				history.get().saveEvent(
+						groupingKey, 
+						RegexSpotter.class, String.format(
+								"[!] Term spotted at [%d,%d] in file %s but filtered out by %s",
+								occurrence.getBegin(), occurrence.getEnd(),
+								JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri(),
+								termFilter.getClass()));
 	}
 
 	@Override
@@ -176,7 +185,6 @@ public class RegexSpotter extends TokenRegexAE {
 			}
 		}
 		
-		this.occurrenceBuffer.cleanBuffer();
 		for(RegexOccurrence occ:this.occurrenceBuffer) 
 			addOccurrenceToCas(jCas, occ);
 		this.occurrenceBuffer.clear();
@@ -188,7 +196,6 @@ public class RegexSpotter extends TokenRegexAE {
 						jCas.getCasType(TermOccAnnotation.type),
 						occurrence.getBegin(),
 						occurrence.getEnd());
-		
 		
 		StringArray patternFeature = new StringArray(jCas, occurrence.size());
 		FSArray innerWords = new FSArray(jCas, occurrence.size());

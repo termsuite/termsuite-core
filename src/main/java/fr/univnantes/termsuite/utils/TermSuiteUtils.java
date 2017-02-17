@@ -42,6 +42,7 @@ import com.google.common.collect.Maps;
 import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
 import fr.univnantes.termsuite.model.TermWord;
+import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
 
@@ -100,6 +101,20 @@ public class TermSuiteUtils {
 
 	public static String trimInside(String coveredText) {
 		return coveredText.replaceAll(TermSuiteConstants.WHITESPACE_PATTERN_STRING, TermSuiteConstants.WHITESPACE_STRING).trim();
+	}
+	
+	public static String getGroupingKey(String[] pattern, Word[] words) {
+		StringBuilder sb = new StringBuilder();
+		for(String s:pattern)
+			sb.append(s.toLowerCase());
+		sb.append(TermSuiteConstants.COLONS);
+		sb.append(TermSuiteConstants.WHITESPACE);
+		for(int i=0; i<words.length;i++) {
+			if(i>0)
+				sb.append(TermSuiteConstants.WHITESPACE);
+			sb.append(words[i].getLemma().toLowerCase());
+		}
+		return sb.toString();
 	}
 
 	public static String getGroupingKey(TermOccAnnotation annotation) {
@@ -164,32 +179,4 @@ public class TermSuiteUtils {
       }
 	}
 	
-//	/**
-//	 * Adds a path (jar or directory) to classpath of default Class loader
-//	 * @param path
-//	 */
-//	public static void addToClasspath(String path) {
-//		URLClassLoader urlClassLoader = null;
-//		try {
-//		    File f = new File(path);
-//		    Preconditions.checkArgument(f.exists(), "No such file: %s", path);
-//		    if(f.isFile()) {
-//		    	ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(f));
-//		    	boolean isZipped = zipInputStream.getNextEntry() != null;
-//		    	Preconditions.checkArgument(isZipped, "No such file: %s", path);
-//		    	zipInputStream.close();
-//		    } else
-//		    	Preconditions.checkArgument(f.isDirectory(), "Should be a directory or a jar : %s", f.getAbsolutePath());
-//		    URI u = f.toURI();
-//		    urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-//		    Class<URLClassLoader> urlClass = URLClassLoader.class;
-//		    Method method;
-//			method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});
-//			method.setAccessible(true);
-//			LOGGER.info("Adding {} to system class loader");
-//			method.invoke(urlClassLoader, new Object[]{u.toURL()});
-//		} catch (Exception e) {
-//			throw new RuntimeException("Could not add "+path+" to classpath", e);
-//		}
-//	}
 }

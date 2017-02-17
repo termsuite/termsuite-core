@@ -8,60 +8,55 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.engines.ExtensionDetecter;
-import fr.univnantes.termsuite.framework.TerminologyService;
-import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.engines.SimpleEngine;
+import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
 import jetbrains.exodus.core.dataStructures.hash.HashSet;
 
-public class IndependanceScorer {
-	private static final Logger LOGGER = LoggerFactory.getLogger(IndependanceScorer.class);
-	
+public class IndependanceScorer extends SimpleEngine {
+	@InjectLogger Logger logger;
 
-	public Set<Term> getExtensions(TerminologyService terminology, Term from) {
-		Set<Term> extensions = new HashSet<>();
+	public Set<TermService> getExtensions(TermService from) {
+		Set<TermService> extensions = new HashSet<>();
 		
-		terminology
-			.extensions(from)
+		from
+			.extensions()
 			.forEach(rel -> {
 				extensions.add(rel.getTo());
-				extensions.addAll(getExtensions(terminology, rel.getTo()));
+				extensions.addAll(getExtensions(rel.getTo()));
 			});
 		
 		return extensions;
 	}
 
-	public void checkNoCycleInExtensions(TerminologyService terminology) {
-		Predicate<TermRelation> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
-		if(terminology.extensions().filter(badExtension).findFirst().isPresent()) {
+	public void checkNoCycleInExtensions() {
+		Predicate<RelationService> badExtension = rel -> rel.getFrom().getWords().size() >= rel.getTo().getWords().size();
+		if(terminology
+				.extensions()
+				.filter(badExtension)
+				.findFirst().isPresent()) {
 			terminology.extensions()
 				.filter(badExtension)
 				.limit(10)
 				.forEach(extension -> {
-					LOGGER.warn("Bad relation found: {}", extension);
+					logger.warn("Bad relation found: {}", extension);
 				});
 			throw new IllegalStateException("Terminology contains potential extension cycles");
 		}
 	}
 
-	public void setIndependance(TerminologyService terminology) {
-
-		LOGGER.debug("Checking potential cycles in terminology");
-		checkNoCycleInExtensions(terminology);
-		if(!terminology.extensions().findAny().isPresent()) {
-			LOGGER.info("No {} relation set. Computing extension detection.", RelationType.HAS_EXTENSION);
-			new ExtensionDetecter().detectExtensions(terminology.getTerminology());
-		}
-
+	@Override
+	public void execute() {
+		
+		checkNoCycleInExtensions();
 		
 		/*
 		 * 1. Init independant frequency
 		 */
-		LOGGER.debug("Init INDEPENDANT_FREQUENCY for all terms");
+		logger.debug("Init INDEPENDANT_FREQUENCY for all terms");
 		terminology
 			.terms()
 			.forEach(t-> t.setProperty(
@@ -72,25 +67,25 @@ public class IndependanceScorer {
 		/*
 		 * 2. Compute depths
 		 */
-		LOGGER.debug("Computing DEPTH property for all terms");
-		final AtomicInteger depth = setDepths(terminology);
-		LOGGER.debug("Depth of terminology is {}", depth.intValue());
+		logger.debug("Computing DEPTH property for all terms");
+		final AtomicInteger depth = setDepths();
+		logger.debug("Depth of terminology is {}", depth.intValue());
 		
 		
 		/*
 		 * 3. Score INDEPENDANT_FREQUENCY
 		 */
-		LOGGER.debug("Computing INDEPENDANT_FREQUENCY by  for all terms");
+		logger.debug("Computing INDEPENDANT_FREQUENCY by  for all terms");
 		do {
 			terminology
 				.terms()
 				.filter(t -> t.isPropertySet(TermProperty.DEPTH))
 				.filter(t -> t.getDepth() == depth.intValue())
 				.forEach(t -> {
-					final int frequency = t.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
-					getBases(terminology, t)
+					final int frequency = t.getIndependantFrequency();
+					getBases(t)
 						.forEach(base -> {
-							int baseFrequency = base.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
+							int baseFrequency = base.getIndependantFrequency();
 							baseFrequency -= frequency;
 							base.setProperty(TermProperty.INDEPENDANT_FREQUENCY, baseFrequency);
 						});
@@ -102,18 +97,18 @@ public class IndependanceScorer {
 		/*
 		 * 4. Score INDEPENDANCE
 		 */
-		LOGGER.debug("Computing INDEPENDANCE for all terms");
+		logger.debug("Computing INDEPENDANCE for all terms");
 		terminology.terms()
 			.forEach(t -> {
-				double iFreq = (double)t.getPropertyIntegerValue(TermProperty.INDEPENDANT_FREQUENCY);
-				int freq = t.getPropertyIntegerValue(TermProperty.FREQUENCY);
+				double iFreq = (double)t.getIndependantFrequency();
+				int freq = t.getFrequency();
 				t.setProperty(TermProperty.INDEPENDANCE, 
 						iFreq / freq);
 			});
 
 	}
 
-	public AtomicInteger setDepths(TerminologyService terminology) {
+	public AtomicInteger setDepths() {
 		terminology
 			.terms()
 			.filter(t -> t.isSingleWord())
@@ -130,20 +125,19 @@ public class IndependanceScorer {
 						&& t.getDepth() == currentDepth.intValue())
 				.forEach(t -> {
 					anyAtCurrentDepth.set(true);
-					terminology
-						.extensions(t)
+					t.extensions()
 						.forEach(rel -> rel.getTo().setDepth(currentDepth.intValue() + 1));
 				});
 		} while(anyAtCurrentDepth.get());
 		currentDepth.decrementAndGet();
 		
-		Set<Term> noDepthTerms = terminology
+		Set<TermService> noDepthTerms = terminology
 			.terms()
 			.filter(t -> !t.isPropertySet(TermProperty.DEPTH))
 			.collect(toSet());
 		
 		if(!noDepthTerms.isEmpty()) {
-			LOGGER.warn(
+			logger.warn(
 					String.format("Property %s not set for %d terms. Example: %s", 
 							TermProperty.DEPTH, 
 							noDepthTerms.size(),
@@ -153,14 +147,14 @@ public class IndependanceScorer {
 		return currentDepth;
 	}
 	
-	public Set<Term> getBases(TerminologyService termino, Term term) {
-		Set<Term> allBases = new java.util.HashSet<>(); 
+	public Set<TermService> getBases(TermService term) {
+		Set<TermService> allBases = new java.util.HashSet<>(); 
 		
-		termino
-			.extensionBases(term)
+		term
+			.extensionBases()
 			.forEach(rel -> {
 				allBases.add(rel.getFrom());
-				allBases.addAll(getBases(termino, rel.getFrom()));
+				allBases.addAll(getBases(rel.getFrom()));
 			});
 		
 		return allBases;

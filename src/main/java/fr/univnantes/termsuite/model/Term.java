@@ -23,10 +23,7 @@ package fr.univnantes.termsuite.model;
 
 import java.util.List;
 
-import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
-
-import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
 
 public class Term extends PropertyHolder<TermProperty> implements Comparable<Term> {
@@ -57,202 +54,111 @@ public class Term extends PropertyHolder<TermProperty> implements Comparable<Ter
 	}
 		
 	@Override
-	public int compareTo(Term o) {
-		return ComparisonChain.start()
-				.compare(o.getGroupingKey().length(), this.getGroupingKey().length())
-				.compare(o.getGroupingKey(), this.getGroupingKey())
-				.result();
-	}
-	
-	@Override
 	public int hashCode() {
-		return getGroupingKey().hashCode();
+		return getString(TermProperty.GROUPING_KEY).hashCode();
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Term) 
-			return this.getGroupingKey().equals(((Term) obj).getGroupingKey());
+			return this.getString(TermProperty.GROUPING_KEY).equals(((Term) obj).getString(TermProperty.GROUPING_KEY));
 		else
 			return false;
 	}
 	
 	@Override
 	public String toString() {
-		return this.getGroupingKey();
+		return this.getString(TermProperty.GROUPING_KEY);
 	}
 	
-	public boolean isSingleWord() {
-		return termWords.size() == 1;
-	}
-	
-	public boolean isMultiWord() {
-		return termWords.size() > 1;
-	}
-	
-	public boolean isCompound() {
-		return isSingleWord() && this.termWords.get(0).getWord().isCompound();
-	}
-	
-	/**
-	 * Returns the concatenation of inner words' lemmas.
-	 */
-	public String getLemma() {
-		StringBuilder builder = new StringBuilder();
-		int i = 0;
-		for(TermWord tw:this.getWords()) {
-			if(i>0)
-				builder.append(TermSuiteConstants.WHITESPACE);
-			builder.append(tw.getWord().getLemma());
-			i++;
-		}
-		return builder.toString();
+	@Override
+	public int compareTo(Term o) {
+		return getGroupingKey().compareTo(o.getGroupingKey());
 	}
 
-
-	/* 
-	 * *******************************************************************************
-	 * PROPERTY GETTERS/SETTERS
-	 * *******************************************************************************
-	 */
-	
-
-	/*
-	 * GROUPING_KEY
-	 */
-	public String getGroupingKey() {
-		return getPropertyStringValue(TermProperty.GROUPING_KEY);		
-	}
-	
-	/*
-	 * DOCUMENT_FREQUENCY
-	 */
-	public Integer getDocumentFrequency() {
-		return getPropertyIntegerValue(TermProperty.DOCUMENT_FREQUENCY);
-	}
-
-	public void setDocumentFrequency(int documentFrequency) {
-		setProperty(TermProperty.DOCUMENT_FREQUENCY, documentFrequency);
-	}
-	
-	/*
-	 * FREQUENCY
-	 */
-	public Integer getFrequency() {
-		return getPropertyIntegerValue(TermProperty.FREQUENCY);		
-	}
-
-	public void setFrequency(int frequency) {
-		setProperty(TermProperty.FREQUENCY, frequency);
-	}
-	
-	/*
-	 * PATTERN
-	 */
-	public String getPattern() {
-		return getPropertyStringValue(TermProperty.PATTERN);		
-	}
-	
-	public void setPattern(String pattern) {
-		setProperty(TermProperty.PATTERN, pattern);
-	}
-	
-	/*
-	 * PILOT
-	 */
-	public String getPilot() {
-		return getPropertyStringValue(TermProperty.PILOT);
-	}
-	public void setPilot(String pilot) {
-		setProperty(TermProperty.PILOT, pilot);
-	}
-
-	/*
-	 * SPOTTING_RULE
-	 */
-	public String getSpottingRule() {
-		return getPropertyStringValue(TermProperty.SPOTTING_RULE);		
-	}
-
-	public void setSpottingRule(String spottingRule) {
-		setProperty(TermProperty.SPOTTING_RULE, spottingRule);
-	}
-	
-	/*
-	 * GENERAL_FREQUENCY_NORM
-	 */
-	public Double getGeneralFrequencyNorm() {
-		return getPropertyDoubleValue(TermProperty.GENERAL_FREQUENCY_NORM);
-	}
-	
-	public void setGeneralFrequencyNorm(double normalizedGeneralTermFrequency) {
-		setProperty(TermProperty.GENERAL_FREQUENCY_NORM, normalizedGeneralTermFrequency);
-	}
-	
-	/*
-	 * FREQUENCY_NORM
-	 */
-	public Double getFrequencyNorm() {
-		return getPropertyDoubleValue(TermProperty.FREQUENCY_NORM);
-	}
-	
-	public void setFrequencyNorm(double normalizedTermFrequency) {
-		setProperty(TermProperty.FREQUENCY_NORM, normalizedTermFrequency);
-	}
-	
-	/*
-	 * RANK
-	 */
 	public Integer getRank() {
-		return getPropertyIntegerValue(TermProperty.RANK);
+		return getIntegerUnchecked(TermProperty.RANK);
 	}
-	
-	public void setRank(int rank) {
-		setProperty(TermProperty.RANK, rank);
+
+	public Boolean getSingleWord() {
+		return getBooleanUnchecked(TermProperty.IS_SINGLE_WORD);
 	}
-	
-	/*
-	 * SPECIFICITY
-	 */
+
+	public Integer getDocumentFrequency() {
+		return getIntegerUnchecked(TermProperty.DOCUMENT_FREQUENCY);
+	}
+
+	public Double getFrequencyNorm() {
+		return getDoubleUnchecked(TermProperty.FREQUENCY_NORM);
+	}
+
+	public Double getGeneralFrequencyNorm() {
+		return getDoubleUnchecked(TermProperty.GENERAL_FREQUENCY_NORM);
+	}
+
 	public Double getSpecificity() {
-		return getPropertyDoubleValue(TermProperty.SPECIFICITY);
-	}
-	
-	public void setSpecificity(double specificity) {
-		setProperty(TermProperty.SPECIFICITY, specificity);
-	}
-	
-	/*
-	 * IS_FIXED_EXPRESSION
-	 */
-	public Boolean isFixedExpression() {
-		return getPropertyBooleanValue(TermProperty.IS_FIXED_EXPRESSION);
-	}
-	
-	public void setFixedExpression(boolean fixedExpression) {
-		setProperty(TermProperty.IS_FIXED_EXPRESSION, fixedExpression);
+		return getDoubleUnchecked(TermProperty.SPECIFICITY);
 	}
 
-	/*
-	 * TF_IDF
-	 */
+	public Integer getFrequency() {
+		return getIntegerUnchecked(TermProperty.FREQUENCY);
+	}
+
+	public Double getOrthographicScore() {
+		return getDoubleUnchecked(TermProperty.ORTHOGRAPHIC_SCORE);
+	}
+
+	public Integer getIndependantFrequency() {
+		return getIntegerUnchecked(TermProperty.INDEPENDANT_FREQUENCY);
+	}
+
+	public Double getIndependance() {
+		return getDoubleUnchecked(TermProperty.INDEPENDANCE);
+	}
+
+	public String getPilot() {
+		return getStringUnchecked(TermProperty.PILOT);
+	}
+
+	public String getLemma() {
+		return getStringUnchecked(TermProperty.LEMMA);
+	}
+
 	public Double getTfIdf() {
-		return getPropertyDoubleValue(TermProperty.TF_IDF);
+		return getDoubleUnchecked(TermProperty.TF_IDF);
 	}
 
-	public void setTfIdf(double tfIdf) {
-		setProperty(TermProperty.TF_IDF, tfIdf);
+	public String getGroupingKey() {
+		return getStringUnchecked(TermProperty.GROUPING_KEY);
 	}
 
-	public Number getPropertyNumberValue(TermProperty p) {
-		return (Number)get(p);
+	public String getPattern() {
+		return getStringUnchecked(TermProperty.PATTERN);
 	}
 
-	public void setDepth(int depth) {
-		setProperty(TermProperty.DEPTH, depth);
+	public String getSpottingRule() {
+		return getStringUnchecked(TermProperty.SPOTTING_RULE);
 	}
-	
+
+	public Boolean isFixedExpression() {
+		return getBooleanUnchecked(TermProperty.IS_FIXED_EXPRESSION);
+	}
+
+	public Integer getSwtSize() {
+		return getIntegerUnchecked(TermProperty.SWT_SIZE);
+	}
+
+	public Boolean isFiltered() {
+		return getBooleanUnchecked(TermProperty.FILTERED);
+	}
+
 	public Integer getDepth() {
-		return getPropertyIntegerValue(TermProperty.DEPTH);
+		return getIntegerUnchecked(TermProperty.DEPTH);
 	}
+
+	public Number getNumber(TermProperty property) {
+		return (Number)getPropertyValue(property);
+	}
+
+	
 }

@@ -23,27 +23,30 @@
 
 package fr.univnantes.termsuite.engines.gatherer;
 
+import static java.util.stream.Collectors.toSet;
+
 import java.util.Iterator;
+import java.util.Set;
 
 import com.google.common.base.Objects;
+import com.google.inject.Inject;
 
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermUtils;
 
 public class GroovyHelper {
 
-	private Terminology termino;
+	@Inject
+	private TerminologyService termino;
 	
 	public GroovyHelper() {
 		super();
-	}
-	
-	void setTerminology(Terminology termino) {
-		this.termino = termino;
 	}
 	
 	public boolean areSynonym(GroovyWord s, GroovyWord t) {
@@ -58,13 +61,14 @@ public class GroovyHelper {
 		if(targetTerm == null)
 			return false;
 		
-		TermRelation tv;
-		for(Iterator<TermRelation> it = termino.getOutboundRelations(sourceTerm, RelationType.DERIVES_INTO).iterator()
+		Relation tv;
+		Set<Relation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.DERIVES_INTO).map(RelationService::getRelation).collect(toSet());
+		for(Iterator<Relation> it = outboundRelations.iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
 			if(tv.getTo().equals(targetTerm)) {
-				if(Objects.equal(tv.getPropertyStringValue(RelationProperty.DERIVATION_TYPE), derivationPattern))
+				if(Objects.equal(tv.getString(RelationProperty.DERIVATION_TYPE), derivationPattern))
 					return true;
 			}
 		}
@@ -80,8 +84,9 @@ public class GroovyHelper {
 		if(targetTerm == null)
 			return false;
 		
-		TermRelation tv;
-		for(Iterator<TermRelation> it = termino.getOutboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).iterator()
+		Relation tv;
+		Set<Relation> outboundRelations = termino.outboundRelations(sourceTerm, RelationType.IS_PREFIX_OF).map(RelationService::getRelation).collect(toSet());
+		for(Iterator<Relation> it = outboundRelations.iterator()
 				; it.hasNext() 
 				; ) {
 			tv = it.next();
@@ -95,8 +100,8 @@ public class GroovyHelper {
 
 	private Term toTerm(GroovyWord s) {
 		String sourceGroupingKey = TermUtils.toGroupingKey(s.getTermWord());
-		Term sourceTerm = this.termino.getTermByGroupingKey(sourceGroupingKey);
-		return sourceTerm;
+		TermService sourceTerm = this.termino.getTermUnchecked(sourceGroupingKey);
+		return sourceTerm == null ? null: sourceTerm.getTerm();
 	}
 
 

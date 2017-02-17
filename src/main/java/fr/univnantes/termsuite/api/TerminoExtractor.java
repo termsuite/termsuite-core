@@ -1,505 +1,108 @@
 package fr.univnantes.termsuite.api;
 
-import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.nio.charset.Charset;
-import java.nio.file.Path;
-import java.util.Collection;
 import java.util.Optional;
-import java.util.function.Function;
-import java.util.stream.Stream;
 
-import org.apache.uima.UIMAException;
-import org.apache.uima.UIMAFramework;
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.impl.XmiCasDeserializer;
-import org.apache.uima.fit.factory.JCasFactory;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.ResourceManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
-
-import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
-import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
-import fr.univnantes.termsuite.model.Document;
-import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.resources.PostProcConfig;
-import fr.univnantes.termsuite.uima.TermSuitePipeline;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
-import fr.univnantes.termsuite.utils.FileSystemUtils;
-import fr.univnantes.termsuite.utils.JCasUtils;
-import fr.univnantes.termsuite.utils.PipelineUtils;
+import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
+import fr.univnantes.termsuite.framework.Pipeline;
+import fr.univnantes.termsuite.framework.PipelineStats;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
  * 
  * A builder and launcher class for execute a terminology extraction
- * pipeline from raw text files or from TermSuite preprocessed files.
+ * pipeline from a PreprocessedCorpus or a Terminology.
  * 
  * @author Damien Cram
  * 
- * @see TermSuitePreprocessor
+ * @see Preprocessor
  *
  */
 public class TerminoExtractor {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TerminoExtractor.class);
 	
-	public static enum ContextualizerMode {ON_ALL_TERMS, ON_SWT_TERMS}
-	
-	/*
-	 * TreeTagger home
-	 */
-	private String treeTaggerHome;
-	
-	/*
-	 * Pipeline language
-	 */
-	private Lang lang = null;
-	
-	/*
-	 * If present, start the extraction from an already imported term index
-	 */
-	private Optional<Terminology> termino = Optional.empty();
-
-	
-	/*
-	 * Custom resources
-	 */
-	private Optional<String> customResourceDir = Optional.empty();
-	
-	/*
-	 * Contextualizer properties
-	 */
-	private boolean contextualizerEnabled = false;
-	private Optional<ContextualizerOptions> contextualizerOptions = Optional.of(new ContextualizerOptions());
-
-	/*
-	 * true if the input is preprocessed, false otherwise.
-	 */
-	private boolean preprocessed = false;
-	
-	
-//	private boolean mergeGraphicalVariants = true;
-
-	
-	
-	/*
-	 * The maximum number of terms allowed in memory. empty 
-	 * if maxSizeFiltering is deactivated.
-	 */
-	private Optional<Integer> maxSizeFilter = Optional.empty();
-	
-	
-	/*
-	 * The total number of documents
-	 */
-	private long nbDocuments = -1;
-	
-	/*
-	 * The input streams.
-	 */
-	// document stream when the input is not preprocessed
-	private Stream<Document> documentStream;
-	
-	// jcas stream when the input is preprocessed
-	private Stream<JCas> preprocessedCasStream;
-	
-	
-	/*
-	 * 
-	 */
-	private boolean scoringEnabled = true;
-	
-	
-	/*
-	 * 
-	 */
-	private boolean variationDetectionEnabled = true;
-	
-	
-	/*
-	 * Filter properties
-	 */
-	private Optional<TerminoFilterOptions> postFilterConfig = Optional.empty();
-	private Optional<TerminoFilterOptions> preFilterConfig  = Optional.empty();
-
-	
-	/*
-	 * 
-	 */
-	private Optional<PostProcConfig> scorerConfig = Optional.empty();
-	
-	
-	private boolean semanticAlignerEnabled = false;
-	
-	public static TerminoExtractor fromTextString(Lang lang, String text) {
-		return fromSingleDocument(lang, new Document(lang, "file://inline.text", text));
-	}
-
-	public static TerminoExtractor fromSingleDocument(Lang lang, Document document) {
-		return fromDocumentCollection(lang, Lists.newArrayList(document));
-	}
-
-	public static TerminoExtractor fromPreprocessedJsonFiles(Lang lang, String directory) {
-		return fromPreprocessedJsonFiles(lang, directory, Charset.defaultCharset().name());
-	}
-
-	public static TerminoExtractor fromPreprocessedJsonFiles(Lang lang, String directory, String encoding) {
-		Function<Path, JCas> mapper = path -> {
-			try {
-				JCas cas = JCasFactory.createJCas();
-				cas.setDocumentLanguage(lang.getCode());
-				TermSuiteJsonCasDeserializer.deserialize(
-						new FileInputStream(path.toFile()), 
-						cas.getCas(),
-						encoding);
-				return cas;
-			} catch (Exception e) {
-				throw new TermSuiteException("Unable to parse cas file " + path, e);
-			}
-		};
-
-		return fromPreprocessedDocumentStream(
-				lang, 
-				FileSystemUtils.pathWalker(directory, "**/*.json", mapper),
-				FileSystemUtils.pathDocumentCount(directory, "**/*.json")
-			);
-		
-	}
-	
-	public static TerminoExtractor fromTerminology(Terminology termino) {
-		TerminoExtractor extractor = new TerminoExtractor();
-		extractor.termino = Optional.of(termino);
-		extractor.preprocessed = true;
-		extractor.lang = termino.getLang();
-		return extractor;
-	}
-
-
-	/**
-	 * WARNING : encoding of XMI file must be UTF-8.
-	 */
-	public static TerminoExtractor fromPreprocessedXmiFiles(Lang lang, String directory) {
-		Function<Path, JCas> mapper = path -> {
-			try {
-				JCas cas = JCasFactory.createJCas();
-				cas.setDocumentLanguage(lang.getCode());
-
-				XmiCasDeserializer.deserialize(new FileInputStream(path.toFile()), cas.getCas());
-				return cas;
-			} catch (Exception e) {
-				throw new TermSuiteException("Unable to parse cas file " + path, e);
-			}
-		};
-
-		return fromPreprocessedDocumentStream(
-				lang, 
-				FileSystemUtils.pathWalker(directory, "**/*.xmi", mapper),
-				FileSystemUtils.pathDocumentCount(directory, "**/*.xmi")
-			);
-	}
-
-	public static TerminoExtractor fromPreprocessedDocumentStream(Lang lang, Stream<JCas> casStream, long streamSize) {
-		TerminoExtractor extractor = new TerminoExtractor();
-		extractor.preprocessedCasStream = casStream;
-		extractor.nbDocuments = streamSize;
-		extractor.lang = lang;
-		extractor.preprocessed = true;
-		return extractor;
-	}
-
-	public static TerminoExtractor fromDocumentStream(Lang lang, Stream<Document> documentStream, long streamSize) {
-		TerminoExtractor extractor = new TerminoExtractor();
-		extractor.documentStream = documentStream;
-		extractor.lang = lang;
-		extractor.nbDocuments = streamSize;
-		return extractor;
-	}
-	
-	public static TerminoExtractor fromDocumentCollection(Lang lang, Collection<Document> documents) {
-		return fromDocumentStream(lang, documents.stream(), documents.size());
-	}
-
-	public static TerminoExtractor fromTxtCorpus(Lang lang, String directory, String pattern) {
-		return fromTxtCorpus(lang, directory, pattern, Charset.defaultCharset().name());
-	}
-
-	public static TerminoExtractor fromTxtCorpus(Lang lang, String directory, String pattern, String encoding) {
-		return fromDocumentStream(
-				lang, 
-				FileSystemUtils.pathWalker(
-						directory, 
-						pattern, 
-						FileSystemUtils.pathToDocumentMapper(lang, encoding)),
-				FileSystemUtils.pathDocumentCount(directory, pattern));
-	}
-
-	
-	public static TerminoExtractor fromSinglePreprocessedDocument(Lang lang, JCas cas) {
-		return fromPreprocessedDocumentStream(
-				lang, 
-				Lists.newArrayList(cas).stream(),
-				1);
-	}
-
-	public TerminoExtractor disableVariationDetection() {
-		this.variationDetectionEnabled = false;
-		return this;
-	}
-
-	
-	public TerminoExtractor setSemanticAlignerEnabled(boolean semanticAlignerEnabled) {
-		this.semanticAlignerEnabled = semanticAlignerEnabled;
-		if(semanticAlignerEnabled)
-			this.contextualizerEnabled = true;
-		return this;
-	}
-	public TerminoExtractor enableSemanticAlignment() {
-		return setSemanticAlignerEnabled(true);
-	}
-
-	public TerminoExtractor configureScoring(PostProcConfig scorerConfig) {
-		this.scorerConfig = Optional.of(scorerConfig);
-		return this;
-	}
-
-	public TerminoExtractor disableScoring() {
-		this.scoringEnabled = false;
-		return this;
-	}
-
-//	public TerminoExtractor disableGraphVariantMerging() {
-//		this.mergeGraphicalVariants = false;
-//		return this;
-//	}
-
-	public TerminoExtractor setTreeTaggerHome(String treeTaggerHome) {
-		this.treeTaggerHome = treeTaggerHome;
-		return this;
-	}
-
-	public TerminoExtractor usingCustomResources(String resourceDir) {
-		Preconditions.checkArgument(new File(resourceDir).exists(), "Directory %s does not exist", resourceDir);
-		Preconditions.checkArgument(new File(resourceDir).isDirectory(), "Not a directory: %s", resourceDir);
-		this.customResourceDir = Optional.empty();
-		return this;
-	}
-	
-	public TerminoExtractor useContextualizer(ContextualizerOptions options) {
-		this.contextualizerEnabled = true;
-		this.contextualizerOptions = Optional.of(options);
-		return this;
-	}
-	
-	/**
-	 * Filters the {@link Terminology} before the term variant detection phase.
-	 * 
-	 * This early-stage filtering will result in missing several low-frequency variations
-	 * during the term variation detection but is often necessary 
-	 * when detecting variant takes too long.
-	 * 
-	 * @param filterConfig
-	 * 			The filtering configuration
-	 * @return
-	 * 			this {@link TerminoExtractor} launcher class
-	 * 
-	 * @see  #postFilter(TerminoFilterOptions)
-	 * 
-	 */
-	public TerminoExtractor preFilter(TerminoFilterOptions filterConfig) {
-		this.preFilterConfig = Optional.of(filterConfig);
-		return this;
-	}
-
-	
-	/**
-	 * 
-	 * Filters the {@link Terminology} dynamically during the term spotting phase (RegexSpotter)
-	 * of terminology extraction by cleaning by frequency whenever the number of terms in-memory 
-	 * exceeds a max number of terms allowed.
-	 * 
-	 * 
-	 * @param maxTerminoSize
-	 * 			the maximum number of {@link Term} instances allowed to be kept in memory 
-	 * 			during the terminology extraction process.
-	 * @return
-	 * 		this {@link TerminoExtractor} launcher class
-	 * 
-	 * @see TermSuitePipeline#aeMaxSizeThresholdCleaner(TermProperty, int)
-	 * 
-	 */
-	public TerminoExtractor dynamicMaxSizeFilter(int maxTerminoSize) {
-		this.maxSizeFilter = Optional.of(maxTerminoSize);
-		return this;
-	}
-
-	
-	
-	/**
-	 * Filters the {@link Terminology} at the end of the pipeline,
-	 * i.e. after the term variant detection phase.
-	 * 
-	 * This filtering is loss-less when configured with {@link TerminoFilterOptions#keepVariants(true)}.
-	 * 
-	 * @param filterConfig
-	 * 			The filtering configuration
-	 * @return
-	 * 			this {@link TerminoExtractor} launcher class
-	 * 
-	 * @see  #preFilter(TerminoFilterOptions)
-	 * 
-	 */
-	public TerminoExtractor postFilter(TerminoFilterOptions filterConfig) {
-		this.postFilterConfig = Optional.of(filterConfig);
-		return this;
-	}	
-	
-	public Terminology execute() {
-		Preconditions.checkNotNull(this.lang, "Language cannot be null");
-		
-		TermSuitePipeline pipeline = termino.isPresent() ?
-				TermSuitePipeline.create(termino.get())
-				: TermSuitePipeline.create(lang.getCode());
-		
-				
-		if(this.skipOccurrenceIndexing)
-			pipeline.setEmptyOccurrenceStore();
-		else if(occStorePath.isPresent())
-			pipeline.setPersistentStore(occStorePath.get());
-		
-		if(history.isPresent())
-			pipeline.setHistory(history.get());
-		
-		if(customResourceDir.isPresent())
-			pipeline.setResourceDir(this.customResourceDir.get());
-		
-		if(!termino.isPresent()) {
-			if(!preprocessed) {
-				
-				pipeline.aeWordTokenizer()
-				.setTreeTaggerHome(this.treeTaggerHome)
-				.aeTreeTagger()
-				.aeUrlFilter()
-				.aeStemmer()
-				.aeRegexSpotter();
-				if(nbDocuments != -1)
-					pipeline.aeDocumentLogger(this.nbDocuments);
-			} 
-			pipeline
-				.aeTermOccAnnotationImporter();
-			
-			if(preFilterConfig.isPresent()) 
-				PipelineUtils.filter(pipeline, preFilterConfig.get());
-			
-			if(contextualizerEnabled)
-				pipeline.aeContextualizer(
-						contextualizerOptions.get());
-			
-			
-			if(maxSizeFilter.isPresent())
-				pipeline.aeMaxSizeThresholdCleaner(TermProperty.FREQUENCY, maxSizeFilter.get());
-		}
-		
-		pipeline
-				.aeStopWordsFilter()
-				.aeSpecificityComputer()
-				.aeMorphologicalAnalyzer()
-				.aeExtensionDetector();
-		
-		if(variationDetectionEnabled)
-			pipeline
-				.aeTermVariantGatherer(semanticAlignerEnabled);
-
-		if(scoringEnabled)
-			pipeline.aeScorer(scorerConfig.isPresent() ? scorerConfig.get() : new PostProcConfig());
-			
-		pipeline
-			.aeRanker(TermProperty.SPECIFICITY, true);
-
-//		if(mergeGraphicalVariants)
-//			pipeline;
-
-		if(postFilterConfig.isPresent()) 
-			PipelineUtils.filter(pipeline, postFilterConfig.get());
-		
-	    ResourceManager resMgr = UIMAFramework.newDefaultResourceManager();
-	    
-		try {
-			// Create AAE
-			AnalysisEngineDescription aaeDesc = createEngineDescription(pipeline.createDescription());
-
-			// Instantiate AAE
-			final AnalysisEngine aae = UIMAFramework.produceAnalysisEngine(aaeDesc, resMgr, null);
-			
-			
-			if(!termino.isPresent()) {
-				if(preprocessed) {
-					preprocessedCasStream.forEach(cas -> {
-						try {
-							aae.process(cas);
-						} catch (UIMAException e) {
-							throw new TermSuiteException(e);
-						}				
-					});
-				} else {
-					documentStream.forEach(document -> {
-						JCas cas;
-						try {
-							cas = JCasFactory.createJCas();
-							cas.setDocumentLanguage(document.getLang().getCode());
-							cas.setDocumentText(document.getText().get());
-							JCasUtils.initJCasSDI(
-									cas, 
-									document.getLang().getCode(), 
-									document.getText().get(), 
-									document.getUrl());
-							aae.process(cas);
-						} catch (UIMAException e) {
-							throw new TermSuiteException(e);
-						}
-					});
-				}
-			}
-			
-			aae.collectionProcessComplete();
-		} catch (ResourceInitializationException | AnalysisEngineProcessException e1) {
-			throw new TermSuiteException(e1);
-		}
-
-		return pipeline.getTerminology();
-	}
-
 	private Optional<TermHistory> history = Optional.empty();
+	private ExtractorOptions options;
+	private Optional<ResourceConfig> resourceConfig = Optional.empty();
+	private Optional<PipelineStats> stats = Optional.empty();
+
+	public TerminoExtractor setResourceConfig(ResourceConfig resourceConfig) {
+		this.resourceConfig = Optional.of(resourceConfig);
+		return this;
+	}
 	
-	public TerminoExtractor setWatcher(TermHistory history) {
+	public TerminoExtractor watch(String termString) {
+		if(!this.history.isPresent()) {
+			this.history = Optional.of(new TermHistory());
+		}
+		this.history.get().addWatchedTermString(termString);
+		return this;
+	}
+
+	public TerminoExtractor setHistory(TermHistory history) {
 		this.history = Optional.of(history);
 		return this;
 	}
-	
-	
-	private Optional<String> occStorePath = Optional.empty();
-	
-	public TerminoExtractor setPersistentOccurrenceStore(String occStorePath) {
-		this.occStorePath = Optional.ofNullable(occStorePath);
+
+	public TerminoExtractor setOptions(ExtractorOptions options) {
+		this.options = options;
 		return this;
 	}
-
-	private boolean skipOccurrenceIndexing = false;
-	public TerminoExtractor skipOccurrenceIndexing() {
-		return setSkipOccurrenceIndexing(true);
+	
+	public IndexedCorpus execute(PreprocessedCorpus corpus, int maxSize) {
+		IndexedCorpus iCorpus = TermSuite.toIndexedCorpus(corpus, maxSize);
+		execute(iCorpus);
+		return iCorpus;
+	}
+	
+	/**
+	 * Return the {@link PipelineStats} of the terminology
+	 * extraction pipeline. 
+	 * 
+	 * @return
+	 * 		the {@link Optional} {@link PipelineStats}, {@link Optional#empty()}
+	 * 		if pipeline not finished.
+	 */
+	public Optional<PipelineStats> getStats() {
+		return stats;
+	}
+	
+	public PipelineStats execute(IndexedCorpus corpus) {
+		if(options == null)
+			options = TermSuite.getDefaultExtractorConfig(corpus.getTerminology().getLang());
+		checkConfig(corpus);
+		
+		Pipeline pipeline = TermSuiteFactory.createPipeline(
+				TerminologyExtractorEngine.class, 
+				corpus,
+				resourceConfig.orElse(null),
+				history.orElse(null),
+				options
+				);
+		PipelineStats stats = pipeline.run();
+		this.stats = Optional.of(stats);
+		return stats;
 	}
 
-	public TerminoExtractor setSkipOccurrenceIndexing(boolean b) {
-		this.skipOccurrenceIndexing = b;
-		return this;
+	private void checkConfig(IndexedCorpus corpus) {
+		if(options.getContextualizerOptions().isEnabled()) {
+			if(corpus.getOccurrenceStore() instanceof EmptyOccurrenceStore) 
+				throw new ConfigurationException("Cannot contextualize with no occurrence. Got occurrence store class: " + EmptyOccurrenceStore.class);
+			
+			if(options.getPostProcessorConfig().isEnabled()) {
+				LOGGER.warn("Deactivating post-processor for contextualizer, otherwise too many terms would be removed by post-porcessor.");
+				options.getPostProcessorConfig().setEnabled(false);
+			}
+		}
+		
+		if(options.getGathererConfig().isSemanticEnabled() && !options.getContextualizerOptions().isEnabled()) {
+			LOGGER.warn("Enabling contextualizer for semantic alignment");
+			options.getContextualizerOptions().setEnabled(true);
+		}
 	}
-
 }

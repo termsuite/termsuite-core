@@ -10,7 +10,7 @@ import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
-import fr.univnantes.termsuite.uima.TermSuiteResource;
+import fr.univnantes.termsuite.uima.ResourceType;
 
 /**
  * 
@@ -19,7 +19,7 @@ import fr.univnantes.termsuite.uima.TermSuiteResource;
  * @author Damien Cram
  *
  */
-public class ResourceExporter {
+public class ResourceExporter { // NO_UCD (public entry point)
 	
 	
 	public static void main(String[] args) throws IOException {
@@ -42,7 +42,7 @@ public class ResourceExporter {
 		
 		for(Lang lang:Lang.values()) {
 			for(Tagger tagger:Tagger.values()) {
-				for(TermSuiteResource r:TermSuiteResource.values()) {
+				for(ResourceType r:ResourceType.values()) {
 					Path targetResourcePath = Paths.get(toDirectoryPath.toString(), r.getPath(lang, tagger));
 					if(targetResourcePath.toFile().exists())
 						continue;

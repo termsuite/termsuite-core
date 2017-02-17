@@ -1,21 +1,24 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
+import static java.util.stream.Collectors.toList;
+
+import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.engines.SimpleEngine;
+import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermRelation;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.TermHistory;
-import fr.univnantes.termsuite.utils.TermUtils;
+import fr.univnantes.termsuite.utils.VariationUtils;
 
 /**
  * 
@@ -32,32 +35,27 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class ExtensionVariantGatherer {
+public class ExtensionVariantGatherer extends SimpleEngine {
+	@InjectLogger Logger logger;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExtensionVariantGatherer.class);
 	
-	
-	private TermHistory history;
+	private Optional<TermHistory> history = Optional.empty();
 	
 	public ExtensionVariantGatherer setHistory(TermHistory history) {
-		this.history = history;
+		this.history = Optional.ofNullable(history);
 		return this;
 	}
 	
-	
-	public void gather(Terminology termino) {
-		TerminologyService terminoService = new TerminologyService(termino);
+	@Override
+	public void execute() {
+		if(!terminology.extensions().findAny().isPresent())
+			logger.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
 		
-		LOGGER.debug("Infering variations of term extensions");
-		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent())
-			LOGGER.warn("Skipping {}. No {} relation found.", this.getClass().getSimpleName(), RelationType.HAS_EXTENSION);
-		
-		
-		termino.getRelations(RelationType.VARIATION)
+		terminology
+			.variations()
 			.filter(r -> !r.isPropertySet(RelationProperty.IS_INFERED))
 			.forEach(r-> r.setProperty(RelationProperty.IS_INFERED, false));
 		
-		Stopwatch sw = Stopwatch.createStarted();
 		/*
 		 * Infer variations for all types but VariationType.SYNTAGMATIC
 		 * and VariationType.GRAPHICAL as:
@@ -65,79 +63,84 @@ public class ExtensionVariantGatherer {
 		 * listed in lang-multi-word-rule-system.regex resource.
 		 *  2- graphical variants are merged later on
 		 */
-		inferVariations(terminoService, VariationType.MORPHOLOGICAL);
-		inferVariations(terminoService, VariationType.DERIVATION);
-		inferVariations(terminoService, VariationType.PREFIXATION);
-		inferVariations(terminoService, VariationType.SEMANTIC);
-		sw.stop();
-		LOGGER.debug("Infered variations of term extensions gathered in {}", sw);
+		inferVariations(VariationType.MORPHOLOGICAL);
+		inferVariations(VariationType.DERIVATION);
+		inferVariations(VariationType.PREFIXATION);
+		inferVariations(VariationType.SEMANTIC);
 	}
+	
+	private static final RelationProperty[] INFERED_PROPERTIES = new RelationProperty[] {
+			RelationProperty.IS_DERIVATION,
+			RelationProperty.IS_DICO,
+			RelationProperty.IS_DISTRIBUTIONAL,
+			RelationProperty.IS_GRAPHICAL,
+			RelationProperty.IS_MORPHOLOGICAL,
+			RelationProperty.IS_PREFIXATION,
+			RelationProperty.IS_SEMANTIC,
+			RelationProperty.IS_SYNTAGMATIC,
+			RelationProperty.SEMANTIC_SCORE,
+			RelationProperty.SEMANTIC_SIMILARITY,
+			RelationProperty.GRAPHICAL_SIMILARITY,
+			RelationProperty.VARIATION_RULES,
+	};
 
 
-	public void inferVariations(TerminologyService terminoService, VariationType type) {
+	public void inferVariations(VariationType type) {
 		AtomicInteger cnt = new AtomicInteger(0);
 		Stopwatch sw = Stopwatch.createStarted();
-		terminoService.variations()
-			.filter(rel -> rel.isPropertySet(RelationProperty.VARIATION_TYPE))
-			// Apply to all variations but syntagmatic ones
-			.filter(rel -> rel.get(RelationProperty.VARIATION_TYPE) == type)
-//			.parallel()
+		terminology.variations()
+			.filter(rel -> rel.isVariationOfType(type))
+			.collect(toList())
 			.forEach(relation -> {
-				Term m1 = relation.getFrom();
-				Term m2 = relation.getTo();
-				terminoService.outboundRelations(m1, RelationType.HAS_EXTENSION)
-					.forEach(rel1 -> {
-						Term affix1 = TermUtils.getExtensionAffix(terminoService.getTerminology(), m1, rel1.getTo());
-						if(affix1 == null)
-							return;
-						
-						terminoService.outboundRelations(m2, RelationType.HAS_EXTENSION)
-							.forEach(rel2 -> {
-								Term affix2 = TermUtils.getExtensionAffix(terminoService.getTerminology(), m2, rel2.getTo());
-								if(affix2 == null)
-									return;
+				TermService m1 = relation.getFrom();
+				TermService m2 = relation.getTo();
+				
+				List<RelationService> m1Extensions = m1.extensions().collect(toList());
+				for(RelationService rel1:m1Extensions) {
+					Optional<TermService> affix1 = rel1.getExtensionAffix(m1.getTerm());
+					if(!affix1.isPresent())
+						continue;
+					
+					List<RelationService> m2extensions = m2.extensions().collect(toList());
+					for(RelationService rel2:m2extensions) {
+						Optional<TermService> affix2 = rel2.getExtensionAffix(m2.getTerm());
+							if(!affix2.isPresent())
+								continue;
 
-								if(Objects.equals(affix1, affix2)) {
-									cnt.incrementAndGet();
-									
-									if(LOGGER.isTraceEnabled()) 
-										LOGGER.trace("Found infered variation {} --> {}", rel1.getTo(), rel2.getTo());
-									
-									TermRelation inferedRel = terminoService.createVariation(VariationType.INFERENCE, rel1.getTo(), rel2.getTo());
-									inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
-									inferedRel.setProperty(type.getRelationProperty(), true);
-									
-									if(type == VariationType.SEMANTIC) {
-										inferedRel.setProperty(
-												RelationProperty.IS_DISTRIBUTIONAL, 
-												relation.get(RelationProperty.IS_DISTRIBUTIONAL));
-										
-										if(relation.isPropertySet(RelationProperty.SEMANTIC_SIMILARITY))
-											inferedRel.setProperty(
-													RelationProperty.SEMANTIC_SIMILARITY, 
-													relation.get(RelationProperty.SEMANTIC_SIMILARITY));
-									}
-									
-									watch(inferedRel, rel1, rel2);
-								}
-							});
-						});
+							if(Objects.equals(affix1, affix2)) {
+								cnt.incrementAndGet();
+								
+								TermService inferedFrom = rel1.getTo();
+								TermService inferedTo = rel2.getTo();
+								if(inferedFrom.equals(inferedTo))
+									continue;
+								
+								if(logger.isTraceEnabled()) 
+									logger.trace("Found infered variation {} --> {}", inferedFrom, inferedTo);
+								
+								RelationService inferedRel = terminology.createVariation(VariationType.INFERENCE, inferedFrom.getTerm(), inferedTo.getTerm());
+								for(RelationProperty p:INFERED_PROPERTIES) 
+									VariationUtils.copyRelationPropertyIfSet(
+											relation.getRelation(), 
+											inferedRel.getRelation(), 
+											p);
+								inferedRel.setProperty(RelationProperty.IS_EXTENSION, false);
+								inferedRel.setProperty(RelationProperty.IS_INFERED, true);
+								watch(inferedRel, rel1, rel2);
+							}
+						}
+					}
 			});
-		
 		sw.stop();
-		LOGGER.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
+		logger.debug("Infered {} variations of type {} in {}", cnt.intValue(), type, sw);
 	}
 
-	
-
-
-	private void watch(TermRelation inferedRel, TermRelation r1, TermRelation r2) {
-		if(history != null) {
-			if(history.isWatched(inferedRel.getTo()))
-				history.saveEvent(inferedRel.getTo().getGroupingKey(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
-			if(history.isWatched(inferedRel.getFrom()))
-				history.saveEvent(inferedRel.getFrom().getGroupingKey(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
+	private void watch(RelationService inferedRel, RelationService r1, RelationService r2) {
+		if(history.isPresent()) {
+			if(history.get().isTermWatched(inferedRel.getTo().getTerm()))
+				history.get().saveEvent(inferedRel.getTo(), this.getClass(), String.format("New inbound relation {} infered from {} and {}", inferedRel, r1, r2));
+			if(history.get().isTermWatched(inferedRel.getFrom().getTerm()))
+				history.get().saveEvent(inferedRel.getFrom(), this.getClass(), String.format("New outbound relation {} infered from {} and {}", inferedRel, r1, r2));
 		}
-		
 	}
 }

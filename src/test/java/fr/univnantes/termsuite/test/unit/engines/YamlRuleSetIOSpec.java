@@ -40,7 +40,7 @@ import fr.univnantes.termsuite.engines.gatherer.VariantRuleFormatException;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSetIO;
-import fr.univnantes.termsuite.test.unit.TestUtil;
+import fr.univnantes.termsuite.test.util.TestUtil;
 
 
 public class YamlRuleSetIOSpec {

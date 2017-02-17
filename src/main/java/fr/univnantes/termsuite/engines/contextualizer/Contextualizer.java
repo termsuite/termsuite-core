@@ -26,22 +26,26 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.AbstractIterator;
 import com.google.common.collect.Iterators;
+import com.google.common.collect.Maps;
+import com.google.common.util.concurrent.AtomicDouble;
 
-import fr.univnantes.termsuite.metrics.AssociationRate;
+import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.engines.SimpleEngine;
+import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.Parameter;
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.model.ContextVector;
-import fr.univnantes.termsuite.model.CrossTable;
+import fr.univnantes.termsuite.model.ContextVector.Entry;
 import fr.univnantes.termsuite.model.Document;
-import fr.univnantes.termsuite.model.DocumentView;
-import fr.univnantes.termsuite.model.OccurrenceType;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermOccurrence;
-import fr.univnantes.termsuite.model.Terminology;
-import fr.univnantes.termsuite.uima.TermSuitePipelineException;
 import fr.univnantes.termsuite.utils.IteratorUtils;
 
 /**
@@ -51,102 +55,131 @@ import fr.univnantes.termsuite.utils.IteratorUtils;
  * @author Damien Cram
  *
  */
-public class Contextualizer  {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Contextualizer.class);
+public class Contextualizer extends SimpleEngine {
+	@InjectLogger Logger logger;
+
+	@Inject
+	private OccurrenceStore occurrenceStore;
 	
-	private AssociationRate rate;
-	private Map<Document, DocumentView> documentViews;
+	@Parameter
 	private ContextualizerOptions options;
 
 	public Contextualizer() {
-		setOptions(new ContextualizerOptions().setMinimumCooccFrequencyThreshold(2));
 	}
 	
-	public Contextualizer setOptions(ContextualizerOptions options) {
-		this.options = options;
-		try {
-			this.rate = options.getAssociationRate().newInstance();
-		} catch (Exception e) {
-			throw new TermSuitePipelineException("Cannot instanciate association rate measure" + options.getAssociationRate(), e);
-		}
-		return this;
-	}
+	Map<Document, DocumentView> documentViews = new HashMap<>();
 	
-	public void contextualize(Terminology termino) {
-		if(termino.getTerms().isEmpty())
+	@Override
+	public void execute() {
+		AssociationRate rate = createAssocRate();
+				
+		if(terminology.getTerms().isEmpty())
 			return;
 		
 		// 0- drop all context vectors
-		LOGGER.debug("0 - Drop all context vectors");
-		for(Term t:termino.getTerms())
-			t.setContext(null);
+		logger.debug("0 - Drop all context vectors");
+		for(TermService t:terminology.getTerms())
+			t.dropContext();
 		
 		
 		// 1- index all occurrences in source documents
-		LOGGER.debug("1 - Create occurrence index");
-		documentViews = new HashMap<>();
-		for(Document document:termino.getOccurrenceStore().getDocuments()) 
-			documentViews.put(document, new DocumentView());
-		for(Term term:termino.getTerms())
-			for(TermOccurrence occ:termino.getOccurrenceStore().getOccurrences(term))
-				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
+		logger.debug("1 - Create occurrence index");
+		computeDocumentViews();
 		
 		
-		long total = termino.getTerms().stream().filter(t->t.getWords().size()==1).count();
 		// 2- Generate context vectors
-		LOGGER.debug("2 - Create context vectors. (number of contexts to compute: {})", 
-				total);
-		Iterator<Term> iterator = getTermIterator(termino);
-		for(Term t:IteratorUtils.toIterable(iterator)) {
-			ContextVector vector =computeContextVector(termino, t, options.getCoTermType(), options.getScope(), options.getMinimumCooccFrequencyThreshold());
-			t.setContext(vector);
-		}
+		long total = setContexts();
 		
 		
 		// 3- Normalize context vectors
-		LOGGER.debug("3 - Normalizing context vectors");
-		LOGGER.debug("3a - Generating the cross table");
-		CrossTable crossTable = new CrossTable(termino);
-		LOGGER.debug("3b - Normalizing {} context vectors", total);
+		logger.debug("3 - Normalizing context vectors");
+		logger.debug("3a - Generating the cross table");
+		CrossTable crossTable = computeCrossTable();
+		logger.debug("3b - Normalizing {} context vectors", total);
 		String traceMsg = "[Progress: {} / {}] Normalizing term {}";
 		int progress = 0;
-		for(Term t:IteratorUtils.toIterable(getTermIterator(termino))) {
+		for(TermService t:IteratorUtils.toIterable(getTermIterator())) {
 			++progress;
 			if(progress%500 == 0)
-				LOGGER.trace(traceMsg, progress, total, t);
-			t.getContext().toAssocRateVector(crossTable, rate, true);
+				logger.trace(traceMsg, progress, total, t);
+			toAssocRateVector(t.getTerm(), crossTable, rate, true);
 		}
 		
 		// 4- Clean occurrence indexes in source documents
-		LOGGER.debug("4 - Clear occurrence index");
+		logger.debug("4 - Clear occurrence index");
 		documentViews = null;
 	}
 
-	private Iterator<Term> getTermIterator(Terminology termino) {
-		return termino
-				.getTerms()
-				.stream()
-				.filter(t->t.getWords().size()==1)
+	public long setContexts() {
+		long total = terminology.terms().filter(TermService::isSingleWord).count();
+		logger.debug("2 - Create context vectors. (number of contexts to compute: {})", 
+				total);
+		Iterator<TermService> iterator = getTermIterator();
+		for(TermService t:IteratorUtils.toIterable(iterator)) {
+			ContextVector vector =computeContextVector(t.getTerm(), options.getScope(), options.getMinimumCooccFrequencyThreshold());
+			t.getTerm().setContext(vector);
+		}
+		return total;
+	}
+
+	public void computeDocumentViews() {
+		documentViews = new HashMap<>();
+		for(Document document:occurrenceStore.getDocuments()) 
+			documentViews.put(document, new DocumentView());
+		for(TermService term:terminology.getTerms())
+			for(TermOccurrence occ:occurrenceStore.getOccurrences(term.getTerm()))
+				documentViews.get(occ.getSourceDocument()).indexTermOccurrence(occ);
+	}
+
+	public AssociationRate createAssocRate() {
+		AssociationRate rate;
+		try {
+			rate = options.getAssociationRate().newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			throw new TermSuiteException("Failed to instanciate the association rate measure", e);
+		}
+		return rate;
+	}
+
+	private Iterator<TermService> getTermIterator() {
+		return terminology
+				.terms()
+				.filter(TermService::isSingleWord)
 				.collect(Collectors.toList()).iterator();
 	}
 	
 	/**
+	 * Normalize this vector according to a cross table
+	 * and an association rate measure.
 	 * 
-	 * Regenerate the single-word contextVector of this term and returns it.
+	 * This method recomputes all <code>{@link Entry}.frequency</code> values
+	 * with the normalized ones.
+	 * @param contextVector 
 	 * 
-	 * @param t 
-	 * 			the term
-	 * @param coTermsType
-	 * @param contextSize
-	 * @param cooccFrequencyThreshhold
-	 * @return
-	 * 		The computed {@link ContextVector} object
+	 * @param table
+	 * 			the pre-computed co-occurrences {@link CrossTable}
+	 * @param assocRateFunction
+	 * 			the {@link AssociationRate} measure implementation
+	 * @param normalize 
 	 */
-	public ContextVector computeContextVector(Terminology termino, Term t, OccurrenceType coTermsType, int contextSize, 
+	public void toAssocRateVector(Term t, CrossTable table, AssociationRate assocRateFunction, boolean normalize) {
+		double assocRate;
+		for(Entry coterm:t.getContext().getEntries()) {
+			ContextData contextData = computeContextData(table, t, coterm.getCoTerm());
+			assocRate = assocRateFunction.getValue(contextData);
+			t.getContext().setAssocRate(coterm.getCoTerm(), assocRate);
+		}
+		if(normalize)
+			t.getContext().normalize();
+
+	}
+	
+	
+	private ContextVector computeContextVector(Term t,int contextSize, 
 			int cooccFrequencyThreshhold) {
 		// 1- compute context vector
 		ContextVector vector = new ContextVector(t);
-		vector.addAllCooccurrences(Iterators.concat(contextIterator(termino, t, coTermsType, contextSize)));
+		vector.addAllCooccurrences(Iterators.concat(contextIterator(t, contextSize)));
 		vector.removeCoTerm(t);
 		
 		// 2- filter entries that under the co-occurrence threshold
@@ -160,9 +193,47 @@ public class Contextualizer  {
 		return vector;
 	}
 	
-	private Iterator<Iterator<TermOccurrence>> contextIterator(Terminology termino, final Term t, final OccurrenceType coTermsType, final int contextSize) {
+    /**
+     * 
+     * Computes coefficients a, b, c and d (available) and computes the association
+     * rate based on these coefficients.
+     * 
+     * These coefficients are made available through the not-thread safe methods <code>#getLastX()</code>.
+     * 
+     * @param x
+     * 			the base term
+     * @param y
+     * 			the co term
+     * @return
+     * 			the association rate
+     */
+    public ContextData computeContextData(CrossTable crossTable, Term x, Term y) {
+
+    	ContextData data = new ContextData();
+    	
+    	// A = (x & y)
+    	data.setA((int)x.getContext().getNbCooccs(y));
+
+    	// B = (x & not(y))
+    	AtomicDouble a_plus_b = crossTable.getAPlusB().get(x);
+    	data.setB(a_plus_b == null ? 0 : a_plus_b.intValue() - data.getA());
+//        int b = x.getFrequency() - a;
+    	
+         // C = (not(x) & y)
+    	AtomicDouble a_plus_c = crossTable.getAPlusC().get(y);
+    	data.setC(a_plus_c == null ? 0 : a_plus_c.intValue() - data.getA());
+//        int c = y.getFrequency() - a;
+         
+         // D = (not(x) & not(y))
+    	data.setD(crossTable.getTotalCoOccurrences() -  data.getA() - data.getB() - data.getC());
+        
+		return data;
+    }
+    
+	
+	public Iterator<Iterator<TermOccurrence>> contextIterator(final Term t, final int contextSize) {
 		return new AbstractIterator<Iterator<TermOccurrence>>() {
-			private Iterator<TermOccurrence> it = termino.getOccurrenceStore().getOccurrences(t).iterator();
+			private Iterator<TermOccurrence> it = occurrenceStore.getOccurrences(t).iterator();
 			
 			@Override
 			protected Iterator<TermOccurrence> computeNext() {
@@ -170,10 +241,41 @@ public class Contextualizer  {
 					TermOccurrence occ = it.next();
 					Document sourceDocument = occ.getSourceDocument();
 					DocumentView documentView = Contextualizer.this.documentViews.get(sourceDocument);
-					return documentView.contextIterator(occ, coTermsType, contextSize);
+					return documentView.contextIterator(occ, contextSize);
 				} else
 					return endOfData();
 			}
 		};
 	}
+	
+	public CrossTable computeCrossTable() {
+		
+		int totalCoOccurrences = 0;
+	    Map<Term, AtomicDouble> aPlusB = Maps.newConcurrentMap() ;
+	    Map<Term, AtomicDouble> aPlusC = Maps.newConcurrentMap();
+
+        Term term;
+        for (Iterator<TermService> it1 = terminology.getTerms().iterator(); 
+        		it1.hasNext() ;) {
+            term = it1.next().getTerm();
+//            this.totalFrequency++;
+            if(term.getContext() == null)
+            	continue;
+        	ContextVector context = term.getContext();
+            for (ContextVector.Entry entry : context.getEntries()) {
+            	totalCoOccurrences += entry.getNbCooccs();
+                getScoreFromMap(aPlusB, term).addAndGet(entry.getNbCooccs());
+                getScoreFromMap(aPlusC, entry.getCoTerm()).addAndGet(entry.getNbCooccs());
+            }
+        }
+        
+        return new CrossTable(aPlusB, aPlusC, totalCoOccurrences);
+    }
+
+
+    private AtomicDouble getScoreFromMap(Map<Term, AtomicDouble> aScoreMap, Term key) {
+		if(aScoreMap.get(key) == null)
+			aScoreMap.put(key, new AtomicDouble(0));
+		return aScoreMap.get(key);
+    }
 }

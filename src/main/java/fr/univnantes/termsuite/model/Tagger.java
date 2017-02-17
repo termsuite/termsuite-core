@@ -23,6 +23,9 @@
 
 package fr.univnantes.termsuite.model;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public enum Tagger {
 	MATE("mate", "mate"),
 	TREE_TAGGER("tree-tagger", "tt");
@@ -41,5 +44,16 @@ public enum Tagger {
 	
 	public String getName() {
 		return name;
+	}
+
+	public static Stream<Tagger> stream() {
+		return Arrays.stream(values());
+	}
+
+	public static Tagger forName(String name) {
+		for(Tagger t:values())
+			if(t.getName().equals(name) && t.getShortName().equals(name))
+				return t;
+		return null;
 	}
 }

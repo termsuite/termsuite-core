@@ -21,19 +21,30 @@
  *******************************************************************************/
 package fr.univnantes.termsuite.engines.gatherer;
 
+import java.io.IOException;
+import java.io.Reader;
 import java.util.Collection;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.google.common.io.CharStreams;
 
-public class YamlRuleSet  {
+import fr.univnantes.termsuite.framework.TermSuiteResource;
+
+public class YamlRuleSet implements TermSuiteResource {
 	private Multimap<VariationType, VariantRule> variantRules;
 
 	public Collection<VariantRule> getVariantRules(VariationType key) {
 		return variantRules.get(key);
 	}
 
+	public YamlRuleSet() {}
+	
 	public YamlRuleSet(Iterable<VariantRule> rules) {
+		init(rules);
+	}
+
+	private void init(Iterable<VariantRule> rules) {
 		variantRules = HashMultimap.create();
 		for(VariantRule rule:rules) 
 			variantRules.put(rule.getVariationType(), rule);
@@ -42,5 +53,10 @@ public class YamlRuleSet  {
 	public Collection<VariantRule> getVariantRules() {
 		return variantRules.values();
 	}
-	
+
+	@Override
+	public void load(Reader reader) throws IOException {
+		YamlRuleSet set = YamlRuleSetIO.fromYaml(CharStreams.toString(reader));
+		this.init(set.getVariantRules());
+	}
 }

@@ -25,30 +25,26 @@ package fr.univnantes.termsuite.engines.postproc;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Stopwatch;
-
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
-import fr.univnantes.termsuite.framework.TerminologyService;
+import fr.univnantes.termsuite.engines.SimpleEngine;
+import fr.univnantes.termsuite.framework.InjectLogger;
+import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.metrics.LinearNormalizer;
 import fr.univnantes.termsuite.metrics.MinMaxNormalizer;
 import fr.univnantes.termsuite.metrics.Normalizer;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TermRelation;
 import fr.univnantes.termsuite.model.TermWord;
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.StringUtils;
-import fr.univnantes.termsuite.utils.TermUtils;
 
 /**
  * Scores all variations in a {@link Terminology}
@@ -56,83 +52,73 @@ import fr.univnantes.termsuite.utils.TermUtils;
  * @author Damien Cram
  *
  */
-public class VariationScorer {
-	private static final Logger LOGGER = LoggerFactory.getLogger(VariationScorer.class);
-	private static final Predicate<? super TermRelation> NOT_SEMANTIC = v -> 
-			v.get(RelationProperty.VARIATION_TYPE) != VariationType.SEMANTIC 
-			&& (v.get(RelationProperty.VARIATION_TYPE) != VariationType.INFERENCE 
-					|| !v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
-	private static final Predicate<? super TermRelation> SEMANTIC = v -> 
-		v.get(RelationProperty.VARIATION_TYPE) == VariationType.SEMANTIC 
-		|| (v.get(RelationProperty.VARIATION_TYPE) == VariationType.INFERENCE 
-				&& v.getPropertyBooleanValue(RelationProperty.IS_SEMANTIC));
+public class VariationScorer extends SimpleEngine {
+	@InjectLogger Logger logger;
 
-	public void score(Terminology termino) {
-		LOGGER.info("Computing scores for variations");
-		Stopwatch sw = Stopwatch.createStarted();
+	@Override
+	public void execute() {
 
-		TerminologyService terminoService = new TerminologyService(termino);
-		
-//		LOGGER.debug("Computing {}", RelationProperty.STRICTNESS);
-//		doStrictnesses(terminoService);
-		
-		LOGGER.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
-		doVariationFrenquencies(terminoService);
+		logger.debug("Computing {}", RelationProperty.VARIANT_BAG_FREQUENCY);
+		doVariationFrenquencies();
 
-		LOGGER.debug("Computing {}", RelationProperty.SOURCE_GAIN);
-		doSourceGains(terminoService);
+		logger.debug("Computing {}", RelationProperty.SOURCE_GAIN);
+		doSourceGains();
 		
-		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_SOURCE_GAIN);
-		normalizeSourceGain(termino);
+		logger.debug("Computing {}", RelationProperty.NORMALIZED_SOURCE_GAIN);
+		normalizeSourceGain();
 		
-		LOGGER.debug("Computing {}", RelationProperty.EXTENSION_SCORE);
-		scoreExtensions(termino);
+		logger.debug("Computing {}", RelationProperty.EXTENSION_SCORE);
+		scoreExtensions();
 
-		LOGGER.debug("Computing {}", RelationProperty.NORMALIZED_EXTENSION_SCORE);
-		normalizeExtensionScores(termino);
+		logger.debug("Computing {}", RelationProperty.NORMALIZED_EXTENSION_SCORE);
+		normalizeExtensionScores();
 		
-		LOGGER.debug("Computing {}", RelationProperty.VARIANT_SCORE);
-		doVariantScores(terminoService);
-		
-		sw.stop();
-		LOGGER.debug("Scores computed in {}", sw);
+		logger.debug("Computing {}", RelationProperty.VARIANT_SCORE);
+		doVariantScores();
 	}
 
-	private void normalizeSourceGain(Terminology termino) {
+	private void normalizeSourceGain() {
 		final Normalizer normalizer = new LinearNormalizer(0.33, 1);
 		
-		termino.getRelations()
+		terminology.relations()
 			.filter(r -> r.isPropertySet(RelationProperty.SOURCE_GAIN))
 			.forEach(r -> 
 				r.setProperty(RelationProperty.NORMALIZED_SOURCE_GAIN, 
-						normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.SOURCE_GAIN))));
+						normalizer.normalize(r.getDouble(RelationProperty.SOURCE_GAIN))));
 	}
 
-	private void normalizeExtensionScores(Terminology termino) {
-		final Normalizer normalizer = new MinMaxNormalizer(termino
-				.getRelations()
-				.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
-				.map(r -> r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))
+	private void normalizeExtensionScores() {
+		Predicate<? super RelationService> extensionSet = r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE);
+		if(!terminology.relations().filter(extensionSet).findFirst().isPresent()) {
+			logger.warn("Found no relation with property {} set.", extensionSet);
+			return;
+		}
+			
+		final Normalizer normalizer = new MinMaxNormalizer(terminology
+				.relations()
+				.filter(extensionSet)
+				.map(r -> r.getDouble(RelationProperty.EXTENSION_SCORE))
 				.collect(Collectors.toList()));
 		
-		termino.getRelations()
+		terminology
+			.relations()
 			.filter(r -> r.isPropertySet(RelationProperty.EXTENSION_SCORE))
 			.forEach(r -> 
 					r.setProperty(RelationProperty.NORMALIZED_EXTENSION_SCORE, 
-							normalizer.normalize(r.getPropertyDoubleValue(RelationProperty.EXTENSION_SCORE))));
+							normalizer.normalize(r.getDouble(RelationProperty.EXTENSION_SCORE))));
 	}
 
-	public void doVariantScores(TerminologyService termino) {
+	public void doVariantScores() {
 		
 		/*
 		 * Non-semantic variations
 		 */
-		termino.variations()
-			.filter(NOT_SEMANTIC)
+		terminology.variations()
+			.filter(RelationService::notSemantic)
 			.forEach( variation -> {
 				double score = variation.isPropertySet(RelationProperty.NORMALIZED_EXTENSION_SCORE) ?
-							0.91*variation.getPropertyDoubleValue(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
-							0.89 + 0.1*variation.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN);
+							0.91*variation.getDouble(RelationProperty.NORMALIZED_EXTENSION_SCORE) :
+							0.89 + 0.1*variation.getDouble(RelationProperty.NORMALIZED_SOURCE_GAIN);
 				variation.setProperty(
 					RelationProperty.VARIANT_SCORE, 
 					score);
@@ -141,8 +127,8 @@ public class VariationScorer {
 		/*
 		 * Semantic variations
 		 */
-		termino.variations()
-			.filter(SEMANTIC)
+		terminology.variations()
+			.filter(RelationService::isSemantic)
 			.forEach( variation -> {
 				/*
 				 * The score of a semantic variation is :
@@ -152,10 +138,8 @@ public class VariationScorer {
 				 */
 				
 				double score = 0.75;
-				if(!variation.isPropertySet(RelationProperty.IS_DISTRIBUTIONAL))
-					System.out.println(variation.getProperties());
-				if(variation.getPropertyBooleanValue(RelationProperty.IS_DISTRIBUTIONAL)) {
-					score *= variation.getPropertyDoubleValue(RelationProperty.SEMANTIC_SIMILARITY);
+				if(variation.getBoolean(RelationProperty.IS_DISTRIBUTIONAL)) {
+					score *= variation.getDouble(RelationProperty.SEMANTIC_SIMILARITY);
 				}
 				
 				variation.setProperty(
@@ -166,102 +150,90 @@ public class VariationScorer {
 	}
 
 	
-	private int recursiveDoVariationFrenquencies(TerminologyService termino, TermRelation rel, Set<Term> visitedTerms) {
-		Term term = rel.getTo();
+	private int recursiveDoVariationFrenquencies(RelationService rel, Set<TermService> visitedTerms) {
+		TermService term = rel.getTo();
 		if(visitedTerms.contains(term)) {
 			return 0;
 		} else {
-			Set<Term> newVisitedTerms = new HashSet<>();
+			Set<TermService> newVisitedTerms = new HashSet<>();
 			newVisitedTerms.addAll(visitedTerms);
 			newVisitedTerms.add(term);
 			newVisitedTerms.add(rel.getFrom());
 			AtomicInteger sum = new AtomicInteger(term.getFrequency());
-			termino.variationsFrom(term)
+			term.variations()
 				// exclude semantic variations, otherwise there are too many variation pathes
-				.filter(NOT_SEMANTIC)
+				.filter(RelationService::notSemantic)
 				.forEach(v2 -> {
-					if(!v2.getPropertyBooleanValue(RelationProperty.IS_EXTENSION)) {
-						sum.addAndGet(recursiveDoVariationFrenquencies(termino, v2, newVisitedTerms));
+					if(!v2.getBoolean(RelationProperty.IS_EXTENSION)) {
+						sum.addAndGet(recursiveDoVariationFrenquencies(v2, newVisitedTerms));
 					}
 			});
 			return sum.get();
 		}
 	}
 
-	public void doVariationFrenquencies(TerminologyService termino) {
-		termino.variations()
+	public void doVariationFrenquencies() {
+		terminology.variations()
+			.forEach(r -> r.setProperty(RelationProperty.VARIANT_BAG_FREQUENCY, r.getTo().getFrequency()));
+
+		terminology.variations()
 			// exclude semantic variations, otherwise there are too many variation pathes
-			.filter(NOT_SEMANTIC)
+			.filter(RelationService::notSemantic)
 			.forEach(v1 -> {
 				v1.setProperty(
 					RelationProperty.VARIANT_BAG_FREQUENCY, 
-					recursiveDoVariationFrenquencies(termino, v1, new HashSet<>()));
+					recursiveDoVariationFrenquencies(v1, new HashSet<>()));
 		});
 	}
 
-//	public void doStrictnesses(TerminologyService termino) {
-//		termino.variations()
-//			.filter(NOT_SEMANTIC)
-//			.forEach( relation -> {
-//				relation.setProperty(RelationProperty.STRICTNESS, 
-//					TermUtils.getStrictness(
-//							termino.getTerminology().getOccurrenceStore(), 
-//					relation.getTo(), 
-//					relation.getFrom()));
-//		});
-//		
-//	}
-	public void doSourceGains(TerminologyService termino) {
-		termino.variations()
+	public void doSourceGains() {
+		terminology.variations()
 			.forEach( relation -> {
-				double sourceGain = Math.log10((double)relation.getPropertyIntegerValue(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
+				double sourceGain = Math.log10((double)relation.getInteger(RelationProperty.VARIANT_BAG_FREQUENCY)/relation.getFrom().getFrequency());
 				relation.setProperty(RelationProperty.SOURCE_GAIN, 
 					sourceGain);
 
 		});
 	}
 
-	public void scoreExtensions(Terminology termino) {
-		if(!termino.getRelations(RelationType.HAS_EXTENSION).findAny().isPresent()) {
-			LOGGER.warn("No {} relation set. Cannot score extensions.", RelationType.HAS_EXTENSION);
+	public void scoreExtensions() {
+		if(!terminology.extensions().findAny().isPresent()) {
+			logger.warn("No {} relation set. Cannot score extensions.", RelationType.HAS_EXTENSION);
 			return;
 		}
 		
-		Term affix;
-		Set<Term> extensions;
-		for(Term from:termino.getTerms()) {
-			extensions = termino.getOutboundRelations(from, RelationType.HAS_EXTENSION)
-					.stream()
-					.map(TermRelation::getTo)
+		for(TermService from:terminology.getTerms()) {
+			Set<TermService> extensions = from
+					.outboundRelations(RelationType.HAS_EXTENSION)
+					.map(RelationService::getTo)
 					.collect(Collectors.toSet());
-			for(TermRelation variation:termino.getOutboundRelations(from, RelationType.VARIATION)) {
+			from.variations().forEach( variation -> {
 				if(extensions.contains(variation.getTo())) {
-					affix = TermUtils.getExtensionAffix(
-							termino,
-							from, 
-							variation.getTo());
+					Optional<TermService> affix = terminology.getExtensionAffix(
+							from.getTerm(), 
+							variation.getTo().getTerm());
 					
-					if(affix == null) {
+					if(!affix.isPresent()) {
 						variation.setProperty(
 								RelationProperty.HAS_EXTENSION_AFFIX, 
 								false);
 						
-						continue;
+						return;
 					} else 
 						variation.setProperty(
 								RelationProperty.HAS_EXTENSION_AFFIX, 
 								true);
 					
-					double affixGain = Math.log10((double)variation.getTo().getFrequency()/affix.getFrequency());
+					double affixGain = Math.log10((double)variation.getTo().getFrequency()/affix.get().getFrequency());
 					variation.setProperty(RelationProperty.AFFIX_GAIN, 
 							affixGain);
 
-					double affixRatio = Math.log10((double)affix.getFrequency()/from.getFrequency());
+					double affixRatio = Math.log10((double)affix.get().getFrequency()/from.getFrequency());
 					variation.setProperty(RelationProperty.AFFIX_RATIO, 
 							affixRatio);
 
 					
-					double affixSpec = (Double)affix.getPropertyValue(TermProperty.SPECIFICITY);
+					double affixSpec = affix.get().getSpecificity();
 					variation.setProperty(RelationProperty.AFFIX_SPEC, 
 							affixSpec);
 
@@ -270,43 +242,43 @@ public class VariationScorer {
 							affixScore);
 
 					double orthographicScore = 1d;
-					for(TermWord tw:affix.getWords())
+					for(TermWord tw:affix.get().getWords())
 						orthographicScore = orthographicScore * StringUtils.getOrthographicScore(tw.getWord().getLemma());
 					variation.setProperty(RelationProperty.AFFIX_ORTHOGRAPHIC_SCORE, 
 							orthographicScore);
 					
 					
 				} 
-			}
+			});
 		} // end for terms
 		
 
 		// normalize affix score
-		List<Double> affixScores = termino
-				.getRelations()
+		List<Double> affixScores = terminology
+				.relations()
 				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
-				.map(r -> r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE))
+				.map(r -> r.getDouble(RelationProperty.AFFIX_SCORE))
 				.collect(Collectors.toList());
 		if(!affixScores.isEmpty()) {
 			final Normalizer affixScoreNormalizer = new MinMaxNormalizer(affixScores);
 			
-			termino
-				.getRelations()
+			terminology
+				.relations()
 				.filter(r -> r.isPropertySet(RelationProperty.AFFIX_SCORE))
 				.forEach(r -> {
 						r.setProperty(
 									RelationProperty.NORMALIZED_AFFIX_SCORE, 
-									affixScoreNormalizer.normalize(r.getPropertyDoubleValue(RelationProperty.AFFIX_SCORE)));
+									affixScoreNormalizer.normalize(r.getDouble(RelationProperty.AFFIX_SCORE)));
 					}
 				);
 		}
 
 		// compute global extension score
-		termino.getRelations()
-			.filter(rel -> rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX) && rel.getPropertyBooleanValue(RelationProperty.HAS_EXTENSION_AFFIX))
+		terminology.relations()
+			.filter(rel -> rel.isPropertySet(RelationProperty.HAS_EXTENSION_AFFIX) && rel.getBoolean(RelationProperty.HAS_EXTENSION_AFFIX))
 			.forEach(rel -> {
-				double extensionScore = (rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_SOURCE_GAIN)
-								+ 0.3 * rel.getPropertyDoubleValue(RelationProperty.NORMALIZED_AFFIX_SCORE));
+				double extensionScore = (rel.getDouble(RelationProperty.NORMALIZED_SOURCE_GAIN)
+								+ 0.3 * rel.getDouble(RelationProperty.NORMALIZED_AFFIX_SCORE));
 					
 				rel.setProperty(RelationProperty.EXTENSION_SCORE, 
 						extensionScore);

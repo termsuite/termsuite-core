@@ -36,7 +36,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import fr.univnantes.termsuite.test.unit.TestUtil;
+import fr.univnantes.termsuite.test.util.TestUtil;
 import fr.univnantes.termsuite.uima.resources.preproc.PrefixTree;
 
 public class PrefixTreeSpec {

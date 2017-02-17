@@ -36,13 +36,13 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
 
 /**
  * Created by Simon Meoni on 02/06/16.
  */
 public class TermsuiteJsonCasExporter extends CasExporter {
-    private static final Logger LOGGER = LoggerFactory.getLogger(JsonCasExporter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TermsuiteJsonCasExporter.class);
     public static final String OUTPUT_DIRECTORY = "OutputDirectory";
 
     @Override
@@ -57,7 +57,7 @@ public class TermsuiteJsonCasExporter extends CasExporter {
         try {
             FileOutputStream fos = new FileOutputStream(file);
             Writer writer = new OutputStreamWriter(fos, "UTF-8");
-            TermSuiteJsonCasSerializer.serialize(writer,aJCas);
+            JsonCasSerializer.serialize(writer,aJCas);
 
         } catch (IOException e) {
             LOGGER.error("Failure while serializing " + name + "\nCaused by"

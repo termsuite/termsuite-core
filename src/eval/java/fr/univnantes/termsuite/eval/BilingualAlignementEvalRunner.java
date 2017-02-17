@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
 
-import fr.univnantes.termsuite.alignment.BilingualAligner;
+import fr.univnantes.termsuite.alignment.BilingualAlignmentService;
 import fr.univnantes.termsuite.alignment.RequiresSize2Exception;
-import fr.univnantes.termsuite.alignment.TermSuiteAlignerBuilder;
 import fr.univnantes.termsuite.alignment.TranslationCandidate;
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.eval.bilangaligner.AlignmentEvalRun;
 import fr.univnantes.termsuite.eval.bilangaligner.AlignmentEvalService;
 import fr.univnantes.termsuite.eval.bilangaligner.AlignmentRecord;
@@ -25,8 +25,9 @@ import fr.univnantes.termsuite.eval.bilangaligner.RunTrace;
 import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.exceptions.DictionaryNotFoundException;
 import fr.univnantes.termsuite.eval.model.Corpus;
-import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.model.Terminology;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.model.IndexedCorpus;
 
 public class BilingualAlignementEvalRunner {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TermSuiteEvals.class);
@@ -87,22 +88,24 @@ public class BilingualAlignementEvalRunner {
 		if(!dicoPath.toFile().isFile()) 
 			throw new DictionaryNotFoundException(dicoPath.toString());
 		
-		Terminology sourceTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getSource(), run.getTerminoConfig());
-		Terminology targetTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getTarget(), run.getTerminoConfig());
-		
-		BilingualAligner aligner = TermSuiteAlignerBuilder.start()
+		IndexedCorpus sourceTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getSource(), run.getTerminoConfig());
+		IndexedCorpus targetTermino = TermSuiteEvals.getTerminology(run.getCorpus(), run.getLangPair().getTarget(), run.getTerminoConfig());
+		TerminologyService sourceTerminoService = TermSuite.getTerminologyService(sourceTermino);
+		TerminologyService targetTerminoService = TermSuite.getTerminologyService(targetTermino);
+
+		BilingualAlignmentService aligner = TermSuite.bilingualAligner()
 				.setSourceTerminology(sourceTermino)
 				.setTargetTerminology(targetTermino)
-				.setDicoPath(dicoPath.toString())
+				.setDicoPath(dicoPath)
 				.setDistanceCosine()
 				.create();
 		
 		service.getRefFile(run)
-			.pairs(sourceTermino, targetTermino)
+			.pairs(sourceTerminoService, targetTerminoService)
 			.filter(pair -> run.getEvaluatedMethod().acceptPair(aligner, pair[0], pair[1]))
 			.forEach(pair -> {
-				Term expectedTerm = pair[1];
-				Term sourceTerm = pair[0];
+				TermService expectedTerm = pair[1];
+				TermService sourceTerm = pair[0];
 				try {
 					LOGGER.debug("Aligning source term <{}>. Expecting target term <{}>", 
 							sourceTerm.getGroupingKey(), 
@@ -111,14 +114,14 @@ public class BilingualAlignementEvalRunner {
 					List<TranslationCandidate> targets = run.getEvaluatedMethod().align(aligner, sourceTerm, 100, 1);
 	
 					if(targets.isEmpty()) {
-						trace.newTry(new AlignmentRecord(sourceTerm, expectedTerm)
+						trace.newTry(new AlignmentRecord(sourceTerm.getTerm(), expectedTerm.getTerm())
 								.setValid(true)
 								.setSuccess(false)
 								.setComment("Empty candidate list"));
 						LOGGER.debug("Candidate list returned by aligner is empty");
 					} else {
 						if(targets.get(0).getTerm().equals(expectedTerm)) {
-							trace.newTry( new AlignmentRecord(sourceTerm, expectedTerm)
+							trace.newTry( new AlignmentRecord(sourceTerm.getTerm(), expectedTerm.getTerm())
 									.setValid(true)
 									.setSuccess(true)
 									.setMethod(targets.get(0).getMethod())
@@ -129,7 +132,7 @@ public class BilingualAlignementEvalRunner {
 								.filter(i -> targets.get(i).getTerm().equals(expectedTerm))
 								.findFirst();
 			                if(index.isPresent()) {
-								trace.newTry(new AlignmentRecord(sourceTerm, expectedTerm)
+								trace.newTry(new AlignmentRecord(sourceTerm.getTerm(), expectedTerm.getTerm())
 										.setValid(true)
 										.setSuccess(false)
 										.setMethod(targets.get(index.getAsInt()).getMethod())
@@ -138,7 +141,7 @@ public class BilingualAlignementEvalRunner {
 										
 								LOGGER.debug("FAILED. Position of expected term: {}",index.getAsInt() + 1);
 			                } else {
-								trace.newTry(new AlignmentRecord(sourceTerm, expectedTerm)
+								trace.newTry(new AlignmentRecord(sourceTerm.getTerm(), expectedTerm.getTerm())
 										.setValid(true)
 										.setSuccess(false)
 										.setComment("Expected term not found in candidates"));
@@ -148,7 +151,7 @@ public class BilingualAlignementEvalRunner {
 						}
 					}
 				} catch(RequiresSize2Exception e) {
-					trace.newTry(new AlignmentRecord(sourceTerm, expectedTerm)
+					trace.newTry(new AlignmentRecord(sourceTerm.getTerm(), expectedTerm.getTerm())
 							.setValid(false)
 							.setComment("Source term has too many lemmas"));
 

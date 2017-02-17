@@ -27,12 +27,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univnantes.termsuite.model.Terminology;
 import fr.univnantes.termsuite.utils.StringUtils;
 
 public class StringUtilsSpec {
-	
-	private Terminology termino;
 	
 	@Before
 	public void setUp() {

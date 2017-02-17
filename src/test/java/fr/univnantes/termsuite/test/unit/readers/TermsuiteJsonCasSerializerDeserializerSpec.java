@@ -40,13 +40,13 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import fr.univnantes.termsuite.test.unit.TestUtil;
+import fr.univnantes.termsuite.test.util.TestUtil;
 import fr.univnantes.termsuite.types.FixedExpression;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasDeserializer;
-import fr.univnantes.termsuite.uima.readers.TermSuiteJsonCasSerializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasDeserializer;
+import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
 
 /**
  * Created by Simon Meoni on 24/06/16.
@@ -248,7 +248,7 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 	public void SerializationTest() throws IOException {
 
 		// Test Out File
-		TermSuiteJsonCasSerializer.serialize(new FileWriter(jsonResFile), fixtureCas);
+		JsonCasSerializer.serialize(new FileWriter(jsonResFile), fixtureCas);
 		final String baseFile = TestUtil.readFile(jsonExpectedFile);
 		final String resFile = TestUtil.readFile(jsonResFile);
 		assertEquals(baseFile, resFile);
@@ -256,7 +256,7 @@ public class TermsuiteJsonCasSerializerDeserializerSpec {
 
 	@Test
 	public void DeserializationTest() {
-		TermSuiteJsonCasDeserializer.deserialize(fis, jCas.getCas());
+		JsonCasDeserializer.deserialize(fis, jCas.getCas());
 
 		// Test Sdi
 		assertEquals(fixtureCas.getAnnotationIndex(SourceDocumentInformation.type).iterator().next().toString(),

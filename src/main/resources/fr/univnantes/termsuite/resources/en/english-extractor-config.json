@@ -1,0 +1,57 @@
+{
+  "pre-filter" : {
+    "enabled" : false,
+    "type" : "THRESHOLD",
+    "property" : "FREQUENCY",
+    "top-n" : 500,
+    "threshold" : 2.0,
+    "keep-variants" : false,
+    "max-variant-num" : 25
+  },
+  "contextualizer" : {
+    "enabled" : false,
+    "scope" : 3,
+    "coocc-frequency-th" : 2,
+    "association-rate" : "fr.univnantes.termsuite.engines.contextualizer.LogLikelihood"
+  },
+  "morphology" : {
+    "enabled" : true,
+    "alpha" : 0.7,
+    "beta" : 0.1,
+    "gamma" : 0.1,
+    "delta" : 0.1,
+    "prefix-splitter-enabled" : true,
+    "derivatives-detector-enabled" : true,
+    "native-splitter-enabled" : true,
+    "min-component-size" : 3,
+    "max-component-num" : 3,
+    "score-th" : 0.85,
+    "segment-similarity-th" : 1.0
+  },
+  "gatherer" : {
+    "semantic-enabled" : false,
+    "graphical-enabled" : true,
+    "graphical-similarity-th" : 0.88,
+    "max-class-size" : 2000,
+    "max-num-comparisons" : 1000000
+  },
+  "post-processor" : {
+    "affix-score-th" : 0.25,
+    "variation-score-th" : 0.2,
+    "orthographic-score-th" : 0.55,
+    "term-independance-th" : 0.1
+  },
+  "post-filter" : {
+    "enabled" : false,
+    "type" : "TOP_N",
+    "property" : "SPECIFICITY",
+    "top-n" : 500,
+    "threshold" : 2.0,
+    "keep-variants" : true,
+    "max-variant-num" : 25
+  },
+  "ranking" : {
+    "property" : "SPECIFICITY",
+    "is-descending" : true
+  }
+}

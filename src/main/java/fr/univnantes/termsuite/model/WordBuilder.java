@@ -25,10 +25,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.index.Terminology;
+
 public class WordBuilder {
-	private static final String ERR_MSG = "lemma is null. Must invoke #setLemma first";
+	private static final String LEMMA_EXIST_MSG = "Word with lemma %s already exists in termino";
 
 	private Optional<Word> word = Optional.empty();
 	private String stem;
@@ -36,24 +39,28 @@ public class WordBuilder {
 	private Optional<CompoundType> type = Optional.empty();
 
 	private List<Component> components = Lists.newArrayList();
-	private Optional<Component> neoclassicalAffix = Optional.empty();
 
+	private Terminology termino;
 	
-	private WordBuilder() {
+	public WordBuilder() {
+		
+	}
+	private WordBuilder(Terminology termino) {
 		super();
+		this.termino = termino;
 	}
 	
-	public WordBuilder(Word word) {
-		super();
-		this.word = Optional.of(word);
-	}
-
 	public WordBuilder setStem(String stem) {
 		this.stem = stem;
 		return this;
 	}
 	
 	public WordBuilder setLemma(String lemma) {
+		if(termino != null)
+			Preconditions.checkArgument(
+					!termino.getWords().containsKey(lemma),
+					LEMMA_EXIST_MSG, 
+					lemma);
 		this.lemma = lemma;
 		return this;
 	}
@@ -69,7 +76,8 @@ public class WordBuilder {
 		if(!components.isEmpty()) {
 			if(!type.isPresent())
 				type = Optional.of(CompoundType.NATIVE);
-			w.setComposition(type.get(), components);
+			w.setCompoundType(type.get());
+			w.setComponents(components);
 		}
 		return w;
 	}
@@ -89,14 +97,14 @@ public class WordBuilder {
 	public WordBuilder addComponent(int begin, int end, String substring, String compLemma, boolean neoclassicalAffix) {
 		Component component = new Component(begin, end,substring,compLemma);
 		if(neoclassicalAffix)
-			component.setNeoclassical();
+			component.setNeoclassicalAffix(true);
 		components.add(component);
 		return this;
 	}
 
 
-	public static WordBuilder start() {
-		return new WordBuilder();
+	public static WordBuilder start(Terminology terminology) {
+		return new WordBuilder(terminology);
 	}
 
 	public String getLemma() {
@@ -106,8 +114,7 @@ public class WordBuilder {
 	public WordBuilder setNeoclassicalAffix(int begin, int end) {
 		for(Component component:components) {
 			if(component.getBegin() == begin && component.getEnd() == end) {
-				neoclassicalAffix = Optional.of(component);
-				component.setNeoclassical();
+				component.setNeoclassicalAffix(true);
 				return this;
 			}
 		}

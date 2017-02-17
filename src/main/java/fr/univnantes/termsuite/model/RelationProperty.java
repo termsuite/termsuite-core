@@ -1,16 +1,15 @@
 package fr.univnantes.termsuite.model;
 
 import java.util.Comparator;
+import java.util.Optional;
+import java.util.Set;
 
-import com.google.common.base.Preconditions;
-import com.google.common.collect.ComparisonChain;
+import com.google.common.base.Joiner;
 
-import fr.univnantes.termsuite.engines.gatherer.VariationType;
+public enum RelationProperty implements Property<Relation> {
 
-public enum RelationProperty implements Property<TermRelation> {
 	VARIATION_RANK("VariationRank", "vrank", "vrank", Integer.class),
-	VARIATION_RULE("VariationRule", "vrule", "vrule", String.class),
-	VARIATION_TYPE("VariationRuleType", "vtype", "vtype", VariationType.class),
+	VARIATION_RULES("VariationRule", "vrules", "vrules", Set.class),
 	DERIVATION_TYPE("DerivationType", "dtype", "dtype", String.class),
 	GRAPHICAL_SIMILARITY("GraphSimilarity", "graphSim", "graphSim", Double.class),
 	SEMANTIC_SIMILARITY("SemanticSimilarity", "semSim", "semSim", Double.class), 
@@ -19,7 +18,6 @@ public enum RelationProperty implements Property<TermRelation> {
 	AFFIX_ORTHOGRAPHIC_SCORE("AffixOrthographicScore", "affOrtho", "affOrtho", Double.class),
 	EXTENSION_SCORE("ExtensionScore", "extScore", "extScore", Double.class),
 	AFFIX_SPEC("AffixSpec", "affSpec", "affSpec", Double.class),
-//	STRICTNESS("Strictness", "strictness", "strictness", Double.class),
 	HAS_EXTENSION_AFFIX("HasExtensionAffix", "hasExtAffix", "hasExtAffix", Boolean.class),
 	IS_EXTENSION("IsExtension", "isExt", "isExt", Boolean.class), 
 	SOURCE_GAIN("SourceGain", "srcGain", "srcGain", Double.class),
@@ -33,90 +31,98 @@ public enum RelationProperty implements Property<TermRelation> {
 	IS_GRAPHICAL("IsGraphical", "isGraph", "isGraph", Boolean.class), 
 	IS_SEMANTIC("IsSemantic", "isSem", "isSem", Boolean.class), 
 	IS_DERIVATION("IsDerivation", "isDeriv", "isDeriv", Boolean.class), 
-	IS_PREXATION("IsPrefixation", "isPref", "isPref", Boolean.class), 
+	IS_PREFIXATION("IsPrefixation", "isPref", "isPref", Boolean.class), 
 	IS_SYNTAGMATIC("IsSyntagmatic", "isSyntag", "isSyntag", Boolean.class), 
 	IS_MORPHOLOGICAL("IsMorphological", "isMorph", "isMorph", Boolean.class), 
 	VARIANT_BAG_FREQUENCY("VariantBagFrequency", "vBagFreq", "vBagFreq", Integer.class), 
+	IS_DICO("Dico", "isDico", "isDico", Boolean.class), 
+	SEMANTIC_SCORE("SemanticScore", "semScore", "semScore", Double.class), 
+	
 	;
+	
+	private PropertyHolderBase<RelationProperty, Relation> delegate;
 
-	private String propertyName;
-	private String propertyShortName;
-	private String jsonField;
-	private Class<?> range;
-
-	private RelationProperty(String propertyName, String propertyShortName, String propertyJsonName, Class<?> range) {
-		this.propertyName = propertyName;
-		this.propertyShortName = propertyShortName;
-		this.jsonField = propertyJsonName;
-		this.range = range;
+	private RelationProperty(String propertyName, String propertyShortName, String jsonField, Class<?> range) {
+		delegate = new PropertyHolderBase<>(propertyName, propertyShortName, jsonField, range);
 	}
-
-	@Override
-	public Class<?> getRange() {
-		return range;
-	}
-
-	@Override
-	public String getPropertyName() {
-		return propertyName;
-	}
-
-	@Override
-	public boolean isDecimalNumber() {
-		return Property.isDecimalNumber(range);
-	}
-
-	@Override
-	public String getShortName() {
-		return propertyShortName;
-	}
-
-	@Override
-	public boolean isNumeric() {
-		return Property.isNumeric(range);
-	}
-
 	
 
 	@Override
-	public int compare(TermRelation o1, TermRelation o2) {
-		return ComparisonChain.start()
-				.compare(
-						o1.getPropertyValueUnchecked(this), 
-						o2.getPropertyValueUnchecked(this))
-				.result();
+	public String getPropertyName() {
+		return delegate.getPropertyName();
 	}
 
 
 	@Override
 	public String getJsonField() {
-		return jsonField;
+		return delegate.getJsonField();
+	}
+
+
+	@Override
+	public Class<?> getRange() {
+		return delegate.getRange();
+	}
+
+
+	@Override
+	public String getShortName() {
+		return delegate.getShortName();
+	}
+
+
+	@Override
+	public boolean isNumeric() {
+		return delegate.isNumeric();
+	}
+
+
+	@Override
+	public boolean isDecimalNumber() {
+		return delegate.isDecimalNumber();
+	}
+
+
+	@Override
+	public Comparator<Relation> getComparator() {
+		return delegate.getComparator(this);
+	}
+
+
+	@Override
+	public Comparator<Relation> getComparator(boolean reverse) {
+		return delegate.getComparator(this, reverse);
+	}
+
+	@Override
+	public int compare(Relation o1, Relation o2) {
+		return delegate.compare(this, o1, o2);
 	}
 
 	public static RelationProperty fromJsonString(String field) {
-		Preconditions.checkNotNull(field);
-		for(RelationProperty p:values())
-			if(p.jsonField.equals(field))
+		return PropertyHolderBase.fromJsonString(RelationProperty.class, field);
+	}
+
+
+	public static RelationProperty forName(String name) {
+		for(RelationProperty p:values()) {
+			if(p.getPropertyName().equals(name) || p.getShortName().equals(name))
 				return p;
-		throw new IllegalArgumentException("No RelationProperty with such json field: " + field);
+		}
+		throw new IllegalArgumentException(
+				String.format(
+						"Bad relation property name: %s. Allowed: %s", 
+						name,
+						Joiner.on(',').join(RelationProperty.values())
+				)
+		);
 	}
 
-	@Override
-	public Comparator<TermRelation> getComparator() {
-		return getComparator(false);
+	public static Optional<RelationProperty> forNameOptional(String str) {
+		for(RelationProperty p:values()) {
+			if(p.getPropertyName().equals(str) || p.getShortName().equals(str))
+				return Optional.of(p);
+		}
+		return Optional.empty();
 	}
-
-	@Override
-	public Comparator<TermRelation> getComparator(boolean reverse) {
-		return new Comparator<TermRelation>() {
-			@Override
-			public int compare(TermRelation o1, TermRelation o2) {
-				return reverse ? 
-						RelationProperty.this.compare(o2, o1) :
-							RelationProperty.this.compare(o1, o2)
-									;
-			}
-		};
-	}
-
 }

@@ -31,15 +31,12 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
 
 public class TermBuilder {
 	private static final Logger LOGGER  = LoggerFactory.getLogger(TermBuilder.class);
-	private static final String ERR_NO_TERMINOLOGY_GIVEN = "No terminology given.";
-	private static final String ERR_FREQ_AND_NUM_OCC_MUST_MATCH = "Cannot build a term with frequency %d and %d occurrences";
 
-	private Terminology termino;
-	
 	private Optional<String> groupingKey = Optional.empty();
 	private java.util.Optional<String> pilot = java.util.Optional.empty();
 	private java.util.Optional<Integer> documentFrequency = java.util.Optional.empty();
@@ -53,31 +50,13 @@ public class TermBuilder {
 	private boolean forceManualGroupingKey = false;
 	private Optional<ContextVector> contextVector = Optional.empty();
 
+	private Terminology termino;
 	
-	private TermBuilder() {
+	public TermBuilder() {
 	}
 	
 	private TermBuilder(Terminology termino) {
-		Preconditions.checkNotNull(termino);
 		this.termino = termino;
-	}
-
-	public Term createAndAddToTerminology() {
-		Preconditions.checkNotNull(this.termino, ERR_NO_TERMINOLOGY_GIVEN);
-
-		Term term = create();
-		this.termino.addTerm(term);
-
-		for(Object[] occ:occurrences) {
-			termino.getOccurrenceStore().addOccurrence(
-					term, 
-					(String)occ[0], 
-					(Integer)occ[1], 
-					(Integer)occ[2], 
-					(String)occ[3]);
-		}
-
-		return term;
 	}
 	
 	public Term create() {
@@ -93,31 +72,30 @@ public class TermBuilder {
 		Term term = new Term(groupingKey.get(), termWords);
 
 		if(spottingRule.isPresent())
-			term.setSpottingRule(spottingRule.get());
+			term.setProperty(TermProperty.SPOTTING_RULE,spottingRule.get());
 		
 		if(generalFrequencyNorm.isPresent())
-			term.setGeneralFrequencyNorm(generalFrequencyNorm.get());
+			term.setProperty(TermProperty.GENERAL_FREQUENCY_NORM,generalFrequencyNorm.get());
 		
 		if(frequencyNorm.isPresent())
-			term.setFrequencyNorm(frequencyNorm.get());
+			term.setProperty(TermProperty.FREQUENCY_NORM,frequencyNorm.get());
 
 
 		if(pilot.isPresent())
-			term.setPilot(pilot.get());
+			term.setProperty(TermProperty.PILOT,pilot.get());
 
 		if(documentFrequency.isPresent())
-			term.setDocumentFrequency(documentFrequency.get());
+			term.setProperty(TermProperty.DOCUMENT_FREQUENCY,documentFrequency.get());
 
 		if(specificity.isPresent())
-			term.setSpecificity(specificity.get());
+			term.setProperty(TermProperty.SPECIFICITY,specificity.get());
 		
 		if(rank.isPresent())
-			term.setRank(rank.get());
+			term.setProperty(TermProperty.RANK,rank.get());
 		
 		if(contextVector.isPresent())
 			term.setContext(contextVector.get());
 
-		
 		/*
 		 * Sets the pattern
 		 */
@@ -125,7 +103,7 @@ public class TermBuilder {
 		for(TermWord w:termWords) 
 			labels.add(w.getSyntacticLabel());
 		String pattern = Joiner.on(' ').join(labels);
-		term.setPattern(pattern);
+		term.setProperty(TermProperty.PATTERN, pattern);
 		
 		
 		/*
@@ -133,9 +111,10 @@ public class TermBuilder {
 		 * the exiting term frequency incremented by occurrences adding.
 		 */
 		if(frequency.isPresent()) {
-			term.setFrequency(frequency.get());
-		} else
-			term.setFrequency(occurrences.size());
+			term.setProperty(TermProperty.FREQUENCY, frequency.get());
+		} 
+//		else
+//			term.setFrequency(occurrences.size());
 
 		return term;
 	}
@@ -145,6 +124,12 @@ public class TermBuilder {
 	}
 
 	public TermBuilder setGroupingKey(String groupingKey, boolean forceManualGroupingKey) {
+		if(termino != null)
+			Preconditions.checkArgument(
+					!termino.getTerms().containsKey(groupingKey), 
+					"Term %s already exists", 
+					groupingKey);
+		
 		this.groupingKey = Optional.of(groupingKey);
 		this.forceManualGroupingKey = forceManualGroupingKey;
 		return this;
@@ -184,12 +169,9 @@ public class TermBuilder {
 	public void setContextVector(ContextVector vector) {
 		this.contextVector  = Optional.of(vector);
 	}
-	public static TermBuilder start(Terminology termino) {
-		return new TermBuilder(termino);
-	}
 
-	public static TermBuilder start() {
-		return new TermBuilder();
+	public static TermBuilder start(Terminology terminology) {
+		return new TermBuilder(terminology);
 	}
 
 	public TermBuilder setRank(int rank) {
@@ -204,18 +186,20 @@ public class TermBuilder {
 
 	public void addWord(String lemma, String stem, String label, boolean isSWT) {
 		Word word;
-		if((word = this.termino.getWord(lemma)) == null) 
-			word = WordBuilder.start().setLemma(lemma).setStem(stem).create();
+		if(!this.termino.getWords().containsKey(lemma))
+			word = WordBuilder.start(termino).setLemma(lemma).setStem(stem).create();
+		else
+			word = this.termino.getWords().get(lemma);
 		TermWord w = new TermWord(word, label, isSWT);
 		this.termWords.add(w);
 	}
 	
-	private List<Object[]> occurrences=Lists.newArrayList();
+//	private List<Object[]> occurrences=Lists.newArrayList();
 
-	public TermBuilder addOccurrence(int begin, int end, String docUrl, String text) {
-		occurrences.add(new Object[]{docUrl, begin, end, text});
-		return this;
-	}
+//	public TermBuilder addOccurrence(int begin, int end, String docUrl, String text) {
+//		occurrences.add(new Object[]{docUrl, begin, end, text});
+//		return this;
+//	}
 
 	public TermBuilder setPilot(String pilot) {
 		this.pilot = java.util.Optional.of(pilot);
