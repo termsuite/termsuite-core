@@ -5,9 +5,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
@@ -20,8 +18,6 @@ import fr.univnantes.termsuite.tools.TermSuiteCliException;
 import fr.univnantes.termsuite.tools.opt.ClientHelper;
 
 public class ClientHelperSpec {
-	@Rule
-	public TemporaryFolder folder = new TemporaryFolder();
 
 	private ClientHelper helper;
 	private CommandLineClient client;

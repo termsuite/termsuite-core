@@ -10,7 +10,7 @@ public enum OptType {
 	T_DIR("DIR"),
 	T_LANG("LANG"),
 	T_ENC("ENC"),
-	T_NONE(null)
+	T_NONE("")
 	;
 	
 	private String str;

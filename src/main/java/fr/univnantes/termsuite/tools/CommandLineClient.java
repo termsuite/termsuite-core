@@ -265,17 +265,17 @@ public abstract class CommandLineClient {
 		return Double.parseDouble(getOpt(opt).get().trim());
 	}
 	
-	public void launch(String[] args) {
+	public void launch(String... args) {
 		configureGeneralOpts();
 		configureOpts();
 		try {
 			this.line = new PosixParser().parse(options, args);
 			applyLogConfig();
-			CliUtil.logCommandLineOptions(LOGGER, line);
 			if(isSet(CliOption.HELP)) {
 				doHelp(System.out);
 				return;
 			}
+			CliUtil.logCommandLineOptions(LOGGER, line);
 			checkAtLeastOneOf();
 			checkAtMostOneOf();
 			checkExactlyOneOf();
@@ -343,7 +343,7 @@ public abstract class CommandLineClient {
 		for(CliOption opt:mandatoryOptions) {
 			out.format("\t%-3s --%-35s %s%n", 
 					opt.getOptShortName() == null ? "" : ("-"+opt.getOptShortName()+""),
-					opt.getOptName() + " " + (opt.hasArg() ? opt.getArgType() : ""),
+					opt.getOptName() + " " + (opt.hasArg() ? opt.getArgType().getStr() : ""),
 					opt.getDescription()
 							
 				);
@@ -354,7 +354,7 @@ public abstract class CommandLineClient {
 		for(CliOption opt:otherOptions) {
 			out.format("\t%-3s --%-35s %s%n", 
 					opt.getOptShortName() == null ? "" : ("-"+opt.getOptShortName()+""),
-					opt.getOptName() + " " + (opt.hasArg() ? opt.getArgType() : ""),
+					opt.getOptName() + " " + (opt.hasArg() ? opt.getArgType().getStr() : ""),
 					opt.getDescription()
 							
 				);
@@ -411,7 +411,7 @@ public abstract class CommandLineClient {
 		for(Set<CliOption> bag:exactlyOneOfBags) {
 			Set<CliOption> foundOpts = new HashSet<>();
 			for(CliOption opt:bag) 
-				if(getOpt(opt).isPresent())
+				if(isSet(opt))
 					foundOpts.add(opt);
 			if(foundOpts.size() != 1)
 				CliUtil.throwExactlyOne(bag);
@@ -422,7 +422,7 @@ public abstract class CommandLineClient {
 		for(Set<CliOption> bag:atMostOneOfBags) {
 			Set<CliOption> foundOpts = new HashSet<>();
 			for(CliOption opt:bag) 
-				if(getOpt(opt).isPresent())
+				if(isSet(opt))
 					foundOpts.add(opt);
 			if(foundOpts.size() > 1)
 				CliUtil.throwAtMost(bag);
@@ -433,7 +433,7 @@ public abstract class CommandLineClient {
 		for(Set<CliOption> bag:atLeastOneOfBags) {
 			boolean found = false;
 			for(CliOption opt:bag) 
-				found |= getOpt(opt).isPresent();
+				found |= isSet(opt);
 			if(!found)
 				CliUtil.throwAtLeast(bag);
 		}

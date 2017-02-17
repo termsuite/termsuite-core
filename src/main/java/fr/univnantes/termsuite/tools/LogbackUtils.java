@@ -77,14 +77,14 @@ public final class LogbackUtils {
 	static void activateLogging(OutputStreamAppender<ILoggingEvent> appender) {
 		PatternLayoutEncoder ple = new PatternLayoutEncoder();
 		ple.setPattern("%date %level [%thread] %logger{10} [%file:%line] %msg%n");
-		ple.setContext((LoggerContext) LoggerFactory.getILoggerFactory());
+		ple.setContext(getContext());
 		ple.start();
-		appender.setContext((LoggerContext) LoggerFactory.getILoggerFactory());
+		appender.setContext(getContext());
 		appender.setEncoder(ple);
 		appender.start();
 		
 		// add appender to any Logger (here is root)
-		ch.qos.logback.classic.Logger rootLogger = (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+		ch.qos.logback.classic.Logger rootLogger = getRootLogger();
 		rootLogger.addAppender(appender);
 	}
 
@@ -102,9 +102,13 @@ public final class LogbackUtils {
 		return fa;
 	}
 	
+	
 	public static void disableLogging() {
-		LoggerContext loggerContext = (LoggerContext)LoggerFactory.getILoggerFactory();
-		loggerContext.stop();
+		getContext().stop();
+	}
+
+	public static LoggerContext getContext() {
+		return (LoggerContext)LoggerFactory.getILoggerFactory();
 	}
 	
 	static void setGlobalLogLevel(String levelString) {
@@ -112,8 +116,12 @@ public final class LogbackUtils {
 	}
 	
 	public static void setGlobalLogLevel(Level level) {
-		ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+		ch.qos.logback.classic.Logger logger = getRootLogger();
 		logger.setLevel(level);
+	}
+
+	public static ch.qos.logback.classic.Logger getRootLogger() {
+		return (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 	}
 
 	public static void setLogLevel(Object... loggerOverridings) {

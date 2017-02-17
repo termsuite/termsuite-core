@@ -17,7 +17,7 @@ public enum CliOption {
 	 * GENERAL PURPOSE OPTIONS
 	 */
 	HELP("help", "h", OptType.T_NONE, "Print a help message."),
-	LOG_INFO("info", null, OptType.T_NONE, "Activate logging to console"),
+	LOG_INFO("info", null, OptType.T_NONE, "Activate logging (by default to console)"),
 	LOG_TO_FILE("log-file", null, OptType.T_FILE, "Write log messages to given file"),
 	LOG_DEBUG("debug", null, OptType.T_NONE, "Activate verbose logging for debugging purpose"),
 
