@@ -266,6 +266,7 @@ public abstract class CommandLineClient {
 	}
 	
 	public void launch(String... args) {
+		LogbackUtils.reset();
 		configureGeneralOpts();
 		configureOpts();
 		try {

@@ -103,8 +103,8 @@ public final class LogbackUtils {
 	}
 	
 	
-	public static void disableLogging() {
-		getContext().stop();
+	public static void reset() {
+		getContext().reset();
 	}
 
 	public static LoggerContext getContext() {

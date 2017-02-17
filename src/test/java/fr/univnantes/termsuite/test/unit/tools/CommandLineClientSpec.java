@@ -55,10 +55,12 @@ public class CommandLineClientSpec {
 
 	private void assertDebug(Path logFile) throws IOException {
 		TermSuiteAssertions.assertThat(Files.toString(logFile.toFile(), Charset.defaultCharset()))
-			.atLine(1, containsString("Hello DEBUG"))
-			.atLine(2, containsString("Hello INFO"))
-			.atLine(3, containsString("Hello WARN"))
-			.hasLineCount(3)
+			.atLine(1, containsString("with option: --debug"))
+			.atLine(2, containsString("with option: --log-file"))
+			.atLine(3, containsString("Hello DEBUG"))
+			.atLine(4, containsString("Hello INFO"))
+			.atLine(5, containsString("Hello WARN"))
+			.hasLineCount(5)
 			;
 	}
 
@@ -67,7 +69,12 @@ public class CommandLineClientSpec {
 		Path logFile = initLogFile();
 		client().launch("--log-file", logFile.toString());
 		mockLog();
-		assertInfo(logFile);
+		TermSuiteAssertions.assertThat(Files.toString(logFile.toFile(), Charset.defaultCharset()))
+			.atLine(1, containsString("with option: --log-file"))
+			.atLine(2, containsString("Hello INFO"))
+			.atLine(3, containsString("Hello WARN"))
+			.hasLineCount(3)
+			;
 	}
 
 	@Test
@@ -75,14 +82,12 @@ public class CommandLineClientSpec {
 		Path logFile = initLogFile();
 		client().launch("--info", "--log-file", logFile.toString());
 		mockLog();
-		assertInfo(logFile);
-	}
-
-	private void assertInfo(Path logFile) throws IOException {
 		TermSuiteAssertions.assertThat(Files.toString(logFile.toFile(), Charset.defaultCharset()))
-			.atLine(1, containsString("Hello INFO"))
-			.atLine(2, containsString("Hello WARN"))
-			.hasLineCount(2)
+			.atLine(1, containsString("with option: --info"))
+			.atLine(2, containsString("with option: --log-file"))
+			.atLine(3, containsString("Hello INFO"))
+			.atLine(4, containsString("Hello WARN"))
+			.hasLineCount(4)
 			;
 	}
 
