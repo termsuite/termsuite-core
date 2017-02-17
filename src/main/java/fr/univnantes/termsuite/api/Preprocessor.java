@@ -137,7 +137,7 @@ public class Preprocessor {
 		ImporterService importer = injector.getInstance(ImporterService.class);
 
 		
-		Stream<JCas> preapredStream = asStream(textCorpus);
+		Stream<JCas> preapredStream = preprocService.prepare(textCorpus);
 		if(xmiPath.isPresent())
 			preapredStream = preapredStream.map(cas -> preprocService.toXMICas(
 					cas, 

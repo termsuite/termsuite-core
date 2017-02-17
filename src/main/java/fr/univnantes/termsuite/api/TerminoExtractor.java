@@ -2,11 +2,15 @@ package fr.univnantes.termsuite.api;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import fr.univnantes.termsuite.engines.TerminologyExtractorEngine;
 import fr.univnantes.termsuite.framework.Pipeline;
 import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.model.IndexedCorpus;
+import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
@@ -20,6 +24,7 @@ import fr.univnantes.termsuite.utils.TermHistory;
  *
  */
 public class TerminoExtractor {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TerminoExtractor.class);
 	
 	private Optional<TermHistory> history = Optional.empty();
 	private ExtractorOptions options;
@@ -70,6 +75,8 @@ public class TerminoExtractor {
 	public PipelineStats execute(IndexedCorpus corpus) {
 		if(options == null)
 			options = TermSuite.getDefaultExtractorConfig(corpus.getTerminology().getLang());
+		checkConfig(corpus);
+		
 		Pipeline pipeline = TermSuiteFactory.createPipeline(
 				TerminologyExtractorEngine.class, 
 				corpus,
@@ -80,5 +87,22 @@ public class TerminoExtractor {
 		PipelineStats stats = pipeline.run();
 		this.stats = Optional.of(stats);
 		return stats;
+	}
+
+	private void checkConfig(IndexedCorpus corpus) {
+		if(options.getContextualizerOptions().isEnabled()) {
+			if(corpus.getOccurrenceStore() instanceof EmptyOccurrenceStore) 
+				throw new ConfigurationException("Cannot contextualize with no occurrence. Got occurrence store class: " + EmptyOccurrenceStore.class);
+			
+			if(options.getPostProcessorConfig().isEnabled()) {
+				LOGGER.warn("Deactivating post-processor for contextualizer, otherwise too many terms would be removed by post-porcessor.");
+				options.getPostProcessorConfig().setEnabled(false);
+			}
+		}
+		
+		if(options.getGathererConfig().isSemanticEnabled() && !options.getContextualizerOptions().isEnabled()) {
+			LOGGER.warn("Enabling contextualizer for semantic alignment");
+			options.getContextualizerOptions().setEnabled(true);
+		}
 	}
 }
