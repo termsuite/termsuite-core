@@ -64,7 +64,8 @@ public class TermMerger extends SimpleEngine {
 		logger.debug("Merging {} relations", relationsToMerge.size());
 
 		relationsToMerge.forEach(rel -> {
-				logger.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
+				if(logger.isTraceEnabled())
+					logger.trace("Merging variant {} into variant {}", rel.getTo(), rel.getFrom());
 				watch(rel.getRelation());
 				
 				Collection<TermOccurrence> occurrences = occStore.getOccurrences(rel.getTo().getTerm());
