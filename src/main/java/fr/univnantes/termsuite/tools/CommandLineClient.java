@@ -26,6 +26,9 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.OutputStreamAppender;
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.model.IndexedCorpus;
@@ -35,6 +38,7 @@ import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.tools.opt.CliOption;
 import fr.univnantes.termsuite.tools.opt.ClientHelper;
+import fr.univnantes.termsuite.tools.opt.OptType;
 
 public abstract class CommandLineClient {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CommandLineClient.class);
@@ -150,7 +154,7 @@ public abstract class CommandLineClient {
 				option.getOptName(), 
 				option.hasArg(), 
 				option.getDescription());
-		if(option == CliOption.TERM)
+		if(option.getArgType() == OptType.T_TERM_LIST)
 			opt.setArgs(Option.UNLIMITED_VALUES);
 		options.addOption(opt);
 		return opt;
@@ -241,11 +245,15 @@ public abstract class CommandLineClient {
 		Preconditions.checkState(opt.hasArg());
 		return getOpt(opt).get().trim();
 	}
-	public String asTermString(CliOption opt) {
+	public List<String> asTermString(CliOption opt) {
 		Preconditions.checkState(opt.hasArg());
 		Preconditions.checkArgument(isSet(opt));
 		String[] optionValues = line.getOptionValues(opt.getOptName());
-		return Joiner.on(" ").join(optionValues);
+		String paramStr = Joiner.on(" ").join(optionValues);
+		List<String> termStrings = new ArrayList<>();
+		for(String termStr:paramStr.split(","))
+			termStrings.add(termStr.trim().replaceAll("\\s+", " "));
+		return termStrings;
 	}
 
 	public Lang getLang() {
@@ -258,10 +266,12 @@ public abstract class CommandLineClient {
 	}
 	
 	public void launch(String[] args) {
-		declareFacultative(CliOption.HELP);
+		configureGeneralOpts();
 		configureOpts();
 		try {
 			this.line = new PosixParser().parse(options, args);
+			applyLogConfig();
+			CliUtil.logCommandLineOptions(LOGGER, line);
 			if(isSet(CliOption.HELP)) {
 				doHelp(System.out);
 				return;
@@ -281,6 +291,36 @@ public abstract class CommandLineClient {
 			LOGGER.error("An unexpected error occurred: " + e.getMessage(), e);
 			throw new TermSuiteCliException("An unexpected error occurred: " + e.getMessage(), e);
 		}
+	}
+	
+	private void applyLogConfig() {
+		boolean loggingActivated = isSet(CliOption.LOG_INFO) 
+				|| isSet(CliOption.LOG_DEBUG) 
+				|| isSet(CliOption.LOG_TO_FILE);
+		
+		if(loggingActivated) {
+			OutputStreamAppender<ILoggingEvent> appender = 
+					isSet(CliOption.LOG_TO_FILE) ?
+							LogbackUtils.createFileAppender(asPath(CliOption.LOG_TO_FILE)) :
+								LogbackUtils.createConsoleAppender();
+			LogbackUtils.activateLogging(appender);
+			
+			Level level = Level.WARN;
+			if(isSet(CliOption.LOG_INFO))
+				level = Level.INFO;
+			else if(isSet(CliOption.LOG_DEBUG))
+				level = Level.DEBUG;
+			else if(isSet(CliOption.LOG_TO_FILE))
+				level = Level.INFO;
+			LogbackUtils.setGlobalLogLevel(level);
+		}
+	}
+	private void configureGeneralOpts() {
+		declareFacultative(CliOption.HELP);
+		declareFacultative(CliOption.LOG_TO_FILE);
+		declareFacultative(CliOption.LOG_DEBUG);
+		declareFacultative(CliOption.LOG_INFO);
+		declareAtMostOneOf(CliOption.LOG_INFO, CliOption.LOG_DEBUG);
 	}
 	
 	protected void runClient(String[] args) {
