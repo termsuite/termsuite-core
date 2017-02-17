@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.func.tools.cmd;
+package fr.univnantes.termsuite.test.func.tools;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

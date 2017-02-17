@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.engines.cleaner.TerminoFilterOptions;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.framework.modules.ImporterModule;
 import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
@@ -118,6 +119,11 @@ public class TermSuite {
 
 	public static TerminologyService toService(IndexedCorpus corpus) {
 		return Guice.createInjector(new IndexedCorpusModule(corpus)).getInstance(TerminologyService.class);
+	}
+
+	public static TerminologyFilterer terminologyFilterer() {
+		return new TerminologyFilterer(new TerminoFilterOptions());
+		
 	}
 
 }

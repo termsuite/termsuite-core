@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.func.align;
+package fr.univnantes.termsuite.test.func.api;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;

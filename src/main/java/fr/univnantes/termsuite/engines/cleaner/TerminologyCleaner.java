@@ -17,6 +17,7 @@ import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.service.RelationService;
 import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -73,14 +74,17 @@ public class TerminologyCleaner extends SimpleEngine {
 			terms = terms
 				.filter(term -> term.isFiltered() && !keptTerms.contains(term));
 		}
+		
 		terms
 			.collect(toSet())
 			.stream()
 			.map(TermService::getTerm)
 			.forEach(termino::removeTerm);
 	}
+	
 	private void cleanVariations(TerminologyService termino) {
 		termino.variations()
+			.filter(variation -> variation.isPropertySet(RelationProperty.VARIATION_RANK))
 			.filter(variation -> variation.getRank() > options.getMaxVariantNum())
 			.collect(toSet())
 			.forEach(termino::removeRelation);
@@ -99,11 +103,13 @@ public class TerminologyCleaner extends SimpleEngine {
 		Stream<Term> terms = termino.terms().map(TermService::getTerm);
 		if(options.getFilterType() == FilterType.TOP_N) 
 			terms = terms
+				.filter(term -> term.isPropertySet(options.getFilterProperty()))
 				.sorted(options.getFilterProperty().getComparator(true))
 				.limit(options.getTopN());
 		
 		if(options.getFilterType() == FilterType.THRESHOLD) 
 			terms = terms
+				.filter(term -> term.isPropertySet(options.getFilterProperty()))
 				.filter(term -> term.getNumber(options.getFilterProperty()).doubleValue() >= options.getThreshold().doubleValue());
 
 		terms.forEach(term -> {

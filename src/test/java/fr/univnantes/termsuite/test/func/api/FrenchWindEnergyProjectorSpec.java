@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.func.projection;
+package fr.univnantes.termsuite.test.func.api;
 
 import static org.junit.Assert.assertEquals;
 

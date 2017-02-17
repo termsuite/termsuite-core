@@ -43,32 +43,21 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TextCorpus;
-import fr.univnantes.termsuite.test.func.align.BilingualAlignerDeEnSpec;
-import fr.univnantes.termsuite.test.func.align.BilingualAlignerFrEnSpec;
-import fr.univnantes.termsuite.test.func.extractor.EnglishWindEnergySpec;
-import fr.univnantes.termsuite.test.func.extractor.FrenchWindEnergySpec;
-import fr.univnantes.termsuite.test.func.extractor.GermanWindEnergySpec;
-import fr.univnantes.termsuite.test.func.extractor.SemanticGathererSpec;
+import fr.univnantes.termsuite.test.func.api.BilingualAlignerDeEnSpec;
+import fr.univnantes.termsuite.test.func.api.BilingualAlignerFrEnSpec;
+import fr.univnantes.termsuite.test.func.api.EnglishWindEnergySpec;
+import fr.univnantes.termsuite.test.func.api.FrenchWindEnergyProjectorSpec;
+import fr.univnantes.termsuite.test.func.api.FrenchWindEnergySpec;
+import fr.univnantes.termsuite.test.func.api.GermanWindEnergySpec;
+import fr.univnantes.termsuite.test.func.api.SemanticGathererSpec;
+import fr.univnantes.termsuite.test.func.api.TerminoFiltererSpec;
 import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
-import fr.univnantes.termsuite.test.func.projection.FrenchWindEnergyProjectorSpec;
-import fr.univnantes.termsuite.test.func.tools.builders.TerminoCleanerSpec;
-import fr.univnantes.termsuite.test.func.tools.builders.TerminoExtractorSpec;
-import fr.univnantes.termsuite.test.func.tools.cmd.AlignerCLISpec;
-import fr.univnantes.termsuite.test.func.tools.cmd.PreprocessorCLISpec;
-import fr.univnantes.termsuite.test.func.tools.cmd.TerminologyExtractorCLISpec;
+import fr.univnantes.termsuite.test.func.tools.AlignerCLISpec;
+import fr.univnantes.termsuite.test.func.tools.PreprocessorCLISpec;
+import fr.univnantes.termsuite.test.func.tools.TerminologyExtractorCLISpec;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	
-	/*
-	 * Extraction Engine
-	 */
-	FrenchWindEnergySpec.class,
-	EnglishWindEnergySpec.class,
-	GermanWindEnergySpec.class,
-	SemanticGathererSpec.class,
-	FrenchWindEnergyProjectorSpec.class,
-
 	/*
 	 * IO
 	 */
@@ -77,10 +66,18 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TerminologyExtractorCLISpec;
 	/*
 	 * API
 	 */
+	// extraction engines
+	FrenchWindEnergySpec.class,
+	EnglishWindEnergySpec.class,
+	GermanWindEnergySpec.class,
+	SemanticGathererSpec.class,
+	// projector
+	FrenchWindEnergyProjectorSpec.class,
+	// alignement
 	BilingualAlignerFrEnSpec.class,
 	BilingualAlignerDeEnSpec.class,
-	TerminoCleanerSpec.class,
-	TerminoExtractorSpec.class,
+	// filterer
+	TerminoFiltererSpec.class,
 	
 	/*
 	 * CLI
@@ -88,8 +85,7 @@ import fr.univnantes.termsuite.test.func.tools.cmd.TerminologyExtractorCLISpec;
 	PreprocessorCLISpec.class,
 	TerminologyExtractorCLISpec.class,
 	AlignerCLISpec.class,
-	
-	})
+})
 public class FunctionalTests {
 	
 
@@ -107,9 +103,10 @@ public class FunctionalTests {
 	public static final Path DICO_PATH=PACKAGE_TEST.resolve(Paths.get("dico"));
 
 			
-	public static final String CORPUS_WESHORT_PATH="fr/univnantes/termsuite/test/corpus/weshort/";
-	public static final String CORPUS_WE_PATH="fr/univnantes/termsuite/test/corpus/we/";
-	public static final String CORPUS_MOBILE_PATH="fr/univnantes/termsuite/test/corpus/mobile/";
+	public static final Path CORPUS_WESHORT_PATH=PACKAGE_TEST.resolve("corpus").resolve("weshort");
+	public static final Path CORPUS_WE_PATH=PACKAGE_TEST.resolve("corpus").resolve("we");
+	public static final Path CORPUS_MOBILE_PATH=PACKAGE_TEST.resolve("corpus").resolve("mobile");
+	
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
 	public static final TextCorpus CORPUS1 = new TextCorpus(Lang.FR, CORPUS1_PATH);
@@ -136,31 +133,31 @@ public class FunctionalTests {
 	}
 	
 	public static Path getCorpusWEShortPath(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "txt");
+		return CORPUS_WESHORT_PATH.resolve(lang.getName().toLowerCase()).resolve("txt");
 	}
 
 	public static Path getTsvPreprocessedCorpusWEShortPath(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "tsv");
+		return CORPUS_WESHORT_PATH.resolve(lang.getName().toLowerCase()).resolve("tsv");
 	}
 
 	public static Path getPreprocessedCorpusWEShortPathAsTermino(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "termino-imported.json");
+		return CORPUS_WESHORT_PATH.resolve(lang.getName().toLowerCase()).resolve("termino-imported.json");
 	}
 
 	public static Path getXmiPreprocessedCorpusWEShortPath(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "xmi");
+		return CORPUS_WESHORT_PATH.resolve(lang.getName().toLowerCase()).resolve("xmi");
 	}
 
 	public static Path getJsonPreprocessedCorpusWEShortPath(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_WESHORT_PATH, lang.getName().toLowerCase(), "json");
+		return CORPUS_WESHORT_PATH.resolve(lang.getName().toLowerCase()).resolve("json");
 	}
 
 	public static Path getCorpusMobilePath(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_MOBILE_PATH, lang.getName().toLowerCase(), "txt");
+		return CORPUS_MOBILE_PATH.resolve(lang.getName().toLowerCase()).resolve( "txt");
 	}
 	
 	public static Path getCorpusWEPath(Lang lang) {
-		return Paths.get("src","test","resources", CORPUS_WE_PATH, lang.getName().toLowerCase(), "txt");
+		return CORPUS_WE_PATH.resolve(lang.getName().toLowerCase()).resolve( "txt");
 	}
 
 	public static Path getTerminoWEShortPath(Lang lang) {
