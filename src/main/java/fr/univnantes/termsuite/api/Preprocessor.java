@@ -103,15 +103,15 @@ public class Preprocessor {
 	
 	public IndexedCorpus toPersistentIndexedCorpus(TextCorpus textCorpus, String storeUrl, int maxSize) {
 		OccurrenceStore store = TermSuiteFactory.createPersitentOccurrenceStore(storeUrl, textCorpus.getLang());
-		return consumeToIndexedCorpus(textCorpus, maxSize, store);
+		return toIndexedCorpus(textCorpus, maxSize, store);
 	}
 
 	public IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, int maxSize) {
 		OccurrenceStore occurrenceStore = TermSuiteFactory.createMemoryOccurrenceStore(textCorpus.getLang());
-		return  consumeToIndexedCorpus(textCorpus, maxSize, occurrenceStore);
+		return  toIndexedCorpus(textCorpus, maxSize, occurrenceStore);
 	}
 
-	public IndexedCorpus consumeToIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
+	public IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
 		PreprocessorService preprocService = asService(textCorpus.getLang());
 		String name = preprocService.generateTerminologyName(textCorpus);
 		

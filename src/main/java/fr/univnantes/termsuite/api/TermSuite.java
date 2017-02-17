@@ -16,8 +16,10 @@ import fr.univnantes.termsuite.framework.service.ImporterService;
 import fr.univnantes.termsuite.framework.service.IndexService;
 import fr.univnantes.termsuite.framework.service.LanguageService;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 
 public class TermSuite {
 
@@ -123,7 +125,13 @@ public class TermSuite {
 
 	public static TerminologyFilterer terminologyFilterer() {
 		return new TerminologyFilterer(new TerminoFilterOptions());
-		
 	}
 
+	public static TerminologyService getTerminologyService(Terminology sourceTermino) {
+		OccurrenceStore occStore = TermSuiteFactory.createEmptyOccurrenceStore(sourceTermino.getLang());
+		return getTerminologyService(
+				TermSuiteFactory.createIndexedCorpus(
+						sourceTermino, 
+						occStore));
+	}
 }

@@ -26,8 +26,8 @@ public enum TermType {
 		return null;
 	}
 	public static TermType ofTerm(Term term) {
-		if(term.isSingleWord())
-			return term.isCompound() ? SWT_C : SWT;
+		if(term.getWords().size() == 1)
+			return term.getWords().get(0).getWord().isCompound() ? SWT_C : SWT;
 		else 
 			return term.getWords().stream().anyMatch(tw -> tw.getWord().isCompound()) ? MWT_C : MWT;
 	}

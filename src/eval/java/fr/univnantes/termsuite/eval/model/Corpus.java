@@ -61,5 +61,5 @@ public enum Corpus{
 	public static Stream<Corpus> embeddedCorpora() {
 		return all().filter(c -> c.isEmbedded());
 	}
-		
+
 }

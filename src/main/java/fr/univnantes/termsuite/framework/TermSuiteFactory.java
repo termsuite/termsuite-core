@@ -21,6 +21,10 @@ import fr.univnantes.termsuite.framework.pipeline.AggregateEngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.EngineRunner;
 import fr.univnantes.termsuite.framework.pipeline.SimpleEngineRunner;
 import fr.univnantes.termsuite.framework.service.RelationService;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.index.TermIndex;
+import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.io.BaseIndexedCorpusExporter;
 import fr.univnantes.termsuite.io.IndexedCorpusExporter;
@@ -192,7 +196,6 @@ public class TermSuiteFactory {
 		return createJsonLoader(new JsonOptions());
 	}
 
-
 	/**
 	 * 
 	 * Creates a {@link PreprocessedCorpus}. Detects if it is XMI or JSON.
@@ -240,5 +243,27 @@ public class TermSuiteFactory {
 				rootDirectory, 
 				PreprocessedCorpus.XMI_PATTERN, 
 				PreprocessedCorpus.XMI_EXTENSION);
+	}
+
+	public static TermIndex createTermIndex(Terminology terminology, TermIndexType lemmaLowerCase) {
+		TermIndex index;
+		try {
+			index = new TermIndex(lemmaLowerCase.getProviderClass().newInstance());
+			terminology.getTerms().values().forEach(index::addToIndex);
+			return index;
+		} catch (Exception e) {
+			throw new TermSuiteException(e);
+		}
+	}
+
+	public static TermIndex createTermIndex(TerminologyService termino, TermIndexType lemmaLowerCase) {
+		TermIndex index;
+		try {
+			index = new TermIndex(lemmaLowerCase.getProviderClass().newInstance());
+			termino.terms().map(TermService::getTerm).forEach(index::addToIndex);
+			return index;
+		} catch (Exception e) {
+			throw new TermSuiteException(e);
+		}
 	}
 }
