@@ -14,16 +14,15 @@ import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.eval.bilangaligner.TerminoConfig;
 import fr.univnantes.termsuite.eval.model.Corpus;
 import fr.univnantes.termsuite.eval.model.LangPair;
-import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
 public class TermSuiteEvals {
@@ -96,7 +95,7 @@ public class TermSuiteEvals {
 		Path path = getTerminologyPath(lang, corpus, config);
 		if(!path.toFile().isFile()) {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
-			TextCorpus textCorpus = new TextCorpus(lang, corpus.getRootDir().resolve(lang.getName()));
+			TXTCorpus textCorpus = new TXTCorpus(lang, corpus.getRootDir().resolve(lang.getName()));
 			IndexedCorpus extracted = toIndexedCorpus(textCorpus, config);
 			try(FileWriter writer = new FileWriter(path.toFile())){
 				IndexedCorpusIO.toJson(extracted, writer, new JsonOptions().withOccurrences(false).withContexts(true));
@@ -110,7 +109,7 @@ public class TermSuiteEvals {
 		return IndexedCorpusIO.fromJson(path);
 	}
 	
-	public static IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, TerminoConfig config) {
+	public static IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, TerminoConfig config) {
 		IndexedCorpus corpus = TermSuite.preprocessor()
 				.setTaggerPath(TermSuiteEvals.getTreeTaggerPath())
 				.toIndexedCorpus(textCorpus, 1000000);

@@ -65,7 +65,7 @@ import fr.univnantes.termsuite.index.TermIndexType;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Term;
-import fr.univnantes.termsuite.tools.opt.CliOption;
+import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 /**
  * Command line interface for the Terminology extraction (Spotter+Indexer) engines.
@@ -81,44 +81,44 @@ public class AlignerCLI extends CommandLineClient { // NO_UCD (public entry poin
 	
 	@Override
 	public void configureOpts() {
-		declareMandatory(CliOption.SOURCE_TERMINO);
-		declareMandatory(CliOption.TARGET_TERMINO);
-		declareExactlyOneOf(CliOption.TERM, CliOption.TERM_LIST);
-		declareMandatory(CliOption.DICTIONARY);
-		declareFacultative(CliOption.EXPLAIN);
-		declareFacultative(CliOption.DISTANCE);
-		declareFacultative(CliOption.N);
-		declareFacultative(CliOption.ALIGNER_TSV);
-		declareFacultative(CliOption.MIN_CANDIDATE_FREQUENCY);
+		declareMandatory(TermSuiteCliOption.SOURCE_TERMINO);
+		declareMandatory(TermSuiteCliOption.TARGET_TERMINO);
+		declareExactlyOneOf(TermSuiteCliOption.TERM, TermSuiteCliOption.TERM_LIST);
+		declareMandatory(TermSuiteCliOption.DICTIONARY);
+		declareFacultative(TermSuiteCliOption.EXPLAIN);
+		declareFacultative(TermSuiteCliOption.DISTANCE);
+		declareFacultative(TermSuiteCliOption.N);
+		declareFacultative(TermSuiteCliOption.ALIGNER_TSV);
+		declareFacultative(TermSuiteCliOption.MIN_CANDIDATE_FREQUENCY);
 	}
 
 	@Override
 	protected void run() throws Exception {
 		BilingualAligner builder = TermSuite.bilingualAligner();
 		
-		IndexedCorpus sourceTermino = asIndexedCorpus(CliOption.SOURCE_TERMINO);
+		IndexedCorpus sourceTermino = asIndexedCorpus(TermSuiteCliOption.SOURCE_TERMINO);
 		builder
 			.setSourceTerminology(sourceTermino);
 
 		builder
-			.setTargetTerminology(asIndexedCorpus(CliOption.TARGET_TERMINO));
+			.setTargetTerminology(asIndexedCorpus(TermSuiteCliOption.TARGET_TERMINO));
 
 		builder
-			.setDicoPath(asPath(CliOption.DICTIONARY));
+			.setDicoPath(asPath(TermSuiteCliOption.DICTIONARY));
 
 		
-		if(isSet(CliOption.DISTANCE)) {
-			Class<? extends SimilarityDistance> distCls = SimilarityDistance.forName(asString(CliOption.DISTANCE));
+		if(isSet(TermSuiteCliOption.DISTANCE)) {
+			Class<? extends SimilarityDistance> distCls = SimilarityDistance.forName(asString(TermSuiteCliOption.DISTANCE));
 			builder.setDistance(distCls);
 		}
 		BilingualAlignmentService aligner = builder.create();
 
-		boolean explain = isSet(CliOption.EXPLAIN);
-		int nbCandidates = isSet(CliOption.N) ? 
-								asInt(CliOption.N) 
+		boolean explain = isSet(TermSuiteCliOption.EXPLAIN);
+		int nbCandidates = isSet(TermSuiteCliOption.N) ? 
+								asInt(TermSuiteCliOption.N) 
 									: 10;
-		int minCandidateFrequency = isSet(CliOption.MIN_CANDIDATE_FREQUENCY) ? 
-								asInt(CliOption.MIN_CANDIDATE_FREQUENCY) 
+		int minCandidateFrequency = isSet(TermSuiteCliOption.MIN_CANDIDATE_FREQUENCY) ? 
+								asInt(TermSuiteCliOption.MIN_CANDIDATE_FREQUENCY) 
 									: 2;
 		
 		Injector sourceInjector = TermSuite.indexedCorpusInjector(sourceTermino);
@@ -137,12 +137,12 @@ public class AlignerCLI extends CommandLineClient { // NO_UCD (public entry poin
 	}
 
 	private PrintStream getPrintStream() {
-		if(isSet(CliOption.ALIGNER_TSV))
+		if(isSet(TermSuiteCliOption.ALIGNER_TSV))
 			try {
-				return new PrintStream(asPath(CliOption.ALIGNER_TSV).toFile());
+				return new PrintStream(asPath(TermSuiteCliOption.ALIGNER_TSV).toFile());
 			} catch (FileNotFoundException e) {
-				LOGGER.error("Could not write to file " + asString(CliOption.ALIGNER_TSV), e);
-				CliUtil.throwException("Could not write to file " + asString(CliOption.ALIGNER_TSV));
+				LOGGER.error("Could not write to file " + asString(TermSuiteCliOption.ALIGNER_TSV), e);
+				CliUtil.throwException("Could not write to file " + asString(TermSuiteCliOption.ALIGNER_TSV));
 				return null;
 			}
 		else
@@ -181,21 +181,21 @@ public class AlignerCLI extends CommandLineClient { // NO_UCD (public entry poin
 
 	private List<Term> getSourceTerms(Injector sourceInjector) {
 		List<Term> sourceTerms = new ArrayList<>();
-		if(isSet(CliOption.TERM)) {
-			List<String> terms = asTermString(CliOption.TERM);
+		if(isSet(TermSuiteCliOption.TERM)) {
+			List<String> terms = asTermString(TermSuiteCliOption.TERM);
 			LOGGER.info("Loading source terms: {}", terms);
 			for(String term:terms)
 				sourceTerms.add(findTerm(sourceInjector, term));
-		} else if(isSet(CliOption.TERM_LIST)) {
+		} else if(isSet(TermSuiteCliOption.TERM_LIST)) {
 			try {
-				Files.readAllLines(asPath(CliOption.TERM_LIST)).stream()
+				Files.readAllLines(asPath(TermSuiteCliOption.TERM_LIST)).stream()
 					.map(line -> line.trim())
 					.filter(s -> !s.isEmpty())
 					.forEach(termStr ->
 						sourceTerms.add(findTerm(sourceInjector, termStr)));
 			} catch (IOException e) {
-				LOGGER.error("Could not read term list file " + asString(CliOption.TERM_LIST), e);
-				CliUtil.throwException("Could not read term list file %s", asString(CliOption.TERM_LIST));
+				LOGGER.error("Could not read term list file " + asString(TermSuiteCliOption.TERM_LIST), e);
+				CliUtil.throwException("Could not read term list file %s", asString(TermSuiteCliOption.TERM_LIST));
 			}
 				
 		}

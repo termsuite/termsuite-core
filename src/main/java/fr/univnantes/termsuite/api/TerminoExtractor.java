@@ -54,7 +54,7 @@ public class TerminoExtractor {
 		return this;
 	}
 	
-	public IndexedCorpus execute(PreprocessedCorpus corpus, int maxSize) {
+	public IndexedCorpus execute(XMICorpus corpus, int maxSize) {
 		IndexedCorpus iCorpus = TermSuite.toIndexedCorpus(corpus, maxSize);
 		execute(iCorpus);
 		return iCorpus;

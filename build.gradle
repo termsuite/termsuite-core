@@ -151,7 +151,6 @@ publishing {
 			groupId project.getProperty("group")
 			artifactId project.getProperty("name")
 			version project.getProperty("version")
-
 			from components.java
 		}
 	}

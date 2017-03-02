@@ -2,8 +2,14 @@ package fr.univnantes.termsuite.test.func.api;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.google.common.base.Charsets;
+import com.google.common.io.Files;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
 import fr.univnantes.termsuite.api.TermSuite;
@@ -71,10 +77,15 @@ public class FrenchWindEnergyProjectorSpec {
 	}
 
 	public DocumentProjectionService getProjection(Document doc2) {
-		DocumentProjectionService s = TermSuite.preprocessor()
-			.setTaggerPath(FunctionalTests.getTaggerPath())
-			.asService(Lang.FR)
-			.toProjectionService(doc2);
+		DocumentProjectionService s;
+		try {
+			s = TermSuite.preprocessor()
+				.setTaggerPath(FunctionalTests.getTaggerPath())
+				.asService(Lang.FR)
+				.toProjectionService(doc2, Files.toString(new File(doc2.getUrl()), Charsets.UTF_8));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		return s;
 	}
 	

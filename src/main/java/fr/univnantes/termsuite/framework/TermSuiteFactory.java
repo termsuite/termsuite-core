@@ -11,9 +11,9 @@ import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
-import fr.univnantes.termsuite.api.PreprocessedCorpus;
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.api.XMICorpus;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.modules.IndexedCorpusModule;
 import fr.univnantes.termsuite.framework.modules.ResourceModule;
@@ -198,16 +198,16 @@ public class TermSuiteFactory {
 
 	/**
 	 * 
-	 * Creates a {@link PreprocessedCorpus}. Detects if it is XMI or JSON.
+	 * Creates a {@link XMICorpus}. Detects if it is XMI or JSON.
 	 * 
 	 * @param lang
 	 * 			the language of the input corpus
 	 * @param rootDirectory
 	 * 			the root directory of the corpus
 	 * @return
-	 * 			The created {@link PreprocessedCorpus}
+	 * 			The created {@link XMICorpus}
 	 */
-	public static PreprocessedCorpus createPreprocessedCorpus(Lang lang, Path rootDirectory) {
+	public static XMICorpus createPreprocessedCorpus(Lang lang, Path rootDirectory) {
 		try {
 			AtomicInteger json = new AtomicInteger(0);
 			AtomicInteger xmi = new AtomicInteger(0);
@@ -215,9 +215,9 @@ public class TermSuiteFactory {
 			Files.walk(rootDirectory)
 				.filter(file -> file.toFile().isFile())
 				.forEach(filePath-> {
-					if(filePath.getFileName().endsWith(PreprocessedCorpus.JSON_EXTENSION))
+					if(filePath.getFileName().endsWith(XMICorpus.JSON_EXTENSION))
 						json.incrementAndGet();
-					else if(filePath.getFileName().endsWith(PreprocessedCorpus.XMI_EXTENSION))
+					else if(filePath.getFileName().endsWith(XMICorpus.XMI_EXTENSION))
 						xmi.incrementAndGet();
 				});
 			
@@ -229,20 +229,20 @@ public class TermSuiteFactory {
 		}
 	}
 	
-	public static PreprocessedCorpus createJsonPreprocessedCorpus(Lang lang, Path rootDirectory) {
-		return new PreprocessedCorpus(
+	public static XMICorpus createJsonPreprocessedCorpus(Lang lang, Path rootDirectory) {
+		return new XMICorpus(
 				lang, 
 				rootDirectory, 
-				PreprocessedCorpus.JSON_PATTERN, 
-				PreprocessedCorpus.JSON_EXTENSION);
+				XMICorpus.JSON_PATTERN, 
+				XMICorpus.JSON_EXTENSION);
 	}
 
-	public static PreprocessedCorpus createXMIPreprocessedCorpus(Lang lang, Path rootDirectory) {
-		return new PreprocessedCorpus(
+	public static XMICorpus createXMIPreprocessedCorpus(Lang lang, Path rootDirectory) {
+		return new XMICorpus(
 				lang, 
 				rootDirectory, 
-				PreprocessedCorpus.XMI_PATTERN, 
-				PreprocessedCorpus.XMI_EXTENSION);
+				XMICorpus.XMI_PATTERN, 
+				XMICorpus.XMI_EXTENSION);
 	}
 
 	public static TermIndex createTermIndex(Terminology terminology, TermIndexType lemmaLowerCase) {
@@ -265,5 +265,11 @@ public class TermSuiteFactory {
 		} catch (Exception e) {
 			throw new TermSuiteException(e);
 		}
+	}
+
+	public static IndexedCorpus createIndexedCorpus(Lang lang) {
+		return createIndexedCorpus(
+				lang, 
+				"Auto-created indexed corpus " + lang + " " + System.currentTimeMillis());
 	}
 }

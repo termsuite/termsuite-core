@@ -39,6 +39,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.tools.opt.CliOption;
 import fr.univnantes.termsuite.tools.opt.ClientHelper;
 import fr.univnantes.termsuite.tools.opt.OptType;
+import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 public abstract class CommandLineClient {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CommandLineClient.class);
@@ -257,7 +258,7 @@ public abstract class CommandLineClient {
 	}
 
 	public Lang getLang() {
-		return Lang.forName(asString(CliOption.LANGUAGE));
+		return Lang.forName(asString(TermSuiteCliOption.LANGUAGE));
 	}
 
 	public double asDouble(CliOption opt) {
@@ -272,7 +273,7 @@ public abstract class CommandLineClient {
 		try {
 			this.line = new PosixParser().parse(options, args);
 			applyLogConfig();
-			if(isSet(CliOption.HELP)) {
+			if(isSet(TermSuiteCliOption.HELP)) {
 				doHelp(System.out);
 				return;
 			}
@@ -295,33 +296,33 @@ public abstract class CommandLineClient {
 	}
 	
 	private void applyLogConfig() {
-		boolean loggingActivated = isSet(CliOption.LOG_INFO) 
-				|| isSet(CliOption.LOG_DEBUG) 
-				|| isSet(CliOption.LOG_TO_FILE);
+		boolean loggingActivated = isSet(TermSuiteCliOption.LOG_INFO) 
+				|| isSet(TermSuiteCliOption.LOG_DEBUG) 
+				|| isSet(TermSuiteCliOption.LOG_TO_FILE);
 		
 		if(loggingActivated) {
 			OutputStreamAppender<ILoggingEvent> appender = 
-					isSet(CliOption.LOG_TO_FILE) ?
-							LogbackUtils.createFileAppender(asPath(CliOption.LOG_TO_FILE)) :
+					isSet(TermSuiteCliOption.LOG_TO_FILE) ?
+							LogbackUtils.createFileAppender(asPath(TermSuiteCliOption.LOG_TO_FILE)) :
 								LogbackUtils.createConsoleAppender();
 			LogbackUtils.activateLogging(appender);
 			
 			Level level = Level.WARN;
-			if(isSet(CliOption.LOG_INFO))
+			if(isSet(TermSuiteCliOption.LOG_INFO))
 				level = Level.INFO;
-			else if(isSet(CliOption.LOG_DEBUG))
+			else if(isSet(TermSuiteCliOption.LOG_DEBUG))
 				level = Level.DEBUG;
-			else if(isSet(CliOption.LOG_TO_FILE))
+			else if(isSet(TermSuiteCliOption.LOG_TO_FILE))
 				level = Level.INFO;
 			LogbackUtils.setGlobalLogLevel(level);
 		}
 	}
 	private void configureGeneralOpts() {
-		declareFacultative(CliOption.HELP);
-		declareFacultative(CliOption.LOG_TO_FILE);
-		declareFacultative(CliOption.LOG_DEBUG);
-		declareFacultative(CliOption.LOG_INFO);
-		declareAtMostOneOf(CliOption.LOG_INFO, CliOption.LOG_DEBUG);
+		declareFacultative(TermSuiteCliOption.HELP);
+		declareFacultative(TermSuiteCliOption.LOG_TO_FILE);
+		declareFacultative(TermSuiteCliOption.LOG_DEBUG);
+		declareFacultative(TermSuiteCliOption.LOG_INFO);
+		declareAtMostOneOf(TermSuiteCliOption.LOG_INFO, TermSuiteCliOption.LOG_DEBUG);
 	}
 	
 	protected void runClient(String[] args) {
@@ -373,7 +374,7 @@ public abstract class CommandLineClient {
 				else if(mandatoryOptions.contains(o2) && !mandatoryOptions.contains(o1))
 					return 1;
 				else
-					return o1.compareTo(o2);
+					return o1.getOptName().compareTo(o2.getOptName());
 			}
 		});
 		return sorted;

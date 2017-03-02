@@ -17,7 +17,7 @@ import org.slf4j.Logger;
 import fr.univnantes.termsuite.tools.opt.CliOption;
 
 public class CliUtil {
-	public static void throwAtLeast(Collection<CliOption> opts) {
+	public static void throwAtLeast(Collection<? extends CliOption> opts) {
 		throwAtLeast(asArray(opts));
 	}
 
@@ -25,7 +25,7 @@ public class CliUtil {
 		throwException("At least one option in %s must be set", nameStream(opts).collect(joining(", ")));
 	}
 
-	public static void throwAtMost(Collection<CliOption> opts) {
+	public static void throwAtMost(Collection<? extends CliOption> opts) {
 		throwAtMost(asArray(opts));
 	}
 	
@@ -33,11 +33,11 @@ public class CliUtil {
 		throwException("At most one option in %s must be set", nameStream(opts).collect(joining(", ")));
 	}
 
-	public static void throwExactlyOne(Collection<CliOption> opts) {
+	public static void throwExactlyOne(Collection<? extends CliOption> opts) {
 		throwExactlyOne(asArray(opts));
 	}
 
-	private static CliOption[] asArray(Collection<CliOption> opts) {
+	private static CliOption[] asArray(Collection<? extends CliOption> opts) {
 		return opts.toArray(new CliOption[opts.size()]);
 	}
 

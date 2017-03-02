@@ -4,13 +4,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Tagger;
-import fr.univnantes.termsuite.model.TextCorpus;
-import fr.univnantes.termsuite.tools.opt.CliOption;
+import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry point)
 	
@@ -22,16 +22,16 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 	public void configureOpts() {
 		clientHelper.declareResourceOpts();
 		clientHelper.declareHistory();
-		declareFacultative(CliOption.TAGGER);
-		declareMandatory(CliOption.TAGGER_PATH);
-		declareMandatory(CliOption.FROM_TXT_CORPUS_PATH);
-		declareMandatory(CliOption.LANGUAGE);
-		declareFacultative(CliOption.ENCODING);
+		declareFacultative(TermSuiteCliOption.TAGGER);
+		declareMandatory(TermSuiteCliOption.TAGGER_PATH);
+		declareMandatory(TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
+		declareMandatory(TermSuiteCliOption.LANGUAGE);
+		declareFacultative(TermSuiteCliOption.ENCODING);
 		declareAtLeastOneOf(
-				CliOption.CAS_JSON, 
-				CliOption.CAS_TSV,
-				CliOption.CAS_XMI,
-				CliOption.PREPARED_TERMINO_JSON);
+				TermSuiteCliOption.CAS_JSON, 
+				TermSuiteCliOption.CAS_TSV,
+				TermSuiteCliOption.CAS_XMI,
+				TermSuiteCliOption.PREPARED_TERMINO_JSON);
 	}
 
 
@@ -39,29 +39,29 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 	protected void run() throws IOException {
 		fr.univnantes.termsuite.api.Preprocessor preprocessor = TermSuite.preprocessor();
 		
-		if(isSet(CliOption.TAGGER))
-			preprocessor.setTagger(Tagger.forName(asString(CliOption.TAGGER)));
+		if(isSet(TermSuiteCliOption.TAGGER))
+			preprocessor.setTagger(Tagger.forName(asString(TermSuiteCliOption.TAGGER)));
 		
-		preprocessor.setTaggerPath(asDir(CliOption.TAGGER_PATH));
+		preprocessor.setTaggerPath(asDir(TermSuiteCliOption.TAGGER_PATH));
 
 		if(clientHelper.getHistory().isPresent()) 
 			preprocessor.setHistory(clientHelper.getHistory().get());
 		
 		preprocessor.setResourceOptions(clientHelper.getResourceConfig());
 		
-		TextCorpus txtCorpus = clientHelper.getTxtCorpus();
+		TXTCorpus txtCorpus = clientHelper.getTxtCorpus();
 
-		if(isSet(CliOption.CAS_XMI))
-			preprocessor.toXMI(asDir(CliOption.CAS_XMI));
+		if(isSet(TermSuiteCliOption.CAS_XMI))
+			preprocessor.toXMI(asDir(TermSuiteCliOption.CAS_XMI));
 
-		if(isSet(CliOption.CAS_TSV))
-			preprocessor.toTSV(asDir(CliOption.CAS_TSV));
+		if(isSet(TermSuiteCliOption.CAS_TSV))
+			preprocessor.toTSV(asDir(TermSuiteCliOption.CAS_TSV));
 
-		if(isSet(CliOption.CAS_JSON))
-			preprocessor.toJSON(asDir(CliOption.CAS_JSON));
+		if(isSet(TermSuiteCliOption.CAS_JSON))
+			preprocessor.toJSON(asDir(TermSuiteCliOption.CAS_JSON));
 
-		if(isSet(CliOption.PREPARED_TERMINO_JSON)) {
-			Path destJson = asPath(CliOption.PREPARED_TERMINO_JSON);
+		if(isSet(TermSuiteCliOption.PREPARED_TERMINO_JSON)) {
+			Path destJson = asPath(TermSuiteCliOption.PREPARED_TERMINO_JSON);
 			try(FileWriter writer = new FileWriter(destJson.toFile())) {
 				IndexedCorpus corpus = preprocessor.toIndexedCorpus(txtCorpus, 500000);
 				JsonTerminologyIO.save(writer, corpus, new JsonOptions());

@@ -10,7 +10,7 @@ import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
-import fr.univnantes.termsuite.tools.opt.CliOption;
+import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 /*******************************************************************************
  * Copyright 2015-2016 - CNRS (Centre National de Recherche Scientifique)
@@ -65,25 +65,30 @@ import fr.univnantes.termsuite.tools.opt.CliOption;
 public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (public entry point)
 
 	
+	
 	public TerminologyExtractorCLI() {
 		super("Extracts terminology from a domain-specific textual corpus (or preprocessed corpus).");
 	}
 	
+	public TerminologyExtractorCLI(String description) {
+		super(description);
+	}
+
 	@Override
 	public void configureOpts() {
 		
 		// Either from indexed corpus or prepared corpus
 		declareExactlyOneOf(
-				CliOption.FROM_TXT_CORPUS_PATH, 
-				CliOption.FROM_PREPARED_CORPUS_PATH);
+				TermSuiteCliOption.FROM_TXT_CORPUS_PATH, 
+				TermSuiteCliOption.FROM_PREPARED_CORPUS_PATH);
 		
-		declareFacultative(CliOption.LANGUAGE);
+		declareFacultative(TermSuiteCliOption.LANGUAGE);
 
 		// at least one output necessary
 		declareAtLeastOneOf(
-				CliOption.JSON, 
-				CliOption.TSV, 
-				CliOption.TBX);
+				TermSuiteCliOption.JSON, 
+				TermSuiteCliOption.TSV, 
+				TermSuiteCliOption.TBX);
 
 		clientHelper.declareResourceOpts();
 		clientHelper.declareHistory();
@@ -91,11 +96,11 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 		/*
 		 * Preprocessor options
 		 */
-		declareFacultative(CliOption.TAGGER);
+		declareFacultative(TermSuiteCliOption.TAGGER);
 		declareConditional(
-				CliOption.FROM_TXT_CORPUS_PATH, 
-				CliOption.TAGGER_PATH);
-		declareFacultative(CliOption.ENCODING);
+				TermSuiteCliOption.FROM_TXT_CORPUS_PATH, 
+				TermSuiteCliOption.TAGGER_PATH);
+		declareFacultative(TermSuiteCliOption.ENCODING);
 		
 		/*
 		 * Extractor options
@@ -118,24 +123,24 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 		IndexedCorpus corpus = getIndexedCorpus();
 		extractor.execute(corpus);
 		
-		if(isSet(CliOption.JSON))
-			TermSuiteFactory.createJsonExporter().export(corpus, asPath(CliOption.JSON));
-		if(isSet(CliOption.TSV))
-			TermSuiteFactory.createTsvExporter(clientHelper.getTsvOptions()).export(corpus, asPath(CliOption.TSV));
-		if(isSet(CliOption.TBX))
-			TermSuiteFactory.createTbxExporter().export(corpus, asPath(CliOption.TBX));
+		if(isSet(TermSuiteCliOption.JSON))
+			TermSuiteFactory.createJsonExporter().export(corpus, asPath(TermSuiteCliOption.JSON));
+		if(isSet(TermSuiteCliOption.TSV))
+			TermSuiteFactory.createTsvExporter(clientHelper.getTsvOptions()).export(corpus, asPath(TermSuiteCliOption.TSV));
+		if(isSet(TermSuiteCliOption.TBX))
+			TermSuiteFactory.createTbxExporter().export(corpus, asPath(TermSuiteCliOption.TBX));
 	} 
 
 	public Lang getLang() {
-		if(isSet(CliOption.FROM_TXT_CORPUS_PATH) || isSet(CliOption.FROM_PREPARED_CORPUS_PATH))
+		if(isSet(TermSuiteCliOption.FROM_TXT_CORPUS_PATH) || isSet(TermSuiteCliOption.FROM_PREPARED_CORPUS_PATH))
 			return super.getLang();
 		else 
 			return getIndexedCorpus().getTerminology().getLang();
 	}
 	
-	private IndexedCorpus getIndexedCorpus() {
-		if(isSet(CliOption.FROM_PREPARED_CORPUS_PATH)) {
-			Path path = asPath(CliOption.FROM_PREPARED_CORPUS_PATH);
+	protected IndexedCorpus getIndexedCorpus() {
+		if(isSet(TermSuiteCliOption.FROM_PREPARED_CORPUS_PATH)) {
+			Path path = asPath(TermSuiteCliOption.FROM_PREPARED_CORPUS_PATH);
 			if(path.toFile().isDirectory()) {
 				return TermSuite.toIndexedCorpus(
 						TermSuiteFactory.createPreprocessedCorpus(getLang(), path), 
@@ -143,12 +148,12 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 			} else {
 				return IndexedCorpusIO.fromJson(path);
 			}
-		} else if(isSet(CliOption.FROM_TXT_CORPUS_PATH)) {
+		} else if(isSet(TermSuiteCliOption.FROM_TXT_CORPUS_PATH)) {
 			Preprocessor preprocessor = TermSuite.preprocessor()
-						.setTaggerPath(asPath(CliOption.TAGGER_PATH));
+						.setTaggerPath(asPath(TermSuiteCliOption.TAGGER_PATH));
 			
-			if(isSet(CliOption.TAGGER))
-				preprocessor.setTagger(Tagger.forName(asString(CliOption.TAGGER)));
+			if(isSet(TermSuiteCliOption.TAGGER))
+				preprocessor.setTagger(Tagger.forName(asString(TermSuiteCliOption.TAGGER)));
 			
 			if(clientHelper.getHistory().isPresent())
 				preprocessor.setHistory(clientHelper.getHistory().get());

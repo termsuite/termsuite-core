@@ -20,7 +20,7 @@ import com.google.common.io.Files;
 
 import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.tools.CommandLineClient;
-import fr.univnantes.termsuite.tools.opt.CliOption;
+import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 public class CommandLineClientSpec {
 
@@ -35,8 +35,8 @@ public class CommandLineClientSpec {
 		}
 		protected void run() throws Exception {}
 		public void configureOpts() {
-			declareFacultative(CliOption.EXPLAIN);
-			declareMandatory(CliOption.LANGUAGE);
+			declareFacultative(TermSuiteCliOption.EXPLAIN);
+			declareMandatory(TermSuiteCliOption.LANGUAGE);
 		}
 	};
 

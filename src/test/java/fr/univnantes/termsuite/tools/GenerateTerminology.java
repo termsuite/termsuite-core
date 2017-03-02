@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
 public class GenerateTerminology {
@@ -18,7 +18,7 @@ public class GenerateTerminology {
 		runPipeline(FunctionalTests.getCorpusWEShort(Lang.DE), FunctionalTests.getTerminoWEShortPath(Lang.DE));
 	}
 
-	public static void runPipeline(TextCorpus txtCorpus, Path jsonExportPath) throws IOException {
+	public static void runPipeline(TXTCorpus txtCorpus, Path jsonExportPath) throws IOException {
 		/*
 		 * 1. Preprocess
 		 */

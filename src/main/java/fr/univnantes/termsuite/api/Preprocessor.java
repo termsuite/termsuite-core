@@ -3,7 +3,6 @@ package fr.univnantes.termsuite.api;
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -13,9 +12,11 @@ import java.util.stream.Stream;
 
 import javax.inject.Inject;
 
+import org.apache.uima.UIMAException;
 import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
+import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceManager;
@@ -40,7 +41,6 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Tagger;
-import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.utils.JCasUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
@@ -101,20 +101,74 @@ public class Preprocessor {
 		return this;
 	}
 	
-	public IndexedCorpus toPersistentIndexedCorpus(TextCorpus textCorpus, String storeUrl, int maxSize) {
+	public IndexedCorpus toPersistentIndexedCorpus(TXTCorpus textCorpus, String storeUrl, int maxSize) {
 		OccurrenceStore store = TermSuiteFactory.createPersitentOccurrenceStore(storeUrl, textCorpus.getLang());
 		return toIndexedCorpus(textCorpus, maxSize, store);
 	}
 
-	public IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, int maxSize) {
+	public IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, int maxSize) {
 		OccurrenceStore occurrenceStore = TermSuiteFactory.createMemoryOccurrenceStore(textCorpus.getLang());
-		return  toIndexedCorpus(textCorpus, maxSize, occurrenceStore);
+		return toIndexedCorpus(textCorpus, maxSize, occurrenceStore);
 	}
 
-	public IndexedCorpus toIndexedCorpus(TextCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
-		PreprocessorService preprocService = asService(textCorpus.getLang());
-		String name = preprocService.generateTerminologyName(textCorpus);
+	private IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
+		String name = asService(textCorpus.getLang()).generateTerminologyName(textCorpus);
+		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
 		
+		return  toIndexedCorpus(textCorpus, maxSize, TermSuiteFactory.createIndexedCorpus(termino, occurrenceStore));
+	}
+
+	public IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, int maxSize, IndexedCorpus indexedCorpus) {
+		Lang lang = textCorpus.getLang();
+		Stream<JCas> preparedStream = asService(textCorpus.getLang()).prepare(textCorpus);
+		return toIndexedCorpus(lang, preparedStream, maxSize, indexedCorpus);
+	}
+	
+	public IndexedCorpus toIndexedCorpus(TextualCorpus textCorpus, int maxSize) {
+		return toIndexedCorpus(
+				textCorpus.getLang(),
+				textCorpus.documents().map(doc -> toCas(doc, textCorpus.readDocumentText(doc))),
+				maxSize
+			);
+	}
+	
+	private JCas toCas(Document doc, String documentText) {
+		JCas cas;
+		try {
+			cas = JCasFactory.createJCas();
+			cas.setDocumentLanguage(doc.getLang().getCode());
+			cas.setDocumentText(documentText);
+			JCasUtils.initJCasSDI(
+				cas, 
+				doc.getLang().getCode(), 
+				documentText, 
+				doc.getUrl());
+			return cas;
+		} catch (UIMAException e) {
+			throw new TermSuiteException(
+					"Could not initialize JCas for document " + doc.getUrl(), 
+					e);
+		}
+	}
+			
+
+	public IndexedCorpus toIndexedCorpus(
+			Lang lang, 
+			Stream<JCas> preparedStream, 
+			int maxSize) {
+		return toIndexedCorpus(
+				lang, 
+				preparedStream, 
+				maxSize, 
+				TermSuiteFactory.createIndexedCorpus(lang));
+	}
+
+	public IndexedCorpus toIndexedCorpus(
+			Lang lang, 
+			Stream<JCas> preparedStream, 
+			int maxSize,
+			IndexedCorpus indexedCorpus) {
+		PreprocessorService preprocService = asService(lang);
 		if(preprocessedCorpusCachePath.isPresent()) {
 			if(preprocessedCorpusCachePath.get().toFile().exists()) {
 				logger.info("Cached preprocessed terminology found at path {}", preprocessedCorpusCachePath.get());
@@ -129,32 +183,27 @@ public class Preprocessor {
 				logger.info("No cached terminology found");
 		}
 		
-		
-		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
-		OccurrenceStore store = occurrenceStore;
-		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(termino, store);
 		Injector injector = Guice.createInjector(new ImporterModule(indexedCorpus, maxSize));
 		ImporterService importer = injector.getInstance(ImporterService.class);
 
 		
-		Stream<JCas> preapredStream = preprocService.prepare(textCorpus);
 		if(xmiPath.isPresent())
-			preapredStream = preapredStream.map(cas -> preprocService.toXMICas(
+			preparedStream = preparedStream.map(cas -> preprocService.toXMICas(
 					cas, 
 					toCasFile(xmiPath.get(), cas, "xmi")));
 		if(tsvPath.isPresent())
-			preapredStream = preapredStream.map(cas -> preprocService.toTSVCas(
+			preparedStream = preparedStream.map(cas -> preprocService.toTSVCas(
 					cas, 
 					toCasFile(tsvPath.get(), cas, "tsv")));
 		if(jsonPath.isPresent())
-			preapredStream = preapredStream.map(cas -> preprocService.toJSONCas(
+			preparedStream = preparedStream.map(cas -> preprocService.toJSONCas(
 					cas, 
 					toCasFile(jsonPath.get(), cas, "json")));
 		
 		
 		
 		logger.info("Starting preprocessing pipeline");
-		preapredStream.forEach(importer::importCas);
+		preparedStream.forEach(importer::importCas);
 		
 		if(preprocessedCorpusCachePath.isPresent()) {
 			logger.info("Saving preprocessed terminology to cache path {}", preprocessedCorpusCachePath.get());
@@ -178,23 +227,23 @@ public class Preprocessor {
 		return resolve;
 	}
 
-	public PreprocessedCorpus toPreparedCorpusJSON(TextCorpus textCorpus, Path jsonDir) {
-		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), jsonDir, PreprocessedCorpus.JSON_PATTERN, PreprocessedCorpus.JSON_EXTENSION);
+	public XMICorpus toPreparedCorpusJSON(TXTCorpus textCorpus, Path jsonDir) {
+		final XMICorpus targetCorpus = new XMICorpus(textCorpus.getLang(), jsonDir, XMICorpus.JSON_PATTERN, XMICorpus.JSON_EXTENSION);
 		
 		asStream(textCorpus)
 			.forEach(cas -> asService(textCorpus.getLang()).consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
 		return targetCorpus;
 	}
 
-	public PreprocessedCorpus toPreparedCorpusXMI(TextCorpus textCorpus, Path xmiDir) {
-		final PreprocessedCorpus targetCorpus = new PreprocessedCorpus(textCorpus.getLang(), xmiDir, PreprocessedCorpus.XMI_PATTERN, PreprocessedCorpus.XMI_EXTENSION);
+	public XMICorpus toPreparedCorpusXMI(TXTCorpus textCorpus, Path xmiDir) {
+		final XMICorpus targetCorpus = new XMICorpus(textCorpus.getLang(), xmiDir, XMICorpus.XMI_PATTERN, XMICorpus.XMI_EXTENSION);
 		
 		asStream(textCorpus)
 			.forEach(cas -> asService(textCorpus.getLang()).consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
 		return targetCorpus;
 	}
 
-	public Stream<JCas> asStream(TextCorpus textCorpus) {
+	public Stream<JCas> asStream(TXTCorpus textCorpus) {
 		Stream<JCas> stream = asService(textCorpus).prepare(textCorpus);
 		return stream;
 	}
@@ -205,17 +254,11 @@ public class Preprocessor {
 		return this;
 	}
 
-	public Stream<JCas> asStream(Lang lang, Stream<Document> documents) {
-		return asService(lang).prepare(
-				documents
-				);
-	}
-	
 	public PreprocessorService asService(Lang lang) {
-		return asService(lang, new CorpusMetadata(Charset.defaultCharset()));
+		return asService(lang, new CorpusMetadata());
 	}
 	
-	public PreprocessorService asService(TextCorpus textCorpus) {
+	public PreprocessorService asService(TXTCorpus textCorpus) {
 		try {
 			return asService(
 					textCorpus.getLang(), 

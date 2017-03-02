@@ -16,11 +16,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
-import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
@@ -30,11 +30,11 @@ public class PreprocessorSpec {
 	@Rule 
 	public TemporaryFolder folder = new TemporaryFolder();
 
-	TextCorpus corpus;
+	TXTCorpus corpus;
 	
 	@Before
 	public void setup() {
-		corpus = new TextCorpus(Lang.FR, FunctionalTests.CORPUS1_PATH);
+		corpus = new TXTCorpus(Lang.FR, FunctionalTests.CORPUS1_PATH);
 	}
 	
 	@Test

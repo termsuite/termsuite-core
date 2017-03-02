@@ -49,7 +49,7 @@ public class TermSuite {
 	
 	/**
 	 * 
-	 * Creates a new {@link IndexedCorpus} and import a {@link PreprocessedCorpus} 
+	 * Creates a new {@link IndexedCorpus} and import a {@link XMICorpus} 
 	 * into it.
 	 * 
 	 * @param preprocessedCorpus
@@ -61,7 +61,7 @@ public class TermSuite {
 	 * 
 	 * @see ImporterService
 	 */
-	public static IndexedCorpus toIndexedCorpus(PreprocessedCorpus preprocessedCorpus, int maxSize) {
+	public static IndexedCorpus toIndexedCorpus(XMICorpus preprocessedCorpus, int maxSize) {
 		String name = "Indexed corpus " + preprocessedCorpus.getRootDirectory().getFileName().toString();
 		IndexedCorpus indexedCorpus = TermSuiteFactory.createIndexedCorpus(
 				preprocessedCorpus.getLang(), 
@@ -72,20 +72,19 @@ public class TermSuite {
 
 	/**
 	 * 
-	 * Imports a {@link PreprocessedCorpus} into an existing {@link IndexedCorpus}.
+	 * Imports a {@link XMICorpus} into an existing {@link IndexedCorpus}.
 	 * 
 	 * @param preprocessedCorpus
-	 * 			The {@link PreprocessedCorpus}
+	 * 			The {@link XMICorpus}
 	 * @param indexedCorpus
 	 * 			The {@link IndexedCorpus}
 	 * @param maxSize
 	 * 			The maximun number of terms to keep in memory during import
 	 * 			
 	 */
-	public static void importCorpus(PreprocessedCorpus preprocessedCorpus, IndexedCorpus indexedCorpus, int maxSize) {
-		CorpusService corpusService = getCorpusService();
+	public static void importCorpus(XMICorpus preprocessedCorpus, IndexedCorpus indexedCorpus, int maxSize) {
 		ImporterService importer = terminologyImporter(indexedCorpus, maxSize);
-		corpusService.cases(preprocessedCorpus).forEach(importer::importCas);
+		preprocessedCorpus.cases().forEach(importer::importCas);
 	}
 	
 	public static CorpusService getCorpusService() {

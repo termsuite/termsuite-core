@@ -37,12 +37,12 @@ import org.junit.runners.Suite;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.model.Document;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Term;
 import fr.univnantes.termsuite.model.TermProperty;
-import fr.univnantes.termsuite.model.TextCorpus;
 import fr.univnantes.termsuite.test.func.api.BilingualAlignerDeEnSpec;
 import fr.univnantes.termsuite.test.func.api.BilingualAlignerFrEnSpec;
 import fr.univnantes.termsuite.test.func.api.EnglishWindEnergySpec;
@@ -109,7 +109,7 @@ public class FunctionalTests {
 	
 	private static final String FUNCTION_TESTS_CONFIG = "termsuite-test.properties";
 	private static final String PROP_TREETAGGER_HOME_PATH = "treetagger.home.path";
-	public static final TextCorpus CORPUS1 = new TextCorpus(Lang.FR, CORPUS1_PATH);
+	public static final TXTCorpus CORPUS1 = new TXTCorpus(Lang.FR, CORPUS1_PATH);
 
 	private static Object getConfigProperty( String propName) {
 		InputStream is = FunctionalTests.class.getClassLoader().getResourceAsStream(FUNCTION_TESTS_CONFIG);
@@ -124,12 +124,12 @@ public class FunctionalTests {
 		}
 	}
 
-	public static TextCorpus getCorpusWEShort(Lang lang) {
-		return new TextCorpus(lang, getCorpusWEShortPath(lang));
+	public static TXTCorpus getCorpusWEShort(Lang lang) {
+		return new TXTCorpus(lang, getCorpusWEShortPath(lang));
 	}
 
-	public static TextCorpus getCorpusWE(Lang lang) {
-		return new TextCorpus(lang, getCorpusWEPath(lang));
+	public static TXTCorpus getCorpusWE(Lang lang) {
+		return new TXTCorpus(lang, getCorpusWEPath(lang));
 	}
 	
 	public static Path getCorpusWEShortPath(Lang lang) {

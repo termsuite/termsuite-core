@@ -59,7 +59,7 @@ public class DocumentLogger extends JCasAnnotator_ImplBase {
 		long top = System.currentTimeMillis();
 		docCnt += 1;
 		SourceDocumentInformation sdi = JCasUtils.getSourceDocumentAnnotation(jCas).get();
-		long totalDoc = nbDocuments == 0 ? sdi.getNbDocuments() : nbDocuments;
+		long totalDoc = nbDocuments;
 		
 		if(totalDoc == 0)
 			return;
