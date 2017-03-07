@@ -152,6 +152,10 @@ publishing {
 			artifactId project.getProperty("name")
 			version project.getProperty("version")
 			from components.java
+			
+			artifact sourcesJar {
+                classifier "sources"
+            }
 		}
 	}
 }

@@ -27,6 +27,8 @@ public class TerminologyExtractorEngine extends AggregateEngine {
 				&& !config.getContextualizerOptions().isEnabled()) 
 			logger.warn("Distributional alignment disabled for semantic aligner, because contextualizer is disabled.");
 
+		pipe(StatEngine.class, "at begining of indexation");
+		
 		pipe(TerminologyPreparator.class);
 		
 		if(config.getContextualizerOptions().isEnabled())

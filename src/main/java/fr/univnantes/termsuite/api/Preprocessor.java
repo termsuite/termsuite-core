@@ -118,21 +118,27 @@ public class Preprocessor {
 		return  toIndexedCorpus(textCorpus, maxSize, TermSuiteFactory.createIndexedCorpus(termino, occurrenceStore));
 	}
 
-	public IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, int maxSize, IndexedCorpus indexedCorpus) {
+	public IndexedCorpus toIndexedCorpus(TextualCorpus textCorpus, int maxSize, IndexedCorpus indexedCorpus) {
 		Lang lang = textCorpus.getLang();
-		Stream<JCas> preparedStream = asService(textCorpus.getLang()).prepare(textCorpus);
-		return toIndexedCorpus(lang, preparedStream, maxSize, indexedCorpus);
+
+		return toIndexedCorpus(
+				lang, 
+				textCorpus.documents()
+					.map(doc -> toCas(doc, textCorpus.readDocumentText(doc))), 
+				maxSize, 
+				indexedCorpus);
 	}
 	
 	public IndexedCorpus toIndexedCorpus(TextualCorpus textCorpus, int maxSize) {
 		return toIndexedCorpus(
 				textCorpus.getLang(),
-				textCorpus.documents().map(doc -> toCas(doc, textCorpus.readDocumentText(doc))),
+				textCorpus.documents()
+					.map(doc -> toCas(doc, textCorpus.readDocumentText(doc))),
 				maxSize
 			);
 	}
 	
-	private JCas toCas(Document doc, String documentText) {
+	public static JCas toCas(Document doc, String documentText) {
 		JCas cas;
 		try {
 			cas = JCasFactory.createJCas();
@@ -151,21 +157,20 @@ public class Preprocessor {
 		}
 	}
 			
-
 	public IndexedCorpus toIndexedCorpus(
 			Lang lang, 
-			Stream<JCas> preparedStream, 
+			Stream<JCas> blankCasStream, 
 			int maxSize) {
 		return toIndexedCorpus(
 				lang, 
-				preparedStream, 
+				blankCasStream, 
 				maxSize, 
 				TermSuiteFactory.createIndexedCorpus(lang));
 	}
 
 	public IndexedCorpus toIndexedCorpus(
 			Lang lang, 
-			Stream<JCas> preparedStream, 
+			Stream<JCas> blankCasStream, 
 			int maxSize,
 			IndexedCorpus indexedCorpus) {
 		PreprocessorService preprocService = asService(lang);
@@ -182,6 +187,8 @@ public class Preprocessor {
 			} else
 				logger.info("No cached terminology found");
 		}
+		
+		Stream<JCas> preparedStream = blankCasStream.map(preprocService::prepare);
 		
 		Injector injector = Guice.createInjector(new ImporterModule(indexedCorpus, maxSize));
 		ImporterService importer = injector.getInstance(ImporterService.class);

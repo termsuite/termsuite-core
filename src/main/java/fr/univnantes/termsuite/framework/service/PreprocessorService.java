@@ -13,6 +13,7 @@ import java.util.stream.Stream;
 
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
@@ -65,9 +66,17 @@ public class PreprocessorService {
 	public JCas prepare(Document document, String documentText) {
 		try {
 			JCas cas = createCas(document, documentText);
-			engine.process(cas);
-			return cas;
+			return prepare(cas);
 		} catch (UIMAException e) {
+			throw new TermSuiteException(e);
+		}
+	}
+
+	public JCas prepare(JCas blankCas) {
+		try {
+			engine.process(blankCas);
+			return blankCas;
+		} catch (AnalysisEngineProcessException e) {
 			throw new TermSuiteException(e);
 		}
 	}
