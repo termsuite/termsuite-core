@@ -279,6 +279,7 @@ public abstract class CommandLineClient {
 			}
 			CliUtil.logCommandLineOptions(LOGGER, line);
 			checkAtLeastOneOf();
+			checkMandatoryOpts();
 			checkAtMostOneOf();
 			checkExactlyOneOf();
 			checkConditionals();
@@ -378,6 +379,17 @@ public abstract class CommandLineClient {
 			}
 		});
 		return sorted;
+	}
+	
+
+	private void checkMandatoryOpts() {
+		for(CliOption opt:mandatoryOptions) {
+			if(!isSet(opt)) {
+				String shortOptString = opt.getOptShortName() != null ? " [-"+opt.getOptShortName()+"]" : "";
+				CliUtil.throwException("Option --%s is mandatory", 
+					opt.getOptName() + shortOptString);
+			}
+		}
 	}
 	
 	private void checkConditionals() {
