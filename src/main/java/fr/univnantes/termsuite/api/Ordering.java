@@ -60,10 +60,24 @@ public abstract class Ordering<T extends Enum<T> & Property<?>, U extends Proper
 				for(Direction d:directions) {
 					v1 = (Comparable<?>)o1.getPropertyValueUnchecked(d.getProperty());
 					v2 = (Comparable<?>)o2.getPropertyValueUnchecked(d.getProperty());
-					if(d.isAscending()) 
-						chain = chain.compare(v1,v2);
-					else 
-						chain = chain.compare(v2,v1);						
+					if(d.isAscending()) {
+						if(v1 != null && v2 != null)
+							chain = chain.compare(v1,v2);
+						else if(v1 == null && v2 != null)
+							return -1;
+						else if(v1 != null && v2 == null)
+							return 1;
+						
+					} else {
+						
+						if(v1 != null && v2 != null)
+							chain = chain.compare(v2,v1);
+						else if(v1 == null && v2 != null)
+							return 1;
+						else if(v1 != null && v2 == null)
+							return -1;
+
+					}
 				}
 				int result = chain.result();
 				return result;
