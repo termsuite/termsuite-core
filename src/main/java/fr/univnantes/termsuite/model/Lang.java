@@ -34,7 +34,8 @@ public enum Lang {
 	ZH("chinese", Locale.SIMPLIFIED_CHINESE),
 	LV("latvian", Locale.ENGLISH),
 	RU("russian", Locale.ENGLISH),
-	DA("danish", Locale.GERMAN)
+	DA("danish", Locale.GERMAN),
+	UNKOWN("unknown", Locale.ENGLISH)
 	;
 	
 	private final String longLang;
