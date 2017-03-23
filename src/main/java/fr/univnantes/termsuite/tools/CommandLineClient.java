@@ -502,4 +502,28 @@ public abstract class CommandLineClient {
 			return null;
 		}
 	}
+	
+	
+	public List<Set<CliOption>> getAtLeastOneOfBags() {
+		return atLeastOneOfBags;
+	}
+	public List<Set<CliOption>> getAtMostOneOfBags() {
+		return atMostOneOfBags;
+	}
+	public List<Set<CliOption>> getExactlyOneOfBags() {
+		return exactlyOneOfBags;
+	}
+	public Set<CliOption> getMandatoryOptions() {
+		return mandatoryOptions;
+	}
+	public Map<CliOption, Set<CliOption>> getConditionalOptions() {
+		return conditionalOptions;
+	}
+	public Map<CliOption, Set<CliOption>> getConditionalAbsentOptions() {
+		return conditionalAbsentOptions;
+	}
+	public String getDescription() {
+		return description;
+	}
+	
 }

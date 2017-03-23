@@ -19,5 +19,5 @@ public interface Property<T> {
 
 	public Comparator<T> getComparator();
 	public Comparator<T> getComparator(boolean reverse);
-	
+	public String getDescription();
 }
