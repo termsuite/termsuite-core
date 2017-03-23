@@ -15,7 +15,7 @@ import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry point)
 	
 	public PreprocessorCLI() {
-		super("Applies TermSuite's preprocessings to given text corpus");
+		super("Applies TermSuite's preprocessings to given text corpus.");
 	}
 
 	@Override

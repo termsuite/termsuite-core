@@ -76,7 +76,7 @@ public class AlignerCLI extends CommandLineClient { // NO_UCD (public entry poin
 	private static final Logger LOGGER = LoggerFactory.getLogger(AlignerCLI.class);
 	
 	public AlignerCLI() {
-		super("translates domain-specific terms in multiligual comparable corpora from given language to given target language");
+		super("Translates domain-specific terms in multiligual comparable corpora from given language to given target language.");
 	}
 	
 	@Override

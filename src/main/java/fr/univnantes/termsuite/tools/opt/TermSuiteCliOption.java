@@ -29,7 +29,7 @@ public enum TermSuiteCliOption implements CliOption {
 	ENCODING(		"encoding", 	"e", 		OptType.T_ENC, 	"Encoding of the input corpus"),
 	TAGGER(			"tagger", 		null, 		OptType.T_STRING, "Which POS tagger to use. Allowed are: " + Tagger.stream().map(Tagger::getShortName).collect(joining(", "))),
 	TAGGER_PATH(	"tagger-home",	"t", 		OptType.T_FILE, 	"Path to POS tagger's home"),
-	FROM_TXT_CORPUS_PATH("from-text-corpus", "c", OptType.T_DIR, "Directory to corpus (containing a list of .txt documents"),
+	FROM_TXT_CORPUS_PATH("from-text-corpus", "c", OptType.T_DIR, "Directory to corpus (containing a list of .txt documents)"),
 	WATCH(			"watch", 		null, 		OptType.T_TERM_LIST, 	"List of terms (grouping keys or lemmas) to log to output"),
 	RESOURCE_DIR(	"resource-dir", null, 		OptType.T_DIR, 	"Custom resource directory"),
 	RESOURCE_JAR(	"resource-jar", null, 		OptType.T_FILE, 	"Custom resource jar"),

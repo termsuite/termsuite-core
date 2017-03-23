@@ -64,8 +64,6 @@ import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
  */
 public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (public entry point)
 
-	
-	
 	public TerminologyExtractorCLI() {
 		super("Extracts terminology from a domain-specific textual corpus (or preprocessed corpus).");
 	}

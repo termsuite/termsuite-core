@@ -365,7 +365,7 @@ public abstract class CommandLineClient {
 
 	}
 	
-	private List<CliOption> getSortedDeclaredOptions() {
+	public List<CliOption> getSortedDeclaredOptions() {
 		ArrayList<CliOption> sorted = Lists.newArrayList(declaredOptions);
 		sorted.sort(new Comparator<CliOption>() {
 			@Override
