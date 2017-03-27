@@ -40,8 +40,8 @@ public class TerminologyExtractorEngine extends AggregateEngine {
 		if(config.getMorphologicalConfig().isEnabled()) 
 			pipe(MorphologicalAnalyzer.class, config.getMorphologicalConfig());
 
-		
-		pipe(TermGatherer.class, config.getGathererConfig());
+		if(config.getGathererConfig().isEnabled()) 
+			pipe(TermGatherer.class, config.getGathererConfig());
 
 		if(config.getPostProcessorConfig().isEnabled())
 			pipe(TermPostProcessor.class, config.getPostProcessorConfig());

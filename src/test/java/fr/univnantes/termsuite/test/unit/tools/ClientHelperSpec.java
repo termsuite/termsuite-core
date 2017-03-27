@@ -67,13 +67,13 @@ public class ClientHelperSpec {
 	public void testParentOptionNotSetShouldFailPreFilter() {
 		try {
 			client.launch(args(
-					" --pre-filter-keep-variants"
+					" --pre-filter-th 5"
 					));
 			fail("Should have raised exception");
 		} catch(Exception e) {
 			assertThat(e)
 				.isInstanceOf(TermSuiteCliException.class)
-				.hasMessageContaining("Option --pre-filter-keep-variants can be set only when option --pre-filter-property is present");
+				.hasMessageContaining("Option --pre-filter-th can be set only when option --pre-filter-property is present");
 		}
 	}
 
@@ -180,7 +180,6 @@ public class ClientHelperSpec {
 	@Test
 	public void testExtractorOptionsWithPreFilterTh() {
 		client.launch(args("--pre-filter-property fnorm"
-				+ " --pre-filter-keep-variants"
 				+ " --pre-filter-max-variants 5"
 				+ " --pre-filter-th 12.34"
 				));
@@ -188,7 +187,6 @@ public class ClientHelperSpec {
 		expected.getPreFilterConfig().setProperty(TermProperty.FREQUENCY_NORM);
 		expected.getPreFilterConfig().setEnabled(true);
 		expected.getPreFilterConfig().keepOverTh(12.34);
-		expected.getPreFilterConfig().keepVariants();
 		expected.getPreFilterConfig().setMaxVariantNum(5);
 		assertOptionsEquals(expected, helper.getExtractorOptions(lang));
 	}

@@ -80,7 +80,6 @@ public class ClientHelper {
 	public void declareExtractorOptions() {
 		client.declareFacultative(TermSuiteCliOption.PRE_FILTER_PROPERTY);
 		client.declareConditional(TermSuiteCliOption.PRE_FILTER_PROPERTY,
-				TermSuiteCliOption.PRE_FILTER_KEEP_VARIANTS,
 				TermSuiteCliOption.PRE_FILTER_MAX_VARIANTS_NUM,
 				TermSuiteCliOption.PRE_FILTER_THRESHOLD,
 				TermSuiteCliOption.PRE_FILTER_TOP_N);
@@ -100,6 +99,7 @@ public class ClientHelper {
 		
 
 		client.declareFacultative(TermSuiteCliOption.GATHERER_DISABLE_MERGER);
+		client.declareFacultative(TermSuiteCliOption.GATHERER_DISABLE_GATHERING);
 		client.declareFacultative(TermSuiteCliOption.GATHERER_GRAPH_SIMILARITY_THRESHOLD);
 		client.declareFacultative(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC);
 		client.declareConditional(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC,
@@ -136,11 +136,11 @@ public class ClientHelper {
 		
 		configureFilter(options.getPreFilterConfig(),
 			TermSuiteCliOption.PRE_FILTER_PROPERTY,
-			TermSuiteCliOption.PRE_FILTER_KEEP_VARIANTS,
 			TermSuiteCliOption.PRE_FILTER_MAX_VARIANTS_NUM,
 			TermSuiteCliOption.PRE_FILTER_THRESHOLD,
 			TermSuiteCliOption.PRE_FILTER_TOP_N
 		);
+		options.getPreFilterConfig().setKeepVariants(false);
 
 		configureContextualizer(options);
 		configureMorphology(options);
@@ -150,11 +150,13 @@ public class ClientHelper {
 
 		configureFilter(options.getPostFilterConfig(),
 			TermSuiteCliOption.POST_FILTER_PROPERTY,
-			TermSuiteCliOption.POST_FILTER_KEEP_VARIANTS,
 			TermSuiteCliOption.POST_FILTER_MAX_VARIANTS_NUM,
 			TermSuiteCliOption.POST_FILTER_THRESHOLD,
 			TermSuiteCliOption.POST_FILTER_TOP_N
 		);
+		if(options.getPostFilterConfig().isEnabled())
+			options.getPostFilterConfig().setKeepVariants(client.asBoolean(TermSuiteCliOption.POST_FILTER_KEEP_VARIANTS));
+
 
 		return options;
 	}
@@ -199,6 +201,12 @@ public class ClientHelper {
 		GathererOptions config = options.getGathererConfig();
 		config.setMergerEnabled(!client.isSet(TermSuiteCliOption.GATHERER_DISABLE_MERGER));
 		config.setSemanticEnabled(client.isSet(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC));
+		
+		if(client.isSet(TermSuiteCliOption.GATHERER_DISABLE_GATHERING))
+			config.setEnabled(false);
+			
+		
+			
 		if(client.isSet(TermSuiteCliOption.GATHERER_GRAPH_SIMILARITY_THRESHOLD))
 			config.setGraphicalSimilarityThreshold(client.asDouble(TermSuiteCliOption.GATHERER_GRAPH_SIMILARITY_THRESHOLD));
 		if(config.isSemanticEnabled()) {
@@ -241,13 +249,12 @@ public class ClientHelper {
 	}
 
 	private void configureFilter(TerminoFilterOptions filterConfig, CliOption filterProperty,
-			CliOption keepVariants, CliOption maxVariantsNum, CliOption threshold,
+			CliOption maxVariantsNum, CliOption threshold,
 			TermSuiteCliOption topN) {
 		filterConfig.setEnabled(client.isSet(filterProperty));
 		if(filterConfig.isEnabled()) {
 			TermProperty property = client.asTermProperty(filterProperty);
 			filterConfig.setProperty(property);
-			filterConfig.setKeepVariants(client.asBoolean(keepVariants));
 			
 			if(client.isSet(maxVariantsNum))
 				filterConfig.setMaxVariantNum(client.asInt(maxVariantsNum));
@@ -259,7 +266,6 @@ public class ClientHelper {
 			else
 				CliUtil.throwAtLeast(topN, threshold);
 			
-			filterConfig.setKeepVariants(client.asBoolean(keepVariants));
 		}
 	}
 

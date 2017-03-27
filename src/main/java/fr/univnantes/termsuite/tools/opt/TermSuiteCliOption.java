@@ -52,7 +52,6 @@ public enum TermSuiteCliOption implements CliOption {
 	
 	// PRE_FILTER
 	PRE_FILTER_PROPERTY("pre-filter-property", null, OptType.T_STRING, "Enables pre-gathering filtering based on given property.", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
-	PRE_FILTER_KEEP_VARIANTS("pre-filter-keep-variants", null, OptType.T_NONE, "Keep variants during pre-gathering filtering even if they are to be filtered", Collections.EMPTY_LIST),
 	PRE_FILTER_MAX_VARIANTS_NUM("pre-filter-max-variants", null, OptType.T_INT, "The maximum number of variants to keep during pre-gathering filtering", Collections.EMPTY_LIST),
 	PRE_FILTER_THRESHOLD("pre-filter-th", null, OptType.T_INT_OR_FLOAT, "Threshold value of pre-gathering filter", Collections.EMPTY_LIST),
 	PRE_FILTER_TOP_N("pre-filter-top-n", null, OptType.T_INT, "N value for pre-gathering filtering over top N terms", Collections.EMPTY_LIST),
@@ -73,6 +72,7 @@ public enum TermSuiteCliOption implements CliOption {
 
 	
 	// GATHERER 
+	GATHERER_DISABLE_GATHERING("disable-gathering", 		null, 	OptType.T_NONE, 	"Disable variant term gathering", Collections.EMPTY_LIST),
 	GATHERER_ENABLE_SEMANTIC("enable-semantic-gathering", 		null, 	OptType.T_NONE, 	"Enable semantic term gathering (monolingual alignment)", Collections.EMPTY_LIST),
 	GATHERER_DISABLE_MERGER("disable-merging", 					null, 	OptType.T_NONE, 	"Disable graphical term merging", Collections.EMPTY_LIST),
 	GATHERER_SEMANTIC_SIMILAIRTY_TH("semantic-similarity-th", 	null, 	OptType.T_INT_OR_FLOAT, 	"Minimum semantic similarity threshold for semantic gathering (monolingual alignment)", Collections.EMPTY_LIST),
