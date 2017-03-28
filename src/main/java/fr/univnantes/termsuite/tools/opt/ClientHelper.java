@@ -32,6 +32,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 import fr.univnantes.termsuite.tools.CliUtil;
 import fr.univnantes.termsuite.tools.CommandLineClient;
+import fr.univnantes.termsuite.tools.TermSuiteCliException;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class ClientHelper {
@@ -299,7 +300,11 @@ public class ClientHelper {
 	
 	public TXTCorpus getTxtCorpus() {
 		Path ascorpusPath = client.asDir(TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
-		return new TXTCorpus(client.getLang(), ascorpusPath);
+		TXTCorpus txtCorpus = new TXTCorpus(client.getLang(), ascorpusPath);
+		if(txtCorpus.documents().findAny().isPresent())
+			return txtCorpus;
+		else
+			throw new TermSuiteCliException("No txt document found in corpus " + txtCorpus);
 	}
 
 	public int getCappedSize() {

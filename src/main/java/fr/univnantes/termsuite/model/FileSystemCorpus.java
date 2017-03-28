@@ -107,4 +107,9 @@ public abstract class FileSystemCorpus {
 					e);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s[%s]", this.getClass().getSimpleName(), this.rootDirectory);
+	}
 }

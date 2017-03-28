@@ -13,6 +13,7 @@ public class MinMaxNormalizer implements Normalizer {
 
 	private double sourceMin;
 	private double sourceMax;
+	private boolean allNans = false;
 	
 	public MinMaxNormalizer(double sourceMin, double sourceMax) {
 		super();
@@ -23,24 +24,32 @@ public class MinMaxNormalizer implements Normalizer {
 
 	
 	public MinMaxNormalizer(Iterable<? extends Number> numbers) {
-		sourceMin = Double.MAX_VALUE;
-		sourceMax = -Double.MAX_VALUE;
-		for(Number n:numbers) {
-			if((double)n<sourceMin)
-				sourceMin = (double)n;
-			if((double)n>sourceMax)
-				sourceMax = (double)n;			
+		allNans = Normalizer.areAllNaNs(numbers);
+		
+		if(!allNans) {
+			sourceMin = Double.MAX_VALUE;
+			sourceMax = -Double.MAX_VALUE;
+			for(Number n:numbers) {
+				double current = (double)n;
+				if(current<sourceMin)
+					sourceMin = current;
+				if(current>sourceMax)
+					sourceMax = current;
+			}
+			if(sourceMin>sourceMax)
+				throw new IllegalArgumentException("Requires at least one number in source vector. Got: " + numbers);
+			if(sourceMin==sourceMax)
+				throw new IllegalArgumentException("Requires at least two strictly different numbers in source vector. Got: " + numbers);
 		}
-		if(sourceMin>sourceMax)
-			throw new IllegalArgumentException("Requires at least one number in source vector. Got: " + numbers);
-		if(sourceMin==sourceMax)
-			throw new IllegalArgumentException("Requires at least two strictly different numbers in source vector. Got: " + numbers);
 	}
-	
-	
-	
+
+
 	@Override
 	public double normalize(double value) {
-		return (value - sourceMin) / (sourceMax - sourceMin);
+		if(allNans)
+			return value;
+			else
+		return 
+			(value - sourceMin) / (sourceMax - sourceMin);
 	}
 }
