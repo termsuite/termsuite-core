@@ -4,6 +4,7 @@ import java.nio.file.Path;
 
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.api.Preprocessor;
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.api.TerminoExtractor;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
@@ -101,6 +102,11 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 		declareFacultative(TermSuiteCliOption.ENCODING);
 		
 		/*
+		 * Big corpus options
+		 */
+		clientHelper.declareBigCorpusOptions();
+
+		/*
 		 * Extractor options
 		 */
 		clientHelper.declareExtractorOptions();
@@ -142,7 +148,7 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 			if(path.toFile().isDirectory()) {
 				return TermSuite.toIndexedCorpus(
 						TermSuiteFactory.createPreprocessedCorpus(getLang(), path), 
-						500000);
+						clientHelper.getCappedSize());
 			} else {
 				return IndexedCorpusIO.fromJson(path);
 			}
@@ -158,11 +164,17 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 			
 			preprocessor.setResourceOptions(clientHelper.getResourceConfig());
 			
-			IndexedCorpus indexedCorpus = preprocessor.toIndexedCorpus(clientHelper.getTxtCorpus(), 500000);
+			
+			TXTCorpus txtCorpus = clientHelper.getTxtCorpus();
+			IndexedCorpus indexedCorpus = preprocessor.toIndexedCorpus(
+					txtCorpus, 
+					clientHelper.getCappedSize(),
+					clientHelper.getOccurrenceStore(txtCorpus.getLang()));
 			return indexedCorpus;
 		} else
 			throw new IllegalStateException("Unexpected terminology extractor input state.");
 	}
+
 
 	public static void main(String[] args) {
 		new TerminologyExtractorCLI().launch(args);

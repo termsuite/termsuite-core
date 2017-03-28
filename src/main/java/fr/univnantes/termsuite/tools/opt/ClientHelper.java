@@ -22,9 +22,11 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.postproc.TermRankingOptions;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalOptions;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.io.tsv.TsvOptions;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
@@ -300,4 +302,25 @@ public class ClientHelper {
 		return new TXTCorpus(client.getLang(), ascorpusPath);
 	}
 
+	public int getCappedSize() {
+		if(client.isSet(TermSuiteCliOption.CAPPED_SIZE))
+			return client.asInt(TermSuiteCliOption.CAPPED_SIZE);
+		else
+			return 500000;
+	}
+
+	public OccurrenceStore getOccurrenceStore(Lang lang) {
+		if(client.isSet(TermSuiteCliOption.NO_OCCURRENCE)) {
+			return TermSuiteFactory.createEmptyOccurrenceStore(lang);
+		} else						
+			return TermSuiteFactory.createMemoryOccurrenceStore(lang);
+	}
+
+	public void declareBigCorpusOptions() {
+		/*
+		 * Big corpus options
+		 */
+		client.declareFacultative(TermSuiteCliOption.CAPPED_SIZE);
+		client.declareFacultative(TermSuiteCliOption.NO_OCCURRENCE);
+	}
 }

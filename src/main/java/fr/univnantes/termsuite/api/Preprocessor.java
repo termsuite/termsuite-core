@@ -111,7 +111,7 @@ public class Preprocessor {
 		return toIndexedCorpus(textCorpus, maxSize, occurrenceStore);
 	}
 
-	private IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
+	public IndexedCorpus toIndexedCorpus(TXTCorpus textCorpus, int maxSize, OccurrenceStore occurrenceStore) {
 		String name = asService(textCorpus.getLang()).generateTerminologyName(textCorpus);
 		Terminology termino = TermSuiteFactory.createTerminology(textCorpus.getLang(), name);
 		

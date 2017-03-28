@@ -105,6 +105,12 @@ public enum TermSuiteCliOption implements CliOption {
 	TBX(	"tbx", 		null, 	OptType.T_FILE, 	"Outputs terminology to TBX file", Collections.EMPTY_LIST),
 	
 	
+	// OTHER OPTIONS
+	NO_OCCURRENCE("no-occurrence", 	null, 	OptType.T_NONE, "Do not store occurrence offsets in memory while spotting. Allows to process bigger volumes of input text.", Collections.EMPTY_LIST),
+	CAPPED_SIZE("capped-size", 	null, 	OptType.T_INT, "The maximum number of terms to keep in memory while spotting. Allows to process bigger volumes of input text.", Collections.EMPTY_LIST),
+	
+	
+	
 	/*
 	 * TSV OPTIONS
 	 */
