@@ -1,7 +1,6 @@
 package fr.univnantes.termsuite.tools;
 
 import java.nio.file.Path;
-import java.util.Optional;
 
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.api.Preprocessor;
@@ -142,9 +141,6 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 	}
 
 	private void checkOutputOptions() {
-		Optional<Path> jsonPath = Optional.empty();
-		Optional<Path> tsvPath = Optional.empty();
-		Optional<Path> tbxPath = Optional.empty();
 		if(isSet(TermSuiteCliOption.JSON))
 			asPath(TermSuiteCliOption.JSON);
 		if(isSet(TermSuiteCliOption.TSV)) {

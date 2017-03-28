@@ -465,7 +465,7 @@ public abstract class CommandLineClient {
 			try {
 				return RelationProperty.forName(propertyName);
 			} catch(IllegalArgumentException e2) {
-				throw new TermSuiteCliException("No such term or relation property");
+				throw new TermSuiteCliException(String.format("No term or relation property for name \"%s\".", propertyName));
 			}
 		}
 	}
