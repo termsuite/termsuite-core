@@ -1,6 +1,7 @@
 package fr.univnantes.termsuite.tools;
 
 import java.nio.file.Path;
+import java.util.Optional;
 
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.api.Preprocessor;
@@ -115,6 +116,11 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 
 	@Override
 	protected void run() throws Exception {
+		/*
+		 * Fails fast on output options (before pipeline execution)
+		 */
+		checkOutputOptions();
+
 		TerminoExtractor extractor = TermSuite.terminoExtractor();
 		
 		extractor.setOptions(clientHelper.getExtractorOptions(getLang()));
@@ -133,6 +139,20 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 			TermSuiteFactory.createTsvExporter(clientHelper.getTsvOptions()).export(corpus, asPath(TermSuiteCliOption.TSV));
 		if(isSet(TermSuiteCliOption.TBX))
 			TermSuiteFactory.createTbxExporter().export(corpus, asPath(TermSuiteCliOption.TBX));
+	}
+
+	private void checkOutputOptions() {
+		Optional<Path> jsonPath = Optional.empty();
+		Optional<Path> tsvPath = Optional.empty();
+		Optional<Path> tbxPath = Optional.empty();
+		if(isSet(TermSuiteCliOption.JSON))
+			asPath(TermSuiteCliOption.JSON);
+		if(isSet(TermSuiteCliOption.TSV)) {
+			clientHelper.getTsvOptions();
+			asPath(TermSuiteCliOption.TSV);
+		}
+		if(isSet(TermSuiteCliOption.TBX))
+			asPath(TermSuiteCliOption.TBX);
 	} 
 
 	public Lang getLang() {
