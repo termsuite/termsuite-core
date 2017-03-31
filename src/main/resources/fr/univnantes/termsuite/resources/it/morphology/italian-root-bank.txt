@@ -1,0 +1,302 @@
+# [greek:aero]
+aéro-
+# [greek:agro]
+agro-
+# [greek:algie]
+algo-
+-algie
+# [greek:allo]
+allo-
+# [greek:anthropos]
+anthropo-
+-anthrope
+-anthropie
+# [greek:anemo]
+anémo-
+# [greek:archeo]
+archéo-
+-archie
+-arque
+# [greek:auto]
+auto-
+# [greek:bio]
+bio-
+-bie
+-bies
+# [greek:cardio]
+cardio-
+-carde
+-cardie
+# [greek:cephalo]
+céphalo-
+-céphale
+-céphalie
+# [greek:chromato]
+chromato-
+-chromo
+-chrome
+-chromie
+# [greek:chrono]
+chrono-
+# -chrone
+# [greek:cinema]
+cinéma-
+cinémato-
+# [greek:cosmo]
+cosmo-
+-cosme
+# [greek:crate]
+crate-
+-cratie
+-cratique
+# [greek:crypto]
+crypto-
+# [greek:cyclo]
+cyclo-
+-cycle
+# [greek:crto]
+crto-
+-cyte
+# [greek:dactylo]
+dactylo-
+-dactyle
+# [greek:deca]
+déca-
+# [greek:demo]
+démo-
+# [greek:drome]
+-drome
+# [greek:electro]
+électro-
+# [greek:game]
+-game
+-gamie
+# [greek:geno]
+géno-
+-gène
+# [greek:geo]
+géo-
+# [greek:gonio]
+gonio-
+-gone
+# [greek:gram]
+-gramme
+# [greek:grapho]
+grapho-
+-graphe
+-graphie
+# [greek:hecto]
+hecto-
+# [greek:helio]
+hélio-
+# [greek:hemato]
+hémato-
+hémo-
+-émie
+# [greek:hetero]
+hétéro-
+# [greek:hippo]
+hippo-
+# [greek:histo]
+histio-
+histo-
+# [greek:homo]
+homéo-
+homo-
+# [greek:hydro]
+hydro-
+# [greek:iatre]
+-iatre
+-iatrie
+# [greek:ide]
+-ide
+-ïde
+# [greek:iso]
+iso-
+# [greek:kilo]
+kilo-
+# [greek:latre]
+-lâtre
+-lâtrie
+# [greek:leuc]
+leuc-
+leuco-
+# [greek:lipo]
+lipo-
+# [greek:litho]
+litho-
+-lithe
+# [greek:logo]
+logo-
+-logue
+# [greek:logie]
+-logie
+# [greek:lyse]
+-lyse
+# [greek:macro]
+macro-
+# [greek:mane]
+-mane
+-manie
+# [greek:mega]
+méga-
+mégalo-
+# [greek:metro]
+métro-
+-mètre
+-métrie
+# [greek:micro]
+micro-
+# [greek:mono]
+mono-
+# [greek:morpho]
+morpho-
+-morphe
+# [greek:neo]
+néo-
+# [greek:neuro]
+neuro-
+névro-
+# [greek:nome]
+nome-
+-nomie
+# [greek:onyme]
+-onyme
+-onymie
+# [greek:ophtalmo]
+ophtalmo-
+# [greek:ortho]
+ortho-
+# [greek:ostéo]
+ostéo-
+# [greek:pan]
+pan-
+panto-
+# [greek:patho]
+patho-
+-pathe
+-pathie
+# [greek:pedo]
+péd-
+pédo-
+-pédie
+# [greek:phago]
+phago-
+-phage
+# [greek:phil]
+phil-
+philo-
+-phile
+# [greek:phobe]
+-phobe
+-phobie
+# [greek:phone]
+phon-
+phono-
+-phone
+-phonie
+# [greek:photo]
+photo-
+# [greek:physio]
+physio-
+# [greek:podo]
+podo-
+-pode
+# [greek:pole]
+-pole
+
+# [greek:poly]
+poly-
+# [greek:proto]
+prot-
+proto-
+# [greek:pseudo]
+pseud-
+pseudo-
+# [greek:psycho]
+psych-
+psycho-
+# [greek:pyro]
+pyro-
+# [greek:scaph]
+scaph-
+-scaphie
+# [greek:scope]
+-scope
+-scopie
+# [greek:techno]
+techno-
+-technie
+-technique
+# [greek:tele]
+télé-
+# [greek:theque]
+-thèque
+# [greek:therapie]
+-thérapie
+# [greek:thermo]
+thermo-
+-therme
+-thermie
+# [greek:tomie]
+-tomie
+# [greek:topo]
+topo-
+-tope
+# [greek:typo]
+typo-
+-type
+-typie
+# [greek:zoo]
+zoo-
+-zoaire
+# [latin:agri]
+agri-
+# [latin:calori]
+calori-
+# [latin:centi]
+centi-
+# [latin:cide]
+-cide
+# [latin:cole]
+-cole
+# [latin:culteur]
+-culteur
+# [latin:deci]
+déci-
+# [latin:fere]
+-fère
+# [latin:fique]
+-fique
+# [latin:forme]
+-forme
+# [latin:fuge]
+-fuge
+# [latin:grade]
+-grade
+# [latin:maxi]
+maxi-
+# [latin:milli]
+milli-
+# [latin:mini]
+mini-
+# [latin:multi]
+multi-
+# [latin:omni]
+omni-
+# [latin:ovi]
+ovi-
+ovo-
+# [latin:pare]
+-pare
+# [latin:pedi]
+pédi-
+-pède
+# [latin:pluri]
+pluri-
+# [latin:radio]
+radio-
+# [latin:uni]
+uni-
+# [latin:vore]
+-vore

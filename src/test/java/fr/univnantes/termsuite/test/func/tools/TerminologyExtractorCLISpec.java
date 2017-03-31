@@ -11,6 +11,7 @@ import static org.junit.Assert.assertTrue;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.FixMethodOrder;
@@ -53,9 +54,8 @@ public class TerminologyExtractorCLISpec {
 			));
 		assertThat(jsonPath.toFile()).exists();
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
-		assertThat(termindex)
-			.containsTerm("nn: wind energy")
-			.hasNTerms(2506);
+		assertTermIndex(termindex);
+		assertBetween(termindex.getTerms().keySet(), 2505, 2507);
 		assertNull(termindex.getTerms().get("n: energy").getContext());
 	}
 
@@ -71,9 +71,9 @@ public class TerminologyExtractorCLISpec {
 			));
 		assertThat(jsonPath.toFile()).exists();
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
-		assertThat(termindex)
-			.containsTerm("nn: wind energy")
-			.hasNTerms(2506);
+
+		assertBetween(termindex.getTerms().keySet(), 2505, 2507);
+		assertTermIndex(termindex);
 		assertNull(termindex.getTerms().get("n: energy").getContext());
 	}
 
@@ -96,16 +96,60 @@ public class TerminologyExtractorCLISpec {
 				jsonPath.toString()
 			));
 		
+		Terminology termindex = assertTerminoExtracted(jsonPath, tbxPath, tsvPath);
+
+		assertNull(termindex.getTerms().get("n: energy").getContext());
+	}
+	
+	@Test
+	public void testTerminoEnBasicFromCorpusWithNoOccurrence() throws Exception {
+		Path jsonPath = Paths.get(folder.getRoot().getAbsolutePath(), "termino.json");
+		Path tbxPath = Paths.get(folder.getRoot().getAbsolutePath(), "tbx.json");
+		Path tsvPath = Paths.get(folder.getRoot().getAbsolutePath(), "tsv.json");
+		
+		assertThat(jsonPath.toFile()).doesNotExist();
+		assertThat(tbxPath.toFile()).doesNotExist();
+		assertThat(tsvPath.toFile()).doesNotExist();
+		
+		launch(String.format("-t %s -c %s -l %s --tsv %s --tbx %s --json %s --no-occurrence" ,
+				FunctionalTests.getTaggerPath(),
+				FunctionalTests.getCorpusWEShortPath(Lang.EN),
+				Lang.EN.getCode(),
+				tsvPath.toString(),
+				tbxPath.toString(),
+				jsonPath.toString()
+			));
+		
+		Terminology termindex = assertTerminoExtracted(jsonPath, tbxPath, tsvPath);
+
+		assertNull(termindex.getTerms().get("n: energy").getContext());
+	}
+
+
+	private Terminology assertTerminoExtracted(Path jsonPath, Path tbxPath, Path tsvPath) {
 		assertThat(jsonPath.toFile()).exists();
 		assertThat(tbxPath.toFile()).exists();
 		assertThat(tsvPath.toFile()).exists();
 		
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
-		assertThat(termindex)
-			.containsTerm("nn: wind energy")
-			.hasNTerms(2506);
+		assertTermIndex(termindex);
+		
+		assertBetween(termindex.getTerms().keySet(), 2505, 2507);
+		return termindex;
+	}
 
-		assertNull(termindex.getTerms().get("n: energy").getContext());
+	private void assertTermIndex(Terminology termindex) {
+		assertThat(termindex)
+			.containsTerm("nn: wind energy");
+		
+		assertThat(termindex.getTerms().get("nn: wind energy").getFrequency())
+			.isEqualTo(46);
+	}
+
+	private void assertBetween(Collection<String> collection, int min, int max) {
+		assertTrue(
+				String.format("Expected size to be in [%d,%d], but got %d", min, max, collection.size()),
+				collection.size() >= min && collection.size() <= max);
 	}
 
 
@@ -223,7 +267,7 @@ public class TerminologyExtractorCLISpec {
 		assertThat(jsonPath.toFile()).exists();
 		
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
-		assertThat(termindex).containsTerm("nn: wind energy");
+		assertTermIndex(termindex);
 		assertNull(termindex.getTerms().get("nn: wind energy").getContext());
 		assertNotNull(termindex.getTerms().get("n: energy").getContext());
 		Term term = termindex.getTerms().get("n: rotor");

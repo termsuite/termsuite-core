@@ -22,14 +22,17 @@ import fr.univnantes.termsuite.engines.contextualizer.ContextualizerOptions;
 import fr.univnantes.termsuite.engines.gatherer.GathererOptions;
 import fr.univnantes.termsuite.engines.postproc.TermRankingOptions;
 import fr.univnantes.termsuite.engines.splitter.MorphologicalOptions;
+import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.io.tsv.TsvOptions;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.model.Lang;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 import fr.univnantes.termsuite.tools.CliUtil;
 import fr.univnantes.termsuite.tools.CommandLineClient;
+import fr.univnantes.termsuite.tools.TermSuiteCliException;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 public class ClientHelper {
@@ -80,7 +83,6 @@ public class ClientHelper {
 	public void declareExtractorOptions() {
 		client.declareFacultative(TermSuiteCliOption.PRE_FILTER_PROPERTY);
 		client.declareConditional(TermSuiteCliOption.PRE_FILTER_PROPERTY,
-				TermSuiteCliOption.PRE_FILTER_KEEP_VARIANTS,
 				TermSuiteCliOption.PRE_FILTER_MAX_VARIANTS_NUM,
 				TermSuiteCliOption.PRE_FILTER_THRESHOLD,
 				TermSuiteCliOption.PRE_FILTER_TOP_N);
@@ -100,6 +102,7 @@ public class ClientHelper {
 		
 
 		client.declareFacultative(TermSuiteCliOption.GATHERER_DISABLE_MERGER);
+		client.declareFacultative(TermSuiteCliOption.GATHERER_DISABLE_GATHERING);
 		client.declareFacultative(TermSuiteCliOption.GATHERER_GRAPH_SIMILARITY_THRESHOLD);
 		client.declareFacultative(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC);
 		client.declareConditional(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC,
@@ -136,11 +139,11 @@ public class ClientHelper {
 		
 		configureFilter(options.getPreFilterConfig(),
 			TermSuiteCliOption.PRE_FILTER_PROPERTY,
-			TermSuiteCliOption.PRE_FILTER_KEEP_VARIANTS,
 			TermSuiteCliOption.PRE_FILTER_MAX_VARIANTS_NUM,
 			TermSuiteCliOption.PRE_FILTER_THRESHOLD,
 			TermSuiteCliOption.PRE_FILTER_TOP_N
 		);
+		options.getPreFilterConfig().setKeepVariants(false);
 
 		configureContextualizer(options);
 		configureMorphology(options);
@@ -150,11 +153,13 @@ public class ClientHelper {
 
 		configureFilter(options.getPostFilterConfig(),
 			TermSuiteCliOption.POST_FILTER_PROPERTY,
-			TermSuiteCliOption.POST_FILTER_KEEP_VARIANTS,
 			TermSuiteCliOption.POST_FILTER_MAX_VARIANTS_NUM,
 			TermSuiteCliOption.POST_FILTER_THRESHOLD,
 			TermSuiteCliOption.POST_FILTER_TOP_N
 		);
+		if(options.getPostFilterConfig().isEnabled())
+			options.getPostFilterConfig().setKeepVariants(client.asBoolean(TermSuiteCliOption.POST_FILTER_KEEP_VARIANTS));
+
 
 		return options;
 	}
@@ -199,6 +204,12 @@ public class ClientHelper {
 		GathererOptions config = options.getGathererConfig();
 		config.setMergerEnabled(!client.isSet(TermSuiteCliOption.GATHERER_DISABLE_MERGER));
 		config.setSemanticEnabled(client.isSet(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC));
+		
+		if(client.isSet(TermSuiteCliOption.GATHERER_DISABLE_GATHERING))
+			config.setEnabled(false);
+			
+		
+			
 		if(client.isSet(TermSuiteCliOption.GATHERER_GRAPH_SIMILARITY_THRESHOLD))
 			config.setGraphicalSimilarityThreshold(client.asDouble(TermSuiteCliOption.GATHERER_GRAPH_SIMILARITY_THRESHOLD));
 		if(config.isSemanticEnabled()) {
@@ -241,13 +252,12 @@ public class ClientHelper {
 	}
 
 	private void configureFilter(TerminoFilterOptions filterConfig, CliOption filterProperty,
-			CliOption keepVariants, CliOption maxVariantsNum, CliOption threshold,
+			CliOption maxVariantsNum, CliOption threshold,
 			TermSuiteCliOption topN) {
 		filterConfig.setEnabled(client.isSet(filterProperty));
 		if(filterConfig.isEnabled()) {
 			TermProperty property = client.asTermProperty(filterProperty);
 			filterConfig.setProperty(property);
-			filterConfig.setKeepVariants(client.asBoolean(keepVariants));
 			
 			if(client.isSet(maxVariantsNum))
 				filterConfig.setMaxVariantNum(client.asInt(maxVariantsNum));
@@ -259,7 +269,6 @@ public class ClientHelper {
 			else
 				CliUtil.throwAtLeast(topN, threshold);
 			
-			filterConfig.setKeepVariants(client.asBoolean(keepVariants));
 		}
 	}
 
@@ -291,7 +300,32 @@ public class ClientHelper {
 	
 	public TXTCorpus getTxtCorpus() {
 		Path ascorpusPath = client.asDir(TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
-		return new TXTCorpus(client.getLang(), ascorpusPath);
+		TXTCorpus txtCorpus = new TXTCorpus(client.getLang(), ascorpusPath);
+		if(txtCorpus.documents().findAny().isPresent())
+			return txtCorpus;
+		else
+			throw new TermSuiteCliException("No txt document found in corpus " + txtCorpus);
 	}
 
+	public int getCappedSize() {
+		if(client.isSet(TermSuiteCliOption.CAPPED_SIZE))
+			return client.asInt(TermSuiteCliOption.CAPPED_SIZE);
+		else
+			return 500000;
+	}
+
+	public OccurrenceStore getOccurrenceStore(Lang lang) {
+		if(client.isSet(TermSuiteCliOption.NO_OCCURRENCE)) {
+			return TermSuiteFactory.createEmptyOccurrenceStore(lang);
+		} else						
+			return TermSuiteFactory.createMemoryOccurrenceStore(lang);
+	}
+
+	public void declareBigCorpusOptions() {
+		/*
+		 * Big corpus options
+		 */
+		client.declareFacultative(TermSuiteCliOption.CAPPED_SIZE);
+		client.declareFacultative(TermSuiteCliOption.NO_OCCURRENCE);
+	}
 }

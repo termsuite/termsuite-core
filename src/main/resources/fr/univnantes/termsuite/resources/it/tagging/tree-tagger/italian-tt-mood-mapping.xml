@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="VER:cimp" value="subjunctive" />
+  <map key="VER:cond" value="conditional" />
+  <map key="VER:cpre" value="subjunctive" />
+  <map key="VER:futu" value="indicative" />
+  <map key="VER:geru" value="gerundive" />
+  <map key="VER:impe" value="imperative" />
+  <map key="VER:impf" value="indicative" />
+  <map key="VER:infi" value="infinitive" />
+  <map key="VER:pper" value="participle" />
+  <map key="VER:ppre" value="participle" />
+  <map key="VER:pres" value="indicative" />
+  <map key="VER:refl:infi" value="infinitive" />
+  <map key="VER:remo" value="indicative" />
+</mapping>

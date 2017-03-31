@@ -1,0 +1,73 @@
+## NOM ADJ
+#terapeutico/terapia
+N A	-eutico	-ia
+#ipnotico/ipnosi,  analitico/analisi
+N A	-tico	-si
+#|- trico|-tro| ex cronometrico/cronometro
+N A	-ico	-o
+#|-a|co| ex accademia, accademico|
+N A	-co	-a
+#|/|-tico| ex acqua/acquatico
+N A	-tico	-
+#|/|tivo ex cura/curativo
+N A	-tivo	-
+#|-zione|-tivo| ex comunicazione/comunicativo, affermazione/affermativo
+N A	-tivo	-zione
+# aborto/abortivo | 	gustativo gusto
+N A	-tivo	-o
+#|-logia|-metrico| ex cronologia/cronometrico, ecologia/econometrico
+N A	-metrico	-logia
+#|-gia|-gico| ex cronologia/cronologico, enologia/enologico, ecologia/ecologico, terminologia/terminologico
+N A	-gico	-gia
+#|-zione|-ante| ex comunicazione/comunicante,
+N A	-ante	-zione
+#|-a/e|-ante| ex cura/curante, culmine/culminante
+N A	-ante	-a
+N A	-ante	-e
+#	trasparente trasparenza
+N A	-ente	-enza
+#|/|bile| ex cura/curabile
+N A	-bile	-
+## ADJ NOM
+#polmonare polmone
+A N	-are	-e
+#volontario volontà
+A N	-ario	-à
+#salariale salario | 	rettale retto
+A N	-ale	-o
+#medicale medicina
+A N	-ale	-ina
+#forestale foresta
+A N	-ale	-a
+#|/|-le|ex. /vitale Vita
+A N	-le	-
+#cancerogeno cancro
+A N	-erogeno	-ro
+# pastoso pasto
+A N	-so	-
+#medico medicina
+A N	-o	-ina
+#	grosso grossista
+A N	-o	-ista
+#	lento lentezza ! chiaro chiarezza
+A N	-o	-ezza
+#	eterno eternità
+A N	-o	-ità
+# floreale fiore
+A N	-loreale	-iore
+#veloce velocità
+A N	-e	-ità
+##	forestiero| foresta
+A N	-iero	-a
+#	forestiero| foreste
+A N	-iero	-e
+#sanguigno sangue | maligno male |benigno bene
+A N	-igno	-e
+# marino, mare
+A N	-ino	-e
+# marittimo, mare
+A N	-ittimo	-e
+# terrestre, terra
+A N	-estre	-a
+# celeste cielo
+A N	-eleste	-ielo

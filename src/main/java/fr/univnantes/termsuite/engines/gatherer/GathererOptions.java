@@ -7,6 +7,10 @@ import fr.univnantes.termsuite.metrics.SimilarityDistance;
 import fr.univnantes.termsuite.utils.JsonConfigObject;
 
 public class GathererOptions  extends JsonConfigObject  {
+
+	@JsonProperty("enabled")
+	private boolean enabled = true;
+
 	@JsonProperty("semantic-enabled")
 	private boolean semanticEnabled = false;
 	
@@ -138,7 +142,12 @@ public class GathererOptions  extends JsonConfigObject  {
 	public boolean isMergerEnabled() {
 		return mergerEnabled;
 	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
 	
-	
-	
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 }

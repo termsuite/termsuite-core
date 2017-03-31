@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="name">TreeTagger's Italian Parameter</entry>
+  <entry key="encoding">utf-8</entry>
+  <entry key="file">italian.par</entry>
+</properties>

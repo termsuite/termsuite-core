@@ -39,28 +39,27 @@ import com.google.common.collect.Maps;
  *
  */
 public enum TermProperty implements Property<Term> {
-	RANK("rank", "#", "rank", Integer.class),
-	IS_SINGLE_WORD("isSingleWord", "swt", "swt", Boolean.class),
-	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", "dfreq", Integer.class),
-	FREQUENCY_NORM("frequencyNorm", "fnorm", "f_norm", Double.class),
-	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class),
-	SPECIFICITY("specificity", "sp", "spec", Double.class),
-	FREQUENCY("frequency", "f", "freq", Integer.class),
-	ORTHOGRAPHIC_SCORE("OrthographicScore", "ortho", "ortho", Double.class),
-	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", "ifreq", Integer.class),
-	INDEPENDANCE("Independance", "ind", "ind", Double.class),
-	PILOT("pilot", "pilot", "pilot", String.class),
-	LEMMA("lemma", "lm", "lemma", String.class),
-	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class),
-	SPEC_IDF("spec-idf", "specidf", "specidf", Double.class),
-	GROUPING_KEY("groupingKey", "gkey", "key", String.class),
-	PATTERN("pattern", "p", "pattern", String.class),
-	SPOTTING_RULE("spottingRule", "rule", "rule", String.class), 
-	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class), 
-	SWT_SIZE("SwtSize", "swtSize", "swtSize", Integer.class), 
-	FILTERED("Filtered", "filtered", "filtered", Boolean.class), 
-	DEPTH("Depth", "depth", "depth", Integer.class),
-	
+	RANK("rank", "#", "rank", Integer.class, "The rank of the term assigned by TermSuite post-processor engine."),
+	IS_SINGLE_WORD("isSingleWord", "swt", "swt", Boolean.class, "Wether this term is single-word or not."),
+	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", "dfreq", Integer.class, "The number of documents in corpus in which the term is occurring."),
+	FREQUENCY_NORM("frequencyNorm", "fnorm", "f_norm", Double.class, "The number of occurrences of the term in the corpus every 1000 words."),
+	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class, "The number of occurrences of the term in the general language corpus every 1000 words."),
+	SPECIFICITY("specificity", "sp", "spec", Double.class, "The weirdness ratio, i.e. the specificity of the term in the corpus in comparison to general language."),
+	FREQUENCY("frequency", "f", "freq", Integer.class, "The number of occurrences of the term in the corpus."),
+	ORTHOGRAPHIC_SCORE("OrthographicScore", "ortho", "ortho", Double.class, "The probability for the covered text of the term for being an actual term assigned by TermSuite post-processor engine."),
+	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", "ifreq", Integer.class, "The number of times a term occurrs in corpus as it is, i.e. not as any of its variant forms, assigned by TermSuite post-processor engine."),
+	INDEPENDANCE("Independance", "ind", "ind", Double.class, "The `" + INDEPENDANT_FREQUENCY.getPropertyName() + "` divided by `" + FREQUENCY + "`, assigned by TermSuite post-processor engine."),
+	PILOT("pilot", "pilot", "pilot", String.class, "The most frequent form of the term."),
+	LEMMA("lemma", "lm", "lemma", String.class, "The concatenation of the term's word lemmas."),
+	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class, "`" + FREQUENCY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
+	SPEC_IDF("spec-idf", "specidf", "specidf", Double.class, "`" + SPECIFICITY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
+	GROUPING_KEY("groupingKey", "gkey", "key", String.class, "The unique id of the term, built on its pattern and its lemma."),
+	PATTERN("pattern", "p", "pattern", String.class, "The pattern of the term, i.e. the concatenation of syntactic labels of its words."),
+	SPOTTING_RULE("spottingRule", "rule", "rule", String.class, "The name of the UIMA Tokens Regex spotting rule that found the term in the corpus."), 
+	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class, "Wether the term is a fixed expression."), 
+	SWT_SIZE("SwtSize", "swtSize", "swtSize", Integer.class, "The number of words composing the term that are single-words."), 
+	FILTERED("Filtered", "filtered", "filtered", Boolean.class, "Wether the term has been marked as filtered by TermSuite post-processor engine. Usually, such a term is not meant to be displayed."), 
+	DEPTH("Depth", "depth", "depth", Integer.class,"The minimum level of extensions of the term starting from a single-word term."),
 	;
 	
 	private static Map<String, TermProperty> byNames = Maps.newConcurrentMap();
@@ -80,8 +79,14 @@ public enum TermProperty implements Property<Term> {
 	
 	private PropertyHolderBase<TermProperty, Term> delegate;
 
-	private TermProperty(String propertyName, String propertyShortName, String jsonField, Class<?> range) {
-		delegate = new PropertyHolderBase<>(propertyName, propertyShortName, jsonField, range);
+	@Override
+	public String getDescription() {
+		return delegate.getDescription();
+	}
+
+
+	private TermProperty(String propertyName, String propertyShortName, String jsonField, Class<?> range, String description) {
+		delegate = new PropertyHolderBase<>(propertyName, propertyShortName, jsonField, range, description);
 	}
 	
 

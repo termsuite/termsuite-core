@@ -1,0 +1,200 @@
+Perchè l'&quot;Open source&quot; manca l'obiettivo del Software Libero
+
+
+					Richard Stallman
+
+
+
+
+
+2007
+
+
+
+
+
+Esportato da Wikisource il 28/03/2017. Segnala eventuali errori su: http://it.wikisource.org/wiki/Segnala_errori
+
+
+
+
+
+Quando definiamo "libero" il software, intendiamo che rispetta le libertà essenziali degli utenti: la libertà di eseguire il programma, di studiare il programma e di ridistribuire delle copie con o senza modifiche. Questa è una questione di libertà, non di prezzo. Per capire il concetto, bisognerebbe pensare alla "libertà di parola" e non alla "birra gratis" 1.
+
+Queste libertà sono d'importanza vitale. Sono delle libertà essenziali, non soltanto per quanto riguarda l'utente in sé, ma perché queste libertà promuovono la solidarietà sociale, cioè lo scambio e la cooperazione. Diventano sempre più importanti man mano che la nostra cultura e le attività delle nostre vite sono sempre più legate al mondo digitale. In un mondo di suoni, immagini e parole digitali, il software libero diventa sempre più una cosa simile alla libertà in generale.
+
+Decine di milioni di persone in tutto il mondo usano oggi del software libero; nelle scuole di alcune regioni dell'India e della Spagna viene insegnato agli studenti l'uso del sistema operativo GNU/Linux, che è un sistema operativo libero. Tuttavia la maggior parte di questi utenti non sono mai venuti a conoscenza delle ragioni etiche per cui abbiamo sviluppato questo sistema e abbiamo creato la comunità del software libero, perché oggi questo sistema e questa comunità sono molto spesso descritte con il termine "open source", e queste cose vengono riferite a una diversa filosofia, in cui, di solito, non si fa neppure riferimento a queste libertà.
+
+Il movimento per il software libero sta facendo una campagna per le libertà degli utenti del computer dal 1983. Nel 1984 abbiamo fatto partire lo sviluppo del sistema operativo libero GNU, in modo da non dover utilizzare i sistemi operativi non liberi che negano la libertà ai propri utenti. Nel corso degli anni Ottanta abbiamo sviluppato la maggior parte dei componenti essenziali di questo sistema, così come abbiamo sviluppato la Licenza Pubblica Generica GNU, una licenza studiata appositamente per proteggere la libertà di tutti gli utenti di un programma.
+
+Tuttavia non tutti gli utenti e sviluppatori del software libero sono in accordo sugli obiettivi del movimento del software libero. Nel 1998 una parte della comunità del software libero si è staccata ed ha dato origine ad una campagna nel nome dell'"open source". Questo era stato originariamente proposto per evitare la possibile confusione del termine inglese "free software", ma ben presto questo termine è diventato associato a delle visioni filosofiche piuttosto diverse da quelle del movimento del software libero.
+
+Alcune delle persone che promuovono l'"open source" lo considerano come una "campagna di marketing per il software libero", che vorrebbe attrarre i dirigenti delle aziende mostrando i benefici pratici ed evitando di citare gli ideali di cosa sia giusto o sbagliato, cose il cui ascolto potrebbe non essere gradito. Altre persone che promuovono l'"open source" rigettano completamente i valori etici e sociali del movimento del software libero. Qualunque sia la loro visione, quando fanno una campagna per l'"open source" non fanno riferimento né prendono le difese di questi valori. Il termine "open source" è stato ben presto associato con la pratica di citare soltanto i valori pratici, come fornire software più potente e più affidabile. Molti dei sostenitori dell'"open source" sono giunti a questo da allora e questa pratica è quello che ha fatto sì che sia diventato questo il significato di questo termine.
+
+Quasi tutto il software open source è software libero; i due termini descrivono all'incirca la stessa categoria di software. Ma si basano su valori fondamentalmente diversi. L'open source è una metodologia di sviluppo; il software libero è un movimento sociale. Per il movimento per il software libero, il software libero è un imperativo etico, perché soltanto il software libero rispetta la libertà degli utenti. Al contrario la filosofia dell'open source pensa a come "migliorare" il software soltanto da un punto di vista pratico. Dice che il software non libero è una soluzione non ottimale. Per il movimento per il software libero, tuttavia, il software non libero è un problema sociale e la soluzione è passare al software libero.
+
+Software libero. Open source. Se si tratta dello stesso software, ha importanza quale nome venga utilizzato? Sì, perché parole differenti portano con sé idee diverse. Benché un programma libero, in qualunque modo venga chiamato, vi dia oggi la stessa libertà, stabilire la libertà in modo che perduri nel tempo dipende soprattutto dall'insegnare alla gente il valore della libertà. Se volete aiutarci in questo è essenziale che parliate di "software libero".
+
+Noi del movimento del software libero non pensiamo che il campo dell'open source sia il nemico; il nemico è il software proprietario. Vogliamo però che la gente sappia che noi ci battiamo per la libertà e che pertanto non vogliamo essere scorrettamente identificati come sostenitori dell'open source.
+
+
+
+
+
+Errori comuni nell'attribuire il significato dei termini "software libero" e "open source"
+
+
+Il termine "software libero" ha un problema di erronea interpretazione: un significato non intenzionale, il significato "il software che si può avere a costo zero" rientra nel significato del termine così quanto il significato che realmente si voleva dare a questo termine, "il software che dà agli utenti certe libertà". Cerchiamo di puntualizzare questo problema con la pubblicazione della definizione di software libero e dicendo: pensate alla "libertà di parola" e non alla "birra gratis". Questa non è una soluzione perfetta; non riesce a eliminare del tutto il problema. [NdT: il termine free in inglese significa sia gratuito che libero, in italiano il problema non esiste]. Un termine corretto e non ambiguo sarebbe meglio, se non avesse altri problemi.
+
+Sfortunatamente tutte le alternative in inglese pongono alcuni problemi. Abbiamo preso in considerazione molti termini alternativi, che sono stati proposti, ma nessuno di questi è certamente la soluzione "giusta", tale cioè che passare ad utilizzare quel termine sarebbe una buona idea. [In inglese] ogni proposta per sostituire il termine "software libero" ha un certo tipo di problema a livello semantico. Ed anche il termine "software open source" rientra in questa categoria.
+
+La definizione ufficiale di "software open source" (che è pubblicata dalla Open source Initiative e che è troppo lunga per essere citata qui) venne creata derivandola in modo indiretto dai nostri criteri per il software libero. Tuttavia non è la stessa cosa: è più permissiva in alcuni aspetti, pertanto i sostenitori dell'Open source hanno accettato alcune licenze che noi consideriamo non accettabili perché troppo restrittive per gli utenti. Ma nella pratica è una definizione abbastanza vicina alla nostra.
+
+Tuttavia, il significato ovvio della espressione "software open source" è "Puoi guardare il codice sorgente" e la maggior parte delle persone sembra attribuire questo significato al termine. Questo è un criterio molto più debole che non quello di software libero e molto più debole della definizione ufficiale di open source. In questo criterio rientrano molti programmi che non sono liberi né open source.
+
+Dal momento che il significato ovvio del termine "open source" non è quello che intendono i loro sostenitori, si è avuto come risultato che molte persone intendono in modo scorretto il significato del termine. Ecco come lo scrittore Neal Stephenson ha definito l'"open source":
+
+Linux è "open source", il che semplicemente significa che ognuno può avere una copia del codice sorgente.
+
+Non penso che abbia deliberatamente cercato di rigettare o di porre in dubbio la definizione "ufficiale". Penso che abbia semplicemente utilizzato il significato che, in inglese, viene convenzionalmente associato a questo termine. Lo stato del Kansas ha pubblicato una definizione simile:
+
+Fate uso del software open-source software (OSS). OSS è quel software per il quale il codice sorgente è disponibile liberamente e pubblicamente anche se i termini delle specifiche licenze variano così come varia quello che è permesso fare con quel codice.
+
+Le persone che sostengono l'open source cercano di affrontare questo problema indicando la loro definizione ufficiale, ma questo approccio correttivo è molto meno efficace per loro di quanto lo sia, nel nostro caso, per noi. Il termine "software libero" ha due significati naturali, uno dei quali è il significato che intendiamo esprimere, pertanto una persona che abbia compreso la differenza tra libero e gratuito, come la differenza tra la "libertà di parola e non la birra gratis", non prenderà in seguito il significato sbagliato. Invece il termine "open source" ha soltanto un significato naturale e questo significato è diverso da quello che intendono dire le persone che sono a favore dell'"open source". Pertanto non vi è un modo veloce di spiegare e di giustificare la definizione ufficiale di "open source". Questo crea la peggiore delle confusioni.
+
+
+
+
+
+Differenti valori possono portare a conclusioni simili ... ma non sempre
+
+
+I gruppi radicali degli anni Sessanta hanno avuto la reputazione di essere faziosi ed interessati solo a se stessi: alcune organizzazioni si divisero perché vi era un disaccordo nei dettagli della strategia e i due nuovi gruppi che si formarono a seguito della scissione si trattavano l'un con l'altro come nemici, piuttosto che come organizzazioni con obiettivi e valori di fondo pressoché simili. La destra fece leva su questo aspetto per criticare l'intera sinistra.
+
+Alcuni tentano di screditare il movimento per il software libero facendo un paragone tra il disaccordo tra noi e l'open source con il disaccordo di quei gruppi radicali. Hanno preso tutto alla rovescia. Noi non siamo in accordo con il gruppo dell'open source negli obiettivi e nei valori di base, ma le nostre visioni ci portano, in molti casi, verso lo stesso comportamento pratico, come sviluppare software libero.
+
+Come risultato le persone del movimento del software libero e le persone della campagna per l'open source spesso lavorano assieme a progetti pratici come sviluppatori di software. È notevole come visioni tanto diverse dal punto di vista filosofico possano, così spesso, motivare persone che la pensano in modo differente a partecipare ad un progetto in comune. Ciò nonostante le visioni sono molto differenti e ci sono situazioni che ci portano ad compiere azioni molto differenti.
+
+L'idea dell'open source è quella che permettere agli utenti di apportare modifiche al software e di ridistribuirlo renderà il software più potente e più affidabile. Ma questo non è garantito. Gli sviluppatori del software proprietario non sono necessariamente degli incompetenti e a volte producono dei programmi che sono potenti ed affidabili, anche se non rispettano le libertà degli utenti. Come reagiranno a questo gli attivisti del software libero e gli entusiasti dell'open source?
+
+Una persona che sia solamente un entusiasta dell'open source, e dunque una persona che non sia affatto influenzata dagli ideali del software libero, dirà: "Sono sorpreso che voi siate stati in grado di fare un programma che funzioni così bene senza utilizzare il nostro modello di sviluppo, ma ce l'avete fatta. Come posso avere una copia del vostro programma?" Questo favorirà atteggiamenti che allontanano dalle nostre libertà, che rischieranno di andare perse.
+
+Una persona che sia un attivista del software libero dirà invece: "Il vostro programma è molto attraente, ma non può valere il prezzo della mia libertà, per cui devo farne a meno. Piuttosto darò il mio supporto ad un progetto che sviluppi un'alternativa libera." Se noi consideriamo un valore la nostra libertà, allora agiremo in modo da mantenerla e da difenderla.
+
+
+
+
+
+Anche il software potente ed affidabile non sempre è un ben e
+
+
+L'idea che vogliamo che il software sia potente ed affidabile nasce dall'ipotesi che il software è fatto per essere utile a chi lo usa. Se è potente ed affidabile sarà di maggiore utilità per gli utenti.
+
+Ma si può dire che un software è utile agli utenti solo se rispetta le loro libertà. Cosa accade se il software è progettato in modo da mettere i suoi utenti in catene? In questo caso l'affidabilità vuol soltanto dire che le catene saranno più difficili da rimuovere.
+
+Sotto la pressione delle società di produzione cinematografica e discografica, il software che dovrebbe essere a disposizione degli individui è sempre più spesso specificatamente progettato per porli invece sotto restrizione. Questa minacciosa caratteristica è nota come DRM, cioè Digital Restrictions Management (vedi DefectiveByDesign.org) ed è l'antitesi dello spirito delle libertà che il software libero cerca di ottenere. E non è solo una questione ideologica: dal momento che lo scopo del DRM è quello di bloccare la vostra libertà, gli sviluppatori del DRM fanno sì che per voi sia difficile, impossibile e perfino illegale cambiare il software che ha il DRM.
+
+Tuttavia alcun sostenitori dell'open source hanno fatto una proposta per un software "DRM open source". La loro idea è che, con la pubblicazione del codice sorgente progettato per impedirvi l'accesso a supporti criptati e per dare la possibilità ad altri di cambiarli, si produrrà un software più potente e più affidabile nel porre le restrizioni a quelli che come voi siete gli utenti. E questo software vi verrà inviato in dispositivi che non vi è permesso cambiare.
+
+Questo software potrebbe anche essere "open source", ed utilizzare il modello di sviluppo dell'open source, ma non sarà software libero, perché non rispetterà le libertà degli utenti dove quel programma verrà eseguito. Se il modello di sviluppo dell'open source riuscirà a fare un software più potente e più affidabile nell'imporvi delle restrizioni, allora quello che si sarà ottenuto sarà di aver reso le cose ancora peggiori.
+
+
+
+
+
+Paura della libertà
+
+
+Il più importante motivo che ha portato al termine "software open source" è che le idee etiche del "software libero" non sono bene accettate da parte di alcune persone. Questo è vero: parlare di libertà, di questioni etiche, della responsabilità e della convenienza significa chiedere alle persone di pensare a delle cose che preferirebbero ignorare, come chiedersi se si stanno comportando in maniera eticamente corretta. Questo può causare un senso di imbarazzo e alcune persone possono decidere di risolvere la questione decidendo di non pensare a queste cose. Questo però non implica che dobbiamo smettere di parlare di queste cose.
+
+Tuttavia questo è quello che i capi dell'"open source" hanno deciso di fare. Hanno ritenuto che evitando di parlare di questioni etiche e di libertà e parlando soltanto dei benefici pratici immediati di alcuni programmi liberi, sarebbero stati in grado di "vendere" più efficacemente il software a certi clienti, in particolar modo in ambito aziendale.
+
+Questo approccio si è mostrato, a modo suo, efficiente. La retorica dell'open source ha convinto molte aziende e persone private ad utilizzare, e persino sviluppare, software libero, cosa che ha fatto estendere la nostra comunità, ma soltanto alla superficie, ad un livello pratico. La filosofia dell'open source, con i suoi valori esclusivamente pratici, impedisce la comprensione delle idee più profonde del software libero; porta molte persone nella nostra comunità, ma non insegna loro a difenderla. Ciò è un bene finché le cose vanno bene, ma non è abbastanza per mettere al sicuro la libertà. Attirare gli utenti verso il software libero li porta soltanto verso il primo passo per diventare difensori delle loro libertà.
+
+Prima o poi questi utenti saranno invitati a tornare indietro ad utilizzare software proprietari per qualche ragione di vantaggio pratico. Molte aziende cercano di offrire una tentazione di tal genere, alcune offrendo perfino delle copie gratis. Perché gli utenti dovrebbero rifiutare? Lo faranno soltanto se avranno imparato a dare un valore alla libertà che il software libero dà a loro, a dare un valore alla libertà in quanto tale piuttosto che alla convenienza tecnica e pratica di un particolare software libero. Per diffondere questa idea dobbiamo parlare di libertà. La tecnica dell'"evita di parlarne" può essere utile nei confronti delle aziende, ma fino ad un certo punto: se ne si abusa, al punto da diventare una cosa comune, si corre il rischio che l'amore per le libertà diventi quasi qualcosa di eccentrico.
+
+Questa situazione pericolosa, ora descritta, è proprio ciò che abbiamo noi ora. Molte persone coinvolte nel software libero dicono ben poco sulla libertà (di solito perché cercano di essere "il più possibile accettabili dalle aziende". In particolar modo i distributori di software mostrano questo atteggiamento. Quasi tutti i distributori di sistemi operativi GNU/Linux aggiungono pacchetti proprietari al sistema libero di base e invitano gli utenti a considerarli come un vantaggio, piuttosto che un passo indietro che li allontana dalla libertà.
+
+Le aggiunte (add-on) software proprietarie e le distribuzioni GNU/Linux parzialmente non libere trovano un terreno fertile perché la maggior parte della nostra comunità non insiste sulla libertà del proprio software. Questa non è una coincidenza. La maggior parte degli utenti dei sistemi GNU/Linux hanno fatto la conoscenza di questi sistemi dalle discussioni sull'"open source", nelle quali non veniva detto che l'obiettivo era la libertà. La pratica di non proteggere a tutti i costi la libertà e la decisione di non parlare della libertà vanno di pari passo e ognuna promuove l'altra. Per superare questa tendenza, dobbiamo parlare di più, e non di meno, di libertà.
+
+
+
+
+
+Conclusioni
+
+
+Mentre i sostenitori dell'open source portano nuovi utenti nella nostra comunità, noi attivisti del software libero dobbiamo lavorare ancor di più per portare all'attenzione dei nuovi utenti l'argomento della libertà. Dobbiamo dire: "Questo è software libero e ti dona la libertà!", più spesso e con più forza che mai. Tutte le volte che direte "software libero" al posto di "open source", aiuterete la nostra campagna.
+
+
+
+
+
+Note
+
+
+↑ NdT: il termine free in inglese significa sia gratuito che libero, in italiano il problema non esiste
+
+
+
+
+
+Joe Barr ha scritto un articolo intitolato Live and let license in cui ha scritto la sua visione su questo tema.
+
+Un articolo di Lakhani e Wolf sulle motivazioni degli sviluppatori di software libero dice che una parte considerevole sono motivati dall'idea che il software debba essere libero. Ciò nonostante il fatto che la ricerca si sia svolta su SourceForge, un sito che non dà supporto alla visione che questo sia un argomento etico.
+
+
+
+Copyright (C) 2007 Richard Stallman. La copia letterale e la distribuzione di questo articolo nella sua integrità sono permesse con qualsiasi mezzo, a condizione che questa nota sia riprodotta.
+
+
+
+
+
+Informazioni su questa edizione elettronica:
+
+
+Questo ebook proviene da Wikisource1. Wikisource è una biblioteca digitale libera, multilingue, interamente gestita da volontari, ed ha l'obiettivo di mettere a disposizione di tutti il maggior numero possibile di libri e testi in lingua italiana. Accogliamo romanzi, poesie, riviste, lettere, saggi.
+
+Il nostro scopo è offrire al lettore gratuitamente testi liberi da diritti d'autore. Potete fare quel che volete con i nostri ebook: copiarli, distribuirli, persino modificarli o venderli, a patto che rispettiate le clausole della licenza Creative Commons Attribuzione - Condividi allo stesso modo 3.0 Unported2.
+
+Ma la cosa veramente speciale di Wikisource è che anche tu puoi partecipare.
+
+Wikisource è costruita amorevolmente curata da lettori come te. Non esitare a unirti a noi.
+
+Nonostante l'attenzione dei volontari, un errore può essere sfuggito durante la trascrizione o rilettura del testo. Puoi segnalarci un errore a questo indirizzo: http://it.wikisource.org/wiki/Segnala_errori
+
+I seguenti contributori hanno permesso la realizzazione di questo libro:
+
+Kyle the hacker
+
+Tene~commonswiki
+
+Waldir
+
+Boris23
+
+Zscout370
+
+
+
+
+
+Il modo migliore di ringraziarli è diventare uno di noi :-)
+
+A presto.
+
+
+
+* * *
+
+
+
+↑ http://it.wikisource.org
+
+↑ http://www.creativecommons.org/licenses/by-sa/3.0/deed.it
+
+
+
+
+

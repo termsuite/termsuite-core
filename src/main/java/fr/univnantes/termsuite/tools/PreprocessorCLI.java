@@ -15,13 +15,14 @@ import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry point)
 	
 	public PreprocessorCLI() {
-		super("Applies TermSuite's preprocessings to given text corpus");
+		super("Applies TermSuite's preprocessings to given text corpus.");
 	}
 
 	@Override
 	public void configureOpts() {
 		clientHelper.declareResourceOpts();
 		clientHelper.declareHistory();
+		clientHelper.declareBigCorpusOptions();
 		declareFacultative(TermSuiteCliOption.TAGGER);
 		declareMandatory(TermSuiteCliOption.TAGGER_PATH);
 		declareMandatory(TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
@@ -63,14 +64,17 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 		if(isSet(TermSuiteCliOption.PREPARED_TERMINO_JSON)) {
 			Path destJson = asPath(TermSuiteCliOption.PREPARED_TERMINO_JSON);
 			try(FileWriter writer = new FileWriter(destJson.toFile())) {
-				IndexedCorpus corpus = preprocessor.toIndexedCorpus(txtCorpus, 500000);
+				IndexedCorpus corpus = preprocessor.toIndexedCorpus(
+						txtCorpus, 
+						clientHelper.getCappedSize(), 
+						clientHelper.getOccurrenceStore(txtCorpus.getLang()));
 				JsonTerminologyIO.save(writer, corpus, new JsonOptions());
 			}
 		} else 
 			// consume
 			preprocessor.asStream(txtCorpus).count();
 	}
-	
+
 
 	public static void main(String[] args) {
 		new PreprocessorCLI().runClient(args);

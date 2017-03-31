@@ -1,0 +1,455 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+#################################
+#  NA  #
+#################################
+
+# artificial rule needed fortisation correction of Vpp
+"S-NA":
+  source: N A
+  target: N A
+  rule: s[0]==t[0] && s[1].stem==t[1].stem
+
+
+#  Extension droite et gauche  #
+# géothermie hydraulique || géothermie hydraulique solaire
+"S-Ed-NA-A":
+  source: N A
+  target: N A A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+"S-Ed-NA-AA":
+  source: N A
+  target: N A A A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# chauffage électrique || chauffage électrique sans isolation
+"S-Ed-NA-PN":
+  source: N A
+  target: N A P N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# énergie éolien || énergie éolien de petit taille
+"S-Ed-NA-PAN":
+  source: N A
+  target: N A P A N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+"S-Ed-NA-PACAN":
+  source: N A
+  target: N A P A C A N
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# énergie éolien || énergie éolien de taille importante
+"S-Ed-NA-PNA":
+  source: N A
+  target: N A P N A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# rotation rapide || éolienne à rotation rapide
+"S-Eg-NA-NP":
+  source: N A
+  target: N P N A
+  rule: s[0]==t[2] && s[1]==t[3]
+
+
+# distance radial || distance radial et axial
+"S-Ed-NA-CA":
+  source: N A
+  target: N A C A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+#enumeration#
+# centrale thermique || centrale thermique, nucléaire ou fossile ; intérêt ecologique, faunistique et florisitique || intérêt ecologique
+"S-Ed-NA-,ACA":
+  source: N A comma A C A
+  target: N A
+  rule: s[0]==t[0] && s[1]==t[1]
+
+
+# removed, too noisy, should be improved: Ddef N1 C Ddef N2 A, gender(N1)=gender(N2)=gender(A)
+# "S-ECg-NA":
+#   source: N A
+#   target: N C N A
+#   rule: s[0]==t[2] && s[1]==t[3]
+
+
+# rotation lent || rotation relativement lent
+"S-I-NA-R":
+  source: N A
+  target: N R A
+  rule: s[0]==t[0] && ( s[1]==t[1] || s[1]==t[2] )
+
+
+# géothermie hydraulique || géothermie solaire hydraulique
+"S-I-NA-A":
+  source: N A
+  target: N A A
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+# quote-part éolien || quote-part de énergie éolien
+"S-I-N(N|A)-PN":
+  source: N N, N A
+  target: N P N N, N P N A
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+#  PREDICATION    #
+# pale être rigide || pale rigide
+"S-I-NA-V":
+  source: N V A
+  target: N A
+  rule: s[0]==t[0] && s[2]==t[1]
+# V: être)
+
+
+# pale être très rigide || pale rigide
+"S-I-NA-RV":
+  source: N V R A
+  target: N A
+  rule: s[0]==t[0] && s[2]==t[1]
+# V: être)
+
+
+#coordination#
+# courant rotorique || courant statorique et rotorique
+"S-I-NA-AC":
+  source: N A
+  target: N A C A
+  rule: s[0]==t[0] && s[1]==t[3]
+
+
+#enumeration#
+# centrale fossile || centrale thermique, nucléaire ou fossile
+"S-I-NA-A,AC":
+  source: N A comma A C A
+  target: N A
+  rule: s[0]==t[0] && (s[1]==t[1] || s[3]==t[1] || s[5]==t[1])
+
+
+# DOES NOT MATCH on Wind Energy, Mobiles, Cancer
+# dissection axillaire/dissection des ganglions lymphatiques axillaires
+"S-I-NA-PNA":
+  source: N A
+  target: N P N A A
+  rule: s[0]==t[0] && s[1]==t[4]
+
+
+#conception et isolation acoustique
+# removed, too noisy, should be improved: Ddef N1 C Ddef N2 A, gender(N1)=gender(N2)=gender(A)
+# "S-I-NA-CN":
+#   source: N A
+#   target: N C N A
+#   rule: s[0]==t[0] && s[1]==t[3]
+
+
+#dérivation #
+#effet possible/possibilité d'effet
+# TODO Réécrire avec les dérivés au lieu du stem (dérivation de type 3 : inversion)
+# TODO s[0]==t[2] && (s[1].stem==t[0].stem || derivAN(s[1],t[0]))
+# TODO tester :
+#  1- s[0]==t[2] && s[1].stem==t[0].stem
+#  2- s[0]==t[2] && derivAN(s[1],t[0])
+#  3- s[0]==t[2] && (s[1].stem==t[0].stem || derivAN(s[1],t[0]))
+"S-PID-NA-P":
+  source: N A
+  target: N P N
+  rule: s[0]==t[2] && deriv("A N", s[1], t[0])
+
+
+#Plusieurs operations#
+# centrale nucléaire || centrale thermique, nucléaire ou fossile
+"S-IEg-NA-A,-CA":
+  source: N A comma A C A
+  target: N A
+  rule: s[0]==t[0] && (s[1]==t[1] || s[3]==t[1] || s[5]==t[1])
+
+
+#################################
+#  NPN  #
+#################################
+
+#  Insertion  #
+# approvisionnement en électricité || approvisionnement mondial en électricité
+"S-I1-NPN-A":
+  source: N P N
+  target: N A P N
+  rule: s[0]==t[0] && s[1]==t[2] && s[2]==t[3]
+
+
+# NOISY
+# coût de production || coût de fabrication et de production
+# "S-I1-NPN-PNC":
+#   source: N P N
+#   target: N P N C P N
+#   rule: s[0]==t[0] && s[1]==t[4] && s[2]==t[5]
+
+
+# unités de vues || unités de paysage, des sites et des vues
+"S-I2-NPN-PN,PNC":
+  source: N P N comma P N C P N
+  target: N P N
+  rule: s[0]==t[0] && s[8]==t[2]
+
+
+#"S-D1-NPN":
+#  source: N P N
+#  target: N P N
+#  rule: s[2] == t[2] && derivNN(s[0], t[0])
+
+#  Extension droite et gauche  #
+# absence de générateur - absence de générateur éolien
+"S-Ed-NPN-A":
+  source: N P N
+  target: N P N A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# vitesse de rotation - vitesse de rotation de référence
+"S-Ed-NPN-PN":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2] && t[3]=="de" && (t[4]=="base" || t[4]=="référence")
+
+
+# DOES NOT MATCH on Wind Energy, Mobiles, Cancer
+"S-Ed-NPN-PAN":
+  source: N P N
+  target: N P N P A N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# DOES NOT MATCH on Wind Energy, Mobiles, Cancer
+"S-Ed-NPN-PNA":
+  source: N P N
+  target: N P N P N A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+#  DOES NOT MATCH on Wind Energy, Mobiles, Cancer
+"S-Ed-NPN-PACAN":
+  source: N P N
+  target: N P N P A C A N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+#  DOES NOT MATCH on Wind Energy, Mobiles, Cancer
+"S-Ed-NPN-AA":
+  source: N P N
+  target: N P N A A
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+# coût de fabrication || coût de fabrication et de production
+"S-Ed-NPN-CPN":
+  source: N P N
+  target: N P N C P N
+  rule: s[0]==t[0] && s[1]==t[1] && s[2]==t[2]
+
+
+#enumeration#
+# unités de paysage || unités de paysage, des sites et des vues
+"S-Ed-NPN-,PNCPN":
+  source: N P N comma P N C P N
+  target: N P N
+  rule: s[0]==t[0] && s[2]==t[2]
+
+
+# fonction de appartenance - niveau du fonction de appartenance
+"S-Eg-NPN-NP":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[2] && s[1]==t[3] && s[2]==t[4]
+
+
+#Reduction#
+# panne réseau - panne de réseau
+"S-R2-NPN":
+  source: N N
+  target: N P N
+  rule: s[0]==t[0] && s[1]==t[2]
+
+
+#variation preposition#
+"S-R2I-NPN-P":
+  source: N P N
+  target: N P N
+  rule: s[0]==t[0] && s[2]==t[2]
+
+
+# phase du stator | phase statorique
+"S-R2D-NPN":
+  source: N P N
+  target: N A
+  rule: s[0]==t[0] && deriv("N A", s[2], t[1])
+
+
+# DOES NOT MATCH
+# A par B - A en fonction de B
+"S-R2I2-NPN-PNP":
+  source: N P N
+  target: N P N P N
+  rule: s[0]==t[0] && s[2]==t[4] && s[1]=="par" && t[1]=="en" && t[2]=="fonction" && t[3]=="de"
+
+
+#plusieurs opérations#
+# unités de sites || unités de paysage, des sites et des vues
+"S-IEg-NPN-PN,-CPN":
+  source: N P N comma P N C P N
+  target: N P N
+  rule: s[0]==t[0]  && s[1]==t[1] && s[5]==t[2]
+
+
+#################################
+#  NAPN  #
+#################################
+
+# vitesse du vent nominal || vitesse nominal du vent
+"S-P-NAPN-A":
+  source: N P N A
+  target: N A P N
+  rule: s[0]==t[0] && s[2]==t[3] && s[3]==t[1]
+
+
+#################################
+#  NAA  #
+#################################
+
+
+# énergie moyen annuel || énergie annuel moyen
+"S-P-NAA-A":
+  source: N A A
+  target: N A A
+  rule: s[0]==t[0] && s[1]==t[2] && s[2]==t[1]
+
+
+#effet secondaire possible/possibilité d'effet secondaire
+#S-R3Eg-NAA-NP
+"S-PID-NAA-P":
+  source: N A A
+  target: N P N A
+  rule: s[0]==t[3] && s[1]==t[4] && s[2].stem==t[0].stem
+
+
+#################################
+#  MORPHOLOGICAL  #
+#################################
+
+# micro système - microsystème, kilowatt heure - kilowatt-heure
+"M-S-NN":
+  source: N [compound]
+  target: N N
+  rule: t[0]==s[0][0] && t[1]==s[0][1]
+
+
+# hormonosensibilité - sensibilité aux hormones; portance-angle - angle de portance
+"M-PI-EN-P":
+  source: N [compound]
+  target: N P N
+  rule: s[0][0]==t[2] && s[0][1]==t[0]
+
+
+
+# Variantes d'adjectif a inclure plutot dans NA/NAPN
+# DOES NOT MATCH on Wind Energy
+# hormonosensible - sensible aux hormones
+#"M-PR2-APN":
+#  source: A
+#  target: A P N
+#  rule: s.compound && s[0][0]==t[2] && s[0][1]==t[0]
+
+
+# DOES NOT MATCH
+# turbine bipale - turbine bi- ou tripale
+"M-I-NA-CE":
+  source: N A
+  target: N A C A, N N C A
+  rule: s[0] == t[0] && s[1].compound && t[3].compound && s[1][0]==t[1] && s[1][1]==t[3][1]
+
+
+# DOES NOT MATCH (2 car)
+# turbine tripale - turbine bi- ou tripale
+"M-I-NA-EC":
+  source: N A
+  target: N A C A, N N C A
+  rule: s[1].compound && t[3].compound && s[0]==t[0] && s[1][0]==t[3][0] && s[1][1]==t[3][1]
+
+
+# DOES NOT MATCH on Wind Energy
+# diabète insulino-dépendant - diabète insulino-non-dépendant
+"M-I2-NA":
+  source: N A
+  target: N A
+  rule: s[1].compound && t[1].compound && s[0]==t[0] && s[1][0]==t[1][0] && s[1][1]==t[1][2]
+
+
+# traité en amont
+
+# DOES NOT MATCH
+# éolien - proéolien
+#"N-prefN":
+#  source: N
+#  target: N
+#  rule: t.compound && s[0]==t[0][1]
+
+# machine synchrone - machine asynchrone
+"NA-NprefA":
+  source: N A
+  target: N A
+  rule: s[0]==t[0] && prefix(t[1],s[1])
+
+# prefixes: hyper, a, ir, non, dé
+
+
+# synonymes
+"NA-NsynA":
+  source: N A
+  target: N A
+  rule: s[0]==t[0] && synonym(t[1],s[1])
+
+# synonymes
+"NA-synNA":
+  source: N A
+  target: N A
+  rule: s[1]==t[1] && synonym(t[0],s[0])
+
+# synonymes
+"NPN-NPsynN":
+  source: N P N
+  target: N P N
+  rule: s[0]==t[0] && s[1]==t[1] && synonym(t[2],s[2])
+  
+# synonymes
+"NPN-synNPN":
+  source: N P N
+  target: N P N
+  rule: s[2]==t[2] && s[1]==t[1] && synonym(t[0],s[0])
+  

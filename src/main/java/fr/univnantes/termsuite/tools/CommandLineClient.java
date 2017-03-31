@@ -365,7 +365,7 @@ public abstract class CommandLineClient {
 
 	}
 	
-	private List<CliOption> getSortedDeclaredOptions() {
+	public List<CliOption> getSortedDeclaredOptions() {
 		ArrayList<CliOption> sorted = Lists.newArrayList(declaredOptions);
 		sorted.sort(new Comparator<CliOption>() {
 			@Override
@@ -465,7 +465,7 @@ public abstract class CommandLineClient {
 			try {
 				return RelationProperty.forName(propertyName);
 			} catch(IllegalArgumentException e2) {
-				throw new TermSuiteCliException("No such term or relation property");
+				throw new TermSuiteCliException(String.format("No term or relation property for name \"%s\".", propertyName));
 			}
 		}
 	}
@@ -502,4 +502,28 @@ public abstract class CommandLineClient {
 			return null;
 		}
 	}
+	
+	
+	public List<Set<CliOption>> getAtLeastOneOfBags() {
+		return atLeastOneOfBags;
+	}
+	public List<Set<CliOption>> getAtMostOneOfBags() {
+		return atMostOneOfBags;
+	}
+	public List<Set<CliOption>> getExactlyOneOfBags() {
+		return exactlyOneOfBags;
+	}
+	public Set<CliOption> getMandatoryOptions() {
+		return mandatoryOptions;
+	}
+	public Map<CliOption, Set<CliOption>> getConditionalOptions() {
+		return conditionalOptions;
+	}
+	public Map<CliOption, Set<CliOption>> getConditionalAbsentOptions() {
+		return conditionalAbsentOptions;
+	}
+	public String getDescription() {
+		return description;
+	}
+	
 }
