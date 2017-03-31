@@ -58,9 +58,7 @@ import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.model.occurrences.EmptyOccurrenceStore;
 import fr.univnantes.termsuite.test.mock.MockResourceModule;
 import fr.univnantes.termsuite.test.unit.api.ExtractorConfigIOSpec;
-import fr.univnantes.termsuite.test.unit.api.PreprocessorSpec;
 import fr.univnantes.termsuite.test.unit.api.ResourceConfigSpec;
-import fr.univnantes.termsuite.test.unit.api.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSpec;
 import fr.univnantes.termsuite.test.unit.engines.YamlRuleSetIOSynonymicSpec;
 import fr.univnantes.termsuite.test.unit.engines.contextualizer.ContextualizerSpec;
@@ -106,8 +104,6 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	 * API
 	 */
 	ExtractorConfigIOSpec.class,
-	TerminoExtractorSpec.class,
-	PreprocessorSpec.class,
 	ResourceConfigSpec.class,
 
 	/*

@@ -3,6 +3,7 @@ package fr.univnantes.termsuite.test.func.api;
 import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,6 +17,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import fr.univnantes.termsuite.api.Preprocessor;
 import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.index.Terminology;
@@ -31,6 +33,38 @@ public class PreprocessorSpec {
 	public TemporaryFolder folder = new TemporaryFolder();
 
 	TXTCorpus corpus;
+	
+	
+	@Test
+	public void testToIndexedCorpusOnTXTCorpus() {
+		IndexedCorpus indexedCorpus = TermSuite.preprocessor()
+			.setTaggerPath(FunctionalTests.getTaggerPath())
+			.toIndexedCorpus(FunctionalTests.CORPUS1, 500000);
+
+		assertThat(indexedCorpus.getTerminology())
+			.containsTerm("n: énergie");
+	}
+	
+	
+	@Test
+	public void testToIndexedCorpusOnBlankCasStream() {
+		Stream<JCas> casStream = FunctionalTests.CORPUS1
+				.documents()
+				.map(doc -> Preprocessor.toCas(
+						doc, 
+						FunctionalTests.CORPUS1.readDocumentText(doc)));
+		Lang lang = FunctionalTests.CORPUS1.getLang();
+		
+		IndexedCorpus indexedCorpus = TermSuite.preprocessor()
+			.setTaggerPath(FunctionalTests.getTaggerPath())
+			.toIndexedCorpus(lang, casStream, 500000);
+
+		assertTrue(indexedCorpus.getTerminology().getTerms().size() > 0);
+		
+		assertThat(indexedCorpus.getTerminology())
+			.containsTerm("n: énergie");
+	}
+
 	
 	@Before
 	public void setup() {
