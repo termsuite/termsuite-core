@@ -50,7 +50,9 @@ import fr.univnantes.termsuite.test.func.api.FrenchWindEnergyProjectorSpec;
 import fr.univnantes.termsuite.test.func.api.FrenchWindEnergySpec;
 import fr.univnantes.termsuite.test.func.api.GermanWindEnergySpec;
 import fr.univnantes.termsuite.test.func.api.ItalianLauncherSpec;
+import fr.univnantes.termsuite.test.func.api.PreprocessorSpec;
 import fr.univnantes.termsuite.test.func.api.SemanticGathererSpec;
+import fr.univnantes.termsuite.test.func.api.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.func.api.TerminoFiltererSpec;
 import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
 import fr.univnantes.termsuite.test.func.tools.AlignerCLISpec;
@@ -67,6 +69,9 @@ import fr.univnantes.termsuite.test.func.tools.TerminologyExtractorCLISpec;
 	/*
 	 * API
 	 */
+	PreprocessorSpec.class,
+	TerminoExtractorSpec.class,
+	
 	// extraction engines
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,

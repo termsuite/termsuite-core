@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.unit.api;
+package fr.univnantes.termsuite.test.func.api;
 
 
 import static fr.univnantes.termsuite.test.asserts.TermSuiteAssertions.assertThat;
