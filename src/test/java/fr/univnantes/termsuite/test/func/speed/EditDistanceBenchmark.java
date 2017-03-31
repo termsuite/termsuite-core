@@ -1,4 +1,4 @@
-package fr.univnantes.termsuite.test.speed;
+package fr.univnantes.termsuite.test.func.speed;
 
 import java.io.IOException;
 import java.nio.file.Path;
