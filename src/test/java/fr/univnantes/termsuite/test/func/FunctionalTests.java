@@ -55,6 +55,7 @@ import fr.univnantes.termsuite.test.func.api.SemanticGathererSpec;
 import fr.univnantes.termsuite.test.func.api.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.func.api.TerminoFiltererSpec;
 import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
+import fr.univnantes.termsuite.test.func.speed.EditDistanceBenchmark;
 import fr.univnantes.termsuite.test.func.tools.AlignerCLISpec;
 import fr.univnantes.termsuite.test.func.tools.PreprocessorCLISpec;
 import fr.univnantes.termsuite.test.func.tools.TerminologyExtractorCLISpec;
@@ -92,6 +93,11 @@ import fr.univnantes.termsuite.test.func.tools.TerminologyExtractorCLISpec;
 	PreprocessorCLISpec.class,
 	TerminologyExtractorCLISpec.class,
 	AlignerCLISpec.class,
+	
+	/*
+	 * BM
+	 */
+	EditDistanceBenchmark.class,
 })
 public class FunctionalTests {
 	
