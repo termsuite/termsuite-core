@@ -469,7 +469,11 @@ public class BilingualAlignmentService {
 		} else if(terms.size() == 2) {
 			String indexingKey = TermUtils.getLemmaLemmaKey(terms.get(0).getTerm(), terms.get(1).getTerm());
 					
-			Optional<Term> recursiveTerm = sourceIndexes.getIndex(TermIndexType.ALLCOMP_PAIRS).getTerms(indexingKey).stream().max(TermProperty.FREQUENCY.getComparator(false));
+			Optional<Term> recursiveTerm = sourceIndexes.getIndex(TermIndexType.ALLCOMP_PAIRS)
+					.getTerms(indexingKey)
+					.stream()
+					.filter(t -> t.getSwtSize() == 2)
+					.max(TermProperty.FREQUENCY.getComparator(false));
 			
 			if(recursiveTerm.isPresent())
 				return alignSize2(

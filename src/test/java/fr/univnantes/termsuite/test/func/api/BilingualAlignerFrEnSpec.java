@@ -99,14 +99,10 @@ public class BilingualAlignerFrEnSpec {
 	
 	@Test
 	public void testTurbineEolienAAxesHorizontal() {
-		Term t1 = frTermino.getTerms().get("turbine éolien à axe horizontal");
+		Term t1 = frTermino.getTerms().get("napna: moteur éolien à axe horizontal");
 		List<TranslationCandidate> results = aligner.align(t1, 3, 2);
 		assertThat(results)
-			.hasSize(1)
-			.extracting("term.groupingKey", "method")
-			.contains(
-				tuple("nnn: horizontal-axis wind turbine", AlignmentMethod.COMPOSITIONAL)
-			);
+			.isEmpty();
 	}
 
 

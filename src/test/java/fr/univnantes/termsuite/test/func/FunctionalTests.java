@@ -49,6 +49,7 @@ import fr.univnantes.termsuite.test.func.api.EnglishWindEnergySpec;
 import fr.univnantes.termsuite.test.func.api.FrenchWindEnergyProjectorSpec;
 import fr.univnantes.termsuite.test.func.api.FrenchWindEnergySpec;
 import fr.univnantes.termsuite.test.func.api.GermanWindEnergySpec;
+import fr.univnantes.termsuite.test.func.api.ItalianLauncherSpec;
 import fr.univnantes.termsuite.test.func.api.SemanticGathererSpec;
 import fr.univnantes.termsuite.test.func.api.TerminoFiltererSpec;
 import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
@@ -70,6 +71,7 @@ import fr.univnantes.termsuite.test.func.tools.TerminologyExtractorCLISpec;
 	FrenchWindEnergySpec.class,
 	EnglishWindEnergySpec.class,
 	GermanWindEnergySpec.class,
+	ItalianLauncherSpec.class,
 	SemanticGathererSpec.class,
 	// projector
 	FrenchWindEnergyProjectorSpec.class,
@@ -103,6 +105,7 @@ public class FunctionalTests {
 	public static final Path DICO_PATH=PACKAGE_TEST.resolve(Paths.get("dico"));
 
 			
+	public static final Path CORPUS_COMPUTERSCI_PATH=PACKAGE_TEST.resolve("corpus").resolve("computersci");
 	public static final Path CORPUS_WESHORT_PATH=PACKAGE_TEST.resolve("corpus").resolve("weshort");
 	public static final Path CORPUS_WE_PATH=PACKAGE_TEST.resolve("corpus").resolve("we");
 	public static final Path CORPUS_MOBILE_PATH=PACKAGE_TEST.resolve("corpus").resolve("mobile");
@@ -132,6 +135,10 @@ public class FunctionalTests {
 		return new TXTCorpus(lang, getCorpusWEPath(lang));
 	}
 	
+	public static TXTCorpus getCorpusComputersci(Lang lang) {
+		return new TXTCorpus(lang, getCorpusComputersciPath(lang));
+	}
+
 	public static Path getCorpusWEShortPath(Lang lang) {
 		return CORPUS_WESHORT_PATH.resolve(lang.getName().toLowerCase()).resolve("txt");
 	}
@@ -158,6 +165,10 @@ public class FunctionalTests {
 	
 	public static Path getCorpusWEPath(Lang lang) {
 		return CORPUS_WE_PATH.resolve(lang.getName().toLowerCase()).resolve( "txt");
+	}
+	
+	public static Path getCorpusComputersciPath(Lang lang) {
+		return CORPUS_COMPUTERSCI_PATH.resolve(lang.getName().toLowerCase()).resolve("txt");
 	}
 
 	public static Path getTerminoWEShortPath(Lang lang) {
@@ -212,5 +223,6 @@ public class FunctionalTests {
 	public static Document getWindEnergyDocument(Lang lang, String filename) {
 		return new Document(lang, getCorpusWEPath(lang).resolve(filename).toUri().getPath());
 	}
+
 
 }

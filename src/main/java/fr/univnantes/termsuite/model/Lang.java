@@ -28,6 +28,7 @@ import fr.univnantes.termsuite.framework.LanguageException;
 
 public enum Lang {
 	FR("french", Locale.FRENCH),
+	IT("italian", Locale.ITALIAN),
 	EN("english", Locale.ENGLISH),
 	ES("spanish", Locale.FRENCH),
 	DE("german", Locale.GERMAN),

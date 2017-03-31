@@ -1,0 +1,581 @@
+a
+ab
+abdomino
+adéno
+adréno
+adria
+aéro	air
+afro
+agri
+agro
+algie
+algique
+allo
+amino
+ana
+andr
+andro
+aneuplo
+angi
+angio
+anthra
+anthropo
+anti
+anto
+anxio
+apo
+aréolo
+aroma
+arthr
+arthro
+astr
+astro
+audio
+auto
+axillo
+bi
+biblio
+bie
+bio
+blast
+blastique
+blasto
+brachy
+brom
+bromo
+bronch
+bronchio
+broncho
+c
+calc
+calco
+calori
+cancér
+cancéro
+carb
+carbo
+carcin
+carcino
+carde	coeur
+cardi	coeur
+cardie	coeur
+cardio	coeur
+cardique	coeur
+caryo
+cèle
+cèles
+célio
+cellulo	cellule
+centi
+centr	centre
+centrie	centre
+centrique	centre
+centrisme	centre
+centro	centre
+cépro
+cérébr	cerveau
+cérébro	cerveau
+cervico	cervical
+charactér
+charactéro
+chémo
+chimio	chimie
+chlor	chlore
+chloro	chlore
+chondr
+chondrie
+chondro
+chor
+choré
+choréo
+chori
+chorio
+choro
+chrom
+chromat
+chromato
+chrome
+chromie
+chromo
+chron
+chrono
+cide
+cinéma
+cinémato
+claustr
+claustro
+clinico
+clono
+co
+coelio
+cole
+coles
+coli
+colo
+comédo
+contr
+contra
+contre
+contro
+cortico
+cosmo
+crate	pouvoir
+cratie	pouvoir
+crine
+cry
+cryo
+crypto
+cule
+cules
+culteur
+cutanéo
+cycl
+cycle
+cyclo
+cyt
+cyte
+cyto
+de
+dé
+déci
+démo	peuple
+densit
+densito
+déonto
+dermat
+dermato
+dermo
+dés
+di
+diamino
+dosi
+drome
+dys
+écho
+éco
+ectasie
+ectomie
+edème
+électr
+électro
+embry	embryon
+embryo	embryon
+émie
+émique
+endo
+endocrino
+entéro
+entr
+entre
+épi
+épidémio
+éro
+érythro
+estro
+ethno
+exo
+extra
+ferro
+fibr
+fibro
+fluor
+fluoro
+fluro
+forme
+gastr
+gastro
+gén
+gène
+géné
+gènes
+génés
+génicité
+génique
+génit
+génito
+géno
+géo
+ghrapho
+glandulo
+gluc
+gluco
+glyc
+glyco
+gonado
+gramme
+graphe
+grapheur
+graphie
+graphique
+grapho
+gyn
+gynéco	femme
+gyno
+hecto
+hélio
+hém
+hémat
+hémato
+hémie
+hémo
+hépar
+héparo
+hépat
+hépato
+hétéro
+hippo
+hist
+histi
+histio
+histo
+homéo
+homo
+hyd
+hydr	eau
+hydro	eau
+hygiéno
+hyper
+hyphophys
+hypn
+hypno
+hypo
+hystér
+hystéro
+iatre
+iatrie
+iatro
+ide
+ïde
+ides
+ïdes
+immun
+immuno
+in
+indo
+inhomo
+inter
+intra
+iono
+ir
+iso
+kaleido
+kilo
+kin
+kine
+kines
+kinési
+kinésio
+lacto
+laparo
+léio
+leuc
+leuco
+lévo
+lio
+lipo
+lisso
+loco
+logie
+logies
+logique
+logiste
+logo
+logue
+logues
+lombo
+lymph
+lympho
+lyse
+lyte
+macrie
+macro
+mamm
+mamma
+mammo
+mane
+manie
+mast
+mastie
+masto
+mastoïd
+mastoïdo
+mate
+maxi
+maxillo
+mé
+médi
+média
+médico
+médio
+méga
+mégalo
+mène
+méno
+mér
+mère
+mérisme
+méro
+meta
+méta
+méthodo
+mètre
+métrie
+métrique
+métro
+mi
+micro
+milli
+mini
+mito
+mono
+morph
+morphe
+morphie
+morphique
+morphisme
+morpho
+mucéto
+multi
+muscul
+musculo
+my
+myc
+myce
+mycét
+mycète
+mycine
+myco
+myo
+né
+négato
+néo	nouveau
+neur
+neural
+neurie
+neuro
+névro
+nome
+nomie
+non
+nuclé	noyau
+nucléo	noyau
+ocul
+oculo
+oeso
+oestr
+oestro
+œstro
+olig
+oligo
+omni
+onc
+onch
+oncho
+onco
+onto
+onycho
+oo
+oophor
+oophoro
+ophtalm
+ophtalmo
+orchi
+orchid
+organ
+organo
+ortho
+ossi
+osté
+ostéo
+ostro
+ov
+ovar
+ovari
+ovario
+ovi
+ovo
+pan
+panto
+par
+para
+pariéto
+path
+pathe
+pathie
+patho
+pausé
+péd
+pède
+pédi
+pédie
+pédo
+pénie
+péri
+pexie
+phage
+phago
+pharmac
+pharmaco
+phén
+phénique
+phéno
+phénol
+phényl
+phil
+phile
+philes
+philo
+phobe
+phobie
+phon
+phone
+phonie
+phono
+phosph
+phosphat
+phosphato
+phospho
+photo
+physico
+physio
+phyt
+phyto
+plase
+plasie
+plasique
+plasme
+plasmino
+plastie
+plastique
+pleuro
+ploïde
+pluri
+pneumo	poumon
+pode	pied
+podo	pied
+pole
+poly
+poso
+post	après
+pré	avant
+préo
+pro	pour
+progesto
+prot
+protéin	protéine
+protéino	protéine
+protéo
+proto
+pseud
+pseudo
+psych
+psycho
+pyro
+quadr	quatre
+quadri	quatre
+r
+radi
+radio
+rapa
+re
+ré
+réacto	réaction, réacteur
+réflex	réflexe
+réflexo	réflexe
+rétin
+rétino
+retro
+rétro
+rhabd
+rhabdo
+rhumato
+ribo
+rithme
+scano
+scope
+scopie
+scopique
+scopol
+semi
+sémio
+séno
+séro
+sexo	sexe
+socio	
+soma
+somat
+somato
+some
+somie
+sono
+sophro
+sous
+soya
+spectr
+spectro
+spermo
+stat
+stéréo
+sterno
+stéroïd
+steroïdo
+stéroïdo
+stérone
+strep
+strepto
+sub
+sulfo
+super	super
+supéro	super
+sur
+technie	technique
+technique	technique
+techno	technique
+tel
+tél
+télé
+térato
+tétr
+tétra
+thelial
+thélial
+thelium
+thélium
+thérapie
+therm	température
+therme	température
+thermie	température
+thermo	température
+thoraco
+thromb
+thrombo
+tomie
+tomo
+tonine
+tope
+topo
+trano
+trans
+tri	trois
+tumor	tumeur
+tumori	tumeur
+tumoro	tumeur
+type
+typie
+typo
+ultra
+uni
+uno
+uro
+vas
+vascul	vaisseau
+vasculo	vaisseau
+vaso
+xén
+xéno
+zoaire
+zoo
+zyg
+zygo
+zygote
+zygotique
