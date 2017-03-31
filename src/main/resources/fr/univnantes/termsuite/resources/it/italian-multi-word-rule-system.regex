@@ -1,0 +1,68 @@
+################################################################################
+# Copyright 2015 - CNRS (Centre National de Recherche Scientifique)
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+################################################################################
+
+import fr.univnantes.termsuite.types.TermSuiteTypeSystem;
+use fr.univnantes.termsuite.types.WordAnnotation;
+set inline = false;
+
+
+matcher N: [category=="noun"];
+matcher Nn as N: [N | category=="name"];
+matcher Nnn as N: [Nn | category=="numeral"];
+matcher R: [category=="adverb"];
+matcher P: [category=="adposition" & subCategory=="preposition"];
+matcher Pde as P: [P & (lemma=="di" | lemma=="da")];
+matcher Pa as P: [P & lemma=="a"];
+matcher V: [category=="verb"];
+matcher Vinf as V: [category=="verb" & mood=="infinitive"];
+matcher Vbe as V: [category=="verb" & lemma=="essere"];
+matcher A: [category=="adjective"];
+matcher Vpp as A: [V & mood=="participle" & tense=="past"];
+matcher A2 as A: [A | Vpp];
+matcher A3 as A: [A | category=="numeral"];
+matcher C as C: /^(e|o)$/ ;
+matcher D as D: [(category=="determiner" | category=="article") & subCategory != "possessive"];
+matcher comma: /,/;
+matcher Og: /"|«/;
+matcher Fg: /"|»/;
+
+term "n": N;
+term "a": A;
+term "r": R;
+term "nn": N Nn;
+term "na": N A2 ;
+term "nra": N R+ A2;
+term "naa": N A2 A;
+term "naaa": N A2 A2 A;
+term "npn": N P ~D? N ;
+term "nnpn": N N P ~D? N;
+term "naca": N A2 C A;
+term "naca+": N A comma A C A;
+term "npna": N P N A;
+term "npnaa": N P N A A;
+term "npan": N P A3 N;
+term "napn1": N A2 P N;
+term "napan":  N A P A3 N;
+term "napna":  N A P N A3;
+term "nnca": N N C A; # éolienne bi- ou tripale
+term "nva": ~D? N Vbe A ;
+term "nvra": ~D? N Vbe R A ;

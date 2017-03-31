@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+  <map key="DET:def" value="definite" />
+  <map key="DET:indef" value="indefinite" />
+  <map key="PRE" value="preposition" />
+  <map key="PRE:det" value="preposition" />
+  <map key="PRO:demo" value="demonstrative" />
+  <map key="PRO:indef" value="indefinite" />
+  <map key="PRO:inter" value="interrogative" />
+  <map key="PRO:pers" value="personal" />
+  <map key="PRO:poss" value="possessive" />
+  <map key="PRO:refl" value="reflexive" />
+  <map key="PRO:rela" value="relative" />
+  <map key="SENT" value="sentence" />
+</mapping>
