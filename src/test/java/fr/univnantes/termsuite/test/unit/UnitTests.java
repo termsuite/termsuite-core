@@ -73,7 +73,6 @@ import fr.univnantes.termsuite.test.unit.engines.postproc.VariantScorerSpec;
 import fr.univnantes.termsuite.test.unit.engines.splitter.ManualSuffixDerivationDetecterSpec;
 import fr.univnantes.termsuite.test.unit.engines.splitter.SegmentationSpec;
 import fr.univnantes.termsuite.test.unit.export.TsvExporterSpec;
-import fr.univnantes.termsuite.test.unit.framework.TermSuiteResourceManagerSpec;
 import fr.univnantes.termsuite.test.unit.framework.service.TerminologyServiceSpec;
 import fr.univnantes.termsuite.test.unit.io.JsonTerminologyIOSpec;
 import fr.univnantes.termsuite.test.unit.io.SegmentationParserSpec;
@@ -128,12 +127,9 @@ import fr.univnantes.termsuite.test.unit.utils.TermUtilsSpec;
 	YamlRuleSetIOSpec.class,
 	YamlRuleSetIOSynonymicSpec.class,
 	
-
-	
 	/*
 	 * Framework
 	 */
-	TermSuiteResourceManagerSpec.class,
 	TerminologyServiceSpec.class,
 
 	/*

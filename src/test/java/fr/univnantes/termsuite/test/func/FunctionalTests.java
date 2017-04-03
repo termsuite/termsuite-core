@@ -54,6 +54,7 @@ import fr.univnantes.termsuite.test.func.api.PreprocessorSpec;
 import fr.univnantes.termsuite.test.func.api.SemanticGathererSpec;
 import fr.univnantes.termsuite.test.func.api.TerminoExtractorSpec;
 import fr.univnantes.termsuite.test.func.api.TerminoFiltererSpec;
+import fr.univnantes.termsuite.test.func.framework.TermSuiteResourceManagerSpec;
 import fr.univnantes.termsuite.test.func.io.JsonIOReturnSpec;
 import fr.univnantes.termsuite.test.func.speed.EditDistanceBenchmark;
 import fr.univnantes.termsuite.test.func.tools.AlignerCLISpec;
@@ -86,6 +87,13 @@ import fr.univnantes.termsuite.test.func.tools.TerminologyExtractorCLISpec;
 	BilingualAlignerDeEnSpec.class,
 	// filterer
 	TerminoFiltererSpec.class,
+	
+	/*
+	 * Framework
+	 */
+	TermSuiteResourceManagerSpec.class,
+	
+	
 	
 	/*
 	 * CLI
