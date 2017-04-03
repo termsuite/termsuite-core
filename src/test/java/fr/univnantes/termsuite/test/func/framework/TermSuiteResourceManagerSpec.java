@@ -19,7 +19,7 @@
  * under the License.
  *
  *******************************************************************************/
-package fr.univnantes.termsuite.test.unit.framework;
+package fr.univnantes.termsuite.test.func.framework;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.net.MalformedURLException;
