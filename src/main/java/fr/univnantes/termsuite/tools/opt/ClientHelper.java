@@ -99,6 +99,7 @@ public class ClientHelper {
 		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_DERIVATIVE_DISABLED);
 		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_NATIVE_DISABLED);
 		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_PREFIX_DISABLED);
+		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_SYNONYMS_DICO);
 		
 
 		client.declareFacultative(TermSuiteCliOption.GATHERER_DISABLE_MERGER);

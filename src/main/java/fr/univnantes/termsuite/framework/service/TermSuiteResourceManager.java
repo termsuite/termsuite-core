@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.framework.service;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
@@ -94,6 +95,14 @@ public class TermSuiteResourceManager {
 	}
 
 	public URL getResourceURL(ResourceType resourceType) {
+		if(config.getCustomResourcePathes().containsKey(resourceType)) {
+			try {
+				return config.getCustomResourcePathes().get(resourceType).toUri().toURL();
+			} catch (MalformedURLException e) {
+				throw new TermSuiteException(e);
+			}
+		}
+			
 		for(URL urlPrefix:config.getURLPrefixes()) {
 			URL candidateURL = resourceType.fromUrlPrefixUnchecked(urlPrefix, lang);
 			if(resourceExists(resourceType, urlPrefix, candidateURL))

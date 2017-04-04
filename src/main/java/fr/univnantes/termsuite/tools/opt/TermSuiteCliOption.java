@@ -69,6 +69,7 @@ public enum TermSuiteCliOption implements CliOption {
 	MORPHOLOGY_PREFIX_DISABLED("disable-prefix-splitting", 	null, OptType.T_NONE, "Disable morphological prefix splitting", Collections.EMPTY_LIST),
 	MORPHOLOGY_DERIVATIVE_DISABLED("disable-derivative-splitting", null, OptType.T_NONE, "Disable morphological derivative splitting", Collections.EMPTY_LIST),
 	MORPHOLOGY_NATIVE_DISABLED("disable-native-splitting", 	null, OptType.T_NONE, "Disable morphological native splitting", Collections.EMPTY_LIST),
+	MORPHOLOGY_SYNONYMS_DICO("synonyms-dico", 	null, 	OptType.T_FILE, 	"Custom synonyms dictionary for semantic variant detection.", 	Collections.EMPTY_LIST),
 
 	
 	// GATHERER 

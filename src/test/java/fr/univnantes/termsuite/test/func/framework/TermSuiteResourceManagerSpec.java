@@ -22,6 +22,9 @@
 package fr.univnantes.termsuite.test.func.framework;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,10 +33,12 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.rules.TemporaryFolder;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.julestar.uima.resources.MultimapFlatResource;
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.engines.gatherer.YamlRuleSet;
 import fr.univnantes.termsuite.framework.modules.LangModule;
@@ -70,6 +75,33 @@ public class TermSuiteResourceManagerSpec {
 
 	public TermSuiteResourceManager resourceMgr() {
 		return injector().getInstance(TermSuiteResourceManager.class);
+	}
+
+	@Rule
+	public TemporaryFolder folder = new TemporaryFolder();
+
+	
+	@Test
+	public void testLoadCustomResourcesPath() throws IOException {
+		Path dicoPath = Paths.get(folder.getRoot().getAbsolutePath(), "custom-dico");
+		resourceConfig.addCustomResourcePath(ResourceType.SYNONYMS, dicoPath);
+		
+		try(Writer writer = new FileWriter(dicoPath.toFile())) {
+			writer.write("tata\ttiti\n");
+			writer.write("tata\ttoto\n");
+			writer.write("tutu\ttoto\n");
+		}
+		
+		MultimapFlatResource dico = resourceMgr().get(
+				MultimapFlatResource.class, 
+				ResourceType.SYNONYMS);
+		
+		assertThat(dico.getValues("tata"))
+			.hasSize(2)
+			.contains("titi", "toto");
+		assertThat(dico.getValues("tutu"))
+			.hasSize(1)
+			.contains("toto");
 	}
 
 	@Test
