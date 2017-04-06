@@ -1,7 +1,8 @@
 #!/bin/sh
 #
-# Extracts a terminology from a textual corpus, keeps top 100 terms by frequency,
-# and export terminology to TSV with customized TSV columns.
+# Extracts a terminology from a textual corpus with semantic variants (synonyms),
+# keeps top 100 terms by frequency, and export terminology to TSV with
+# customized TSV columns.
 #
 # List of available properties and documentation for tsv output:
 #    http://termsuite.github.io/documentation/command-line-api/#TerminologyExtractorCLI-tsv-properties

@@ -69,7 +69,6 @@ public enum TermSuiteCliOption implements CliOption {
 	MORPHOLOGY_PREFIX_DISABLED("disable-prefix-splitting", 	null, OptType.T_NONE, "Disable morphological prefix splitting", Collections.EMPTY_LIST),
 	MORPHOLOGY_DERIVATIVE_DISABLED("disable-derivative-splitting", null, OptType.T_NONE, "Disable morphological derivative splitting", Collections.EMPTY_LIST),
 	MORPHOLOGY_NATIVE_DISABLED("disable-native-splitting", 	null, OptType.T_NONE, "Disable morphological native splitting", Collections.EMPTY_LIST),
-	MORPHOLOGY_SYNONYMS_DICO("synonyms-dico", 	null, 	OptType.T_FILE, 	"Custom synonyms dictionary for semantic variant detection.", 	Collections.EMPTY_LIST),
 
 	
 	// GATHERER 
@@ -80,6 +79,8 @@ public enum TermSuiteCliOption implements CliOption {
 	GATHERER_GRAPH_SIMILARITY_THRESHOLD("graphical-similarity-th", 	null, OptType.T_INT_OR_FLOAT, 	"Graphical similarity threshold", Collections.EMPTY_LIST),
 	GATHERER_SEMANTIC_NB_CANDIDATES("nb-semantic-candidates", 	null, 	OptType.T_INT, 	"Max number of semantic variants for each terms", Collections.EMPTY_LIST),
 	GATHERER_SEMANTIC_DISTANCE("semantic-distance", 			null, 	OptType.T_INT_OR_FLOAT, 	"Similarity measure used for semantic alignment.", Arrays.stream(SimilarityDistance.values()).map(Class::getSimpleName).collect(toList())),
+	GATHERER_SEMANTIC_SYNONYMS_DICO("synonyms-dico", 	null, 	OptType.T_FILE, 	"Custom synonyms dictionary for semantic variant detection.", 	Collections.EMPTY_LIST),
+	GATHERER_SEMANTIC_DICO_ONLY("semantic-dico-only", 			null, 	OptType.T_NONE, 	"Find semantic variants with the help of dictionary only, no alignment.", Collections.EMPTY_LIST),
 
 
 	// POST-PROCESSOR OPTIONS

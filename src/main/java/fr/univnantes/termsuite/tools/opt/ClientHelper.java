@@ -99,7 +99,6 @@ public class ClientHelper {
 		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_DERIVATIVE_DISABLED);
 		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_NATIVE_DISABLED);
 		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_PREFIX_DISABLED);
-		client.declareFacultative(TermSuiteCliOption.MORPHOLOGY_SYNONYMS_DICO);
 		
 
 		client.declareFacultative(TermSuiteCliOption.GATHERER_DISABLE_MERGER);
@@ -110,7 +109,11 @@ public class ClientHelper {
 				TermSuiteCliOption.GATHERER_SEMANTIC_DISTANCE,
 				TermSuiteCliOption.GATHERER_SEMANTIC_NB_CANDIDATES,
 				TermSuiteCliOption.GATHERER_SEMANTIC_SIMILAIRTY_TH,
-				TermSuiteCliOption.GATHERER_SEMANTIC_DISTANCE);
+				TermSuiteCliOption.GATHERER_SEMANTIC_DISTANCE,
+				TermSuiteCliOption.GATHERER_SEMANTIC_SYNONYMS_DICO,
+				TermSuiteCliOption.GATHERER_SEMANTIC_DICO_ONLY
+				);
+
 		
 		
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_DISABLED);
@@ -205,6 +208,7 @@ public class ClientHelper {
 		GathererOptions config = options.getGathererConfig();
 		config.setMergerEnabled(!client.isSet(TermSuiteCliOption.GATHERER_DISABLE_MERGER));
 		config.setSemanticEnabled(client.isSet(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC));
+		config.setSemanticDicoOnly(client.isSet(TermSuiteCliOption.GATHERER_SEMANTIC_DICO_ONLY));
 		
 		if(client.isSet(TermSuiteCliOption.GATHERER_DISABLE_GATHERING))
 			config.setEnabled(false);

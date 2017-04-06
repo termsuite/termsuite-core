@@ -31,6 +31,9 @@ public class GathererOptions  extends JsonConfigObject  {
 	@JsonProperty("merger-enabled")
 	private boolean mergerEnabled = true;
 
+	@JsonProperty("semantic-dico-only")
+	private boolean semanticDicoOnly = false;
+
 	@JsonProperty("semantic-similarity-th")
 	private double semanticSimilarityThreshold = 0.3;
 	
@@ -149,5 +152,13 @@ public class GathererOptions  extends JsonConfigObject  {
 	
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+	
+	public void setSemanticDicoOnly(boolean semanticDicoOnly) {
+		this.semanticDicoOnly = semanticDicoOnly;
+	}
+	
+	public boolean isSemanticDicoOnly() {
+		return semanticDicoOnly;
 	}
 }

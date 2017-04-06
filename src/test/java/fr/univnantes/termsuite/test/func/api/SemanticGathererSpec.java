@@ -1,5 +1,6 @@
 package fr.univnantes.termsuite.test.func.api;
 
+import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.junit.Assert.assertTrue;
@@ -27,8 +28,9 @@ public class SemanticGathererSpec {
 
 	private static IndexedCorpus corpus;
 
-	public static void extract(Lang lang) {
+	public static void extract(Lang lang, boolean dicoOnly) {
 		ExtractorOptions extractorOptions = TermSuite.getDefaultExtractorConfig(lang);
+		extractorOptions.getGathererConfig().setSemanticDicoOnly(dicoOnly);
 		extractorOptions.getGathererConfig().setSemanticEnabled(true);
 		extractorOptions.getGathererConfig().setMergerEnabled(false);
 		extractorOptions.getGathererConfig().setSemanticNbCandidates(5);
@@ -71,10 +73,43 @@ public class SemanticGathererSpec {
 		}
 	};
 
+	@Test
+	public void testVariationsFRWithDicoOnly() {
+		extract(Lang.FR, true);
+		List<RelationService> relations = UnitTests.getTerminologyService(corpus)
+				.relations()
+				.filter(RelationService::isSemantic)
+				.filter(RelationService::notInfered)
+				.collect(Collectors.toList());
+		
+		assertThat(relations)
+			.extracting(SYNONYM_EXTRACTOR)
+			.contains(
+//					tuple("na: lieu éloigner", "na: emplacement éloigner"),
+					tuple("na: coût global", "na: coût total")
+			)
+			;
+
+		/*
+		 * No distrib variants
+		 */
+		assertThat(relations.stream().filter(r -> !r.getBoolean(RelationProperty.IS_DICO)).collect(toList()))
+			.isEmpty();
+		
+		assertThat(relations)
+			.extracting(SYNONYM_EXTRACTOR_WITH_TYPE)
+			.contains(
+					tuple("na: coût global", "-", "dico", "na: coût total")
+			)
+			;
+
+		assertTrue("Expected number of relations between 3900 and 4000. Got: " + relations.size(),
+				relations.size() > 3900 && relations.size() < 4000);
+	}
 
 	@Test
 	public void testVariationsFR() {
-		extract(Lang.FR);
+		extract(Lang.FR, false);
 		List<RelationService> relations = UnitTests.getTerminologyService(corpus)
 				.relations()
 				.filter(RelationService::isSemantic)
@@ -119,7 +154,7 @@ public class SemanticGathererSpec {
 	
 	@Test
 	public void testVariationsEN() {
-		extract(Lang.EN);
+		extract(Lang.EN, false);
 
 		List<RelationService> relations = UnitTests.getTerminologyService(corpus)
 				.relations()
