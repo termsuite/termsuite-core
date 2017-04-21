@@ -9,15 +9,13 @@ public class PropertyHolderBase<U extends Enum<U> & Property<T>, T extends Prope
 	private static final String MSG_RANGE_NOT_COMPARABLE = "Range of property %s is not comparable";
 
 	private String propertyName;
-	private String propertyShortName;
 	private String jsonField;
 	private Class<?> range;
 	private String description;
 	
-	public PropertyHolderBase(String propertyName, String propertyShortName, String jsonField, Class<?> range, String description) {
+	public PropertyHolderBase(String propertyName, String jsonField, Class<?> range, String description) {
 		super();
 		this.propertyName = propertyName;
-		this.propertyShortName = propertyShortName;
 		this.jsonField = jsonField;
 		this.range = range;
 		this.description = description;
@@ -37,10 +35,6 @@ public class PropertyHolderBase<U extends Enum<U> & Property<T>, T extends Prope
 	
 	public Class<?> getRange() {
 		return range;
-	}
-	
-	public String getShortName() {
-		return propertyShortName;
 	}
 	
 	public boolean isNumeric() {

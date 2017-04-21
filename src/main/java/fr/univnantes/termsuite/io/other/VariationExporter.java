@@ -85,7 +85,7 @@ public class VariationExporter {
 
 	public String propertiesToString(Relation tv) {
 		return tv.getProperties().entrySet().stream()
-				.map(e -> String.format("%s=%s", e.getKey().getShortName(), e.getValue()))
+				.map(e -> String.format("%s=%s", e.getKey().getJsonField(), e.getValue()))
 				.collect(Collectors.joining(", "));
 	}
 

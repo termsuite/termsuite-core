@@ -345,7 +345,7 @@ public class ClientHelperSpec {
 	@Test
 	public void testExtractorOptionsWithRankingDesc() {
 		client.launch(args(
-				"--ranking-desc sp"
+				"--ranking-desc spec"
 				));
 		ExtractorOptions expected = defaults();
 		expected.getRankingConfig().setDesc(true);		

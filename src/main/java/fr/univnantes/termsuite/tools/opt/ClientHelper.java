@@ -191,7 +191,7 @@ public class ClientHelper {
 	private void ensureNumeric(CliOption opt, Property<?> property) {
 		if(property != null && !property.isNumeric()) {
 			CliUtil.throwException("\"%s\" is an invalid property for option --%s. Expected a number property.", 
-					property.getShortName(),
+					property.getJsonField(),
 					opt.getOptName()
 				);
 		}

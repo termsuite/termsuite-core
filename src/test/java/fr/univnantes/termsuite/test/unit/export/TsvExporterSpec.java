@@ -70,7 +70,7 @@ public class TsvExporterSpec {
 			.export(termino, writer);
 		TermSuiteAssertions.assertThat(writer.toString())
 			.hasLineCount(5)
-			.tsvLineEquals(1, "#","type", "gkey", "f")
+			.tsvLineEquals(1, "#","type", "key", "freq")
 			.tsvLineEquals(2, 1, "T", "t2", 2)
 			.tsvLineEquals(3, 2, "T", "t3", 3)
 			.tsvLineEquals(4, 2, "V[m]", "t1", 1)
@@ -98,7 +98,7 @@ public class TsvExporterSpec {
 		String string = writer.toString();
 		TermSuiteAssertions.assertThat(string)
 			.hasLineCount(4)
-			.tsvLineEquals(1, "#","type", "gkey", "f")
+			.tsvLineEquals(1, "#","type", "key", "freq")
 			.tsvLineEquals(2, 1, "T", "t2", 2)
 			.tsvLineEquals(3, 2, "T", "t3", 3)
 			.tsvLineEquals(4, 3, "T", "t1", 1)

@@ -73,9 +73,9 @@ public class TermSpecificityComputer extends SimpleEngine {
 						this.getClass(), 
 						String.format("Specificity of term set to %.2f [%s=%d, %s=%.2f, %s=%.2f]", 
 								term.getSpecificity(),
-								TermProperty.FREQUENCY.getShortName(), term.getFrequency(),
-								TermProperty.FREQUENCY_NORM.getShortName(), term.getFrequencyNorm()*1000,
-								TermProperty.GENERAL_FREQUENCY_NORM.getShortName(), term.getGeneralFrequencyNorm()*1000
+								TermProperty.FREQUENCY.getJsonField(), term.getFrequency(),
+								TermProperty.FREQUENCY_NORM.getJsonField(), term.getFrequencyNorm()*1000,
+								TermProperty.GENERAL_FREQUENCY_NORM.getJsonField(), term.getGeneralFrequencyNorm()*1000
 							));
 	}
 

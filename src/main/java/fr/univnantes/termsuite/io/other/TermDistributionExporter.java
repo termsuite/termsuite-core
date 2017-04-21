@@ -33,7 +33,7 @@ public class TermDistributionExporter {
 		try {
 			writer.write("term");
 			writer.write("\t");
-			writer.write(termProperties.stream().map(TermProperty::getShortName).collect(Collectors.joining("\t")));
+			writer.write(termProperties.stream().map(TermProperty::getJsonField).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
 			for(Term t: termino.terms().map(TermService::getTerm).collect(toList())) {

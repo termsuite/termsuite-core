@@ -51,7 +51,7 @@ public enum TermSuiteCliOption implements CliOption {
 	
 	
 	// PRE_FILTER
-	PRE_FILTER_PROPERTY("pre-filter-property", null, OptType.T_STRING, "Enables pre-gathering filtering based on given property.", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
+	PRE_FILTER_PROPERTY("pre-filter-property", null, OptType.T_STRING, "Enables pre-gathering filtering based on given property.", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
 	PRE_FILTER_MAX_VARIANTS_NUM("pre-filter-max-variants", null, OptType.T_INT, "The maximum number of variants to keep during pre-gathering filtering", Collections.EMPTY_LIST),
 	PRE_FILTER_THRESHOLD("pre-filter-th", null, OptType.T_INT_OR_FLOAT, "Threshold value of pre-gathering filter", Collections.EMPTY_LIST),
 	PRE_FILTER_TOP_N("pre-filter-top-n", null, OptType.T_INT, "N value for pre-gathering filtering over top N terms", Collections.EMPTY_LIST),
@@ -92,7 +92,7 @@ public enum TermSuiteCliOption implements CliOption {
 
 	
 	// POST_FILTER
-	POST_FILTER_PROPERTY("post-filter-property", 			null, OptType.T_STRING, "Enables post-gathering filtering based on given property. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
+	POST_FILTER_PROPERTY("post-filter-property", 			null, OptType.T_STRING, "Enables post-gathering filtering based on given property. ", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
 	POST_FILTER_KEEP_VARIANTS("post-filter-keep-variants", 	null, OptType.T_NONE, "Keep variants during post-gathering filtering even if they are to be filtered", Collections.EMPTY_LIST),
 	POST_FILTER_MAX_VARIANTS_NUM("post-filter-max-variants", null, OptType.T_INT, "The maximum number of variants to keep during post-gathering filtering", Collections.EMPTY_LIST),
 	POST_FILTER_THRESHOLD("post-filter-th", 				null, OptType.T_INT_OR_FLOAT, "Threshold value of post-gathering filter", Collections.EMPTY_LIST),
@@ -100,8 +100,8 @@ public enum TermSuiteCliOption implements CliOption {
 
 	
 	// RANKING
-	RANKING_DESC_PROPERTY("ranking-desc", null, 	OptType.T_STRING, "Sets the output ranking property in DESCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
-	RANKING_ASC_PROPERTY("ranking-asc", 	null, 	OptType.T_STRING, "Sets the output ranking property in ASCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
+	RANKING_DESC_PROPERTY("ranking-desc", null, 	OptType.T_STRING, "Sets the output ranking property in DESCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
+	RANKING_ASC_PROPERTY("ranking-asc", 	null, 	OptType.T_STRING, "Sets the output ranking property in ASCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
 	
 	// OUTPUT
 	TSV(	"tsv", 		null, 	OptType.T_FILE, 	"Outputs terminology to TSV file", Collections.EMPTY_LIST),
@@ -197,9 +197,9 @@ public enum TermSuiteCliOption implements CliOption {
 		List<String> properties = new ArrayList<>();
 		
 		for(TermProperty p:TermProperty.values())
-			properties.add(p.getShortName());
+			properties.add(p.getJsonField());
 		for(RelationProperty p:RelationProperty.values())
-			properties.add(p.getShortName());
+			properties.add(p.getJsonField());
 		
 		return properties;
 	}

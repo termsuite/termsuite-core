@@ -23,12 +23,8 @@ package fr.univnantes.termsuite.model;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
-
-import com.google.common.base.Joiner;
-import com.google.common.collect.Maps;
 
 /**
  * 
@@ -39,43 +35,29 @@ import com.google.common.collect.Maps;
  *
  */
 public enum TermProperty implements Property<Term> {
-	RANK("rank", "#", "rank", Integer.class, "The rank of the term assigned by TermSuite post-processor engine."),
-	IS_SINGLE_WORD("isSingleWord", "swt", "swt", Boolean.class, "Wether this term is single-word or not."),
-	DOCUMENT_FREQUENCY("documentFrequency", "dfreq", "dfreq", Integer.class, "The number of documents in corpus in which the term is occurring."),
-	FREQUENCY_NORM("frequencyNorm", "fnorm", "f_norm", Double.class, "The number of occurrences of the term in the corpus every 1000 words."),
-	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "generalFnorm", "gf_norm", Double.class, "The number of occurrences of the term in the general language corpus every 1000 words."),
-	SPECIFICITY("specificity", "sp", "spec", Double.class, "The weirdness ratio, i.e. the specificity of the term in the corpus in comparison to general language."),
-	FREQUENCY("frequency", "f", "freq", Integer.class, "The number of occurrences of the term in the corpus."),
-	ORTHOGRAPHIC_SCORE("OrthographicScore", "ortho", "ortho", Double.class, "The probability for the covered text of the term for being an actual term assigned by TermSuite post-processor engine."),
-	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", "ifreq", Integer.class, "The number of times a term occurrs in corpus as it is, i.e. not as any of its variant forms, assigned by TermSuite post-processor engine."),
-	INDEPENDANCE("Independance", "ind", "ind", Double.class, "The `" + INDEPENDANT_FREQUENCY.getPropertyName() + "` divided by `" + FREQUENCY + "`, assigned by TermSuite post-processor engine."),
-	PILOT("pilot", "pilot", "pilot", String.class, "The most frequent form of the term."),
-	LEMMA("lemma", "lm", "lemma", String.class, "The concatenation of the term's word lemmas."),
-	TF_IDF("tf-idf", "tfidf", "tfidf", Double.class, "`" + FREQUENCY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
-	SPEC_IDF("spec-idf", "specidf", "specidf", Double.class, "`" + SPECIFICITY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
-	GROUPING_KEY("groupingKey", "gkey", "key", String.class, "The unique id of the term, built on its pattern and its lemma."),
-	PATTERN("pattern", "p", "pattern", String.class, "The pattern of the term, i.e. the concatenation of syntactic labels of its words."),
-	SPOTTING_RULE("spottingRule", "rule", "rule", String.class, "The name of the UIMA Tokens Regex spotting rule that found the term in the corpus."), 
-	IS_FIXED_EXPRESSION("isFixedExpression", "fixedExp", "fixed_exp", Boolean.class, "Wether the term is a fixed expression."), 
-	SWT_SIZE("SwtSize", "swtSize", "swtSize", Integer.class, "The number of words composing the term that are single-words."), 
-	FILTERED("Filtered", "filtered", "filtered", Boolean.class, "Wether the term has been marked as filtered by TermSuite post-processor engine. Usually, such a term is not meant to be displayed."), 
-	DEPTH("Depth", "depth", "depth", Integer.class,"The minimum level of extensions of the term starting from a single-word term."),
+	RANK("rank", "rank", Integer.class, "The rank of the term assigned by TermSuite post-processor engine."),
+	IS_SINGLE_WORD("isSingleWord", "isSwt", Boolean.class, "Wether this term is single-word or not."),
+	DOCUMENT_FREQUENCY("documentFrequency", "dFreq", Integer.class, "The number of documents in corpus in which the term is occurring."),
+	FREQUENCY_NORM("frequencyNorm", "fNorm", Double.class, "The number of occurrences of the term in the corpus every 1000 words."),
+	GENERAL_FREQUENCY_NORM("generalFrequencyNorm", "gfNorm", Double.class, "The number of occurrences of the term in the general language corpus every 1000 words."),
+	SPECIFICITY("specificity", "spec",Double.class, "The weirdness ratio, i.e. the specificity of the term in the corpus in comparison to general language."),
+	FREQUENCY("frequency", "freq", Integer.class, "The number of occurrences of the term in the corpus."),
+	ORTHOGRAPHIC_SCORE("OrthographicScore", "ortho", Double.class, "The probability for the covered text of the term for being an actual term assigned by TermSuite post-processor engine."),
+	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", Integer.class, "The number of times a term occurrs in corpus as it is, i.e. not as any of its variant forms, assigned by TermSuite post-processor engine."),
+	INDEPENDANCE("Independance", "ind", Double.class, "The `" + INDEPENDANT_FREQUENCY.getPropertyName() + "` divided by `" + FREQUENCY + "`, assigned by TermSuite post-processor engine."),
+	PILOT("pilot", "pilot", String.class, "The most frequent form of the term."),
+	LEMMA("lemma", "lem", String.class, "The concatenation of the term's word lemmas."),
+	TF_IDF("tf-idf", "tfIdf", Double.class, "`" + FREQUENCY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
+	SPEC_IDF("spec-idf", "specIdf", Double.class, "`" + SPECIFICITY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
+	GROUPING_KEY("groupingKey", "key", String.class, "The unique id of the term, built on its pattern and its lemma."),
+	PATTERN("pattern", "pattern", String.class, "The pattern of the term, i.e. the concatenation of syntactic labels of its words."),
+	SPOTTING_RULE("spottingRule", "rule", String.class, "The name of the UIMA Tokens Regex spotting rule that found the term in the corpus."), 
+	IS_FIXED_EXPRESSION("isFixedExpression", "isFixedExp", Boolean.class, "Wether the term is a fixed expression."), 
+	SWT_SIZE("SwtSize", "swtSize", Integer.class, "The number of words composing the term that are single-words."), 
+	FILTERED("Filtered", "isFiltered", Boolean.class, "Wether the term has been marked as filtered by TermSuite post-processor engine. Usually, such a term is not meant to be displayed."), 
+	DEPTH("Depth", "depth", Integer.class,"The minimum level of extensions of the term starting from a single-word term."),
 	;
 	
-	private static Map<String, TermProperty> byNames = Maps.newConcurrentMap();
-	
-	static {
-		for(TermProperty p:TermProperty.values()) {
-			byNames.put(p.getShortName(), p);
-			byNames.put(p.getShortName().toLowerCase(), p);
-			byNames.put(p.getShortName().toUpperCase(), p);
-			byNames.put(p.getPropertyName(), p);
-			byNames.put(p.getPropertyName().toLowerCase(), p);
-			byNames.put(p.getPropertyName().toUpperCase(), p);
-			byNames.put(p.toString(), p);
-			byNames.put(p.toString().toLowerCase(), p);
-		}
-	}
 	
 	private PropertyHolderBase<TermProperty, Term> delegate;
 
@@ -85,8 +67,8 @@ public enum TermProperty implements Property<Term> {
 	}
 
 
-	private TermProperty(String propertyName, String propertyShortName, String jsonField, Class<?> range, String description) {
-		delegate = new PropertyHolderBase<>(propertyName, propertyShortName, jsonField, range, description);
+	private TermProperty(String propertyName, String jsonField, Class<?> range, String description) {
+		delegate = new PropertyHolderBase<>(propertyName, jsonField, range, description);
 	}
 	
 
@@ -106,13 +88,6 @@ public enum TermProperty implements Property<Term> {
 	public Class<?> getRange() {
 		return delegate.getRange();
 	}
-
-
-	@Override
-	public String getShortName() {
-		return delegate.getShortName();
-	}
-
 
 	@Override
 	public boolean isNumeric() {
@@ -143,23 +118,13 @@ public enum TermProperty implements Property<Term> {
 	}
 
 	public static TermProperty forName(String name) {
-		TermProperty termProperty = byNames.get(name);
-		if(termProperty != null)
-			return termProperty;
-		else
-			throw new IllegalArgumentException(
-				String.format(
-						"Bad term property name: %s. Allowed: %s", 
-						name,
-						Joiner.on(',').join(TermProperty.values())
-				)
-		);
+		return (TermProperty) Property.forName(name, TermProperty.values());
 	}
 
 	public static Optional<TermProperty> forNameOptional(String name) {
-		TermProperty termProperty = byNames.get(name);
-		if(termProperty != null)
-			return Optional.of(termProperty);
+		Optional<Property<Term>> opt = Property.forNameOptional(name, TermProperty.values());
+		if(opt.isPresent())
+			return Optional.of((TermProperty)opt.get());
 		else
 			return Optional.empty();
 	}
