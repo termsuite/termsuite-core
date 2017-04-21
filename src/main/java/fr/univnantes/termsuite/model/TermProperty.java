@@ -46,7 +46,7 @@ public enum TermProperty implements Property<Term> {
 	INDEPENDANT_FREQUENCY("IndependantFrequency", "iFreq", Integer.class, "The number of times a term occurrs in corpus as it is, i.e. not as any of its variant forms, assigned by TermSuite post-processor engine."),
 	INDEPENDANCE("Independance", "ind", Double.class, "The `" + INDEPENDANT_FREQUENCY.getPropertyName() + "` divided by `" + FREQUENCY + "`, assigned by TermSuite post-processor engine."),
 	PILOT("pilot", "pilot", String.class, "The most frequent form of the term."),
-	LEMMA("lemma", "lem", String.class, "The concatenation of the term's word lemmas."),
+	LEMMA("lemma", "lemma", String.class, "The concatenation of the term's word lemmas."),
 	TF_IDF("tf-idf", "tfIdf", Double.class, "`" + FREQUENCY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
 	SPEC_IDF("spec-idf", "specIdf", Double.class, "`" + SPECIFICITY + "` divided by `" + DOCUMENT_FREQUENCY + "`."),
 	GROUPING_KEY("groupingKey", "key", String.class, "The unique id of the term, built on its pattern and its lemma."),
