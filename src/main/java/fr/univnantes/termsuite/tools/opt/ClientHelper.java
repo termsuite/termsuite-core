@@ -118,9 +118,13 @@ public class ClientHelper {
 		
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_DISABLED);
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_INDEPENDANCE_TH);
+		client.declareFacultative(TermSuiteCliOption.POSTPROC_AFFIX_SCORE_TH);
+		client.declareFacultative(TermSuiteCliOption.POSTPROC_ORTHO_SCORE_TH);
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_VARIATION_SCORE_TH);
 		client.declareCannotAppearWhenCondition(TermSuiteCliOption.POSTPROC_DISABLED,
 				TermSuiteCliOption.POSTPROC_INDEPENDANCE_TH,
+				TermSuiteCliOption.POSTPROC_AFFIX_SCORE_TH,
+				TermSuiteCliOption.POSTPROC_ORTHO_SCORE_TH,
 				TermSuiteCliOption.POSTPROC_VARIATION_SCORE_TH);
 		
 		

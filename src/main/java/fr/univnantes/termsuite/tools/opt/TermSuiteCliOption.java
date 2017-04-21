@@ -87,7 +87,9 @@ public enum TermSuiteCliOption implements CliOption {
 	POSTPROC_DISABLED("disable-post-processing", 				null, OptType.T_NONE, "Disable post-gathering scoring and filtering processings", Collections.EMPTY_LIST),
 	POSTPROC_INDEPENDANCE_TH("postproc-independance-th", 		null, OptType.T_INT_OR_FLOAT, "Term independance score threshold. Terms under threshold are filtered out.", Collections.EMPTY_LIST),
 	POSTPROC_VARIATION_SCORE_TH("postproc-variation-score-th", 	null, OptType.T_INT_OR_FLOAT, "Filters out variations with scores under given threshold", Collections.EMPTY_LIST),
-	
+	POSTPROC_AFFIX_SCORE_TH("postproc-affix-score-th", 		null, OptType.T_INT_OR_FLOAT, "Minimal score for affix-score. Variations under that threshold are filtered out.", Collections.EMPTY_LIST),
+	POSTPROC_ORTHO_SCORE_TH("postproc-affix-score-th", 		null, OptType.T_INT_OR_FLOAT, "Minimal score for variataion orthographic score. Variations under that threshold are filtered out.", Collections.EMPTY_LIST),
+
 	
 	// POST_FILTER
 	POST_FILTER_PROPERTY("post-filter-property", 			null, OptType.T_STRING, "Enables post-gathering filtering based on given property. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
