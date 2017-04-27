@@ -6,10 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import fr.univnantes.termsuite.api.TermSuite;
-import fr.univnantes.termsuite.tools.AlignerCLI;
 import fr.univnantes.termsuite.tools.CommandLineClient;
-import fr.univnantes.termsuite.tools.PreprocessorCLI;
-import fr.univnantes.termsuite.tools.TerminologyExtractorCLI;
 import fr.univnantes.termsuite.tools.opt.CliOption;
 import fr.univnantes.termsuite.tools.opt.OptType;
 
@@ -21,15 +18,10 @@ import fr.univnantes.termsuite.tools.opt.OptType;
  * @author Damien Cram
  *
  */
-public class APIDocumentationMarkdownPrinter {
+public class CLIPrinterUtils {
 
-	public static void main(String[] args) {
-		printOptions(new TerminologyExtractorCLI());
-		printOptions(new PreprocessorCLI());
-		printOptions(new AlignerCLI());
-	}
 	
-	public static void doHelp(CommandLineClient client) {
+	static void doHelp(CommandLineClient client) {
 		System.out.format("%n%n%n### %s%n", client.getClass().getSimpleName());
 		MarkdownUtils.printId(client.getClass().getSimpleName());
 		
@@ -81,7 +73,7 @@ public class APIDocumentationMarkdownPrinter {
 		return String.format("[`--%s`](#%s)", opt.getOptName(), getOptId(client, opt));
 	}
 	
-	private static void printOptions(CommandLineClient client) {
+	static void printOptions(CommandLineClient client) {
 		client.configureOpts();
 		doHelp(client);
 	}
