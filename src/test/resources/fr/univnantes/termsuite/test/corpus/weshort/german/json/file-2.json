@@ -3,10 +3,10 @@
     "uri" : "/home/cram-d/git/termsuite-core/src/test/resources/fr/univnantes/termsuite/test/corpus/weshort/german/txt/file-2.txt",
     "off_in_s" : 0,
     "document_index" : 0,
-    "nb_documents" : 3,
+    "nb_documents" : 0,
     "document_size" : 0,
     "cumul_doc_size" : 0,
-    "corpus_size" : 93178,
+    "corpus_size" : 0,
     "last_segment" : false,
     "begin" : 0,
     "end" : 18612

@@ -165,7 +165,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		headers.add("#");
 		headers.add("type");
 		for(Property<?> p:properties)
-			headers.add(p.getShortName());
+			headers.add(p.getJsonField());
 		write(Joiner.on("\t").join(headers));
 		write("\n");
 	}

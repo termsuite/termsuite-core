@@ -30,7 +30,7 @@ public abstract class Ordering<T extends Enum<T> & Property<?>, U extends Proper
 		}
 		@Override
 		public String toString() {
-			return String.format("%s %s", property.getShortName(), ascending ? "asc" : "desc");
+			return String.format("%s %s", property.getJsonField(), ascending ? "asc" : "desc");
 		}
 	}
 	

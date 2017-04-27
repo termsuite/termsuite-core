@@ -93,7 +93,6 @@ public class SimpleWordSet implements SharedResourceObject {
 				}
 				this.elements = ImmutableSet.copyOf(this.elements);
 			} catch (Exception e) {
-				e.printStackTrace();
 				throw new ResourceInitializationException(e);
 			} finally {
 				IOUtils.closeQuietly(scanner);

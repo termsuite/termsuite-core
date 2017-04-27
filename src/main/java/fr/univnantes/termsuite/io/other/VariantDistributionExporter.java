@@ -35,7 +35,7 @@ public class VariantDistributionExporter  {
 			writer.write("\t");
 			writer.write("to");
 			writer.write("\t");
-			writer.write(relationProperties.stream().map(RelationProperty::getShortName).collect(Collectors.joining("\t")));
+			writer.write(relationProperties.stream().map(RelationProperty::getJsonField).collect(Collectors.joining("\t")));
 			writer.write("\n");
 
 			termino.relations()

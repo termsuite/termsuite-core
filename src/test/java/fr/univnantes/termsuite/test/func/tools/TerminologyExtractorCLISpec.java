@@ -172,7 +172,7 @@ public class TerminologyExtractorCLISpec {
 		assertThat(tsvPath.toFile()).exists();
 
 		TermSuiteAssertions.assertThat(FileUtils.readFile(tsvPath.toString(), Charset.defaultCharset()))
-			.tsvLineEquals(1, "#","type","pilot","f","dfreq","p", "rule", "graphSim")
+			.tsvLineEquals(1, "#","type","pilot","freq","dFreq","pattern", "rule", "graphSim")
 			.tsvLineEquals(2, "1","T","rotor","282","2", "N", "n", "")
 			;
 				

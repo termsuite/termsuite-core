@@ -389,14 +389,14 @@ public class JsonTerminologyIOSpec {
 		
 		Map<String,Object> relation = (Map<String,Object>)firstVariant.get("props");
 		assertThat(relation)
-			.containsEntry("vrules", Lists.newArrayList("variationRule1"))
+			.containsEntry("vRules", Lists.newArrayList("variationRule1"))
 			.containsEntry("isSyntag", true)
 			.doesNotContainKey("graphSim");
 		
 		assertThat((Map<String,Object>)secondVariant.get("props"))
 			.containsEntry("graphSim", 0.956)
 			.containsEntry("isGraph", true)
-			.doesNotContainKey("vrules");
+			.doesNotContainKey("vRules");
 		
 		List<?> occurrences = (List<?>)map.get("occurrences");
 		

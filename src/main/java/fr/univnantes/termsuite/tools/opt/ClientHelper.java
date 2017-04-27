@@ -109,14 +109,22 @@ public class ClientHelper {
 				TermSuiteCliOption.GATHERER_SEMANTIC_DISTANCE,
 				TermSuiteCliOption.GATHERER_SEMANTIC_NB_CANDIDATES,
 				TermSuiteCliOption.GATHERER_SEMANTIC_SIMILAIRTY_TH,
-				TermSuiteCliOption.GATHERER_SEMANTIC_DISTANCE);
+				TermSuiteCliOption.GATHERER_SEMANTIC_DISTANCE,
+				TermSuiteCliOption.GATHERER_SEMANTIC_SYNONYMS_DICO,
+				TermSuiteCliOption.GATHERER_SEMANTIC_DICO_ONLY
+				);
+
 		
 		
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_DISABLED);
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_INDEPENDANCE_TH);
+		client.declareFacultative(TermSuiteCliOption.POSTPROC_AFFIX_SCORE_TH);
+		client.declareFacultative(TermSuiteCliOption.POSTPROC_ORTHO_SCORE_TH);
 		client.declareFacultative(TermSuiteCliOption.POSTPROC_VARIATION_SCORE_TH);
 		client.declareCannotAppearWhenCondition(TermSuiteCliOption.POSTPROC_DISABLED,
 				TermSuiteCliOption.POSTPROC_INDEPENDANCE_TH,
+				TermSuiteCliOption.POSTPROC_AFFIX_SCORE_TH,
+				TermSuiteCliOption.POSTPROC_ORTHO_SCORE_TH,
 				TermSuiteCliOption.POSTPROC_VARIATION_SCORE_TH);
 		
 		
@@ -183,7 +191,7 @@ public class ClientHelper {
 	private void ensureNumeric(CliOption opt, Property<?> property) {
 		if(property != null && !property.isNumeric()) {
 			CliUtil.throwException("\"%s\" is an invalid property for option --%s. Expected a number property.", 
-					property.getShortName(),
+					property.getJsonField(),
 					opt.getOptName()
 				);
 		}
@@ -204,6 +212,7 @@ public class ClientHelper {
 		GathererOptions config = options.getGathererConfig();
 		config.setMergerEnabled(!client.isSet(TermSuiteCliOption.GATHERER_DISABLE_MERGER));
 		config.setSemanticEnabled(client.isSet(TermSuiteCliOption.GATHERER_ENABLE_SEMANTIC));
+		config.setSemanticDicoOnly(client.isSet(TermSuiteCliOption.GATHERER_SEMANTIC_DICO_ONLY));
 		
 		if(client.isSet(TermSuiteCliOption.GATHERER_DISABLE_GATHERING))
 			config.setEnabled(false);

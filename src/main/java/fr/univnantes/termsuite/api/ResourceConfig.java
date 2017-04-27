@@ -5,11 +5,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.uima.ResourceType;
 import fr.univnantes.termsuite.utils.FileUtils;
 
 /**
@@ -23,6 +26,7 @@ public class ResourceConfig {
 
 	private LinkedList<URL> urlPrefixes = new LinkedList<>();
 	
+	private Map<ResourceType, Path> customResourcePathes = new HashMap<>();
 	
 	public ResourceConfig addResourcePrefix(URL resourcePrefix) {
 		try {
@@ -33,6 +37,16 @@ public class ResourceConfig {
 		return this;
 	}
 
+	public ResourceConfig addCustomResourcePath(ResourceType resource, Path path) {
+		Preconditions.checkArgument(
+				!customResourcePathes.containsKey(resource), 
+				"A custom path is already set for resource %s", 
+				resource);
+		
+		customResourcePathes.put(resource, path);
+		return this;
+	}
+	
 	public ResourceConfig addDirectory(Path path) {
 		Preconditions.checkArgument(
 				path.toFile().exists(),
@@ -69,5 +83,9 @@ public class ResourceConfig {
 	
 	public List<URL> getURLPrefixes() {
 		return Collections.unmodifiableList(urlPrefixes);
+	}
+	
+	public Map<ResourceType, Path> getCustomResourcePathes() {
+		return customResourcePathes;
 	}
 }

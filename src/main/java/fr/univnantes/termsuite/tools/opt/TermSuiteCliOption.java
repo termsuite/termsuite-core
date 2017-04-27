@@ -51,7 +51,7 @@ public enum TermSuiteCliOption implements CliOption {
 	
 	
 	// PRE_FILTER
-	PRE_FILTER_PROPERTY("pre-filter-property", null, OptType.T_STRING, "Enables pre-gathering filtering based on given property.", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
+	PRE_FILTER_PROPERTY("pre-filter-property", null, OptType.T_STRING, "Enables pre-gathering filtering based on given property.", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
 	PRE_FILTER_MAX_VARIANTS_NUM("pre-filter-max-variants", null, OptType.T_INT, "The maximum number of variants to keep during pre-gathering filtering", Collections.EMPTY_LIST),
 	PRE_FILTER_THRESHOLD("pre-filter-th", null, OptType.T_INT_OR_FLOAT, "Threshold value of pre-gathering filter", Collections.EMPTY_LIST),
 	PRE_FILTER_TOP_N("pre-filter-top-n", null, OptType.T_INT, "N value for pre-gathering filtering over top N terms", Collections.EMPTY_LIST),
@@ -79,16 +79,20 @@ public enum TermSuiteCliOption implements CliOption {
 	GATHERER_GRAPH_SIMILARITY_THRESHOLD("graphical-similarity-th", 	null, OptType.T_INT_OR_FLOAT, 	"Graphical similarity threshold", Collections.EMPTY_LIST),
 	GATHERER_SEMANTIC_NB_CANDIDATES("nb-semantic-candidates", 	null, 	OptType.T_INT, 	"Max number of semantic variants for each terms", Collections.EMPTY_LIST),
 	GATHERER_SEMANTIC_DISTANCE("semantic-distance", 			null, 	OptType.T_INT_OR_FLOAT, 	"Similarity measure used for semantic alignment.", Arrays.stream(SimilarityDistance.values()).map(Class::getSimpleName).collect(toList())),
+	GATHERER_SEMANTIC_SYNONYMS_DICO("synonyms-dico", 	null, 	OptType.T_FILE, 	"Custom synonyms dictionary for semantic variant detection.", 	Collections.EMPTY_LIST),
+	GATHERER_SEMANTIC_DICO_ONLY("semantic-dico-only", 			null, 	OptType.T_NONE, 	"Find semantic variants with the help of dictionary only, no alignment.", Collections.EMPTY_LIST),
 
 
 	// POST-PROCESSOR OPTIONS
 	POSTPROC_DISABLED("disable-post-processing", 				null, OptType.T_NONE, "Disable post-gathering scoring and filtering processings", Collections.EMPTY_LIST),
 	POSTPROC_INDEPENDANCE_TH("postproc-independance-th", 		null, OptType.T_INT_OR_FLOAT, "Term independance score threshold. Terms under threshold are filtered out.", Collections.EMPTY_LIST),
 	POSTPROC_VARIATION_SCORE_TH("postproc-variation-score-th", 	null, OptType.T_INT_OR_FLOAT, "Filters out variations with scores under given threshold", Collections.EMPTY_LIST),
-	
+	POSTPROC_AFFIX_SCORE_TH("postproc-affix-score-th", 		null, OptType.T_INT_OR_FLOAT, "Minimal score for affix-score. Variations under that threshold are filtered out.", Collections.EMPTY_LIST),
+	POSTPROC_ORTHO_SCORE_TH("postproc-affix-score-th", 		null, OptType.T_INT_OR_FLOAT, "Minimal score for variataion orthographic score. Variations under that threshold are filtered out.", Collections.EMPTY_LIST),
+
 	
 	// POST_FILTER
-	POST_FILTER_PROPERTY("post-filter-property", 			null, OptType.T_STRING, "Enables post-gathering filtering based on given property. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
+	POST_FILTER_PROPERTY("post-filter-property", 			null, OptType.T_STRING, "Enables post-gathering filtering based on given property. ", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
 	POST_FILTER_KEEP_VARIANTS("post-filter-keep-variants", 	null, OptType.T_NONE, "Keep variants during post-gathering filtering even if they are to be filtered", Collections.EMPTY_LIST),
 	POST_FILTER_MAX_VARIANTS_NUM("post-filter-max-variants", null, OptType.T_INT, "The maximum number of variants to keep during post-gathering filtering", Collections.EMPTY_LIST),
 	POST_FILTER_THRESHOLD("post-filter-th", 				null, OptType.T_INT_OR_FLOAT, "Threshold value of post-gathering filter", Collections.EMPTY_LIST),
@@ -96,8 +100,8 @@ public enum TermSuiteCliOption implements CliOption {
 
 	
 	// RANKING
-	RANKING_DESC_PROPERTY("ranking-desc", null, 	OptType.T_STRING, "Sets the output ranking property in DESCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
-	RANKING_ASC_PROPERTY("ranking-asc", 	null, 	OptType.T_STRING, "Sets the output ranking property in ASCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getShortName).collect(toList())),
+	RANKING_DESC_PROPERTY("ranking-desc", null, 	OptType.T_STRING, "Sets the output ranking property in DESCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
+	RANKING_ASC_PROPERTY("ranking-asc", 	null, 	OptType.T_STRING, "Sets the output ranking property in ASCENDING order. ", TermProperty.numberValues().sorted().map(TermProperty::getJsonField).collect(toList())),
 	
 	// OUTPUT
 	TSV(	"tsv", 		null, 	OptType.T_FILE, 	"Outputs terminology to TSV file", Collections.EMPTY_LIST),
@@ -193,9 +197,9 @@ public enum TermSuiteCliOption implements CliOption {
 		List<String> properties = new ArrayList<>();
 		
 		for(TermProperty p:TermProperty.values())
-			properties.add(p.getShortName());
+			properties.add(p.getJsonField());
 		for(RelationProperty p:RelationProperty.values())
-			properties.add(p.getShortName());
+			properties.add(p.getJsonField());
 		
 		return properties;
 	}

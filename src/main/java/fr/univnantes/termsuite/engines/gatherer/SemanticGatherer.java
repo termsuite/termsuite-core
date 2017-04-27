@@ -184,7 +184,12 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						rel = buildDicoVariation(terminology, t1, t2);
 					}
 					
-					if(a2.getContext() != null && a1.getContext() != null) {
+					if(!options.isSemanticDicoOnly() 
+							&& a2.getContext() != null 
+							&& a1.getContext() != null
+							&& !a2.getContext().getEntries().isEmpty() 
+							&& !a1.getContext().getEntries().isEmpty() 
+							) {
 						pair = new Pair<>(a1, a2);
 						nbAlignmentsCounter.incrementAndGet();
 						Double value = alignmentScores.getUnchecked(pair);
@@ -193,6 +198,11 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						} else {
 							rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, true);
 							rel.setProperty(RelationProperty.SEMANTIC_SIMILARITY, value);
+						}
+					} else {
+						if(rel != null) {
+							rel.setProperty(RelationProperty.IS_DISTRIBUTIONAL, false);
+							rel.setProperty(RelationProperty.SEMANTIC_SIMILARITY, 0d);
 						}
 					}
 					
@@ -206,7 +216,6 @@ public class SemanticGatherer extends VariationTypeGatherer {
 						));
 					}
 				} // end for j
-
 				
 				// Add top distrib candidates to termindex
 				t1CandidateRelations
