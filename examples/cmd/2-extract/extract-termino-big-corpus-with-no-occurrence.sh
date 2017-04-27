@@ -8,13 +8,13 @@
 #    http://termsuite.github.io/documentation/command-line-api/
 
 
-java -Xms1g -Xmx8g -cp termsuite-core-3.0.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
-            -t /home/me/apps/TreeTagger \
-            -c /home/me/corpora/mycorpus/English/txt \
+java -Xms1g -Xmx8g -cp termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
             -l en \
             --no-occurrence \
             --enable-semantic-gathering \
             --capped-size 500000 \
-            --tsv "mytermino.tsv" \
+            --tsv $TSV_OUTPUT_FILE \
             --tsv-properties "p,pilot,sp,f,ind" \
             --info

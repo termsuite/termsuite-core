@@ -1,0 +1,9 @@
+output_dir: "/path/to/output/dir"
+corpora:
+  we: /path/to/wind-energy/corpus/
+  mobile: /path/to/mobile-technology/corpus/
+treetagger_home: /path/to/treetagger
+termsuite:
+  version: 3.0.2
+  # The dir where to find termsuite-core-*.jar
+  home: /path/to/termsuite/

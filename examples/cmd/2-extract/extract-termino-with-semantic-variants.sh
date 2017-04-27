@@ -7,12 +7,12 @@
 # List of available properties and documentation for tsv output:
 #    http://termsuite.github.io/documentation/command-line-api/#TerminologyExtractorCLI-tsv-properties
 
-java -Xms1g -Xmx8g -cp termsuite-core-3.0.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
-            -t /home/me/apps/TreeTagger \
-            -c /home/me/corpora/mycorpus/English/txt \
+java -Xms1g -Xmx8g -cp termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
             -l en \
             --enable-semantic-gathering \
-            --tsv "mytermino.tsv" \
+            --tsv $TSV_OUTPUT_FILE \
             --tsv-properties "pilot,f,sp,semScore,isDico,distrib" \
             --json "mytermino.json" \
             --info

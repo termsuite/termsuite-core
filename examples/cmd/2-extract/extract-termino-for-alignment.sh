@@ -4,9 +4,9 @@
 # with  from a textual corpus .
 #
 
-java -Xms1g -Xmx8g -cp termsuite-core-3.0.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
-            -t /home/me/apps/TreeTagger \
-            -c /home/me/corpora/mycorpus/English/txt \
+java -Xms1g -Xmx8g -cp termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
+            -t $TREETAGGER_HOME \
+            -c $CORPUS_PATH \
             -l en \
             --contextualize \
             --json "mytermino-en.json" \
