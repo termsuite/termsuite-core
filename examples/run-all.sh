@@ -4,8 +4,10 @@
 #
 
 
+
 for example in cmd/**/*.sh
 do
   echo "---"
-  echo "Running $example"
+  echo "Running $example $1"
+  ruby example-runner.rb $1 $example
 done

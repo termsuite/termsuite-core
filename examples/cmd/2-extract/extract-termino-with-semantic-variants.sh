@@ -9,8 +9,7 @@
 #  tell if the variant has been detected with a synonymic dictionary or with distributional alignments.
 # ---
 #
-# List of available properties and documentation for tsv output:
-#    http://termsuite.github.io/documentation/command-line-api/#TerminologyExtractorCLI-tsv-properties
+#
 
 java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
             -t $TREETAGGER_HOME \

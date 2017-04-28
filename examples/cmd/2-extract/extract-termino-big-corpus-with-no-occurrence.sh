@@ -10,8 +10,6 @@
 #  on-going termino by frequency.
 # ---
 #
-# List of all available options for TerminologyExtractorCLI:
-#    http://termsuite.github.io/documentation/command-line-api/
 
 
 java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \

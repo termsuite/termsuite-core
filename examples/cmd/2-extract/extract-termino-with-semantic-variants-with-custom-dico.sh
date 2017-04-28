@@ -6,12 +6,11 @@
 # excerpt: >
 #  Extracting semantic variants requires a synonyms dictionary. Due to licensing
 #  issues, the one packaged with TermSuite can be very poor for some languages. You
-#  might prefer to use your own dictionary with option `--synonyms-dico`. See [Packaged english dictionary](https://github.com/termsuite/termsuite-core/raw/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-synonyms.txt)
+#  might prefer to use your own dictionary with option `--synonyms-dico`. See TermSuite
+#  packaged [english dictionary](https://github.com/termsuite/termsuite-core/raw/master/src/main/resources/fr/univnantes/termsuite/resources/en/english-synonyms.txt)
 #  for an example of dictionary format.
 # ---
 #
-# List of available properties and documentation for tsv output:
-#    http://termsuite.github.io/documentation/command-line-api/#TerminologyExtractorCLI-tsv-properties
 
 java -Xms1g -Xmx8g -cp $TS_HOME/termsuite-core-$TS_VERSION.jar fr.univnantes.termsuite.tools.TerminologyExtractorCLI \
             -t $TREETAGGER_HOME \
