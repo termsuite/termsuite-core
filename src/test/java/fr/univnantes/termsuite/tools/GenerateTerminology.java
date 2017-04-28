@@ -24,9 +24,9 @@ public class GenerateTerminology {
 		 */
 		IndexedCorpus corpus = TermSuite.preprocessor()
 				.setTaggerPath(FunctionalTests.getTaggerPath())
-				.toTSV(FunctionalTests.getTsvPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
-				.toJSON(FunctionalTests.getJsonPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
-				.toXMI(FunctionalTests.getXmiPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.exportAnnotationsToTSV(FunctionalTests.getTsvPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.exportAnnotationsToJSON(FunctionalTests.getJsonPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.exportAnnotationsToXMI(FunctionalTests.getXmiPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
 				.toIndexedCorpus(txtCorpus, 5000000);
 		
 		/*

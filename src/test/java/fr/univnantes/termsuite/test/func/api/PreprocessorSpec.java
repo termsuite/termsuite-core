@@ -75,22 +75,24 @@ public class PreprocessorSpec {
 	public void testJSONOnCorpus1() {
 		TermSuite.preprocessor()
 			.setTaggerPath(FunctionalTests.getTaggerPath())
-			.toPreparedCorpusJSON(corpus, folder.getRoot().toPath());
+			.exportAnnotationsToJSON(folder.getRoot().toPath())
+			.run(corpus);
 		
 		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "file1.json").toFile()).exists();
 		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "file2.json").toFile()).exists();
-		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "dir1", "file3.json").toFile()).exists();
+		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "file3.json").toFile()).exists();
 	}
 	
 	@Test
 	public void testXMIOnCorpus1() {
 		TermSuite.preprocessor()
 			.setTaggerPath(FunctionalTests.getTaggerPath())
-			.toPreparedCorpusXMI(corpus, folder.getRoot().toPath());
+			.exportAnnotationsToXMI(folder.getRoot().toPath())
+			.run(corpus);
 		
 		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "file1.xmi").toFile()).exists();
 		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "file2.xmi").toFile()).exists();
-		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "dir1", "file3.xmi").toFile()).exists();
+		assertThat(Paths.get(folder.getRoot().getAbsolutePath(), "file3.xmi").toFile()).exists();
 	}
 
 	@Test

@@ -17,6 +17,8 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import com.google.common.base.Preconditions;
@@ -40,6 +42,8 @@ import fr.univnantes.termsuite.uima.readers.TSVCasSerializer;
 import fr.univnantes.termsuite.utils.JCasUtils;
 
 public class PreprocessorService {
+
+	private static final Logger logger = LoggerFactory.getLogger(PreprocessorService.class);
 
 	@Inject
 	private CorpusService corpusService;
@@ -99,7 +103,9 @@ public class PreprocessorService {
 
 	public JCas toTSVCas(JCas cas, Path filePath) {
 		try {
+			logger.debug("Exporting CAS to {}", filePath);
 			TSVCasSerializer.serialize(cas, new FileWriter(makeParentDirs(filePath).toFile()));
+			logger.debug("TSV CAS export succeeded");
 			return cas;
 		} catch (IOException e) {
 			throw new TermSuiteException(e);
@@ -108,7 +114,9 @@ public class PreprocessorService {
 
 	public JCas toXMICas(JCas cas, Path filePath) {
 		try {
+			logger.debug("Exporting CAS to {}", filePath);
 			XmiCasSerializer.serialize(cas.getCas(), new FileOutputStream(makeParentDirs(filePath).toFile()));
+			logger.debug("XMI CAS export succeeded");
 			return cas;
 		} catch (FileNotFoundException | SAXException e) {
 			throw new TermSuiteException(e);
@@ -117,7 +125,9 @@ public class PreprocessorService {
 
 	public JCas toJSONCas(JCas cas, Path filePath) {
 		try {
+			logger.debug("Exporting CAS to {}", filePath);
 			JsonCasSerializer.serialize(new FileWriter(makeParentDirs(filePath).toFile()), cas);
+			logger.debug("JSON CAS export succeeded");
 			return cas;
 		} catch (IOException e) {
 			throw new TermSuiteException(e);

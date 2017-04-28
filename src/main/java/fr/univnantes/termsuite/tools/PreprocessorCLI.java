@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.io.json.JsonOptions;
@@ -13,6 +16,8 @@ import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry point)
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(PreprocessorCLI.class);
 	
 	public PreprocessorCLI() {
 		super("Applies TermSuite's preprocessings to given text corpus.");
@@ -52,14 +57,24 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 		
 		TXTCorpus txtCorpus = clientHelper.getTxtCorpus();
 
-		if(isSet(TermSuiteCliOption.CAS_XMI))
-			preprocessor.toXMI(asDir(TermSuiteCliOption.CAS_XMI));
+		if(isSet(TermSuiteCliOption.CAS_XMI)) {
+			Path dir = asDir(TermSuiteCliOption.CAS_XMI);
+			preprocessor.exportAnnotationsToXMI(dir);
+			LOGGER.debug("Configuring XMI CAS export to directory {}", dir);
 
-		if(isSet(TermSuiteCliOption.CAS_TSV))
-			preprocessor.toTSV(asDir(TermSuiteCliOption.CAS_TSV));
+		}
 
-		if(isSet(TermSuiteCliOption.CAS_JSON))
-			preprocessor.toJSON(asDir(TermSuiteCliOption.CAS_JSON));
+		if(isSet(TermSuiteCliOption.CAS_TSV)) {
+			Path dir = asDir(TermSuiteCliOption.CAS_TSV);
+			preprocessor.exportAnnotationsToTSV(dir);
+			LOGGER.debug("Configuring TSV CAS export to directory {}", dir);
+		}
+
+		if(isSet(TermSuiteCliOption.CAS_JSON)) {
+			Path dir = asDir(TermSuiteCliOption.CAS_JSON);
+			preprocessor.exportAnnotationsToJSON(dir);
+			LOGGER.debug("Configuring JSON CAS export to directory {}", dir);
+		}
 
 		if(isSet(TermSuiteCliOption.PREPARED_TERMINO_JSON)) {
 			Path destJson = asPath(TermSuiteCliOption.PREPARED_TERMINO_JSON);
@@ -72,6 +87,7 @@ public class PreprocessorCLI extends CommandLineClient { // NO_UCD (public entry
 			}
 		} else 
 			// consume
+			LOGGER.debug("Consuming the stream with #count() as there is no single-file terminology export.");
 			preprocessor.asStream(txtCorpus).count();
 	}
 

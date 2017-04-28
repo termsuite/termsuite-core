@@ -16,6 +16,7 @@ import org.apache.uima.UIMAException;
 import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
+import org.apache.uima.cas.impl.XmiCasSerializer;
 import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -42,6 +43,8 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.uima.PipelineListener;
+import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
+import fr.univnantes.termsuite.uima.readers.TSVCasSerializer;
 import fr.univnantes.termsuite.utils.JCasUtils;
 import fr.univnantes.termsuite.utils.TermHistory;
 
@@ -55,6 +58,12 @@ public class Preprocessor {
 	private Optional<Boolean> documentLoggingEnabled = Optional.of(true);
 	private Optional<Boolean> fixedExpressionEnabled = Optional.of(false);
 
+
+	private Optional<Path> xmiPath = Optional.empty();
+	private Optional<Path> tsvPath = Optional.empty();
+	private Optional<Path> jsonPath = Optional.empty();
+
+	
 	private Path taggerPath;
 	private Optional<ResourceConfig> resourceOptions = Optional.empty();
 	private Optional<TermHistory> history = Optional.empty();
@@ -194,21 +203,10 @@ public class Preprocessor {
 		ImporterService importer = injector.getInstance(ImporterService.class);
 
 		
-		if(xmiPath.isPresent())
-			preparedStream = preparedStream.map(cas -> preprocService.toXMICas(
-					cas, 
-					toCasFile(xmiPath.get(), cas, "xmi")));
-		if(tsvPath.isPresent())
-			preparedStream = preparedStream.map(cas -> preprocService.toTSVCas(
-					cas, 
-					toCasFile(tsvPath.get(), cas, "tsv")));
-		if(jsonPath.isPresent())
-			preparedStream = preparedStream.map(cas -> preprocService.toJSONCas(
-					cas, 
-					toCasFile(jsonPath.get(), cas, "json")));
+		preparedStream = configureCASExport(preprocService, preparedStream);
 		
 		
-		
+//		
 		logger.info("Starting preprocessing pipeline");
 		preparedStream.forEach(importer::importCas);
 		
@@ -222,6 +220,22 @@ public class Preprocessor {
 		}
 		return indexedCorpus;
 	}
+
+	private Stream<JCas> configureCASExport(PreprocessorService preprocService, Stream<JCas> preparedStream) {
+		if(xmiPath.isPresent())
+			preparedStream = preparedStream.map(cas -> preprocService.toXMICas(
+					cas, 
+					toCasFile(xmiPath.get(), cas, "xmi")));
+		if(tsvPath.isPresent())
+			preparedStream = preparedStream.map(cas -> preprocService.toTSVCas(
+					cas, 
+					toCasFile(tsvPath.get(), cas, "tsv")));
+		if(jsonPath.isPresent())
+			preparedStream = preparedStream.map(cas -> preprocService.toJSONCas(
+					cas, 
+					toCasFile(jsonPath.get(), cas, "json")));
+		return preparedStream;
+	}
 	
 	private Path toCasFile(Path parentDestination, JCas cas, String newExtension) {
 
@@ -233,26 +247,24 @@ public class Preprocessor {
 
 		return resolve;
 	}
-
-	public XMICorpus toPreparedCorpusJSON(TXTCorpus textCorpus, Path jsonDir) {
-		final XMICorpus targetCorpus = new XMICorpus(textCorpus.getLang(), jsonDir, XMICorpus.JSON_PATTERN, XMICorpus.JSON_EXTENSION);
-		
-		asStream(textCorpus)
-			.forEach(cas -> asService(textCorpus.getLang()).consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
-		return targetCorpus;
+	
+	public void run(TXTCorpus textCorpus) {
+		asStream(textCorpus).count();
 	}
 
-	public XMICorpus toPreparedCorpusXMI(TXTCorpus textCorpus, Path xmiDir) {
-		final XMICorpus targetCorpus = new XMICorpus(textCorpus.getLang(), xmiDir, XMICorpus.XMI_PATTERN, XMICorpus.XMI_EXTENSION);
-		
-		asStream(textCorpus)
-			.forEach(cas -> asService(textCorpus.getLang()).consumeToTargetXMICorpus(cas, textCorpus, targetCorpus));
-		return targetCorpus;
-	}
-
+	/**
+	 * 
+	 * Returns this preprocessor as a stream of prepared CASes.
+	 * 
+	 * @param textCorpus
+	 * 			The input text corpus
+	 * @return
+	 * 			The stream of preprocessed CASes
+	 */
 	public Stream<JCas> asStream(TXTCorpus textCorpus) {
-		Stream<JCas> stream = asService(textCorpus).prepare(textCorpus);
-		return stream;
+		PreprocessorService asService = asService(textCorpus);
+		Stream<JCas> stream = asService.prepare(textCorpus);
+		return configureCASExport(asService, stream);
 	}
 	
 	private Optional<Path> preprocessedCorpusCachePath = Optional.empty();
@@ -265,7 +277,7 @@ public class Preprocessor {
 		return asService(lang, new CorpusMetadata());
 	}
 	
-	public PreprocessorService asService(TXTCorpus textCorpus) {
+	private PreprocessorService asService(TXTCorpus textCorpus) {
 		try {
 			return asService(
 					textCorpus.getLang(), 
@@ -275,7 +287,7 @@ public class Preprocessor {
 		}
 	}
 	
-	public PreprocessorService asService(Lang lang, CorpusMetadata corpusMetadata) {
+	private PreprocessorService asService(Lang lang, CorpusMetadata corpusMetadata) {
 		PreprocessingPipelineBuilder builder = PreprocessingPipelineBuilder
 				.create(lang, taggerPath)
 				.setNbDocuments(corpusMetadata.getNbDocuments())
@@ -321,22 +333,49 @@ public class Preprocessor {
 					new PreprocessingModule(lang, aae))
 				.getInstance(PreprocessorService.class);
 	}
-
-	private Optional<Path> xmiPath = Optional.empty();
-	private Optional<Path> tsvPath = Optional.empty();
-	private Optional<Path> jsonPath = Optional.empty();
 	
-	public Preprocessor toXMI(Path xmiPath) {
+	/**
+	 * Activates export of CAS files to xmi.
+	 * 
+	 * @param xmiPath
+	 * 			the path to directory where to write annotation files
+	 * @return
+	 * 		This preprocessor builder object
+	 * 
+	 * @see XmiCasSerializer
+	 */
+	public Preprocessor exportAnnotationsToXMI(Path xmiPath) {
 		this.xmiPath = Optional.of(xmiPath);
 		return this;
 	}
 
-	public Preprocessor toTSV(Path tsvPath) {
+	/**
+	 * Activates export of CAS files to tsv annotation format.
+	 * 
+	 * @param tsvPath
+	 * 			the path to directory where to write annotation files
+	 * @return
+	 * 		This preprocessor builder object
+	 * 
+	 * @see TSVCasSerializer
+	 */
+	public Preprocessor exportAnnotationsToTSV(Path tsvPath) {
 		this.tsvPath = Optional.of(tsvPath);
 		return this;
 	}
 
-	public Preprocessor toJSON(Path jsonPath) {
+	
+	/**
+	 * Activates export of CAS files to json annotation format.
+	 * 
+	 * @param tsvPath
+	 * 			the path to directory where to write annotation files
+	 * @return
+	 * 		This preprocessor builder object
+	 * 
+	 * @see JsonCasSerializer
+	 */
+	public Preprocessor exportAnnotationsToJSON(Path jsonPath) {
 		this.jsonPath = Optional.of(jsonPath);
 		return this;
 	}
