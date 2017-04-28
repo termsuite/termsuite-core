@@ -1,6 +1,6 @@
 #!/bin/sh
 # ---
-# title: Filtering: cleaning terminology before gathering step (`--pre-filter-*`)
+# title: "Filtering: cleaning terminology before gathering step (`--pre-filter-*`)"
 # excerpt: >
 #  Filtering terminology after the variant gathering step (`--post-filter-*`) is
 #  often the default requirement for users. Sometimes, it is clever to filter the terminology

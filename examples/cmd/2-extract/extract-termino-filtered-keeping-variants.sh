@@ -1,6 +1,6 @@
 #!/bin/sh
 # ---
-# title: Filtering: keeping term variants
+# title: "Filtering: keeping term variants"
 # excerpt: >
 #  Filtering terminology will often result in having few term variants detected
 #  in output terminology, because most term variants have low frequencies. You

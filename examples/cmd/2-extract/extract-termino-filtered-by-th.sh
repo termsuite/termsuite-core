@@ -1,6 +1,6 @@
 #!/bin/sh
 # ---
-# title: Filtering: cleaning by threshold value on any property
+# title: "Filtering: cleaning by threshold value on any property"
 # excerpt: >
 #  Terminology can be filtered on any property after variant gathering with
 #  `--post-filter-property` option. When given together with option `--post-filter-th`,

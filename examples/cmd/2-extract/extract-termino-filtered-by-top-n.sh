@@ -1,6 +1,6 @@
 #!/bin/sh
 # ---
-# title: Filtering: keeping only top n terms
+# title: "Filtering: keeping only top n terms"
 # excerpt: >
 #  Terminology can be filtered on any property after variant gathering with
 #  `--post-filter-property` option. When given together with option `--post-filter-top-n`,
