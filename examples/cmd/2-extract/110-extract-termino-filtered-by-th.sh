@@ -5,9 +5,9 @@
 #  Terminology can be filtered on any property after variant gathering with
 #  `--post-filter-property` option. When given together with option `--post-filter-th`,
 #  TermSuite will filter by threshold on given property.
-#  >
+#  <br>
 #  Any numeric property can be used when for post-propcessing filtering. See all [TermSuite properties](http://termsuite.github.io/documentation/properties/).
-#  >
+#  <br>
 #  For example, this launcher filters all term having `dFreq < 3`, i.e. appearing in
 #  less than 3 different document in the source corpus..
 # ---

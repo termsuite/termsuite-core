@@ -4,7 +4,7 @@
 # title: Debugging terminology extraction
 # excerpt: >
 #  You can activate logging to console with either `--info` or `--debug` (more verbose).
-#  >
+#  <br>
 #  There is also the possibility to get term-centered information with option
 #  `--watch`. The following launcher will print all pipeline information about term
 #  "offshore wind energy", even if it has been filtered. This is a very convenient tool

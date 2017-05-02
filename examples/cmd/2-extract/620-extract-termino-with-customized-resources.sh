@@ -8,7 +8,7 @@
 #  term frequencies in general language, morphology rules, etc). The main use case
 #  for this option is to elaborate linguistic ressources for a new language. Use customized
 #  linguistic resources with options `--resource-dir` or `--resource-jar`.
-#  >
+#  <br>
 #  See [TermSuite resources](http://termsuite.github.io/documentation/resources/) documentation
 #  and see how to easily produce your own custom resource directory or jar.
 # ---

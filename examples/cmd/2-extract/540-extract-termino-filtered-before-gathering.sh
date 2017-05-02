@@ -7,9 +7,9 @@
 #  before the variant gathering with `--pre-filter-property` option. One of the
 #  main use case for pre-filtering is to reduce the terminology size in amount of
 #  term variant gathering, thus accelerating the whole variant gathering step.
-#  >
+#  <br>
 #  Any numeric property can be used when for pre-propcessing filtering. See all [TermSuite properties](http://termsuite.github.io/documentation/properties/).
-#  >
+#  <br>
 #  For example, this launcher filters all term having `freq < 2` (hapaxes)
 #  before variant gathering. As a consequence, that will never be possible to
 #  detect term variants occurring exactly once. There can not be any

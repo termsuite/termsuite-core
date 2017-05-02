@@ -6,7 +6,7 @@
 #  corpus and export the preprocessed corpus as a terminology in its native format (one single output `.json`) for
 #  later reuse (e.g. by
 #  [TerminoExtractorCLI](http://termsuite.github.io/documentation/terminology-extractor-cli/)).
-#  >
+#  <br>
 #  **Note:** The prepared corpus in `*.json` format (i.e. one output directory containing
 #  one `file-i.json` annotation file per input `file-i.txt` input text document)
 #  is different from the prepared corpus in imported terminology `terminology.json`
