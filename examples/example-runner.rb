@@ -72,10 +72,15 @@ check_markdown_front_matter()
 %x{TS_VERSION=#{CFG["termsuite"]["version"]} \
 TS_HOME=#{CFG["termsuite"]["home"]} \
 TREETAGGER_HOME=/opt/treetagger \
-SYNONYMS_DICO=#{CFG["termsuite"]["resources"]} \
+SYNONYMS_DICO=#{CFG["resources"]["synonyms"]} \
 PREPARED_CORPUS_PATH=#{CFG["corpora"]["prepared"]} \
 TSV_OUTPUT_FILE=#{to_output_file("tsv")} \
+JSON_OUTPUT_FILE=#{to_output_file("json")} \
 CUSTOM_RESOURCE_DIR=#{CFG["resource_dir"]} \
+SOURCE_TERMINO_JSON=#{CFG["aligner"]["source_termino"]} \
+TARGET_TERMINO_JSON=#{CFG["aligner"]["target_termino"]} \
+SOURCE_TERM="#{CFG["aligner"]["source_term"]}" \
+BILINGUAL_DICO_PATH=#{CFG["aligner"]["dico"]} \
 PREPARED_CORPUS_AS_TERMINOLOGY_PATH=#{to_output_file("prepared.json")} \
 PREPARED_CORPUS_PATH_JSON=#{to_output_dir("prepared_json")} \
 PREPARED_CORPUS_PATH_XMI=#{to_output_dir("prepared_xmi")} \
