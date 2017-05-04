@@ -1,8 +1,8 @@
 #!/bin/sh
 #
 # ---
-# title: Translating french terms to english (and display top 5 candidates)
-# excerpt: >
+# title: Translating french terms to english (and print top 5 candidates)
+# excerpt: |
 #  You can translate domain-specific terms, i.e. terms that cannot be found in
 #  any general language bilingual dictionary, from one source language to another
 #  target language, based on:
