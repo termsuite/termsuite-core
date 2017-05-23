@@ -60,6 +60,8 @@ public class Term extends PropertyHolder<TermProperty> implements Comparable<Ter
 	
 	@Override
 	public boolean equals(Object obj) {
+		if(this == obj)
+			return true;
 		if (obj instanceof Term) 
 			return this.getString(TermProperty.GROUPING_KEY).equals(((Term) obj).getString(TermProperty.GROUPING_KEY));
 		else

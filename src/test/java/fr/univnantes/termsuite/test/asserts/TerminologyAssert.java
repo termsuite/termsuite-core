@@ -37,7 +37,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.assertj.core.api.AbstractAssert;
-import org.assertj.core.api.AbstractIterableAssert;
+import org.assertj.core.api.IterableAssert;
 import org.assertj.core.api.iterable.Extractor;
 import org.assertj.core.groups.Tuple;
 
@@ -220,7 +220,8 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		else
 			return Collections.EMPTY_SET;
 	}
-	public AbstractIterableAssert<?, ? extends Iterable<? extends Relation>, Relation> asTermVariationsHavingRule(String ruleName) {
+	
+	public IterableAssert<Relation> asTermVariationsHavingRule(String ruleName) {
 		Set<Relation> variations = Sets.newHashSet();
 		for(Relation v:actual.getRelations()) {
 			if(getVariationRules(v).contains(ruleName))
@@ -230,7 +231,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return assertThat(variations);
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends Relation>, Relation> asTermVariations(RelationType ralType, RelationType... ralTypes) {
+	public IterableAssert<Relation> asTermVariations(RelationType ralType, RelationType... ralTypes) {
 		EnumSet<RelationType> accepted = EnumSet.of(ralType, ralTypes);
 		Set<Relation> relations = actual.getRelations().stream()
 				.filter(r-> accepted.contains(r.getType()))
@@ -239,18 +240,20 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 				relations);
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends Term>, Term> asCompoundList() {
+	public IterableAssert<Term> asCompoundList() {
 		Set<Term> comouponds = actual.getTerms().values().stream()
 			.filter(t-> t.getWords().size() == 1 && t.getWords().get(0).getWord().isCompound())
 			.collect(toSet());
-		return assertThat(comouponds);
+		IterableAssert<Term> assertThat = assertThat(comouponds);
+		return assertThat;
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends String>, String> asMatchingRules() {
+	public IterableAssert<String> asMatchingRules() {
 		Set<String> matchingRuleNames = Sets.newHashSet();
 		for(Relation tv:actual.getRelations().stream().filter(r->r.getType() == RelationType.VARIATION).collect(toSet())) 
 			matchingRuleNames.addAll(getVariationRules(tv));
-		return assertThat(matchingRuleNames);
+		IterableAssert<String> assertThat = assertThat(matchingRuleNames);
+		return assertThat;
 	}
 
 	
@@ -285,7 +288,7 @@ public class TerminologyAssert extends AbstractAssert<TerminologyAssert, Termino
 		return this;
 	}
 
-	public AbstractIterableAssert<?, ? extends Iterable<? extends Relation>, Relation> getVariations(Term base) {
+	public IterableAssert<Relation> getVariations(Term base) {
 		return assertThat(UnitTests.outRels(actual, base));
 	}
 	
