@@ -29,5 +29,5 @@ matcher P: [category=="adposition" & subCategory=="preposition"];
 matcher A: [category=="adjective"];
 
 
-term "an": A A? N;
-term "nn": N P? N;
+rule "an": A A? N;
+rule "nn": N P? N;

@@ -267,7 +267,7 @@ dependencies {
 	compile 'fr.univ-nantes.julestar:uima-filter:1.1'
 	compile 'fr.univ-nantes.julestar:uima-mapper:1.1'
 	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.1'
-	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.3'
+	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.4'
 	compile 'fr.univ-nantes.julestar:uima-stemmer:1.1'
 	compile 'fr.univ-nantes.julestar:uima-toolbox:1.0'
 	

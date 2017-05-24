@@ -42,73 +42,73 @@ matcher D as D: [category=="article"];
 
 
 # from ruta
-term "n": N;
-term "a": A;
-term "r": R;
-term "an": A N;
-term "na": N A2;
-term "nna": N N A;	# ("pares motores elementales")
-term "naa": N A2 A2;
-term "naaa": N A2 A2 A2;
-term "ana": A N A;
-term "nacn": N A C N;	# ("obras públicas y transportes"), but often N A C N A
-term "napn": N A2 P ~D? N;
-term "npnn": N P N N2;	# noisy
-term "npn": N P ~D? N;
-term "npan": N P A N;
-term "npna": N P ~D? N A2;
-term "npncn": N P ~D? N C ~D? N;
-term "npnpn": N P ~D? N P ~D? N;
+rule "n": N;
+rule "a": A;
+rule "r": R;
+rule "an": A N;
+rule "na": N A2;
+rule "nna": N N A;	# ("pares motores elementales")
+rule "naa": N A2 A2;
+rule "naaa": N A2 A2 A2;
+rule "ana": A N A;
+rule "nacn": N A C N;	# ("obras públicas y transportes"), but often N A C N A
+rule "napn": N A2 P ~D? N;
+rule "npnn": N P N N2;	# noisy
+rule "npn": N P ~D? N;
+rule "npan": N P A N;
+rule "npna": N P ~D? N A2;
+rule "npncn": N P ~D? N C ~D? N;
+rule "npnpn": N P ~D? N P ~D? N;
 # from Annexes
-term "naapn": N A A2 P ~D? N;
-term "nara": N A R A2;	#  variant of N A
-term "napan": N A P A N;
-term "napana": N A P A N A;
-term "napanpn": N A P A N P ~D? N;
-term "napna": N A2 P ~D? N A2;
-term "napnpn": N A2 P ~D? N P ~D? N;
-term "napnpna": N A2 P ~D? N P ~D? N A;
-term "napnpnpn": N A P ~D? N P ~D? N P ~D? N;
-term "nra": N R A;	#  variant of N A
-term "nnn": N N N2;	#  ("turbinas tipo Darrieus")
-term "nnpna": N N2 P ~D? N A;	#  ("turbina darrieus de palas verticales")
-term "nnpnpn": N N2 P ~D? N P ~D? N;	#  ("valor umbral de final de carga"), noisy
-term "npana": N P A N A;
-term "npanpn": N P A N P ~D? N;
-term "npanpna": N P A N P ~D? N A;
-term "npnaa": N P ~D? N A A;
-term "npnapn": N P ~D? N A P ~D? N;
-term "npnapna": N P N A P N A;
-term "npnapnpn": N P ~D? N A P ~D? N P ~D? N;
-term "npnapnpna": N P ~D? N A P ~D? N P ~D? N A;	# rare
-term "npnra": N P ~D? N R A;	#  variant of N P N A
-term "npnpan": N P ~D? N P A N;
-term "npnpanpn": N P ~D? N P A N P ~D? N;
-term "npnpna": N P ~D? N P ~D? N A2;
-term "npnpnra": N P ~D? N P ~D? N R A;	#  variant of N P N P N A
-term "npnpnpn": N P ~D? N P ~D? N P ~D? N;
-term "npnpnpna": N P ~D? N P ~D? N P ~D? N A;
-term "npnpnpnpn": N P ~D? N P ~D? N P ~D? N P ~D? N;
-term "nnpn": N N2 P ~D? N;	# noisy
-term "nn": N N2;	# noisy, "turbina darrieus", "par motor" - ok
-term "napnn": N A P ~D? N N2;	# noisy
-term "napnaa": N A2 P ~D? N A A;
+rule "naapn": N A A2 P ~D? N;
+rule "nara": N A R A2;	#  variant of N A
+rule "napan": N A P A N;
+rule "napana": N A P A N A;
+rule "napanpn": N A P A N P ~D? N;
+rule "napna": N A2 P ~D? N A2;
+rule "napnpn": N A2 P ~D? N P ~D? N;
+rule "napnpna": N A2 P ~D? N P ~D? N A;
+rule "napnpnpn": N A P ~D? N P ~D? N P ~D? N;
+rule "nra": N R A;	#  variant of N A
+rule "nnn": N N N2;	#  ("turbinas tipo Darrieus")
+rule "nnpna": N N2 P ~D? N A;	#  ("turbina darrieus de palas verticales")
+rule "nnpnpn": N N2 P ~D? N P ~D? N;	#  ("valor umbral de final de carga"), noisy
+rule "npana": N P A N A;
+rule "npanpn": N P A N P ~D? N;
+rule "npanpna": N P A N P ~D? N A;
+rule "npnaa": N P ~D? N A A;
+rule "npnapn": N P ~D? N A P ~D? N;
+rule "npnapna": N P N A P N A;
+rule "npnapnpn": N P ~D? N A P ~D? N P ~D? N;
+rule "npnapnpna": N P ~D? N A P ~D? N P ~D? N A;	# rare
+rule "npnra": N P ~D? N R A;	#  variant of N P N A
+rule "npnpan": N P ~D? N P A N;
+rule "npnpanpn": N P ~D? N P A N P ~D? N;
+rule "npnpna": N P ~D? N P ~D? N A2;
+rule "npnpnra": N P ~D? N P ~D? N R A;	#  variant of N P N P N A
+rule "npnpnpn": N P ~D? N P ~D? N P ~D? N;
+rule "npnpnpna": N P ~D? N P ~D? N P ~D? N A;
+rule "npnpnpnpn": N P ~D? N P ~D? N P ~D? N P ~D? N;
+rule "nnpn": N N2 P ~D? N;	# noisy
+rule "nn": N N2;	# noisy, "turbina darrieus", "par motor" - ok
+rule "napnn": N A P ~D? N N2;	# noisy
+rule "napnaa": N A2 P ~D? N A A;
 
 # with VLadj
-term "narvpn": N A R VLadj P ~D? N;	# rare
-term "navpna": N A VLadj P ~D? N A;	# ok
-term "nvpnapn": N VLadj P ~D? N A P ~D? N;	# rare
+rule "narvpn": N A R VLadj P ~D? N;	# rare
+rule "navpna": N A VLadj P ~D? N A;	# ok
+rule "nvpnapn": N VLadj P ~D? N A P ~D? N;	# rare
 
 # added
-term "nva": ~D? N Vbe A;
-term "ncnpn": N C N P ~D? N;
-term "ncnpna": N C N P ~D? N A;
-term "acan": A C A N;
-term "nvaca": N V A C A;
-term "npncpn": N P ~D? N C P ~D? N;
-term "npnnpn": N P ~D? N N P ~D? N;
-term "npncpna": N P ~D? N C P ~D? N A;
-term "naca": N A C A;
+rule "nva": ~D? N Vbe A;
+rule "ncnpn": N C N P ~D? N;
+rule "ncnpna": N C N P ~D? N A;
+rule "acan": A C A N;
+rule "nvaca": N V A C A;
+rule "npncpn": N P ~D? N C P ~D? N;
+rule "npnnpn": N P ~D? N N P ~D? N;
+rule "npncpna": N P ~D? N C P ~D? N A;
+rule "naca": N A C A;
 
 # removed: some patterns extracted, but because of POS errors
 # term "npa": N P A;	# from Annexes
