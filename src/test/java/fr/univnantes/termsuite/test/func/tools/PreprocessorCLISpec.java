@@ -122,7 +122,7 @@ public class PreprocessorCLISpec {
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.hasNTerms(11521);
+			.hasNTerms(11529);
 		Term term = termindex.getTerms().get("nn: wind energy");
 		assertNull(term.getContext());
 	}

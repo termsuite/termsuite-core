@@ -182,7 +182,7 @@ public class GermanWindEnergySpec extends WindEnergySpec {
 	@Test
 	public void testTermWindenergie() {
 		assertThat(termino.getTerms().get("n: windenergie"))
-				.hasFrequency(588)
+				.hasFrequency(589)
 				.hasGroupingKey("n: windenergie")
 				.isCompound()
 				.hasCompoundType(CompoundType.NATIVE)
