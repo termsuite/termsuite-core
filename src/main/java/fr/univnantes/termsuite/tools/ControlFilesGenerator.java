@@ -114,7 +114,7 @@ public class ControlFilesGenerator {
 								// enforce cast because of travis build fail with openjdk8
 								RelationService rs = (RelationService)r;
 								double mean = harmonicMean.mean((double)rs.getFrom().getFrequency(), (double)rs.getTo().getFrequency());
-								return (Comparable<?>)mean;
+								return mean;
 							}
 						))
 				);
