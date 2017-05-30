@@ -111,7 +111,7 @@ public class ControlFilesGenerator {
 							.natural()
 							.reverse()
 							.onResultOf(r ->
-								harmonicMean.mean(r.getFrom().getFrequency(), r.getTo().getFrequency())
+								(Comparable<?>)harmonicMean.mean((double)r.getFrom().getFrequency(), (double)r.getTo().getFrequency())
 							))
 				);
 		}
