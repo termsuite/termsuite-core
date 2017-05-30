@@ -110,9 +110,13 @@ public class ControlFilesGenerator {
 					termino.variations(vType).sorted(Ordering
 							.natural()
 							.reverse()
-							.onResultOf(r ->
-								(Comparable<?>)harmonicMean.mean((double)r.getFrom().getFrequency(), (double)r.getTo().getFrequency())
-							))
+							.onResultOf(r -> {
+								// enforce cast because of travis build fail with openjdk8
+								RelationService rs = (RelationService)r;
+								double mean = harmonicMean.mean((double)rs.getFrom().getFrequency(), (double)rs.getTo().getFrequency());
+								return (Comparable<?>)mean;
+							}
+						))
 				);
 		}
 		
