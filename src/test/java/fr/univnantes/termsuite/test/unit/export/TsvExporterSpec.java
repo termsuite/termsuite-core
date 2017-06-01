@@ -18,6 +18,7 @@ import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.test.asserts.TermSuiteAssertions;
 import fr.univnantes.termsuite.test.mock.TermFactory;
 import fr.univnantes.termsuite.test.unit.UnitTests;
@@ -90,6 +91,26 @@ public class TsvExporterSpec {
 			.tsvLineEquals(4, 3, "T", "t1", 1)
 			;
 	}
+	
+
+	@Test
+	public void testTsvExportWithSourceProperty() {
+		TsvOptions tsvOptions = new TsvOptions();
+		tsvOptions.baseOrVariationTargetProperty(TermProperty.GROUPING_KEY);
+		tsvOptions.baseOrVariationTargetProperty(TermProperty.FREQUENCY);
+		tsvOptions.sourceProperty(TermProperty.GROUPING_KEY);
+		TermSuiteFactory.createTsvExporter(tsvOptions)
+			.export(termino, writer);
+		TermSuiteAssertions.assertThat(writer.toString())
+			.hasLineCount(5)
+			.tsvLineEquals(1, "#","type", "key", "freq", "source:key")
+			.tsvLineEquals(2, 1, "T", "t2", 2, "")
+			.tsvLineEquals(3, 2, "T", "t3", 3, "")
+			.tsvLineEquals(4, 2, "V[m]", "t1", 1, "t3")
+			.tsvLineEquals(5, 3, "T", "t1", 1, "")
+			;
+	}
+
 
 	@Test
 	public void testTsvExportNoVariant() {
