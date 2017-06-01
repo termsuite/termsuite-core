@@ -146,6 +146,7 @@ public class SemanticGatherer extends VariationTypeGatherer {
 		logger.debug("Removing {} exceeding semantic variations", exceedingVariations);
 	}
 
+	@SuppressWarnings("unchecked")
 	public void doSemanticVariation(SynonymicRule rule, TermIndex index) {
 		AtomicInteger nbDistribRelationsFound = new AtomicInteger(0);
 		AtomicInteger nbDicoRelationFound = new AtomicInteger(0);
@@ -208,6 +209,10 @@ public class SemanticGatherer extends VariationTypeGatherer {
 					
 					if(rel != null) {
 						t1CandidateRelations.add(rel);
+						if(!rel.isPropertySet(RelationProperty.VARIATION_RULES))
+							rel.setProperty(RelationProperty.VARIATION_RULES, new HashSet<>(1));
+						((Set<String>)rel.get(RelationProperty.VARIATION_RULES)).add(rule.getName());
+						
 						rel.setProperty(
 								RelationProperty.SEMANTIC_SCORE, 
 								computeScore(
