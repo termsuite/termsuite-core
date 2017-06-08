@@ -161,7 +161,7 @@ public class TerminologyExtractorCLISpec {
 		assertThat(tsvPath.toFile()).doesNotExist();
 		
 		launch(String.format("-t %s -c %s -l %s --tsv %s "
-				+ " --tsv-properties pilot,frequency,dfreq,pattern,spottingRule,graphSim"
+				+ " --tsv-properties pilot,src:pilot,frequency,dfreq,pattern,spottingRule,graphSim"
 				,
 				FunctionalTests.getTaggerPath(),
 				FunctionalTests.getCorpusWEShortPath(Lang.EN),
@@ -172,8 +172,8 @@ public class TerminologyExtractorCLISpec {
 		assertThat(tsvPath.toFile()).exists();
 
 		TermSuiteAssertions.assertThat(FileUtils.readFile(tsvPath.toString(), Charset.defaultCharset()))
-			.tsvLineEquals(1, "#","type","pilot","freq","dFreq","pattern", "rule", "graphSim")
-			.tsvLineEquals(2, "1","T","rotor","282","2", "N", "n", "")
+			.tsvLineEquals(1, "#","type","pilot","source:pilot","freq","dFreq","pattern", "rule", "graphSim")
+			.tsvLineEquals(2, "1","T","rotor", "", "282","2", "N", "n", "")
 			;
 				
 	}

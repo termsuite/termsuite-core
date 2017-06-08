@@ -214,8 +214,8 @@ dependencies {
 	// Test
 	testCompile "junit:junit:4.12"
 	testCompile "eu.codearte.catch-exception:catch-exception:1.4.4"
-	testCompile "org.assertj:assertj-core:2.0.0"
-	testCompile "org.mockito:mockito-core:1.10.19"
+	testCompile "org.assertj:assertj-core:3.8.0"
+	testCompile "org.mockito:mockito-core:2.8.9"
 
 	// Configure logging at runtime
 	compile "ch.qos.logback:logback-classic:1.1.7"
@@ -232,8 +232,8 @@ dependencies {
 	 * Warning: upgrading to uimafit-core:2.2.0 and uimaj-core:2.9.0
 	 * causes a ConcurrentModificationException in Lexer
 	 */
-	compile "org.apache.uima:uimaj-core:2.6.0"
-	compile "org.apache.uima:uimafit-core:2.1.0"
+	compile "org.apache.uima:uimaj-core:2.10.0"
+	compile "org.apache.uima:uimafit-core:2.3.0"
 
 
 	// Apache Common
@@ -248,7 +248,7 @@ dependencies {
 	compile "org.codehaus.groovy:groovy:2.4.4"
 
 	// Guava
-	compile "com.google.guava:guava:19.0"
+	compile "com.google.guava:guava:21.0"
 	
 
 	// Guice
@@ -262,13 +262,13 @@ dependencies {
 	compile "com.fasterxml.jackson.core:jackson-core:2.5.4"
 
 	// UIMA Components
-	compile 'fr.univ-nantes.julestar:uima-tree-tagger-wrapper:1.1'
-	compile 'fr.univ-nantes.julestar:uima-tokenizer:1.1'
-	compile 'fr.univ-nantes.julestar:uima-filter:1.1'
-	compile 'fr.univ-nantes.julestar:uima-mapper:1.1'
-	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.1'
-	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.2'
-	compile 'fr.univ-nantes.julestar:uima-stemmer:1.1'
+	compile 'fr.univ-nantes.julestar:uima-tree-tagger-wrapper:1.3'
+	compile 'fr.univ-nantes.julestar:uima-tokenizer:1.2'
+	compile 'fr.univ-nantes.julestar:uima-filter:1.2'
+	compile 'fr.univ-nantes.julestar:uima-mapper:1.2'
+	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.2'
+	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.4'
+	compile 'fr.univ-nantes.julestar:uima-stemmer:1.2'
 	compile 'fr.univ-nantes.julestar:uima-toolbox:1.0'
 	
 	// JCas type generation

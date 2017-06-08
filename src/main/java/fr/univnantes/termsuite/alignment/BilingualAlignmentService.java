@@ -453,6 +453,19 @@ public class BilingualAlignmentService {
 	}
 	
 	
+	/**
+	 * Runs bilingual alignment on a source term.
+	 * 
+	 * 
+	 * @param sourceTerm
+	 * 				The source term to align
+	 * @param nbCandidates
+	 * 				The maximum number of target translation candidates
+	 * @param minCandidateFrequency
+	 * 				The minimum frequency allowed for target translation candidates
+	 * @return
+	 * 			A ranked list of {@link TranslationCandidate}
+	 */
 	public List<TranslationCandidate> align(Term sourceTerm, int nbCandidates, int minCandidateFrequency) {
 		return alignSwtTermList(
 				sourceTermino.asTermService(sourceTerm).getSwts().collect(toList()), 

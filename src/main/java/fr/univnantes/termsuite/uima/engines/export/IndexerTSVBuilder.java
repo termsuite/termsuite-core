@@ -50,6 +50,8 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 
 import fr.univnantes.termsuite.framework.service.TerminologyService;
+import fr.univnantes.termsuite.io.tsv.TsvPropertyConfig;
+import fr.univnantes.termsuite.io.tsv.TsvPropertyType;
 import fr.univnantes.termsuite.model.Property;
 import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
@@ -65,7 +67,7 @@ import fr.univnantes.termsuite.utils.VariationUtils;
  */
 public class IndexerTSVBuilder extends AbstractTSVBuilder {
 
-	private List<Property<?>> properties;
+	private List<TsvPropertyConfig> properties;
 	
 	/**
 	 * Initializes a new instance using the specified output
@@ -73,7 +75,7 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	 * @param out
 	 *            The output writer.
 	 */
-	public IndexerTSVBuilder(Writer out, List<Property<?>> properties) {
+	public IndexerTSVBuilder(Writer out, List<TsvPropertyConfig> properties) {
 		super(out);
 		this.properties = properties;
 	}
@@ -114,12 +116,16 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 				&& termino.variationsFrom(variation.getTo()).findAny().isPresent())
 			tagBuilder.append("+");
 		line.add(tagBuilder.toString());
-		for(Property<?> p:properties) {
+		for(TsvPropertyConfig pconfig:properties) {
+			Property<?> p = pconfig.getProperty();
 			if(p instanceof RelationProperty) {
 				Object value = variation.getPropertyValueUnchecked((RelationProperty)p);
 				line.add(getPropertyValue(value));
 			} else if(p instanceof TermProperty) {
-				Object value = variation.getTo().getPropertyValueUnchecked((TermProperty)p);
+				Term term = pconfig.getType() == TsvPropertyType.BASE_TERM_OR_VARIATION_TARGET_TERM ?
+						variation.getTo()
+							: variation.getFrom();
+				Object value = term.getPropertyValueUnchecked((TermProperty)p);
 				line.add(getPropertyValue(value));
 			} else
 				line.add("");
@@ -134,9 +140,9 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 	private void appendTerm(Term t, String termType) throws IOException {
 		List<String> line = Lists.newArrayList();
 		line.add(termType);
-		for(Property<?> p:properties) {
-			if(p instanceof TermProperty) {
-				Object value = t.getPropertyValueUnchecked((TermProperty)p);
+		for(TsvPropertyConfig p:properties) {
+			if(p.getProperty() instanceof TermProperty && p.getType() == TsvPropertyType.BASE_TERM_OR_VARIATION_TARGET_TERM) {
+				Object value = t.getPropertyValueUnchecked((TermProperty)p.getProperty());
 				line.add(getPropertyValue(value));
 			} else
 				line.add("");
@@ -164,8 +170,12 @@ public class IndexerTSVBuilder extends AbstractTSVBuilder {
 		List<String> headers = Lists.newArrayList();
 		headers.add("#");
 		headers.add("type");
-		for(Property<?> p:properties)
-			headers.add(p.getJsonField());
+		for(TsvPropertyConfig config:properties) {
+			if(config.getType() == TsvPropertyType.BASE_TERM_OR_VARIATION_TARGET_TERM)
+				headers.add(config.getProperty().getJsonField());
+			else
+				headers.add("source:"+config.getProperty().getJsonField());
+		}
 		write(Joiner.on("\t").join(headers));
 		write("\n");
 	}

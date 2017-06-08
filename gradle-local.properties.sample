@@ -1,5 +1,5 @@
-ossrhUsername=toto
-ossrhPassword=thePasswd
+ossrh.username=toto
+ossrh.password=thePasswd
 developerId=id
 developerName=theName
 developerEmail=theMail

@@ -23,10 +23,13 @@
 
 package fr.univnantes.termsuite.tools;
 
+import static java.util.stream.Collectors.toList;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -36,7 +39,6 @@ import java.util.stream.Stream;
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Ordering;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
@@ -105,14 +107,19 @@ public class ControlFilesGenerator {
 		final HarmonicMean harmonicMean = new HarmonicMean();
 		for(VariationType vType:VariationType.values()) {
 			String pathname = directory.getAbsolutePath() + "/variations-" + vType.getShortName();
+			List<RelationService> sortedVariations = termino.variations(vType).collect(toList());
+			sortedVariations.sort(new Comparator<RelationService>() {
+				@Override
+				public int compare(RelationService o1, RelationService o2) {
+					double m1 = harmonicMean.mean(o1.getFrom().getFrequency(), o1.getTo().getFrequency());
+					double m2 = harmonicMean.mean(o2.getFrom().getFrequency(), o2.getTo().getFrequency());
+					return Double.compare(m2, m1);
+				}
+			});
+					
 			writeVariations(
 					pathname, 
-					termino.variations(vType).sorted(Ordering
-							.natural()
-							.reverse()
-							.onResultOf(r ->
-								harmonicMean.mean(r.getFrom().getFrequency(), r.getTo().getFrequency())
-							))
+					sortedVariations.stream()
 				);
 		}
 		

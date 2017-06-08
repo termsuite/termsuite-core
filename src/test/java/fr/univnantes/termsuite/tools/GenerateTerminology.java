@@ -11,6 +11,14 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 
+/**
+ * 
+ * A tools for re-generating test terminologies for alignement from 
+ * corpus Wind Energy (short version). 
+ * 
+ * @author Damien Cram
+ *
+ */
 public class GenerateTerminology {
 	public static void main(String[] args) throws IOException {
 		runPipeline(FunctionalTests.getCorpusWEShort(Lang.FR), FunctionalTests.getTerminoWEShortPath(Lang.FR));
@@ -24,9 +32,9 @@ public class GenerateTerminology {
 		 */
 		IndexedCorpus corpus = TermSuite.preprocessor()
 				.setTaggerPath(FunctionalTests.getTaggerPath())
-				.toTSV(FunctionalTests.getTsvPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
-				.toJSON(FunctionalTests.getJsonPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
-				.toXMI(FunctionalTests.getXmiPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.exportAnnotationsToTSV(FunctionalTests.getTsvPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.exportAnnotationsToJSON(FunctionalTests.getJsonPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
+				.exportAnnotationsToXMI(FunctionalTests.getXmiPreprocessedCorpusWEShortPath(txtCorpus.getLang()))
 				.toIndexedCorpus(txtCorpus, 5000000);
 		
 		/*

@@ -3,8 +3,6 @@ package fr.univnantes.termsuite.tools.opt;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,6 +35,8 @@ import fr.univnantes.termsuite.utils.TermHistory;
 
 public class ClientHelper {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ClientHelper.class);
+	private static final String SRC_PROPERTY_PREFIX = "src:";
+	private static final String SOURCE_PROPERTY_PREFIX = "source:";
 	private CommandLineClient client;
 	
 	public ClientHelper(CommandLineClient client) {
@@ -295,10 +295,16 @@ public class ClientHelper {
 		options.setShowVariants(!client.isSet(TermSuiteCliOption.TSV_HIDE_VARIANTS));
 
 		if(client.isSet(TermSuiteCliOption.TSV_PROPERTIES)) {
-			Collection<Property<?>> properties = new ArrayList<>();
-			for(String str:client.asList(TermSuiteCliOption.TSV_PROPERTIES)) 
-				properties.add(client.asProperty(str));
-			options.properties(properties);
+			for(String str:client.asList(TermSuiteCliOption.TSV_PROPERTIES)) {
+				if(str.startsWith(SRC_PROPERTY_PREFIX)) {
+					str = str.replaceFirst(SRC_PROPERTY_PREFIX, "");
+					options.sourceProperty(client.asProperty(str));
+				} else if(str.startsWith(SOURCE_PROPERTY_PREFIX)) {
+						str = str.replaceFirst(SOURCE_PROPERTY_PREFIX, "");
+						options.sourceProperty(client.asProperty(str));
+				} else
+					options.property(client.asProperty(str));
+			}
 		}
 		
 		options.showHeaders(!client.isSet(TermSuiteCliOption.TSV_HIDE_HEADER));

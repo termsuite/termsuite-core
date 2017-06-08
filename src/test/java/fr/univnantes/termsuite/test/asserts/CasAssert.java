@@ -33,7 +33,7 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.assertj.core.api.AbstractAssert;
-import org.assertj.core.api.AbstractListAssert;
+import org.assertj.core.api.ListAssert;
 import org.assertj.core.util.Lists;
 
 import com.google.common.base.Joiner;
@@ -82,8 +82,9 @@ public class CasAssert extends AbstractAssert<CasAssert, JCas> {
 				a.getCoveredText());
 	}
 
-	public AbstractListAssert<?, ? extends List<? extends Annotation>, Annotation> getAnnotations(Class<? extends Annotation> annotationClass) {
-		return assertThat(getAnnotationList(annotationClass));
+	public ListAssert<Annotation> getAnnotations(Class<? extends Annotation> annotationClass) {
+		ListAssert<Annotation> assertThat = assertThat(getAnnotationList(annotationClass));
+		return assertThat;
 	}
 
 	private List<Annotation> getAnnotationList(Class<?>... annotationClasses) {

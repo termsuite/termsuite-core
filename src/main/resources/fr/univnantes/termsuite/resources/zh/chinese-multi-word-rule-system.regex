@@ -26,4 +26,4 @@ set inline = false;
 
 matcher N: [category=="noun"];
 
-term "nn": N N;
+rule "nn": N N;

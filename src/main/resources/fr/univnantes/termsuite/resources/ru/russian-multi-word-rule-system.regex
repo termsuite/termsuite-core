@@ -38,25 +38,25 @@ matcher Ag as A: [A & case=="genitive"];
 matcher C: [category=="conjunction"];
 matcher R: [category=="adverb"];
 
-term "n": N;
-term "a": A;
-term "r": R;
-term "an": A2 N;
-term "npn": N P N ;	# noisy
-term "aan": A A N ;
-term "acan": A C A N ;
-term "aacan": A A C A N ;
-term "ann": A N Ng ;
-term "nn": N Ng;
-term "nnn": N Ng Ng;
-term "nan": N Ag Ng;
-term "npan": N P A3 N;	# noisy
+rule "n": N;
+rule "a": A;
+rule "r": R;
+rule "an": A2 N;
+rule "npn": N P N ;	# noisy
+rule "aan": A A N ;
+rule "acan": A C A N ;
+rule "aacan": A A C A N ;
+rule "ann": A N Ng ;
+rule "nn": N Ng;
+rule "nnn": N Ng Ng;
+rule "nan": N Ag Ng;
+rule "npan": N P A3 N;	# noisy
 # added
-term "nnnn": N Ng Ng Ng;
-term "nann": N Ag Ng Ng;
-term "nnan": N Ng Ag Ng;
-term "npann": N P A3 N N;	# noisy
-term "nva": N Vbe A2 ;
+rule "nnnn": N Ng Ng Ng;
+rule "nann": N Ag Ng Ng;
+rule "nnan": N Ng Ag Ng;
+rule "npann": N P A3 N N;	# noisy
+rule "nva": N Vbe A2 ;
 
 # removed comparing to ruta:
 # N Vpg - never matches, I can find no examples

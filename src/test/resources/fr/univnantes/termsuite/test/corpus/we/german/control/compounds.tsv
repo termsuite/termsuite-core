@@ -14922,7 +14922,6 @@ n: windpower	nat	wind:wind|power:power
 n: parkposition	nat	park:park|position:position
 n: indices	nat	indi:indien|ces:ces
 a: wochenenergiespeicher	nat	wochen:woche|energiespeicher:energiespeicher
-a: kunstdruck	nat	kunst:kunst|druck:druck
 n: abschaltzeitpunkte	nat	abschaltzeit:abschaltzeit|punkte:punkt
 n: mw-windenergieanlage	nat	mw:mw|wind:wind|energie:energie|anlage:anlage
 n: stromeinspeisungsgesetzes	nat	stromeinspeisungs:stromeinspeisung|gesetzes:gesetz
@@ -15800,7 +15799,6 @@ n: autobahn	neo	auto:auto|bahn:bahn
 n: befragungsstandort	nat	befragungs:befragung|stand:stand|ort:ort
 n: imagefaktor	nat	image:image|faktor:faktor
 a: konfliktpotenzial	nat	konflikt:konflikt|potenzial:potenzial
-n: windkraftk.a	nat	wind:wind|kraft:kraft|k.a:k.a
 n: luthertal	nat	luther:luther|tal:tal
 n: katasteramt	nat	kat:kat|aster:ast|amt:amt
 n: applikationsserver	nat	applikations:applikation|server:server

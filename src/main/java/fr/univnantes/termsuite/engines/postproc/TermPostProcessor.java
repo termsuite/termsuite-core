@@ -29,11 +29,9 @@ import fr.univnantes.termsuite.engines.prepare.IsExtensionPropertySetter;
 import fr.univnantes.termsuite.framework.AggregateEngine;
 import fr.univnantes.termsuite.framework.Parameter;
 import fr.univnantes.termsuite.framework.service.TerminologyService;
-import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.resources.PostProcessorOptions;
 
 /**
- * Turn a {@link Terminology} to a {@link ScoredModel}
  * 
  * @author Damien Cram
  *

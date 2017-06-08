@@ -34,7 +34,7 @@ public enum RelationProperty implements Property<Relation> {
 	IS_MORPHOLOGICAL("IsMorphological", "isMorph", Boolean.class, "When the relation is a variation, wether the variation implies morphosyntactic variations."), 
 
 	IS_SEMANTIC("IsSemantic", "isSem", Boolean.class, "When the relation is a variation, wether there is a semantic similarity between the two terms."), 
-	IS_DISTRIBUTIONAL("Distributional", "distrib", Boolean.class, "When the relation is a semantic relation, wheter the relation is of type \"distributional\", i.e. the variation has been found by context vector alignment."),
+	IS_DISTRIBUTIONAL("Distributional", "isDistrib", Boolean.class, "When the relation is a semantic relation, wheter the relation is of type \"distributional\", i.e. the variation has been found by context vector alignment."),
 	SEMANTIC_SIMILARITY("SemanticSimilarity", "semSim", Double.class, "When the relation is a semantic variation found by alignment, the similarity of the two context vectors of the two terms of the relation."), 
 	IS_DICO("Dico", "isDico", Boolean.class, "When the relation is a semantic relation, wheter the relation is of type \"dictionary\", i.e. the variation has been found with a synonymic dico."), 
 	SEMANTIC_SCORE("SemanticScore", "semScore", Double.class, "When the relation is a semantic variation, the score of pertinency of the variation. This property is set for all types of semantic variations, both from dico and distributional."), 

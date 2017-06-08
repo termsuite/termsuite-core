@@ -44,6 +44,50 @@ public class PreprocessorCLISpec {
 	}
 
 	
+	/*
+	 * Ensures that annotation files are produced even when there 
+	 * is no single-file terminology export that consumes the stream.
+	 */
+	@Test
+	public void testTerminoEnBasicAnnotationOnly() throws Exception {
+		
+		Path xmiAnnoPath = Paths.get(folder.getRoot().getAbsolutePath(), "xmi");
+	
+		assertThat(xmiAnnoPath.toFile()).doesNotExist();
+		
+		launch(String.format("-t %s -c %s -l %s --xmi-anno %s" ,
+				FunctionalTests.getTaggerPath(),
+				FunctionalTests.getCorpusWEShortPath(Lang.EN),
+				Lang.EN.getCode(),
+				xmiAnnoPath.toString()
+			));
+		
+		assertThat(xmiAnnoPath.toFile())
+			.exists()
+			.isDirectory();
+		
+
+		assertXMIAnnotationsFiles(xmiAnnoPath);
+
+		
+	}
+
+
+	private void assertXMIAnnotationsFiles(Path xmiAnnoPath) {
+		/*
+		 * Ensure there are three xmi file
+		 */
+		assertThat(xmiAnnoPath.toFile().listFiles())
+			.hasSize(3)
+			.extracting("name")
+			.contains("file-1.xmi")
+			.contains("file-2.xmi")
+			.contains("file-3.xmi")
+			;
+	}
+
+
+	
 	@Test
 	public void testTerminoEnBasic() throws Exception {
 		
@@ -73,11 +117,12 @@ public class PreprocessorCLISpec {
 		assertThat(xmiAnnoPath.toFile()).exists().isDirectory();
 		assertThat(jsonAnnoPath.toFile()).exists().isDirectory();
 		assertThat(tsvAnnoPath.toFile()).exists().isDirectory();
-		
+		assertXMIAnnotationsFiles(xmiAnnoPath);
+
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 		assertThat(termindex)
 			.containsTerm("nn: wind energy")
-			.hasNTerms(11521);
+			.hasNTerms(11529);
 		Term term = termindex.getTerms().get("nn: wind energy");
 		assertNull(term.getContext());
 	}

@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -60,11 +61,12 @@ public class TerminologyServiceSpec {
 		assertThat(terminologyService.inboundRelations(term3).collect(toList()))
 			.hasSize(2)
 			.extracting("from")
-			.containsOnly(term1, term4)
+			.contains(term1, term4)
 			;
-		assertThat(terminologyService.inboundRelations(term2).collect(toList()))
+		List<RelationService> collect = terminologyService.inboundRelations(term2).collect(toList());
+		assertThat(collect)
 			.hasSize(1)
-			.extracting("from").containsOnly(term1);
+			.extracting("from").contains(term1);
 
 		assertThat(terminologyService.inboundRelations(term4).collect(toList()))
 			.isEmpty();

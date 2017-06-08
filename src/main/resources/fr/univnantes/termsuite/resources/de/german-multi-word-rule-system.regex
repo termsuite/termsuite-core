@@ -36,28 +36,28 @@ matcher N: [category=="noun"];
 matcher C: [category=="conjunction"];
 matcher D: [category=="determiner" | category=="article"];
 
-term "n": N;
-term "a": A;
-term "r": R;
-term "an": A2 N;
-term "nn": N ~D? N;
-term "npn": N P ~D? N;
-term "aan": A2 A2 N;
-term "nan": N ~D? A2 N;
-term "npan": N P ~D? A2 N;
-term "ancn": A2 N C N;
-term "npncn": N P ~D? N C N;
-term "acan": A2 C A2 N;
+rule "n": N;
+rule "a": A;
+rule "r": R;
+rule "an": A2 N;
+rule "nn": N ~D? N;
+rule "npn": N P ~D? N;
+rule "aan": A2 A2 N;
+rule "nan": N ~D? A2 N;
+rule "npan": N P ~D? A2 N;
+rule "ancn": A2 N C N;
+rule "npncn": N P ~D? N C N;
+rule "acan": A2 C A2 N;
 # added
-term "ann": A2 N ~D? N;
-term "npnpn": N P ~D? N P ~D? N;
+rule "ann": A2 N ~D? N;
+rule "npnpn": N P ~D? N P ~D? N;
 #term "apn": A2 P N;
-term "nva": ~D? N Vbe A2 ;
-term "anpn": A2 N P ~D? N;
-term "ran": R A2 N;
-term "nnpn": N ~D? N P N;
-term "ncnn": N C N ~D? N;
-term "nncn": N ~D? N C N;
+rule "nva": ~D? N Vbe A2 ;
+rule "anpn": A2 N P ~D? N;
+rule "ran": R A2 N;
+rule "nnpn": N ~D? N P N;
+rule "ncnn": N C N ~D? N;
+rule "nncn": N ~D? N C N;
 
 # removed
 # term "npna": N P N A;	# very noisy
