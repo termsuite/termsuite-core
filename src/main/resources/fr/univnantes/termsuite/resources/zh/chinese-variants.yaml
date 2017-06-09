@@ -20,14 +20,8 @@
 #
 ################################################################################
 
-import fr.univnantes.termsuite.types.TermSuiteTypeSystem;
-use fr.univnantes.termsuite.types.WordAnnotation;
-set inline = false;
 
-matcher N: [category=="noun"];
-matcher A: [category=="adjective"];
-
-rule "n": N;
-rule "a": A;
-rule "nn": N N;
-rule "an": A N;
+"rule1":
+  source: N N
+  target: A N N
+  rule: s[0]==t[1] && s[1]==t[2]

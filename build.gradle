@@ -266,7 +266,7 @@ dependencies {
 	compile 'fr.univ-nantes.julestar:uima-tokenizer:1.2'
 	compile 'fr.univ-nantes.julestar:uima-filter:1.2'
 	compile 'fr.univ-nantes.julestar:uima-mapper:1.2'
-	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.2'
+	compile 'fr.univ-nantes.julestar:uima-chinese-segmenter:1.3'
 	compile 'fr.univ-nantes.julestar:uima-tokens-regex:1.4'
 	compile 'fr.univ-nantes.julestar:uima-stemmer:1.2'
 	compile 'fr.univ-nantes.julestar:uima-toolbox:1.0'
@@ -316,8 +316,6 @@ jar {
     }
 	
 	exclude "**/lv/**"
-	exclude "**/zh/**"
- 	exclude "**/da/**"
 
     // cannot exclude META-INF for groovy to run
 	from( configurations.runtime.findAll{it.getAbsolutePath().contains("org.codehaus.groovy")}.collect { it.isDirectory() ? it : zipTree(it) } ) {

@@ -3,5 +3,5 @@
 <properties>
   <entry key="name">TreeTagger's Chinese Parameter</entry>
   <entry key="encoding">utf-8</entry>
-  <entry key="file">zh.par</entry>
+  <entry key="file">chinese.par</entry>
 </properties>
