@@ -55,7 +55,7 @@ public class TerminologyExtractorCLISpec {
 		assertThat(jsonPath.toFile()).exists();
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 		assertTermIndex(termindex);
-		assertBetween(termindex.getTerms().keySet(), 2505, 2507);
+		assertBetween(termindex.getTerms().keySet(), 2505, 2510);
 		assertNull(termindex.getTerms().get("n: energy").getContext());
 	}
 
@@ -72,7 +72,7 @@ public class TerminologyExtractorCLISpec {
 		assertThat(jsonPath.toFile()).exists();
 		Terminology termindex = IndexedCorpusIO.fromJson(jsonPath).getTerminology();
 
-		assertBetween(termindex.getTerms().keySet(), 2505, 2507);
+		assertBetween(termindex.getTerms().keySet(), 2505, 2510);
 		assertTermIndex(termindex);
 		assertNull(termindex.getTerms().get("n: energy").getContext());
 	}
