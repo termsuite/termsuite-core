@@ -4,10 +4,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
+
+import com.google.common.io.Files;
 
 import fr.univnantes.termsuite.api.ExtractorOptions;
+import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.engines.contextualizer.MutualInformation;
 import fr.univnantes.termsuite.metrics.Jaccard;
@@ -16,6 +25,7 @@ import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.tools.CommandLineClient;
 import fr.univnantes.termsuite.tools.TermSuiteCliException;
 import fr.univnantes.termsuite.tools.opt.ClientHelper;
+import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
 
 public class ClientHelperSpec {
 
@@ -24,11 +34,19 @@ public class ClientHelperSpec {
 	private static final ExtractorOptions DEFAULTS = TermSuite.getDefaultExtractorConfig(Lang.EN);
 	private Lang lang = Lang.EN;
 	
+	@Rule
+	public TemporaryFolder folder = new TemporaryFolder();
+
 	@Before
 	public void setup() {
 		client = new CommandLineClient("") {
 			protected void run() throws Exception {}
 			public void configureOpts() {
+				declareFacultative(
+						TermSuiteCliOption.LANGUAGE);
+				declareFacultative(
+						TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
+
 				clientHelper.declareExtractorOptions();
 				clientHelper.declareHistory();
 			}
@@ -62,6 +80,41 @@ public class ClientHelperSpec {
 			.contains("wind power")
 			.contains("turbine");
 	}
+
+	@Test
+	public void testGetTXTCorpus() throws IOException {
+		Path dir = createTmpCorpus();
+
+
+		client.launch(args("-c "+dir+" -l fr"));
+
+		TXTCorpus corpus = helper.getTxtCorpus();
+		assertThat(corpus.getRootDirectory())
+			.exists().isDirectory()
+			.hasToString(dir.toString());
+	}
+	
+	@Test
+	public void testGetTXTCorpusRelativized() throws IOException {
+		Path dir = createTmpCorpus();
+		Path relDir = Paths.get(".").toAbsolutePath().relativize(dir);
+
+		client.launch(args("-c "+relDir+" -l fr"));
+
+		TXTCorpus corpus = helper.getTxtCorpus();
+		assertThat(corpus.getRootDirectory())
+			.exists().isDirectory()
+			.hasToString(relDir.toString());
+	}
+
+	private Path createTmpCorpus() throws IOException {
+		Path dir = Paths.get(folder.getRoot().getAbsolutePath(), "corpus");
+		dir.toFile().mkdirs();
+		Files.write("tata".getBytes(), dir.resolve("file1.txt").toFile());
+		Files.write("toto".getBytes(), dir.resolve("file2.txt").toFile());
+		return dir;
+	}
+
 
 	@Test
 	public void testParentOptionNotSetShouldFailPreFilter() {

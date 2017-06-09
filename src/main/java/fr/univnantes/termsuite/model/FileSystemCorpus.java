@@ -25,7 +25,7 @@ public abstract class FileSystemCorpus {
 
 	public FileSystemCorpus(Lang lang, Path rootDirectory, String pattern, String extension) {
 		super();
-		this.rootDirectory = rootDirectory.toAbsolutePath();
+		this.rootDirectory = rootDirectory;
 		this.lang = lang;
 		this.pattern = pattern;
 		this.extension = extension;

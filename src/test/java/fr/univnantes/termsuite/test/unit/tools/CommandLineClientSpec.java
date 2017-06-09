@@ -2,6 +2,7 @@ package fr.univnantes.termsuite.test.unit.tools;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -144,5 +145,13 @@ public class CommandLineClientSpec {
 //			.atLine(14, containsString("--explain"))
 			;
 		System.out.println(output);
+	}
+	
+	@Test
+	public void testAsPathWithRelativePaths() {
+		client.declareMandatory(TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
+		client.launch("-l", "fr", "-c", "C:\\tata\\toto");
+		Path p = client.asPath(TermSuiteCliOption.FROM_TXT_CORPUS_PATH);
+		assertEquals("C:\\tata\\toto", p.toString());
 	}
 }

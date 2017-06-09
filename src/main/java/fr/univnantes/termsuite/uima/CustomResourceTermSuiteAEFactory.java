@@ -13,10 +13,8 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import com.google.common.base.Preconditions;
 
 import fr.free.rocheteau.jerome.engines.Stemmer;
-import fr.univnantes.lina.uima.ChineseSegmenterResourceHelper;
-import fr.univnantes.lina.uima.engines.ChineseSegmenter;
+import fr.univnantes.lina.uima.ChineseSegmenterFactory;
 import fr.univnantes.lina.uima.engines.TreeTaggerWrapper;
-import fr.univnantes.lina.uima.models.ChineseSegmentResource;
 import fr.univnantes.lina.uima.models.TreeTaggerParameter;
 import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
 import fr.univnantes.lina.uima.tkregex.ae.TokenRegexAE;
@@ -225,35 +223,6 @@ public class CustomResourceTermSuiteAEFactory {
 		}
 	}
 
-	public static AnalysisEngineDescription createChineseTokenizerAEDesc()  {
-		try {
-			AnalysisEngineDescription ae = AnalysisEngineFactory.createEngineDescription(
-					ChineseSegmenter.class,
-					ChineseSegmenter.ANNOTATION_TYPE, "fr.univnantes.termsuite.types.WordAnnotation"
-				);
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					ChineseSegmenter.CHINESE_WORD_SEGMENTS, 
-					ChineseSegmentResource.class, 
-					ChineseSegmenterResourceHelper.getChineseWordSegments());
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					ChineseSegmenter.CHINESE_FOREIGN_NAME_SEGMENTS, 
-					ChineseSegmentResource.class, 
-					ChineseSegmenterResourceHelper.getForeignNameSegments());
-			ExternalResourceFactory.createDependencyAndBind(
-					ae,
-					ChineseSegmenter.CHINESE_NUMBER_SEGMENTS, 
-					ChineseSegmentResource.class, 
-					ChineseSegmenterResourceHelper.getNumberSegments());
-
-			return ae;
-		} catch(Exception e) {
-			throw new PreparationPipelineException(e);
-		}
-
-	}
-
 	public static AnalysisEngineDescription createCasStatCounterAEDesc(String statName)  {
 		try {
 			return AnalysisEngineFactory.createEngineDescription(
@@ -384,15 +353,17 @@ public class CustomResourceTermSuiteAEFactory {
 					mwtRules
 				);
 
-			ExternalResourceDescription allowedCharsRes = ExternalResourceFactory.createExternalResourceDescription(
-					CharacterFootprintTermFilter.class, 
-					getResourceURL(resourceConfig, ResourceType.ALLOWED_CHARS, lang));
-			
-			ExternalResourceFactory.bindResource(
-					ae,
-					RegexSpotter.CHARACTER_FOOTPRINT_TERM_FILTER, 
-					allowedCharsRes
-				);
+			if(lang != Lang.ZH) {
+				ExternalResourceDescription allowedCharsRes = ExternalResourceFactory.createExternalResourceDescription(
+						CharacterFootprintTermFilter.class, 
+						getResourceURL(resourceConfig, ResourceType.ALLOWED_CHARS, lang));
+				
+				ExternalResourceFactory.bindResource(
+						ae,
+						RegexSpotter.CHARACTER_FOOTPRINT_TERM_FILTER, 
+						allowedCharsRes
+						);
+			}
 
 			ExternalResourceDescription stopWordsRes = ExternalResourceFactory.createExternalResourceDescription(
 					DefaultFilterResource.class, 
