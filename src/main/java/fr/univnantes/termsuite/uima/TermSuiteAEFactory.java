@@ -4,6 +4,7 @@ import java.nio.file.Path;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 
+import fr.univnantes.lina.uima.ChineseSegmenterFactory;
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
@@ -58,7 +59,7 @@ public class TermSuiteAEFactory {
 	}
 
 	public static AnalysisEngineDescription createChineseTokenizerAEDesc()  {
-		return CustomResourceTermSuiteAEFactory.createChineseTokenizerAEDesc();		
+		return ChineseSegmenterFactory.createChineseSegmenterAE("fr.univnantes.termsuite.types.WordAnnotation");
 	}
 
 	public static AnalysisEngineDescription createCasStatCounterAEDesc(String statName)  {

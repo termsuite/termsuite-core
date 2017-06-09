@@ -44,6 +44,7 @@ import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.PipelineListenerAE;
 import fr.univnantes.termsuite.uima.PipelineResourceMgrs;
 import fr.univnantes.termsuite.uima.PreparationPipelineException;
+import fr.univnantes.termsuite.uima.TermSuiteAEFactory;
 import fr.univnantes.termsuite.utils.TermHistory;
 
 /**
@@ -122,7 +123,7 @@ public class PreprocessingPipelineBuilder {
 						corpusSize.orElse(0l)));
 		
 		if(lang == Lang.ZH)
-			aggregateAndReturn(CustomResourceTermSuiteAEFactory.createChineseTokenizerAEDesc());
+			aggregateAndReturn(TermSuiteAEFactory.createChineseTokenizerAEDesc());
 		else
 			aggregateAndReturn(CustomResourceTermSuiteAEFactory.createWordTokenizerAEDesc(resourceConfig, lang));
 		
