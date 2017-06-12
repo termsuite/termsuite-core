@@ -22,7 +22,7 @@ public class TXTCorpus extends FileSystemCorpus implements TextualCorpus {
 		return pathWalker(
 				getRootDirectory(), 
 				getPattern(), 
-				path -> new Document(getLang(),  path.toUri().getPath()));
+				path -> new Document(getLang(),  path.toString()));
 	}
 
 	@Override

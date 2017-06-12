@@ -239,10 +239,10 @@ public class FunctionalTests {
 	}
 
 	public static Document getMobileTechnologyDocument(Lang lang, String filename) {
-		return new Document(lang, getCorpusMobilePath(lang).resolve(filename).toUri().getPath());
+		return new Document(lang, getCorpusMobilePath(lang).resolve(filename).toString());
 	}
 	public static Document getWindEnergyDocument(Lang lang, String filename) {
-		return new Document(lang, getCorpusWEPath(lang).resolve(filename).toUri().getPath());
+		return new Document(lang, getCorpusWEPath(lang).resolve(filename).toString());
 	}
 
 
