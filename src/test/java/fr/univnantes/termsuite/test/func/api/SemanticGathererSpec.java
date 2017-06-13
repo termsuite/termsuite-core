@@ -133,8 +133,8 @@ public class SemanticGathererSpec {
 			.contains(
 //					tuple("na: lieu éloigner", "na: emplacement éloigner"),
 					tuple("na: coût global", "na: coût total"),
-					tuple("npn: cadre de étude", "npn: cadre de projet"),
-					tuple("na: batterie rechargeable", "na: batterie électrochimique")
+					tuple("npn: cadre de étude", "npn: cadre de projet")
+//					tuple("na: batterie rechargeable", "na: batterie électrochimique")
 			)
 			;
 
@@ -143,13 +143,13 @@ public class SemanticGathererSpec {
 			.contains(
 //					tuple("na: lieu éloigner", "distrib", "dico", "na: emplacement éloigner"),
 					tuple("na: coût global", "distrib", "dico", "na: coût total"),
-					tuple("npn: cadre de étude", "distrib", "-", "npn: cadre de projet"),
-					tuple("na: batterie rechargeable", "distrib", "-", "na: batterie électrochimique")
+					tuple("npn: cadre de étude", "distrib", "-", "npn: cadre de projet")
+//					tuple("na: batterie rechargeable", "distrib", "-", "na: batterie électrochimique")
 			)
 			;
 
-		assertTrue("Expected number of relations between 10500 and 10700. Got: " + relations.size(),
-				relations.size() > 10500 && relations.size() < 10700);
+		assertTrue("Expected number of relations between 5140 and 5160. Got: " + relations.size(),
+				relations.size() > 5140 && relations.size() < 5160);
 	}
 	
 	@Test
@@ -162,8 +162,8 @@ public class SemanticGathererSpec {
 				.filter(RelationService::notInfered)
 			.collect(Collectors.toList());
 		
-		assertTrue("Expected number of relations between 13600 and 13700. Got: "  +relations.size() ,
-				relations.size() > 13600 && relations.size() < 13800);
+		assertTrue("Expected number of relations between 5740 and 5760. Got: "  +relations.size() ,
+				relations.size() > 5740 && relations.size() < 5760);
 
 		assertThat(relations)
 			.extracting(SYNONYM_EXTRACTOR)

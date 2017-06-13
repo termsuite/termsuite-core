@@ -1,6 +1,7 @@
 package fr.univnantes.termsuite.engines.gatherer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.metrics.Cosine;
 import fr.univnantes.termsuite.metrics.SimilarityDistance;
@@ -137,6 +138,17 @@ public class GathererOptions  extends JsonConfigObject  {
 		return semanticSimilarityDistance;
 	}
 
+	@SuppressWarnings("unchecked")
+	public GathererOptions setSemanticSimilarityDistance(String semanticSimilarityDistance) {
+		Class<?> cls;
+		try {
+			cls = Class.forName(semanticSimilarityDistance);
+			Preconditions.checkArgument(SimilarityDistance.class.isAssignableFrom(cls), "Not a SimilarityDistance: %s", semanticSimilarityDistance);
+			return setSemanticSimilarityDistance((Class<? extends SimilarityDistance>)cls);
+		} catch (ClassNotFoundException e) {
+			throw new IllegalArgumentException("Could not load similarity distance class: " + semanticSimilarityDistance, e);
+		}
+	}
 	public GathererOptions setSemanticSimilarityDistance(Class<? extends SimilarityDistance> semanticSimilarityDistance) {
 		this.semanticSimilarityDistance = semanticSimilarityDistance;
 		return this;
