@@ -45,14 +45,13 @@ public class ChineseWindEnergySpec extends WindEnergySpec {
 	@Override
 	protected List<String> getSyntacticMatchingRules() {
 		return Lists.newArrayList(
-				"rule1"
 			);
 	}
 
 
 	@Override
 	protected List<String> getSyntacticNotMatchingRules() {
-		return Lists.newArrayList();
+		return Lists.newArrayList("rule1");
 	}
 
 	@Override
