@@ -12,7 +12,7 @@
     "enabled" : false,
     "scope" : 3,
     "coocc-frequency-th" : 2,
-    "association-rate" : "fr.univnantes.termsuite.engines.contextualizer.LogLikelihood"
+    "association-rate" : "fr.univnantes.termsuite.engines.contextualizer.MutualInformation"
   },
   "morphology" : {
     "enabled" : true,
@@ -30,6 +30,7 @@
   },
   "gatherer" : {
     "semantic-enabled" : false,
+    "semantic-similarity-distance" : "fr.univnantes.termsuite.metrics.Cosine",
     "graphical-enabled" : true,
     "graphical-similarity-th" : 0.95,
     "max-class-size" : 2000,
