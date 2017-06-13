@@ -182,16 +182,17 @@ public class PreprocessorSpec {
 				System.getProperty("user.dir"), 
 				FunctionalTests.CORPUS1_PATH.toString(), 
 				"file2.txt");
-		assertThat(cas1).hasUrl(path1.toString());
+		Path currentDirectory = Paths.get("").toAbsolutePath();
+		assertThat(cas1).hasUrl(currentDirectory.relativize(path1).toString());
 		Path path2 = Paths.get(
 				System.getProperty("user.dir"), 
 				FunctionalTests.CORPUS1_PATH.toString(), 
 				"file1.txt");
-		assertThat(cas2).hasUrl(path2.toString());
+		assertThat(cas2).hasUrl(currentDirectory.relativize(path2).toString());
 		Path path3 = Paths.get(
 				System.getProperty("user.dir"), 
 				FunctionalTests.CORPUS1_PATH.toString(), 
 				"dir1","file3.txt");
-		assertThat(cas3).hasUrl(path3.toString());
+		assertThat(cas3).hasUrl(currentDirectory.relativize(path3).toString());
 	}
 }
