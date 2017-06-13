@@ -2,6 +2,8 @@ package fr.univnantes.termsuite.tools;
 
 import java.nio.file.Path;
 
+import org.slf4j.LoggerFactory;
+
 import fr.univnantes.termsuite.api.IndexedCorpusIO;
 import fr.univnantes.termsuite.api.Preprocessor;
 import fr.univnantes.termsuite.api.TXTCorpus;
@@ -65,6 +67,8 @@ import fr.univnantes.termsuite.tools.opt.TermSuiteCliOption;
  */
 public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (public entry point)
 
+	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(TerminologyExtractorCLI.class);
+	
 	public TerminologyExtractorCLI() {
 		super("Extracts terminology from a domain-specific textual corpus (or preprocessed corpus).");
 	}
@@ -131,6 +135,9 @@ public class TerminologyExtractorCLI extends CommandLineClient {// NO_UCD (publi
 		
 		IndexedCorpus corpus = getIndexedCorpus();
 		extractor.execute(corpus);
+		
+		if(extractor.getStats().isPresent()) 
+			logger.debug("Engine times: {}", extractor.getStats().get().getEngineStats());
 		
 		if(isSet(TermSuiteCliOption.JSON))
 			TermSuiteFactory.createJsonExporter().export(corpus, asPath(TermSuiteCliOption.JSON));

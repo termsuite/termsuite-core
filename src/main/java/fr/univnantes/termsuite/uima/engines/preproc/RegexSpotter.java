@@ -24,6 +24,8 @@ package fr.univnantes.termsuite.uima.engines.preproc;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -34,6 +36,8 @@ import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.common.base.Stopwatch;
 
 import fr.univnantes.lina.uima.tkregex.LabelledAnnotation;
 import fr.univnantes.lina.uima.tkregex.RegexOccurrence;
@@ -77,8 +81,13 @@ public class RegexSpotter extends TokenRegexAE {
 	@ExternalResource(key =STOP_WORD_FILTER, mandatory = true)
 	private FilterResource stopWordFilter;
 	
+	private Stopwatch sw;
+
+	private AtomicLong totalTimeInMillis = new AtomicLong(0);
+	
 	@Override
 	protected void beforeRuleProcessing(JCas jCas) {
+		this.sw = Stopwatch.createStarted();
 		this.occurrenceBuffer = new OccurrenceBuffer();
 	}
 	
@@ -227,6 +236,12 @@ public class RegexSpotter extends TokenRegexAE {
 	
 	@Override
 	protected void afterRuleProcessing(JCas jCas) {
+		this.sw.stop();
+		totalTimeInMillis.addAndGet(this.sw.elapsed(TimeUnit.MILLISECONDS));
+		LOGGER.debug("Processed MWT spotting on doc {} in {}ms [Cumulated: {}ms]", 
+				JCasUtils.getSourceDocumentAnnotation(jCas).get().getUri(), 
+				sw.elapsed(TimeUnit.MILLISECONDS), totalTimeInMillis.get());
 		flushOccurrenceBuffer(jCas);
 	}
+	
 }
