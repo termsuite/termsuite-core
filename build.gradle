@@ -122,12 +122,12 @@ platform {
 	        addQualifier = version.endsWith('SNAPSHOT')
 	        
 	        instruction "Import-Package", ""
-	        instruction "Export-Package", "eu.project.ttc.*,org.apache.uima.examples"
+	        instruction "Export-Package", "fr.univnantes.termsuite.*,org.apache.uima.examples"
         }
     }
     feature(id: project.getProperty("termsuite.thirdparty.osgi.feature.id"), name: project.getProperty("termsuite.thirdparty.osgi.feature.name"), version: version) {
  		plugin "ch.qos.logback:logback-classic:1.1.7"
-		plugin "com.google.guava:guava:19.0"
+		plugin "com.google.guava:guava:21.0"
     }
 }
 
