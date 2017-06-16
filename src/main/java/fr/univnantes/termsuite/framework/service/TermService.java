@@ -1,5 +1,6 @@
 package fr.univnantes.termsuite.framework.service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.stream.Stream;
@@ -8,14 +9,17 @@ import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.model.ContextVector;
+import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermProperty;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.utils.TermSuiteConstants;
 
 public class TermService {
 	
+	private OccurrenceStore occStore;
 	private TerminologyService terminology;
 	private Term term;
 
@@ -42,12 +46,14 @@ public class TermService {
 	public Number getNumber(TermProperty property) {
 		return term.getNumber(property);
 	}
+	
 
-	public TermService(TerminologyService terminology, Term term) {
+	public TermService(TerminologyService terminology, OccurrenceStore occStore, Term term) {
 		super();
 		Preconditions.checkNotNull(term);
 		Preconditions.checkNotNull(terminology);
 		this.terminology = terminology;
+		this.occStore = occStore;
 		this.term = term;
 	}
 	
@@ -344,5 +350,9 @@ public class TermService {
 			.map(TermWord::toGroupingKey)
 			.filter(this.terminology::containsTerm)
 			.map(this.terminology::getTerm);
+	}
+	
+	public Collection<TermOccurrence> getOccurrences() {
+		return occStore.getOccurrences(term);
 	}
 }

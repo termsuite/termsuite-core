@@ -90,7 +90,7 @@ public class IndependanceScorerSpec {
 				
 		Term term = builder.create();
 		UnitTests.addTerm(indexedCorpus.getTerminology(), term);
-		return new TermService(UnitTests.getTerminologyService(indexedCorpus), term);
+		return new TermService(UnitTests.getTerminologyService(indexedCorpus), null, term);
 	}
 	
 	@Test

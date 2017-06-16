@@ -36,6 +36,7 @@ import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
@@ -160,7 +161,7 @@ public class TerminologyService {
 	public TermService asTermService(Term term) {
 		return termServices.computeIfAbsent(
 				term, t -> 
-				new TermService(this, t));
+				new TermService(this, occurrenceStore, t));
 	}
 
 	private ConcurrentMap<Relation, RelationService> relationServices = new ConcurrentHashMap<>();
@@ -636,6 +637,14 @@ public class TerminologyService {
 		clone.setNbWordAnnotations(this.termino.getNbWordAnnotations());
 		clone.getRelations().addAll(this.termino.getRelations());
 		return new TerminologyService(clone);
+	}
+	
+	public Collection<TermOccurrence> getOccurrences(Term term) {
+		return occurrenceStore.getOccurrences(term);
+	}
+
+	public Collection<TermOccurrence> getOccurrences(TermService term) {
+		return getOccurrences(term.getTerm());
 	}
 
 }
