@@ -292,6 +292,10 @@ public class TerminologyService {
 		return this.termino.getWords().get(lemma);
 	}
 
+	public Stream<RelationService> extensions(TermService from) {
+		return extensions(from.getTerm());
+	}
+	
 	public Stream<RelationService> extensions(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
