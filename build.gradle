@@ -118,7 +118,7 @@ platform {
         bnd {
 	        symbolicName = project.getProperty("osgi.plugin.symbolicName")
 	        bundleName = project.getProperty("osgi.bundleName")
-	        version = project.getProperty("osgi.version")
+	        version = project.getProperty("version")
 	        addQualifier = version.endsWith('SNAPSHOT')
 	        
 	        instruction "Import-Package", ""
