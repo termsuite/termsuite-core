@@ -16,6 +16,7 @@ import com.google.inject.matcher.Matchers;
 import com.google.inject.spi.TypeEncounter;
 import com.google.inject.spi.TypeListener;
 
+import fr.univnantes.termsuite.api.PipelineListener;
 import fr.univnantes.termsuite.engines.gatherer.GroovyService;
 import fr.univnantes.termsuite.framework.PipelineStats;
 import fr.univnantes.termsuite.framework.service.IndexService;
@@ -32,6 +33,7 @@ import uima.sandbox.filter.resources.FilterResource;
 public class IndexedCorpusModule extends AbstractModule {
 	private IndexedCorpus corpus;
 	private Optional<TermHistory> history = Optional.empty();
+	private PipelineListener listener = (p,m)->{};
 	
 	public IndexedCorpusModule(IndexedCorpus indexedCorpus) {
 		Preconditions.checkNotNull(indexedCorpus, "Terminology cannot be null");
@@ -39,9 +41,11 @@ public class IndexedCorpusModule extends AbstractModule {
 	}
 
 	public IndexedCorpusModule(IndexedCorpus terminology, 
-			TermHistory history) {
+			TermHistory history,
+			PipelineListener listener) {
 		this(terminology);
 		this.history = Optional.ofNullable(history);
+		this.listener = Optional.ofNullable(listener).orElse(this.listener);
 	}
 
 	@Override
@@ -57,6 +61,7 @@ public class IndexedCorpusModule extends AbstractModule {
 		bind(IndexService.class).toInstance(new IndexService(corpus.getTerminology()));
 		bind(GroovyService.class).in(Singleton.class);
 		bind(PipelineStats.class).in(Singleton.class);
+		bind(PipelineListener.class).toInstance(listener);
 	    bindListener(Matchers.any(), new Slf4JTypeListener());
 	}
 	

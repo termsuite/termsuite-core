@@ -1,12 +1,15 @@
 package fr.univnantes.termsuite.framework.pipeline;
 
 import java.lang.reflect.Field;
+import java.util.List;
 import java.util.Optional;
 
 import org.apache.uima.resource.SharedResourceObject;
 
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.api.PipelineListener;
+import fr.univnantes.termsuite.engines.SimpleEngine;
 import fr.univnantes.termsuite.framework.EngineDescription;
 import fr.univnantes.termsuite.framework.Index;
 import fr.univnantes.termsuite.framework.PipelineStats;
@@ -35,6 +38,9 @@ public abstract class EngineRunner {
 
 	protected PipelineStats stats;
 	
+	protected PipelineListener listener;
+
+	
 	public EngineRunner(EngineDescription description, Injector injector, EngineRunner parent) {
 		super();
 		this.description = description;
@@ -44,7 +50,24 @@ public abstract class EngineRunner {
 		this.engineInjector = new EngineInjector(resourceMgr, indexService);
 		this.parent = Optional.ofNullable(parent);
 		this.stats = injector.getInstance(PipelineStats.class);
+		this.listener = injector.getInstance(PipelineListener.class);
 	}
+	
+
+	
+	protected abstract List<SimpleEngineRunner> getSimpleEngines();
+	
+	protected EngineRunner getRootRunner() {
+		if(parent.isPresent())
+			return parent.get().getRootRunner();
+		else
+			return this;
+	}
+	
+	protected int getTotalSimpleEngines() {
+		return getRootRunner().getSimpleEngines().size();
+	}
+
 
 	public void configure() {
 		for(Field field:engineInjector.getAnnotatedFields(description.getEngineClass(), Resource.class, SharedResourceObject.class, TermSuiteResource.class)) {

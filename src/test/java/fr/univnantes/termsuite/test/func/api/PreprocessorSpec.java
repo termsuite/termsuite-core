@@ -19,6 +19,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import fr.univnantes.termsuite.api.PipelineListener;
 import fr.univnantes.termsuite.api.Preprocessor;
 import fr.univnantes.termsuite.api.TXTCorpus;
 import fr.univnantes.termsuite.api.TermSuite;
@@ -28,7 +29,6 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
-import fr.univnantes.termsuite.uima.PipelineListener;
 
 public class PreprocessorSpec {
 	
@@ -74,9 +74,9 @@ public class PreprocessorSpec {
 		assertThat(statuses)
 			.hasSize(3)
 			.contains(
-					"Processing document " + FunctionalTests.CORPUS1_PATH.resolve("file2.txt").toString(),
-					"Processing document " + FunctionalTests.CORPUS1_PATH.resolve("file1.txt").toString(),
-					"Processing document " + FunctionalTests.CORPUS1_PATH.resolve("dir1").resolve("file3.txt").toString()
+					"Processing document 1/3: " + FunctionalTests.CORPUS1_PATH.resolve("file2.txt").toString(),
+					"Processing document 2/3: " + FunctionalTests.CORPUS1_PATH.resolve("file1.txt").toString(),
+					"Processing document 3/3: " + FunctionalTests.CORPUS1_PATH.resolve("dir1").resolve("file3.txt").toString()
 				);
 
 	}

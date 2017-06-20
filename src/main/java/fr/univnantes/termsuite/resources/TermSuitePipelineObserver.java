@@ -27,7 +27,7 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import fr.univnantes.termsuite.uima.PipelineListener;
+import fr.univnantes.termsuite.api.PipelineListener;
 
 public class TermSuitePipelineObserver {
 	

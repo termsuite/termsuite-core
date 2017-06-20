@@ -21,7 +21,7 @@
  *
  *******************************************************************************/
 
-package fr.univnantes.termsuite.uima;
+package fr.univnantes.termsuite.api;
 
 public interface PipelineListener {
 

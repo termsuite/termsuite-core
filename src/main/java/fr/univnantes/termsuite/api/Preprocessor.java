@@ -43,7 +43,6 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
-import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
 import fr.univnantes.termsuite.uima.readers.TSVCasSerializer;
 import fr.univnantes.termsuite.utils.JCasUtils;

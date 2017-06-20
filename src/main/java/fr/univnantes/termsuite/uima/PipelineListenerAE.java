@@ -9,6 +9,7 @@ import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import fr.univnantes.termsuite.api.PipelineListener;
 import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.utils.JCasUtils;
 
@@ -38,7 +39,9 @@ public class PipelineListenerAE extends JCasAnnotator_ImplBase {
 				
 			listener.statusUpdated(
 					progress, 
-					String.format("Processing document %s", sdi.getUri()));
+					String.format("Processing document %s%s", 
+							sdi.getNbDocuments() == -1 ? "" : String.format("%d/%d: ", currentIndex, sdi.getNbDocuments()),
+							sdi.getUri()));
 		}
 		if(sdi.getLastSegment())
 			PipelineResourceMgrs.clearPipeline(pipelineId);

@@ -1,11 +1,13 @@
 package fr.univnantes.termsuite.framework.pipeline;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Stopwatch;
+import com.google.common.collect.ImmutableList;
 import com.google.inject.Injector;
 
 import fr.univnantes.termsuite.engines.SimpleEngine;
@@ -20,12 +22,12 @@ public class SimpleEngineRunner extends EngineRunner {
 
 	@Override
 	public EngineStats run() {
-
 		SimpleEngine engine = (SimpleEngine)injector.getInstance(description.getEngineClass());
 		engineInjector.injectName(engine, description.getEngineName());
 		engineInjector.injectParameters(engine, description.getParameters());
 		engineInjector.injectResources(engine);
 		engineInjector.injectIndexes(engine);
+		fireExecution();
 		LOGGER.info("Running SimpleEngine {}", description.getEngineName());
 		Stopwatch sw = Stopwatch.createStarted();
 		engine.execute();
@@ -38,5 +40,18 @@ public class SimpleEngineRunner extends EngineRunner {
 		dropIndexes();
 		
 		return new EngineStats(description.getEngineName(), sw.elapsed(TimeUnit.MILLISECONDS));
+	}
+
+
+	private void fireExecution() {
+		List<SimpleEngineRunner> simpleEngines = getRootRunner().getSimpleEngines();
+		int index = simpleEngines.indexOf(this);
+		listener.statusUpdated((double)index/simpleEngines.size(), description.getEngineName());
+	}
+
+
+	@Override
+	protected List<SimpleEngineRunner> getSimpleEngines() {
+		return ImmutableList.of(this);
 	}
 }
