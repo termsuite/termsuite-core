@@ -97,7 +97,8 @@ public class PreprocessorService {
 				cas, 
 				document.getLang().getCode(), 
 				documentText, 
-				document.getUrl());
+				document.getUrl(),
+				document.getSize());
 		return cas;
 	}
 

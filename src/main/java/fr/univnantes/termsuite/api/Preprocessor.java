@@ -42,6 +42,7 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.OccurrenceStore;
 import fr.univnantes.termsuite.model.Tagger;
+import fr.univnantes.termsuite.types.SourceDocumentInformation;
 import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.readers.JsonCasSerializer;
 import fr.univnantes.termsuite.uima.readers.TSVCasSerializer;
@@ -133,7 +134,7 @@ public class Preprocessor {
 		return toIndexedCorpus(
 				lang, 
 				textCorpus.documents()
-					.map(doc -> toCas(doc, textCorpus.readDocumentText(doc))), 
+					.map(doc -> toCas(textCorpus, doc, textCorpus.readDocumentText(doc))), 
 				maxSize, 
 				indexedCorpus);
 	}
@@ -142,28 +143,35 @@ public class Preprocessor {
 		return toIndexedCorpus(
 				textCorpus.getLang(),
 				textCorpus.documents()
-					.map(doc -> toCas(doc, textCorpus.readDocumentText(doc))),
+					.map(doc -> toCas(textCorpus, doc, textCorpus.readDocumentText(doc))),
 				maxSize
 			);
 	}
 	
-	public static JCas toCas(Document doc, String documentText) {
+	public static JCas toCas(Document doc, String documentText, int nbDocuments, long corpusSize) {
 		JCas cas;
 		try {
 			cas = JCasFactory.createJCas();
 			cas.setDocumentLanguage(doc.getLang().getCode());
 			cas.setDocumentText(documentText);
-			JCasUtils.initJCasSDI(
+			SourceDocumentInformation sdi = JCasUtils.initJCasSDI(
 				cas, 
 				doc.getLang().getCode(), 
 				documentText, 
-				doc.getUrl());
+				doc.getUrl(),
+				doc.getSize()
+				);
+			sdi.setCorpusSize(corpusSize);
+			sdi.setNbDocuments(nbDocuments);
 			return cas;
 		} catch (UIMAException e) {
 			throw new TermSuiteException(
 					"Could not initialize JCas for document " + doc.getUrl(), 
 					e);
 		}
+	}
+	public static JCas toCas(TextualCorpus corpus, Document doc, String documentText) {
+		return toCas(doc, documentText, corpus.getNbDocuments(), corpus.getTotalSize());
 	}
 			
 	public IndexedCorpus toIndexedCorpus(

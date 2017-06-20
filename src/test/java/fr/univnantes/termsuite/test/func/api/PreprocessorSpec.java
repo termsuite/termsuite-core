@@ -7,7 +7,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -26,6 +28,7 @@ import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.test.func.FunctionalTests;
 import fr.univnantes.termsuite.types.TermOccAnnotation;
 import fr.univnantes.termsuite.types.WordAnnotation;
+import fr.univnantes.termsuite.uima.PipelineListener;
 
 public class PreprocessorSpec {
 	
@@ -44,7 +47,40 @@ public class PreprocessorSpec {
 		assertThat(indexedCorpus.getTerminology())
 			.containsTerm("n: énergie");
 	}
+
 	
+	@Test
+	public void testWithListener() {
+		final List<Double> progresses = new ArrayList<>();
+		final List<String> statuses = new ArrayList<>();
+		PipelineListener listener = new PipelineListener() {
+			@Override
+			public void statusUpdated(double progress, String msg) {
+				progresses.add(progress);
+				statuses.add(msg);
+			}
+		};
+		IndexedCorpus ic = TermSuite.preprocessor()
+				.setTaggerPath(FunctionalTests.getTaggerPath())
+				.setListener(listener)
+				.toIndexedCorpus(corpus, 500000);
+
+		assertTermino(ic.getTerminology());
+		
+		assertThat(progresses)
+			.hasSize(3)
+			.contains(1d/3, 2d/3, 3d/3);
+			
+		assertThat(statuses)
+			.hasSize(3)
+			.contains(
+					"Processing document " + FunctionalTests.CORPUS1_PATH.resolve("file2.txt").toString(),
+					"Processing document " + FunctionalTests.CORPUS1_PATH.resolve("file1.txt").toString(),
+					"Processing document " + FunctionalTests.CORPUS1_PATH.resolve("dir1").resolve("file3.txt").toString()
+				);
+
+	}
+
 	
 	@Test
 	public void testToIndexedCorpusOnBlankCasStream() {
@@ -52,7 +88,11 @@ public class PreprocessorSpec {
 				.documents()
 				.map(doc -> Preprocessor.toCas(
 						doc, 
-						FunctionalTests.CORPUS1.readDocumentText(doc)));
+						FunctionalTests.CORPUS1.readDocumentText(doc),
+						3,
+						1000l
+						)
+					);
 		Lang lang = FunctionalTests.CORPUS1.getLang();
 		
 		IndexedCorpus indexedCorpus = TermSuite.preprocessor()

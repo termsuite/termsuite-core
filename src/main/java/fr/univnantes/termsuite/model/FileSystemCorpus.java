@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.PathMatcher;
 import java.nio.file.Paths;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -14,6 +16,7 @@ import com.google.common.base.Charsets;
 import com.google.common.base.Preconditions;
 
 import fr.univnantes.termsuite.api.TermSuiteException;
+import fr.univnantes.termsuite.uima.readers.StringPreparator;
 
 public abstract class FileSystemCorpus {
 
@@ -112,4 +115,40 @@ public abstract class FileSystemCorpus {
 	public String toString() {
 		return String.format("%s[%s]", this.getClass().getSimpleName(), this.rootDirectory);
 	}
+	
+
+	public int getNbDocuments() {
+		return (int)documents().count();
+	}
+
+	public long getTotalSize() {
+		final AtomicLong size = new AtomicLong(0);
+		documents().forEach(doc -> {
+			size.addAndGet(Paths.get(doc.getUrl()).toFile().length());
+		});
+		return size.longValue();
+	}
+
+	public Stream<Document> documents() {
+		AtomicInteger documentIndex = new AtomicInteger(0);
+		Stream<Document> pathWalker = pathWalker(
+				getRootDirectory(), 
+				getPattern(), 
+				path -> {
+					Document document = new Document(getLang(),  path.toString());
+					document.setSize(path.toFile().length());
+					return document;	
+				});
+		return pathWalker;
+	}
+
+	public String readDocumentText(Document doc) {
+		return cleanRawText(readFileContent(doc));
+	}
+	
+	public String cleanRawText(String rawText) {
+		StringPreparator stringPreparator = new StringPreparator();
+		return stringPreparator.prepare(rawText);
+	}
+
 }
