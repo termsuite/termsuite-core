@@ -538,8 +538,22 @@ public class JsonTerminologyIO {
 	}
 
 	private static void readCollection(JsonParser jp, Collection<Object> c) throws IOException {
-		while(jp.nextToken() != JsonToken.END_ARRAY) {
-			c.add(jp.getCurrentValue());
+		JsonToken token ;
+		while((token = jp.nextToken()) != JsonToken.END_ARRAY) {
+			c.add(readTokenObject(jp, token));
+		}
+	}
+
+	private static Object readTokenObject(JsonParser jp, JsonToken token) throws IOException {
+		switch (token) {
+		case VALUE_NUMBER_INT: return jp.getValueAsInt();
+		case VALUE_NUMBER_FLOAT: return jp.getValueAsDouble();
+		case VALUE_FALSE: return false;
+		case VALUE_TRUE: return true;
+		case VALUE_NULL: return null;
+		case VALUE_STRING: return jp.getValueAsString();
+		default:
+			throw new IllegalStateException("Token type not allowed in value collections: " + token);
 		}
 	}
 
