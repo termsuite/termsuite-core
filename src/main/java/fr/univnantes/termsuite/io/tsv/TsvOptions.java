@@ -113,4 +113,11 @@ public class TsvOptions {
 		return this;
 	}
 	
+	public TsvOptions setProperties(Iterable<Property<?>> properties) {
+		this.properties = Lists.newArrayList();
+		for(Property<?> p:properties)
+			this.properties.add(new TsvPropertyConfig(p));
+		return this;
+	}
+	
 }
