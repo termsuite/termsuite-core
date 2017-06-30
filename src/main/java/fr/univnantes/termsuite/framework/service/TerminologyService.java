@@ -727,12 +727,16 @@ public class TerminologyService {
 		/*
 		 * Terms 
 		 */
+		AtomicInteger nbCompounds = new AtomicInteger(0);
 		terms().forEach(t-> {
+			if(t.isCompound())
+				nbCompounds.incrementAndGet();
 			nbTerms.incrementAndGet();
 			count(t.getSwtSize(), sizeCounters);
 			count(t.getPattern(), patternCounters);
 		});
 		stats.setNbTerms(nbTerms.get());
+		stats.setNbCompounds(nbCompounds.get());
 		stats.setPatternDistribution(toRawIntegerMap(patternCounters));
 		stats.setNbSingleWords(sizeCounters.containsKey(1) ? sizeCounters.get(1).get() : 0);
 		stats.setNbSize2Words(sizeCounters.containsKey(2) ? sizeCounters.get(2).get() : 0);
@@ -744,12 +748,6 @@ public class TerminologyService {
 		/*
 		 * Words
 		 */
-		int nbCompounds = 0;
-		for(Word w:getWords()) {
-			if(w.isCompound())
-				nbCompounds++;
-		}
-		stats.setNbCompounds(nbCompounds);
 		stats.setNbWords(getWords().size());
 		
 		return stats;

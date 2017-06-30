@@ -412,7 +412,7 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 		assertThat(stats.getNbMorphological()).isEqualTo(42);
 		assertThat(stats.getNbSemantic()).isEqualTo(0);
 		assertThat(stats.getNbInfered()).isEqualTo(18);
-		assertThat(stats.getNbCompounds()).isEqualTo(502);
+		assertThat(stats.getNbCompounds()).isEqualTo(535);
 		assertThat(stats.getNbSemanticDistribOnly()).isEqualTo(0);
 		assertThat(stats.getNbSemanticWithDico()).isEqualTo(0);
 	}
