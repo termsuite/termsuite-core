@@ -1,8 +1,9 @@
 package fr.univnantes.termsuite.api;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Writer;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
@@ -16,14 +17,23 @@ import fr.univnantes.termsuite.model.IndexedCorpus;
 
 public class IndexedCorpusIO {
 	
-	public static void toJson(IndexedCorpus termino, Writer writer) throws IOException {
-		toJson(termino, writer, new JsonOptions());
+	public static void toJson(IndexedCorpus termino, Path path) throws IOException {
+		toJson(termino, path, new JsonOptions());
 	}
 	
-	public static void toJson(IndexedCorpus termino, Writer writer, JsonOptions options) throws IOException {
-		JsonTerminologyIO.save(writer, termino, options);
+	public static void toJson(IndexedCorpus termino, Path path, JsonOptions options) throws IOException {
+		JsonTerminologyIO.save(new OutputStreamWriter(
+			    new FileOutputStream(path.toFile()), Charsets.UTF_8), termino, options);
 	}
 	
+	public static void toJson(IndexedCorpus termino, String path) throws IOException {
+		toJson(termino, Paths.get(path), new JsonOptions());
+	}
+	
+	public static void toJson(IndexedCorpus termino, String path, JsonOptions options) throws IOException {
+		toJson(termino, Paths.get(path), options);
+	}
+
 	public static IndexedCorpus fromJson(String filePath, JsonOptions options) {
 		return fromJson(Paths.get(filePath), options);
 	}

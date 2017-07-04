@@ -1,6 +1,5 @@
 package fr.univnantes.termsuite.eval;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
@@ -91,18 +90,13 @@ public class TermSuiteEvals {
 		}
 	}
 
-	public static IndexedCorpus getTerminology(Corpus corpus, Lang lang, TerminoConfig config) {
+	public static IndexedCorpus getTerminology(Corpus corpus, Lang lang, TerminoConfig config) throws IOException {
 		Path path = getTerminologyPath(lang, corpus, config);
 		if(!path.toFile().isFile()) {
 			LOGGER.info("Terminology {} not found in cache", getTerminologyFileName(lang, corpus, config));
 			TXTCorpus textCorpus = new TXTCorpus(lang, corpus.getRootDir().resolve(lang.getName()));
 			IndexedCorpus extracted = toIndexedCorpus(textCorpus, config);
-			try(FileWriter writer = new FileWriter(path.toFile())){
-				IndexedCorpusIO.toJson(extracted, writer, new JsonOptions().withOccurrences(false).withContexts(true));
-			} catch (IOException e) {
-				LOGGER.error("Could not create terminology {}", getTerminologyFileName(lang, corpus, config));
-				throw new RuntimeException(e);
-			}
+			IndexedCorpusIO.toJson(extracted, path, new JsonOptions().withOccurrences(false).withContexts(true));
 		} else
 			LOGGER.info("Terminology {} found in cache", getTerminologyFileName(lang, corpus, config));
 
