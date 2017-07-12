@@ -157,7 +157,7 @@
 				<featureDescription>
 					<name>documentSize</name>
 					<description>Size of original document in bytes before processing by CAS Initializer. Either absolute file size of size within file or other source.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+					<rangeTypeName>uima.cas.Long</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>cumulatedDocumentSize</name>

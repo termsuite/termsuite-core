@@ -31,6 +31,8 @@ public class TerminoExtractor {
 	private Optional<ResourceConfig> resourceConfig = Optional.empty();
 	private Optional<PipelineStats> stats = Optional.empty();
 
+	private Optional<PipelineListener> listener = Optional.empty();
+
 	public TerminoExtractor setResourceConfig(ResourceConfig resourceConfig) {
 		this.resourceConfig = Optional.of(resourceConfig);
 		return this;
@@ -46,6 +48,11 @@ public class TerminoExtractor {
 
 	public TerminoExtractor setHistory(TermHistory history) {
 		this.history = Optional.of(history);
+		return this;
+	}
+
+	public TerminoExtractor setListener(PipelineListener listener) {
+		this.listener  = Optional.of(listener);
 		return this;
 	}
 
@@ -82,6 +89,7 @@ public class TerminoExtractor {
 				corpus,
 				resourceConfig.orElse(null),
 				history.orElse(null),
+				listener.orElse(null),
 				options
 				);
 		PipelineStats stats = pipeline.run();

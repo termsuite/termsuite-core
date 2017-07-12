@@ -56,4 +56,12 @@ public class AggregateEngineRunner extends EngineRunner {
 				childStats
 			);
 	}
+
+	@Override
+	protected List<SimpleEngineRunner> getSimpleEngines() {
+		List<SimpleEngineRunner> simpleEngines = new ArrayList<>();
+		for(EngineRunner child:children)
+			simpleEngines.addAll(child.getSimpleEngines());
+		return simpleEngines;
+	}
 }

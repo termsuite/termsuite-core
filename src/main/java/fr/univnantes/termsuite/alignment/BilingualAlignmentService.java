@@ -122,6 +122,10 @@ public class BilingualAlignmentService {
 	private Map<Term, Term> manualDico = new HashMap<>();
 	
 
+	public BilingualAlignmentService addTranslation(TermService sourceTerm, TermService targetTerm) {
+		return addTranslation(sourceTerm.getTerm(), targetTerm.getTerm());
+	}
+
 	public BilingualAlignmentService addTranslation(Term sourceTerm, Term targetTerm) {
 		Preconditions.checkNotNull(sourceTerm);
 		Preconditions.checkNotNull(targetTerm);
@@ -270,7 +274,7 @@ public class BilingualAlignmentService {
 		 * 
 		 * E.g. électricité -> hydroélectricité
 		 */
-		Map<Term, Term> targetCandidatesBySWTExtension = Maps.newHashMap();
+		Map<TermService, TermService> targetCandidatesBySWTExtension = Maps.newHashMap();
 		Set<TermService> targetCandidatesHavingSameAffix = Sets.newHashSet();
 		for(TermService targetCandidate:targetTermino.getTerms()) {
 			Word targetCompound = targetCandidate.getWords().get(0).getWord();
@@ -290,13 +294,14 @@ public class BilingualAlignmentService {
 				if (isValidTargetCandidate) {
 					targetCandidatesHavingSameAffix.add(targetCandidate);
 
-					Collection<Term> targetExtensions = getMorphologicalExtensionsAsTerms(
+					Collection<TermService> targetExtensions = getMorphologicalExtensionsAsTerms(
+							targetTermino,
 							targetIndexes.getIndex(TermIndexType.LEMMA_LOWER_CASE),
 							targetCandidate, 
 							targetCompound.getNeoclassicalAffix());
 
-					for (Term morphologicalExtensin : targetExtensions)
-						targetCandidatesBySWTExtension.put(morphologicalExtensin, targetCandidate.getTerm());
+					for (TermService morphologicalExtensin : targetExtensions)
+						targetCandidatesBySWTExtension.put(morphologicalExtensin, targetCandidate);
 				}
 			}
 		}
@@ -304,13 +309,11 @@ public class BilingualAlignmentService {
 		/*
 		 * 3. try recursive alignment on neoclassical extensions
 		 */
-		Collection<TermService> possibleSourceExtensions = getMorphologicalExtensionsAsTerms(
+		Set<TermService> possibleSourceExtensions = Sets.newHashSet(getMorphologicalExtensionsAsTerms(
+				sourceTermino,
 				sourceIndexes.getIndex(TermIndexType.LEMMA_LOWER_CASE), 
 				sourceTerm, 
-				sourceNeoclassicalAffix)
-				.stream()
-				.map(t->sourceTermino.asTermService(t))
-				.collect(toSet());
+				sourceNeoclassicalAffix));
 		List<TranslationCandidate> candidates = Lists.newArrayList();
 		for(TermService sourceExtension:possibleSourceExtensions) {
 			// recursive alignment on extension
@@ -346,7 +349,11 @@ public class BilingualAlignmentService {
 	 * @param component
 	 * @return
 	 */
-	public Collection<Term> getMorphologicalExtensionsAsTerms(TermIndex lemmaLowerCaseIndex, TermService compound, Component component) {
+	public Collection<TermService> getMorphologicalExtensionsAsTerms(
+			TerminologyService terminoService, 
+			TermIndex lemmaLowerCaseIndex, 
+			TermService compound, 
+			Component component) {
 		Preconditions.checkArgument(compound.isSingleWord());
 		Preconditions.checkArgument(compound.isCompound());
 		Preconditions.checkArgument(compound.getWords().get(0).getWord().getComponents().contains(component));
@@ -372,9 +379,10 @@ public class BilingualAlignmentService {
 			possibleExtensionLemmas.add(lemma);
 		}
 		
-		List<Term> extensionTerms = Lists.newArrayList();
-		for(String s:possibleExtensionLemmas)
-			extensionTerms.addAll(lemmaLowerCaseIndex.getTerms(s.toLowerCase()));
+		List<TermService> extensionTerms = Lists.newArrayList();
+		for(String s:possibleExtensionLemmas) 
+			for(Term term:lemmaLowerCaseIndex.getTerms(s.toLowerCase()))
+				extensionTerms.add(terminoService.asTermService(term));
 		
 		return extensionTerms;
 	}
@@ -403,9 +411,9 @@ public class BilingualAlignmentService {
 							TermUtils.lemmatizedInsensitiveGroupingKey(targetTerm.getWords().get(0)));
 				return new TranslationCandidate(
 						method, 
-						targetTerm.getTerm(), 
+						targetTerm, 
 						dist, 
-						sourceTerm.getTerm(),
+						sourceTerm,
 						new TextExplanation(String.format("Graphical distance(Levenshtein) is %.3f", dist)));
 			}
 				).collect(Collectors.toList());
@@ -434,9 +442,9 @@ public class BilingualAlignmentService {
 				v = distance.getExplainedValue(translatedSourceVector, targetTerm.getContext());
 				TranslationCandidate candidate = new TranslationCandidate(
 						AlignmentMethod.DISTRIBUTIONAL,
-						targetTerm.getTerm(), 
+						targetTerm, 
 						v.getValue(), 
-						sourceTerm.getTerm(),
+						sourceTerm,
 						v.getExplanation());
 				alignedCandidateQueue.add(candidate);
 			}
@@ -605,7 +613,7 @@ public class BilingualAlignmentService {
 		/*
 		 * 1. Merge
 		 */
-		Multimap<Term, TranslationCandidate> multimap = HashMultimap.create();
+		Multimap<TermService, TranslationCandidate> multimap = HashMultimap.create();
 		candidatesCandidates.stream().forEach(tc -> multimap.put(tc.getTerm(), tc));
 		multimap.keySet().stream().forEach(uniqueTerm -> {
 			if(multimap.get(uniqueTerm).size() >= 2) {
@@ -651,7 +659,7 @@ public class BilingualAlignmentService {
 			return Lists.newArrayList((
 						new TranslationCandidate(
 							AlignmentMethod.DICTIONARY,
-							manualDico.get(sourceTerm),
+							targetTermino.asTermService(manualDico.get(sourceTerm)),
 							1,
 							sourceTerm)
 						));
@@ -670,7 +678,7 @@ public class BilingualAlignmentService {
 						if (candidateTerm.getContext() != null) {
 							TranslationCandidate candidate = new TranslationCandidate(
 									AlignmentMethod.DICTIONARY,
-									candidateTerm,
+									targetTermino.asTermService(candidateTerm),
 									distance.getValue(translatedSourceVector, candidateTerm.getContext()),
 									sourceTerm);
 							dicoCandidates.add(candidate);
@@ -787,14 +795,16 @@ public class BilingualAlignmentService {
 				Collections.sort(candidateCombinedTerms, new Comparator<Term>() { 
 					@Override
 					public int compare(Term o1, Term o2) {
-						return Integer.compare(termLemmaLemmaKeys.get(o1).size(), termLemmaLemmaKeys.get(o2).size());
+						return Integer.compare(
+								termLemmaLemmaKeys.get(o1).size(), 
+								termLemmaLemmaKeys.get(o2).size());
 					}
 				});
-				List<Term> filteredTerms = Lists.newArrayList();
+				List<TermService> filteredTerms = Lists.newArrayList();
 				int minimumNbClasses = termLemmaLemmaKeys.get(candidateCombinedTerms.get(0)).size();
 				for(Term t:candidateCombinedTerms) {
 					if(termLemmaLemmaKeys.get(t).size() == minimumNbClasses)
-						filteredTerms.add(t);
+						filteredTerms.add(targetTermino.asTermService(t));
 					else 
 						break;
 				}
@@ -802,7 +812,7 @@ public class BilingualAlignmentService {
 				/*
 				 * 3- Create candidates from filtered terms
 				 */
-				for(Term t:filteredTerms) {
+				for(TermService t:filteredTerms) {
 					TranslationCandidate combinedCandidate = new TranslationCandidate(
 							getCombinedMethod(candidate1, candidate2),
 							t, 
@@ -838,7 +848,7 @@ public class BilingualAlignmentService {
 					commonExtensions.stream().filter(t->t.getWords().size() == minSize.get()).forEach(targetTerm-> {
 						combinations.add(new TranslationCandidate(
 								AlignmentMethod.COMPOSITIONAL, 
-								targetTerm.getTerm(), 
+								targetTerm, 
 								candidate1.getScore()*candidate2.getScore(), 
 								sourceTerm, 
 								candidate1, candidate2
@@ -889,7 +899,7 @@ public class BilingualAlignmentService {
 	}
 
 	private void removeDuplicatesOnTerm(List<TranslationCandidate> candidates) {
-		Set<Term> set = Sets.newHashSet();
+		Set<TermService> set = Sets.newHashSet();
 		Iterator<TranslationCandidate> it = candidates.iterator();
 		while(it.hasNext())
 			if(!set.add(it.next().getTerm()))

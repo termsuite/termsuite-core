@@ -8,6 +8,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Lists;
 
+import fr.univnantes.termsuite.framework.service.TermService;
 import fr.univnantes.termsuite.metrics.Explanation;
 import fr.univnantes.termsuite.metrics.IExplanation;
 import fr.univnantes.termsuite.model.Term;
@@ -15,7 +16,7 @@ import fr.univnantes.termsuite.model.Term;
 public class TranslationCandidate implements Comparable<TranslationCandidate> {
 	private List<TranslationCandidate> subCandidates;
 
-	private Term term;
+	private TermService term;
 	private int rank = -1;
 	private double score;
 
@@ -35,7 +36,7 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 		return rank;
 	}
 
-	TranslationCandidate(AlignmentMethod method, Term targetTerm, double score, Object sourceTerm,
+	TranslationCandidate(AlignmentMethod method, TermService targetTerm, double score, Object sourceTerm,
 			TranslationCandidate... subCandidates) {
 		super();
 		Preconditions.checkNotNull(targetTerm);
@@ -46,7 +47,7 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 		this.subCandidates = Lists.newArrayList(subCandidates);
 	}
 
-	TranslationCandidate(AlignmentMethod method, Term targetTerm, double score, Term sourceTerm,
+	TranslationCandidate(AlignmentMethod method, TermService targetTerm, double score, TermService sourceTerm,
 			IExplanation explanation) {
 		this(method, targetTerm, score, sourceTerm);
 		this.explanation = explanation;
@@ -58,14 +59,14 @@ public class TranslationCandidate implements Comparable<TranslationCandidate> {
 
 	@Override
 	public int compareTo(TranslationCandidate o) {
-		return ComparisonChain.start().compare(o.score, score).compare(term, o.term).result();
+		return ComparisonChain.start().compare(o.score, score).compare(term.getTerm(), o.term.getTerm()).result();
 	}
 
 	public double getScore() {
 		return score;
 	}
 
-	public Term getTerm() {
+	public TermService getTerm() {
 		return term;
 	}
 

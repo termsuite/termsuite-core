@@ -35,6 +35,8 @@ import java.util.stream.Collectors;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
+import fr.univnantes.termsuite.api.TermSuite;
+import fr.univnantes.termsuite.api.TerminologyStats;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.index.TermIndex;
 import fr.univnantes.termsuite.index.TermIndexType;
@@ -391,7 +393,30 @@ public class FrenchWindEnergySpec extends WindEnergySpec {
 			.containsRelation("n: déréglementation", RelationType.IS_PREFIX_OF, "n: réglementation")
 			;
 	}
-	
+
+	@Test
+	public void testStats() {
+		TerminologyStats stats = TermSuite.getTerminologyService(termino).computeStats();
+		assertThat(stats.getNbTerms()).isEqualTo(35431);
+		assertThat(stats.getNbVariations()).isEqualTo(12220);
+		assertThat(stats.getNbWords()).isEqualTo(9349);
+		assertThat(stats.getNbSingleWords()).isEqualTo(9100);
+		assertThat(stats.getNbSize2Words()).isEqualTo(19369);
+		assertThat(stats.getNbSize3Words()).isEqualTo(6167);
+		assertThat(stats.getNbSize4Words()).isEqualTo(789);
+		assertThat(stats.getNbSize5Words()).isEqualTo(6);
+		assertThat(stats.getNbSize6Words()).isEqualTo(0);
+		assertThat(stats.getNbExtensions()).isEqualTo(0);
+		assertThat(stats.getNbGraphical()).isEqualTo(2209);
+		assertThat(stats.getNbDerivations()).isEqualTo(82);
+		assertThat(stats.getNbMorphological()).isEqualTo(42);
+		assertThat(stats.getNbSemantic()).isEqualTo(0);
+		assertThat(stats.getNbInfered()).isEqualTo(18);
+		assertThat(stats.getNbCompounds()).isEqualTo(535);
+		assertThat(stats.getNbSemanticDistribOnly()).isEqualTo(0);
+		assertThat(stats.getNbSemanticWithDico()).isEqualTo(0);
+	}
+
 	@Test
 	public void testDerivations() {
 		assertThat(termino)

@@ -36,11 +36,11 @@ import org.apache.uima.resource.ResourceInitializationException;
 
 import com.google.common.base.Preconditions;
 
+import fr.univnantes.termsuite.api.PipelineListener;
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.model.Lang;
 import fr.univnantes.termsuite.model.Tagger;
 import fr.univnantes.termsuite.uima.CustomResourceTermSuiteAEFactory;
-import fr.univnantes.termsuite.uima.PipelineListener;
 import fr.univnantes.termsuite.uima.PipelineListenerAE;
 import fr.univnantes.termsuite.uima.PipelineResourceMgrs;
 import fr.univnantes.termsuite.uima.PreparationPipelineException;

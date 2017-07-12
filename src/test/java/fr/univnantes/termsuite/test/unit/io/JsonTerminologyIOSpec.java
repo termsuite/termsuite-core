@@ -52,7 +52,10 @@ import com.google.common.collect.HashBiMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import fr.univnantes.termsuite.api.TermSuite;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
+import fr.univnantes.termsuite.framework.service.TermService;
+import fr.univnantes.termsuite.framework.service.TerminologyService;
 import fr.univnantes.termsuite.index.Terminology;
 import fr.univnantes.termsuite.io.json.JsonOptions;
 import fr.univnantes.termsuite.io.json.JsonTerminologyIO;
@@ -148,6 +151,34 @@ public class JsonTerminologyIOSpec {
 	}
 	
 	
+	@Test
+	public void testWithMultipleVariationRules() throws IOException {
+		TerminologyService rootTermino = TermSuite.getTerminologyService(indexedCorpus.getTerminology());
+		TermService rootT = rootTermino.getTerm("l1l2: word1 word2");
+		assertThat(rootT.variations()).hasSize(1);
+		assertThat(rootT.variations().findFirst().get().getVariationRules())
+			.hasSize(1)
+			.contains("variationRule1");
+
+		// test after deserialization
+		TerminologyService d1Termino = TermSuite.getTerminologyService(serializeAndDeserialize().getTerminology());
+		TermService d1T = d1Termino.getTerm("l1l2: word1 word2");
+		assertThat(d1T.variations()).hasSize(1);
+		assertThat(d1T.variations().findFirst().get().getVariationRules())
+			.hasSize(1)
+			.contains("variationRule1");
+		
+		// add a variation rule
+		rootT.variations().findFirst().get().addVariationRule("variationRule2");
+		
+		TerminologyService d2Termino = TermSuite.getTerminologyService(serializeAndDeserialize().getTerminology());
+		TermService d2T = d2Termino.getTerm("l1l2: word1 word2");
+		assertThat(d2T.variations()).hasSize(1);
+		assertThat(d2T.variations().findFirst().get().getVariationRules())
+			.hasSize(2)
+			.contains("variationRule2", "variationRule1");
+	}
+
 	
 	@Test
 	public void testSaveLoadReturnWithNoVariant() throws IOException {
@@ -157,10 +188,14 @@ public class JsonTerminologyIOSpec {
 				.findFirst()
 				.get();
 		termino.getRelations().remove(rel);
+		serializeAndDeserialize();
+	}
+
+	private IndexedCorpus serializeAndDeserialize() throws IOException {
 		StringWriter writer = new StringWriter();
 		JsonTerminologyIO.save(writer, indexedCorpus, new JsonOptions().withContexts(true).withOccurrences(true));
 		String string = writer.toString();
-		JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
+		return JsonTerminologyIO.load(new StringReader(string), new JsonOptions().withOccurrences(true));
 	}
 
 	@Test

@@ -6,8 +6,10 @@ import static java.util.stream.Collectors.toSet;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,6 +17,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
@@ -27,6 +30,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import fr.univnantes.termsuite.api.TermOrdering;
+import fr.univnantes.termsuite.api.TerminologyStats;
 import fr.univnantes.termsuite.engines.gatherer.VariationType;
 import fr.univnantes.termsuite.framework.TermSuiteFactory;
 import fr.univnantes.termsuite.index.Terminology;
@@ -36,6 +40,7 @@ import fr.univnantes.termsuite.model.Relation;
 import fr.univnantes.termsuite.model.RelationProperty;
 import fr.univnantes.termsuite.model.RelationType;
 import fr.univnantes.termsuite.model.Term;
+import fr.univnantes.termsuite.model.TermOccurrence;
 import fr.univnantes.termsuite.model.TermWord;
 import fr.univnantes.termsuite.model.Word;
 import fr.univnantes.termsuite.utils.TermSuiteUtils;
@@ -160,7 +165,7 @@ public class TerminologyService {
 	public TermService asTermService(Term term) {
 		return termServices.computeIfAbsent(
 				term, t -> 
-				new TermService(this, t));
+				new TermService(this, occurrenceStore, t));
 	}
 
 	private ConcurrentMap<Relation, RelationService> relationServices = new ConcurrentHashMap<>();
@@ -292,6 +297,10 @@ public class TerminologyService {
 		return this.termino.getWords().get(lemma);
 	}
 
+	public Stream<RelationService> extensions(TermService from) {
+		return extensions(from.getTerm());
+	}
+	
 	public Stream<RelationService> extensions(Term from) {
 		return outboundRelations(from)
 				.filter(r-> r.getType() == RelationType.HAS_EXTENSION);
@@ -633,5 +642,116 @@ public class TerminologyService {
 		clone.getRelations().addAll(this.termino.getRelations());
 		return new TerminologyService(clone);
 	}
+	
+	public Collection<TermOccurrence> getOccurrences(Term term) {
+		return occurrenceStore.getOccurrences(term);
+	}
 
+	public Collection<TermOccurrence> getOccurrences(TermService term) {
+		return getOccurrences(term.getTerm());
+	}
+
+	public <T> void  count(T element, Map<T, AtomicInteger> counters) {
+		if(counters.containsKey(element))
+			counters.get(element).incrementAndGet();
+		else
+			counters.put(element, new AtomicInteger(1));
+	}
+	
+	public <T> Map<T, Integer> toRawIntegerMap(Map<T, AtomicInteger> counters) {
+		Map<T, Integer> map = new HashMap<>();
+		for(Entry<T, AtomicInteger> e:counters.entrySet())
+			map.put(e.getKey(), e.getValue().get());
+		return map;
+	}
+
+
+	public TerminologyStats computeStats() {
+		TerminologyStats stats = new TerminologyStats();
+		AtomicInteger nbVariations = new AtomicInteger(0);
+		AtomicInteger nbTerms = new AtomicInteger(0);
+		AtomicInteger nbExtensions = new AtomicInteger(0);
+		AtomicInteger nbPrefix = new AtomicInteger(0);
+		AtomicInteger nbGraphical = new AtomicInteger(0);
+		AtomicInteger nbDerivations = new AtomicInteger(0);
+		AtomicInteger nbMorphologic = new AtomicInteger(0);
+		AtomicInteger nbSemantic = new AtomicInteger(0);
+		AtomicInteger nbInfered = new AtomicInteger(0);
+		AtomicInteger nbSemanticWithDico = new AtomicInteger(0);
+		AtomicInteger nbSemanticDistribOnly = new AtomicInteger(0);
+		Map<Integer, AtomicInteger> sizeCounters = new HashMap<>();
+		Map<String, AtomicInteger> ruleCounters = new HashMap<>();
+		Map<String, AtomicInteger> patternCounters = new HashMap<>();
+		
+		/*
+		 * Variations
+		 */
+		variations().forEach(v -> {
+			nbVariations.incrementAndGet();
+			for(String vRule:v.getVariationRules())
+				count(vRule, ruleCounters);
+			if(v.isPrefixation())
+				nbPrefix.incrementAndGet();
+			if(v.isExtension())
+				nbExtensions.incrementAndGet();
+			if(v.isDerivation())
+				nbDerivations.incrementAndGet();
+			if(v.isGraphical())
+				nbGraphical.incrementAndGet();
+			if(v.isInfered())
+				nbInfered.incrementAndGet();
+			if(v.isMorphological())
+				nbMorphologic.incrementAndGet();
+			if(v.isSemantic()) {
+				nbSemantic.incrementAndGet();
+				if(v.isDico())
+					nbSemanticWithDico.incrementAndGet();
+				else
+					nbSemanticDistribOnly.incrementAndGet();
+			}
+			if(v.isExtension())
+				nbExtensions.incrementAndGet();
+		});
+		stats.setRuleDistribution(toRawIntegerMap(ruleCounters));
+		stats.setNbVariations(nbVariations.get());
+		stats.setNbGraphical(nbGraphical.get());
+		stats.setNbDerivations(nbDerivations.get());
+		stats.setNbExtensions(nbExtensions.get());
+		stats.setNbPrefixations(nbPrefix.get());
+		stats.setNbMorphological(nbMorphologic.get());
+		stats.setNbInfered(nbInfered.get());
+		stats.setNbSemantic(nbSemantic.get());
+		stats.setNbSemanticDistribOnly(nbSemanticWithDico.get());
+		stats.setNbSemanticDistribOnly(nbSemanticDistribOnly.get());
+		
+		/*
+		 * Terms 
+		 */
+		AtomicInteger nbCompounds = new AtomicInteger(0);
+		terms().forEach(t-> {
+			if(t.isCompound())
+				nbCompounds.incrementAndGet();
+			nbTerms.incrementAndGet();
+			count(t.getSwtSize(), sizeCounters);
+			count(t.getPattern(), patternCounters);
+		});
+		stats.setNbTerms(nbTerms.get());
+		stats.setNbCompounds(nbCompounds.get());
+		stats.setPatternDistribution(toRawIntegerMap(patternCounters));
+		stats.setNbSingleWords(sizeCounters.containsKey(1) ? sizeCounters.get(1).get() : 0);
+		stats.setNbSize2Words(sizeCounters.containsKey(2) ? sizeCounters.get(2).get() : 0);
+		stats.setNbSize3Words(sizeCounters.containsKey(3) ? sizeCounters.get(3).get() : 0);
+		stats.setNbSize4Words(sizeCounters.containsKey(4) ? sizeCounters.get(4).get() : 0);
+		stats.setNbSize5Words(sizeCounters.containsKey(5) ? sizeCounters.get(5).get() : 0);
+		stats.setNbSize6Words(sizeCounters.containsKey(6) ? sizeCounters.get(6).get() : 0);
+		
+		/*
+		 * Words
+		 */
+		stats.setNbWords(getWords().size());
+		
+		return stats;
+	}
+		
+	
 }

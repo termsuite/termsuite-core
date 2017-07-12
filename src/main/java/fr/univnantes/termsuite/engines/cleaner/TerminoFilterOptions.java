@@ -126,4 +126,9 @@ public class TerminoFilterOptions  extends JsonConfigObject  {
 		return enabled;
 	}
 	
+	
+	public TerminoFilterOptions setFilterType(FilterType filterType) {
+		this.filterType = filterType;
+		return this;
+	}
 }

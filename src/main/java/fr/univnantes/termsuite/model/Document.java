@@ -35,6 +35,11 @@ public class Document {
 	 */
 	private String url;
 	private Lang lang;
+	
+	/**
+	 * The byte size of the document
+	 */
+	private volatile long size = -1;
 
 	public Document(Lang lang, String url) {
 		super();
@@ -66,5 +71,13 @@ public class Document {
 	
 	public Lang getLang() {
 		return lang;
+	}
+	
+	public long getSize() {
+		return size;
+	}
+	
+	public void setSize(long size) {
+		this.size = size;
 	}
 }

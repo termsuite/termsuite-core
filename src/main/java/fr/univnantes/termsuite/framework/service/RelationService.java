@@ -22,6 +22,7 @@ import static fr.univnantes.termsuite.model.RelationProperty.VARIANT_SCORE;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RANK;
 import static fr.univnantes.termsuite.model.RelationProperty.VARIATION_RULES;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -198,7 +199,7 @@ public class RelationService {
 
 	@SuppressWarnings("unchecked")
 	public Set<String> getVariationRules() {
-		return (Set<String>)relation.get(VARIATION_RULES);
+		return isPropertySet(VARIATION_RULES) ? (Set<String>)relation.get(VARIATION_RULES) : Collections.EMPTY_SET;
 	}
 
 	public String getDerivationType() {

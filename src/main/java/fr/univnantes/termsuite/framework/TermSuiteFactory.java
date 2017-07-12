@@ -11,6 +11,7 @@ import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import fr.univnantes.termsuite.api.PipelineListener;
 import fr.univnantes.termsuite.api.ResourceConfig;
 import fr.univnantes.termsuite.api.TermSuiteException;
 import fr.univnantes.termsuite.api.XMICorpus;
@@ -87,7 +88,7 @@ public class TermSuiteFactory {
 			IndexedCorpus terminology) {
 		Injector injector = Guice.createInjector(
 				new ResourceModule(null),
-				new IndexedCorpusModule(terminology, null)
+				new IndexedCorpusModule(terminology, null, null)
 			);
 		return injector;
 	}
@@ -98,10 +99,23 @@ public class TermSuiteFactory {
 			TermHistory history) {
 		Injector injector = Guice.createInjector(
 				new ResourceModule(config),
-				new IndexedCorpusModule(terminology, history)
+				new IndexedCorpusModule(terminology, history, null)
 			);
 		return injector;
 	}
+	
+	public static Injector createExtractorInjector(
+			IndexedCorpus terminology, 
+			ResourceConfig config,
+			TermHistory history,
+			PipelineListener listener) {
+		Injector injector = Guice.createInjector(
+				new ResourceModule(config),
+				new IndexedCorpusModule(terminology, history, listener)
+			);
+		return injector;
+	}
+
 
 	public static EngineRunner createEngineRunner(EngineDescription description,
 			Injector injector, AggregateEngineRunner parent) {
@@ -117,9 +131,9 @@ public class TermSuiteFactory {
 	}
 
 	public static Pipeline createPipeline(Class<? extends Engine> engineClass, IndexedCorpus terminology,
-			ResourceConfig resourceConfig, TermHistory history, Object... parameters) {
+			ResourceConfig resourceConfig, TermHistory history, PipelineListener listener, Object... parameters) {
 		EngineDescription description = new EngineDescription(engineClass.getSimpleName(), engineClass, parameters);
-		Injector injector = createExtractorInjector(terminology, resourceConfig, history);
+		Injector injector = createExtractorInjector(terminology, resourceConfig, history, listener);
 		EngineRunner runner = createEngineRunner(description, injector, null);
 		Pipeline pipeline = injector.getInstance(Pipeline.class);
 		pipeline.setRunner(runner);

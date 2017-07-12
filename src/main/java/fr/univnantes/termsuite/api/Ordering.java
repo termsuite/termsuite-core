@@ -41,6 +41,12 @@ public abstract class Ordering<T extends Enum<T> & Property<?>, U extends Proper
 		directions.add(new Direction(property, true));
 		return (Z)this;
 	}
+	
+	@SuppressWarnings("unchecked")
+	public Z addSortingProperty(T property, boolean asc) {
+		directions.add(new Direction(property, asc));
+		return (Z)this;
+	}
 
 	@SuppressWarnings("unchecked")
 	public Z desc(T property) {

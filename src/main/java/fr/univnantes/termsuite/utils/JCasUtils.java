@@ -55,7 +55,7 @@ public class JCasUtils {
 		}
 	}
 	
-	public static SourceDocumentInformation initJCasSDI(JCas jCas, String language, String text, String uri) {
+	public static SourceDocumentInformation initJCasSDI(JCas jCas, String language, String text, String uri, long documentSize) {
 		SourceDocumentInformation sdi;
 		sdi = new SourceDocumentInformation(jCas);
 		sdi.setBegin(0);
@@ -63,6 +63,7 @@ public class JCasUtils {
 		sdi.setEnd(text.length());
 		sdi.setOffsetInSource(0);
 		sdi.addToIndexes();
+		sdi.setDocumentSize(documentSize);
 		return sdi;
 	}
 

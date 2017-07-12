@@ -1,5 +1,6 @@
 package fr.univnantes.termsuite.uima;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,7 +14,6 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import com.google.common.base.Preconditions;
 
 import fr.free.rocheteau.jerome.engines.Stemmer;
-import fr.univnantes.lina.uima.ChineseSegmenterFactory;
 import fr.univnantes.lina.uima.engines.TreeTaggerWrapper;
 import fr.univnantes.lina.uima.models.TreeTaggerParameter;
 import fr.univnantes.lina.uima.tkregex.ae.RegexListResource;
@@ -115,11 +115,19 @@ public class CustomResourceTermSuiteAEFactory {
 	}
 
 	public static URL getResourceURL(ResourceConfig resourceConfig, ResourceType resourceType, Lang lang, Tagger tagger) {
+		if(resourceConfig.getCustomResourcePathes().containsKey(resourceType))
+			try {
+				return resourceConfig.getCustomResourcePathes().get(resourceType).toUri().toURL();
+			} catch (MalformedURLException e) {
+				throw new TermSuiteException(e);
+			}
 		for(URL urlPrefix:resourceConfig.getURLPrefixes()) {
 			URL candidateURL = resourceType.fromUrlPrefix(urlPrefix, lang, tagger);
 			if(TermSuiteResourceManager.resourceExists(resourceType, urlPrefix, candidateURL))
 				return candidateURL;
 		}
+		
+			
 		return resourceType.fromClasspath(lang, tagger);
 
 	}

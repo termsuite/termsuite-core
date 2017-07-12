@@ -113,7 +113,7 @@ public class JsonCasSerializer {
         writeIntField(jg,F_OFFSET_IN_SOURCE,sdi.getOffsetInSource());
         writeIntField(jg,F_DOCUMENT_INDEX,sdi.getDocumentIndex());
         writeIntField(jg,F_NB_DOCUMENTS,sdi.getNbDocuments());
-        writeIntField(jg,F_DOCUMENT_SIZE,sdi.getDocumentSize());
+        writeLongField(jg,F_DOCUMENT_SIZE,sdi.getDocumentSize());
         writeLongField(jg,F_CUMULATED_DOCUMENT_SIZE,sdi.getCumulatedDocumentSize());
         writeLongField(jg,F_CORPUS_SIZE,sdi.getCorpusSize());
         writeBooleanField(jg,F_LAST_SEGMENT,sdi.getLastSegment());
