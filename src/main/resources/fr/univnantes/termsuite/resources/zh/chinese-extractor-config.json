@@ -36,6 +36,7 @@
     "max-num-comparisons" : 1000000
   },
   "post-processor" : {
+    "min-swt-length" : 4,
     "affix-score-th" : 0.25,
     "variation-score-th" : 0.2,
     "orthographic-score-th" : 0.55,

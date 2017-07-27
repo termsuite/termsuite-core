@@ -44,7 +44,17 @@ public class PostProcessorOptions  extends JsonConfigObject {
 	@JsonProperty("term-independance-th")
 	private double termIndependanceTh = 0.10;
 
+	@JsonProperty("min-swt-length")
+	private int minSwtLength = 2;
+
+	public int getMinSwtLength() {
+		return minSwtLength;
+	}
 	
+	public PostProcessorOptions setMinSwtLength(int minSwtLength) {
+		this.minSwtLength = minSwtLength;
+		return this;
+	}
 	
 	@Override
 	public boolean equals(Object obj) {

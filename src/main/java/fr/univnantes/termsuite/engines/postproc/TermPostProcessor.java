@@ -44,6 +44,7 @@ public class TermPostProcessor extends AggregateEngine {
 	@Override
 	public void configure() {
 		pipe("Set IS_EXTENSION before post-processor", IsExtensionPropertySetter.class);
+		pipe(SwtLengthFilterer.class, config);
 		pipe(IndependanceScorer.class);
 		pipe(OrthographicScorer.class);
 		pipe(VariationScorer.class);
