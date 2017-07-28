@@ -9,7 +9,12 @@ Download, install and get TermSuite running on a short example without the [Gett
 
 # Developers
 
-### Build TermSuite from source with Git and Gradle
+### Building TermSuite from sources
+
+Requirements:
+ 
+ * git
+ * gradle
 
 ~~~
 $ git clone git@github.com:termsuite/termsuite-core.git
@@ -37,10 +42,10 @@ The jar will then be found under ./build/libs.
  * Official site: [TermSuite](http://termsuite.github.io/)
 
 
-### Run TermSuite functional tests
+### Running TermSuite functional tests
 
  1. `cp src/test/resources/termsuite-test.properties.sample src/test/resources/termsuite-test.properties`,
  2. In `termsuite-test.properties`, set the path to your local TreeTagger installation,
- 3. Run `gradle cucumberTest` from command line, or launch the `FunctionalTests` test suite from your IDE's JUnit laucnher.
+ 3. Run `gradle cucumberTest` from command line, or launch the `FunctionalTests` test suite from your IDE's JUnit launcher.
   
 
