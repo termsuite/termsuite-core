@@ -30,6 +30,9 @@
   },
   "gatherer" : {
     "semantic-enabled" : false,
+     "semantic-similarity-th" : 0.3,
+    "semantic-nb-candidates" : 5,
+    "semantic-dico-only" : false,
     "graphical-enabled" : true,
     "graphical-similarity-th" : 0.9,
     "max-class-size" : 2000,

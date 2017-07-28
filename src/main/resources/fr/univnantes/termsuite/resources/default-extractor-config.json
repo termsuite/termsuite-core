@@ -31,6 +31,9 @@
   "gatherer" : {
     "semantic-enabled" : false,
     "semantic-similarity-distance" : "fr.univnantes.termsuite.metrics.Cosine",
+    "semantic-similarity-th" : 0.3,
+    "semantic-nb-candidates" : 5,
+    "semantic-dico-only" : false,
     "graphical-enabled" : true,
     "graphical-similarity-th" : 0.95,
     "max-class-size" : 2000,
