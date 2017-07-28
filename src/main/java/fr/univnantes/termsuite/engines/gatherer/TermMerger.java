@@ -25,7 +25,7 @@ public class TermMerger extends SimpleEngine {
 	@Inject
 	OccurrenceStore occStore;
 	
-	private static final Double MERGING_THRESHOLD = 2d;
+	private static final Double MERGING_THRESHOLD = 1d;
 
 	private Optional<TermHistory> history = Optional.empty();
 
@@ -59,7 +59,6 @@ public class TermMerger extends SimpleEngine {
 							&& rel.getGraphicalSimilarity() == 1d)
 					)
 			.collect(Collectors.toList());
-		
 		
 		logger.debug("Merging {} relations", relationsToMerge.size());
 
