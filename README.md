@@ -24,6 +24,26 @@ $ gradle
 
 The jar will then be found under ./build/libs.
 
+### Installing development environment for TermSuite
+
+Requirements:
+ 
+ * git
+ * gradle
+
+~~~
+$ git clone git@github.com:termsuite/termsuite-core.git
+$ cd termsuite-core
+~~~
+
+Generate the type system classes. In a console:
+
+~~~
+$ gradle jcasgen
+~~~
+
+Now you can import/refresh `termsuite-core/` in your IDE.
+
 ### Use TermSuite as a Maven dependency
 
 ~~~
