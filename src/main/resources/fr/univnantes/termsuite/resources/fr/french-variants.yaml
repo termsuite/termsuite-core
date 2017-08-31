@@ -392,7 +392,7 @@
 "M-I-NA-CE":
   source: N A
   target: N A C A, N N C A
-  rule: s[0] == t[0] && s[1].compound && t[3].compound && s[1][0]==t[1] && s[1][1]==t[3][1]
+  rule: s[1].compound && t[3].compound && s[0]==t[0] && s[1]!=t[3] && s[1][0]==t[3][0] && s[1][1]==t[3][1]
 
 
 # DOES NOT MATCH (2 car)
