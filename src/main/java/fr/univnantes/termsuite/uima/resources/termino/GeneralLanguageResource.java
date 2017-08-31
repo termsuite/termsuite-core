@@ -161,7 +161,7 @@ public class GeneralLanguageResource implements GeneralLanguage {
 	@Override
 	public int getFrequency(String lemma, String pattern) {
 		Entry e = getEntry(lemma, pattern);
-		return e == null ? 1 : e.getFrequency();
+		return e == null || e.frequency == 0 ? 1 : e.getFrequency();
 	}
 	
 	public Entry getEntry(String lemma, String pattern) {
